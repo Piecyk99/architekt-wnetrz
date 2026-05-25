@@ -15,7 +15,7 @@ GEMINI_MODEL = "gemini-3.1-flash-image-preview"
 [[d1_databases]]
 binding = "DB"
 database_name = "architekt-wnetrz"
-database_id = "REPLACE_AFTER_CREATE"
+database_id = "ff765d85-4762-4b0c-bba5-afff40443b46"
 migrations_dir = "migrations"
 
 # R2 — storage na zdjęcia pomieszczeń i wygenerowane rendery.
