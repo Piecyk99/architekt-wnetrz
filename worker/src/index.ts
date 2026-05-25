@@ -79,8 +79,9 @@ const ROUTES: Route[] = [
   { method: "GET", pattern: /^\/health$/, noAuth: true, handler: async (_r, _e, cors) =>
       json({ ok: true, ts: Date.now() }, 200, cors) },
 
-  // Media (no auth — served via signed-by-secret URL on app side; here protected by SHARED_SECRET)
-  { method: "GET", pattern: /^\/media\/(.+)$/, handler: async (_r, env, cors, [key]) =>
+  // Media (no auth — keys use unguessable random IDs; browsers can't send Authorization
+  // on <img> requests, so gating here would break chat thumbnails)
+  { method: "GET", pattern: /^\/media\/(.+)$/, noAuth: true, handler: async (_r, env, cors, [key]) =>
       serveMedia(decodeURIComponent(key), env, cors) },
 
   // Projects
