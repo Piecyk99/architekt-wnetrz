@@ -11,6 +11,27 @@ interface SendBody {
   imageUrls?: string[];
 }
 
+function bytesToBase64(bytes: Uint8Array): string {
+  let bin = "";
+  for (let i = 0; i < bytes.length; i++) bin += String.fromCharCode(bytes[i]);
+  return btoa(bin);
+}
+
+async function resolveImageBlock(env: Env, url: string): Promise<ContentBlock | null> {
+  if (/^https:\/\//i.test(url)) {
+    return { type: "image", source: { type: "url", url } };
+  }
+  const key = url.replace(/^\/?(media\/)?/, "");
+  const obj = await env.MEDIA.get(key);
+  if (!obj) return null;
+  const bytes = new Uint8Array(await obj.arrayBuffer());
+  const mediaType = obj.httpMetadata?.contentType ?? "image/jpeg";
+  return {
+    type: "image",
+    source: { type: "base64", media_type: mediaType, data: bytesToBase64(bytes) },
+  };
+}
+
 export async function listMessages(
   projectId: string,
   env: Env,
@@ -69,11 +90,16 @@ async function projectContext(env: Env, projectId: string): Promise<string> {
   return lines.join("\n");
 }
 
-function makeUserContent(text: string, imageUrls?: string[]): string | ContentBlock[] {
+async function makeUserContent(
+  env: Env,
+  text: string,
+  imageUrls?: string[],
+): Promise<string | ContentBlock[]> {
   if (!imageUrls || imageUrls.length === 0) return text;
   const blocks: ContentBlock[] = [];
   for (const url of imageUrls) {
-    blocks.push({ type: "image", source: { type: "url", url } });
+    const block = await resolveImageBlock(env, url);
+    if (block) blocks.push(block);
   }
   blocks.push({ type: "text", text });
   return blocks;
@@ -116,15 +142,18 @@ export async function sendMessage(
     .bind(projectId, MAX_HISTORY)
     .all<{ role: string; content: string; images: string | null }>();
 
-  const messages: ChatMessage[] = history
-    .reverse()
-    .map((m) => {
+  const messages: ChatMessage[] = await Promise.all(
+    history.reverse().map(async (m) => {
       const imgs = m.images ? (JSON.parse(m.images) as string[]) : [];
       return {
         role: m.role as "user" | "assistant",
-        content: m.role === "user" && imgs.length ? makeUserContent(m.content, imgs) : m.content,
+        content:
+          m.role === "user" && imgs.length
+            ? await makeUserContent(env, m.content, imgs)
+            : m.content,
       };
-    });
+    }),
+  );
 
   const ctx = await projectContext(env, projectId);
 
