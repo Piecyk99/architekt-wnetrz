@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  background: #fdfbf7;
+  color: #1f140a;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: contain;
+}
+
+@media (prefers-color-scheme: dark) {
+  html,
+  body {
+    background: #1a1410;
+    color: #f6efe1;
+  }
+}
+
+/* Safe area for iOS notch / Android nav bar */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: max(env(safe-area-inset-bottom), 0.5rem);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+.prose-chat p {
+  margin: 0.5em 0;
+}
+.prose-chat ul,
+.prose-chat ol {
+  padding-left: 1.25rem;
+  margin: 0.5em 0;
+}
+.prose-chat ul {
+  list-style: disc;
+}
+.prose-chat ol {
+  list-style: decimal;
+}
+.prose-chat h1,
+.prose-chat h2,
+.prose-chat h3 {
+  font-weight: 600;
+  margin: 0.75em 0 0.25em;
+}
+.prose-chat h1 {
+  font-size: 1.25rem;
+}
+.prose-chat h2 {
+  font-size: 1.125rem;
+}
+.prose-chat h3 {
+  font-size: 1rem;
+}
+.prose-chat code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.875em;
+  background: rgba(139, 96, 55, 0.12);
+  padding: 0.1em 0.35em;
+  border-radius: 0.25rem;
+}
+.prose-chat pre {
+  background: #1f140a;
+  color: #f6efe1;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  margin: 0.5em 0;
+}
+.prose-chat pre code {
+  background: transparent;
+  padding: 0;
+}
+.prose-chat blockquote {
+  border-left: 3px solid #c29b6b;
+  padding-left: 0.75rem;
+  color: #6b4828;
+  margin: 0.5em 0;
+}
+.prose-chat table {
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin: 0.5em 0;
+}
+.prose-chat th,
+.prose-chat td {
+  border: 1px solid rgba(139, 96, 55, 0.3);
+  padding: 0.25rem 0.5rem;
+  text-align: left;
+}
+.prose-chat th {
+  background: rgba(139, 96, 55, 0.08);
+  font-weight: 600;
+}
+.prose-chat a {
+  color: #8b6037;
+  text-decoration: underline;
+}
+
+.shimmer::after {
+  content: "▌";
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

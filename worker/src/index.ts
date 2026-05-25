@@ -1,243 +1,178 @@
 /**
- * meble-banana-worker
- * Cloudflare Worker proxy do Gemini Nano Banana API.
- * Pozwala skillowi meble-architekt generować obrazy z dowolnego urządzenia
- * (telefon, web, desktop) bez wystawiania klucza API klientowi.
+ * Architekt Wnętrz — backend Worker
  *
- * Endpoints:
- *   POST /generate          -> generacja obrazu z promptu
- *   POST /edit              -> edycja istniejącego obrazu (base64 input)
- *   GET  /health            -> ping
+ * Endpoints (wszystkie wymagają Authorization: Bearer <SHARED_SECRET> oprócz /health):
  *
- * Bezpieczeństwo:
- *   - GEMINI_API_KEY tylko jako Worker secret (NIE w kodzie)
- *   - Wymaga header `Authorization: Bearer <SHARED_SECRET>` na /generate i /edit
- *   - CORS: zaakceptowany tylko origin claude.ai (+ localhost dla testów)
+ *   GET  /health
+ *
+ *   GET  /api/projects
+ *   POST /api/projects
+ *   GET  /api/projects/:id
+ *   PUT  /api/projects/:id
+ *   DELETE /api/projects/:id
+ *
+ *   POST /api/projects/:id/rooms
+ *   PUT  /api/rooms/:id
+ *   DELETE /api/rooms/:id
+ *
+ *   GET  /api/projects/:id/messages
+ *   POST /api/projects/:id/messages         (SSE streaming odpowiedzi Claude'a)
+ *
+ *   POST /api/projects/:id/photos           (Content-Type: image/*, raw body)
+ *   GET  /media/photos/:projectId/:filename
+ *   GET  /media/renders/:projectId/:filename
+ *
+ *   POST /api/projects/:id/render
+ *   GET  /api/projects/:id/renders
+ *
+ *   GET  /api/projects/:id/expenses
+ *   POST /api/projects/:id/expenses
+ *   DELETE /api/expenses/:id
+ *
+ *   GET  /api/projects/:id/shopping
+ *   POST /api/projects/:id/shopping
+ *   PUT  /api/shopping/:id
+ *   DELETE /api/shopping/:id
+ *
+ *   GET  /api/projects/:id/notes
+ *   POST /api/projects/:id/notes
+ *   DELETE /api/notes/:id
+ *
+ *   POST /generate    (legacy — kompatybilność z Claude Code skillem)
+ *   POST /edit        (legacy)
  */
 
-export interface Env {
-  GEMINI_API_KEY: string;       // wrangler secret put GEMINI_API_KEY
-  SHARED_SECRET: string;        // wrangler secret put SHARED_SECRET
-  ALLOWED_ORIGINS?: string;     // opcjonalnie, comma-separated
+import type { Env } from "./env.js";
+import { authorized, corsHeaders, error, json } from "./lib/http.js";
+import {
+  createProject,
+  deleteProject,
+  getProject,
+  listProjects,
+  updateProject,
+} from "./routes/projects.js";
+import { createRoom, deleteRoom, updateRoom } from "./routes/rooms.js";
+import { listMessages, sendMessage } from "./routes/messages.js";
+import { listRenders, renderImage, serveMedia, uploadPhoto } from "./routes/media.js";
+import {
+  createExpense,
+  createNote,
+  createShopping,
+  deleteExpense,
+  deleteNote,
+  deleteShopping,
+  listExpenses,
+  listNotes,
+  listShopping,
+  updateShopping,
+} from "./routes/finance.js";
+import { legacyEdit, legacyGenerate } from "./routes/legacy.js";
+
+interface Route {
+  method: string;
+  pattern: RegExp;
+  handler: (req: Request, env: Env, cors: HeadersInit, params: string[]) => Promise<Response>;
+  noAuth?: boolean;
 }
 
-const GEMINI_BASE = "https://generativelanguage.googleapis.com/v1beta/models";
-const DEFAULT_MODEL = "gemini-3.1-flash-image-preview";
-const DEFAULT_ASPECT = "16:9";
-const DEFAULT_RESOLUTION = "2K";
+const ROUTES: Route[] = [
+  { method: "GET", pattern: /^\/health$/, noAuth: true, handler: async (_r, _e, cors) =>
+      json({ ok: true, ts: Date.now() }, 200, cors) },
 
-const VALID_RATIOS = new Set([
-  "1:1","16:9","9:16","4:3","3:4","2:3","3:2","4:5","5:4","21:9","1:4","4:1","1:8","8:1",
-]);
-const VALID_RESOLUTIONS = new Set(["512","1K","2K","4K"]);
+  // Media (no auth — served via signed-by-secret URL on app side; here protected by SHARED_SECRET)
+  { method: "GET", pattern: /^\/media\/(.+)$/, handler: async (_r, env, cors, [key]) =>
+      serveMedia(decodeURIComponent(key), env, cors) },
 
-interface GenerateBody {
-  prompt: string;
-  aspectRatio?: string;
-  resolution?: string;
-  model?: string;
-}
+  // Projects
+  { method: "GET", pattern: /^\/api\/projects$/, handler: async (_r, env, cors) =>
+      listProjects(env, cors) },
+  { method: "POST", pattern: /^\/api\/projects$/, handler: async (r, env, cors) =>
+      createProject(r, env, cors) },
+  { method: "GET", pattern: /^\/api\/projects\/([^/]+)$/, handler: async (_r, env, cors, [id]) =>
+      getProject(id, env, cors) },
+  { method: "PUT", pattern: /^\/api\/projects\/([^/]+)$/, handler: async (r, env, cors, [id]) =>
+      updateProject(id, r, env, cors) },
+  { method: "DELETE", pattern: /^\/api\/projects\/([^/]+)$/, handler: async (_r, env, cors, [id]) =>
+      deleteProject(id, env, cors) },
 
-interface EditBody {
-  imageBase64: string;     // surowy base64 (bez data: prefix)
-  imageMimeType?: string;  // default image/png
-  prompt: string;
-  aspectRatio?: string;
-  resolution?: string;
-  model?: string;
-}
+  // Rooms
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/rooms$/, handler: async (r, env, cors, [id]) =>
+      createRoom(id, r, env, cors) },
+  { method: "PUT", pattern: /^\/api\/rooms\/([^/]+)$/, handler: async (r, env, cors, [id]) =>
+      updateRoom(id, r, env, cors) },
+  { method: "DELETE", pattern: /^\/api\/rooms\/([^/]+)$/, handler: async (_r, env, cors, [id]) =>
+      deleteRoom(id, env, cors) },
 
-function corsHeaders(origin: string | null, allowed: string[]): HeadersInit {
-  const isAllowed = origin && allowed.some(a => a === "*" || a === origin);
-  return {
-    "Access-Control-Allow-Origin": isAllowed ? origin! : allowed[0] ?? "https://claude.ai",
-    "Access-Control-Allow-Methods": "POST, GET, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type, Authorization",
-    "Access-Control-Max-Age": "86400",
-  };
-}
+  // Messages
+  { method: "GET", pattern: /^\/api\/projects\/([^/]+)\/messages$/, handler: async (_r, env, cors, [id]) =>
+      listMessages(id, env, cors) },
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/messages$/, handler: async (r, env, cors, [id]) =>
+      sendMessage(id, r, env, cors) },
 
-function json(body: unknown, status: number, extraHeaders: HeadersInit = {}): Response {
-  return new Response(JSON.stringify(body), {
-    status,
-    headers: { "Content-Type": "application/json", ...extraHeaders },
-  });
-}
+  // Photos & renders
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/photos$/, handler: async (r, env, cors, [id]) =>
+      uploadPhoto(id, r, env, cors) },
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/render$/, handler: async (r, env, cors, [id]) =>
+      renderImage(id, r, env, cors) },
+  { method: "GET", pattern: /^\/api\/projects\/([^/]+)\/renders$/, handler: async (_r, env, cors, [id]) =>
+      listRenders(id, env, cors) },
 
-function authorized(req: Request, env: Env): boolean {
-  const h = req.headers.get("Authorization") || "";
-  const m = h.match(/^Bearer\s+(.+)$/i);
-  if (!m) return false;
-  return timingSafeEqual(m[1], env.SHARED_SECRET);
-}
+  // Expenses
+  { method: "GET", pattern: /^\/api\/projects\/([^/]+)\/expenses$/, handler: async (_r, env, cors, [id]) =>
+      listExpenses(id, env, cors) },
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/expenses$/, handler: async (r, env, cors, [id]) =>
+      createExpense(id, r, env, cors) },
+  { method: "DELETE", pattern: /^\/api\/expenses\/([^/]+)$/, handler: async (_r, env, cors, [id]) =>
+      deleteExpense(id, env, cors) },
 
-function timingSafeEqual(a: string, b: string): boolean {
-  if (a.length !== b.length) return false;
-  let result = 0;
-  for (let i = 0; i < a.length; i++) result |= a.charCodeAt(i) ^ b.charCodeAt(i);
-  return result === 0;
-}
+  // Shopping
+  { method: "GET", pattern: /^\/api\/projects\/([^/]+)\/shopping$/, handler: async (_r, env, cors, [id]) =>
+      listShopping(id, env, cors) },
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/shopping$/, handler: async (r, env, cors, [id]) =>
+      createShopping(id, r, env, cors) },
+  { method: "PUT", pattern: /^\/api\/shopping\/([^/]+)$/, handler: async (r, env, cors, [id]) =>
+      updateShopping(id, r, env, cors) },
+  { method: "DELETE", pattern: /^\/api\/shopping\/([^/]+)$/, handler: async (_r, env, cors, [id]) =>
+      deleteShopping(id, env, cors) },
 
-async function callGemini(
-  apiKey: string,
-  model: string,
-  parts: object[],
-  aspectRatio: string,
-  resolution: string,
-): Promise<{ imageBase64: string; mimeType: string; text: string }> {
-  const url = `${GEMINI_BASE}/${model}:generateContent?key=${apiKey}`;
-  const body = {
-    contents: [{ parts }],
-    generationConfig: {
-      responseModalities: ["IMAGE"],
-      imageConfig: {
-        aspectRatio,
-        imageSize: resolution,
-      },
-    },
-  };
+  // Notes
+  { method: "GET", pattern: /^\/api\/projects\/([^/]+)\/notes$/, handler: async (_r, env, cors, [id]) =>
+      listNotes(id, env, cors) },
+  { method: "POST", pattern: /^\/api\/projects\/([^/]+)\/notes$/, handler: async (r, env, cors, [id]) =>
+      createNote(id, r, env, cors) },
+  { method: "DELETE", pattern: /^\/api\/notes\/([^/]+)$/, handler: async (_r, env, cors, [id]) =>
+      deleteNote(id, env, cors) },
 
-  const resp = await fetch(url, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(body),
-  });
-
-  if (!resp.ok) {
-    const errText = await resp.text();
-    throw new Error(`Gemini API ${resp.status}: ${errText}`);
-  }
-
-  const data = await resp.json() as any;
-  const candidates = data.candidates ?? [];
-  if (candidates.length === 0) {
-    const reason = data?.promptFeedback?.blockReason ?? "UNKNOWN";
-    throw new Error(`No candidates returned. Reason: ${reason}`);
-  }
-  const respParts = candidates[0]?.content?.parts ?? [];
-  let imageBase64 = "";
-  let mimeType = "image/png";
-  let text = "";
-  for (const p of respParts) {
-    if (p.inlineData) {
-      imageBase64 = p.inlineData.data;
-      mimeType = p.inlineData.mimeType ?? "image/png";
-    } else if (p.text) {
-      text = p.text;
-    }
-  }
-  if (!imageBase64) {
-    const finish = candidates[0]?.finishReason ?? "UNKNOWN";
-    throw new Error(`No image in response. finishReason: ${finish}`);
-  }
-  return { imageBase64, mimeType, text };
-}
-
-function validate(body: { aspectRatio?: string; resolution?: string }): string | null {
-  if (body.aspectRatio && !VALID_RATIOS.has(body.aspectRatio)) {
-    return `Invalid aspectRatio. Valid: ${[...VALID_RATIOS].join(", ")}`;
-  }
-  if (body.resolution && !VALID_RESOLUTIONS.has(body.resolution)) {
-    return `Invalid resolution. Valid: ${[...VALID_RESOLUTIONS].join(", ")}`;
-  }
-  return null;
-}
+  // Legacy (Claude Code skill compat)
+  { method: "POST", pattern: /^\/generate$/, handler: async (r, env, cors) => legacyGenerate(r, env, cors) },
+  { method: "POST", pattern: /^\/edit$/, handler: async (r, env, cors) => legacyEdit(r, env, cors) },
+];
 
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
     const url = new URL(req.url);
     const origin = req.headers.get("Origin");
-    const allowed = (env.ALLOWED_ORIGINS ?? "https://claude.ai,http://localhost").split(",").map(s => s.trim());
-    const cors = corsHeaders(origin, allowed);
+    const cors = corsHeaders(origin, env);
 
     if (req.method === "OPTIONS") {
       return new Response(null, { status: 204, headers: cors });
     }
 
-    if (url.pathname === "/health" && req.method === "GET") {
-      return json({ ok: true, ts: Date.now() }, 200, cors);
-    }
-
-    if (url.pathname === "/generate" && req.method === "POST") {
-      if (!authorized(req, env)) {
-        return json({ error: "Unauthorized" }, 401, cors);
+    for (const route of ROUTES) {
+      if (route.method !== req.method) continue;
+      const m = url.pathname.match(route.pattern);
+      if (!m) continue;
+      if (!route.noAuth && !authorized(req, env)) {
+        return error("Unauthorized", 401, cors);
       }
-      let body: GenerateBody;
       try {
-        body = await req.json() as GenerateBody;
-      } catch {
-        return json({ error: "Invalid JSON" }, 400, cors);
-      }
-      if (!body.prompt || typeof body.prompt !== "string") {
-        return json({ error: "Missing prompt" }, 400, cors);
-      }
-      const validationErr = validate(body);
-      if (validationErr) return json({ error: validationErr }, 400, cors);
-
-      try {
-        const result = await callGemini(
-          env.GEMINI_API_KEY,
-          body.model ?? DEFAULT_MODEL,
-          [{ text: body.prompt }],
-          body.aspectRatio ?? DEFAULT_ASPECT,
-          body.resolution ?? DEFAULT_RESOLUTION,
-        );
-        return json({
-          imageBase64: result.imageBase64,
-          mimeType: result.mimeType,
-          text: result.text,
-          model: body.model ?? DEFAULT_MODEL,
-          aspectRatio: body.aspectRatio ?? DEFAULT_ASPECT,
-          resolution: body.resolution ?? DEFAULT_RESOLUTION,
-        }, 200, cors);
+        return await route.handler(req, env, cors, m.slice(1));
       } catch (e: any) {
-        return json({ error: e.message ?? String(e) }, 500, cors);
+        console.error("Route error:", e);
+        return error(`Internal: ${e?.message ?? String(e)}`, 500, cors);
       }
     }
 
-    if (url.pathname === "/edit" && req.method === "POST") {
-      if (!authorized(req, env)) {
-        return json({ error: "Unauthorized" }, 401, cors);
-      }
-      let body: EditBody;
-      try {
-        body = await req.json() as EditBody;
-      } catch {
-        return json({ error: "Invalid JSON" }, 400, cors);
-      }
-      if (!body.prompt || !body.imageBase64) {
-        return json({ error: "Missing prompt or imageBase64" }, 400, cors);
-      }
-      const validationErr = validate(body);
-      if (validationErr) return json({ error: validationErr }, 400, cors);
-
-      try {
-        const result = await callGemini(
-          env.GEMINI_API_KEY,
-          body.model ?? DEFAULT_MODEL,
-          [
-            { text: body.prompt },
-            {
-              inlineData: {
-                mimeType: body.imageMimeType ?? "image/png",
-                data: body.imageBase64,
-              },
-            },
-          ],
-          body.aspectRatio ?? DEFAULT_ASPECT,
-          body.resolution ?? DEFAULT_RESOLUTION,
-        );
-        return json({
-          imageBase64: result.imageBase64,
-          mimeType: result.mimeType,
-          text: result.text,
-          model: body.model ?? DEFAULT_MODEL,
-        }, 200, cors);
-      } catch (e: any) {
-        return json({ error: e.message ?? String(e) }, 500, cors);
-      }
-    }
-
-    return json({ error: "Not found", path: url.pathname }, 404, cors);
+    return error(`Not found: ${req.method} ${url.pathname}`, 404, cors);
   },
 };
