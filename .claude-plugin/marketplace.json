@@ -1,0 +1,28 @@
+{
+  "name": "architekt-wnetrz-marketplace",
+  "owner": {
+    "name": "dpsolutionsbusiness"
+  },
+  "metadata": {
+    "description": "Pełny pipeline projektowania wnętrz mieszkaniowych A-Z dla rynku polskiego z dostawcą Korner Żary"
+  },
+  "plugins": [
+    {
+      "name": "architekt-wnetrz",
+      "source": "./",
+      "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie, pokój, łazienkę, kuchnię, lub potrzebuje koncept, layout, oświetlenie, wykończenia, meble (Korner + wolnostojące), plan elektryczny, wizualizacje fotorealistyczne, plan budowy lub listy zakupów.",
+      "license": "MIT",
+      "keywords": [
+        "interior-design",
+        "architecture",
+        "furniture",
+        "polish",
+        "korner",
+        "lighting",
+        "visualization",
+        "gemini-nano-banana"
+      ],
+      "category": "creative"
+    }
+  ]
+}

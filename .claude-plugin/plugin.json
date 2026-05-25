@@ -1,0 +1,19 @@
+{
+  "name": "architekt-wnetrz",
+  "version": "1.0.0",
+  "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Koncept, layout, wykończenia, oświetlenie, meble (Korner + wolnostojące), instalacje, wizualizacje fotorealistyczne przez Gemini Nano Banana, plan budowy i lista zakupów z wieloma dostawcami.",
+  "author": {
+    "name": "dpsolutionsbusiness@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "interior-design",
+    "architecture",
+    "furniture",
+    "polish",
+    "korner",
+    "lighting",
+    "visualization",
+    "gemini-nano-banana"
+  ]
+}

@@ -1,0 +1,15 @@
+name = "meble-banana"
+main = "src/index.ts"
+compatibility_date = "2026-01-01"
+
+# Po deploymencie zostaniesz przekierowany na https://meble-banana.<twoj-subdomen>.workers.dev
+# (lub własna domena jeśli skonfigurujesz custom_domain).
+
+# Opcjonalnie: ograniczenie origin do claude.ai (i localhost do testów)
+# Zostaw tak, lub zmień gdy potrzebujesz innych klientów.
+[vars]
+ALLOWED_ORIGINS = "https://claude.ai,https://api.claude.ai,http://localhost"
+
+# SEKRETY (NIE wpisuj ich tutaj!) — ustawiasz przez wrangler secret put:
+#   wrangler secret put GEMINI_API_KEY
+#   wrangler secret put SHARED_SECRET
