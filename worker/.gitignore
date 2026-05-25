@@ -4,3 +4,5 @@ node_modules/
 *.log
 .env
 .env.local
+dist/
+src/skill-content.generated.ts

@@ -1,145 +1,130 @@
-# meble-banana-worker
+# Architekt Wnętrz — backend Worker
 
-Cloudflare Worker który proxuje Gemini Nano Banana API. Pozwala skillowi `meble-architekt` generować obrazy z **dowolnego urządzenia** (telefon, web, desktop) bez wystawiania klucza API klientowi.
+Cloudflare Worker: Claude API (chat ze streamingiem) + Gemini Nano Banana (wizualizacje) + D1 (projekty) + R2 (zdjęcia/rendery).
 
-## Co to robi
+Endpoints: zobacz nagłówek `src/index.ts`.
 
-```
-[Skill na telefonie / Claude.ai] -- POST /generate + Bearer SHARED_SECRET
-       ↓
-[Cloudflare Worker (ten kod)] -- dodaje GEMINI_API_KEY z secrets
-       ↓
-[Gemini API] -- zwraca PNG w base64
-       ↓
-[Worker zwraca base64 do Claude'a]
-       ↓
-[Claude pokazuje obraz user'owi]
-```
+## Pre-reqs
 
-**Po co to przez Workera, a nie bezpośrednio z telefonu?**
-- Klucz API NIE może lądować w prompcie / kodzie skilla (= upubliczniony = Google unieważnia)
-- Worker trzyma klucz jako secret na serwerze Cloudflare
-- Skill autoryzuje się `SHARED_SECRET`'em (też trzymanym jako env var w Claude.ai lub w prompcie skilla — ale to mniejsze ryzyko niż klucz Gemini)
-- Workers darmowy tier: **100 000 requestów dziennie** = wystarczy z zapasem
+- Node 18+
+- Konto Cloudflare (darmowy plan wystarcza)
+- Klucz **Anthropic API** z https://console.anthropic.com/settings/keys
+- Klucz **Google AI Studio** z https://aistudio.google.com/apikey
 
-## Instalacja krok po kroku
+## Setup (raz)
 
-### 1. Konto Cloudflare (darmowe)
-
-Wejdź na **dash.cloudflare.com** → załóż konto (jeśli nie masz). Workers działają na darmowym planie do 100k req/dzień.
-
-### 2. Zainstaluj wrangler CLI
-
-```powershell
-npm install -g wrangler
-```
-
-Wymaga Node.js 18+. Jeśli nie masz Node: pobierz z `nodejs.org` (LTS).
-
-### 3. Zaloguj się
-
-```powershell
-cd C:\Users\PC\meble-architekt\worker
-wrangler login
-```
-
-Otworzy przeglądarkę → zaloguj się do Cloudflare → autoryzuj wrangler.
-
-### 4. Zainstaluj zależności
-
-```powershell
+```bash
+cd worker
 npm install
+npx wrangler login
 ```
 
-### 5. Wygeneruj SHARED_SECRET (silny token)
+### 1. D1 — baza danych
 
-W PowerShell:
+```bash
+npx wrangler d1 create architekt-wnetrz
+```
+
+Skopiuj `database_id` z outputu i wklej do `wrangler.toml` (linia z `REPLACE_AFTER_CREATE`).
+
+Następnie odpal migracje:
+
+```bash
+npm run db:migrate:remote
+```
+
+### 2. R2 — bucket na obrazy
+
+```bash
+npx wrangler r2 bucket create architekt-wnetrz-media
+```
+
+### 3. Sekrety
+
+Wygeneruj `SHARED_SECRET` (Linux/Mac):
+```bash
+openssl rand -base64 32
+```
+PowerShell:
 ```powershell
-$bytes = New-Object byte[] 32
-[System.Security.Cryptography.RandomNumberGenerator]::Create().GetBytes($bytes)
-$secret = [Convert]::ToBase64String($bytes)
-$secret  # ZAPISZ ten ciąg — będziesz go potrzebował na obu końcach
+[Convert]::ToBase64String((1..32 | %{ Get-Random -Maximum 256 }))
 ```
 
-Skopiuj wartość. Wygląda mniej więcej tak: `kJ8sLp9Wq2nMrTvXyZ...` (44 znaki).
-
-### 6. Ustaw sekrety w Cloudflare
-
-```powershell
-# Klucz Gemini z aistudio.google.com/apikey
-wrangler secret put GEMINI_API_KEY
-# (wklej AIza... + Enter)
-
-# Shared secret z kroku 5
-wrangler secret put SHARED_SECRET
-# (wklej wygenerowany base64 + Enter)
+Wprowadź sekrety do Cloudflare (każda komenda zapyta o wartość):
+```bash
+npm run secret:claude    # ANTHROPIC_API_KEY
+npm run secret:gemini    # GEMINI_API_KEY
+npm run secret:shared    # SHARED_SECRET
 ```
 
-### 7. Deploy
+### 4. Deploy
 
-```powershell
-wrangler deploy
+```bash
+npm run deploy
 ```
 
-Wrangler zwróci URL typu: `https://meble-banana.<twoj-subdomen>.workers.dev`
+Wrangler zwróci URL typu `https://architekt-wnetrz.<twoja-subdomena>.workers.dev`. Zapisz — będziesz go potrzebował we frontendzie (`NEXT_PUBLIC_API_URL`).
 
-### 8. Test endpointu /health
+### 5. Test
 
-```powershell
-Invoke-RestMethod -Uri "https://meble-banana.<twoj-subdomen>.workers.dev/health"
-# Powinno zwrócić: ok=True ts=<timestamp>
+```bash
+curl https://architekt-wnetrz.<twoja-subdomena>.workers.dev/health
+# {"ok":true,"ts":...}
+
+curl -X POST https://.../api/projects \
+  -H "Authorization: Bearer <SHARED_SECRET>" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Test","rooms":[{"name":"Salon","area":25}]}'
 ```
 
-### 9. Test generacji
+## Dev lokalnie
 
-```powershell
-$secret = "<twoj SHARED_SECRET z kroku 5>"
-$body = @{
-  prompt = "Architectural interior photograph of a modern kitchen with walnut royal smooth matte cabinet fronts, cream interior, thin black bar handles, 3000K LED under upper cabinets, dark stone worktop. Sony A7R IV 24mm lens, soft daylight, Architectural Digest editorial."
-  aspectRatio = "16:9"
-  resolution = "2K"
-} | ConvertTo-Json
+```bash
+# Setup lokalnej bazy
+npm run db:migrate:local
 
-$response = Invoke-RestMethod `
-  -Uri "https://meble-banana.<twoj-subdomen>.workers.dev/generate" `
-  -Method Post `
-  -Headers @{ "Authorization" = "Bearer $secret" } `
-  -ContentType "application/json" `
-  -Body $body
+# Stwórz .dev.vars z sekretami (NIE commituj)
+cat > .dev.vars <<EOF
+ANTHROPIC_API_KEY=sk-ant-...
+GEMINI_API_KEY=AIza...
+SHARED_SECRET=cokolwiek-do-dev
+EOF
 
-[System.IO.File]::WriteAllBytes("C:\Users\PC\test-worker.png", [Convert]::FromBase64String($response.imageBase64))
-Start-Process "C:\Users\PC\test-worker.png"
+npm run dev   # http://localhost:8787
 ```
 
-Jeśli obraz się otworzy — **Worker działa** i obsługuje generację end-to-end.
+## Aktualizacja skilla
 
-## Podpięcie do skilla meble-architekt
+Skill (`../skills/architekt-wnetrz/SKILL.md` + `references/`) jest bundlowany do workera jako system prompt przy każdym build/deploy (script `scripts/build-skill.mjs` regeneruje `src/skill-content.generated.ts`). Po edycji skilla:
 
-W `meble-architekt/SKILL.md` Faza 3 (tryb fallback / mobile) wywołuje endpoint Workera. Klient (skill na Claude.ai) musi mieć dostęp do SHARED_SECRET.
+```bash
+npm run deploy
+```
 
-**Bezpieczna opcja:** w skillu trzymaj placeholder `<<WORKER_URL>>` i `<<SHARED_SECRET>>`, a user wkleja je raz po deployowaniu. Patrz `references/cloudflare-worker.md` w katalogu skilla.
+## Logi
 
-## Limity i koszty
+```bash
+npm run tail
+```
 
-| Komponent              | Darmowe                    | Płatne (po wyjściu)           |
-|------------------------|----------------------------|-------------------------------|
-| Cloudflare Workers     | 100k req/dzień             | $5/mc za 10M req              |
-| Gemini Nano Banana 2   | ~1500 obrazów/dzień (free) | $0.039 / obraz (≈16 gr)       |
+## Koszty (orientacyjnie)
 
-**Praktyczny scenariusz:** 10 projektów mebli dziennie × 2 obrazy/projekt = 20 generacji = pełnowymiarowo w darmowym tierze Gemini.
+| Usługa | Darmowy tier | Powyżej |
+|---|---|---|
+| Workers | 100k req/dzień | $5/mc za 10M |
+| D1 | 5GB storage, 5M read/dzień | $0.75/GB |
+| R2 | 10GB storage, 1M op/mc | $0.015/GB |
+| Claude API | brak | ~$3-15/M tokens (Sonnet z cache) |
+| Gemini Nano Banana | ~1500 obrazów/dzień | $0.039/obraz |
+
+Realny koszt: **kilka groszy za pełen projekt mieszkania** (zakładając cache hit dla skill prompt 116KB).
 
 ## Bezpieczeństwo
 
-- **Nigdy** nie commituj `GEMINI_API_KEY` ani `SHARED_SECRET` do git
-- `wrangler secret put` zapisuje wartości szyfrowane po stronie Cloudflare
-- Worker waliduje Bearer token na każdym requeście — bez tokenu zwraca 401
-- CORS ograniczony do `claude.ai` (zmień `ALLOWED_ORIGINS` w `wrangler.toml` jeśli potrzebujesz innych klientów)
-- Jeśli SHARED_SECRET wycieknie: wygeneruj nowy, ustaw `wrangler secret put SHARED_SECRET`, zaktualizuj skill
+- Aplikacja jest **dla jednego użytkownika** (Ciebie). `SHARED_SECRET` w `NEXT_PUBLIC_*` w aplikacji jest świadome — pełni rolę hasła do API.
+- Nie udostępniaj URL aplikacji innym.
+- Jeśli secret wycieknie: `npm run secret:shared` (nowy), zaktualizuj `NEXT_PUBLIC_SHARED_SECRET` w Cloudflare Pages, rebuild.
 
-## Tail logów (debug)
+## Wstecz: stare endpointy `/generate` i `/edit` zachowane
 
-```powershell
-wrangler tail
-```
-
-Pokazuje logi requestów w czasie rzeczywistym. Pomocne gdy coś nie działa.
+Dalej działają — pozwala to równolegle używać plugina Claude Code (`architekt-wnetrz` w marketplace) z tym samym workerem.

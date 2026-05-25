@@ -1,15 +1,35 @@
-name = "meble-banana"
+name = "architekt-wnetrz"
 main = "src/index.ts"
 compatibility_date = "2026-01-01"
+compatibility_flags = ["nodejs_compat"]
 
-# Po deploymencie zostaniesz przekierowany na https://meble-banana.<twoj-subdomen>.workers.dev
-# (lub własna domena jeśli skonfigurujesz custom_domain).
-
-# Opcjonalnie: ograniczenie origin do claude.ai (i localhost do testów)
-# Zostaw tak, lub zmień gdy potrzebujesz innych klientów.
+# CORS — domeny które mogą wołać API. Po zdeployowaniu frontu dodaj jego URL.
 [vars]
-ALLOWED_ORIGINS = "https://claude.ai,https://api.claude.ai,http://localhost"
+ALLOWED_ORIGINS = "https://claude.ai,http://localhost:3000,http://localhost:8787"
+CLAUDE_MODEL = "claude-sonnet-4-6"
+GEMINI_MODEL = "gemini-3.1-flash-image-preview"
 
-# SEKRETY (NIE wpisuj ich tutaj!) — ustawiasz przez wrangler secret put:
+# D1 — baza danych projektów. Stwórz raz:
+#   wrangler d1 create architekt-wnetrz
+# Wynik wklej do `database_id`.
+[[d1_databases]]
+binding = "DB"
+database_name = "architekt-wnetrz"
+database_id = "REPLACE_AFTER_CREATE"
+migrations_dir = "migrations"
+
+# R2 — storage na zdjęcia pomieszczeń i wygenerowane rendery.
+# Stwórz raz: wrangler r2 bucket create architekt-wnetrz-media
+[[r2_buckets]]
+binding = "MEDIA"
+bucket_name = "architekt-wnetrz-media"
+
+# Migracje workerów (nie mylić z migracjami D1)
+[[migrations]]
+tag = "v2"
+new_classes = []
+
+# SEKRETY — ustawiasz przez wrangler secret put:
+#   wrangler secret put ANTHROPIC_API_KEY
 #   wrangler secret put GEMINI_API_KEY
 #   wrangler secret put SHARED_SECRET

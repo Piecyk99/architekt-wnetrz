@@ -1,12 +1,20 @@
 {
-  "name": "meble-banana-worker",
-  "version": "1.0.0",
-  "description": "Cloudflare Worker proxy do Gemini Nano Banana dla skilla meble-architekt",
+  "name": "architekt-wnetrz-worker",
+  "version": "2.0.0",
+  "description": "Cloudflare Worker backend dla aplikacji Architekt Wnętrz (Claude API + Gemini + D1 + R2)",
   "private": true,
+  "type": "module",
   "scripts": {
+    "build:skill": "node scripts/build-skill.mjs",
+    "predev": "npm run build:skill",
+    "predeploy": "npm run build:skill",
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "tail": "wrangler tail",
+    "db:migrate:local": "wrangler d1 migrations apply architekt-wnetrz --local",
+    "db:migrate:remote": "wrangler d1 migrations apply architekt-wnetrz --remote",
+    "db:reset:local": "wrangler d1 execute architekt-wnetrz --local --command \"DROP TABLE IF EXISTS projects; DROP TABLE IF EXISTS rooms; DROP TABLE IF EXISTS messages; DROP TABLE IF EXISTS decisions; DROP TABLE IF EXISTS renders; DROP TABLE IF EXISTS expenses; DROP TABLE IF EXISTS shopping_items; DROP TABLE IF EXISTS notes; DROP TABLE IF EXISTS d1_migrations;\"",
+    "secret:claude": "wrangler secret put ANTHROPIC_API_KEY",
     "secret:gemini": "wrangler secret put GEMINI_API_KEY",
     "secret:shared": "wrangler secret put SHARED_SECRET"
   },
