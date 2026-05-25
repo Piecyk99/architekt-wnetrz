@@ -184,11 +184,15 @@ export async function sendMessage(
       );
 
       try {
+        let sseBuf = "";
         while (true) {
           const { value, done } = await reader.read();
           if (done) break;
-          const chunk = dec.decode(value, { stream: true });
-          for (const line of chunk.split("\n")) {
+          sseBuf += dec.decode(value, { stream: true });
+          let nl: number;
+          while ((nl = sseBuf.indexOf("\n")) !== -1) {
+            const line = sseBuf.slice(0, nl);
+            sseBuf = sseBuf.slice(nl + 1);
             if (!line.startsWith("data: ")) continue;
             const payload = line.slice(6).trim();
             if (!payload) continue;
