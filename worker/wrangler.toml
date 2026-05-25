@@ -19,10 +19,10 @@ database_id = "ff765d85-4762-4b0c-bba5-afff40443b46"
 migrations_dir = "migrations"
 
 # R2 — storage na zdjęcia pomieszczeń i wygenerowane rendery.
-# Stwórz raz: wrangler r2 bucket create architekt-wnetrz-media
+# Stwórz raz: wrangler r2 bucket create architekt-wnetrz
 [[r2_buckets]]
 binding = "MEDIA"
-bucket_name = "architekt-wnetrz-media"
+bucket_name = "architekt-wnetrz"
 
 # Migracje workerów (nie mylić z migracjami D1)
 [[migrations]]
