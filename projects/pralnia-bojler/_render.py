@@ -33,33 +33,77 @@ doorway, three-point composition with the wall centered, no clutter, no
 people, no signage. Architectural Digest editorial spread aesthetic,
 minimalist modern Polish utility room, calm and tactile.""",
     },
-    "02-open-reveal": {
+    "02-open-laundry-day": {
         "aspectRatio": "16:9",
         "imageSize": "1K",
-        "text": """Architectural photo of a 6 sqm Polish utility laundry room. Back wall 2.67 m
-wide × 2.5 m tall with built-in sliding wardrobe FULLY OPEN, all three matte
-walnut HPL panels stacked behind each other revealing the entire cavity.
-Interior lined in cream magnolia laminate, divided into THREE 890 mm sections:
+        "text": """Architectural photo of a 6 sqm Polish utility laundry room. Back wall
+2.67 m wide × 2.5 m tall built-in sliding wardrobe in matte walnut HPL with
+3-track top-hung sliding mechanism. The two right panels have slid LEFT and
+are now STACKED behind the leftmost panel, all three walnut panels grouped
+on the LEFT THIRD of the wall (890 mm wide stack covering the bojler
+section). The RIGHT TWO THIRDS of the wall (1780 mm) is now OPEN, revealing
+the interior of the built-in.
 
-LEFT: vertical white cylindrical electric WATER HEATER BOILER, 55 cm dia
-× 120 cm tall, wall-hung on a visible bracket, bottom at 1.3 m / top at 2.4 m
-above floor, small red warning label, hot/cold pipes on top. Below an open
-niche with folded ironing board leaning vertically + upright cordless vacuum
-on floor.
+Visible interior (right two thirds), lined in cream magnolia 18 mm laminate:
 
-CENTER: white front-loading clothes DRYER 60×60×85 cm with condensation tank
-on top, on black matte plinth. Above: 4 cream shelves with folded towels and
-woven baskets.
+MIDDLE SECTION (centered around 1335 mm from left wall): white front-loading
+clothes DRYER 60×60×85 cm with condensation water tank visible on top, seated
+on a 100 mm black matte plinth. Above the dryer four cream adjustable shelves
+at 340 mm spacing holding folded white towels, transparent boxes of laundry
+pods, two woven storage baskets.
 
-RIGHT (far right, flush with side wall): white front-loading WASHING MACHINE
-60×60×85 cm with prominent round glass door, on matching black plinth. Above:
-shelves with detergent boxes and linens.
+RIGHT SECTION (flush with right side wall): white front-loading WASHING
+MACHINE 60×60×85 cm with prominent round glass door and digital control
+panel, on matching black plinth. Above it matching cream shelves with neatly
+folded linens and a small basket of pegs.
 
-Dark engineered oak chevron parquet floor. SOLID walnut top fascia, NO
-ventilation grille, NO slot, completely smooth. Warm 4000K LED cove inside
-illuminates shelves. Black matte recessed handles on the stacked panels.
-Cream warm-white side walls. Sony A7R IV, 28mm f/8, eye-level from doorway.
-No people, tidy. Dezeen editorial aesthetic.""",
+LEFT THIRD: stack of three walnut HPL panels visible edge-on, full height
+2500 mm, showing three vertical aligned black matte recessed handles, casting
+shadow over the hidden bojler section behind. The panels look slightly
+overlapped showing slim depth between tracks.
+
+Floor: dark engineered oak chevron parquet matching adjacent wardrobe. Top
+fascia: SOLID clean walnut 100 mm tall, NO ventilation grille, NO slot,
+completely smooth. Inside the cavity warm 4000K LED cove illuminates shelves
+uniformly. Cream warm-white side walls. Sony A7R IV, 28mm f/8, eye-level
+from doorway. No people, tidy. Dezeen editorial aesthetic, daily-use
+laundry day scene.""",
+    },
+    "03-open-bojler-service": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K",
+        "text": """Architectural photo of a 6 sqm Polish utility laundry room. Back wall
+2.67 m wide × 2.5 m tall built-in sliding wardrobe in matte walnut HPL with
+3-track top-hung sliding mechanism. The two left panels have slid RIGHT and
+are now STACKED behind the rightmost panel, all three walnut panels grouped
+on the RIGHT THIRD of the wall (890 mm wide stack covering the washing
+machine section). The LEFT TWO THIRDS of the wall (1780 mm) is now OPEN,
+revealing the interior of the built-in.
+
+Visible interior (left two thirds), lined in cream magnolia 18 mm laminate:
+
+LEFT SECTION (flush with left side wall): vertical white cylindrical
+electric WATER HEATER BOILER 55 cm diameter × 120 cm tall, clearly wall-hung
+on the back wall on a visible black metal mounting bracket, its bottom edge
+at 1280 mm above floor and top at 2400 mm, small red warning label, hot and
+cold copper pipes coming out of the top. Below the boiler: open niche
+containing a folded ironing board leaning vertically and an upright cordless
+vacuum cleaner standing on the floor.
+
+MIDDLE SECTION (centered): white front-loading clothes DRYER 60×60×85 cm
+with condensation tank on top, seated on a 100 mm black matte plinth. Above
+the dryer four cream adjustable shelves with folded towels, transparent
+detergent pod boxes, woven baskets.
+
+RIGHT THIRD: stack of three walnut HPL panels visible edge-on, full height
+2500 mm, three aligned black matte recessed handles, hiding the washing
+machine behind.
+
+Floor: dark engineered oak chevron parquet. Top fascia: SOLID clean walnut
+100 mm, NO ventilation grille. Warm 4000K LED cove inside illuminates the
+boiler area and shelves. Cream warm-white side walls. Sony A7R IV, 28mm f/8,
+eye-level from doorway. No people, tidy. Architectural Digest aesthetic,
+annual boiler service scene.""",
     },
 }
 

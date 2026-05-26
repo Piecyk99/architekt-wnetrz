@@ -39,7 +39,7 @@ Wybór jednoznaczny: **bok w bok**.
 
 ```
 ┌─────────────────┬─────────────────┬─────────────────┐  ← sufit 2500
-│ maskownica 100 + krata wentylacyjna ciągła (alu 30×Wszer.) │ ← 2400
+│         maskownica 100 mm pełna walnut (bez kratki) │ ← 2400
 ├─────────────────┼─────────────────┼─────────────────┤
 │   BOJLER        │                 │                 │
 │   55×120        │   PÓŁKA 1       │   PÓŁKA 1       │
@@ -49,17 +49,49 @@ Wybór jednoznaczny: **bok w bok**.
 │   wnęka pionowa │   PÓŁKA 3       │   PÓŁKA 3       │  ← 1050
 │   (mop, deska,  ├─────────────────┼─────────────────┤
 │   odkurzacz)    │                 │                 │
-│   z półkami     │   PRALKA        │   SUSZARKA      │
+│   z półkami     │   SUSZARKA      │   PRALKA        │
 │   regulowanymi  │   60×60×85      │   60×60×85      │
 │                 │                 │                 │  ← 100
 ├─────────────────┴─────────────────┴─────────────────┤
 │  cokół czarny mat 100 mm (poziomowanie + węże)      │
 └─────────────────┴─────────────────┴─────────────────┘  ← podłoga
    PANEL 1 890       PANEL 2 890       PANEL 3 890
-   (bojler)          (pralka)          (suszarka)
+   (bojler)          (suszarka)        (pralka)
 ```
 
 3 × 890 mm = 2670 mm ✓ (drobne wyrównanie poprzez fugę silikonową przy ścianach bocznych)
+
+## Jak otwierać — system 3-torowy (każdy panel na własnej szynie)
+
+Drzwi przesuwne **nie składają się harmonijką** — przesuwają się równolegle, jeden
+panel chowa się za drugim. **W każdym momencie widoczne max 2/3 ściany (1780 mm)**,
+jedna sekcja zawsze zakryta stłoczonymi panelami.
+
+```
+DZIEŃ PRANIA (codzienne ładowanie):
+panele 2+3 → stłoczone po LEWEJ nad bojlerem
+┌──┬──┬──┬─────────────────┬─────────────────┐
+│ │  │  │   SUSZARKA      │   PRALKA        │
+│  stack 1+2+3 │   widoczna      │   widoczna      │
+│ │  │  │     (środek)    │   (prawo)       │
+└──┴──┴──┴─────────────────┴─────────────────┘
+
+SERWIS BOJLERA (raz/rok, anoda):
+panele 1+2 → stłoczone po PRAWEJ nad pralką
+┌─────────────────┬─────────────────┬──┬──┬──┐
+│   BOJLER        │   SUSZARKA      │  │  │ │
+│   widoczny      │   widoczna      │ stack 1+2+3
+│   (lewa)        │   (środek)      │  │  │ │
+└─────────────────┴─────────────────┴──┴──┴──┘
+
+ZAMKNIĘTE: cała ściana 2670 mm walnut (panele równo)
+```
+
+**Konsekwencja:** żeby zobaczyć bojler musisz najpierw przesunąć panele w prawo
+(zasłaniasz pralkę). Żeby załadować pralkę musisz przesunąć panele w lewo
+(zasłaniasz bojler). To jest OK bo:
+- bojler dostępny rzadko (1× rok przegląd, ewentualnie awaria),
+- pralka + suszarka razem dostępne codziennie (najczęstszy use case).
 
 ## Konstrukcja — specyfikacja Korner
 
@@ -85,9 +117,10 @@ Wybór jednoznaczny: **bok w bok**.
 
 **Cokół + sufitowa maskownica:**
 - cokół 100 mm **czarny mat** (wykończenie = ramki / podłogi)
-- maskownica górna 100 mm w kolorze frontów, z **ciągłą kratą wentylacyjną aluminiową 30 mm**
-  na całej szerokości (estetyczna szczelina) — utrzymuje przepływ powietrza do bojlera
-  pomimo zamkniętej zabudowy
+- maskownica górna 100 mm **w kolorze frontów, pełna walnut** (bez kratki w maskownicy)
+- wentylacja pomieszczenia idzie przez istniejącą **kratę w ścianie nad bojlerem**
+  (poza obrysem zabudowy) + naturalny przepływ przy otwartych panelach po pracy
+  pralki/suszarki kondensacyjnej — to wystarczy
 
 ## Bojler — szczegóły (sekcja 1)
 
@@ -96,10 +129,10 @@ Wybór jednoznaczny: **bok w bok**.
 - pod bojlerem wnęka 1,18 m wys. × 0,55 m szer. → idealna na mop, deskę do prasowania,
   odkurzacz pionowy, środki czyszczące w pudełkach
 - półka stała na wys. 1280 mm pod bojlerem (= jego dolna krawędź) maskuje przewody
-- **przeglądy:** raz w roku (odkamienianie magnezowej anody) — wystarczy przesunąć panel 2
-  w lewo, panel 1 w prawo → pełen dostęp do bojlera
+- **przeglądy:** raz w roku (odkamienianie magnezowej anody) — przesuwasz panele 1 i 2
+  w prawo (chowają się za panelem 3 nad pralką) → pełna sekcja bojlera odsłonięta na lewej
 
-## Pralka + suszarka — szczegóły (sekcje 2 i 3)
+## Suszarka + pralka — szczegóły (sekcje 2 i 3)
 
 - pralka i suszarka **wjeżdżają w gotową wnękę** 60 × 60 × 85 cm każda
 - między urządzeniami fuga 10 mm (wibracje)
@@ -151,13 +184,12 @@ maskującą przejście w drzwiach pomieszczenia.
 | 3 fronty 890×2500 HPL Orzech Royal mat                | 1 800      |
 | System przesuwny TopLine L 3-torowy z soft-close      | 1 800      |
 | Uchwyty listwowe 3× 2500 mm czarne mat                | 350        |
-| Krata wentylacyjna alu czarna mat 2670 mm             | 200        |
-| Cokół czarny mat + maskownica                         | 250        |
+| Cokół czarny mat + maskownica pełna walnut            | 250        |
 | Profil LED + taśma 4000 K CRI90 + zasilacz + PIR      | 350        |
 | Akcesoria (kosz wysuwany Hailo, podkładki antywibr.)  | 400        |
 | Montaż Korner (1 ekipa, 1 dzień)                      | 1 500      |
 | Czujnik zalania Aqara + zawór antypowodziowy ¾"       | 350        |
-| **RAZEM**                                             | **9 200**  |
+| **RAZEM**                                             | **9 000**  |
 
 (±15% w zależności od finalnego dekoru i akcesoriów)
 
@@ -175,7 +207,7 @@ maskującą przejście w drzwiach pomieszczenia.
 1. **Dekor frontów garderoby** — czy to dokładnie Orzech Royal H3702, czy inny dekor.
 2. **Podłoga garderoby** — który materiał (patrz tabela powyżej), czy w pralni można 1:1.
 3. **Bojler — model i waga** — sprawdzić, czy obecny hak utrzyma pełny (waga 150 kg dla 100 l).
-4. **Krata wentylacyjna nad bojlerem** — wymierzyć dokładną pozycję i wymiar (do koordynacji z maskownicą).
+4. **Istniejąca krata wentylacyjna w ścianie nad bojlerem** — wymierzyć pozycję; jeśli wypada w obrysie maskownicy 100 mm (między 2400-2500 mm), trzeba ją przenieść niżej w ścianę lub zostawić nadprożny otwór (Korner do uzgodnienia).
 5. **Pralka i suszarka — czy już są kupione?** Wymiary deklarowane mogą się różnić ±10 mm — wymierzyć przed cięciem płyt.
 6. **Wymiar ściany** — wymierzyć 2,67 m laserowo w 3 punktach (góra/środek/dół) — stare ściany rzadko są równoległe, fuga silikonowa pod listwę maskującą 10-20 mm po bokach to standard.
 
