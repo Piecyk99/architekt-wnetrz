@@ -1,7 +1,8 @@
 # Projekt wykonawczy — Garderoba U / Orzech Royal
 
-**Dokument dla stolarza wykonawczego (Korner Żary lub równoważny).**
-**Wersja:** 1.0 / 26.05.2026
+**Wykonanie: DIY (samodzielnie przez inwestora).**
+**Korner: WYŁĄCZNIE dostawca płyt z dociętymi elementami i naklejoną okleiną ABS.**
+**Wersja:** 1.1 / 26.05.2026
 **Pochodne:** `garderoba-U-orzech-royal.md` (specyfikacja projektowa)
 **Powiązane rysunki:** W-01 do W-04 + U-07 (techniczny), U-08 (elektryka)
 
@@ -350,15 +351,19 @@ System 32 = pionowe rzędy otworów co 32 mm w bokach modułów, fi 5 mm, głęb
 
 ---
 
-## 10. Wycena orientacyjna (do weryfikacji przez Korner)
+## 10. Wycena orientacyjna — TYLKO MATERIAŁ I AKCESORIA
+
+> **UWAGA: Inwestor wykonuje cięcie, okleinowanie, wiercenie systemu 32 i montaż WE WŁASNYM ZAKRESIE.**
+> **Korner zamawiamy WYŁĄCZNIE jako dostawcę płyt z dociętymi elementami i nałożoną okleiną ABS (usługa cięcia + okleinowania).**
 
 | Pozycja | Wartość |
 |---|---|
-| Płyta meblowa Egger H3734 (5 arkuszy) | ~3500 zł |
+| Płyta meblowa Egger H3734 (5 arkuszy) z dostawą | ~3500 zł |
 | MDF 18 mm + okleina drzwi (1 arkusz) | ~600 zł |
 | HDF 8 mm plecy (2 arkusze) | ~400 zł |
 | Okleina ABS 2 mm H3734 (70 m) | ~250 zł |
-| Wkręty, kołki, akcesoria montażowe | ~250 zł |
+| **Usługa Korner: cięcie + okleinowanie (NIE montaż, NIE wiercenie)** | **~1500–2000 zł** |
+| Wkręty Konfirmat, kołki fi 8, akcesoria montażowe | ~250 zł |
 | Szuflady Blum Legrabox (14 szt z BLUMOTION) | ~3500 zł |
 | Prowadnice Hettich KA5300 (8 par) | ~800 zł |
 | Pantograf Hettich (2 szt) | ~600 zł |
@@ -366,14 +371,24 @@ System 32 = pionowe rzędy otworów co 32 mm w bokach modułów, fi 5 mm, głęb
 | System drzwi przesuwnych Sevroll Slim 25 + profile uchwytu | ~1800 zł |
 | Nogi regulowane Hettich (24 szt) | ~250 zł |
 | Oświetlenie LED (taśmy + profile + zasilacze + PIR + kontaktrony) | ~1500 zł |
-| **MATERIAŁ RAZEM** | **~13 850 zł** |
-| Cięcie, okleinowanie, wiercenie systemu 32 (Korner roboczo) | ~3000 zł |
-| Montaż na miejscu (2 stolarzy × 2 dni) | ~3000 zł |
-| **WYKONANIE I MONTAŻ** | **~6000 zł** |
 | | |
-| **CAŁOŚĆ ORIENTACYJNIE** | **~19 850 zł brutto** |
+| **CAŁOŚĆ MATERIAŁOWA (DIY)** | **~15 350–15 850 zł brutto** |
 
 *Wycena nie uwzględnia podłogi Barlinek, prac elektrycznych ani robót budowlanych przygotowawczych.*
+
+### Co zamawiamy u Kornera (zlecenie ograniczone):
+1. **Dostarczenie płyt** Egger H3734 ST9 (5 arkuszy) — opcjonalnie razem z dostawą
+2. **Cięcie na wymiar** wszystkich elementów z cutting listy (pkt 3)
+3. **Naklejenie okleiny ABS 2 mm** na widocznych krawędziach (pkt 4)
+4. **Wiercenie systemu 32** (otwory fi 5 mm co 32 mm — opcjonalnie, jeśli inwestor nie ma frezarki)
+
+### Co inwestor robi sam:
+- Montaż wszystkich korpusów (Konfirmat + kołki)
+- Wiercenie otworów na drążki, pantograf, Legrabox (wg szablonów Blum/Hettich)
+- Montaż systemu drzwi przesuwnych Sevroll
+- Klejenie taśm LED na profile, podłączenie zasilaczy
+- Regulacja drzwi, szuflad, soft-close
+- Test funkcjonalności
 
 ---
 
