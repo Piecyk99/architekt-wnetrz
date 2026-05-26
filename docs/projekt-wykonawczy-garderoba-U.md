@@ -103,7 +103,8 @@
 
 | Lp | Element | Wymiar (mm) | Szt | Materiał | Okleina ABS |
 |---|---|---|---|---|---|
-| D.01 | Front drzwi przesuwnych | 1180 × 2390 × 18 | 2 | **MDF 18 mm + okleina H3734 OBUSTRONNIE** | ABS 2 mm **wszystkie 4 strony** |
+| D.01a | Front drzwi przesuwnych **LEWY (panel walorzeczowy)** | 1180 × 2390 × 18 | 1 | **MDF 18 mm + okleina H3734 OBUSTRONNIE** | ABS 2 mm **wszystkie 4 strony** |
+| D.01b | Front drzwi przesuwnych **PRAWY (panel lustrzany)** | 1180 × 2390 (lustro 4 mm + płyta nośna MDF 14 mm) | 1 | **Lustro srebrne 4 mm klejone na MDF 14 mm** (sklejka anti-shatter folia bezpieczna z tyłu), rama aluminium czarny mat 20 mm na obwodzie | rama aluminium 20 mm — okleina ABS niepotrzebna |
 | D.02 | Profil pionowy uchwytu wpuszczanego (czarny mat) | 18 × 2390 | 2 | Sevroll Lounge profil aluminiowy czarny | — |
 
 ### 3.5 Podsumowanie zapotrzebowania
@@ -111,7 +112,9 @@
 | Pozycja | Wartość |
 |---|---|
 | **Liczba arkuszy płyty meblowej** (2800 × 2070 mm) | **5–6 szt** (z zapasem 5%) |
-| **Liczba arkuszy MDF 18 mm** (drzwi przesuwne) | 1 szt |
+| **Liczba arkuszy MDF 18 mm** (drzwi przesuwne — panel lewy walorzecz) | 1 szt |
+| **Lustro srebrne 4 mm + płyta MDF 14 mm nośna** (panel prawy) | 1 szt 1180 × 2390 |
+| **Rama aluminiowa czarny mat 20 mm** (obwód panelu lustrzanego) | ~7,3 mb |
 | **Liczba arkuszy HDF 8 mm** (plecy) | 2 szt |
 | **Bieżące metry okleiny ABS 2 mm** | ~70 m |
 | **Wkręty Konfirmat M6.4×50** | ~120 szt |

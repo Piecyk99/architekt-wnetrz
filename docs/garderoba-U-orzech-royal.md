@@ -127,8 +127,9 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 | Liczba paneli | 2 |
 | Wymiar pojedynczego panelu | **1180 × 2390 mm** |
 | Zachód paneli | 5 mm w środku |
-| Materiał | Płyta meblowa MDF 18 mm + okleina **Egger H3734 ST9 Pacific Walnut** |
-| Krawędzie | ABS 2 mm wszystkie strony |
+| **Panel LEWY (walorzeczowy)** | Płyta MDF 18 mm + okleina **Egger H3734 ST9 Pacific Walnut** OBUSTRONNIE, ABS 2 mm wszystkie 4 strony |
+| **Panel PRAWY (lustrzany)** | **Lustro srebrne 4 mm klejone na MDF 14 mm** (folia bezpieczna anti-shatter z tyłu), **rama aluminium czarny mat 20 mm** na obwodzie. Lustro pełnej wysokości — funkcja: przymiarka, podwojenie głębi pokoju, doświetlenie. |
+| **Decyzja projektowa** | Lustro pełnej wysokości w **panelu PRAWYM** drzwi przesuwnych — funkcje: (1) przymiarka całej sylwetki ze środka chodnika, (2) wizualne podwojenie głębi pokoju (lustro odbija lewą szafę A), (3) doświetlenie wnętrza odbiciem światła LED |
 | **Header (top panel szafy C)** | **2360 × 400 × 18 mm** w Orzechu Royal — górna pozioma płyta szafy tylnej; pełni rolę: (1) sufit szafy C, (2) nośnik prowadnicy drzwi przesuwnych, (3) widoczny "fryz" architektoniczny 70 mm od dołu |
 | System | **Sevroll Slim 25** (lub Hettich Top Line) — prowadnica górna **mocowana wkrętami w drewniany header od dołu** |
 | Uchwyt | profil pionowy wpuszczany **czarny mat**, na pełną wysokość (np. Sevroll Lounge) |
