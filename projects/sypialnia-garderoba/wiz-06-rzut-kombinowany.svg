@@ -1,0 +1,376 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1400" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <pattern id="oakF" patternUnits="userSpaceOnUse" width="30" height="120">
+      <rect width="30" height="120" fill="#e8d2a8"/>
+      <path d="M0 0 L30 0 M0 120 L30 120" stroke="#c2a371" stroke-width="0.8"/>
+      <path d="M15 0 L15 120" stroke="#d4b58a" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="walnutT" patternUnits="userSpaceOnUse" width="18" height="60">
+      <rect width="18" height="60" fill="#6b4530"/>
+      <path d="M0 0 L18 60 M0 30 L18 60 M9 0 L18 30" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
+    </pattern>
+    <pattern id="boucleT" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#b8b4ab"/>
+      <circle cx="3" cy="3" r="1" fill="#9a9690" opacity="0.6"/>
+    </pattern>
+    <pattern id="lameleT" patternUnits="userSpaceOnUse" width="16" height="30">
+      <rect width="16" height="30" fill="#5b3826"/>
+      <rect x="6" width="6" height="30" fill="#3d2419"/>
+    </pattern>
+  </defs>
+
+  <!-- TITLE -->
+  <text x="40" y="44" font-size="28" font-weight="800" fill="#0a0a0a">Rzut kombinowany: SYPIALNIA + GARDEROBA</text>
+  <text x="40" y="72" font-size="14" fill="#444">skala 1:30 · wymiary w mm · wysokość sypialni 2500 · wysokość garderoby 2490 (sufit GK)</text>
+  <text x="40" y="92" font-size="11" fill="#888">Sypialnia 3650 × 4000 (interpretacja planu ręcznego — POTWIERDŹ na miejscu) · Garderoba 2360 × 2190 (z projektu garderoba-U-orzech-royal.md)</text>
+
+  <!-- skala/legenda meble -->
+  <!-- 1 mm = 0.16 px (przy 3650 mm = 584 px) -->
+  <!-- używam 1 mm = 0.16 px -->
+
+  <!-- =================== SYPIALNIA =================== -->
+  <g transform="translate(120, 140)">
+
+    <!-- podłoga sypialni -->
+    <rect x="0" y="0" width="584" height="640" fill="url(#oakF)" stroke="#0a0a0a" stroke-width="5"/>
+
+    <!-- ściana okienna NA GÓRZE z oknem -->
+    <rect x="0" y="0" width="584" height="14" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <rect x="190" y="-2" width="240" height="18" fill="#bfe1f3" stroke="#0a0a0a" stroke-width="2"/>
+    <line x1="190" y1="7" x2="430" y2="7" stroke="#fff" stroke-width="2"/>
+    <text x="310" y="-8" font-size="11" fill="#0a0a0a" text-anchor="middle" font-weight="700">OKNO 1500×1400, parapet 900</text>
+
+    <!-- lamele orzech wzdłuż ściany okiennej (po wewnętrznej stronie) -->
+    <rect x="0" y="14" width="584" height="22" fill="url(#lameleT)"/>
+    <text x="292" y="30" font-size="11" fill="#fff" font-weight="700" text-anchor="middle">LAMELE H3734 ORZECH ROYAL · pełna ściana 4000×2500</text>
+
+    <!-- ściana lewa (3650) -->
+    <rect x="-14" y="0" width="14" height="640" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+
+    <!-- ściana dolna z drzwiami do garderoby — to jest ŚCIANA WSPÓLNA SYPIALNIA/GARDEROBA -->
+    <!-- ta ściana jest po prawej (długa, 4000 mm) -->
+    <rect x="584" y="0" width="14" height="640" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- drzwi przesuwne kasetowe 900 mm (w pionie tu) -->
+    <rect x="582" y="160" width="18" height="144" fill="#5b3826" stroke="#000" stroke-width="2"/>
+    <text x="608" y="240" font-size="10" fill="#0a0a0a" font-weight="700">drzwi</text>
+    <text x="608" y="252" font-size="9" fill="#444">przesuwne</text>
+    <text x="608" y="263" font-size="9" fill="#444">kasetowe</text>
+    <text x="608" y="274" font-size="9" fill="#444">900×2100</text>
+    <text x="608" y="285" font-size="9" fill="#444">H3734</text>
+    <text x="608" y="296" font-size="9" fill="#444">Sevroll Lounge</text>
+    <!-- strzałka przesuwu drzwi -->
+    <line x1="580" y1="320" x2="540" y2="320" stroke="#888" stroke-width="1" stroke-dasharray="3 2"/>
+    <polygon points="540,320 548,316 548,324" fill="#888"/>
+    <text x="555" y="312" font-size="9" fill="#666">drzwi sunie w kasecie ←</text>
+    <!-- pasek LED 2700K w narożu drzwi -->
+    <rect x="579" y="160" width="3" height="144" fill="#ffe7a3" opacity="0.9"/>
+
+    <!-- ściana wejściowa od korytarza (krótka, 3650 wide) — to nasza ściana z mirror/lustro -->
+    <!-- jest na dole rysunku -->
+    <rect x="0" y="640" width="584" height="14" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <rect x="100" y="638" width="128" height="18" fill="#e8d2a8" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="164" y="668" font-size="10" fill="#0a0a0a" font-weight="700" text-anchor="middle">drzwi sypialni 80×210 H3734</text>
+    <path d="M 228 654 A 128 128 0 0 1 100 526" fill="none" stroke="#888" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <!-- LUSTRO 60×180 + KINKIET na ścianie wejściowej -->
+    <rect x="340" y="640" width="96" height="10" fill="#cfd5dc" stroke="#000" stroke-width="2"/>
+    <text x="388" y="665" font-size="9" fill="#0a0a0a" font-weight="700" text-anchor="middle">LUSTRO 60×180 + LED</text>
+    <circle cx="490" cy="645" r="6" fill="#0a0a0a"/>
+    <text x="490" y="668" font-size="9" fill="#0a0a0a" font-weight="700" text-anchor="middle">kinkiet</text>
+
+    <!-- ŁÓŻKO 160×200 dosunięte do ściany okiennej, centralnie -->
+    <g transform="translate(167, 36)">
+      <!-- wezgłowie tapicerowane -->
+      <rect x="-25" y="0" width="300" height="35" fill="url(#boucleT)" stroke="#444" stroke-width="1"/>
+      <text x="125" y="22" font-size="10" fill="#222" text-anchor="middle" font-weight="700">WEZGŁOWIE BOUCLE 2000×1100</text>
+      <!-- nocne -->
+      <rect x="-25" y="-2" width="32" height="32" fill="url(#walnutT)" stroke="#000" stroke-width="1"/>
+      <text x="-9" y="14" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">noc</text>
+      <text x="-9" y="24" font-size="8" fill="#fff" text-anchor="middle">L</text>
+      <rect x="243" y="-2" width="32" height="32" fill="url(#walnutT)" stroke="#000" stroke-width="1"/>
+      <text x="259" y="14" font-size="8" fill="#fff" text-anchor="middle" font-weight="700">noc</text>
+      <text x="259" y="24" font-size="8" fill="#fff" text-anchor="middle">P</text>
+      <!-- materac 160x200 -->
+      <rect x="15" y="35" width="220" height="270" fill="#fffdf6" stroke="#0a0a0a" stroke-width="2"/>
+      <text x="125" y="160" font-size="16" fill="#0a0a0a" text-anchor="middle" font-weight="800">ŁÓŻKO</text>
+      <text x="125" y="180" font-size="13" fill="#0a0a0a" text-anchor="middle">160×200</text>
+      <text x="125" y="196" font-size="9" fill="#777" text-anchor="middle">rama boucle h 250</text>
+      <!-- poduszki -->
+      <rect x="25" y="42" width="95" height="34" fill="#f0ebe0" stroke="#999" rx="4"/>
+      <rect x="130" y="42" width="95" height="34" fill="#f0ebe0" stroke="#999" rx="4"/>
+      <!-- kinkiety K1 K2 -->
+      <circle cx="-9" cy="-10" r="5" fill="#0a0a0a"/>
+      <text x="-9" y="-16" font-size="8" fill="#0a0a0a" text-anchor="middle" font-weight="700">K1</text>
+      <circle cx="259" cy="-10" r="5" fill="#0a0a0a"/>
+      <text x="259" y="-16" font-size="8" fill="#0a0a0a" text-anchor="middle" font-weight="700">K2</text>
+    </g>
+
+    <!-- ławka tapicerowana koniec łóżka (opcja) -->
+    <g transform="translate(217, 366)">
+      <rect width="200" height="35" fill="#cfc8b9" stroke="#666" stroke-width="1" stroke-dasharray="3 2"/>
+      <text x="100" y="22" font-size="10" fill="#333" text-anchor="middle">ławka 200×40 (opcja)</text>
+    </g>
+
+    <!-- dywan -->
+    <rect x="130" y="220" width="370" height="380" fill="none" stroke="#888" stroke-width="1.5" stroke-dasharray="5 3" opacity="0.55"/>
+    <text x="145" y="595" font-size="10" fill="#666">dywan 200×290</text>
+
+    <!-- LAMPA WISZĄCA centralna -->
+    <g transform="translate(340, 480)">
+      <circle r="18" fill="none" stroke="#0a0a0a" stroke-width="2"/>
+      <circle r="12" fill="#0a0a0a"/>
+      <text y="36" font-size="10" fill="#0a0a0a" text-anchor="middle" font-weight="700">LAMPA CENTRALNA</text>
+      <text y="48" font-size="9" fill="#444" text-anchor="middle">Muuto Fluid Ø190</text>
+      <text y="59" font-size="9" fill="#444" text-anchor="middle">spód 2150 mm od podł.</text>
+    </g>
+
+    <!-- gzymsy LED 2700K na ścianach krótkich (góra+dół) -->
+    <rect x="0" y="36" width="584" height="3" fill="#ffe7a3" opacity="0.85"/>
+    <rect x="0" y="616" width="584" height="3" fill="#ffe7a3" opacity="0.85"/>
+    <text x="12" y="48" font-size="9" fill="#a47e00" font-weight="700">▓ gzyms LED 2700K (sufit, ściana okienna)</text>
+    <text x="12" y="612" font-size="9" fill="#a47e00" font-weight="700">▓ gzyms LED 2700K (sufit, ściana wejściowa)</text>
+
+    <!-- ETYKIETA SYPIALNI -->
+    <text x="292" y="320" font-size="26" font-weight="800" fill="#0a0a0a" opacity="0.08" text-anchor="middle">SYPIALNIA 14,6 m²</text>
+
+    <!-- WYMIARY zewnętrzne -->
+    <line x1="0" y1="-50" x2="584" y2="-50" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="0" y1="-56" x2="0" y2="-44" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="584" y1="-56" x2="584" y2="-44" stroke="#0a0a0a" stroke-width="1.5"/>
+    <text x="292" y="-58" font-size="14" font-weight="800" fill="#0a0a0a" text-anchor="middle">3650 mm</text>
+
+    <line x1="-50" y1="0" x2="-50" y2="640" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="-56" y1="0" x2="-44" y2="0" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="-56" y1="640" x2="-44" y2="640" stroke="#0a0a0a" stroke-width="1.5"/>
+    <text x="-65" y="320" font-size="14" font-weight="800" fill="#0a0a0a" text-anchor="middle" transform="rotate(-90 -65 320)">4000 mm</text>
+  </g>
+
+  <!-- =================== GARDEROBA =================== -->
+  <!-- garderoba dołączona do prawej ściany sypialni, drzwi przesuwne między rozumiane -->
+  <!-- garderoba 2360 mm szer (front wall - wzdłuż ściany sypialni) × 2190 mm deep (na prawo) -->
+  <!-- skala: 1 mm = 0.16 px → 2360 = 378 px, 2190 = 350 px -->
+  <g transform="translate(718, 264)">
+
+    <!-- podłoga garderoby — TA SAMA Barlinek dąb Almond, kontynuacja -->
+    <rect x="0" y="0" width="350" height="378" fill="url(#oakF)" stroke="#0a0a0a" stroke-width="5"/>
+
+    <!-- ściana lewa - to ściana wspólna z sypialnią - już narysowana wyżej jako prawa ściana sypialni -->
+    <!-- ale dla jasności narysuję cienką linię (oznacza brak ściany w środku, drzwi już zaznaczone) -->
+    <line x1="0" y1="0" x2="0" y2="378" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- drzwi wejściowe do garderoby (te same co w sypialni) - już na poprzedniej ścianie -->
+    <line x1="-2" y1="76" x2="-2" y2="220" stroke="#5b3826" stroke-width="4" opacity="0.5" stroke-dasharray="6 3"/>
+    <text x="6" y="148" font-size="9" fill="#5b3826" font-weight="700">↑ drzwi z sypialni</text>
+
+    <!-- ściana górna -->
+    <rect x="0" y="-14" width="350" height="14" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- ściana dolna -->
+    <rect x="0" y="378" width="350" height="14" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- ściana prawa (tylna garderoby — TUTAJ DRZWI PRZESUWNE C1/C2/C3) -->
+    <rect x="350" y="-14" width="14" height="406" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+
+    <!-- TYLNA ŚCIANA - HEADER ORZECH + DRZWI PRZESUWNE C -->
+    <!-- to są moduły C1 C2 C3 zakryte 2 panelami przesuwnymi 1180 × 2390 -->
+    <rect x="286" y="0" width="64" height="378" fill="url(#walnutT)" stroke="#000" stroke-width="2"/>
+    <!-- linia podziału między 2 panelami -->
+    <line x1="286" y1="189" x2="350" y2="189" stroke="#000" stroke-width="1" stroke-dasharray="3 2"/>
+    <!-- uchwyty pionowe Sevroll Lounge na obu panelach -->
+    <rect x="284" y="20" width="3" height="340" fill="#000"/>
+    <text x="318" y="100" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">PANEL 1</text>
+    <text x="318" y="112" font-size="8" fill="#fff" text-anchor="middle">1180×2390</text>
+    <text x="318" y="280" font-size="9" fill="#fff" text-anchor="middle" font-weight="700">PANEL 2</text>
+    <text x="318" y="292" font-size="8" fill="#fff" text-anchor="middle">1180×2390</text>
+    <text x="320" y="376" font-size="8" fill="#444" text-anchor="middle" transform="rotate(-90 320 376)">moduły C1 C2 C3 za panelami</text>
+
+    <!-- LEWA ŚCIANA (ONA) - moduły A1 A2 A3 otwarte -->
+    <g>
+      <!-- 3 moduły szer 596-597 × głęb 600, wzdłuż lewej ściany w pionie -->
+      <!-- skala 1 mm = 0.16 px: 600 deep = 96px, 596 wide = 95px -->
+      <rect x="0" y="0" width="96" height="378" fill="url(#walnutT)" stroke="#000" stroke-width="1"/>
+      <!-- linie podziału między A1/A2/A3 (poziome) -->
+      <line x1="0" y1="126" x2="96" y2="126" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+      <line x1="0" y1="252" x2="96" y2="252" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+      <!-- linie półek otwartych: pokazane jako etykiety -->
+      <text x="48" y="36" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">ONA A1</text>
+      <text x="48" y="50" font-size="8" fill="#fff" text-anchor="middle">drążek długi</text>
+      <text x="48" y="62" font-size="8" fill="#fff" text-anchor="middle">h=1800 sukienki</text>
+
+      <text x="48" y="162" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">ONA A2</text>
+      <text x="48" y="176" font-size="8" fill="#fff" text-anchor="middle">drążek h=1100</text>
+      <text x="48" y="188" font-size="8" fill="#fff" text-anchor="middle">+ pantograf</text>
+      <text x="48" y="200" font-size="8" fill="#fff" text-anchor="middle">+ 3× szuflada</text>
+
+      <text x="48" y="288" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">ONA A3</text>
+      <text x="48" y="302" font-size="8" fill="#fff" text-anchor="middle">drążek + 4× półki</text>
+      <text x="48" y="314" font-size="8" fill="#fff" text-anchor="middle">na buty (12 par)</text>
+    </g>
+
+    <!-- PRAWA ŚCIANA wewnętrzna (ON) - moduły B1 B2 B3 - tutaj mam małą przestrzeń bo prawa ściana zewn już zajęta tylną ścianą C -->
+    <!-- ON jest symetryczne do ONA, ale po DRUGIEJ stronie chodnika -->
+    <!-- ON wisi na ścianie... która? -->
+    <!-- W planie wardrobe: ONA na lewej ścianie 2190 mm głębokości, ON na prawej ścianie 2190 mm głębokości, C na tylnej 2360 mm szer -->
+    <!-- Jeśli moja garderoba w SVG ma 350 wide × 378 tall, to: -->
+    <!-- 350 = głębokość 2190, 378 = szerokość 2360, drzwi front są po LEWEJ stronie (od sypialni) -->
+    <!-- Wtedy: ONA na ścianie GÓRNEJ (378 wide), ON na ścianie DOLNEJ, C na ścianie PRAWEJ -->
+    <!-- POPRAWKA - przerysuję moduły -->
+  </g>
+
+  <!-- POPRAWKA - przerysowanie garderoby z poprawną orientacją -->
+  <g transform="translate(718, 264)">
+    <!-- czyszczę poprzedni rysunek garderoby i rysuję od nowa -->
+    <rect x="0" y="0" width="350" height="378" fill="url(#oakF)" stroke="#0a0a0a" stroke-width="5"/>
+
+    <!-- ściany -->
+    <rect x="-14" y="-14" width="14" height="406" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <rect x="350" y="-14" width="14" height="406" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <rect x="-14" y="-14" width="378" height="14" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+    <rect x="-14" y="378" width="378" height="14" fill="#fafafa" stroke="#0a0a0a" stroke-width="2"/>
+
+    <!-- FRONT WALL (=ściana wspólna z sypialnią, lewa w naszym rzucie) -->
+    <!-- drzwi 900 mm wejściowe -->
+    <rect x="-12" y="76" width="12" height="144" fill="#e8d2a8" opacity="0.7"/>
+    <text x="-30" y="148" font-size="10" fill="#0a0a0a" font-weight="700" text-anchor="end">drzwi z</text>
+    <text x="-30" y="160" font-size="10" fill="#0a0a0a" text-anchor="end">sypialni 900</text>
+
+    <!-- ONA (lewa ściana = górna w naszym rzucie) - 3 moduły 596+597+597 szer × 600 głęb -->
+    <!-- 600 mm głębokości = 96 px wstaw -->
+    <rect x="0" y="0" width="350" height="96" fill="url(#walnutT)" stroke="#000" stroke-width="1"/>
+    <line x1="116" y1="0" x2="116" y2="96" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="232" y1="0" x2="232" y2="96" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+    <text x="58" y="20" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">A1 ONA</text>
+    <text x="58" y="34" font-size="8" fill="#fff" text-anchor="middle">596×600</text>
+    <text x="58" y="46" font-size="8" fill="#fff" text-anchor="middle">drążek 1800</text>
+    <text x="58" y="58" font-size="8" fill="#fff" text-anchor="middle">sukienki</text>
+    <text x="58" y="74" font-size="8" fill="#fff" text-anchor="middle">płaszcze</text>
+
+    <text x="174" y="20" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">A2 ONA</text>
+    <text x="174" y="34" font-size="8" fill="#fff" text-anchor="middle">597×600</text>
+    <text x="174" y="46" font-size="8" fill="#fff" text-anchor="middle">drążek 1100</text>
+    <text x="174" y="58" font-size="8" fill="#fff" text-anchor="middle">+ pantograf</text>
+    <text x="174" y="70" font-size="8" fill="#fff" text-anchor="middle">+ 3×szuflad.</text>
+    <text x="174" y="82" font-size="8" fill="#fff" text-anchor="middle">H134 bielizna</text>
+
+    <text x="290" y="20" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">A3 ONA</text>
+    <text x="290" y="34" font-size="8" fill="#fff" text-anchor="middle">597×600</text>
+    <text x="290" y="46" font-size="8" fill="#fff" text-anchor="middle">drążek 1100</text>
+    <text x="290" y="58" font-size="8" fill="#fff" text-anchor="middle">+ 4× półki</text>
+    <text x="290" y="70" font-size="8" fill="#fff" text-anchor="middle">na buty</text>
+    <text x="290" y="82" font-size="8" fill="#fff" text-anchor="middle">12 par</text>
+
+    <!-- ON (prawa ściana = dolna w rzucie) - lustrzane do ONA -->
+    <rect x="0" y="282" width="350" height="96" fill="url(#walnutT)" stroke="#000" stroke-width="1"/>
+    <line x1="116" y1="282" x2="116" y2="378" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+    <line x1="232" y1="282" x2="232" y2="378" stroke="#fff" stroke-width="0.8" opacity="0.5"/>
+    <text x="58" y="302" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">B1 ON</text>
+    <text x="58" y="316" font-size="8" fill="#fff" text-anchor="middle">596×600</text>
+    <text x="58" y="328" font-size="8" fill="#fff" text-anchor="middle">drążek 1800</text>
+    <text x="58" y="340" font-size="8" fill="#fff" text-anchor="middle">kurtki</text>
+    <text x="58" y="352" font-size="8" fill="#fff" text-anchor="middle">garnitur</text>
+
+    <text x="174" y="302" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">B2 ON</text>
+    <text x="174" y="316" font-size="8" fill="#fff" text-anchor="middle">597×600</text>
+    <text x="174" y="328" font-size="8" fill="#fff" text-anchor="middle">drążek 1100</text>
+    <text x="174" y="340" font-size="8" fill="#fff" text-anchor="middle">+ pantograf</text>
+    <text x="174" y="352" font-size="8" fill="#fff" text-anchor="middle">+ 3×szuflad.</text>
+    <text x="174" y="364" font-size="8" fill="#fff" text-anchor="middle">koszule</text>
+
+    <text x="290" y="302" font-size="10" fill="#fff" text-anchor="middle" font-weight="800">B3 ON</text>
+    <text x="290" y="316" font-size="8" fill="#fff" text-anchor="middle">597×600</text>
+    <text x="290" y="328" font-size="8" fill="#fff" text-anchor="middle">drążek 1100</text>
+    <text x="290" y="340" font-size="8" fill="#fff" text-anchor="middle">+ 4× półki</text>
+    <text x="290" y="352" font-size="8" fill="#fff" text-anchor="middle">na buty</text>
+    <text x="290" y="364" font-size="8" fill="#fff" text-anchor="middle">męskie</text>
+
+    <!-- TYLNA ŚCIANA C - drzwi przesuwne + moduły 400 mm głęb. -->
+    <!-- C jest na prawej ścianie (głębokość 400 = 64 px) -->
+    <rect x="286" y="96" width="64" height="186" fill="url(#walnutT)" stroke="#000" stroke-width="2"/>
+    <line x1="286" y1="189" x2="350" y2="189" stroke="#000" stroke-width="1" stroke-dasharray="3 2"/>
+    <!-- uchwyt pionowy Sevroll Lounge -->
+    <rect x="284" y="105" width="3" height="170" fill="#000"/>
+    <text x="318" y="120" font-size="9" fill="#fff" text-anchor="middle" font-weight="800">PANEL 1</text>
+    <text x="318" y="132" font-size="7" fill="#fff" text-anchor="middle">1180×2390</text>
+    <text x="318" y="144" font-size="7" fill="#fff" text-anchor="middle">H3734</text>
+    <text x="318" y="156" font-size="7" fill="#fff" text-anchor="middle">Sevroll Slim 25</text>
+    <text x="318" y="220" font-size="9" fill="#fff" text-anchor="middle" font-weight="800">PANEL 2</text>
+    <text x="318" y="232" font-size="7" fill="#fff" text-anchor="middle">1180×2390</text>
+    <text x="318" y="244" font-size="7" fill="#fff" text-anchor="middle">uchwyt czarny</text>
+    <text x="318" y="258" font-size="7" fill="#fff" text-anchor="middle">pełnowysok.</text>
+
+    <!-- CHODNIK środkowy 1160 × 1790 mm -->
+    <text x="174" y="190" font-size="14" font-weight="800" fill="#888" text-anchor="middle" opacity="0.4">CHODNIK</text>
+    <text x="174" y="208" font-size="10" font-weight="700" fill="#888" text-anchor="middle" opacity="0.55">1160 × 1790</text>
+
+    <!-- 3 spoty LED w suficie nad chodnikiem -->
+    <circle cx="116" cy="190" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <circle cx="174" cy="190" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <circle cx="232" cy="190" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+
+    <!-- ETYKIETA GARDEROBA -->
+    <text x="175" y="240" font-size="22" font-weight="800" fill="#0a0a0a" opacity="0.08" text-anchor="middle">GARDEROBA 5,2 m²</text>
+
+    <!-- WYMIARY garderoby -->
+    <line x1="0" y1="-50" x2="350" y2="-50" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="0" y1="-56" x2="0" y2="-44" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="350" y1="-56" x2="350" y2="-44" stroke="#0a0a0a" stroke-width="1.5"/>
+    <text x="175" y="-58" font-size="14" font-weight="800" fill="#0a0a0a" text-anchor="middle">2190 mm (głębokość = ściana boczna)</text>
+
+    <line x1="400" y1="0" x2="400" y2="378" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="394" y1="0" x2="406" y2="0" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="394" y1="378" x2="406" y2="378" stroke="#0a0a0a" stroke-width="1.5"/>
+    <text x="416" y="189" font-size="14" font-weight="800" fill="#0a0a0a" transform="rotate(-90 416 189)" text-anchor="middle">2360 mm (front/tył)</text>
+
+    <!-- ETYKIETA: GARDEROBA U-shape z projektu garderoba-U-orzech-royal.md PR #8 -->
+    <text x="175" y="-78" font-size="11" fill="#5b3826" font-weight="700" text-anchor="middle">GARDEROBA U-shape · projekt: docs/garderoba-U-orzech-royal.md (PR #8)</text>
+  </g>
+
+  <!-- =================== OŚ KONTYNUACJI =================== -->
+  <!-- linia poziome pokazująca jak deska Barlinek Almond przechodzi z sypialni do garderoby -->
+  <g transform="translate(118, 488)">
+    <line x1="0" y1="0" x2="1080" y2="0" stroke="#c2a371" stroke-width="2" stroke-dasharray="8 4" opacity="0.6"/>
+    <text x="600" y="-6" font-size="10" fill="#a47e00" font-weight="700" text-anchor="middle">→ deska Barlinek dąb Almond — ta sama partia, kontynuacja bez progu sypialnia ↔ garderoba ←</text>
+  </g>
+
+  <!-- =================== LEGENDA =================== -->
+  <g transform="translate(40, 920)">
+    <text font-size="16" font-weight="800" fill="#0a0a0a">Legenda materiałów (spójna sypialnia ↔ garderoba):</text>
+    <g transform="translate(0, 26)">
+      <rect width="28" height="20" fill="url(#walnutT)" stroke="#000"/>
+      <text x="38" y="14" font-size="12" fill="#222" font-weight="700">Egger H3734 ST9 Pacific Walnut</text>
+      <text x="38" y="28" font-size="10" fill="#555">(= "Orzech Royal") — lamele wezgłowia, drzwi przesuwne, nocne, moduły garderoby, header, panele tylne</text>
+    </g>
+    <g transform="translate(0, 70)">
+      <rect width="28" height="20" fill="url(#oakF)" stroke="#000"/>
+      <text x="38" y="14" font-size="12" fill="#222" font-weight="700">Barlinek dąb Almond</text>
+      <text x="38" y="28" font-size="10" fill="#555">deska 3-warstwowa lakier mat — jasny miodowy, kontynuacja sypialnia → garderoba bez progu (jedna partia)</text>
+    </g>
+    <g transform="translate(0, 114)">
+      <rect width="28" height="20" fill="url(#boucleT)" stroke="#444"/>
+      <text x="38" y="14" font-size="12" fill="#222" font-weight="700">Boucle szary jasny</text>
+      <text x="38" y="28" font-size="10" fill="#555">wezgłowie 2000×1100 + tapicerka ramy łóżka (Kvadrat Hallingdal 65 lub zamiennik)</text>
+    </g>
+    <g transform="translate(0, 158)">
+      <rect width="28" height="20" fill="#0a0a0a"/>
+      <text x="38" y="14" font-size="12" fill="#222" font-weight="700">Czarny mat (akcenty)</text>
+      <text x="38" y="28" font-size="10" fill="#555">cokoły 100 mm, uchwyty Sevroll Lounge pełnowysokościowe, kinkiety, włączniki Berker R.1, profile LED</text>
+    </g>
+    <g transform="translate(0, 202)">
+      <rect width="28" height="20" fill="#fff4d0" stroke="#aa9a55"/>
+      <text x="38" y="14" font-size="12" fill="#222" font-weight="700">LED ciepłe</text>
+      <text x="38" y="28" font-size="10" fill="#555">sypialnia 2700K (wnęka + dekoracja) + 3000K (kinkiety czytania) · garderoba 3000K spoty + półki (Paulmann)</text>
+    </g>
+
+    <!-- prawa kolumna legendy -->
+    <g transform="translate(560, 0)">
+      <text font-size="16" font-weight="800" fill="#0a0a0a">Kluczowe wymiary:</text>
+      <text x="0" y="26" font-size="11" fill="#222"><tspan font-weight="700">Sypialnia:</tspan> 3650 × 4000 × 2500 mm = 14,6 m² (interpretacja planu — POTWIERDŹ pomiarem)</text>
+      <text x="0" y="46" font-size="11" fill="#222"><tspan font-weight="700">Garderoba:</tspan> 2360 × 2190 × 2490 mm = 5,2 m² (z docs/garderoba-U-orzech-royal.md)</text>
+      <text x="0" y="66" font-size="11" fill="#222"><tspan font-weight="700">Razem:</tspan> 19,8 m² na rzucie</text>
+      <text x="0" y="86" font-size="11" fill="#222"><tspan font-weight="700">Drzwi sypialni:</tspan> 800 × 2100 mm bezprzylgowe H3734 (klamka czarna mat)</text>
+      <text x="0" y="106" font-size="11" fill="#222"><tspan font-weight="700">Drzwi sypialnia → garderoba:</tspan> 900 × 2100 mm przesuwne kasetowe H3734 (uchwyt Sevroll Lounge czarny pełnowysokościowy)</text>
+      <text x="0" y="126" font-size="11" fill="#222"><tspan font-weight="700">Drzwi przesuwne w garderobie (tył):</tspan> 2 × 1180 × 2390 mm Sevroll Slim 25 + drewniany header 2360 × 400</text>
+      <text x="0" y="146" font-size="11" fill="#222"><tspan font-weight="700">Okno:</tspan> 1500 × 1400 mm, parapet 900 (na ścianie krótkiej sypialni)</text>
+      <text x="0" y="166" font-size="11" fill="#222"><tspan font-weight="700">Łóżko:</tspan> 160 × 200, dosunięte do ściany okiennej (wezgłowie + okno współistnieją)</text>
+      <text x="0" y="186" font-size="11" fill="#222"><tspan font-weight="700">Cokoły:</tspan> czarne mat 100 mm — w sypialni i garderobie (spójność)</text>
+      <text x="0" y="206" font-size="11" fill="#222"><tspan font-weight="700">Wykonawca mebli:</tspan> Korner Żary — jedno zamówienie obejmuje całą zabudowę garderoby + lamele wezgłowia + drzwi przesuwne + 2 nocne (jedna partia H3734)</text>
+    </g>
+  </g>
+</svg>
