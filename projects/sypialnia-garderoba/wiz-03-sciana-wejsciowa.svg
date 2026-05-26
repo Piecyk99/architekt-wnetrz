@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ledTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mirror" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4654"/>
+      <stop offset="0.5" stop-color="#56677a"/>
+      <stop offset="1" stop-color="#2a3340"/>
+    </linearGradient>
+    <pattern id="floorE2" patternUnits="userSpaceOnUse" width="80" height="20">
+      <rect width="80" height="20" fill="#dec6a3"/>
+      <line x1="0" y1="10" x2="80" y2="10" stroke="#b89866" stroke-width="0.6"/>
+      <line x1="40" y1="0" x2="40" y2="20" stroke="#c4a47a" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="woodDoor" patternUnits="userSpaceOnUse" width="20" height="80">
+      <rect width="20" height="80" fill="#5b3826"/>
+      <path d="M0 0 L20 80 M0 40 L20 80 M10 0 L20 40" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
+    </pattern>
+    <radialGradient id="kinkietGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <text x="40" y="40" font-size="24" font-weight="700" fill="#111">Elewacja — ściana wejściowa (od strony łóżka)</text>
+  <text x="40" y="62" font-size="12" fill="#555">3650 × 2500 mm · widok z głębi pokoju</text>
+
+  <g transform="translate(250, 100)">
+    <!-- sciana tlo off-white -->
+    <rect x="0" y="0" width="900" height="700" fill="#f3f0e8" stroke="#111" stroke-width="3"/>
+
+    <!-- gzyms LED -->
+    <rect x="0" y="0" width="900" height="14" fill="#fff4d0" opacity="0.95"/>
+    <rect x="0" y="14" width="900" height="120" fill="url(#ledTop)" opacity="0.55"/>
+    <text x="450" y="-8" font-size="11" fill="#a47e00" font-weight="700" text-anchor="middle">▓ GZYMS LED 2700K (kontynuacja z ściany wezgłowiowej)</text>
+
+    <!-- LUSTRO z czarną ramą + LED za lustrem -->
+    <g transform="translate(320, 100)">
+      <!-- LED glow za lustrem (efekt lewitacji) -->
+      <rect x="-12" y="-12" width="264" height="544" fill="#fff4d0" opacity="0.6"/>
+      <rect x="-6" y="-6" width="252" height="532" fill="#fff4d0" opacity="0.4"/>
+      <!-- czarna rama -->
+      <rect x="0" y="0" width="240" height="520" fill="#111" stroke="#000" stroke-width="1"/>
+      <!-- szyba lustra -->
+      <rect x="14" y="14" width="212" height="492" fill="url(#mirror)"/>
+      <!-- odbicie sugestywne -->
+      <rect x="40" y="60" width="60" height="140" fill="#fff" opacity="0.08"/>
+      <rect x="140" y="200" width="40" height="180" fill="#fff" opacity="0.05"/>
+      <text x="120" y="265" font-size="13" fill="#bcc8d8" text-anchor="middle" font-weight="700" opacity="0.7">LUSTRO 60 × 180 cm</text>
+      <text x="120" y="282" font-size="11" fill="#bcc8d8" text-anchor="middle" opacity="0.7">rama stalowa 20 mm czarna mat</text>
+      <text x="120" y="298" font-size="10" fill="#bcc8d8" text-anchor="middle" opacity="0.6">▓ LED 2700K za lustrem · szczel. 8 mm</text>
+    </g>
+
+    <!-- KINKIET dekoracyjny -->
+    <g transform="translate(180, 280)">
+      <circle r="60" fill="url(#kinkietGlow)"/>
+      <g stroke="#111" stroke-width="2" fill="none">
+        <circle r="30"/>
+        <circle r="18"/>
+        <line x1="-30" y1="0" x2="30" y2="0"/>
+        <line x1="0" y1="-30" x2="0" y2="30"/>
+        <line x1="-21" y1="-21" x2="21" y2="21"/>
+        <line x1="-21" y1="21" x2="21" y2="-21"/>
+      </g>
+      <circle r="6" fill="#fff4d0"/>
+      <text y="55" font-size="11" fill="#111" text-anchor="middle" font-weight="700">KINKIET DEKORACYJNY</text>
+      <text y="70" font-size="10" fill="#444" text-anchor="middle">Vibia Wireflow / Bolia Bow · czarny mat</text>
+      <text y="84" font-size="10" fill="#444" text-anchor="middle">wys. 1500 mm od podłogi</text>
+    </g>
+
+    <!-- DRZWI do sypialni 80×210 orzech royal -->
+    <g transform="translate(70, 280)">
+      <rect width="180" height="420" fill="url(#woodDoor)" stroke="#111" stroke-width="2"/>
+      <!-- klamka czarna -->
+      <circle cx="160" cy="220" r="5" fill="#111"/>
+      <rect x="155" y="218" width="22" height="4" fill="#111"/>
+      <text x="90" y="220" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">DRZWI 80×210</text>
+      <text x="90" y="236" font-size="10" fill="#fff" text-anchor="middle">orzech Royal mat</text>
+      <text x="90" y="250" font-size="10" fill="#fff" text-anchor="middle">klamka Tupai czarna</text>
+    </g>
+
+    <!-- WŁĄCZNIKI scen przy drzwiach -->
+    <g transform="translate(285, 360)">
+      <rect width="20" height="34" fill="#222" stroke="#000" stroke-width="1"/>
+      <rect x="2" y="2" width="16" height="15" fill="#333"/>
+      <rect x="2" y="19" width="16" height="13" fill="#333"/>
+      <text x="38" y="20" font-size="10" fill="#222" font-weight="700">Berker R.1 czarny mat</text>
+      <text x="38" y="32" font-size="9" fill="#444">scena / ściemniacze, wys. 1100</text>
+    </g>
+
+    <!-- PODŁOGA -->
+    <rect x="0" y="700" width="900" height="50" fill="url(#floorE2)" stroke="#111" stroke-width="2"/>
+    <rect x="0" y="700" width="900" height="6" fill="#111"/>
+    <text x="450" y="744" font-size="10" fill="#444" text-anchor="middle">deska dąb naturalny · listwa cokołowa aluminiowa czarna mat 80 mm</text>
+
+    <!-- wymiary -->
+    <line x1="0" y1="770" x2="900" y2="770" stroke="#111" stroke-width="1"/>
+    <line x1="0" y1="765" x2="0" y2="775" stroke="#111" stroke-width="1"/>
+    <line x1="900" y1="765" x2="900" y2="775" stroke="#111" stroke-width="1"/>
+    <text x="450" y="788" font-size="13" font-weight="700" fill="#111" text-anchor="middle">3650 mm</text>
+
+    <line x1="930" y1="0" x2="930" y2="700" stroke="#111" stroke-width="1"/>
+    <line x1="925" y1="0" x2="935" y2="0" stroke="#111" stroke-width="1"/>
+    <line x1="925" y1="700" x2="935" y2="700" stroke="#111" stroke-width="1"/>
+    <text x="958" y="360" font-size="13" font-weight="700" fill="#111" transform="rotate(-90 958 360)" text-anchor="middle">2500 mm</text>
+  </g>
+
+  <g transform="translate(40, 870)">
+    <text font-size="13" font-weight="700" fill="#111">Specyfikacja:</text>
+    <text x="0" y="20" font-size="11" fill="#333">Ściana w farbie Tikkurila Y497 (off-white ciepły) lateks mat · gzyms LED 2700K po całej szerokości · trasy LED w GK</text>
+    <text x="0" y="36" font-size="11" fill="#333">Lustro 60×180 w stalowej ramie czarnej 20 mm · pasek LED 2700K za lustrem (efekt lewitacji) · wzmocnienie GK wkładką OSB</text>
+    <text x="0" y="52" font-size="11" fill="#333">Kinkiet dekoracyjny (Vibia Wireflow / Bolia Bow) — pojedynczy mocny obiekt jako akcent · drzwi sypialni orzech Royal z klamką czarną mat</text>
+  </g>
+</svg>

@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ledSide" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff4d0" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="woodGardr" patternUnits="userSpaceOnUse" width="22" height="100">
+      <rect width="22" height="100" fill="#5b3826"/>
+      <path d="M0 0 L22 100 M0 50 L22 100 M11 0 L22 50" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
+      <rect x="0" y="20" width="22" height="1" fill="#7a4f37" opacity="0.4"/>
+      <rect x="0" y="65" width="22" height="1" fill="#7a4f37" opacity="0.4"/>
+    </pattern>
+    <pattern id="floorE3" patternUnits="userSpaceOnUse" width="80" height="20">
+      <rect width="80" height="20" fill="#dec6a3"/>
+      <line x1="0" y1="10" x2="80" y2="10" stroke="#b89866" stroke-width="0.6"/>
+      <line x1="40" y1="0" x2="40" y2="20" stroke="#c4a47a" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+
+  <text x="40" y="40" font-size="24" font-weight="700" fill="#111">Elewacja — ściana z wejściem do garderoby</text>
+  <text x="40" y="62" font-size="12" fill="#555">4000 × 2500 mm · widok od strony łóżka</text>
+
+  <g transform="translate(140, 100)">
+    <!-- ściana off-white -->
+    <rect x="0" y="0" width="1100" height="700" fill="#f3f0e8" stroke="#111" stroke-width="3"/>
+
+    <!-- DRZWI PRZESUWNE KASETOWE — front orzech royal -->
+    <g transform="translate(400, 70)">
+      <!-- pasek LED po lewej (po stronie otwierania) -->
+      <rect x="-30" y="0" width="14" height="600" fill="#fff4d0" opacity="0.95"/>
+      <rect x="-80" y="-10" width="80" height="620" fill="url(#ledSide)" opacity="0.7"/>
+      <text x="-22" y="-18" font-size="11" fill="#a47e00" font-weight="700" text-anchor="middle">▓ pasek LED 2700K</text>
+      <text x="-22" y="-4" font-size="9" fill="#a47e00" text-anchor="middle">1800 mm, czujnik otwarcia</text>
+
+      <!-- drzwi -->
+      <rect width="280" height="600" fill="url(#woodGardr)" stroke="#222" stroke-width="2"/>
+      <!-- uchwyt pionowy frezowany 800 mm -->
+      <rect x="245" y="200" width="6" height="240" fill="#000"/>
+      <rect x="244" y="200" width="8" height="4" fill="#fff4d0" opacity="0.3"/>
+      <rect x="244" y="436" width="8" height="4" fill="#fff4d0" opacity="0.3"/>
+      <text x="140" y="290" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">DRZWI PRZESUWNE</text>
+      <text x="140" y="310" font-size="13" fill="#fff" text-anchor="middle">orzech Royal mat</text>
+      <text x="140" y="328" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">90 × 210 cm · kaseta w ścianie</text>
+      <text x="140" y="345" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">uchwyt pionowy 800 mm</text>
+      <text x="140" y="361" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">soft-close dwustronny</text>
+    </g>
+
+    <!-- strzałka kierunku przesuwu -->
+    <g transform="translate(220, 380)">
+      <line x1="0" y1="0" x2="160" y2="0" stroke="#888" stroke-width="2" stroke-dasharray="6 4"/>
+      <polygon points="0,0 12,-6 12,6" fill="#888"/>
+      <text x="80" y="-8" font-size="10" fill="#666" text-anchor="middle">drzwi suną w kasetę ←</text>
+    </g>
+
+    <!-- ścianka boczna gladka tynk -->
+    <text x="200" y="370" font-size="11" fill="#888">tynk gładki + farba off-white</text>
+    <text x="900" y="370" font-size="11" fill="#888">tynk gładki + farba off-white</text>
+
+    <!-- PODŁOGA — ciągłość między sypialnią a garderobą, bez progu -->
+    <rect x="0" y="700" width="1100" height="50" fill="url(#floorE3)" stroke="#111" stroke-width="2"/>
+    <rect x="0" y="700" width="1100" height="6" fill="#111"/>
+    <text x="540" y="744" font-size="10" fill="#444" text-anchor="middle">deska dąb naturalny — KONTYNUACJA Z GARDEROBĄ, bez progu (prowadnica górna + pin dolny)</text>
+
+    <!-- wymiary -->
+    <line x1="0" y1="770" x2="1100" y2="770" stroke="#111" stroke-width="1"/>
+    <line x1="0" y1="765" x2="0" y2="775" stroke="#111" stroke-width="1"/>
+    <line x1="1100" y1="765" x2="1100" y2="775" stroke="#111" stroke-width="1"/>
+    <text x="550" y="788" font-size="13" font-weight="700" fill="#111" text-anchor="middle">4000 mm</text>
+
+    <line x1="1130" y1="0" x2="1130" y2="700" stroke="#111" stroke-width="1"/>
+    <line x1="1125" y1="0" x2="1135" y2="0" stroke="#111" stroke-width="1"/>
+    <line x1="1125" y1="700" x2="1135" y2="700" stroke="#111" stroke-width="1"/>
+    <text x="1158" y="360" font-size="13" font-weight="700" fill="#111" transform="rotate(-90 1158 360)" text-anchor="middle">2500 mm</text>
+
+    <!-- wymiary drzwi -->
+    <line x1="400" y1="690" x2="680" y2="690" stroke="#c33" stroke-width="1"/>
+    <line x1="400" y1="685" x2="400" y2="695" stroke="#c33" stroke-width="1"/>
+    <line x1="680" y1="685" x2="680" y2="695" stroke="#c33" stroke-width="1"/>
+    <text x="540" y="685" font-size="11" font-weight="700" fill="#c33" text-anchor="middle">900</text>
+
+    <line x1="690" y1="70" x2="690" y2="670" stroke="#c33" stroke-width="1"/>
+    <line x1="685" y1="70" x2="695" y2="70" stroke="#c33" stroke-width="1"/>
+    <line x1="685" y1="670" x2="695" y2="670" stroke="#c33" stroke-width="1"/>
+    <text x="710" y="375" font-size="11" font-weight="700" fill="#c33" transform="rotate(-90 710 375)" text-anchor="middle">2100</text>
+  </g>
+
+  <g transform="translate(40, 870)">
+    <text font-size="13" font-weight="700" fill="#111">Specyfikacja:</text>
+    <text x="0" y="20" font-size="11" fill="#333">Drzwi przesuwne kasetowe Eclisse Unico (lub równoważny) · front MDF 38 mm fornir orzech Royal mat (dekor identyczny z lamelami i frontami garderoby)</text>
+    <text x="0" y="36" font-size="11" fill="#333">Uchwyt: pionowa szczelina frezowana 800 mm z wkładką aluminiową czarna mat · soft-close dwustronny · bez progu (ciągłość podłogi z garderobą)</text>
+    <text x="0" y="52" font-size="11" fill="#333">Pasek LED 2700K w profilu aluminiowym czarnym po stronie otwierania, 1800 mm · czujnik otwarcia drzwi (kontaktron) sterujący LED garderoby 4000K</text>
+  </g>
+</svg>
