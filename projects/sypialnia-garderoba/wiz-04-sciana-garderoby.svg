@@ -35,15 +35,18 @@
 
       <!-- drzwi -->
       <rect width="280" height="600" fill="url(#woodGardr)" stroke="#222" stroke-width="2"/>
-      <!-- uchwyt pionowy frezowany 800 mm -->
-      <rect x="245" y="200" width="6" height="240" fill="#000"/>
-      <rect x="244" y="200" width="8" height="4" fill="#fff4d0" opacity="0.3"/>
-      <rect x="244" y="436" width="8" height="4" fill="#fff4d0" opacity="0.3"/>
-      <text x="140" y="290" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">DRZWI PRZESUWNE</text>
-      <text x="140" y="310" font-size="13" fill="#fff" text-anchor="middle">orzech Royal mat</text>
-      <text x="140" y="328" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">90 × 210 cm · kaseta w ścianie</text>
-      <text x="140" y="345" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">uchwyt pionowy 800 mm</text>
-      <text x="140" y="361" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">soft-close dwustronny</text>
+      <!-- uchwyt pionowy PEŁNOWYSOKOŚCIOWY Sevroll Lounge (jak w garderobie) -->
+      <rect x="248" y="20" width="14" height="560" fill="#000"/>
+      <rect x="251" y="20" width="8" height="560" fill="#222"/>
+      <rect x="248" y="20" width="14" height="4" fill="#444"/>
+      <rect x="248" y="576" width="14" height="4" fill="#444"/>
+      <text x="140" y="280" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">DRZWI PRZESUWNE</text>
+      <text x="140" y="300" font-size="13" fill="#fff" text-anchor="middle">Egger H3734 ST9</text>
+      <text x="140" y="316" font-size="13" fill="#fff" text-anchor="middle">Pacific Walnut (Orzech Royal)</text>
+      <text x="140" y="334" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">90 × 210 cm · kaseta Eclisse</text>
+      <text x="140" y="350" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">uchwyt pełnowysokościowy</text>
+      <text x="140" y="366" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">Sevroll Lounge czarny mat</text>
+      <text x="140" y="382" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">soft-close 2-stronny</text>
     </g>
 
     <!-- strzałka kierunku przesuwu -->
@@ -59,8 +62,8 @@
 
     <!-- PODŁOGA — ciągłość między sypialnią a garderobą, bez progu -->
     <rect x="0" y="700" width="1100" height="50" fill="url(#floorE3)" stroke="#111" stroke-width="2"/>
-    <rect x="0" y="700" width="1100" height="6" fill="#111"/>
-    <text x="540" y="744" font-size="10" fill="#444" text-anchor="middle">deska dąb naturalny — KONTYNUACJA Z GARDEROBĄ, bez progu (prowadnica górna + pin dolny)</text>
+    <rect x="0" y="700" width="1100" height="9" fill="#111"/>
+    <text x="540" y="744" font-size="10" fill="#444" text-anchor="middle">Barlinek dąb Almond (lakier mat) — KONTYNUACJA z garderoby, bez progu · cokół czarny mat 100 mm</text>
 
     <!-- wymiary -->
     <line x1="0" y1="770" x2="1100" y2="770" stroke="#111" stroke-width="1"/>
@@ -87,8 +90,8 @@
 
   <g transform="translate(40, 870)">
     <text font-size="13" font-weight="700" fill="#111">Specyfikacja:</text>
-    <text x="0" y="20" font-size="11" fill="#333">Drzwi przesuwne kasetowe Eclisse Unico (lub równoważny) · front MDF 38 mm fornir orzech Royal mat (dekor identyczny z lamelami i frontami garderoby)</text>
-    <text x="0" y="36" font-size="11" fill="#333">Uchwyt: pionowa szczelina frezowana 800 mm z wkładką aluminiową czarna mat · soft-close dwustronny · bez progu (ciągłość podłogi z garderobą)</text>
-    <text x="0" y="52" font-size="11" fill="#333">Pasek LED 2700K w profilu aluminiowym czarnym po stronie otwierania, 1800 mm · czujnik otwarcia drzwi (kontaktron) sterujący LED garderoby 4000K</text>
+    <text x="0" y="20" font-size="11" fill="#333">Drzwi przesuwne kasetowe Eclisse Unico · front MDF 18 mm + laminat Egger H3734 ST9 Pacific Walnut mat (IDENTYCZNY dekor co panele garderoby i header — zamów u Korner razem)</text>
+    <text x="0" y="36" font-size="11" fill="#333">Uchwyt: profil pionowy PEŁNOWYSOKOŚCIOWY Sevroll Lounge czarny mat (analogiczny do uchwytów drzwi przesuwnych tylnych w garderobie — ciągłość wizualna)</text>
+    <text x="0" y="52" font-size="11" fill="#333">Soft-close 2-stronny · BEZ progu (Barlinek dąb Almond ciągnie się bez przerwy do garderoby) · LED 2700K pionowy 1800 mm sterowany czujnikiem PIR LED garderoby 3000K</text>
   </g>
 </svg>

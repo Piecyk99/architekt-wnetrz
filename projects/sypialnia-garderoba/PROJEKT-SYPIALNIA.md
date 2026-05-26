@@ -1,11 +1,25 @@
 # Sypialnia — projekt spójny z garderobą
 
-Projekt wykonany w ciągłości stylistycznej z wcześniej zaprojektowaną garderobą
-(house style skilla `architekt-wnetrz`: Orzech Royal mat + kremowe wnętrza +
-czarne listwowe uchwyty 12mm + drzwi przesuwne orzech/lustro do garderoby).
+Projekt wykonany w **ścisłej ciągłości materiałowej** z istniejącym projektem
+garderoby `docs/garderoba-U-orzech-royal.md` (branch
+`claude/wardrobe-design-couple-Jge7b`, PR #8) — garderoba U-shape dla pary,
+wykonanie Korner Żary.
+
+**Wiążące materiały z garderoby (kalibracja po analizie REF-garderoba-U-01-entry.png):**
+- Drewno: **Egger H3734 ST9 Pacific Walnut** (orzech ciepły średnio-ciemny, znany
+  jako "Orzech Royal" w marketingu Korner) — laminat mat 18 mm, krawędzie ABS 2 mm
+- Podłoga: **Barlinek dąb Almond** (deska 3-warstwowa lakier mat, jasny miodowy dąb) —
+  **kontynuacja 1:1 z garderoby do sypialni, bez progu**
+- Akcenty: **czarny mat** — cokół 100 mm, uchwyty pionowe pełnowysokościowe (Sevroll Lounge),
+  klamki, profile LED
+- LED w garderobie: **3000K** Paulmann YourLED ECO 24V (nie 4000K)
+- Wnętrze garderoby: otwarte półki bokach (ONA lewa, ON prawa) + tylna ściana
+  z 2 panelami przesuwnymi orzech 1180×2390 (system Sevroll Slim 25) +
+  drewniany header górny 2360×400×18 w orzechu
+
 Sypialnia + garderoba mają wyglądać jak **jedna przemyślana całość** — wejście
 do garderoby otwiera się bezpośrednio ze sypialni, więc widok między pomieszczeniami
-musi być spójny materiałowo i kolorystycznie.
+musi być spójny materiałowo, kolorystycznie i podłogowo.
 
 ---
 
@@ -16,7 +30,7 @@ musi być spójny materiałowo i kolorystycznie.
 - **Wejście do sypialni:** krótka ściana od korytarza, otwór już oramowany stalową ościeżnicą bezprzylgową (zdj. 2)
 - **Wejście do garderoby:** ściana dłuższa, otwór z **kasetą drzwi przesuwnych** już zamontowaną w ścianie GK (zdj. 4) — drzwi schowane w kasecie, w pełni chowane w ścianę
 - **Ściany:** częściowo zamknięte płytą GK, częściowo otwarta wełna mineralna (czas na rozprowadzenie elektryki, zanim wszystko zostanie zamknięte)
-- **Garderoba (referencja):** orzech Royal mat na frontach, lustrzany skrzydło drzwi przesuwnych, wnętrze kremowe, LED 4000K CRI>90 wewnątrz, wpuszczana klamka
+- **Garderoba (realna referencja z `docs/garderoba-U-orzech-royal.md`):** U-shape 2360×2190, h 2490 mm; korpusy i drzwi przesuwne wewnętrzne w **Egger H3734 ST9 Pacific Walnut (Orzech Royal)**; otwarte półki ONA+ON (bez frontów na ścianach bocznych); tylna ściana z 2 panelami przesuwnymi orzech 1180×2390 na Sevroll Slim 25 z drewnianym headerem 2360×400×18; uchwyt pionowy pełnowysokościowy czarny mat Sevroll Lounge; LED 3000K; cokoły czarne mat 100 mm
 
 ---
 
@@ -28,12 +42,12 @@ tło ścian, podłoga jasna (rozjaśnia wąską przestrzeń), jeden mocny akcent
 fornirowy na wezgłowiu, czarne detale (klamki, włączniki, kinkiety, profile LED).
 **Dyskretny luksus, nie glamour.** Premium poprzez proporcje i światło, nie ilość mebli.
 
-### Paleta
+### Paleta (wiążąca, kalibrowana 1:1 do garderoby)
 - **Dominanta:** off-white ciepły, Tikkurila Y497 lub Dulux *Egg White* — ściany boczne i sufit
-- **Akcent drewno:** **Orzech Royal mat** (laminat lub fornir naturalny) — wezgłowie i drzwi do garderoby (kontynuacja z garderoby)
-- **Akcent ciemny:** czarny mat — kinkiety, klamki, profile LED, włączniki, listwa cokołowa aluminiowa
+- **Akcent drewno:** **Egger H3734 ST9 Pacific Walnut (Orzech Royal)** laminat mat — wezgłowie (lamele MDF z laminatem H3734) i drzwi do garderoby (jeden dekor, jeden producent, **najlepiej jedna partia produkcyjna z Korner**)
+- **Akcent ciemny:** czarny mat — kinkiety, klamki, profile LED, włączniki Berker R.1, **cokół 100 mm** (jak w garderobie i pralni)
 - **Tekstylia:** boucle/welur szary jasny (zagłówek), pościel kremowa/grafitowa, dywan wełniany kremowy 200×290
-- **Podłoga:** deska warstwowa dębowa, kolor naturalny/biel olejowana — np. Quick-Step Massimo Oak Natural lub Barlinek Pure Dąb Toffi (jasny, ciepły, kontrast do orzecha)
+- **Podłoga:** **Barlinek dąb Almond** deska 3-warstwowa lakier mat — **dokładnie ta sama deska co w garderobie i pralni, kontynuacja bez progu** (1:1, jeden zakup, jedna partia)
 
 ### Mood
 Wchodzisz wieczorem — sufit i ściana wejściowa świecą ciepłym 2700K wzdłuż obwodu,
@@ -42,10 +56,11 @@ nad nocnymi. Garderoba widoczna w lustrze drzwi przesuwnych, fronty orzech ciąg
 się wizualnie z wezgłowia. Cicho, ciepło, hotelowo.
 
 ### Punkty wyrazu
-1. **Ściana wezgłowia** — pełnościenny panel z lamelami pionowymi orzech Royal (od podłogi do sufitu) z pionową taśmą LED w narożu i schowanymi kinkietami
-2. **Ściana wejściowa** — gładki tynk + pojedynczy pasek LED w listwie podsufitowej + dekoracyjny kinkiet/aplikacja oraz **lustro pionowe w czarnej ramie** lub fragment lameli (powtórzenie motywu z wezgłowia)
-3. **Drzwi przesuwne do garderoby** — front w orzech Royal **dokładnie ten sam dekor co lamele wezgłowia**, bez klamki (uchwyt pionowy frezowany czarny mat 800 mm)
-4. **Sufitowa wnęka LED 2700K** wzdłuż ściany wezgłowia + pojedyncza dyskretna lampa wisząca centralnie (niska, np. Muuto Fluid Pendant 90 mm matt black / Beat Tall mosiądz w wersji small)
+1. **Ściana wezgłowia** — pełnościenny panel z lamelami pionowymi w laminacie **Egger H3734 ST9 Pacific Walnut (Orzech Royal)** od podłogi do sufitu z gzymsem LED 2700K i schowanymi kinkietami
+2. **Ściana wejściowa** — gładki tynk off-white + pojedynczy pasek LED w listwie podsufitowej + dekoracyjny kinkiet oraz **lustro pionowe w czarnej ramie** (powtórzenie motywu lekkości/lewitacji)
+3. **Drzwi przesuwne do garderoby** — front w **Egger H3734 ST9 (ten sam dekor co lamele wezgłowia, panele w garderobie i header)**, uchwyt **pionowy pełnowysokościowy czarny mat Sevroll Lounge** (analogiczny do uchwytu drzwi przesuwnych wewnątrz garderoby — wizualna ciągłość)
+4. **Sufitowa wnęka LED 2700K** wzdłuż ścian krótkich + pojedyncza dyskretna lampa wisząca centralnie (Muuto Fluid Pendant 90/190 mm czarny mat)
+5. **Widok przez otwarte drzwi do garderoby** — zaplanowany jako kompozycja: z łóżka widzisz odsunięty front orzech → korytarz 1160 mm między dwoma rzędami otwartych półek orzech (ONA/ON) → drewniany header poziomy nad tylnymi drzwiami przesuwnymi → 2 panele przesuwne orzech w głębi. **5 powierzchni orzecha jednocześnie w jednej osi widokowej** — efekt premium bez przesady, bo materiał jest jeden.
 
 ---
 
@@ -131,11 +146,11 @@ do 110 cm, więc okno działa). Nocne stoliki **w nogach** wezgłowia, asymetria
 ```
 
 **Specyfikacja lameli:**
-- **Materiał:** MDF lakierowany lub fornirowany **orzech Royal mat** (ten sam dekor co fronty garderoby — wymóg)
+- **Materiał:** MDF 12 mm + laminat **Egger H3734 ST9 Pacific Walnut mat** (= "Orzech Royal", **identyczny dekor jak fronty i wnętrze garderoby**), krawędzie ABS 2 mm w tym samym dekorze — **zamówić wraz z formatkami garderoby u Korner Żary**, żeby zapewnić jedną partię produkcyjną
 - **Profil:** 40 × 20 mm, rozstaw co 60 mm (przerwa 20 mm między lamelami)
-- **Mocowanie:** klejone na płytę MDF 12 mm przykręconą do stelaża GK + ślepy fryz górny i dolny
+- **Mocowanie:** lamele klejone i wkręcane od tyłu na płytę MDF 12 mm w dekorze H3734 przykręconą do stelaża GK + ślepy fryz górny i dolny w tym samym dekorze
 - **Wysokość:** od podłogi 0 do 2500 (cała ściana)
-- **Szerokość:** cała ściana okienna 4000 mm — okno wycięte w lamelach, lamele dochodzą do ościeżnicy okna z fabryczną listwą wykończeniową orzech
+- **Szerokość:** cała ściana okienna 4000 mm — okno wycięte w lamelach, lamele dochodzą do ościeżnicy okna z fabryczną listwą wykończeniową w dekorze H3734
 
 **Wezgłowie tapicerowane:**
 - Boucle szary jasny (np. Kvadrat Hallingdal 65, kolor 110 lub tańszy zamiennik: tkanina Strech Aqua Clean Bering Marengo)
@@ -152,7 +167,7 @@ do 110 cm, więc okno działa). Nocne stoliki **w nogach** wezgłowia, asymetria
 **Stoliki nocne:**
 - **Wiszące, bez nóg** (nie zasłaniają jasnej podłogi → optycznie więcej miejsca)
 - **Wymiar:** 450 × 400 × 300 mm (szer × głęb × wys)
-- **Materiał:** MDF orzech Royal mat, jedna szuflada na cichym domyku, uchwyt frezowany (bez wystających)
+- **Materiał:** płyta 18 mm **Egger H3734 ST9** (jedna partia z Korner razem z lamelami i frontami garderoby), jedna szuflada Blum Legrabox na cichym domyku, **uchwyt: listwa profilowa 12 mm czarna mat** zgodnie z house style Korner (referencja: `references/korner-katalog.md` listwowy profilowy)
 - **Pozycja:** szczyt na wysokości 600 mm od podłogi (poziom górnej krawędzi materaca + 50 mm), dosunięte do wezgłowia
 - **Sztuk:** 2 (lustrzane odbicie L/P)
 
@@ -194,15 +209,18 @@ Drzwi przesuwne **w kasecie chowanej w ścianę** — kaseta już zamontowana
    └────────────────────────────────────┘
 ```
 
-**Specyfikacja drzwi:**
+**Specyfikacja drzwi (kalibrowana do garderoby):**
 - **Typ:** Przesuwne kasetowe (chowane całkowicie w ścianę), system Eclisse Unico lub Vetrolux
-- **Wymiar światła:** 900 × 2100 mm
-- **Front:** MDF 38 mm fornir/laminat **orzech Royal mat** — pojedynczy gładki front bez podziałów, fryz frezowany z boku 800 mm jako uchwyt
-- **Próg:** **bez progu** (prowadnica górna, dolny pin) — ciągłość podłogi pomiędzy sypialnią a garderobą
+- **Wymiar światła:** 900 × 2100 mm (kaseta już zamontowana — potwierdzone zdj. 4)
+- **Front:** MDF 18 mm + laminat **Egger H3734 ST9 Pacific Walnut mat** (= "Orzech Royal", **identyczny dekor jak panele przesuwne wewnątrz garderoby i header — zamówić u Korner razem z formatkami garderoby**), krawędzie ABS 2 mm wszystkie strony
+- **Uchwyt:** **pionowy pełnowysokościowy czarny mat — Sevroll Lounge** (analogicznie do uchwytów drzwi przesuwnych wewnątrz garderoby — wizualna ciągłość gdy otworzysz wejściowe drzwi i widzisz tylne panele w garderobie z tym samym uchwytem)
+- **Słój:** **poziomy** (standard dla drzwi przesuwnych, zgodnie z `references/standardy-meble.md`)
+- **Próg:** **bez progu** (prowadnica górna, dolny pin) — ciągłość deski **Barlinek dąb Almond** z garderoby do sypialni bez przerwy
 - **System soft-close:** obowiązkowo, dwustronny
 
-**Drugi wariant (jeśli kaseta nie wytrzyma ciężaru orzecha 38 mm):**
-- Lżejszy front MDF 25 mm fornirowany — sprawdzić nośność kasety przed zamówieniem frontu, **wymóg do potwierdzenia z dostawcą drzwi**
+**Krytyczne — potwierdzenie z dostawcą drzwi przesuwnych:**
+- Nośność kasety dla frontu MDF 18 mm + HPL (~22 kg) — zwykle nie problem, kaseta Eclisse trzyma 80 kg
+- Czy kaseta przewidziana pod fronty „meblowe" 18 mm czy pod drzwi „budowlane" 38 mm — różny adapter prowadnicy
 
 **Akcent LED przy drzwiach:**
 - Pionowy pasek LED 2700K wpuszczany w **profil aluminiowy czarny**, 1800 mm wysokości, **w narożu po stronie otwierania drzwi**
@@ -283,9 +301,10 @@ widzisz rano).
 
 ### Warstwa 2 — zadaniowe
 - **Kinkiety czytania** nad nocnymi (2 szt) — opisane w sekcji 3
-- **LED w garderobie** — 4000K CRI>90, sterowanie czujnikiem otwarcia drzwi (już
-  zaplanowane w garderobie, tylko upewnij się że jest doprowadzony stały 230 V do
-  zasilacza nad kasetą drzwi)
+- **LED w garderobie** — **3000K** (taśma 24V Paulmann YourLED ECO 7,2 W/m
+  pod półkami i w antresolach, spoty 3000K w suficie nad chodnikiem) — **już
+  zaplanowane w projekcie garderoby**, tylko upewnij się że doprowadzasz stały
+  230 V do zasilacza Mean Well 60W 24V umieszczonego w cokole modułu C2
 
 ### Warstwa 3 — akcentowe / dekoracyjne
 - **Pasek LED za lustrem** (ściana wejściowa) 2700K, włącznik osobny
@@ -313,10 +332,12 @@ widzisz rano).
 | Pasek za lustrem | 2700K | >90 |
 | Pasek przy drzwiach garderoby | 2700K | >90 |
 | LED pod łóżkiem (PIR) | 1800K bursztyn | nieistotny |
-| Wnętrze garderoby | 4000K | >90 (już zaplanowane) |
+| Wnętrze garderoby | 3000K | >90 (Paulmann YourLED ECO, zgodnie z projektem garderoby) |
 
-**Reguła:** w sypialni 2700-3000K (ciepłe, sen, regeneracja). 4000K **tylko za
-zamkniętymi drzwiami garderoby** (do oceny kolorów ubrań).
+**Reguła:** w sypialni 2700-3000K (ciepłe, sen, regeneracja). **Garderoba też
+3000K** zgodnie z istniejącym projektem garderoby — ciepły ton drewna H3734
+ma być wspierany ciepłym światłem, nie chłodnym 4000K. Spójność wizualna kiedy
+otwierasz drzwi przesuwne między pomieszczeniami.
 
 ---
 
@@ -359,7 +380,7 @@ ostatni moment).**
 | # | Punkt | Wys. | Przewód | Uwaga |
 |---|---|---|---|---|
 | 7 | Pasek LED pionowy 2700K przy drzwiach | 0-1800 | 3×0,75 | trasa do zasilacza nad kasetą |
-| 8 | Zasilanie LED wewnątrz garderoby 4000K | sufit garderoby | 3×1,5 | **stały 230V** + czujnik otwarcia drzwi (kontaktron) |
+| 8 | Zasilanie LED wewnątrz garderoby **3000K** | cokół modułu C2 (zasilacz Mean Well 60W 24V) + sufit chodnika (spoty) | 3×1,5 | **stały 230V** + czujnik PIR drzwi (Paulmann) |
 | 9 | Sterowanie sceną (jeśli smart) | przy włączniku | sygnałowy | Shelly w puszce za włącznikiem |
 
 ### Ściana wejściowa (krótsza, z drzwiami)
@@ -436,13 +457,13 @@ ostatni moment).**
 
 | Pozycja | Specyfikacja | Ilość | Sklep / dostawca | Cena orient. |
 |---|---|---|---|---|
-| Lamele MDF orzech Royal mat 40×20 mm | profile 2500 mm | ~70 szt (4 m × ~17/m) | Korner / własna pracownia stolarska | 4 500-6 500 zł |
-| Płyta MDF 12 mm pod lamele | 2 × 2,8 m | 4 m² | Korner | 350 zł |
+| Lamele MDF + laminat **Egger H3734 ST9 Pacific Walnut** 40×20 mm | profile 2500 mm, krawędź ABS | ~70 szt (4 m × ~17/m) | **Korner Żary** (razem z garderobą — jedna partia) | 4 500-6 500 zł |
+| Płyta MDF 12 mm w dekorze H3734 pod lamele | 2 × 2,8 m | 4 m² | Korner | 450 zł |
 | Wezgłowie tapicerowane na wymiar | boucle szary jasny, 2000×1100 | 1 | pracownia tapicerska + tkanina Kvadrat/zamiennik | 1 800-3 200 zł |
 | Łóżko 160×200 rama bez wezgłowia | tapicerka boucle ten sam materiał, h 250 mm | 1 | Bolia / IKEA Tufjord (wymiana tapicerki) | 2 500-4 500 zł |
 | Materac 160×200 sprężynowy + topper | klasa średnia/wysoka | 1 | Sleepwell / Hilding | 2 200-4 000 zł |
-| Nocne wiszące orzech Royal | 450×400×300, 1 szuflada | 2 | Korner | 1 200-1 800 zł |
-| Drzwi przesuwne kasetowe orzech Royal 900×2100 | front 38 lub 25 mm fornir | 1 | Korner / system Eclisse | 3 500-6 000 zł |
+| Nocne wiszące orzech **H3734 ST9** | 450×400×300, 1 szuflada Blum Legrabox, uchwyt listwa 12 mm czarna mat | 2 | **Korner Żary** | 1 200-1 800 zł |
+| Drzwi przesuwne kasetowe Egger H3734 ST9 900×2100 | front MDF 18 mm + laminat, krawędź ABS, uchwyt pionowy pełnowysokościowy **Sevroll Lounge czarny mat**, soft-close 2-stronny | 1 | **Korner Żary + system Eclisse Unico** | 3 500-6 000 zł |
 | Kinkiety nad nocnymi czarne mat ściemnialne | Astro Enna Square LED 3000K | 2 | GoodForm / Lampy.pl | 2 × 850 zł = 1 700 zł |
 | Lampa wisząca centralna czarny mat | Muuto Fluid Ø190 / IKEA Skurup | 1 | Goodform / IKEA | 180-2 800 zł |
 | Lustro 600×1800 czarna rama stalowa 20 mm | własna produkcja lub Bonami | 1 | własna stolarnia/szklarz | 700-1 400 zł |
@@ -453,8 +474,8 @@ ostatni moment).**
 | Włączniki Berker R.1 czarny mat | klawiszowe + ściemniacze + USB-C | ~8 zestawów | Lampy.pl / Castorama | 1 800-2 800 zł |
 | Klamka czarna mat do drzwi sypialni | Tupai Linha 4002 / Hoppe Atlanta | 1 | Castorama / TUR drzwi | 220-450 zł |
 | Drzwi do sypialni 80×210 bezprzylgowe orzech Royal | (już mają stalową ościeżnicę z zdj. 2) | 1 | DRE / Porta z fornirem orzech | 1 200-2 400 zł |
-| Podłoga deska warstwowa dąb naturalny / biel olejowana | Barlinek Pure Toffi / Quick-Step Massimo Oak | ~15 m² + 5% zapas | Castorama / Domotex | 4 500-7 000 zł |
-| Listwa cokołowa aluminiowa czarna mat 80 mm | wpuszczana lub natynkowa | ~14 mb | Allegro / Komandor | 600-1 100 zł |
+| Podłoga **Barlinek dąb Almond** deska 3-warstwowa lakier mat | **kontynuacja z garderoby i pralni — kup jedną partią!** | ~15 m² + 5% zapas | Barlinek / Castorama / Domotex | 4 500-5 500 zł |
+| Listwa cokołowa **czarna mat 100 mm** | aluminium lub MDF lakierowany, **tej samej wysokości co cokoły garderoby i pralni** (100 mm, nie 80 mm) | ~14 mb | Allegro / Komandor | 700-1 200 zł |
 | Farba ścienna lateks mat off-white | Tikkurila Y497 / Dulux Egg White, 2× warstwa | 4 m² ścian × 25 = 100 m² → 10 L | Castorama | 350 zł |
 | Dywan wełniany kremowy 200×290 | Benuta Berber / Westwing Hyaline | 1 | Benuta / Westwing | 1 800-3 500 zł |
 | Pościel + dodatki | komplet 2-osobowy len/satyna kremowy + grafit | 1 | H&M Home / Westwing | 600-1 200 zł |
@@ -546,8 +567,9 @@ Pilne — kolejność wykonania:
 > - Front drzwi przesuwnych: ten sam dekor orzech Royal co lamele wezgłowia
 >   i fronty wewnątrz garderoby (jedna partia produkcyjna, jeśli możliwe)
 > - Wszystkie włączniki na **1100 mm** (poziom), w tej samej linii
-> - LED 2700K w całej sypialni, 3000K tylko kinkiety czytania, 4000K tylko w
->   garderobie (za zamkniętymi drzwiami)
+> - LED 2700K w sypialni (wnęka + lampa centralna + LED dekoracyjne), 3000K
+>   kinkiety czytania **i** garderoba (zgodnie z projektem garderoby — ciepły ton
+>   wspiera orzech H3734)
 >
 > **Czego NIE robić:**
 > - Nie wstawiać sufitu podwieszanego na całą powierzchnię (h pokoju tylko 2,50 m —
@@ -559,10 +581,68 @@ Pilne — kolejność wykonania:
 
 ---
 
+## 11. Widok przez otwarte drzwi do garderoby (kompozycja krytyczna)
+
+To jest **najważniejszy moment wizualny projektu** — kiedy stoisz w sypialni
+i otwierasz drzwi przesuwne do garderoby, widzisz oś materiałową ciągnącą się
+przez 5 powierzchni orzecha w jednej linii widoku:
+
+```
+SYPIALNIA                                              GARDEROBA (2360 × 2190 × 2490)
+═══════════════════════                                 ╔════════════════════════════╗
+║ stoisz tu             ║  → otwarte drzwi              ║  drewniany HEADER orzech    ║
+║ patrzysz w głąb       ║    przesuwne kasetowe         ║  2360×400×18 nad drzwiami   ║
+║                       ║    H3734 (sunie w lewo)       ║  przesuwnymi (fryz 70 mm)   ║
+║                       ║                                ╠══════════════╦═════════════╣
+║  ┌──────────────┐     ║                                ║              ║             ║
+║  │ widzisz przez │     ║      ┌─────┐    ┌─────┐       ║  C1 zakryta  ║  C2 zakryta ║
+║  │ otwór 900×2100│     ║      │ A1  │    │ B1  │       ║  drzwi przes.║  drzwi przes║
+║  │              │     ║      │     │    │     │       ║  H3734       ║  H3734      ║
+║  │ podłoga ciągle│ ════╪═════ ┤ ONA ├════╪ ON  ╞══════ ║  ▓ uchwyt pi ║  ▓ uchwyt pi║
+║  │ Barlinek     │     ║      │ otw.│    │ otw.│       ║  czarny mat   ║  czarny mat ║
+║  │ dąb Almond   │     ║      │ pó- │    │ pó- │       ║  pełna wys.   ║  pełna wys. ║
+║  │              │     ║      │ łki │    │ łki │       ║              ║             ║
+║  └──────────────┘     ║      │ A2  │    │ B2  │       ║              ║             ║
+║                       ║      │ A3  │    │ B3  │       ║              ║             ║
+║                       ║      └─────┘    └─────┘       ║              ║             ║
+║                       ║       chodnik 1160 mm         ║              ║             ║
+║                       ║                                ║              ║             ║
+═══════════════════════                                 ╚══════════════╩═════════════╝
+                          podłoga Barlinek dąb Almond — kontynuacja BEZ progu
+                          cokół czarny mat 100 mm po obu stronach
+```
+
+**5 powierzchni orzecha widocznych w jednej osi widoku gdy drzwi otwarte:**
+1. Krawędź odsuniętego frontu drzwi wejściowych (z mojego projektu sypialni)
+2. Lewa kolumna modułów otwartych ONA (A1 z sukienkami widoczne)
+3. Prawa kolumna modułów otwartych ON (B1 z marynarkami)
+4. Drewniany header poziomy nad drzwiami przesuwnymi tylnymi (gardr. C)
+5. Dwa panele przesuwne orzech w tylnej ścianie (C1, C2, C3 zamknięte)
+
+**Jeden dekor, jedna partia produkcyjna z Korner → spójność na pełnej osi widokowej.**
+
+**Krytyczne dla wykonawcy:**
+- Drzwi sypialni → garderoby **muszą być zamówione razem z garderobą u Kornera**
+  (jedna seria H3734, jeden numer dostawy, ten sam odcień barwy — laminaty Egger
+  z różnych partii mogą mieć delikatnie różny ton)
+- Lamele wezgłowia w sypialni → **też zamówione razem** (jedna partia H3734)
+- Stoliki nocne → **też** w tym zamówieniu
+- Razem 4 elementy (lamele + drzwi przesuwne + 2 nocne) zamawiamy jako rozszerzenie
+  briefu Korner z garderoby. Zaoszczędzimy 300-600 zł na transporcie i mamy gwarancję
+  spójności koloru.
+
+---
+
 ## Załączniki referencyjne
 
+- **`docs/garderoba-U-orzech-royal.md`** (branch `claude/wardrobe-design-couple-Jge7b`, PR #8) — **istniejący projekt garderoby U-shape, źródło prawdy materiałowej**
+- **`projects/pralnia-bojler/PLAN.md`** (branch `claude/sliding-doors-laundry-design-W5vUJ`, PR #9) — projekt pralni używający tych samych materiałów (potwierdzenie linii projektowej)
 - `skills/architekt-wnetrz/references/standardy-meble.md` — wymiary mebli, garderoba
 - `skills/architekt-wnetrz/references/oswietlenie-katalog.md` — temperatury, CRI, marki
 - `skills/architekt-wnetrz/references/instalacje-elektryka.md` — punkty obowiązkowe
 - `skills/architekt-wnetrz/references/podlogi-sciany-sufity.md` — drzwi przesuwne, drzwi ukryte
+- `skills/architekt-wnetrz/references/korner-katalog.md` — dekor H3734, uchwyt listwowy 12 mm, LED
 - `skills/architekt-wnetrz/SKILL.md` — house style + wzorce projektowe
+- **`REF-garderoba-U-00-cad-plan.png`** — CAD rzut garderoby (referencja)
+- **`REF-garderoba-U-01-entry.png`** — fotorealistyczny render garderoby od wejścia (kalibracja kolorów)
+- **`REF-garderoba-U-07-technical.png`** — rysunek techniczny garderoby z 3 elewacjami
