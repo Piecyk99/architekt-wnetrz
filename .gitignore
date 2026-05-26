@@ -10,3 +10,5 @@ node_modules/
 .env.*.local
 *.secret
 **/secrets/
+__pycache__/
+*.pyc
