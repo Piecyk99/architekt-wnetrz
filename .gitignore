@@ -5,3 +5,8 @@ Thumbs.db
 .idea/
 node_modules/
 *.log
+.env
+.env.local
+.env.*.local
+*.secret
+**/secrets/
