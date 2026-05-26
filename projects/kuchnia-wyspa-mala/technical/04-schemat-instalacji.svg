@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -90 470 360" width="1400" height="1072" font-family="Arial, sans-serif">
+  <rect x="-90" y="-90" width="470" height="360" fill="#ffffff"/>
+
+  <defs>
+    <pattern id="hatch4" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#888" stroke-width="0.4"/>
+    </pattern>
+    <marker id="arrI" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="-65" font-size="9" font-weight="bold" fill="#000">KUCHNIA 9.02 — W3 — SCHEMAT INSTALACJI</text>
+  <text x="0" y="-55" font-size="4.5" fill="#444">Elektryka · Wod-kan · Wentylacja · Oświetlenie · Skala 1:25</text>
+  <text x="0" y="-48" font-size="3.5" fill="#888" font-style="italic">Schemat ideowy do uzgodnienia z elektrykiem i hydraulikiem. Wszystkie lokalizacje [do potwierdzenia pomiarem na miejscu].</text>
+
+  <!-- ŚCIANY (jak na rzucie głównym) -->
+  <path d="M 0,0 L 259,0 L 259,191 L 63,191 L 63,63 L 0,63 Z" fill="#fafaf8" stroke="none"/>
+  <path d="M 0,0 L 259,0 L 259,191 L 63,191 L 63,63 L 0,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
+  <path d="M -12,-12 L 271,-12 L 271,203 L 63,203 L 63,75 L -12,75 Z" fill="none" stroke="#000" stroke-width="1.2"/>
+  <path d="M 0,0 L 259,0 L 259,191 L 63,191 L 63,63 L 0,63 Z
+           M -12,-12 L 271,-12 L 271,203 L 63,203 L 63,75 L -12,75 Z"
+        fill="url(#hatch4)" fill-rule="evenodd"/>
+
+  <!-- OKNO -->
+  <rect x="80" y="-12" width="110" height="12" fill="#dceaf5" stroke="#3b6fa8" stroke-width="0.6"/>
+  <line x1="80" y1="-6" x2="190" y2="-6" stroke="#3b6fa8" stroke-width="0.3"/>
+  <text x="135" y="-2" font-size="3" fill="#3b6fa8" text-anchor="middle">OKNO</text>
+
+  <!-- WEJŚCIE -->
+  <rect x="80" y="191" width="80" height="12" fill="#ffffff" stroke="none"/>
+  <line x1="80" y1="191" x2="80" y2="203" stroke="#000" stroke-width="0.6"/>
+  <line x1="160" y1="191" x2="160" y2="203" stroke="#000" stroke-width="0.6"/>
+  <text x="120" y="200" font-size="3" fill="#666" text-anchor="middle" font-style="italic">WEJŚCIE</text>
+
+  <!-- KONTUR MEBLI (jasny, dla orientacji) -->
+  <rect x="0" y="0" width="60" height="60" fill="#f9f3e3" stroke="#c2a76b" stroke-width="0.3" stroke-dasharray="2,1"/>
+  <rect x="60" y="0" width="90" height="60" fill="#f9f3e3" stroke="#c2a76b" stroke-width="0.3" stroke-dasharray="2,1"/>
+  <rect x="150" y="0" width="60" height="60" fill="#f9f3e3" stroke="#c2a76b" stroke-width="0.3" stroke-dasharray="2,1"/>
+  <rect x="210" y="0" width="45" height="60" fill="#f9f3e3" stroke="#c2a76b" stroke-width="0.3" stroke-dasharray="2,1"/>
+  <rect x="199" y="60" width="60" height="120" fill="#f9f3e3" stroke="#c2a76b" stroke-width="0.3" stroke-dasharray="2,1"/>
+  <rect x="63" y="131" width="174" height="40" fill="#f9f3e3" stroke="#c2a76b" stroke-width="0.3" stroke-dasharray="2,1"/>
+
+  <text x="30" y="35" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">D1 (indukcja)</text>
+  <text x="105" y="35" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">D2 (blat)</text>
+  <text x="180" y="35" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">D3 (zlew)</text>
+  <text x="232" y="35" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">D4 (zmywarka)</text>
+  <text x="229" y="93" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">W1 lodówka</text>
+  <text x="229" y="153" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">W2 piekarnik+mikr.</text>
+  <text x="150" y="155" font-size="2.4" text-anchor="middle" fill="#a88840" font-style="italic">PÓŁWYSPA</text>
+
+  <!-- ====================== ELEKTRYKA ====================== -->
+  <!-- Symbole:
+       gniazdko 230V — kółko z literą G, kolor czerwony #d22
+       gniazdko 230V mocne (16A osobny obwód) — kółko podwójne, #c00
+       wypust indukcji 3-fazowy 5x2.5 lub 230V 16A — kwadrat, #c00
+       włącznik — prostokąt, #2a7
+       punkt świetlny sufitowy — gwiazdka, #fcd34d
+       LED podszafkowy — linia żółta przerywana
+       sterownik LED — mały prostokąt #e90
+   -->
+
+  <!-- G1: gniazdo lodówki — za słupkiem W1, ~50 cm od podłogi -->
+  <circle cx="244" cy="65" r="3" fill="#fff" stroke="#d22" stroke-width="0.6"/>
+  <text x="244" y="66.5" font-size="2.4" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <text x="244" y="73" font-size="2" text-anchor="middle" fill="#d22">1·lodówka</text>
+
+  <!-- G2: gniazdo piekarnika 16A osobny obwód — w słupku W2 -->
+  <circle cx="244" cy="125" r="3.5" fill="#fff" stroke="#c00" stroke-width="0.7"/>
+  <circle cx="244" cy="125" r="2" fill="none" stroke="#c00" stroke-width="0.4"/>
+  <text x="244" y="126.5" font-size="2.2" text-anchor="middle" fill="#c00" font-weight="bold">G</text>
+  <text x="244" y="133" font-size="2" text-anchor="middle" fill="#c00">2·piekarnik 16A</text>
+
+  <!-- G3: gniazdo mikrofali -->
+  <circle cx="244" cy="160" r="3" fill="#fff" stroke="#d22" stroke-width="0.6"/>
+  <text x="244" y="161.5" font-size="2.4" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <text x="244" y="168" font-size="2" text-anchor="middle" fill="#d22">3·mikrofala</text>
+
+  <!-- G4: wypust indukcji (osobny obwód 1x400V lub 3x230V) — pod D1 -->
+  <rect x="20" y="55" width="6" height="6" fill="#fff" stroke="#c00" stroke-width="0.7"/>
+  <line x1="20" y1="55" x2="26" y2="61" stroke="#c00" stroke-width="0.4"/>
+  <line x1="26" y1="55" x2="20" y2="61" stroke="#c00" stroke-width="0.4"/>
+  <text x="32" y="60" font-size="2.2" fill="#c00" font-weight="bold">G4·indukcja</text>
+  <text x="32" y="63" font-size="1.8" fill="#c00" font-style="italic">5×2,5mm² 400V 16A osobny obwód</text>
+
+  <!-- G5: gniazdo zmywarki — w sąsiedniej szafce (D3), NIE za zmywarką -->
+  <circle cx="195" cy="55" r="3" fill="#fff" stroke="#d22" stroke-width="0.6"/>
+  <text x="195" y="56.5" font-size="2.4" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <text x="195" y="50" font-size="2" text-anchor="middle" fill="#d22">5·zmywarka</text>
+
+  <!-- G6: gniazdo okapu — w nadstawce nad indukcją -->
+  <circle cx="30" cy="-7" r="3" fill="#fff" stroke="#d22" stroke-width="0.6"/>
+  <text x="30" y="-5.5" font-size="2.4" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <text x="30" y="-12" font-size="2" text-anchor="middle" fill="#d22">6·okap (w nadstawce)</text>
+
+  <!-- G7,G8,G9: gniazdka nad blatem ściany górnej — sekwencyjne nad D2/D3 dla małego AGD -->
+  <circle cx="75" cy="-3" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+  <text x="75" y="-1.7" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <circle cx="92" cy="-3" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+  <text x="92" y="-1.7" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <text x="83" y="-7" font-size="1.8" text-anchor="middle" fill="#d22">G7·G8 sekwencyjne 230V (nad blatem)</text>
+
+  <!-- G10, G11, G12: 3 gniazdka nad blatem strefy małego AGD (na ścianie prawej obok słupka), poziomo -->
+  <circle cx="252" cy="195" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+  <text x="252" y="196.5" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+  <!-- Faktyczne położenie: strefa AGD na ścianie prawej jest między y=120 do y=180 (pod blatem nad W3). Gniazdka na blacie pojawiają się tam na ścianie. Zmień: -->
+
+  <!-- Strefa małego AGD — gniazdka na blacie strefy W3 (ściana prawa, od y~140) -->
+  <g>
+    <circle cx="225" cy="155" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+    <text x="225" y="156.5" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+    <circle cx="225" cy="167" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+    <text x="225" y="168.5" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+    <circle cx="225" cy="178" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+    <text x="225" y="179.5" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+    <text x="218" y="190" font-size="1.8" fill="#d22">G9·G10·G11 (kawa/czajnik/toster)</text>
+  </g>
+
+  <!-- WŁĄCZNIK światła głównego — przy wejściu z przedpokoju, po stronie pomieszczenia -->
+  <rect x="55" y="195" width="6" height="6" fill="#cef2da" stroke="#2a7" stroke-width="0.5"/>
+  <text x="58" y="199.5" font-size="2.4" text-anchor="middle" fill="#2a7" font-weight="bold">S</text>
+  <text x="58" y="208" font-size="1.8" text-anchor="middle" fill="#2a7">włącznik główny + LED</text>
+
+  <!-- PUNKT ŚWIETLNY GŁÓWNY — sufitowy, w środku komunikacji -->
+  <g transform="translate(130, 95)">
+    <circle r="4" fill="#fff8d8" stroke="#caa83a" stroke-width="0.5"/>
+    <path d="M 0,-4 L 0.8,-1 L 4,0 L 0.8,1 L 0,4 L -0.8,1 L -4,0 L -0.8,-1 Z" fill="#caa83a"/>
+  </g>
+  <text x="130" y="105" font-size="2.4" text-anchor="middle" fill="#a88040">L1·sufit 3000K (ogólne)</text>
+
+  <!-- PUNKT ŚWIETLNY NAD BAREM — lampa wisząca -->
+  <g transform="translate(195, 151)">
+    <circle r="3" fill="#fff8d8" stroke="#caa83a" stroke-width="0.5"/>
+    <circle r="1.5" fill="#caa83a"/>
+  </g>
+  <text x="195" y="142" font-size="2.2" text-anchor="middle" fill="#a88040">L2·lampa nad barem</text>
+
+  <!-- LED podszafkowy — żółte linie wzdłuż ścian (pod szafkami górnymi) -->
+  <line x1="0" y1="-2" x2="60" y2="-2" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,1"/>
+  <line x1="190" y1="-2" x2="259" y2="-2" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,1"/>
+  <line x1="257" y1="120" x2="257" y2="180" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,1"/>
+  <text x="230" y="118" font-size="1.8" fill="#b8860b">LED podszafkowy 3000K IP44</text>
+
+  <!-- ====================== WOD-KAN ====================== -->
+  <!-- Punkty:
+       Z+C — doprowadzenie wody (zimna+ciepła) pod zlewem
+       Ø — odpływ ⌀50 mm syfon pod zlewem
+       — wspólny dla zmywarki
+   -->
+
+  <!-- Doprowadzenie wody — niebieski/czerwony obok zlewu -->
+  <g transform="translate(180, 12)">
+    <circle r="2.5" fill="#3b82f6" stroke="#1e40af" stroke-width="0.5"/>
+    <text x="0" y="1.5" font-size="2.2" text-anchor="middle" fill="#fff" font-weight="bold">Z</text>
+    <circle cx="6" r="2.5" fill="#ef4444" stroke="#7f1d1d" stroke-width="0.5"/>
+    <text x="6" y="1.5" font-size="2.2" text-anchor="middle" fill="#fff" font-weight="bold">C</text>
+  </g>
+  <text x="183" y="20" font-size="2" text-anchor="middle" fill="#1e40af" font-weight="bold">woda Z+C (zlew + zmywarka)</text>
+
+  <!-- Odpływ — kółko z X -->
+  <g transform="translate(168, 12)">
+    <circle r="3" fill="#fff" stroke="#000" stroke-width="0.5"/>
+    <line x1="-2.2" y1="-2.2" x2="2.2" y2="2.2" stroke="#000" stroke-width="0.4"/>
+    <line x1="-2.2" y1="2.2" x2="2.2" y2="-2.2" stroke="#000" stroke-width="0.4"/>
+    <text x="0" y="6" font-size="2" text-anchor="middle" fill="#000" font-weight="bold">Ø50</text>
+  </g>
+  <text x="168" y="22" font-size="1.8" text-anchor="middle" fill="#000">odpływ ⌀50</text>
+
+  <!-- Strefa pionu wod-kan — [do potwierdzenia] -->
+  <rect x="155" y="3" width="50" height="20" fill="none" stroke="#1e40af" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="155" y="2" font-size="1.8" fill="#1e40af" font-style="italic">strefa wod-kan [do potw.]</text>
+
+  <!-- ====================== WENTYLACJA ====================== -->
+  <!-- Kratka wentylacji grawitacyjnej — ze szkicu na ścianie górnej, po prawej stronie -->
+  <g transform="translate(220, -7)">
+    <rect x="-5" y="-3" width="10" height="6" fill="#fff" stroke="#16a34a" stroke-width="0.5"/>
+    <line x1="-4" y1="-2" x2="4" y2="-2" stroke="#16a34a" stroke-width="0.3"/>
+    <line x1="-4" y1="0" x2="4" y2="0" stroke="#16a34a" stroke-width="0.3"/>
+    <line x1="-4" y1="2" x2="4" y2="2" stroke="#16a34a" stroke-width="0.3"/>
+  </g>
+  <text x="220" y="-14" font-size="2.2" text-anchor="middle" fill="#15803d" font-weight="bold">WENT. grawit.</text>
+  <text x="220" y="-11" font-size="1.8" text-anchor="middle" fill="#15803d" font-style="italic">[do potw. pomiarem]</text>
+
+  <!-- Kanał okapu — od okapu nad indukcją prowadzony w nadstawce do kratki -->
+  <path d="M 30,-5 L 30,-8 L 215,-8" fill="none" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="4,2"/>
+  <text x="125" y="-10" font-size="2" text-anchor="middle" fill="#15803d">kanał okapu Ø125 (w nadstawce)</text>
+
+  <!-- ====================== LEGENDA ====================== -->
+  <g transform="translate(300, 0)">
+    <rect x="0" y="0" width="78" height="245" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <text x="39" y="6" font-size="4" font-weight="bold" text-anchor="middle">LEGENDA INSTALACJI</text>
+    <line x1="2" y1="9" x2="76" y2="9" stroke="#000" stroke-width="0.3"/>
+
+    <text x="3" y="15" font-size="3" font-weight="bold" fill="#d22">ELEKTRYKA</text>
+
+    <circle cx="6" cy="20" r="2.5" fill="#fff" stroke="#d22" stroke-width="0.5"/>
+    <text x="6" y="21.3" font-size="2" text-anchor="middle" fill="#d22" font-weight="bold">G</text>
+    <text x="11" y="21" font-size="2.4">gniazdko 230V 10A</text>
+
+    <circle cx="6" cy="26" r="3" fill="#fff" stroke="#c00" stroke-width="0.7"/>
+    <circle cx="6" cy="26" r="1.5" fill="none" stroke="#c00" stroke-width="0.4"/>
+    <text x="11" y="27" font-size="2.4">gniazdko 230V 16A (osobny obw.)</text>
+
+    <rect x="3" y="31" width="6" height="6" fill="#fff" stroke="#c00" stroke-width="0.6"/>
+    <line x1="3" y1="31" x2="9" y2="37" stroke="#c00" stroke-width="0.3"/>
+    <line x1="9" y1="31" x2="3" y2="37" stroke="#c00" stroke-width="0.3"/>
+    <text x="11" y="35.5" font-size="2.4">wypust indukcji 400V/230V 16A</text>
+
+    <rect x="3" y="41" width="6" height="6" fill="#cef2da" stroke="#2a7" stroke-width="0.5"/>
+    <text x="6" y="45.5" font-size="2" text-anchor="middle" fill="#2a7" font-weight="bold">S</text>
+    <text x="11" y="46" font-size="2.4">włącznik świateł</text>
+
+    <g transform="translate(6, 52)">
+      <circle r="2.5" fill="#fff8d8" stroke="#caa83a" stroke-width="0.4"/>
+      <path d="M 0,-2.5 L 0.5,-0.5 L 2.5,0 L 0.5,0.5 L 0,2.5 L -0.5,0.5 L -2.5,0 L -0.5,-0.5 Z" fill="#caa83a"/>
+    </g>
+    <text x="11" y="53" font-size="2.4">punkt świetlny sufitowy 3000K</text>
+
+    <line x1="3" y1="60" x2="9" y2="60" stroke="#fbbf24" stroke-width="1" stroke-dasharray="3,1"/>
+    <text x="11" y="61" font-size="2.4">taśma LED podszafkowa 3000K</text>
+
+    <text x="3" y="71" font-size="3" font-weight="bold" fill="#1e40af">WOD-KAN</text>
+    <circle cx="6" cy="76" r="2.5" fill="#3b82f6" stroke="#1e40af" stroke-width="0.4"/>
+    <text x="6" y="77.2" font-size="2" text-anchor="middle" fill="#fff" font-weight="bold">Z</text>
+    <text x="11" y="77" font-size="2.4">doprowadzenie zimnej wody</text>
+    <circle cx="6" cy="82" r="2.5" fill="#ef4444" stroke="#7f1d1d" stroke-width="0.4"/>
+    <text x="6" y="83.2" font-size="2" text-anchor="middle" fill="#fff" font-weight="bold">C</text>
+    <text x="11" y="83" font-size="2.4">doprowadzenie ciepłej wody</text>
+    <circle cx="6" cy="88" r="3" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <line x1="3.8" y1="85.8" x2="8.2" y2="90.2" stroke="#000" stroke-width="0.3"/>
+    <line x1="3.8" y1="90.2" x2="8.2" y2="85.8" stroke="#000" stroke-width="0.3"/>
+    <text x="11" y="89" font-size="2.4">odpływ ⌀50 mm</text>
+
+    <text x="3" y="99" font-size="3" font-weight="bold" fill="#15803d">WENTYLACJA</text>
+    <rect x="3" y="103" width="10" height="6" fill="#fff" stroke="#16a34a" stroke-width="0.4"/>
+    <line x1="4" y1="104" x2="12" y2="104" stroke="#16a34a" stroke-width="0.3"/>
+    <line x1="4" y1="106" x2="12" y2="106" stroke="#16a34a" stroke-width="0.3"/>
+    <line x1="4" y1="108" x2="12" y2="108" stroke="#16a34a" stroke-width="0.3"/>
+    <text x="15" y="108" font-size="2.4">kratka wentylacji grawit.</text>
+    <line x1="3" y1="114" x2="13" y2="114" stroke="#16a34a" stroke-width="1.2" stroke-dasharray="4,2"/>
+    <text x="15" y="115" font-size="2.4">kanał okapu Ø125 w nadstawce</text>
+
+    <text x="3" y="125" font-size="3" font-weight="bold">LISTA OBWODÓW</text>
+    <text x="3" y="130" font-size="2.2">O1 — indukcja (16A, osobny B16)</text>
+    <text x="3" y="134" font-size="2.2">O2 — piekarnik (16A, B16)</text>
+    <text x="3" y="138" font-size="2.2">O3 — gniazda kuchnia (16A, B16)</text>
+    <text x="3" y="142" font-size="2.2">O4 — oświetlenie (10A, B10)</text>
+    <text x="3" y="146" font-size="2.2">+ wszystkie obwody na różnicówce</text>
+    <text x="3" y="150" font-size="2.2" font-style="italic">  P30 mA (typ A lub F dla indukcji)</text>
+
+    <text x="3" y="160" font-size="3" font-weight="bold" fill="#a00">UWAGI WYKONAWCZE</text>
+    <text x="3" y="165" font-size="2.2" fill="#444">1. Gniazdka NAD płytą indukcyjną</text>
+    <text x="3" y="169" font-size="2.2" fill="#444">   ZAKAZ — min. 50 cm w bok od pól.</text>
+    <text x="3" y="173" font-size="2.2" fill="#444">2. Gniazdo zmywarki w sąsiedniej</text>
+    <text x="3" y="177" font-size="2.2" fill="#444">   szafce (nie za zmywarką).</text>
+    <text x="3" y="181" font-size="2.2" fill="#444">3. Wysokość gniazd nad blatem:</text>
+    <text x="3" y="185" font-size="2.2" fill="#444">   10-15 cm nad blatem (listwa).</text>
+    <text x="3" y="189" font-size="2.2" fill="#444">4. Włącznik światła na wys. 110</text>
+    <text x="3" y="193" font-size="2.2" fill="#444">   cm od podłogi (norma PN).</text>
+    <text x="3" y="197" font-size="2.2" fill="#444">5. Kabel okapu zakończyć w</text>
+    <text x="3" y="201" font-size="2.2" fill="#444">   nadstawce — gniazdo w środku.</text>
+    <text x="3" y="205" font-size="2.2" fill="#444">6. Pion gazu — zaślepić atestowany</text>
+    <text x="3" y="209" font-size="2.2" fill="#444">   instalator gazowy (protokół).</text>
+    <text x="3" y="213" font-size="2.2" fill="#444">7. Sterownik LED w włączniku S1</text>
+    <text x="3" y="217" font-size="2.2" fill="#444">   lub osobny push-button.</text>
+
+    <text x="3" y="226" font-size="2.6" font-weight="bold" fill="#a00">[do pomiaru przed pracami]</text>
+    <text x="3" y="230" font-size="2.2" fill="#a00">- istn. pion wod-kan (lokalizacja)</text>
+    <text x="3" y="234" font-size="2.2" fill="#a00">- istn. kratka went. (przepust.)</text>
+    <text x="3" y="238" font-size="2.2" fill="#a00">- istn. przyłącze gazu (zaślep.)</text>
+    <text x="3" y="242" font-size="2.2" fill="#a00">- przekrój istn. kabli (3,5 mm²?)</text>
+  </g>
+
+  <!-- Strzałka N -->
+  <g transform="translate(330, 245)">
+    <circle cx="0" cy="0" r="10" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <path d="M 0,-7 L 4,5 L 0,2 L -4,5 Z" fill="#000"/>
+    <text x="0" y="15" font-size="3.5" text-anchor="middle">OKNO</text>
+  </g>
+</svg>
