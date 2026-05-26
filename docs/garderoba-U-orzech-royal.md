@@ -125,18 +125,23 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 | Parametr | Wartość |
 |---|---|
 | Liczba paneli | 2 |
-| Wymiar pojedynczego panelu | **1180 × 2480 mm** (od podłogi do sufitu, bez widocznej szczeliny) |
+| Wymiar pojedynczego panelu | **1180 × 2390 mm** |
 | Zachód paneli | 5 mm w środku |
 | Materiał | Płyta meblowa MDF 18 mm + okleina **Egger H3734 ST9 Pacific Walnut** |
 | Krawędzie | ABS 2 mm wszystkie strony |
-| System | **Sevroll Glide** (lub Hawa Junior 80 Recessed) — prowadnica górna **WPUSZCZONA w sufit GK**, niewidoczna |
+| **Header (top panel szafy C)** | **2360 × 400 × 18 mm** w Orzechu Royal — górna pozioma płyta szafy tylnej; pełni rolę: (1) sufit szafy C, (2) nośnik prowadnicy drzwi przesuwnych, (3) widoczny "fryz" architektoniczny 70 mm od dołu |
+| System | **Sevroll Slim 25** (lub Hettich Top Line) — prowadnica górna **mocowana wkrętami w drewniany header od dołu** |
 | Uchwyt | profil pionowy wpuszczany **czarny mat**, na pełną wysokość (np. Sevroll Lounge) |
 | Soft-close | obustronny (Sevroll Soft Stop) |
-| Mocowanie | **rowek frezowany w suficie GK 40 × 25 mm** wzdłuż tylnej ściany na bazie **poprzeczki UA50** między 2 profilami CD60 — prowadnica wciska się w sufit |
+| Mocowanie dolne | dolna prowadnica frezowana w panel podłogowy 3 mm |
 
-**⚠️ Ważne:** prowadnicę wpuszczoną w sufit trzeba przygotować **PRZED wykończeniem sufitu GK** — patrz [Co zrobić przed Kornerem](#co-zrobić-przed-kornerem).
+**Cena orientacyjnie:** 1500–2000 zł (zestaw 2 panele Orzech Royal + system Sevroll Slim 25 + header).
 
-**Cena orientacyjnie:** 2400–3100 zł (zestaw 2 panele Orzech Royal + system Sevroll Glide).
+**Zalety vs prowadnica w suficie GK:**
+- Tańsze o 600-1000 zł
+- Nie wymaga przygotowania GK (poprzeczka UA50, rowek frezowany) → mniej pracy ekipy budowlanej
+- Cała konstrukcja "od góry do dołu" w Orzechu Royal — pełna integracja architektoniczna
+- Header sam w sobie staje się elementem dekoracyjnym
 
 ---
 
@@ -173,10 +178,7 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 
 1. **Pomiar 2× w 3 miejscach** (góra / środek / dół) na 3 ścianach + sprawdzenie kątów (90° tolerancja ±5 mm) — ścianki GK mogą mieć krzywizny
 2. **Wykończyć ściany** (gładź, malowanie kremową farbą — kolor wnętrza widać tylko w bocznicach otwartych)
-3. **Zamontować sufit GK** na docelowej wysokości 2490 mm. **Przed wykończeniem (gładź + farba):**
-   - Wbudować **poprzeczkę UA50** między 2 sąsiednimi profilami CD60 nad tylną ścianą, na całej szerokości 2360 mm
-   - Wyfrezować **rowek 40 × 25 mm** w suficie GK wzdłuż tylnej ściany (od ściany w głąb pomieszczenia ~50 mm) — w nim pójdzie wpuszczona prowadnica Sevroll Glide
-   - Wzmocnić poprzeczkę UA50 dwoma punktami mocowania do stropu (uchwyty stalowe wkręcane w strop) — drzwi przesuwne ważą ~50 kg każdy, prowadnica musi wytrzymać 100+ kg statycznie
+3. **Zamontować sufit GK** na docelowej wysokości 2490 mm — **standardowo, bez przygotowań**. Prowadnica drzwi przesuwnych mocowana jest do drewnianego headera szafy tylnej (od dołu), nie do GK.
 4. **Wyprowadzić zasilanie** w cokole tylnej ściany pod modułem C2 (kabel YDY 3×1,5 mm² zakończony puszką) — dla zasilacza LED 24V
 5. **Wyprowadzić zasilanie** w suficie GK nad chodnikiem (3 punkty) — dla spotów ledspot
 6. **Ułożyć podłogę panele** Barlinek Almond do wewnątrz garderoby (kontynuacja sypialni)
