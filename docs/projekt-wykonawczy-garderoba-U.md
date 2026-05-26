@@ -358,7 +358,7 @@ System 32 = pionowe rzędy otworów co 32 mm w bokach modułów, fi 5 mm, głęb
 
 | Pozycja | Wartość |
 |---|---|
-| Płyta meblowa Egger H3734 (5 arkuszy) z dostawą | ~3500 zł |
+| Płyta meblowa Egger H3734 (5 arkuszy) — odbiór własny | ~3300 zł |
 | MDF 18 mm + okleina drzwi (1 arkusz) | ~600 zł |
 | HDF 8 mm plecy (2 arkusze) | ~400 zł |
 | Okleina ABS 2 mm H3734 (70 m) | ~250 zł |
@@ -372,15 +372,15 @@ System 32 = pionowe rzędy otworów co 32 mm w bokach modułów, fi 5 mm, głęb
 | Nogi regulowane Hettich (24 szt) | ~250 zł |
 | Oświetlenie LED (taśmy + profile + zasilacze + PIR + kontaktrony) | ~1500 zł |
 | | |
-| **CAŁOŚĆ MATERIAŁOWA (DIY)** | **~15 350–15 850 zł brutto** |
+| **CAŁOŚĆ MATERIAŁOWA (DIY, bez dostawy)** | **~15 150–15 650 zł brutto** |
 
-*Wycena nie uwzględnia podłogi Barlinek, prac elektrycznych ani robót budowlanych przygotowawczych.*
+*Wycena nie uwzględnia: podłogi Barlinek, prac elektrycznych, robót budowlanych przygotowawczych ani DOSTAWY (odbiór własny).*
 
 ### Co zamawiamy u Kornera (zlecenie ograniczone):
-1. **Dostarczenie płyt** Egger H3734 ST9 (5 arkuszy) — opcjonalnie razem z dostawą
-2. **Cięcie na wymiar** wszystkich elementów z cutting listy (pkt 3)
-3. **Naklejenie okleiny ABS 2 mm** na widocznych krawędziach (pkt 4)
-4. **Wiercenie systemu 32** (otwory fi 5 mm co 32 mm — opcjonalnie, jeśli inwestor nie ma frezarki)
+1. **Cięcie na wymiar** wszystkich elementów z cutting listy (pkt 3)
+2. **Naklejenie okleiny ABS 2 mm** na widocznych krawędziach (pkt 4)
+3. **Wiercenie systemu 32** (otwory fi 5 mm co 32 mm — opcjonalnie, jeśli inwestor nie ma frezarki)
+4. **Odbiór własny** — inwestor zabiera pocięte elementy samochodem dostawczym
 
 ### Co inwestor robi sam:
 - Montaż wszystkich korpusów (Konfirmat + kołki)

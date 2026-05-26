@@ -2,8 +2,9 @@
 
 ## Inwestor
 - **Wszystkie prace stolarskie i montażowe wykonuje samodzielnie (DIY).**
-- Korner Żary = WYŁĄCZNIE dostawca płyt z dociętymi elementami i naklejoną okleiną ABS.
+- Korner Żary = WYŁĄCZNIE cięcie + okleinowanie ABS (NIE robocizna, NIE montaż, NIE dostawa — odbiór własny).
 - Elektryk = wyłącznie 1 punkt 230V w narożniku tył-prawo (reszta DIY).
+- **NIE dolicza się**: robocizny, montażu, dostawy, transportu.
 
 ## Materiały referencyjne (do wszystkich renderów i dokumentów)
 - **Płyta meblowa szaf**: Egger H3734 ST9 Pacific Walnut (Orzech Royal) MAT, 18 mm
