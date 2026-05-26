@@ -1,97 +1,112 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 950" font-family="Inter, Arial, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" font-family="Inter, Arial, sans-serif">
   <defs>
-    <linearGradient id="ledSide" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#fff4d0" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#fff4d0" stop-opacity="0.5"/>
+    <linearGradient id="ledTop4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.9"/>
       <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
     </linearGradient>
-    <pattern id="woodGardr" patternUnits="userSpaceOnUse" width="22" height="100">
-      <rect width="22" height="100" fill="#5b3826"/>
-      <path d="M0 0 L22 100 M0 50 L22 100 M11 0 L22 50" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
-      <rect x="0" y="20" width="22" height="1" fill="#7a4f37" opacity="0.4"/>
-      <rect x="0" y="65" width="22" height="1" fill="#7a4f37" opacity="0.4"/>
+    <pattern id="wood4" patternUnits="userSpaceOnUse" width="60" height="200">
+      <rect width="60" height="200" fill="#5b3826"/>
+      <rect x="0" width="40" height="200" fill="#6b4530"/>
+      <rect x="40" width="20" height="200" fill="#3d2419"/>
+      <path d="M0 0 L60 200 M0 100 L60 200 M30 0 L60 100" stroke="#3d2419" stroke-width="0.4" opacity="0.55"/>
+      <path d="M10 0 L10 200" stroke="#7a4f37" stroke-width="0.2" opacity="0.4"/>
     </pattern>
-    <pattern id="floorE3" patternUnits="userSpaceOnUse" width="80" height="20">
+    <pattern id="floorE4" patternUnits="userSpaceOnUse" width="80" height="20">
       <rect width="80" height="20" fill="#dec6a3"/>
       <line x1="0" y1="10" x2="80" y2="10" stroke="#b89866" stroke-width="0.6"/>
       <line x1="40" y1="0" x2="40" y2="20" stroke="#c4a47a" stroke-width="0.4"/>
     </pattern>
+    <linearGradient id="tvGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a1a20"/>
+      <stop offset="1" stop-color="#0a0a10"/>
+    </linearGradient>
   </defs>
 
-  <text x="40" y="40" font-size="24" font-weight="700" fill="#111">Elewacja — ściana z wejściem do garderoby</text>
-  <text x="40" y="62" font-size="12" fill="#555">4000 × 2500 mm · widok od strony łóżka</text>
+  <text x="40" y="40" font-size="24" font-weight="700" fill="#111">Elewacja — ściana z TV + wejście do garderoby</text>
+  <text x="40" y="62" font-size="12" fill="#555">2360 × 2500 mm · widok od strony łóżka · pełna fasada orzechowa H3734 z TV (lewa) i drzwiami przesuwnymi (prawa)</text>
 
-  <g transform="translate(140, 100)">
-    <!-- ściana off-white -->
-    <rect x="0" y="0" width="1100" height="700" fill="#f3f0e8" stroke="#111" stroke-width="3"/>
+  <g transform="translate(220, 100)">
+    <!-- sufit z gzymsem LED -->
+    <rect x="-20" y="-20" width="866" height="22" fill="#f0eee9" stroke="#111" stroke-width="2"/>
+    <rect x="0" y="0" width="826" height="14" fill="#fff4d0" opacity="0.95"/>
+    <rect x="-20" y="-20" width="866" height="200" fill="url(#ledTop4)" opacity="0.5" pointer-events="none"/>
+    <text x="413" y="-26" font-size="11" fill="#a47e00" font-weight="700" text-anchor="middle">▓ GZYMS LED 2700K kontynuacja</text>
 
-    <!-- DRZWI PRZESUWNE KASETOWE — front orzech royal -->
-    <g transform="translate(400, 70)">
-      <!-- pasek LED po lewej (po stronie otwierania) -->
-      <rect x="-30" y="0" width="14" height="600" fill="#fff4d0" opacity="0.95"/>
-      <rect x="-80" y="-10" width="80" height="620" fill="url(#ledSide)" opacity="0.7"/>
-      <text x="-22" y="-18" font-size="11" fill="#a47e00" font-weight="700" text-anchor="middle">▓ pasek LED 2700K</text>
-      <text x="-22" y="-4" font-size="9" fill="#a47e00" text-anchor="middle">1800 mm, czujnik otwarcia</text>
+    <!-- pełna fasada orzechowa H3734 (cała ściana 2360 × 2500 mm) -->
+    <rect x="0" y="14" width="826" height="824" fill="url(#wood4)" stroke="#111" stroke-width="1"/>
 
-      <!-- drzwi -->
-      <rect width="280" height="600" fill="url(#woodGardr)" stroke="#222" stroke-width="2"/>
-      <!-- uchwyt pionowy PEŁNOWYSOKOŚCIOWY Sevroll Lounge (jak w garderobie) -->
-      <rect x="248" y="20" width="14" height="560" fill="#000"/>
-      <rect x="251" y="20" width="8" height="560" fill="#222"/>
-      <rect x="248" y="20" width="14" height="4" fill="#444"/>
-      <rect x="248" y="576" width="14" height="4" fill="#444"/>
-      <text x="140" y="280" font-size="16" fill="#fff" text-anchor="middle" font-weight="800">DRZWI PRZESUWNE</text>
-      <text x="140" y="300" font-size="13" fill="#fff" text-anchor="middle">Egger H3734 ST9</text>
-      <text x="140" y="316" font-size="13" fill="#fff" text-anchor="middle">Pacific Walnut (Orzech Royal)</text>
-      <text x="140" y="334" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">90 × 210 cm · kaseta Eclisse</text>
-      <text x="140" y="350" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">uchwyt pełnowysokościowy</text>
-      <text x="140" y="366" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">Sevroll Lounge czarny mat</text>
-      <text x="140" y="382" font-size="11" fill="#fff" text-anchor="middle" opacity="0.85">soft-close 2-stronny</text>
+    <!-- TV 55" (1220 × 700 mm) w pasie po lewej (0-1300 mm od lewej ściany pokoju) -->
+    <g transform="translate(14, 333)">
+      <rect x="-6" y="-6" width="439" height="257" fill="#000" stroke="#222" stroke-width="2"/>
+      <rect width="427" height="245" fill="url(#tvGlow)"/>
+      <text x="213" y="120" font-size="22" fill="#3a4654" text-anchor="middle" font-weight="700">TV 55"</text>
+      <text x="213" y="146" font-size="11" fill="#5a6674" text-anchor="middle">1220 × 700 mm · oś 1200 mm od podłogi</text>
+      <text x="213" y="164" font-size="10" fill="#5a6674" text-anchor="middle">mocowanie do panela orzech</text>
+      <rect x="170" y="245" width="86" height="6" fill="#3a3733"/>
     </g>
 
-    <!-- strzałka kierunku przesuwu -->
-    <g transform="translate(220, 380)">
-      <line x1="0" y1="0" x2="160" y2="0" stroke="#888" stroke-width="2" stroke-dasharray="6 4"/>
-      <polygon points="0,0 12,-6 12,6" fill="#888"/>
-      <text x="80" y="-8" font-size="10" fill="#666" text-anchor="middle">drzwi suną w kasetę ←</text>
+    <!-- KONSOLA TV / półka pod-zabudowa -->
+    <g transform="translate(14, 668)">
+      <rect width="427" height="80" fill="#3d2419" stroke="#111" stroke-width="1"/>
+      <line x1="0" y1="40" x2="427" y2="40" stroke="#5b3826" stroke-width="0.5" stroke-dasharray="6 3"/>
+      <text x="213" y="48" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">KONSOLA TV pod-zabudowa orzech</text>
+      <text x="213" y="64" font-size="10" fill="#ccc" text-anchor="middle">szuflada push-open · głębokość 250 mm</text>
     </g>
 
-    <!-- ścianka boczna gladka tynk -->
-    <text x="200" y="370" font-size="11" fill="#888">tynk gładki + farba off-white</text>
-    <text x="900" y="370" font-size="11" fill="#888">tynk gładki + farba off-white</text>
+    <!-- DRZWI PRZESUWNE 900×2100 mm — pas prawy ściany (1300-2200 mm od lewej) -->
+    <g transform="translate(455, 140)">
+      <rect width="315" height="700" fill="#3d2419" stroke="#111" stroke-width="3"/>
+      <line x1="0" y1="0" x2="0" y2="700" stroke="#111" stroke-width="2"/>
+      <line x1="315" y1="0" x2="315" y2="700" stroke="#111" stroke-width="2"/>
+      <rect x="20" y="40" width="6" height="630" fill="#111"/>
+      <text x="158" y="340" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">DRZWI PRZESUWNE</text>
+      <text x="158" y="360" font-size="11" fill="#fff" text-anchor="middle">90 × 210 cm kasetowe</text>
+      <text x="158" y="376" font-size="11" fill="#fff" text-anchor="middle">orzech H3734 mat</text>
+      <text x="158" y="392" font-size="10" fill="#fff" text-anchor="middle" opacity="0.85">soft-close · uchwyt pionowy</text>
+      <text x="158" y="408" font-size="10" fill="#fff" text-anchor="middle" opacity="0.85">Sevroll Lounge 1800 czarny</text>
+    </g>
 
-    <!-- PODŁOGA — ciągłość między sypialnią a garderobą, bez progu -->
-    <rect x="0" y="700" width="1100" height="50" fill="url(#floorE3)" stroke="#111" stroke-width="2"/>
-    <rect x="0" y="700" width="1100" height="9" fill="#111"/>
-    <text x="540" y="744" font-size="10" fill="#444" text-anchor="middle">Barlinek dąb Almond (lakier mat) — KONTYNUACJA z garderoby, bez progu · cokół czarny mat 100 mm</text>
+    <!-- LED pionowy przy drzwiach przesuwnych -->
+    <rect x="448" y="140" width="6" height="700" fill="#ffe7a3" opacity="0.85"/>
+
+    <!-- WĄSKA RESZTA PANELA po prawej (160 mm) -->
+    <text x="798" y="500" font-size="10" fill="#fff" text-anchor="middle" transform="rotate(-90 798 500)" opacity="0.6">panel orzech (resztówka 160 mm)</text>
+
+    <!-- PODŁOGA -->
+    <rect x="-20" y="838" width="866" height="40" fill="url(#floorE4)" stroke="#111" stroke-width="2"/>
+    <rect x="-20" y="838" width="866" height="9" fill="#111"/>
+    <text x="413" y="900" font-size="10" fill="#444" text-anchor="middle">Barlinek dąb Almond olej · listwa cokołowa aluminiowa czarna mat 100 mm</text>
 
     <!-- wymiary -->
-    <line x1="0" y1="770" x2="1100" y2="770" stroke="#111" stroke-width="1"/>
-    <line x1="0" y1="765" x2="0" y2="775" stroke="#111" stroke-width="1"/>
-    <line x1="1100" y1="765" x2="1100" y2="775" stroke="#111" stroke-width="1"/>
-    <text x="550" y="788" font-size="13" font-weight="700" fill="#111" text-anchor="middle">4000 mm</text>
+    <line x1="0" y1="932" x2="826" y2="932" stroke="#111" stroke-width="1"/>
+    <line x1="0" y1="927" x2="0" y2="937" stroke="#111" stroke-width="1"/>
+    <line x1="826" y1="927" x2="826" y2="937" stroke="#111" stroke-width="1"/>
+    <text x="413" y="950" font-size="13" font-weight="700" fill="#111" text-anchor="middle">2360 mm (krótka ściana = wspólna szerokość z garderobą)</text>
 
-    <line x1="1130" y1="0" x2="1130" y2="700" stroke="#111" stroke-width="1"/>
-    <line x1="1125" y1="0" x2="1135" y2="0" stroke="#111" stroke-width="1"/>
-    <line x1="1125" y1="700" x2="1135" y2="700" stroke="#111" stroke-width="1"/>
-    <text x="1158" y="360" font-size="13" font-weight="700" fill="#111" transform="rotate(-90 1158 360)" text-anchor="middle">2500 mm</text>
+    <line x1="856" y1="14" x2="856" y2="838" stroke="#111" stroke-width="1"/>
+    <line x1="851" y1="14" x2="861" y2="14" stroke="#111" stroke-width="1"/>
+    <line x1="851" y1="838" x2="861" y2="838" stroke="#111" stroke-width="1"/>
+    <text x="884" y="426" font-size="13" font-weight="700" fill="#111" transform="rotate(-90 884 426)" text-anchor="middle">2500 mm</text>
 
-    <!-- wymiary drzwi -->
-    <line x1="400" y1="690" x2="680" y2="690" stroke="#c33" stroke-width="1"/>
-    <line x1="400" y1="685" x2="400" y2="695" stroke="#c33" stroke-width="1"/>
-    <line x1="680" y1="685" x2="680" y2="695" stroke="#c33" stroke-width="1"/>
-    <text x="540" y="685" font-size="11" font-weight="700" fill="#c33" text-anchor="middle">900</text>
+    <!-- wymiary pozycji TV i drzwi przesuwnych -->
+    <line x1="0" y1="985" x2="455" y2="985" stroke="#c46b1f" stroke-width="0.6"/>
+    <line x1="0" y1="980" x2="0" y2="990" stroke="#c46b1f" stroke-width="0.6"/>
+    <line x1="455" y1="980" x2="455" y2="990" stroke="#c46b1f" stroke-width="0.6"/>
+    <text x="227" y="1003" font-size="10" fill="#c46b1f" text-anchor="middle" font-weight="700">strefa TV 1300 mm</text>
 
-    <line x1="690" y1="70" x2="690" y2="670" stroke="#c33" stroke-width="1"/>
-    <line x1="685" y1="70" x2="695" y2="70" stroke="#c33" stroke-width="1"/>
-    <line x1="685" y1="670" x2="695" y2="670" stroke="#c33" stroke-width="1"/>
-    <text x="710" y="375" font-size="11" font-weight="700" fill="#c33" transform="rotate(-90 710 375)" text-anchor="middle">2100</text>
+    <line x1="455" y1="985" x2="770" y2="985" stroke="#c46b1f" stroke-width="0.6"/>
+    <line x1="770" y1="980" x2="770" y2="990" stroke="#c46b1f" stroke-width="0.6"/>
+    <text x="612" y="1003" font-size="10" fill="#c46b1f" text-anchor="middle" font-weight="700">drzwi 900 mm</text>
+
+    <line x1="770" y1="985" x2="826" y2="985" stroke="#c46b1f" stroke-width="0.6"/>
+    <line x1="826" y1="980" x2="826" y2="990" stroke="#c46b1f" stroke-width="0.6"/>
+    <text x="798" y="1003" font-size="10" fill="#c46b1f" text-anchor="middle" font-weight="700">160</text>
   </g>
 
-  <g transform="translate(40, 870)">
+  <g transform="translate(40, 1020)">
     <text font-size="13" font-weight="700" fill="#111">Specyfikacja:</text>
-    <text x="0" y="20" font-size="11" fill="#333">Drzwi przesuwne kasetowe Eclisse Unico · front MDF 18 mm + laminat Egger H3734 ST9 Pacific Walnut mat (IDENTYCZNY dekor co panele garderoby i header — zamów u Korner razem)</text>
-    <text x="0" y="36" font-size="11" fill="#333">Uchwyt: profil pionowy PEŁNOWYSOKOŚCIOWY Sevroll Lounge czarny mat (analogiczny do uchwytów drzwi przesuwnych tylnych w garderobie — ciągłość wizualna)</text>
-    <text x="0" y="52" font-size="11" fill="#333">Soft-close 2-stronny · BEZ progu (Barlinek dąb Almond ciągnie się bez przerwy do garderoby) · LED 2700K pionowy 1800 mm sterowany czujnikiem PIR LED garderoby 3000K</text>
+    <text x="0" y="20" font-size="11" fill="#333">Panel ścienny pełnoblatowy orzech Egger H3734 H1.2.45 mat · płyty 18 mm na stelażu OSB · podział wizualny: TV po lewej + drzwi przesuwne po prawej</text>
+    <text x="0" y="36" font-size="11" fill="#333">TV 55" mocowany do panela orzech, oś 1200 mm od podłogi · kable HDMI/zasilanie w peszlach za panelem · konsola pod-zabudowa orzech z szufladą push-open</text>
+    <text x="0" y="52" font-size="11" fill="#333">Drzwi przesuwne kasetowe 90×210 orzech H3734, soft-close Sevroll · uchwyt pionowy Sevroll Lounge 1800 mm czarny mat · LED 2700K pionowy przy krawędzi</text>
   </g>
 </svg>
