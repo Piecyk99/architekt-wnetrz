@@ -196,6 +196,9 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 ### CAD rzut techniczny z wymiarami
 ![CAD plan](renders/U-00-cad-plan.png)
 
+### Rysunek techniczny — 3 elewacje + rzut z góry (skala 1:25)
+![Rysunek techniczny](renders/U-07-technical-drawing.png)
+
 ### Rzut z góry fotorealistyczny (potwierdza kształt U)
 ![Top-down](renders/U-06-topdown-photo.png)
 
