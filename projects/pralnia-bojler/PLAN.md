@@ -8,8 +8,7 @@ przesuwnymi w kolorze garderoby**, kryjącą:
 
 - **bojler** wiszący w lewym górnym rogu (~Ø 55, ~120 cm wys.),
 - **pralkę + suszarkę** (60×60×85 cm),
-- **półki magazynowe** od góry (środki chemii, kosze, deska do prasowania),
-- istniejąca **krata wentylacyjna nad bojlerem** — musi pozostać drożna.
+- **półki magazynowe** od góry (środki chemii, kosze, deska do prasowania).
 
 **Podłoga:** ta sama co w garderobie (do potwierdzenia jaka — ważne dla strefy mokrej).
 **Kolor frontów:** ten sam co garderoba (zakładam house-style **Orzech Royal HPL mat**,
@@ -39,7 +38,7 @@ Wybór jednoznaczny: **bok w bok**.
 
 ```
 ┌─────────────────┬─────────────────┬─────────────────┐  ← sufit 2500
-│         maskownica 100 mm pełna walnut (bez kratki) │ ← 2400
+│         maskownica 100 mm pełna walnut              │ ← 2400
 ├─────────────────┼─────────────────┼─────────────────┤
 │   BOJLER        │                 │                 │
 │   55×120        │   PÓŁKA 1       │   PÓŁKA 1       │
@@ -117,10 +116,7 @@ ZAMKNIĘTE: cała ściana 2670 mm walnut (panele równo)
 
 **Cokół + sufitowa maskownica:**
 - cokół 100 mm **czarny mat** (wykończenie = ramki / podłogi)
-- maskownica górna 100 mm **w kolorze frontów, pełna walnut** (bez kratki w maskownicy)
-- wentylacja pomieszczenia idzie przez istniejącą **kratę w ścianie nad bojlerem**
-  (poza obrysem zabudowy) + naturalny przepływ przy otwartych panelach po pracy
-  pralki/suszarki kondensacyjnej — to wystarczy
+- maskownica górna 100 mm **w kolorze frontów, pełna walnut**
 
 ## Bojler — szczegóły (sekcja 1)
 
@@ -176,22 +172,26 @@ Powiedziałeś "ta sama co w garderobie". Sprawdź jaki tam materiał:
 Jeśli ostatnie 2 → zaproponuję dekor LVT identyczny optycznie + listwę progową
 maskującą przejście w drzwiach pomieszczenia.
 
-## Kosztorys orientacyjny (Korner Żary)
+## Kosztorys — tylko drzwi przesuwne (Korner Żary)
 
 | Pozycja                                              | Cena (zł)  |
 |------------------------------------------------------|------------|
-| Korpus zabudowy 2,67×2,5×0,64 m, płyta + półki + plecy | 2 200      |
 | 3 fronty 890×2500 HPL Orzech Royal mat                | 1 800      |
 | System przesuwny TopLine L 3-torowy z soft-close      | 1 800      |
 | Uchwyty listwowe 3× 2500 mm czarne mat                | 350        |
-| Cokół czarny mat + maskownica pełna walnut            | 250        |
-| Profil LED + taśma 4000 K CRI90 + zasilacz + PIR      | 350        |
-| Akcesoria (kosz wysuwany Hailo, podkładki antywibr.)  | 400        |
-| Montaż Korner (1 ekipa, 1 dzień)                      | 1 500      |
-| Czujnik zalania Aqara + zawór antypowodziowy ¾"       | 350        |
-| **RAZEM**                                             | **9 000**  |
+| **RAZEM (same drzwi, bez montażu)**                  | **3 950**  |
+| Montaż drzwi (½ dnia ekipy)                          | 750        |
+| **RAZEM z montażem**                                  | **4 700**  |
 
-(±15% w zależności od finalnego dekoru i akcesoriów)
+(±15% w zależności od finalnego dekoru — Orzech Royal H3702 vs inny)
+
+**Co NIE jest w tej cenie** (do osobnej wyceny jeśli zlecasz Kornerowi też resztę):
+- korpus zabudowy z półkami + cokół + maskownica (~2 700 zł)
+- LED + sterowanie PIR (~350 zł)
+- czujnik zalania, akcesoria antywibracyjne, kosz Hailo (~750 zł)
+- pełny montaż wszystkiego (zamiast samych drzwi) (~750 zł różnicy)
+
+= **pełny pakiet z usługą Korner łącznie ~9 000 zł**, same drzwi = **3 950-4 700 zł**.
 
 ## Pliki referencyjne wykorzystane
 
@@ -207,9 +207,8 @@ maskującą przejście w drzwiach pomieszczenia.
 1. **Dekor frontów garderoby** — czy to dokładnie Orzech Royal H3702, czy inny dekor.
 2. **Podłoga garderoby** — który materiał (patrz tabela powyżej), czy w pralni można 1:1.
 3. **Bojler — model i waga** — sprawdzić, czy obecny hak utrzyma pełny (waga 150 kg dla 100 l).
-4. **Istniejąca krata wentylacyjna w ścianie nad bojlerem** — wymierzyć pozycję; jeśli wypada w obrysie maskownicy 100 mm (między 2400-2500 mm), trzeba ją przenieść niżej w ścianę lub zostawić nadprożny otwór (Korner do uzgodnienia).
-5. **Pralka i suszarka — czy już są kupione?** Wymiary deklarowane mogą się różnić ±10 mm — wymierzyć przed cięciem płyt.
-6. **Wymiar ściany** — wymierzyć 2,67 m laserowo w 3 punktach (góra/środek/dół) — stare ściany rzadko są równoległe, fuga silikonowa pod listwę maskującą 10-20 mm po bokach to standard.
+4. **Pralka i suszarka — czy już są kupione?** Wymiary deklarowane mogą się różnić ±10 mm — wymierzyć przed cięciem płyt.
+5. **Wymiar ściany** — wymierzyć 2,67 m laserowo w 3 punktach (góra/środek/dół) — stare ściany rzadko są równoległe, fuga silikonowa pod listwę maskującą 10-20 mm po bokach to standard.
 
 ## Następne kroki
 
