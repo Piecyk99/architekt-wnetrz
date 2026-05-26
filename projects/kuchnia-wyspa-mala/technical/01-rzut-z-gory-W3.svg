@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-90 -90 470 360" width="1400" height="1072" font-family="Arial, sans-serif">
+  <!-- Tło arkusza A3 poziomy -->
+  <rect x="-90" y="-90" width="470" height="360" fill="#ffffff"/>
+
+  <!-- Style -->
+  <defs>
+    <pattern id="hatch" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#888" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="hatchInd" patternUnits="userSpaceOnUse" width="2.5" height="2.5" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="2.5" stroke="#444" stroke-width="0.3"/>
+    </pattern>
+    <marker id="dimArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="dimArrRev" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <!-- ====================== TYTUŁ ====================== -->
+  <text x="0" y="-65" font-size="9" font-weight="bold" fill="#000">KUCHNIA 9.02 — WARIANT W3 — RZUT Z GÓRY</text>
+  <text x="0" y="-55" font-size="4.5" fill="#444">Skala 1:25 (1 cm na rysunku = 25 cm w rzeczywistości) · Powierzchnia 4,86 m² · h ≈ 250 cm</text>
+  <text x="0" y="-48" font-size="3.5" fill="#888" font-style="italic">Rysunek poglądowy. Wymiary nieoznaczone „pewne" wymagają potwierdzenia pomiarem na miejscu.</text>
+
+  <!-- ====================== ŚCIANY (grubość 12 cm) ====================== -->
+  <!-- Obrys ścian zewnętrznych: prostokąt 259 x 191 + uskok 63x128 w lewym dolnym narożniku.
+       Współrzędne: x rośnie w prawo, y rośnie w dół (standard SVG).
+       Pomieszczenie zaczyna się w (0,0), kończy (259,191).
+       Uskok w lewym dolnym narożniku: wycięcie 63 wszerz × 128 wzwyż.
+       Czyli ściana zewnętrzna: 0,0 → 259,0 → 259,191 → 63,191 → 63,63 → 0,63 → 0,0
+       (Tak interpretuję: uskok jest cofnięciem lewego dolnego rogu o 63x128. Funkcja uskoku — do potwierdzenia.) -->
+  <!-- Wnętrze kuchni (jasne tło) -->
+  <path d="M 0,0 L 259,0 L 259,191 L 63,191 L 63,63 L 0,63 Z"
+        fill="#fafaf8" stroke="none"/>
+
+  <!-- Ściana zewnętrzna grubości 12 cm (rysowana jako gruba kreska) -->
+  <path d="M 0,0 L 259,0 L 259,191 L 63,191 L 63,63 L 0,63 Z"
+        fill="none" stroke="#000" stroke-width="1.2"/>
+  <!-- Druga linia ściany (od strony pomieszczeń sąsiednich) -->
+  <path d="M -12,-12 L 271,-12 L 271,203 L 63,203 L 63,75 L -12,75 Z"
+        fill="none" stroke="#000" stroke-width="1.2"/>
+  <!-- Wypełnienie ściany (kreskowanie) -->
+  <path d="M 0,0 L 259,0 L 259,191 L 63,191 L 63,63 L 0,63 Z
+           M -12,-12 L 271,-12 L 271,203 L 63,203 L 63,75 L -12,75 Z"
+        fill="url(#hatch)" fill-rule="evenodd"/>
+
+  <!-- ====================== OKNO (ściana górna) ====================== -->
+  <!-- Pozycja okna: orientacyjnie centralnie, szerokość 110 cm. RZECZYWISTĄ POZYCJĘ POTWIERDZIĆ POMIAREM. -->
+  <rect x="80" y="-12" width="110" height="12" fill="#dceaf5" stroke="#3b6fa8" stroke-width="0.6"/>
+  <line x1="80" y1="-6" x2="190" y2="-6" stroke="#3b6fa8" stroke-width="0.3"/>
+  <text x="135" y="-2" font-size="3" fill="#3b6fa8" text-anchor="middle">OKNO [do pomiaru]</text>
+
+  <!-- ====================== WEJŚCIE z PRZEDPOKOJU (ściana dolna) ====================== -->
+  <!-- Otwór wejściowy: orientacyjnie szerokość 80 cm po lewej stronie ściany dolnej. RZECZYWISTĄ LOKALIZACJĘ POTWIERDZIĆ. -->
+  <rect x="80" y="191" width="80" height="12" fill="#ffffff" stroke="none"/>
+  <line x1="80" y1="191" x2="80" y2="203" stroke="#000" stroke-width="0.6"/>
+  <line x1="160" y1="191" x2="160" y2="203" stroke="#000" stroke-width="0.6"/>
+  <!-- Łuk otwarcia drzwi (przerywany) -->
+  <path d="M 80,191 A 80,80 0 0 1 80,271" fill="none" stroke="#888" stroke-width="0.3" stroke-dasharray="2,2"/>
+  <text x="120" y="200" font-size="3" fill="#666" text-anchor="middle" font-style="italic">WEJŚCIE [do pomiaru]</text>
+
+  <!-- ====================== MEBLE — układ W3 ====================== -->
+  <!-- ===== ŚCIANA GÓRNA (długa, 259 cm) — szafki dolne D1..D5, blat, AGD ===== -->
+  <!-- D1: szafka pod indukcją 60 cm, lewa strona (od x=63 — bo dolny uskok zaczyna się od x=63, ale na ścianie górnej liczymy od x=0; jednak w lewym górnym jest pełna ściana — kontur idzie od 0,0)
+       Dla bezpieczeństwa odsuwamy meble od narożnika z uskokiem: lewa strefa zaczyna się od x=0 na ścianie górnej, ale szafki na ścianie lewej mogą mieć tylko głębokość ograniczoną do uskoku — patrz S1. -->
+
+  <!-- D1: szafka pod indukcją 60×60 cm -->
+  <rect x="0" y="0" width="60" height="60" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="30" y="28" font-size="2.8" text-anchor="middle" fill="#5a4a2a">D1</text>
+  <text x="30" y="33" font-size="2.4" text-anchor="middle" fill="#5a4a2a">60×60</text>
+  <!-- Indukcja (płyta) — na blacie, schematycznie -->
+  <rect x="4" y="4" width="52" height="52" fill="url(#hatchInd)" stroke="#222" stroke-width="0.5"/>
+  <circle cx="16" cy="16" r="6" fill="none" stroke="#222" stroke-width="0.4"/>
+  <circle cx="44" cy="16" r="6" fill="none" stroke="#222" stroke-width="0.4"/>
+  <circle cx="16" cy="44" r="6" fill="none" stroke="#222" stroke-width="0.4"/>
+  <circle cx="44" cy="44" r="6" fill="none" stroke="#222" stroke-width="0.4"/>
+  <text x="30" y="45" font-size="2.5" text-anchor="middle" fill="#000" font-weight="bold">INDUKCJA 60</text>
+
+  <!-- D2: blat roboczy główny + szuflady 90 cm -->
+  <rect x="60" y="0" width="90" height="60" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="105" y="22" font-size="2.8" text-anchor="middle" fill="#5a4a2a">D2</text>
+  <text x="105" y="27" font-size="2.4" text-anchor="middle" fill="#5a4a2a">90×60</text>
+  <text x="105" y="40" font-size="2.6" text-anchor="middle" fill="#000" font-weight="bold">BLAT ROBOCZY 90</text>
+  <text x="105" y="46" font-size="2.2" text-anchor="middle" fill="#444" font-style="italic">(szuflady)</text>
+
+  <!-- D3: pod zlewem 60 cm -->
+  <rect x="150" y="0" width="60" height="60" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="180" y="13" font-size="2.8" text-anchor="middle" fill="#5a4a2a">D3</text>
+  <text x="180" y="17" font-size="2.4" text-anchor="middle" fill="#5a4a2a">60×60</text>
+  <!-- Zlew 1-komorowy 50 cm pod oknem -->
+  <rect x="155" y="6" width="50" height="44" fill="#c9d6df" stroke="#3b5a73" stroke-width="0.5" rx="2"/>
+  <circle cx="180" cy="28" r="3" fill="#3b5a73"/>
+  <text x="180" y="40" font-size="2.6" text-anchor="middle" fill="#000" font-weight="bold">ZLEW 50</text>
+  <text x="180" y="55" font-size="2.2" text-anchor="middle" fill="#444">(pod zlewem)</text>
+
+  <!-- D4: zmywarka 45 cm -->
+  <rect x="210" y="0" width="45" height="60" fill="#e6e8eb" stroke="#666" stroke-width="0.4"/>
+  <text x="232.5" y="22" font-size="2.8" text-anchor="middle" fill="#333">D4</text>
+  <text x="232.5" y="32" font-size="2.4" text-anchor="middle" fill="#000" font-weight="bold">ZMYWARKA</text>
+  <text x="232.5" y="37" font-size="2.4" text-anchor="middle" fill="#000" font-weight="bold">45</text>
+  <!-- linie sugerujące drzwi -->
+  <line x1="212" y1="58" x2="253" y2="58" stroke="#666" stroke-width="0.3"/>
+
+  <!-- Wąska szafka cargo (dopełnienie do 259) -->
+  <!-- Reszta na ścianie górnej: 259 - 255 = 4 cm — za mało na cargo. W praktyce dopełniamy bocznym maskownicą do słupka lodówki na ścianie prawej.
+       Realnie szafki ściany górnej dochodzą do x=255, dalej zaczyna się słupek na ścianie prawej (głębokość 60 cm). -->
+
+  <!-- ===== ŚCIANA PRAWA (krótka, 191 cm) — słupek lodówka + piekarnik ===== -->
+  <!-- W1: słupek lodówka 60 cm szer × 60 gł, wysokość 230 (do sufitu z nadstawką) -->
+  <rect x="199" y="60" width="60" height="60" fill="#e6e8eb" stroke="#666" stroke-width="0.4"/>
+  <text x="229" y="80" font-size="2.8" text-anchor="middle" fill="#333">W1</text>
+  <text x="229" y="92" font-size="3" text-anchor="middle" fill="#000" font-weight="bold">LODÓWKA</text>
+  <text x="229" y="98" font-size="2.4" text-anchor="middle" fill="#444">60×60×202</text>
+  <text x="229" y="103" font-size="2.2" text-anchor="middle" fill="#444">+ szafka 28 nad</text>
+
+  <!-- W2: słupek piekarnik + mikrofala -->
+  <rect x="199" y="120" width="60" height="60" fill="#e6e8eb" stroke="#666" stroke-width="0.4"/>
+  <text x="229" y="140" font-size="2.8" text-anchor="middle" fill="#333">W2</text>
+  <text x="229" y="151" font-size="2.8" text-anchor="middle" fill="#000" font-weight="bold">PIEKARNIK</text>
+  <text x="229" y="156" font-size="2.4" text-anchor="middle" fill="#000">+ MIKROFALA</text>
+  <text x="229" y="161" font-size="2.2" text-anchor="middle" fill="#444">(w słupku)</text>
+  <text x="229" y="167" font-size="2" text-anchor="middle" fill="#444">+ szuflada cargo</text>
+
+  <!-- ===== ŚCIANA DOLNA — PÓŁWYSPA wzdłużna 174×40 cm z barem 25 cm ===== -->
+  <!-- Półwyspa położona przy ścianie dolnej (y=191).
+       Długość = 174 cm (od x=63 do x=237 — pełna ściana dolna między uskokami).
+       Czekaj — ściana dolna w naszej geometrii to: od x=63 (po uskoku) do x=259, więc długość 259-63=196 cm.
+       Ale wymiar "174" z rzutu to długość ściany dolnej między uskokami. Jeśli rzut mówi 174, to prawdopodobnie po prawej stronie też jest uskok (lub ściana boczna ma swoją grubość).
+       Założenie: ściana dolna efektywnie 174 cm między x=63 i x=237 (gdzie 237 = 63 + 174 = 237). Reszta 22 cm to grubość ściany prawej i jej wykończenie.
+       Sprawdzenie: 259 (ściana górna zewn.) - 174 (ściana dolna) = 85 cm — to się zgadza z naszą interpretacją uskoku 63 + grubość ściany prawej 12 + tolerancja... To trochę inny szkielet. Trzeba potwierdzić pomiarem.
+       Dla rysunku poglądowego: półwyspa 174 cm długości × 40 cm głębokości, ustawiona od x=63 (przy uskoku) z odsunięciem 5 cm od ściany. -->
+
+  <!-- Półwyspa: zabudowa 174 × 40 + bar 25 cm wystający w dół (w stronę przedpokoju) -->
+  <rect x="63" y="131" width="174" height="40" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="150" y="148" font-size="3" text-anchor="middle" fill="#5a4a2a" font-weight="bold">PÓŁWYSPA — 174 × 40 cm</text>
+  <text x="150" y="154" font-size="2.4" text-anchor="middle" fill="#5a4a2a">(szuflady od strony kuchni)</text>
+  <text x="150" y="160" font-size="2.2" text-anchor="middle" fill="#666">[ALT: gdy ściana dolna pełna]</text>
+  <text x="150" y="166" font-size="2.2" text-anchor="middle" fill="#666">[do pomiaru]</text>
+
+  <!-- Bar (blat) wystający 25 cm w stronę przedpokoju, ale skoro mamy wejście — bar tylko po lewej stronie półwyspy.
+       Na rzucie: blat baru = lekko cofnięty od krawędzi półwyspy, oznaczony linią przerywaną. -->
+  <line x1="63" y1="171" x2="237" y2="171" stroke="#5a4a2a" stroke-width="0.6"/>
+  <text x="150" y="178" font-size="2.4" text-anchor="middle" fill="#5a4a2a">BAR (blat wystaje 25 cm — gdy nie koliduje z wejściem)</text>
+
+  <!-- Hokery (schematycznie) — TYLKO jeśli nie blokują wejścia. Pokazujemy 2 hokery po prawej stronie półwyspy. -->
+  <circle cx="180" cy="183" r="6" fill="none" stroke="#888" stroke-width="0.4" stroke-dasharray="1.5,1.5"/>
+  <circle cx="210" cy="183" r="6" fill="none" stroke="#888" stroke-width="0.4" stroke-dasharray="1.5,1.5"/>
+  <text x="195" y="186" font-size="2" text-anchor="middle" fill="#888">2 hokery (opcja)</text>
+
+  <!-- ===== USKOK lewy dolny: S1 (półsłupek 60 cm wykorzystujący uskok) ===== -->
+  <!-- Uskok: prostokąt 63 wszerz x 128 wzwyż od x=0 do x=63, od y=63 do y=191.
+       To jest poza pomieszczeniem (cofnięta ściana), więc tu mebli NIE WSTAWIAMY.
+       W oryginalnym pomieszczeniu od x=63 do x=259 na osi dolnej jest wolne.
+       Wykorzystanie uskoku = od strony pomieszczenia: jeśli to wnęka — można w niej dać półsłupek od x=63 w prawo.
+       Tu schematycznie pokazujemy strefę uskoku jako "WNĘKA" z opcją słupka. -->
+  <rect x="63" y="63" width="40" height="60" fill="#f8efde" stroke="#bfa570" stroke-width="0.3" stroke-dasharray="2,1.5"/>
+  <text x="83" y="85" font-size="2.6" text-anchor="middle" fill="#7a5e2c">S1: PÓŁSŁUPEK</text>
+  <text x="83" y="91" font-size="2.4" text-anchor="middle" fill="#7a5e2c">40 cm głęb.</text>
+  <text x="83" y="97" font-size="2.2" text-anchor="middle" fill="#7a5e2c">(jeśli uskok = wnęka)</text>
+  <text x="83" y="103" font-size="2" text-anchor="middle" fill="#a85" font-style="italic">[do potwierdzenia]</text>
+
+  <!-- ====================== STREFA KOMUNIKACJI ====================== -->
+  <!-- Strefa przejść — zaznaczona kropkowanym obrysem -->
+  <rect x="60" y="60" width="139" height="71" fill="none" stroke="#3aa635" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="129" y="100" font-size="3.5" text-anchor="middle" fill="#2a7a26" font-weight="bold">STREFA KOMUNIKACJI</text>
+  <text x="129" y="106" font-size="2.6" text-anchor="middle" fill="#2a7a26">151 cm (półwyspa ↔ ścian. górna)</text>
+  <text x="129" y="112" font-size="2.4" text-anchor="middle" fill="#2a7a26" font-style="italic">trójkąt roboczy: zlew–płyta–lodówka</text>
+
+  <!-- ====================== TRÓJKĄT ROBOCZY ====================== -->
+  <polygon points="30,30 180,30 229,90" fill="none" stroke="#d2691e" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <circle cx="30" cy="30" r="2" fill="#d2691e"/>
+  <circle cx="180" cy="30" r="2" fill="#d2691e"/>
+  <circle cx="229" cy="90" r="2" fill="#d2691e"/>
+  <text x="105" y="27" font-size="2" fill="#d2691e">~150 cm</text>
+  <text x="208" y="58" font-size="2" fill="#d2691e">~70 cm</text>
+  <text x="125" y="65" font-size="2" fill="#d2691e">~200 cm</text>
+
+  <!-- ====================== WYMIARY ZEWNĘTRZNE ====================== -->
+  <!-- Wymiar zewnętrzny góra: 259 cm -->
+  <g stroke="#000" stroke-width="0.3" fill="#000">
+    <line x1="0" y1="-30" x2="259" y2="-30" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <line x1="0" y1="-12" x2="0" y2="-32" stroke-width="0.2"/>
+    <line x1="259" y1="-12" x2="259" y2="-32" stroke-width="0.2"/>
+    <text x="129" y="-32" font-size="4" text-anchor="middle">259 cm (ściana górna)</text>
+
+    <!-- Wymiar wewnętrzny góra: 245 cm -->
+    <line x1="0" y1="-20" x2="245" y2="-20" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" stroke-width="0.2"/>
+    <text x="122" y="-22" font-size="3" text-anchor="middle" fill="#555">245 wewn.</text>
+
+    <!-- Wymiar prawa: 191 cm -->
+    <line x1="290" y1="0" x2="290" y2="191" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <line x1="271" y1="0" x2="292" y2="0" stroke-width="0.2"/>
+    <line x1="271" y1="191" x2="292" y2="191" stroke-width="0.2"/>
+    <text x="296" y="98" font-size="4" text-anchor="middle" transform="rotate(90 296 98)">191 cm (głębokość)</text>
+
+    <!-- Wymiar dolny: 174 cm między uskokami -->
+    <line x1="63" y1="225" x2="237" y2="225" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <line x1="63" y1="203" x2="63" y2="227" stroke-width="0.2"/>
+    <line x1="237" y1="203" x2="237" y2="227" stroke-width="0.2"/>
+    <text x="150" y="223" font-size="4" text-anchor="middle">174 cm (ściana dolna)</text>
+
+    <!-- Wymiar uskoku w lewym dolnym: 63 x 128 -->
+    <line x1="-25" y1="0" x2="-25" y2="63" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" stroke-width="0.2"/>
+    <line x1="-12" y1="0" x2="-27" y2="0" stroke-width="0.2"/>
+    <line x1="-12" y1="63" x2="-27" y2="63" stroke-width="0.2"/>
+    <text x="-30" y="32" font-size="3" text-anchor="middle" transform="rotate(-90 -30 32)">63</text>
+
+    <line x1="-25" y1="63" x2="-25" y2="191" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" stroke-width="0.2"/>
+    <line x1="-12" y1="191" x2="-27" y2="191" stroke-width="0.2"/>
+    <text x="-30" y="127" font-size="3" text-anchor="middle" transform="rotate(-90 -30 127)">128</text>
+
+    <line x1="0" y1="75" x2="63" y2="75" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)" stroke-width="0.2"/>
+    <line x1="0" y1="63" x2="0" y2="77" stroke-width="0.2"/>
+    <line x1="63" y1="63" x2="63" y2="77" stroke-width="0.2"/>
+    <text x="31" y="73" font-size="3" text-anchor="middle">63 (uskok)</text>
+  </g>
+
+  <!-- Wymiary modułów na ścianie górnej -->
+  <g stroke="#444" stroke-width="0.2" fill="#444">
+    <line x1="0" y1="68" x2="60" y2="68" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <text x="30" y="73" font-size="2.6" text-anchor="middle">60</text>
+    <line x1="60" y1="68" x2="150" y2="68" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <text x="105" y="73" font-size="2.6" text-anchor="middle">90</text>
+    <line x1="150" y1="68" x2="210" y2="68" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <text x="180" y="73" font-size="2.6" text-anchor="middle">60</text>
+    <line x1="210" y1="68" x2="255" y2="68" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <text x="232" y="73" font-size="2.6" text-anchor="middle">45</text>
+  </g>
+
+  <!-- Wymiary modułów na ścianie prawej (słupek) -->
+  <g stroke="#444" stroke-width="0.2" fill="#444">
+    <line x1="265" y1="60" x2="265" y2="120" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <text x="270" y="93" font-size="2.6" text-anchor="middle" transform="rotate(90 270 93)">60 (W1)</text>
+    <line x1="265" y1="120" x2="265" y2="180" marker-start="url(#dimArrRev)" marker-end="url(#dimArr)"/>
+    <text x="270" y="153" font-size="2.6" text-anchor="middle" transform="rotate(90 270 153)">60 (W2)</text>
+  </g>
+
+  <!-- Strzałka N (północ) -->
+  <g transform="translate(330, 5)">
+    <circle cx="0" cy="0" r="10" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <path d="M 0,-7 L 4,5 L 0,2 L -4,5 Z" fill="#000"/>
+    <text x="0" y="15" font-size="3.5" text-anchor="middle">OKNO</text>
+  </g>
+
+  <!-- ====================== LEGENDA / TABELKA ====================== -->
+  <g transform="translate(300, 50)">
+    <rect x="0" y="0" width="75" height="200" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <text x="37.5" y="6" font-size="4" font-weight="bold" text-anchor="middle">LEGENDA</text>
+    <line x1="2" y1="9" x2="73" y2="9" stroke="#000" stroke-width="0.3"/>
+
+    <text x="3" y="15" font-size="3" font-weight="bold">SZAFKI DOLNE (h=85)</text>
+    <text x="3" y="20" font-size="2.6">D1 — pod indukcją 60×60</text>
+    <text x="3" y="24.5" font-size="2.6">D2 — szuflady 90×60</text>
+    <text x="3" y="29" font-size="2.6">D3 — pod zlewem 60×60</text>
+    <text x="3" y="33.5" font-size="2.6">D4 — zmywarka 45×60</text>
+
+    <text x="3" y="42" font-size="3" font-weight="bold">SŁUPKI (h=230)</text>
+    <text x="3" y="47" font-size="2.6">W1 — lodówka 60×60×202</text>
+    <text x="3" y="51.5" font-size="2.6">W2 — piekarnik+mikrofala</text>
+
+    <text x="3" y="60" font-size="3" font-weight="bold">PÓŁWYSPA</text>
+    <text x="3" y="65" font-size="2.6">174 × 40, blat 65</text>
+    <text x="3" y="69.5" font-size="2.6">+ bar 25 cm (opcja)</text>
+
+    <text x="3" y="78" font-size="3" font-weight="bold">UWAGI</text>
+    <text x="3" y="83" font-size="2.4">Skala 1:25</text>
+    <text x="3" y="87" font-size="2.4">Wszystkie wymiary w cm</text>
+    <text x="3" y="91" font-size="2.4">Ściany grub. 12 cm (zał.)</text>
+
+    <text x="3" y="100" font-size="3" font-weight="bold" fill="#a00">[do pomiaru]</text>
+    <text x="3" y="105" font-size="2.4" fill="#a00">- okno: szer/wys/parapet</text>
+    <text x="3" y="109" font-size="2.4" fill="#a00">- otwór wejściowy</text>
+    <text x="3" y="113" font-size="2.4" fill="#a00">- pion wod-kan</text>
+    <text x="3" y="117" font-size="2.4" fill="#a00">- kratka wentylacji</text>
+    <text x="3" y="121" font-size="2.4" fill="#a00">- h pomieszczenia</text>
+    <text x="3" y="125" font-size="2.4" fill="#a00">- funkcja uskoku 63×128</text>
+    <text x="3" y="129" font-size="2.4" fill="#a00">- dokł. dł. ściany dolnej</text>
+
+    <text x="3" y="138" font-size="3" font-weight="bold">SYMBOLE</text>
+    <line x1="3" y1="142" x2="11" y2="142" stroke="#3aa635" stroke-width="0.5" stroke-dasharray="2,2"/>
+    <text x="13" y="143" font-size="2.4">strefa komunikacji</text>
+    <line x1="3" y1="147" x2="11" y2="147" stroke="#d2691e" stroke-width="0.5" stroke-dasharray="3,2"/>
+    <text x="13" y="148" font-size="2.4">trójkąt roboczy</text>
+    <rect x="3" y="150" width="8" height="3" fill="url(#hatch)"/>
+    <text x="13" y="153" font-size="2.4">ściana (cegła)</text>
+    <rect x="3" y="155" width="8" height="3" fill="#dceaf5" stroke="#3b6fa8" stroke-width="0.3"/>
+    <text x="13" y="158" font-size="2.4">okno</text>
+
+    <text x="3" y="167" font-size="3" font-weight="bold">PROJEKT</text>
+    <text x="3" y="172" font-size="2.4">KUCHNIA 9.02 — W3</text>
+    <text x="3" y="176" font-size="2.4">ETAP 1 — rzut techniczny</text>
+    <text x="3" y="180" font-size="2.4">poglądowy</text>
+    <text x="3" y="184" font-size="2.4" fill="#555">2026-05-26</text>
+
+    <text x="3" y="193" font-size="2" fill="#888" font-style="italic">Architekt Wnętrz / repo</text>
+    <text x="3" y="196.5" font-size="2" fill="#888" font-style="italic">claude/kitchen-...DW3S8</text>
+  </g>
+
+</svg>

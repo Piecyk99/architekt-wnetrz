@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-40 -60 320 320" width="1600" height="1600" font-family="Arial, sans-serif">
+  <rect x="-40" y="-60" width="320" height="320" fill="#ffffff"/>
+
+  <defs>
+    <pattern id="hatchE" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#888" stroke-width="0.4"/>
+    </pattern>
+    <marker id="dArr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="dArrR" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+  </defs>
+
+  <text x="120" y="-40" font-size="9" font-weight="bold" text-anchor="middle">ELEWACJA A — ŚCIANA GÓRNA Z OKNEM (W3)</text>
+  <text x="120" y="-30" font-size="4" text-anchor="middle" fill="#444">Widok od strony półwyspy · Skala 1:25 · Długość ściany 259 cm · Wysokość 250 cm</text>
+  <text x="120" y="-22" font-size="3.2" text-anchor="middle" fill="#888" font-style="italic">Pozycja okna i parapetu orientacyjne — [do pomiaru na miejscu]</text>
+
+  <!-- Tło ściany -->
+  <rect x="0" y="0" width="259" height="250" fill="#f7f4ee" stroke="#000" stroke-width="0.5"/>
+  <!-- Podłoga -->
+  <rect x="-2" y="250" width="263" height="6" fill="url(#hatchE)"/>
+  <!-- Sufit -->
+  <rect x="-2" y="-6" width="263" height="6" fill="url(#hatchE)"/>
+
+  <!-- Cokół 10 cm -->
+  <rect x="0" y="240" width="259" height="10" fill="#222" stroke="#000" stroke-width="0.3"/>
+
+  <!-- Szafki dolne H=82 (od cokołu 10 + 82 = 92) -->
+  <!-- D1: pod indukcją 60 cm szer., 0-60 -->
+  <rect x="0" y="158" width="60" height="82" fill="#e8d9b5" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="30" y="200" font-size="3.5" text-anchor="middle" fill="#5a4a2a" font-weight="bold">D1</text>
+  <text x="30" y="206" font-size="2.6" text-anchor="middle" fill="#5a4a2a">szuflada płaska</text>
+  <text x="30" y="211" font-size="2.6" text-anchor="middle" fill="#5a4a2a">+ szuflada głęb.</text>
+  <text x="30" y="216" font-size="2.6" text-anchor="middle" fill="#5a4a2a">na garnki</text>
+  <!-- Linie szuflad -->
+  <line x1="2" y1="173" x2="58" y2="173" stroke="#8b6e3f" stroke-width="0.2"/>
+  <line x1="2" y1="195" x2="58" y2="195" stroke="#8b6e3f" stroke-width="0.2"/>
+
+  <!-- D2: blat roboczy główny 90 cm -->
+  <rect x="60" y="158" width="90" height="82" fill="#e8d9b5" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="105" y="200" font-size="3.5" text-anchor="middle" fill="#5a4a2a" font-weight="bold">D2 (blat roboczy)</text>
+  <line x1="62" y1="173" x2="148" y2="173" stroke="#8b6e3f" stroke-width="0.2"/>
+  <line x1="62" y1="195" x2="148" y2="195" stroke="#8b6e3f" stroke-width="0.2"/>
+  <line x1="105" y1="158" x2="105" y2="195" stroke="#8b6e3f" stroke-width="0.15"/>
+  <text x="105" y="210" font-size="2.6" text-anchor="middle" fill="#5a4a2a">2 szuflady (sztućce + garnki)</text>
+
+  <!-- D3: pod zlewem 60 cm -->
+  <rect x="150" y="158" width="60" height="82" fill="#e8d9b5" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="180" y="200" font-size="3.5" text-anchor="middle" fill="#5a4a2a" font-weight="bold">D3</text>
+  <text x="180" y="206" font-size="2.6" text-anchor="middle" fill="#5a4a2a">pod zlewem</text>
+  <text x="180" y="211" font-size="2.6" text-anchor="middle" fill="#5a4a2a">+ segregacja</text>
+  <text x="180" y="216" font-size="2.6" text-anchor="middle" fill="#5a4a2a">odpadów</text>
+  <line x1="152" y1="170" x2="208" y2="170" stroke="#8b6e3f" stroke-width="0.2"/>
+  <line x1="180" y1="170" x2="180" y2="238" stroke="#8b6e3f" stroke-width="0.15"/>
+
+  <!-- D4: zmywarka 45 cm -->
+  <rect x="210" y="158" width="45" height="82" fill="#dadcdf" stroke="#666" stroke-width="0.4"/>
+  <text x="232.5" y="195" font-size="3.5" text-anchor="middle" fill="#000" font-weight="bold">D4</text>
+  <text x="232.5" y="203" font-size="3" text-anchor="middle" fill="#000">ZMYWARKA</text>
+  <text x="232.5" y="208" font-size="3" text-anchor="middle" fill="#000">45 cm</text>
+  <text x="232.5" y="216" font-size="2.4" text-anchor="middle" fill="#444">w zabudowie</text>
+  <text x="232.5" y="221" font-size="2.4" text-anchor="middle" fill="#444">z frontem</text>
+  <!-- Uchwyt zmywarki -->
+  <rect x="214" y="232" width="37" height="2" fill="#222"/>
+
+  <!-- Blat 4 cm -->
+  <rect x="0" y="154" width="259" height="4" fill="#2a2a2a" stroke="#000" stroke-width="0.3"/>
+  <text x="129" y="157.5" font-size="2.2" text-anchor="middle" fill="#fff">BLAT (spiek / konglomerat) gr. 12-20 mm</text>
+
+  <!-- Płyta indukcyjna (na blacie, w nakładce dołkowanej) -->
+  <rect x="2" y="150" width="56" height="4" fill="#111" stroke="#000" stroke-width="0.3"/>
+  <text x="30" y="153" font-size="2.2" text-anchor="middle" fill="#fff">INDUKCJA 60</text>
+
+  <!-- Zlew (od góry blat) -->
+  <rect x="155" y="150" width="50" height="4" fill="#a8b6c0" stroke="#3b5a73" stroke-width="0.3"/>
+  <text x="180" y="153" font-size="2.2" text-anchor="middle" fill="#000">ZLEW 50</text>
+
+  <!-- Bateria zlewu -->
+  <rect x="178" y="130" width="4" height="22" fill="#444" rx="1"/>
+  <path d="M 180,130 Q 180,118 188,118" fill="none" stroke="#444" stroke-width="2"/>
+  <circle cx="188" cy="118" r="2" fill="#444"/>
+
+  <!-- OKNO — szerokość ~110 cm, parapet ~85, wysokość okna ~140 (orientacyjnie) -->
+  <!-- Parapet od y=165 do y=160? Standard: parapet 85 cm od podłogi, czyli y=250-85=165 -->
+  <!-- Okno: parapet 85 (y=165) do wysokości 225 cm (y=25). Wysokość okna 140 cm, top na 225. -->
+  <rect x="80" y="25" width="110" height="125" fill="#e8f0f8" stroke="#3b6fa8" stroke-width="0.6"/>
+  <line x1="135" y1="25" x2="135" y2="150" stroke="#3b6fa8" stroke-width="0.4"/>
+  <line x1="80" y1="87" x2="190" y2="87" stroke="#3b6fa8" stroke-width="0.3"/>
+  <text x="100" y="60" font-size="3" fill="#3b6fa8">OKNO</text>
+  <text x="100" y="65" font-size="2.4" fill="#3b6fa8" font-style="italic">~110×125</text>
+  <text x="100" y="69" font-size="2.4" fill="#a00" font-style="italic">[do pomiaru]</text>
+
+  <!-- Parapet -->
+  <rect x="76" y="148" width="118" height="3" fill="#cccccc" stroke="#666" stroke-width="0.3"/>
+  <text x="135" y="146" font-size="2" text-anchor="middle" fill="#444">parapet [do pomiaru h]</text>
+
+  <!-- Górne szafki nad blatem (90 cm wysokości + nadstawka 35 cm) -->
+  <!-- Strefa: nad blatem (y=154) zostają y od 154 do okna (do y=25) — czyli 129 cm. Standardowo szafki górne na wys. 60-90 cm od blatu. -->
+  <!-- Górne szafki tylko po lewej (przed oknem) i po prawej (za oknem) -->
+  <!-- G1 nad indukcją: szer. 60 cm, wys. 90 cm + nadstawka 35 -->
+  <rect x="0" y="20" width="60" height="125" fill="#e8d9b5" stroke="#8b6e3f" stroke-width="0.4"/>
+  <line x1="0" y1="100" x2="60" y2="100" stroke="#8b6e3f" stroke-width="0.3"/>
+  <text x="30" y="60" font-size="3.5" text-anchor="middle" fill="#5a4a2a" font-weight="bold">G1</text>
+  <text x="30" y="66" font-size="2.6" text-anchor="middle" fill="#5a4a2a">okap zabudowany</text>
+  <text x="30" y="70" font-size="2.6" text-anchor="middle" fill="#5a4a2a">+ miejsce na przyprawy</text>
+  <text x="30" y="120" font-size="2.6" text-anchor="middle" fill="#5a4a2a">nadstawka</text>
+  <text x="30" y="124" font-size="2.6" text-anchor="middle" fill="#5a4a2a">do sufitu (35)</text>
+
+  <!-- Okap pod G1 -->
+  <rect x="2" y="138" width="56" height="10" fill="#444" stroke="#000" stroke-width="0.3"/>
+  <text x="30" y="145" font-size="2.4" text-anchor="middle" fill="#fff" font-weight="bold">OKAP (do zabudowy)</text>
+
+  <!-- G2 nad zmywarką + zlewem (od x=190 do 259): tylko nad zmywarką, bo nad zlewem jest okno -->
+  <rect x="190" y="20" width="69" height="125" fill="#e8d9b5" stroke="#8b6e3f" stroke-width="0.4"/>
+  <line x1="190" y1="100" x2="259" y2="100" stroke="#8b6e3f" stroke-width="0.3"/>
+  <line x1="224" y1="20" x2="224" y2="100" stroke="#8b6e3f" stroke-width="0.15"/>
+  <text x="224.5" y="60" font-size="3.5" text-anchor="middle" fill="#5a4a2a" font-weight="bold">G2</text>
+  <text x="224.5" y="66" font-size="2.6" text-anchor="middle" fill="#5a4a2a">naczynia codzienne,</text>
+  <text x="224.5" y="70" font-size="2.6" text-anchor="middle" fill="#5a4a2a">szkło, kubki</text>
+  <text x="224.5" y="120" font-size="2.6" text-anchor="middle" fill="#5a4a2a">nadstawka 35</text>
+
+  <!-- Listwa podszafkowa LED (pod G1 i G2) -->
+  <rect x="0" y="146" width="60" height="2" fill="#fdd060" stroke="none"/>
+  <rect x="190" y="146" width="69" height="2" fill="#fdd060" stroke="none"/>
+  <text x="129" y="148" font-size="2" text-anchor="middle" fill="#a87" font-style="italic">LED podszafkowy 3000K</text>
+
+  <!-- Gniazdka -->
+  <rect x="65" y="148" width="6" height="3" fill="#fff" stroke="#000" stroke-width="0.2"/>
+  <rect x="75" y="148" width="6" height="3" fill="#fff" stroke="#000" stroke-width="0.2"/>
+  <text x="73" y="150.5" font-size="2" text-anchor="middle">2×G</text>
+
+  <!-- ====================== WYMIARY ====================== -->
+  <g stroke="#000" fill="#000">
+    <!-- Wymiar całkowity dolny -->
+    <line x1="0" y1="270" x2="259" y2="270" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.3"/>
+    <line x1="0" y1="256" x2="0" y2="272" stroke-width="0.2"/>
+    <line x1="259" y1="256" x2="259" y2="272" stroke-width="0.2"/>
+    <text x="129" y="277" font-size="4" text-anchor="middle">259 cm</text>
+
+    <!-- Wymiary modułów -->
+    <line x1="0" y1="263" x2="60" y2="263" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="30" y="266" font-size="2.8" text-anchor="middle">60 (D1)</text>
+    <line x1="60" y1="263" x2="150" y2="263" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="105" y="266" font-size="2.8" text-anchor="middle">90 (D2)</text>
+    <line x1="150" y1="263" x2="210" y2="263" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="180" y="266" font-size="2.8" text-anchor="middle">60 (D3)</text>
+    <line x1="210" y1="263" x2="255" y2="263" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="232" y="266" font-size="2.8" text-anchor="middle">45 (D4)</text>
+
+    <!-- Wymiar pionowy prawy -->
+    <line x1="275" y1="0" x2="275" y2="250" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.3"/>
+    <text x="280" y="125" font-size="4" text-anchor="middle" transform="rotate(90 280 125)">h = 250 cm [do pomiaru]</text>
+
+    <!-- Wymiary pionowe lewej strony -->
+    <line x1="-15" y1="240" x2="-15" y2="250" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="-20" y="247" font-size="3" text-anchor="middle">10 cokół</text>
+    <line x1="-15" y1="158" x2="-15" y2="240" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="-20" y="200" font-size="3" text-anchor="middle" transform="rotate(-90 -20 200)">82 dolna</text>
+    <line x1="-15" y1="154" x2="-15" y2="158" stroke-width="0.2"/>
+    <text x="-20" y="156" font-size="2.4" text-anchor="middle">4 blat</text>
+    <line x1="-15" y1="145" x2="-15" y2="154" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="-20" y="150" font-size="2.4" text-anchor="middle">~9 fartuch</text>
+    <line x1="-15" y1="20" x2="-15" y2="145" marker-start="url(#dArrR)" marker-end="url(#dArr)" stroke-width="0.2"/>
+    <text x="-20" y="82" font-size="3" text-anchor="middle" transform="rotate(-90 -20 82)">125 górna+nadstawka</text>
+  </g>
+
+  <!-- Linia parapetu z wymiarem -->
+  <g stroke="#a00" fill="#a00">
+    <line x1="259" y1="148" x2="266" y2="148" stroke-width="0.2"/>
+    <line x1="259" y1="25" x2="266" y2="25" stroke-width="0.2"/>
+    <text x="262" y="90" font-size="2.4" text-anchor="middle" transform="rotate(90 262 90)">okno [do pomiaru]</text>
+  </g>
+
+  <!-- Notatki -->
+  <g transform="translate(0, 290)">
+    <text x="0" y="0" font-size="3" font-weight="bold" fill="#a00">UWAGI:</text>
+    <text x="0" y="5" font-size="2.6">1. Pozycja okna na rysunku orientacyjna — sprawdzić rzeczywistą lokalizację względem narożników.</text>
+    <text x="0" y="9" font-size="2.6">2. Wysokość parapetu typowo 85 cm — jeśli niższy, zlew pod oknem może wymagać baterii składanej lub w blacie.</text>
+    <text x="0" y="13" font-size="2.6">3. Okap nad indukcją: 65–75 cm odstępu od płyty. Tu odstęp = 154 - 138 = 16 cm okapu + 65 = OK.</text>
+    <text x="0" y="17" font-size="2.6">4. Zabudowa do sufitu (nadstawka 35 cm) wymaga dobrego pomiaru h pomieszczenia w 4 narożnikach.</text>
+    <text x="0" y="21" font-size="2.6">5. Gniazdka nad blatem: min. 2× w listwie 2 cm pod szafką górną (sekwencyjne, dla AGD).</text>
+  </g>
+</svg>
