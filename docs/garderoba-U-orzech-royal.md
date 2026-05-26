@@ -90,12 +90,12 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 
 ### Lewa ściana (ONA)
 
-**3 moduły × 596–597 × 600 × 2470 mm**, otwarte (bez frontów).
+**3 moduły × 596–597 × 600 × 2470 mm**, otwarte (bez frontów). **Lustrzanie symetryczne do prawej (ON).**
 
 | Moduł | Wymiar (W×D×H) mm | Strefa góra (h=500) | Strefa środek | Strefa dół |
 |---|---|---|---|---|
 | **A1** | 596 × 600 × 2470 | antresola otwarta | drążek długi **h=1800** (sukienki, płaszcze) | — |
-| **A2** | 597 × 600 × 2470 | antresola otwarta | drążek krótki **h=1100** (bluzki) | **3× szuflada Legrabox H134** (bielizna, biustonosze, skarpetki) |
+| **A2** | 597 × 600 × 2470 | antresola otwarta | drążek krótki **h=1100** (bluzki) + **pantograf na 6 par spodni** poniżej | **3× szuflada Legrabox H134** (bielizna, biustonosze, skarpetki) |
 | **A3** | 597 × 600 × 2470 | antresola otwarta | drążek krótki **h=1100** (swetry/bluzki) | **4× wysuwana półka na buty** (12 par damskich) |
 
 ### Prawa ściana (ON)
@@ -160,7 +160,7 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 |---|---|---|
 | Szuflady wewnętrzne H134 (boczne A2, B2) | **Blum Legrabox K** wysokość 134 mm + cichy domyk | 6 |
 | Szuflady wewnętrzne H192 (tył C1, C2, C3) | **Blum Legrabox C** wysokość 192 mm + cichy domyk | 8 |
-| Drążek pantograf na spodnie (B2) | **Hettich** wysuwany | 1 |
+| Drążek pantograf na spodnie (A2, B2) | **Hettich** wysuwany | 2 |
 | Wysuwane półki na buty (A3, B3) | **Hettich** prowadnice kulkowe pełnego wysuwu | 8 |
 | Drążek wieszakowy w antresoli | aluminium owalne, czarny mat 30 × 15 mm | 6 |
 | Nogi regulowane cokołu | **Hettich** wys. 100 mm, regulacja ±15 mm | 24 |
