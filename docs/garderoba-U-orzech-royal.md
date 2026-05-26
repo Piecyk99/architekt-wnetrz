@@ -186,20 +186,17 @@ Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa
 
 ## Rendery
 
-### Widok główny od wejścia
-![Widok od wejścia](renders/U-13-final-v3-entry.png)
+### CAD rzut techniczny z wymiarami
+![CAD plan](renders/U-00-cad-plan.png)
 
-### Rzut z góry (architektoniczny)
-![Rzut z góry](renders/U-15-topdown-v3.png)
-
-### Tylna ściana — panel odsunięty
-![Tylna ściana otwarta](renders/U-14-back-doors-open.png)
+### Widok od wejścia
+![Widok od wejścia](renders/U-01-overview-entry.png)
 
 ### Lewa ściana ONA — detale modułów
-![ONA detale](renders/U-06-ona-v2.png)
+![ONA detale](renders/U-02-ona-left.png)
 
 ### Prawa ściana ON — detale modułów
-![ON detale](renders/U-07-on-v2.png)
+![ON detale](renders/U-03-on-right.png)
 
-### CAD rzut techniczny z wymiarami
-![CAD plan](renders/U-16-cad-plan.png)
+### Tylna ściana — drzwi przesuwne z odsuniętym panelem
+![Tylna ściana otwarta](renders/U-04-back-doors.png)
