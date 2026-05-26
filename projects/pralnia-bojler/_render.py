@@ -16,15 +16,19 @@ PROMPTS = {
         "text": """Architectural interior photograph of a compact 6 sqm Polish apartment utility
 laundry room, view of the back wall 2.67 meters wide and 2.5 meters tall fully
 clad in custom built-in sliding wardrobe doors. Three equal sliding panels each
-890 mm wide and 2500 mm tall, full-height vertical, made of matte HPL walnut
-royal Egger H3702 finish with horizontal wood grain direction, integrated full
+890 mm wide and 2500 mm tall, full-height vertical, made of matte HPL in
+Egger H3734 ST9 Orzech Pacific Royal Walnut finish, a warm medium-dark walnut
+with prominent natural grain, horizontal wood grain direction, integrated full
 height black matte 12mm L-profile recessed handles on the leading edge of each
 panel. Above the panels a clean solid 100 mm high top fascia matching the
 walnut tone, completely smooth and uninterrupted, NO ventilation grille, NO
 slot, NO openings, just continuous walnut HPL matching the panels below.
 Below the panels a 100 mm matte black plinth flush with the floor. Floor is
-dark engineered oak chevron parquet matching the adjacent wardrobe room,
-visible reflecting soft light. Side walls finished in warm off-white cream
+LIGHT HONEY OAK 3-layer engineered hardwood by Barlinek decor "dąb Almond",
+matte lacquer finish, laid as straight long planks 14 cm wide running
+parallel to the side walls perpendicular to the back wall, light warm honey
+blonde tone with soft natural grain, NOT chevron, NOT dark. Side walls
+finished in warm off-white cream
 lateks paint. Ceiling plasterboard with recessed warm 4000K neutral LED cove
 behind the top fascia casting a soft uniform downlight on the walnut grain.
 Small Aqara water leak sensor barely visible on floor near right corner.
@@ -37,12 +41,13 @@ minimalist modern Polish utility room, calm and tactile.""",
         "aspectRatio": "16:9",
         "imageSize": "1K",
         "text": """Architectural photo of a 6 sqm Polish utility laundry room. Back wall
-2.67 m wide × 2.5 m tall built-in sliding wardrobe in matte walnut HPL with
-3-track top-hung sliding mechanism. The two right panels have slid LEFT and
-are now STACKED behind the leftmost panel, all three walnut panels grouped
-on the LEFT THIRD of the wall (890 mm wide stack covering the bojler
-section). The RIGHT TWO THIRDS of the wall (1780 mm) is now OPEN, revealing
-the interior of the built-in.
+2.67 m wide × 2.5 m tall built-in sliding wardrobe in matte HPL Egger H3734
+Orzech Pacific Royal Walnut finish, warm medium-dark walnut with natural
+grain, with 3-track top-hung sliding mechanism. The two right panels have
+slid LEFT and are now STACKED behind the leftmost panel, all three walnut
+panels grouped on the LEFT THIRD of the wall (890 mm wide stack covering the
+bojler section). The RIGHT TWO THIRDS of the wall (1780 mm) is now OPEN,
+revealing the interior of the built-in.
 
 Visible interior (right two thirds), lined in cream magnolia 18 mm laminate:
 
@@ -62,19 +67,22 @@ LEFT THIRD: stack of three walnut HPL panels visible edge-on, full height
 shadow over the hidden bojler section behind. The panels look slightly
 overlapped showing slim depth between tracks.
 
-Floor: dark engineered oak chevron parquet matching adjacent wardrobe. Top
-fascia: SOLID clean walnut 100 mm tall, NO ventilation grille, NO slot,
-completely smooth. Inside the cavity warm 4000K LED cove illuminates shelves
-uniformly. Cream warm-white side walls. Sony A7R IV, 28mm f/8, eye-level
-from doorway. No people, tidy. Dezeen editorial aesthetic, daily-use
-laundry day scene.""",
+Floor: LIGHT HONEY OAK 3-layer engineered hardwood Barlinek dąb Almond,
+matte lacquer, straight long planks 14 cm wide running parallel to the side
+walls, light warm honey blonde tone, NOT chevron, NOT dark — bright clean
+floor that contrasts gently with the medium-dark walnut walls. Top fascia:
+SOLID clean walnut 100 mm tall, NO ventilation grille, NO slot, completely
+smooth. Inside the cavity warm 4000K LED cove illuminates shelves uniformly.
+Cream warm-white side walls. Sony A7R IV, 28mm f/8, eye-level from doorway.
+No people, tidy. Dezeen editorial aesthetic, daily-use laundry day scene.""",
     },
     "03-open-bojler-service": {
         "aspectRatio": "16:9",
         "imageSize": "1K",
         "text": """Architectural photo of a 6 sqm Polish utility laundry room. Back wall
-2.67 m wide × 2.5 m tall built-in sliding wardrobe in matte walnut HPL with
-3-track top-hung sliding mechanism. The two left panels have slid RIGHT and
+2.67 m wide × 2.5 m tall built-in sliding wardrobe in matte HPL Egger H3734
+Orzech Pacific Royal Walnut finish, warm medium-dark walnut with natural
+grain, with 3-track top-hung sliding mechanism. The two left panels have slid RIGHT and
 are now STACKED behind the rightmost panel, all three walnut panels grouped
 on the RIGHT THIRD of the wall (890 mm wide stack covering the washing
 machine section). The LEFT TWO THIRDS of the wall (1780 mm) is now OPEN,
@@ -99,11 +107,13 @@ RIGHT THIRD: stack of three walnut HPL panels visible edge-on, full height
 2500 mm, three aligned black matte recessed handles, hiding the washing
 machine behind.
 
-Floor: dark engineered oak chevron parquet. Top fascia: SOLID clean walnut
-100 mm, NO ventilation grille. Warm 4000K LED cove inside illuminates the
-boiler area and shelves. Cream warm-white side walls. Sony A7R IV, 28mm f/8,
-eye-level from doorway. No people, tidy. Architectural Digest aesthetic,
-annual boiler service scene.""",
+Floor: LIGHT HONEY OAK 3-layer engineered hardwood Barlinek dąb Almond,
+matte lacquer, straight long planks 14 cm wide running parallel to the side
+walls, light warm honey blonde tone, NOT chevron, NOT dark. Top fascia:
+SOLID clean walnut 100 mm, NO ventilation grille. Warm 4000K LED cove inside
+illuminates the boiler area and shelves. Cream warm-white side walls. Sony
+A7R IV, 28mm f/8, eye-level from doorway. No people, tidy. Architectural
+Digest aesthetic, annual boiler service scene.""",
     },
 }
 

@@ -10,9 +10,10 @@ przesuwnymi w kolorze garderoby**, kryjącą:
 - **pralkę + suszarkę** (60×60×85 cm),
 - **półki magazynowe** od góry (środki chemii, kosze, deska do prasowania).
 
-**Podłoga:** ta sama co w garderobie (do potwierdzenia jaka — ważne dla strefy mokrej).
-**Kolor frontów:** ten sam co garderoba (zakładam house-style **Orzech Royal HPL mat**,
-do potwierdzenia jeśli inny dekor wybrałeś dla garderoby).
+**Podłoga:** **Barlinek dąb Almond** — deska 3-warstwowa, lakier mat, jasny
+miodowy dąb (ta sama co w sypialni i chodniku, kontynuacja 1:1).
+**Kolor frontów:** **Egger H3734 ST9 Orzech Pacific (Royal Walnut) mat** —
+ten sam dekor co szafy + drzwi przesuwne w garderobie.
 **Serwis bojlera:** decyzja z ankiety — przez wspólny panel przesuwny.
 
 ## Rekomendacja w 1 zdaniu
@@ -101,7 +102,7 @@ ZAMKNIĘTE: cała ściana 2670 mm walnut (panele równo)
 - głębokość zabudowy: **640 mm** (= 600 mm urządzenie + 40 mm na węże/instalacje)
 
 **Fronty (drzwi przesuwne):**
-- płyta MDF 19 mm + HPL **Orzech Royal mat** (Egger H3702 lub odpowiednik = ten sam dekor co garderoba — do potwierdzenia)
+- płyta MDF 19 mm + HPL **Egger H3734 ST9 Orzech Pacific (Royal Walnut) mat** (ten sam dekor co garderoba)
 - 3 panele po 890 × 2500 mm
 - uchwyt **listwowy profil 12 mm czarny mat** na pełną wysokość, po krawędzi pionowej
   (zgodny z house style — referencja: `references/korner-katalog.md:91`)
@@ -157,20 +158,42 @@ ZAMKNIĘTE: cała ściana 2670 mm walnut (panele równo)
   gdy przesuniesz panel
 - zasilacz 24 V 60 W ukryty w maskownicy
 
-## Podłoga — UWAGA, do potwierdzenia
+## Podłoga — Barlinek dąb Almond pod pralką + bojlerem
 
-Powiedziałeś "ta sama co w garderobie". Sprawdź jaki tam materiał:
+**Decyzja użytkownika:** ta sama deska co w sypialni i chodniku — kontynuacja
+1:1 bez listwy progowej w drzwiach.
 
-| Materiał w garderobie | OK pod pralkę/bojler?            | Co robić                          |
-|-----------------------|----------------------------------|-----------------------------------|
-| LVT / SPC / winyl     | TAK, w pełni wodoodporne         | kontynuuj 1:1                     |
-| Mikrocement           | TAK, z impregnacją wodoodporną   | kontynuuj 1:1, sprawdź silikon    |
-| Płytki / gres         | TAK                              | kontynuuj 1:1                     |
-| Panele laminowane HDF | **NIE** — pęcznieją od wody      | wyjątek: LVT w optyce orzecha     |
-| Deska olejowana       | **NIE** — plamy od wody          | wyjątek: LVT w optyce drewna      |
+**To jest deska 3-warstwowa lakierowana** (nie olejowana), więc znacznie
+odporniejsza na wodę niż klasyczne deski olejowane czy panele HDF — ale to
+nadal naturalne drewno z lakierem, **NIE jest w pełni wodoodporne jak LVT**.
+Trzeba więc zadbać o ochronę przed wyciekami:
 
-Jeśli ostatnie 2 → zaproponuję dekor LVT identyczny optycznie + listwę progową
-maskującą przejście w drzwiach pomieszczenia.
+1. **Mata antywibracyjna + antyzalewowa pod pralką** — pełna płyta 60×60 cm
+   pod całym urządzeniem, brzegi podniesione 2-3 mm (np. Wpro IRC005 lub
+   silikonowa wanienka pod pralkę z OBI ~80 zł). Mata zatrzymuje 1-2 l wycieku
+   zanim spłynie na deskę.
+2. **Zawór antypowodziowy ¾"** na doprowadzeniu wody do pralki (Hansgrohe
+   Aquastop ~150 zł) — odcina dopływ przy wykryciu ciśnienia spadającego /
+   wycieku w wężu.
+3. **Czujnik zalania Aqara Water Leak** położony na desce za pralką + drugi
+   pod bojlerem (~120 zł szt.) → powiadomienie SMS/push w aplikacji.
+4. **Silikon neutralny** wszystkie styki: deska × cokół zabudowy, deska ×
+   listwa przyścienna, deska × próg drzwi pralni (jeśli kontynuujesz przez
+   próg). Silikon neutralny (nie octowy) bo octowy może odbarwić lakier.
+5. **Listwy maskujące tej samej linii Barlinek** styk podłoga × cokół czarny
+   mat 100 mm — 5 mm dylatacji silikonem.
+
+**Dlaczego to działa mimo że deska:** pralka kondensacyjna (zakładam suszarka też)
+nie wytwarza pary swobodnie — woda krąży w obiegu zamkniętym. Bojler elektryczny
+50-100 l też ma obieg zamknięty, wyciek tylko przy awarii zaworu bezpieczeństwa
+albo korozji zbiornika (= czujnik wykryje). Statystycznie podłoga drewniana
+w pralni z aquastopem + matą + czujnikami przeżyje 15-20 lat bez problemu.
+
+**Jeśli się boisz** (ewentualne dziecko, długie wyjazdy, brak smartfona przy
+czujnikach) → mogę zaproponować LVT Quick-Step Bloom AVMP40089 "Cotton Oak
+Natural" optycznie BARDZO bliski Barlinek Almond, w pełni wodoodporny, +listwę
+progową maskującą przejście w drzwiach pralni. Koszt LVT ~140 zł/m² vs Barlinek
+~220 zł/m², więc to też oszczędność (~600 zł na 7,5 m² pomieszczenia).
 
 ## Kosztorys — tylko drzwi przesuwne (Korner Żary)
 
@@ -204,11 +227,12 @@ maskującą przejście w drzwiach pomieszczenia.
 
 ## Weryfikacja (co potwierdzić przed zamówieniem u Kornera)
 
-1. **Dekor frontów garderoby** — czy to dokładnie Orzech Royal H3702, czy inny dekor.
-2. **Podłoga garderoby** — który materiał (patrz tabela powyżej), czy w pralni można 1:1.
+1. ~~Dekor frontów~~ — **POTWIERDZONE: Egger H3734 ST9 Orzech Pacific mat** (ten sam co garderoba).
+2. ~~Podłoga~~ — **POTWIERDZONE: Barlinek dąb Almond, deska 3-warstwowa, lakier mat** (kontynuacja sypialni/chodnika).
 3. **Bojler — model i waga** — sprawdzić, czy obecny hak utrzyma pełny (waga 150 kg dla 100 l).
-4. **Pralka i suszarka — czy już są kupione?** Wymiary deklarowane mogą się różnić ±10 mm — wymierzyć przed cięciem płyt.
+4. **Pralka i suszarka — czy już są kupione?** Wymiary deklarowane mogą się różnić ±10 mm — wymierzyć przed cięciem płyt. Sprawdzić czy obie są **kondensacyjne** (nie wywiewne — wywiewna potrzebuje kanału w zabudowie).
 5. **Wymiar ściany** — wymierzyć 2,67 m laserowo w 3 punktach (góra/środek/dół) — stare ściany rzadko są równoległe, fuga silikonowa pod listwę maskującą 10-20 mm po bokach to standard.
+6. **Ochrona deski przed zalaniem** — zamówić matę antyzalewową pod pralkę, zawór Aquastop ¾", 2× czujnik Aqara (lista w sekcji "Podłoga" powyżej).
 
 ## Następne kroki
 
