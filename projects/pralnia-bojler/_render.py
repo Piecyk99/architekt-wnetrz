@@ -76,6 +76,79 @@ smooth. Inside the cavity warm 4000K LED cove illuminates shelves uniformly.
 Cream warm-white side walls. Sony A7R IV, 28mm f/8, eye-level from doorway.
 No people, tidy. Dezeen editorial aesthetic, daily-use laundry day scene.""",
     },
+    "04-salon-evening-lighting": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K",
+        "text": """Architectural interior photograph of a modern Polish apartment living room
+~5 × 5 m, evening atmosphere, ALL ARTIFICIAL LIGHTING ON, view from the
+sofa area toward the north wall where a built-in sliding wardrobe in matte
+HPL Egger H3734 Orzech Pacific Royal Walnut (warm medium-dark walnut with
+prominent horizontal grain) occupies the right two-thirds of the back wall,
+266 cm wide × 250 cm tall, with the office desk to its LEFT. Two large
+sliding panels CLOSED, integrated full-height black matte L-profile recessed
+handles. Floor: LIGHT HONEY OAK Barlinek dąb Almond, straight planks
+parallel to the side walls, matte lacquer. Walls cream warm-white.
+
+LIGHTING (this is the hero of the shot):
+1) Recessed perimeter cove LED in 3000K warm white running along the ceiling
+edges of the entire living-room ceiling, hidden in a 15 mm slot of the
+plasterboard, casting a soft uniform glow upward onto a slightly raised
+ceiling plane — creating a halo effect around the whole room (this is L1).
+2) Six small recessed downlight spots (Ø80 mm, GU10 3000K warm white,
+trim flush with ceiling) distributed across the ceiling: two over the coffee
+table, two over the central seating area, two near the entry walking path.
+Each spot casts a soft focused pool of warm light on the floor (this is L2).
+3) Above the built-in walnut wardrobe, in the 8 cm gap between the top of
+the wardrobe (250 cm) and the ceiling (~270 cm), a hidden 3000K LED strip
+washes the ceiling with a soft warm glow that haloes the dark walnut wood
+from above (this is the L5 cove accent). Two slim vertical 3000K LED strips
+also glow softly along the left and right edges of the wardrobe frame
+(L5 piony), framing the walnut panels with light.
+4) Behind the TV on the opposite side wall, a subtle 3000K bias light glows
+softly outward, reducing eye strain (L3).
+
+Foreground: a low-back sage-green linen sofa, light oak coffee table with
+a single ceramic vase. Background right: a 65-inch TV on the east wall,
+dark screen reflecting subtle ambient light. The office desk visible
+peripherally on the left, switched OFF (no work light) to keep the warm
+3000K mood consistent. Overall warm, layered, intimate lighting design —
+NO single overhead pendant — the entire atmosphere comes from cove + spots
++ wardrobe accent + bias. Captured Sony A7R IV, 24mm f/4 1/30s ISO 800,
+eye-level seated perspective. Architectural Digest editorial spread, modern
+Polish apartment, calm intimate evening, no people.""",
+    },
+    "05-zabudowa-led-glow": {
+        "aspectRatio": "16:9",
+        "imageSize": "1K",
+        "text": """Architectural close-up photograph of a custom built-in sliding wardrobe
+266 cm wide × 250 cm tall, matte HPL Egger H3734 Orzech Pacific Royal
+Walnut, warm medium-dark walnut with prominent horizontal grain, two large
+sliding panels CLOSED, full-height black matte L-profile recessed handles
+on the leading edges. The wardrobe is set into a wall niche in a Polish
+modern living room. The room is in DIM ambient evening light (the rest of
+the room lighting is dimmed to ~10%), so the wardrobe LED accents are
+the hero subjects:
+
+1) Top accent: in the 8 cm gap between the top of the wardrobe and the
+plasterboard ceiling, a hidden 3000K warm-white LED strip washes the
+ceiling above the wardrobe with a soft elegant glow — creating a glowing
+halo that backlights the dark walnut from above.
+2) Vertical accents: two slim 3000K warm-white LED strips, ~240 cm tall,
+recessed into the left and right vertical edges of the wardrobe frame
+(in the side jambs), glowing softly downward — framing the walnut panels
+with two vertical lines of warm light.
+3) The walnut wood grain is gently illuminated by these accents, showing
+its natural texture and warmth. No spots, no overhead light, no pendants —
+just the cove + verticals.
+
+Floor: LIGHT HONEY OAK Barlinek dąb Almond, planks parallel to side walls,
+catching warm reflections from the LED glow. Walls cream warm-white,
+visible just enough to read the volume of the room. To the lower-left
+edge of the frame a corner of a sage-green linen sofa is visible (out of
+focus). Sony A7R IV, 35mm f/2.8 1/15s ISO 1600, eye-level perspective,
+camera slightly off-axis to show depth. Architectural Digest editorial,
+moody premium hero shot, no people, perfectly tidy.""",
+    },
     "03-open-bojler-service": {
         "aspectRatio": "16:9",
         "imageSize": "1K",
