@@ -31,7 +31,7 @@ a { color: #6a5c3a; text-decoration: none; }
 <p>Pomieszczenie wielofunkcyjne ~4,93 × 4,78 m łączące trzy strefy: salon (kanapa + TV), biuro (biurko w narożu NW) oraz zabudowę przesuwną w niszy ściany północnej (wnęka murowa 266 × <strong>40 cm</strong> głęb. wg rysunku; zabudowa <strong>wystaje 20 cm do pokoju</strong> → 60 cm całkowitej głębokości, bo pralka/suszarka mają 60 cm; wysokość 250 cm) z pralką, suszarką, bojlerem elektrycznym i półkami. Inspiracje: ciemny orzech (front przesuwny), kremowe wnętrze szafy, LED w górnej belce i pionowy LED w ościeżu — czyli ciepły, miękki, "premium" charakter zabudowy. Sufit będzie cały podwieszany GK (potwierdzone), smart-home + serwerownię robi sam właściciel (potwierdzone) — czyli projektujemy pod Shelly/HA: każdy obwód osobno, neutralny w każdej puszce, miejsce na zasilacze 24V w serwerowni. W salonie świadoma rezygnacja z lampy wiszącej — atmosfera buduje się przez wnękę LED po obwodzie + spoty podtynkowe + LED dekoracyjny w zabudowie.</p>
 <p>Dokument ma być na tyle konkretny, żeby przekazać go elektrykowi bez tłumaczenia: sekcje, obwody, wysokości, puszki, profile, zasilacze, logika scen.</p>
 <blockquote>
-<p><strong>FAZA 0a — weryfikacja względem rysunku (v2).</strong> Odczyt rzutu odręcznego wykazał trzy korekty względem pierwszej wersji projektu: (1) wnęka murowa ma <strong>40 cm</strong>, nie 60 — zabudowa musi wystawać 20 cm do pokoju; (2) <strong>wejścia nie ma na rysunku</strong> — wcześniejsze założenie „drzwi 90 cm na ścianie E, 161 cm od narożnika" zostało usunięte (P1 = „przy wejściu", lokalizacja do potwierdzenia); (3) na rysunku są trzy nieczytelne elementy do potwierdzenia: napis <strong>„OR"</strong> w obrębie wnęki (okno? — byłaby kolizja z zabudową 250 cm), <strong>symbol ◯</strong> w prawym górnym rogu (pion/odpływ?), oraz wymiar <strong>„161"</strong> (znaczenie nieznane). Szczegóły w sekcji 0.</p>
+<p><strong>FAZA 0a — weryfikacja względem rysunku (v3, po odpowiedziach inwestora).</strong> Odczyt rzutu + 3 pytania dały następujące ustalenia: (1) <strong>wnęka murowa ma 40 cm</strong>, nie 60 — zabudowa wystaje 20 cm do pokoju, bo pralka/suszarka mają 60 cm głęb. (korekta wymiarowa); (2) <strong>napis „OR" = drzwi przesuwne zabudowy</strong> (potwierdzone) — to NIE okno, więc <strong>nie ma kolizji</strong> z zabudową 250 cm; (3) <strong>wejście jest na ścianie E, obok TV, w środkowej części</strong> (potwierdzone) — przywrócono drzwi na ścianie E, P1 przy wejściu, TV przesunięte na południe od drzwi; (4) <strong>symbol ◯</strong> w rogu rysunku = artefakt/oznaczenie do potwierdzenia w naturze (przyłącza wody/odpływ pralki przyjęto w sekcji prawej); (5) wymiar <strong>„161"</strong> pozostaje do potwierdzenia (nieistotny dla projektu świateł).</p>
 </blockquote>
 <hr />
 <h2 id="0-analiza-pomieszczenia-geometria-strefy">0. Analiza pomieszczenia (geometria + strefy)</h2>
@@ -39,9 +39,9 @@ a { color: #6a5c3a; text-decoration: none; }
 <ul>
 <li><strong>Ściana N (góra, 493 cm)</strong> — tu biuro (lewa część) + zabudowa przesuwna (prawa część). Druga kartka potwierdza: „BIURO" lewy-górny, „DRZWI Przesuwne" prawy-górny.</li>
 <li><strong>Ściana W (lewa, 478 cm)</strong> — kanapa.</li>
-<li><strong>Ściana E (prawa, 478 cm)</strong> — TV (przy dolnym/południowym końcu ściany).</li>
+<li><strong>Ściana E (prawa, 478 cm)</strong> — <strong>wejście</strong> w środkowej części + TV na południe od drzwi (potwierdzone przez inwestora).</li>
 <li><strong>Ściana S (dół)</strong> — bez oznaczeń.</li>
-<li><strong>Wejście, okna, instalacje</strong> — patrz 0.3, nie są jednoznacznie opisane na rysunku.</li>
+<li><strong>Okna</strong> — brak w obrębie zabudowy (napis „OR" = drzwi przesuwne, nie okno). Instalacje — patrz 0.3.</li>
 </ul>
 <h3 id="02-wymiary-odczytane-z-rysunku">0.2 Wymiary odczytane z rysunku</h3>
 <table>
@@ -93,14 +93,14 @@ a { color: #6a5c3a; text-decoration: none; }
 <pre><code>                          ŚCIANA PÓŁNOCNA (493 cm)
    ┌──────────────────┲━━━━━━━━━━━━━━━━━━━━━━━━━━━━┱──────┐  ← lico ściany N
    │   biurko 197 cm   ┃ wnęka murowa 266×40 cm    ┃ ~30  │
-   │  (strefa biuro)   ┃ (zabudowa wystaje 20 cm   ┃      │
-   │                   ┃  do pokoju → gł. 60 cm)   ┃◯?    │ ← symbol z rys. (pion/odpływ?)
-   │            „OR&quot;? okno?↑ kolizja z zabudową 250 cm     │
+   │  (strefa biuro)   ┃ zabudowa „OR&quot; = drzwi     ┃      │
+   │                   ┃ przesuwne; wystaje 20 cm  ┃      │
+   │                   ┃ do pokoju → gł. 60 cm     ┃      │
    │                                                      │
-   │ KANAPA                                         TV    │
-   │ (ściana W)                                  (ściana E)│
-   │                                                      │
-   │                  wejście — NIE oznaczone na rysunku  │
+   │ KANAPA                                    ╲ WEJŚCIE  │  ← ściana E, środek
+   │ (ściana W)                                  (obok TV)│
+   │                                              TV ↓    │
+   │                                            (poł. E)  │
    └──────────────────────────────────────────────────────┘
                           ŚCIANA POŁUDNIOWA
        (478 cm głębokość — od północy do południa)
@@ -110,14 +110,17 @@ a { color: #6a5c3a; text-decoration: none; }
 - <strong>Biuro (B):</strong> narożnik NW, ~2,0 × 1,5 m, biurko przy ścianie N (lico płaskie, 197 cm).
 - <strong>Zabudowa przesuwna (Z):</strong> wnęka murowa N 266 × 40 cm; <strong>zabudowa wystaje 20 cm do pokoju → gł. 60 cm</strong>, wys. 250 cm. W środku: pralka + suszarka (sekcja prawa), bojler + półki + pion gospodarczy (sekcja lewa). Drzwi orzech, 2 panele przesuwne nachodzące na siebie (każdy ~135 cm szer.).
 - <strong>Strefa techniczna (T):</strong> wewnątrz zabudowy — pralka 60×60 cm, suszarka 60×60 cm, bojler ~50 l Ø45 wiszący nad podłogą ~150–200 cm, półki, deska do prasowania, odkurzacz pionowy.</p>
-<h3 id="03-elementy-stae-do-potwierdzenia-faza-0a-pytania">0.3 Elementy stałe / do potwierdzenia (FAZA 0a — pytania)</h3>
-<p>Rysunek <strong>nie oznacza</strong> jednoznacznie elementów stałych M&amp;E (instalacji). Do potwierdzenia z inwestorem przed wykonaniem:</p>
+<h3 id="03-ustalenia-faza-0a-elementy-do-potwierdzenia-w-naturze">0.3 Ustalenia FAZA 0a + elementy do potwierdzenia w naturze</h3>
+<p>Rozstrzygnięte z inwestorem:</p>
 <ol>
-<li><strong>Napis „OR" w obrębie wnęki</strong> — czy to <strong>okno</strong>? Jeśli tak, jest to <strong>kolizja krytyczna</strong>: nie da się postawić zabudowy 250 cm zasłaniającej okno. Wymaga przeprojektowania (zabudowa niższa / ominięcie okna).</li>
-<li><strong>Symbol ◯ w prawym górnym rogu</strong> — prawdopodobnie <strong>pion kanalizacyjny / odpływ / kratka</strong>. Jeśli tak, to element stały — wygodnie wypada przy sekcji pralki (prawa strona zabudowy), ale trzeba potwierdzić, że nie wpada w obrys urządzeń.</li>
-<li><strong>Wymiar „161"</strong> (pionowy, prawa strona) — znaczenie nieznane (głębokość strefy? szerokość odcinka? otwór?).</li>
-<li><strong>Wejście do pomieszczenia</strong> — brak na rysunku. Od jego położenia zależy lokalizacja włącznika P1 i przebieg ścieżki spotów L2/S5–S6.</li>
-<li><strong>Bojler, przyłącza wody, pion CO, wentylacja</strong> — <strong>nie są zaznaczone na tym rysunku</strong>; ich położenie w projekcie pochodzi ze zdjęć inspiracyjnych i wcześniejszych ustaleń (<code>PLAN.md</code>), nie z rzutu. Wymaga potwierdzenia w naturze.</li>
+<li><strong>„OR" = drzwi przesuwne zabudowy</strong> — nie okno → <strong>brak kolizji</strong>, zabudowa 250 cm stoi bez przeszkód. ✓</li>
+<li><strong>Wejście = ściana E, obok TV, środkowa część</strong> → P1 (główny włącznik) przy wejściu na ścianie E; TV przesunięte na południe od drzwi; ścieżka spotów L2 (S5/S6) prowadzi od wejścia w głąb salonu. ✓</li>
+</ol>
+<p>Do potwierdzenia w naturze przed wykonaniem (nie blokują projektu świateł):</p>
+<ol start="3">
+<li><strong>Symbol ◯</strong> w rogu rysunku — przyjęto, że przyłącza wody + odpływ pralki są w <strong>sekcji prawej</strong> zabudowy; potwierdzić rzeczywiste położenie pionu/odpływu.</li>
+<li><strong>Wymiar „161"</strong> — znaczenie nieznane; nieistotny dla rozmieszczenia oświetlenia.</li>
+<li><strong>Bojler, przyłącza wody, pion CO, wentylacja</strong> — nie są zaznaczone na rzucie; ich położenie pochodzi ze zdjęć inspiracyjnych i <code>PLAN.md</code>. Potwierdzić w naturze (zwłaszcza dostęp serwisowy do bojlera i ewentualny pion CO, którego nie wolno zabudować na głucho).</li>
 </ol>
 <p>Wysokość pomieszczenia po podwieszeniu GK: zakładam 260–270 cm (zostawiamy 10–15 cm na profil LED + przeciągnięcie kabli). Zabudowa 250 cm = równa z lub poniżej sufitu, <strong>zostaw 5–10 cm zachowanej szczeliny między górą zabudowy a sufitem</strong> — tam ukryjemy LED kompozycyjne nad belką.</p>
 <hr />
@@ -359,8 +362,7 @@ a { color: #6a5c3a; text-decoration: none; }
 </tbody>
 </table>
 <h3 id="lokalizacja-klawiszy-fizycznych-puszek">Lokalizacja klawiszy fizycznych (puszek)</h3>
-<pre><code>P1 (przy wejściu do pokoju — UWAGA: wejście nie oznaczone na rysunku,
-    lokalizację puszki ustalić po potwierdzeniu drzwi; h=110 cm):
+<pre><code>P1 (przy wejściu, ściana E obok TV, po stronie zawiasu drzwi, h=110 cm):
    ramka 3M lub 4M:
    ├── klawisz 1: L1 Salon wnęka  (krótko ON/OFF, długo dim)
    ├── klawisz 2: L2 Salon spoty  (krótko ON/OFF, długo dim)

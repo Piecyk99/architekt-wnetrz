@@ -132,10 +132,19 @@ def draw_rzut(ax):
     ax.axis("off")
     ax.set_facecolor(BG)
 
-    # ZEWNETRZNY OBWOD SCIAN (wejscie NIE jest oznaczone na rysunku — sciany zamkniete)
+    # ZEWNETRZNY OBWOD SCIAN. Wejscie: sciana E obok TV (srodek) — wg ustalen.
+    DRZWI_Y0, DRZWI_W = 195, 90   # otwor drzwi na scianie E (y0..y0+90), srodek ~240
     ax.plot([0, W], [0, 0], color=WALL_COLOR, linewidth=WALL_LW)   # poludniowa (S)
     ax.plot([0, 0], [0, H], color=WALL_COLOR, linewidth=WALL_LW)   # zachodnia (W)
-    ax.plot([W, W], [0, H], color=WALL_COLOR, linewidth=WALL_LW)   # wschodnia (E)
+    ax.plot([W, W], [0, DRZWI_Y0], color=WALL_COLOR, linewidth=WALL_LW)        # E dol
+    ax.plot([W, W], [DRZWI_Y0 + DRZWI_W, H], color=WALL_COLOR, linewidth=WALL_LW)  # E gora
+    # drzwi wejsciowe (otwierane do srodka, luk)
+    arc = patches.Arc((W, DRZWI_Y0), 2 * DRZWI_W, 2 * DRZWI_W, angle=0,
+                      theta1=90, theta2=180, color="#999", linewidth=0.8)
+    ax.add_patch(arc)
+    ax.plot([W, W - DRZWI_W], [DRZWI_Y0, DRZWI_Y0], color="#999", linewidth=0.8, linestyle=":")
+    ax.text(W - 18, DRZWI_Y0 + DRZWI_W / 2, "WEJŚCIE\n(obok TV)", fontsize=5,
+            color="#666", ha="center", va="center", rotation=-90)
     # polnocna sciana z wnęką murowa:
     ax.plot([0, NISZA_X], [H, H], color=WALL_COLOR, linewidth=WALL_LW)
     ax.plot([NISZA_X + NISZA_W, W], [H, H], color=WALL_COLOR, linewidth=WALL_LW)
@@ -144,9 +153,6 @@ def draw_rzut(ax):
     ax.plot([NISZA_X + NISZA_W, NISZA_X + NISZA_W], [H, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
     ax.plot([NISZA_X, NISZA_X + NISZA_W], [H + NISZA_D_MUR, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
 
-    # WEJSCIE — nieoznaczone na rysunku
-    ax.text(W / 2, -42, "WEJŚCIE — nie oznaczone na rysunku (do potwierdzenia)",
-            fontsize=6.5, ha="center", color="#b00020", fontweight="bold")
 
     # ZABUDOWA — front wystaje 20 cm do pokoju (od ZAB_FRONT do H+NISZA_D_MUR)
     zab_x0, zab_y0 = NISZA_X, ZAB_FRONT
@@ -202,13 +208,13 @@ def draw_rzut(ax):
     ax.add_patch(Rectangle((140, 200), 120, 60, facecolor="#d4c4a6", edgecolor="#8a6a3a", linewidth=0.6))
     ax.text(200, 230, "stolik", fontsize=5.5, ha="center", va="center", color="#5a3f1a")
 
-    # TV na scianie wschodniej
-    tvx, tvy, tvw, tvh = W - 25, 170, 15, 130
+    # TV na scianie wschodniej, na poludnie od drzwi wejsciowych
+    tvx, tvy, tvw, tvh = W - 25, 55, 15, 120
     ax.add_patch(Rectangle((tvx, tvy), tvw, tvh, facecolor="#222", edgecolor="#000", linewidth=0.8))
     ax.text(tvx - 8, tvy + tvh / 2, "TV 65\"", fontsize=6, ha="right", va="center",
             color="#222", fontweight="bold")
     # szafka pod TV
-    ax.add_patch(Rectangle((W - 45, 130), 35, 30, facecolor="#e8dcc6", edgecolor="#8a6a3a", linewidth=0.6))
+    ax.add_patch(Rectangle((W - 45, 30), 35, 22, facecolor="#e8dcc6", edgecolor="#8a6a3a", linewidth=0.6))
 
     # OSWIETLENIE - L1 wnęka po obwodzie salonu (pomija strefę biura i zabudowy)
     # obwod: zachod (od y=30 do y=140), poludnie (od x=15 do x=W-15), wschod (od y=30 do y=H-90)
@@ -231,7 +237,7 @@ def draw_rzut(ax):
         spot(ax, x, y, circuit="L2", label=lbl)
 
     # L3 - bias TV (krotki pasek za TV)
-    led_strip(ax, [W - 27, W - 27], [165, 305], "L3", label="L3 bias", offset=(-15, 0), lw=2.4)
+    led_strip(ax, [W - 27, W - 27], [tvy + 5, tvy + tvh - 5], "L3", label="L3 bias", offset=(-15, 0), lw=2.4)
 
     # L4 - pasek nad biurkiem (prostopadle do sciany N, nad srodkiem biurka)
     led_strip(ax, [bx0 + bw / 2, bx0 + bw / 2], [by0 + 8, by0 + bh - 4],
@@ -257,10 +263,8 @@ def draw_rzut(ax):
     spot(ax, NISZA_X + 60, H + NISZA_D_MUR - 13, circuit="L6", size=4, label="IP44")
 
     # WLACZNIKI
-    # P1 - przy wejsciu (lokalizacja wejscia do potwierdzenia)
-    switch(ax, W - 35, 70, "P1", ["L1 L2 L5"], side="left")
-    ax.text(W - 35, 56, "(przy wejściu —\nlok. do potw.)", fontsize=4.3,
-            ha="center", va="top", color="#b00020")
+    # P1 - przy wejsciu na scianie E (na polnoc od otworu drzwi)
+    switch(ax, W - 35, DRZWI_Y0 + DRZWI_W + 18, "P1", ["L1 L2 L5"], side="left")
     # P2 - przy kanapie
     switch(ax, kx0 + kw + 15, ky0 + 30, "P2", ["L1", "scena Film"], side="right")
     # P3 - biuro
@@ -269,8 +273,8 @@ def draw_rzut(ax):
     switch(ax, zab_x0 + NISZA_W - 20, ZAB_FRONT + 18, "P4", ["L6 L7 manual"], side="left")
 
     # GNIAZDA 230V - zaznaczone w kluczowych miejscach
-    socket(ax, W - 15, 220, "TV", n=4)
-    socket(ax, W - 15, 60, "AC", n=2)
+    socket(ax, W - 15, 115, "TV", n=4)      # za TV (poludnie sciany E)
+    socket(ax, W - 15, 320, "AC", n=2)      # przy wejsciu (odkurzacz/ladowarka)
     socket(ax, 35, 130, "lampa", n=1)
     socket(ax, kx0 + kw + 10, ky0, "AC", n=6)  # za kanapa
     socket(ax, bx0 + 30, by0 + 5, "PC", n=4)  # biurko
@@ -287,18 +291,14 @@ def draw_rzut(ax):
     # glebokosc wneki murowej 40 cm (pionowy wymiar przy lewej krawedzi wneki)
     dim_line(ax, NISZA_X - 14, H, NISZA_X - 14, H + NISZA_D_MUR, "wnęka 40", offset_perp=5, side="below")
 
-    # ELEMENTY NIECZYTELNE Z RYSUNKU (do potwierdzenia) — zaznaczone na czerwono
-    # "OR" napisane na rysunku w obrebie wneki — mozliwe OKNO (kolizja z zabudowa!)
-    ax.text(NISZA_X + NISZA_W / 2, H + NISZA_D_MUR + 28, '„OR" z rysunku — okno?',
-            fontsize=5.5, ha="center", color="#b00020", fontweight="bold")
-    # kolko w prawym gornym rogu rysunku — mozliwy pion / odplyw / kratka
-    ax.add_patch(Circle((NISZA_X + NISZA_W + 15, H + 8), 6, facecolor="none",
-                        edgecolor="#b00020", linewidth=1.2, zorder=6))
-    ax.text(NISZA_X + NISZA_W + 15, H + 22, "symbol ◯ z rysunku\npion/odpływ?",
-            fontsize=4.8, ha="center", color="#b00020")
-    # wymiar "161" z rysunku — znaczenie do potwierdzenia
-    ax.text(W - 8, H - 90, "„161” z rysunku\n— wymiar do\npotwierdzenia",
-            fontsize=4.8, ha="right", va="top", color="#b00020")
+    # POTWIERDZONE: "OR" z rysunku = drzwi przesuwne zabudowy (NIE okno — brak kolizji)
+    ax.text(NISZA_X + NISZA_W / 2, H + NISZA_D_MUR + 28,
+            '„OR" = drzwi przesuwne zabudowy (potwierdzone — brak okna)',
+            fontsize=5.2, ha="center", color="#2a6a2a")
+    # przylacza pralki/odplyw — do potwierdzenia w naturze (sekcja prawa)
+    ax.text(NISZA_X + NISZA_W - 20, H + NISZA_D_MUR + 12,
+            "przyłącza wody + odpływ pralki\n(do potwierdzenia w naturze)",
+            fontsize=4.6, ha="center", va="bottom", color="#888")
 
     # ROZA KIERUNKOW + skala
     ax.text(W + 38, H, "N", ha="center", va="center", fontsize=10, fontweight="bold")
@@ -307,7 +307,7 @@ def draw_rzut(ax):
     ax.text(W + 38, H - 40, "skala\n1:50", ha="center", va="top", fontsize=6.5, color="#444")
 
     # TYTUL
-    ax.text(0, -25, "KARTA 1 / 3   ·   RZUT POMIESZCZENIA Z OŚWIETLENIEM (v2, skorygowany)   ·   1:50",
+    ax.text(0, -25, "KARTA 1 / 3   ·   RZUT POMIESZCZENIA Z OŚWIETLENIEM (v3)   ·   1:50",
             fontsize=9.5, fontweight="bold", color="#222")
 
 
