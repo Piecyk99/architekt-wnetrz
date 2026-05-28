@@ -20,11 +20,10 @@
   <text x="0" y="-72" font-size="8.5" font-weight="bold">KUCHNIA 9.02 — UKŁAD POPRAWIONY (W3+) — RZUT Z GÓRY</text>
   <text x="0" y="-63" font-size="4" fill="#444">Po odczycie FAZA 0a · Skala 1:25 · 259×191 · h=250 · zlew pod oknem (odpływ na ścianie z oknem), lodówka dół-prawo, półwyspa w strefie 174</text>
 
-  <!-- GEOMETRIA z szachtem went. górny-lewy (14x63) -->
+  <!-- GEOMETRIA z szachtem went. górny-lewy (14x63); DÓŁ OTWARTY na przedpokój (brak ścianki) -->
   <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z" fill="#fafaf8" stroke="none"/>
-  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
-  <path d="M 2,-12 L 271,-12 L 271,203 L -12,203 L -12,63 L 2,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
-  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z M 2,-12 L 271,-12 L 271,203 L -12,203 L -12,63 L 2,63 Z" fill="url(#hw2)" fill-rule="evenodd"/>
+  <!-- ŚCIANY murowane: tylko GÓRA, LEWA (ze stopniem szachtu), PRAWA. Dół = otwarte na przedpokój -->
+  <path d="M 0,191 L 0,63 L 14,63 L 14,0 L 259,0 L 259,191" fill="none" stroke="#000" stroke-width="3" stroke-linejoin="miter"/>
 
   <!-- SZACHT WENT (stała) -->
   <rect x="0" y="0" width="14" height="63" fill="url(#ven2)" stroke="#16a34a" stroke-width="0.8"/>
@@ -96,9 +95,10 @@
   <line x1="0" y1="191" x2="110" y2="191" stroke="#8b6e3f" stroke-width="1.5"/>
   <text x="55" y="187" font-size="2" text-anchor="middle" fill="#8b6e3f">bar (overhang 25 ku przedpokojowi)</text>
 
-  <!-- ENTRY gap x110..174 -->
-  <line x1="110" y1="191" x2="174" y2="191" stroke="#d97706" stroke-width="2" stroke-dasharray="6,3"/>
-  <text x="142" y="199" font-size="2.8" text-anchor="middle" fill="#b45309" font-style="italic">WEJŚCIE 64 cm</text>
+  <!-- DÓŁ OTWARTY na przedpokój — brak ścianki na całej dolnej krawędzi -->
+  <line x1="0" y1="191" x2="259" y2="191" stroke="#d97706" stroke-width="2.2" stroke-dasharray="7,3"/>
+  <text x="150" y="199" font-size="3" text-anchor="middle" fill="#b45309" font-weight="bold">OTWARTE na PRZEDPOKÓJ — BRAK ŚCIANKI</text>
+  <text x="150" y="203.5" font-size="2.4" text-anchor="middle" fill="#b45309" font-style="italic">półwyspa wolnostojąca (bar od strony przedpokoju) · wejście obok niej (~64 cm)</text>
 
   <!-- WORKING AISLE -->
   <rect x="14" y="60" width="235" height="91" fill="none" stroke="#3aa635" stroke-width="0.5" stroke-dasharray="2,2"/>
