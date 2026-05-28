@@ -153,6 +153,19 @@ def draw_rzut(ax):
     ax.plot([NISZA_X + NISZA_W, NISZA_X + NISZA_W], [H, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
     ax.plot([NISZA_X, NISZA_X + NISZA_W], [H + NISZA_D_MUR, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
 
+    # SCIANKA DZIALOWA (z rysunku stref): slupek/scianka od sciany N w glab pokoju
+    # na granicy biuro / zabudowa (x=NISZA_X), dlugosc ~161 cm (wymiar "161" z rysunku).
+    SCIANKA_DL = 161
+    SCIANKA_GR = 9  # grubosc ~9 cm
+    ax.add_patch(Rectangle((NISZA_X - SCIANKA_GR, H - SCIANKA_DL), SCIANKA_GR, SCIANKA_DL,
+                           facecolor=WALL_COLOR, edgecolor=WALL_COLOR, zorder=6))
+    ax.annotate("ścianka działowa (z rysunku stref)\ndł. ~161 cm — do potwierdzenia",
+                xy=(NISZA_X - SCIANKA_GR, H - SCIANKA_DL),
+                xytext=(NISZA_X - 95, H - SCIANKA_DL - 26),
+                fontsize=5, ha="center", color="#b00020",
+                arrowprops=dict(arrowstyle="->", color="#b00020", lw=0.6))
+    # wymiar dlugosci scianki
+    dim_line(ax, NISZA_X + 12, H, NISZA_X + 12, H - SCIANKA_DL, "161", offset_perp=5, side="above")
 
     # ZABUDOWA — front wystaje 20 cm do pokoju (od ZAB_FRONT do H+NISZA_D_MUR)
     zab_x0, zab_y0 = NISZA_X, ZAB_FRONT

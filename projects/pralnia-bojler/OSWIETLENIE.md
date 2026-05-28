@@ -6,7 +6,7 @@ Pomieszczenie wielofunkcyjne ~4,93 × 4,78 m łączące trzy strefy: salon (kana
 
 Dokument ma być na tyle konkretny, żeby przekazać go elektrykowi bez tłumaczenia: sekcje, obwody, wysokości, puszki, profile, zasilacze, logika scen.
 
-> **FAZA 0a — weryfikacja względem rysunku (v3, po odpowiedziach inwestora).** Odczyt rzutu + 3 pytania dały następujące ustalenia: (1) **wnęka murowa ma 40 cm**, nie 60 — zabudowa wystaje 20 cm do pokoju, bo pralka/suszarka mają 60 cm głęb. (korekta wymiarowa); (2) **napis „OR" = drzwi przesuwne zabudowy** (potwierdzone) — to NIE okno, więc **nie ma kolizji** z zabudową 250 cm; (3) **wejście jest na ścianie E, obok TV, w środkowej części** (potwierdzone) — przywrócono drzwi na ścianie E, P1 przy wejściu, TV przesunięte na południe od drzwi; (4) **symbol ◯** w rogu rysunku = artefakt/oznaczenie do potwierdzenia w naturze (przyłącza wody/odpływ pralki przyjęto w sekcji prawej); (5) wymiar **„161"** pozostaje do potwierdzenia (nieistotny dla projektu świateł).
+> **FAZA 0a — weryfikacja względem rysunku (v3, po odpowiedziach inwestora).** Odczyt rzutu + 3 pytania dały następujące ustalenia: (1) **wnęka murowa ma 40 cm**, nie 60 — zabudowa wystaje 20 cm do pokoju, bo pralka/suszarka mają 60 cm głęb. (korekta wymiarowa); (2) **napis „OR" = drzwi przesuwne zabudowy** (potwierdzone) — to NIE okno, więc **nie ma kolizji** z zabudową 250 cm; (3) **wejście jest na ścianie E, obok TV, w środkowej części** (potwierdzone) — przywrócono drzwi na ścianie E, P1 przy wejściu, TV przesunięte na południe od drzwi; (4) **symbol ◯** w rogu rysunku = artefakt/oznaczenie do potwierdzenia w naturze (przyłącza wody/odpływ pralki przyjęto w sekcji prawej); (5) **dodano ściankę działową** odchodzącą od ściany N w głąb pokoju (granica biuro/zabudowa), która wcześniej została pominięta — jej długość = wymiar **„161 cm"**; tworzy wnękę biura.
 
 ---
 
@@ -18,6 +18,7 @@ Dokument ma być na tyle konkretny, żeby przekazać go elektrykowi bez tłumacz
 - **Ściana W (lewa, 478 cm)** — kanapa.
 - **Ściana E (prawa, 478 cm)** — **wejście** w środkowej części + TV na południe od drzwi (potwierdzone przez inwestora).
 - **Ściana S (dół)** — bez oznaczeń.
+- **Ścianka działowa** — słupek/ścianka odchodzi od ściany N w głąb pokoju na granicy biuro / zabudowa (x≈197), dł. ~161 cm; tworzy wnękę biura (z rysunku stref). To wyjaśnia wymiar „161".
 - **Okna** — brak w obrębie zabudowy (napis „OR" = drzwi przesuwne, nie okno). Instalacje — patrz 0.3.
 
 ### 0.2 Wymiary odczytane z rysunku
@@ -30,17 +31,18 @@ Dokument ma być na tyle konkretny, żeby przekazać go elektrykowi bez tłumacz
 | Wnęka pod zabudowę (szerokość) | **266 cm** | wymiar „266" |
 | Wnęka pod zabudowę (głębokość murowa) | **40 cm** | wymiar „040" (pionowy) |
 | Odcinek N na prawo od wnęki | **~30 cm** | 493 − 197 − 266 |
+| Ścianka działowa biuro/zabudowa (długość) | **161 cm** | wymiar „161" — słupek od ściany N w głąb pokoju |
 | Wysokość zabudowy | **250 cm** | podana w zleceniu |
 
 ```
                           ŚCIANA PÓŁNOCNA (493 cm)
    ┌──────────────────┲━━━━━━━━━━━━━━━━━━━━━━━━━━━━┱──────┐  ← lico ściany N
-   │   biurko 197 cm   ┃ wnęka murowa 266×40 cm    ┃ ~30  │
-   │  (strefa biuro)   ┃ zabudowa „OR" = drzwi     ┃      │
-   │                   ┃ przesuwne; wystaje 20 cm  ┃      │
-   │                   ┃ do pokoju → gł. 60 cm     ┃      │
-   │                                                      │
-   │ KANAPA                                    ╲ WEJŚCIE  │  ← ściana E, środek
+   │   biurko 197 cm  ┃┃ wnęka murowa 266×40 cm    ┃ ~30  │
+   │  (wnęka biura)   ┃┃ zabudowa „OR" = drzwi     ┃      │
+   │                  ┃┃ przesuwne; wystaje 20 cm  ┃      │
+   │          ścianka ┃┃ do pokoju → gł. 60 cm     ┃      │
+   │          161 cm  ┃                                   │
+   │ KANAPA           ┃                        ╲ WEJŚCIE  │  ← ściana E, środek
    │ (ściana W)                                  (obok TV)│
    │                                              TV ↓    │
    │                                            (poł. E)  │
@@ -65,7 +67,7 @@ Rozstrzygnięte z inwestorem:
 Do potwierdzenia w naturze przed wykonaniem (nie blokują projektu świateł):
 
 3. **Symbol ◯** w rogu rysunku — przyjęto, że przyłącza wody + odpływ pralki są w **sekcji prawej** zabudowy; potwierdzić rzeczywiste położenie pionu/odpływu.
-4. **Wymiar „161"** — znaczenie nieznane; nieistotny dla rozmieszczenia oświetlenia.
+4. **Wymiar „161" = długość ścianki działowej** biuro/zabudowa (słupek od ściany N w głąb pokoju). Naniesiona na rzut. Do potwierdzenia: dokładna długość i czy ścianka jest pełnej wysokości (do sufitu) czy niska — to wpływa na zasięg światła między biurem a salonem.
 5. **Bojler, przyłącza wody, pion CO, wentylacja** — nie są zaznaczone na rzucie; ich położenie pochodzi ze zdjęć inspiracyjnych i `PLAN.md`. Potwierdzić w naturze (zwłaszcza dostęp serwisowy do bojlera i ewentualny pion CO, którego nie wolno zabudować na głucho).
 
 Wysokość pomieszczenia po podwieszeniu GK: zakładam 260–270 cm (zostawiamy 10–15 cm na profil LED + przeciągnięcie kabli). Zabudowa 250 cm = równa z lub poniżej sufitu, **zostaw 5–10 cm zachowanej szczeliny między górą zabudowy a sufitem** — tam ukryjemy LED kompozycyjne nad belką.
