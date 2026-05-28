@@ -163,8 +163,11 @@ a { color: #6a5c3a; text-decoration: none; }
 - Alternatywa: lampka biurkowa BenQ ScreenBar / IKEA HÅRTE z USB → tylko gniazdko, bez stałej instalacji.</p>
 <p><strong>B3. Włącznik biura — osobny</strong>
 - Pojedynczy klawisz/Shelly przy wejściu do strefy biura (na ścianie N obok zabudowy lub na ścianie W blisko biurka). Sterowanie: scena "Praca" (B1 100%, A1 30%, A2 OFF) — wszystko możliwe, bo to Shelly.</p>
-<p><strong>B4. Doświetlenie ogólne biura — z systemu A1/A2</strong>
-- Wnęka LED salonu (A1) na fragmencie ściany N przy biurku robi tło. Nie ciągnij osobnej wnęki LED nad biurkiem — to dwa źródła w jednym kadrze (kolizja temperatur 3000K/4000K). Wnęka A1 omija strefę biurka.</p>
+<p><strong>B4. Światło ogólne biura — 2× oczko podtynkowe 4000K (KONIECZNE)</strong>
+- <strong>Ścianka działowa biuro/zabudowa jest pełnej wysokości (do sufitu, potwierdzone)</strong> → wnęka biura to osobne „pomieszczenie". Salonowa wnęka LED (L1) i spoty (L2) <strong>NIE oświetlą biura</strong> — dlatego biuro musi mieć własne światło ogólne.
+- 2× oczko podtynkowe GU10 6W <strong>4000K</strong> CRI≥90 w suficie wnęki biura (B1, B2 na rzucie), na tym samym obwodzie <strong>L4</strong> co pasek zadaniowy → jeden włącznik P3 / scena „Praca".
+- Salonowy cove L1 ucięty przy ściance (nie wchodzi do wnęki biura).
+- Spójność barwy: całe biuro 4000K (oczka + pasek), więc brak kolizji temperatur w jednym kadrze.</p>
 <hr />
 <h3 id="c-zabudowa-z-drzwiami-przesuwnymi">C. ZABUDOWA Z DRZWIAMI PRZESUWNYMI</h3>
 <p>Tu jest najwięcej decyzji. Drzwi przesuwne nachodzą na siebie — w danym momencie połowa zabudowy jest zawsze odsłonięta, połowa zamknięta. Oświetlenie wewnątrz musi włączać się <strong>niezależnie po lewej i po prawej stronie</strong>, żeby nie świecić w zamkniętą połowę. Albo musi reagować na <strong>otwarcie drzwi w konkretnej części</strong> (kontaktrony).</p>
@@ -253,12 +256,12 @@ a { color: #6a5c3a; text-decoration: none; }
 </tr>
 <tr>
 <td><strong>L4</strong></td>
-<td>Biuro — światło zadaniowe 4000K (B1+B2)</td>
+<td>Biuro — pasek zadaniowy + 2× oczko ogólne 4000K</td>
 <td>Biuro</td>
-<td>24V DC</td>
-<td>~30 W</td>
-<td>Shelly Dimmer 0–10V</td>
-<td>klawisz osobny, ściana N obok biurka lub na ścianie W przy wejściu w strefę biura</td>
+<td>24V DC + 230V (oczka)</td>
+<td>~42 W</td>
+<td>Shelly Dimmer 0–10V (pasek) + Shelly Dimmer 2 (oczka)</td>
+<td>klawisz osobny P3, ściana N obok biurka</td>
 </tr>
 <tr>
 <td><strong>L5</strong></td>

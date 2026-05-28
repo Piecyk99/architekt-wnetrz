@@ -120,8 +120,11 @@ Biurko stoi pod ścianą N po lewej od zabudowy (~197 cm długości ściany). O�
 **B3. Włącznik biura — osobny**
 - Pojedynczy klawisz/Shelly przy wejściu do strefy biura (na ścianie N obok zabudowy lub na ścianie W blisko biurka). Sterowanie: scena "Praca" (B1 100%, A1 30%, A2 OFF) — wszystko możliwe, bo to Shelly.
 
-**B4. Doświetlenie ogólne biura — z systemu A1/A2**
-- Wnęka LED salonu (A1) na fragmencie ściany N przy biurku robi tło. Nie ciągnij osobnej wnęki LED nad biurkiem — to dwa źródła w jednym kadrze (kolizja temperatur 3000K/4000K). Wnęka A1 omija strefę biurka.
+**B4. Światło ogólne biura — 2× oczko podtynkowe 4000K (KONIECZNE)**
+- **Ścianka działowa biuro/zabudowa jest pełnej wysokości (do sufitu, potwierdzone)** → wnęka biura to osobne „pomieszczenie". Salonowa wnęka LED (L1) i spoty (L2) **NIE oświetlą biura** — dlatego biuro musi mieć własne światło ogólne.
+- 2× oczko podtynkowe GU10 6W **4000K** CRI≥90 w suficie wnęki biura (B1, B2 na rzucie), na tym samym obwodzie **L4** co pasek zadaniowy → jeden włącznik P3 / scena „Praca".
+- Salonowy cove L1 ucięty przy ściance (nie wchodzi do wnęki biura).
+- Spójność barwy: całe biuro 4000K (oczka + pasek), więc brak kolizji temperatur w jednym kadrze.
 
 ---
 
@@ -192,7 +195,7 @@ System: **smart-first** — każdy obwód niezależny, sterowany z Shelly w pusz
 | **L1** | Salon — wnęka LED 3000K (A1) | Salon | 24V DC | ~170 W | Shelly RGBW2 / Dim 0–10V | klawisz lewy, ściana W przy drzwiach wejściowych + drugi klawisz przy kanapie |
 | **L2** | Salon — spoty sufitowe 3000K (A2) | Salon | 230V | ~36 W (6×6W) | Shelly Dimmer 2 (triak) | klawisz prawy, obok L1 |
 | **L3** | Salon — akcent TV / bias (A3) | Salon | 24V DC | ~15 W | Shelly RGBW2 (osobny kanał) | scena, klawisz opc. przy TV |
-| **L4** | Biuro — światło zadaniowe 4000K (B1+B2) | Biuro | 24V DC | ~30 W | Shelly Dimmer 0–10V | klawisz osobny, ściana N obok biurka lub na ścianie W przy wejściu w strefę biura |
+| **L4** | Biuro — pasek zadaniowy + 2× oczko ogólne 4000K | Biuro | 24V DC + 230V (oczka) | ~42 W | Shelly Dimmer 0–10V (pasek) + Shelly Dimmer 2 (oczka) | klawisz osobny P3, ściana N obok biurka |
 | **L5** | Zabudowa — LED akcent zewnętrzny 3000K (C1+C2) | Zabudowa | 24V DC | ~70 W (2,7 m C1 + 4,8 m C2 × 9,6 W/m) | Shelly Dimmer 0–10V | klawisz osobny, ściana obok zabudowy (po stronie biura) |
 | **L6** | Zabudowa wnętrze LEWA + bojler oczko 4000K (C3-lewa + D1 + półki) | Techn. lewa | 24V DC + 230V (oczko) | ~50 W | Shelly UNI + kontaktron lewy panel | kontaktron + awaryjny klawisz wewnątrz zabudowy |
 | **L7** | Zabudowa wnętrze PRAWA 4000K (C3-prawa + półki) | Techn. prawa | 24V DC | ~30 W | Shelly UNI + kontaktron prawy panel | kontaktron + awaryjny klawisz wewnątrz zabudowy |

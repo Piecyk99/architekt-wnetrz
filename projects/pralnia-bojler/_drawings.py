@@ -232,7 +232,7 @@ def draw_rzut(ax):
     # OSWIETLENIE - L1 wnęka po obwodzie salonu (pomija strefę biura i zabudowy)
     # obwod: zachod (od y=30 do y=140), poludnie (od x=15 do x=W-15), wschod (od y=30 do y=H-90)
     # i częsc N na prawo od zabudowy (od x=NISZA_X+NISZA_W+15 do x=W-15)
-    led_strip(ax, [25, 25], [30, H - 90], "L1", label="L1 wnęka 3000K (cove)")
+    led_strip(ax, [25, 25], [30, H - 165], "L1", label="L1 wnęka 3000K (cove)")
     led_strip(ax, [25, W - 25], [30, 30], "L1")
     led_strip(ax, [W - 25, W - 25], [30, H - 25], "L1")
     led_strip(ax, [NISZA_X + NISZA_W + 15, W - 25], [H - 25, H - 25], "L1")
@@ -258,6 +258,11 @@ def draw_rzut(ax):
     ax.annotate("L4 pasek 4000K nad biurkiem", (bx0 + bw / 2, by0 + bh / 2),
                 xytext=(0, -3), textcoords="offset points", fontsize=6,
                 ha="center", va="top", color=CIRCUITS["L4"][0], fontweight="bold")
+    # L4 - 2 oczka ogolne w nooku biura (scianka pelnej wys. -> salon nie dosietli)
+    spot(ax, 60, H - 118, circuit="L4", size=5, label="B1")
+    spot(ax, 140, H - 132, circuit="L4", size=5, label="B2")
+    ax.text(100, H - 158, "L4: 2× oczko 4000K (światło ogólne biura)",
+            fontsize=5, ha="center", color=CIRCUITS["L4"][0])
 
     # L5 - akcent zabudowy: belka nad zabudowa (w glebi wneki) + dwa piony po bokach frontu
     led_strip(ax, [NISZA_X + 5, NISZA_X + NISZA_W - 5],
