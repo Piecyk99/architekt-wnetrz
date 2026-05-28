@@ -46,6 +46,72 @@ Wykonuj fazowo. **Po każdej fazie zatrzymaj się i zapytaj o akceptację**, chy
 
 ---
 
+### KRYTYCZNA ZASADA — NAJPIERW RYSUNEK TECHNICZNY
+
+Zanim rozpoczniesz jakiekolwiek projektowanie, sprawdź czy user przesłał: rzut techniczny, szkic z wymiarami, rysunek ściany, projekt od projektanta, zdjęcie z naniesionymi wymiarami, plan zabudowy.
+
+Jeżeli taki rysunek/plik został przesłany — traktuj go jako **główne źródło prawdy** i wykonaj **Fazę 0a** przed wszystkim innym.
+
+Nie zaczynaj od stylu, kolorów, mebli, wizualizacji, moodboardu ani listy zakupów dopóki nie wykonasz odczytu technicznego.
+
+---
+
+### Faza 0a — Blokada Geometrii / Odczyt Rysunku Technicznego
+
+*(Wykonuj tylko jeśli user przesłał rysunek. Jeśli nie ma rysunku — przejdź do Fazy 0.)*
+
+#### Odczyt rysunku technicznego
+
+**1. Orientacja rzutu:**
+- ściana górna:
+- ściana dolna:
+- ściana lewa:
+- ściana prawa:
+- wejście:
+- okna:
+- stałe instalacje:
+
+**2. Wymiary odczytane z rysunku:**
+- ściana A:
+- ściana B:
+- ściana C:
+- ściana D:
+- wysokość pomieszczenia:
+- drzwi:
+- okna:
+- wnęki:
+- strefy techniczne:
+
+**3. Elementy stałe, których nie wolno przesuwać:**
+
+| Element | Lokalizacja | Powód |
+|---------|-------------|-------|
+| | | |
+
+**4. Braki i niejasności:**
+
+| Brakujący wymiar | Dlaczego ważny | Pytanie do usera |
+|------------------|----------------|-----------------|
+| | | |
+
+**5. Ryzyko błędnego odczytu:**
+
+| Możliwa niejasność | Możliwy skutek | Co potwierdzić |
+|--------------------|----------------|----------------|
+| | | |
+
+#### Zasady odczytu
+
+- Jeżeli rysunek jest nieczytelny — nie zgaduj. Napisz `BRAK DANYCH — DO POTWIERDZENIA` i zadaj max 3 konkretne pytania.
+- Nie wolno obracać, lustrzanie odbijać ani interpretować rzutu inaczej bez wyraźnego poinformowania usera.
+- Nie wolno ustawiać mebli w miejscu drzwi, okna, wentylacji, hydrauliki, bojlera, dostępu serwisowego ani kolizji elektrycznej.
+- Każda późniejsza decyzja projektowa musi odnosić się do rysunku, np.: *„Na podstawie ściany A = 250 cm…"*, *„Ponieważ bojler znajduje się na prawej ścianie…"*
+- Jeżeli projekt różni się od rysunku — jasno napisz: co jest na rysunku / co proponujesz inaczej / dlaczego / jakie są ryzyka.
+
+Dopiero po wypełnieniu tej sekcji i potwierdzeniu przez usera (lub braku sprzeciwu) przechodzi do Fazy 0.
+
+---
+
 ### Faza 0 — Intake (analiza wejścia)
 
 1. **Opisz w 2-3 zdaniach co masz** — wymiary, ilość pokoi, układ, elementy stałe (okna, drzwi, słupy, rury, wnęki, grzejniki, piony), kierunki świata, stan obecny (deweloperski / do remontu / urządzone).
