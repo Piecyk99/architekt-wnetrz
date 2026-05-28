@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-95 -95 480 375" width="1500" height="1172" font-family="Arial, sans-serif">
+  <rect x="-95" y="-95" width="480" height="375" fill="#ffffff"/>
+
+  <defs>
+    <pattern id="hw2" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#888" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="ven2" patternUnits="userSpaceOnUse" width="3" height="3">
+      <rect width="3" height="3" fill="#d9f0e0"/>
+      <line x1="0" y1="0" x2="3" y2="3" stroke="#16a34a" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="ind2" patternUnits="userSpaceOnUse" width="2.5" height="2.5" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="2.5" stroke="#444" stroke-width="0.3"/>
+    </pattern>
+    <marker id="a2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker>
+    <marker id="a2r" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.4" markerHeight="3.4" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#000"/></marker>
+  </defs>
+
+  <text x="0" y="-72" font-size="8.5" font-weight="bold">KUCHNIA 9.02 — UKŁAD POPRAWIONY (W3+) — RZUT Z GÓRY</text>
+  <text x="0" y="-63" font-size="4" fill="#444">Po odczycie FAZA 0a · Skala 1:25 · 259×191 · h=250 · zlew pod oknem (odpływ na ścianie z oknem), lodówka dół-prawo, półwyspa w strefie 174</text>
+
+  <!-- GEOMETRIA z szachtem went. górny-lewy (14x63) -->
+  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z" fill="#fafaf8" stroke="none"/>
+  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
+  <path d="M 2,-12 L 271,-12 L 271,203 L -12,203 L -12,63 L 2,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
+  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z M 2,-12 L 271,-12 L 271,203 L -12,203 L -12,63 L 2,63 Z" fill="url(#hw2)" fill-rule="evenodd"/>
+
+  <!-- SZACHT WENT (stała) -->
+  <rect x="0" y="0" width="14" height="63" fill="url(#ven2)" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="7" y="34" font-size="2.4" fill="#15803d" font-weight="bold" text-anchor="middle" transform="rotate(-90 7 34)">WENT.</text>
+
+  <!-- OKNO lewo-od-środka (x=60..145) + ODPŁYW/WODA na tej ścianie -->
+  <rect x="60" y="-12" width="85" height="12" fill="#dceaf5" stroke="#3b6fa8" stroke-width="0.7"/>
+  <line x1="60" y1="-6" x2="145" y2="-6" stroke="#3b6fa8" stroke-width="0.3"/>
+  <text x="102" y="-2" font-size="3" fill="#2563a8" text-anchor="middle" font-weight="bold">OKNO ~85</text>
+  <!-- woda/odpływ przy oknie -->
+  <g transform="translate(102, 8)">
+    <circle cx="-5" cy="0" r="1.6" fill="none" stroke="#1e40af" stroke-width="0.5"/>
+    <circle cx="0" cy="0" r="2.6" fill="#1e40af"/>
+    <circle cx="5" cy="0" r="1.6" fill="none" stroke="#dc2626" stroke-width="0.5"/>
+  </g>
+  <text x="102" y="15" font-size="2.2" fill="#b91c1c" text-anchor="middle">woda C/Z + odpływ (na ścianie z oknem)</text>
+
+  <!-- TOP WALL MODULES -->
+  <!-- D1 prep 45 (x14..59) -->
+  <rect x="14" y="0" width="45" height="60" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <text x="36" y="34" font-size="2.6" text-anchor="middle" fill="#5a4a2a" font-weight="bold">D1</text>
+  <text x="36" y="38" font-size="2.1" text-anchor="middle" fill="#5a4a2a">45·szuflady</text>
+  <text x="36" y="41.5" font-size="2.1" text-anchor="middle" fill="#5a4a2a">prep</text>
+
+  <!-- D2 sink 85 (x59..144) -->
+  <rect x="59" y="0" width="85" height="60" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <rect x="72" y="6" width="58" height="46" fill="#c9d6df" stroke="#3b5a73" stroke-width="0.5" rx="2"/>
+  <circle cx="101" cy="29" r="3" fill="#3b5a73"/>
+  <text x="101" y="45" font-size="2.6" text-anchor="middle" fill="#000" font-weight="bold">ZLEW pod oknem</text>
+  <text x="101" y="57" font-size="2.1" text-anchor="middle" fill="#444">D2·85 (pod zlewem + segregacja)</text>
+
+  <!-- D3 dishwasher 45 (x144..189) -->
+  <rect x="144" y="0" width="45" height="60" fill="#e6e8eb" stroke="#666" stroke-width="0.4"/>
+  <text x="166.5" y="30" font-size="2.6" text-anchor="middle" fill="#333" font-weight="bold">D3</text>
+  <text x="166.5" y="35" font-size="2.3" text-anchor="middle" fill="#000">ZMYWARKA</text>
+  <text x="166.5" y="39" font-size="2.3" text-anchor="middle" fill="#000">45</text>
+  <text x="166.5" y="44" font-size="1.9" text-anchor="middle" fill="#666">(obok zlewu)</text>
+
+  <!-- D4 induction+oven 60 (x189..249) -->
+  <rect x="189" y="0" width="60" height="60" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.4"/>
+  <rect x="193" y="4" width="52" height="40" fill="url(#ind2)" stroke="#222" stroke-width="0.5"/>
+  <circle cx="206" cy="16" r="5" fill="none" stroke="#222" stroke-width="0.4"/>
+  <circle cx="232" cy="16" r="5" fill="none" stroke="#222" stroke-width="0.4"/>
+  <circle cx="206" cy="34" r="5" fill="none" stroke="#222" stroke-width="0.4"/>
+  <circle cx="232" cy="34" r="5" fill="none" stroke="#222" stroke-width="0.4"/>
+  <text x="219" y="52" font-size="2.5" text-anchor="middle" fill="#000" font-weight="bold">INDUKCJA 60</text>
+  <text x="219" y="57" font-size="2.1" text-anchor="middle" fill="#444">D4 (piekarnik pod spodem)</text>
+
+  <!-- filler 249..259 -->
+  <rect x="249" y="0" width="10" height="60" fill="#efe7d6" stroke="#8b6e3f" stroke-width="0.3"/>
+  <text x="254" y="32" font-size="1.8" text-anchor="middle" fill="#8b6e3f" transform="rotate(-90 254 32)">filler 10</text>
+
+  <!-- FRIDGE bottom-right (strefa 85: x174..259), lodówka 60 przy prawej ścianie -->
+  <rect x="199" y="131" width="60" height="60" fill="#e6e8eb" stroke="#666" stroke-width="0.5"/>
+  <text x="229" y="155" font-size="3" text-anchor="middle" fill="#000" font-weight="bold">LODÓWKA</text>
+  <text x="229" y="160" font-size="2.3" text-anchor="middle" fill="#444">60×60×202</text>
+  <text x="229" y="164" font-size="2.1" text-anchor="middle" fill="#444">(dół-prawo, wg inwestora)</text>
+  <line x1="199" y1="131" x2="259" y2="131" stroke="#666" stroke-width="0.3"/>
+  <!-- side filler / słupek 25 -->
+  <rect x="174" y="131" width="25" height="60" fill="#efe7d6" stroke="#8b6e3f" stroke-width="0.3"/>
+  <text x="186" y="160" font-size="1.9" text-anchor="middle" fill="#8b6e3f" transform="rotate(-90 186 160)">bok 25</text>
+
+  <!-- PÓŁWYSPA bottom-left (x0..110 × 40 deep, y151..191) -->
+  <rect x="0" y="151" width="110" height="40" fill="#f4e9d8" stroke="#8b6e3f" stroke-width="0.5"/>
+  <text x="55" y="166" font-size="2.8" text-anchor="middle" fill="#5a4a2a" font-weight="bold">PÓŁWYSPA 110 × 40</text>
+  <text x="55" y="171" font-size="2.2" text-anchor="middle" fill="#5a4a2a">szuflady od strony kuchni</text>
+  <text x="55" y="175" font-size="2.2" text-anchor="middle" fill="#5a4a2a">+ bar od przedpokoju</text>
+  <!-- bar overhang -->
+  <line x1="0" y1="191" x2="110" y2="191" stroke="#8b6e3f" stroke-width="1.5"/>
+  <text x="55" y="187" font-size="2" text-anchor="middle" fill="#8b6e3f">bar (overhang 25 ku przedpokojowi)</text>
+
+  <!-- ENTRY gap x110..174 -->
+  <line x1="110" y1="191" x2="174" y2="191" stroke="#d97706" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="142" y="199" font-size="2.8" text-anchor="middle" fill="#b45309" font-style="italic">WEJŚCIE 64 cm</text>
+
+  <!-- WORKING AISLE -->
+  <rect x="14" y="60" width="235" height="91" fill="none" stroke="#3aa635" stroke-width="0.5" stroke-dasharray="2,2"/>
+  <text x="131" y="100" font-size="3.6" text-anchor="middle" fill="#2a7a26" font-weight="bold">CIĄG ROBOCZY — przejście 91 cm</text>
+  <text x="131" y="106" font-size="2.6" text-anchor="middle" fill="#2a7a26">(półwyspa 40 cm płytka → zachowane 91 cm)</text>
+
+  <!-- WORK TRIANGLE: sink(101,30) - induction(219,30) - fridge(229,131) -->
+  <polygon points="101,30 219,30 229,131" fill="none" stroke="#d2691e" stroke-width="0.5" stroke-dasharray="3,2"/>
+  <circle cx="101" cy="30" r="2" fill="#d2691e"/>
+  <circle cx="219" cy="30" r="2" fill="#d2691e"/>
+  <circle cx="229" cy="131" r="2" fill="#d2691e"/>
+  <text x="160" y="27" font-size="2.2" fill="#d2691e">zlew↔płyta ~118</text>
+  <text x="232" y="85" font-size="2.2" fill="#d2691e">płyta↔lod ~101</text>
+
+  <!-- WYMIARY -->
+  <g stroke="#000" fill="#000">
+    <line x1="14" y1="-30" x2="259" y2="-30" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.3"/>
+    <text x="136" y="-32" font-size="4" text-anchor="middle">259</text>
+    <line x1="289" y1="0" x2="289" y2="191" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.3"/>
+    <text x="294" y="96" font-size="4" text-anchor="middle" transform="rotate(90 294 96)">191</text>
+
+    <!-- top module dims -->
+    <line x1="14" y1="66" x2="59" y2="66" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="36" y="70" font-size="2.4" text-anchor="middle">45</text>
+    <line x1="59" y1="66" x2="144" y2="66" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="101" y="70" font-size="2.4" text-anchor="middle">85</text>
+    <line x1="144" y1="66" x2="189" y2="66" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="166" y="70" font-size="2.4" text-anchor="middle">45</text>
+    <line x1="189" y1="66" x2="249" y2="66" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="219" y="70" font-size="2.4" text-anchor="middle">60</text>
+
+    <!-- bottom dims -->
+    <line x1="0" y1="210" x2="110" y2="210" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="55" y="214" font-size="2.8" text-anchor="middle">110 (półwyspa)</text>
+    <line x1="110" y1="210" x2="174" y2="210" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="142" y="214" font-size="2.8" text-anchor="middle">64 (wejście)</text>
+    <line x1="174" y1="210" x2="259" y2="210" marker-start="url(#a2r)" marker-end="url(#a2)" stroke-width="0.2"/>
+    <text x="216" y="214" font-size="2.8" text-anchor="middle">85 (lodówka)</text>
+  </g>
+
+  <!-- ZMIANY vs W3 -->
+  <g transform="translate(305, 0)">
+    <rect x="0" y="0" width="75" height="120" fill="#fffbeb" stroke="#000" stroke-width="0.4"/>
+    <text x="37.5" y="6" font-size="3.4" font-weight="bold" text-anchor="middle">ZMIANY vs W3</text>
+    <line x1="2" y1="8" x2="73" y2="8" stroke="#000" stroke-width="0.3"/>
+    <text x="3" y="14" font-size="2.5" font-weight="bold">1. Indukcja → na PRAWO od okna</text>
+    <text x="3" y="18" font-size="2.2" fill="#444">  (C1: szacht 14 + okno 60 = tylko</text>
+    <text x="3" y="21.5" font-size="2.2" fill="#444">  46 cm po lewej — za mało na 60)</text>
+    <text x="3" y="27" font-size="2.5" font-weight="bold" fill="#15803d">2. Zlew ZOSTAJE pod oknem</text>
+    <text x="3" y="31" font-size="2.2" fill="#444">  (odpływ na ścianie z oknem —</text>
+    <text x="3" y="34.5" font-size="2.2" fill="#444">  Twoja korekta; C2 wycofana)</text>
+    <text x="3" y="40" font-size="2.5" font-weight="bold">3. Lodówka → DÓŁ-PRAWO (85)</text>
+    <text x="3" y="44" font-size="2.2" fill="#444">  (C3: wraca do Twojego oznaczenia,</text>
+    <text x="3" y="47.5" font-size="2.2" fill="#444">  nie słupek na ścianie prawej)</text>
+    <text x="3" y="53" font-size="2.5" font-weight="bold">4. Wentylacja = górny-LEWY</text>
+    <text x="3" y="57" font-size="2.2" fill="#444">  (C4: schemat 04 miał ją po prawej)</text>
+    <text x="3" y="62.5" font-size="2.5" font-weight="bold">5. Półwyspa 40 cm płytka</text>
+    <text x="3" y="66.5" font-size="2.2" fill="#444">  (zostawia 91 cm ciągu roboczego;</text>
+    <text x="3" y="70" font-size="2.2" fill="#444">  wejście 64 cm obok niej)</text>
+    <text x="3" y="75.5" font-size="2.5" font-weight="bold">6. Piekarnik → pod indukcją</text>
+    <text x="3" y="79.5" font-size="2.2" fill="#444">  (nie w słupku prawym)</text>
+
+    <text x="3" y="88" font-size="2.6" font-weight="bold" fill="#a00">[do pomiaru]</text>
+    <text x="3" y="92.5" font-size="2.2" fill="#b91c1c">- dokł. pozycja odpływu/wody</text>
+    <text x="3" y="96" font-size="2.2" fill="#b91c1c">- szer. okna (81/85) + od narożn.</text>
+    <text x="3" y="99.5" font-size="2.2" fill="#b91c1c">- głęb. szachtu went. (14/37)</text>
+    <text x="3" y="103" font-size="2.2" fill="#b91c1c">- czy dół 174 w pełni otwarty</text>
+    <text x="3" y="106.5" font-size="2.2" fill="#b91c1c">- prześwit przedpokoju (bar?)</text>
+    <text x="3" y="113" font-size="2.2" font-style="italic" fill="#666">W3+ · FAZA 0a · 2026-05-28</text>
+  </g>
+
+  <g transform="translate(335, 170)">
+    <circle r="9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <path d="M 0,-6 L 3.5,4 L 0,1.5 L -3.5,4 Z" fill="#000"/>
+    <text x="0" y="14" font-size="3" text-anchor="middle">OKNO ↑</text>
+  </g>
+</svg>
