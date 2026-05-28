@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-95 -95 480 370" width="1500" height="1156" font-family="Arial, sans-serif">
+  <rect x="-95" y="-95" width="480" height="370" fill="#ffffff"/>
+
+  <defs>
+    <pattern id="hv" patternUnits="userSpaceOnUse" width="3" height="3" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="3" stroke="#888" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="vent" patternUnits="userSpaceOnUse" width="3" height="3">
+      <rect width="3" height="3" fill="#d9f0e0"/>
+      <line x1="0" y1="0" x2="3" y2="3" stroke="#16a34a" stroke-width="0.5"/>
+    </pattern>
+    <marker id="mA" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="mAr" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3.5" markerHeight="3.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#000"/>
+    </marker>
+    <marker id="red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+  <text x="0" y="-72" font-size="8.5" font-weight="bold">FAZA 0a — MAPA OGRANICZEŃ I KOLIZJI (odczyt rzutu + szkicu)</text>
+  <text x="0" y="-63" font-size="4" fill="#444">Kuchnia 9.02 · 4,86 m² · 259 × 191 cm · h=250 · Czerwone = kolizje wcześniejszego wariantu W3 z odczytanymi stałymi</text>
+
+  <!-- ===== GEOMETRIA: interior z szachtem went. w górnym-lewym narożniku ===== -->
+  <!-- Interior: (14,0)->(259,0)->(259,191)->(0,191)->(0,63)->(14,63)->(14,0) -->
+  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z" fill="#fafaf8" stroke="none"/>
+  <!-- Ściana zewnętrzna -->
+  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
+  <path d="M 2,-12 L 271,-12 L 271,203 L -12,203 L -12,63 L 2,63 Z" fill="none" stroke="#000" stroke-width="1.2"/>
+  <path d="M 14,0 L 259,0 L 259,191 L 0,191 L 0,63 L 14,63 Z
+           M 2,-12 L 271,-12 L 271,203 L -12,203 L -12,63 L 2,63 Z" fill="url(#hv)" fill-rule="evenodd"/>
+
+  <!-- ===== STAŁE: SZACHT WENTYLACYJNY (górny-lewy) ===== -->
+  <rect x="0" y="0" width="14" height="63" fill="url(#vent)" stroke="#16a34a" stroke-width="0.8"/>
+  <text x="-2" y="32" font-size="3" fill="#15803d" font-weight="bold" text-anchor="middle" transform="rotate(-90 -2 32)">SZACHT WENT.</text>
+  <text x="40" y="14" font-size="3.2" fill="#15803d" font-weight="bold">⊠ WENTYLACJA (stała — NIE RUSZAĆ)</text>
+  <text x="40" y="19" font-size="2.6" fill="#15803d">górny-lewy narożnik · uskok ~14×63 cm [pomiar]</text>
+
+  <!-- ===== STAŁE: OKNO (lewo od środka) ===== -->
+  <rect x="60" y="-12" width="85" height="12" fill="#dceaf5" stroke="#3b6fa8" stroke-width="0.7"/>
+  <line x1="60" y1="-6" x2="145" y2="-6" stroke="#3b6fa8" stroke-width="0.3"/>
+  <text x="102" y="-2" font-size="3" fill="#2563a8" text-anchor="middle" font-weight="bold">OKNO ~85</text>
+  <!-- wymiary okna -->
+  <g stroke="#2563a8" fill="#2563a8" stroke-width="0.2">
+    <line x1="0" y1="-20" x2="60" y2="-20" marker-start="url(#mAr)" marker-end="url(#mA)"/>
+    <text x="30" y="-22" font-size="3" text-anchor="middle">~60 (od lewej)</text>
+    <line x1="145" y1="-20" x2="259" y2="-20" marker-start="url(#mAr)" marker-end="url(#mA)"/>
+    <text x="202" y="-22" font-size="3" text-anchor="middle">~93 (do prawej)</text>
+  </g>
+
+  <!-- ===== STAŁE: WODA C/Z + ODPŁYW (centralnie, przy dolnej krawędzi) ===== -->
+  <!-- Per szkic: symbol °O° w dolnej-środkowej części pomieszczenia -->
+  <g transform="translate(120, 165)">
+    <rect x="-12" y="-9" width="24" height="18" fill="#fde2e2" stroke="#dc2626" stroke-width="0.7"/>
+    <circle cx="-6" cy="0" r="2" fill="none" stroke="#1e40af" stroke-width="0.6"/>
+    <circle cx="0" cy="0" r="3.5" fill="#1e40af"/>
+    <circle cx="6" cy="0" r="2" fill="none" stroke="#dc2626" stroke-width="0.6"/>
+  </g>
+  <text x="120" y="183" font-size="3.2" fill="#b91c1c" text-anchor="middle" font-weight="bold">WODA C/Z + ODPŁYW (istniejące — NIE RUSZAĆ)</text>
+  <text x="120" y="188" font-size="2.6" fill="#b91c1c" text-anchor="middle">dół-środek (wspólny pion z łazienką) · [dokł. pomiar]</text>
+
+  <!-- ===== INTENCJA INWESTORA: LODÓWKA dół-prawo 85 ===== -->
+  <rect x="174" y="131" width="85" height="60" fill="#e0e7ff" stroke="#4f46e5" stroke-width="0.7" stroke-dasharray="3,2"/>
+  <text x="216" y="158" font-size="3.4" fill="#3730a3" text-anchor="middle" font-weight="bold">LODÓWKA</text>
+  <text x="216" y="164" font-size="2.8" fill="#3730a3" text-anchor="middle">strefa 85 (wg inwestora)</text>
+  <text x="216" y="169" font-size="2.6" fill="#3730a3" text-anchor="middle">L 60×60×202</text>
+  <line x1="174" y1="131" x2="259" y2="191" stroke="#4f46e5" stroke-width="0.4"/>
+
+  <!-- ===== INTENCJA INWESTORA: WYSPA dół-lewo/środek 174 ===== -->
+  <rect x="0" y="131" width="174" height="60" fill="#fef3c7" stroke="#d97706" stroke-width="0.7" stroke-dasharray="3,2"/>
+  <text x="87" y="150" font-size="3.6" fill="#92400e" text-anchor="middle" font-weight="bold">WYSPA (wg inwestora) — strefa 174</text>
+  <text x="87" y="156" font-size="2.8" fill="#92400e" text-anchor="middle">pokrywa się z OTWARCIEM na przedpokój</text>
+  <text x="87" y="161" font-size="2.6" fill="#92400e" text-anchor="middle">+ z lokalizacją wody (możliwa wyspa ze zlewem)</text>
+
+  <!-- ===== OTWARCIE na PRZEDPOKÓJ (dół, 174) ===== -->
+  <line x1="0" y1="191" x2="174" y2="191" stroke="#d97706" stroke-width="2" stroke-dasharray="6,3"/>
+  <text x="87" y="199" font-size="3" fill="#b45309" text-anchor="middle" font-style="italic">OTWARCIE / wejście z PRZEDPOKOJU (174 cm)</text>
+
+  <!-- ===== WYMIARY GŁÓWNE ===== -->
+  <g stroke="#000" fill="#000">
+    <line x1="14" y1="-30" x2="259" y2="-30" marker-start="url(#mAr)" marker-end="url(#mA)" stroke-width="0.3"/>
+    <text x="136" y="-32" font-size="4" text-anchor="middle">259 (góra) / 245 wewn.</text>
+
+    <line x1="288" y1="0" x2="288" y2="191" marker-start="url(#mAr)" marker-end="url(#mA)" stroke-width="0.3"/>
+    <text x="293" y="96" font-size="4" text-anchor="middle" transform="rotate(90 293 96)">191 (= 63 + 128)</text>
+
+    <line x1="-28" y1="0" x2="-28" y2="63" marker-start="url(#mAr)" marker-end="url(#mA)" stroke-width="0.2"/>
+    <text x="-32" y="32" font-size="3" text-anchor="middle" transform="rotate(-90 -32 32)">63</text>
+    <line x1="-28" y1="63" x2="-28" y2="191" marker-start="url(#mAr)" marker-end="url(#mA)" stroke-width="0.2"/>
+    <text x="-32" y="127" font-size="3" text-anchor="middle" transform="rotate(-90 -32 127)">128</text>
+
+    <line x1="0" y1="210" x2="174" y2="210" marker-start="url(#mAr)" marker-end="url(#mA)" stroke-width="0.2"/>
+    <text x="87" y="215" font-size="3.4" text-anchor="middle">174 (wyspa/otwarcie)</text>
+    <line x1="174" y1="210" x2="259" y2="210" marker-start="url(#mAr)" marker-end="url(#mA)" stroke-width="0.2"/>
+    <text x="216" y="215" font-size="3.4" text-anchor="middle">85 (lodówka)</text>
+  </g>
+
+  <!-- ===== KOLIZJE W3 (czerwone) ===== -->
+  <g>
+    <!-- C1: indukcja na górnej-lewej koliduje z szachtem+oknem -->
+    <rect x="14" y="0" width="46" height="60" fill="none" stroke="#dc2626" stroke-width="0.8" stroke-dasharray="2,1.5"/>
+    <text x="37" y="40" font-size="3" fill="#dc2626" text-anchor="middle" font-weight="bold">C1</text>
+    <text x="37" y="45" font-size="2.2" fill="#dc2626" text-anchor="middle">tylko 46 cm</text>
+    <path d="M 37,0 L 50,-40" stroke="#dc2626" stroke-width="0.4" marker-end="url(#red)"/>
+    <text x="52" y="-42" font-size="2.8" fill="#dc2626">C1: indukcja 60 cm NIE MIEŚCI SIĘ między szachtem (14) a oknem (60)</text>
+
+    <!-- C2: zlew pod oknem vs woda w centrum -->
+    <path d="M 102,-6 L 120,160" stroke="#dc2626" stroke-width="0.5" stroke-dasharray="2,2" marker-end="url(#red)"/>
+    <text x="150" y="120" font-size="2.8" fill="#dc2626" font-weight="bold">C2: W3 zakładał zlew pod oknem,</text>
+    <text x="150" y="125" font-size="2.8" fill="#dc2626">a woda+odpływ są w dole-środku</text>
+    <text x="150" y="130" font-size="2.4" fill="#dc2626">→ przekładka pionu ~2-5 tys. zł lub zlew w wyspie</text>
+
+    <!-- C3: lodówka -->
+    <text x="150" y="240" font-size="2.8" fill="#dc2626" font-weight="bold">C3: W3 przeniósł lodówkę na ścianę prawą (słupek) —</text>
+    <text x="150" y="245" font-size="2.8" fill="#dc2626">inwestor oznaczył ją w dole-prawo (strefa 85). Do uzgodnienia.</text>
+
+    <!-- C4: wentylacja strona -->
+    <text x="150" y="255" font-size="2.8" fill="#dc2626" font-weight="bold">C4: schemat instalacji (04) miał kratkę went. po PRAWEJ —</text>
+    <text x="150" y="260" font-size="2.8" fill="#dc2626">faktycznie jest po LEWEJ (górny-lewy narożnik).</text>
+  </g>
+
+  <!-- ===== LEGENDA ===== -->
+  <g transform="translate(305, -10)">
+    <rect x="0" y="0" width="75" height="150" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <text x="37.5" y="6" font-size="3.6" font-weight="bold" text-anchor="middle">LEGENDA</text>
+    <line x1="2" y1="8" x2="73" y2="8" stroke="#000" stroke-width="0.3"/>
+
+    <rect x="3" y="12" width="7" height="5" fill="url(#vent)" stroke="#16a34a" stroke-width="0.4"/>
+    <text x="12" y="16" font-size="2.6">szacht / wentylacja (stała)</text>
+
+    <rect x="3" y="20" width="7" height="5" fill="#fde2e2" stroke="#dc2626" stroke-width="0.4"/>
+    <text x="12" y="24" font-size="2.6">woda C/Z + odpływ (stała)</text>
+
+    <rect x="3" y="28" width="7" height="5" fill="#dceaf5" stroke="#3b6fa8" stroke-width="0.4"/>
+    <text x="12" y="32" font-size="2.6">okno</text>
+
+    <rect x="3" y="36" width="7" height="5" fill="#e0e7ff" stroke="#4f46e5" stroke-width="0.4" stroke-dasharray="2,1"/>
+    <text x="12" y="40" font-size="2.6">lodówka — intencja inwestora</text>
+
+    <rect x="3" y="44" width="7" height="5" fill="#fef3c7" stroke="#d97706" stroke-width="0.4" stroke-dasharray="2,1"/>
+    <text x="12" y="48" font-size="2.6">wyspa — intencja inwestora</text>
+
+    <rect x="3" y="52" width="7" height="5" fill="none" stroke="#dc2626" stroke-width="0.5" stroke-dasharray="2,1"/>
+    <text x="12" y="56" font-size="2.6">kolizja wariantu W3</text>
+
+    <text x="3" y="66" font-size="3" font-weight="bold" fill="#15803d">STAŁE (nie ruszać)</text>
+    <text x="3" y="71" font-size="2.5">1. Wentylacja — górny-lewy</text>
+    <text x="3" y="75" font-size="2.5">2. Woda C/Z + odpływ — dół-środek</text>
+    <text x="3" y="79" font-size="2.5">3. Okno — góra, lewo od środka</text>
+    <text x="3" y="83" font-size="2.5">4. Uskok/szacht — górny-lewy</text>
+
+    <text x="3" y="93" font-size="3" font-weight="bold" fill="#92400e">INTENCJA INWESTORA</text>
+    <text x="3" y="98" font-size="2.5">5. Lodówka — dół-prawo (85)</text>
+    <text x="3" y="102" font-size="2.5">6. Wyspa — dół-lewo/środek (174)</text>
+
+    <text x="3" y="112" font-size="3" font-weight="bold" fill="#dc2626">DO POTWIERDZENIA</text>
+    <text x="3" y="117" font-size="2.4" fill="#b91c1c">- dokł. lokalizacja wody/odpływu</text>
+    <text x="3" y="121" font-size="2.4" fill="#b91c1c">- głębokość uskoku (14 / 37?)</text>
+    <text x="3" y="125" font-size="2.4" fill="#b91c1c">- czy zlew ma być w wyspie</text>
+    <text x="3" y="129" font-size="2.4" fill="#b91c1c">- szer. okna (81 / 85?)</text>
+    <text x="3" y="133" font-size="2.4" fill="#b91c1c">- czy dół 174 jest w pełni otwarty</text>
+
+    <text x="3" y="143" font-size="2.4" font-style="italic" fill="#666">FAZA 0a · 2026-05-28</text>
+    <text x="3" y="147" font-size="2.2" font-style="italic" fill="#666">odczyt z rzutu + szkicu odręcznego</text>
+  </g>
+
+  <!-- strzałka okna/N -->
+  <g transform="translate(330, 175)">
+    <circle r="9" fill="#fff" stroke="#000" stroke-width="0.4"/>
+    <path d="M 0,-6 L 3.5,4 L 0,1.5 L -3.5,4 Z" fill="#000"/>
+    <text x="0" y="14" font-size="3" text-anchor="middle">OKNO ↑</text>
+  </g>
+</svg>
