@@ -80,9 +80,15 @@
   <text x="150" y="104" font-size="2.2" fill="#dc2626">~110° (ćwierć koła)</text>
   <text x="150" y="108" font-size="2" fill="#dc2626">w stronę core — wolne</text>
 
-  <!-- ENTRY x110..199 -->
-  <line x1="110" y1="191" x2="199" y2="191" stroke="#d97706" stroke-width="2.2" stroke-dasharray="7,3"/>
-  <text x="154" y="199" font-size="2.8" text-anchor="middle" fill="#b45309" font-weight="bold">WEJŚCIE ~89 cm (otwarte na przedpokój)</text>
+  <!-- SŁUP zbudowany celowo jako wnęka na lodówkę (między wejściem a lodówką) -->
+  <rect x="189" y="131" width="10" height="60" fill="url(#ven3)" stroke="#16a34a" stroke-width="0.7"/>
+  <text x="186" y="118" font-size="2.4" fill="#15803d" font-weight="bold">SŁUP — wnęka na lodówkę</text>
+  <text x="186" y="122" font-size="2.1" fill="#15803d">(zbudowany celowo, stały)</text>
+
+  <!-- ENTRY x110..189 = WEJŚCIE OD KORYTARZA -->
+  <line x1="110" y1="191" x2="189" y2="191" stroke="#d97706" stroke-width="2.2" stroke-dasharray="7,3"/>
+  <text x="150" y="199" font-size="2.8" text-anchor="middle" fill="#b45309" font-weight="bold">WEJŚCIE OD KORYTARZA DO MIESZKANIA</text>
+  <text x="150" y="203.5" font-size="2.3" text-anchor="middle" fill="#b45309" font-style="italic">zostawić wolne (~79 cm) — nie zastawiać szafkami ani drzwiami lodówki</text>
 
   <!-- CORE -->
   <rect x="60" y="60" width="139" height="91" fill="none" stroke="#3aa635" stroke-width="0.5" stroke-dasharray="2,2"/>
