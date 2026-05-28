@@ -84,7 +84,10 @@ No people, tidy. Dezeen editorial aesthetic, daily-use laundry day scene.""",
 sofa area toward the north wall where a built-in sliding wardrobe in matte
 HPL Egger H3734 Orzech Pacific Royal Walnut (warm medium-dark walnut with
 prominent horizontal grain) occupies the right two-thirds of the back wall,
-266 cm wide × 250 cm tall, with the office desk to its LEFT. Two large
+266 cm wide × 250 cm tall, built ~60 cm deep so it protrudes ~20 cm proud
+of the surrounding wall face (the masonry niche behind it is only 40 cm
+deep, so the cabinet box steps forward into the room), with the office
+desk to its LEFT on the flush part of the wall. Two large
 sliding panels CLOSED, integrated full-height black matte L-profile recessed
 handles. Floor: LIGHT HONEY OAK Barlinek dąb Almond, straight planks
 parallel to the side walls, matte lacquer. Walls cream warm-white.

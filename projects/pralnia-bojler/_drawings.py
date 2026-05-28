@@ -117,62 +117,61 @@ def dim_line(ax, x1, y1, x2, y2, text, offset_perp=15, side="above"):
 def draw_rzut(ax):
     # pokoj 493 x 478 cm. Skala: 1 cm rzeczywisty = 1 jednostka na osi.
     W, H = 493, 478
-    # nisza zabudowy w scianie polnocnej: 266 szer x 40 glab, rozpoczyna sie 197 od lewej.
+    # WNĘKA MUROWA w scianie polnocnej wg rysunku: 266 szer x 40 GŁĘB.
+    # Pralka/suszarka maja 60 cm gleb, wiec zabudowa WYSTAJE 20 cm do pokoju.
     NISZA_X = 197
     NISZA_W = 266
-    NISZA_D = 60  # realnie 60cm bo zabudowa wystaje
-    DRZWI_WEJ_W = 90
-    DRZWI_WEJ_X = W - 30 - DRZWI_WEJ_W  # 30cm od narożnika NE
+    NISZA_D_MUR = 40        # glebokosc wneki murowej (z rysunku: "040")
+    ZAB_WYSTAJE = 20        # zabudowa wystaje do pokoju, by zmiescic AGD 60 cm
+    ZAB_GL = NISZA_D_MUR + ZAB_WYSTAJE  # 60 cm calkowita glebokosc zabudowy
+    ZAB_FRONT = H - ZAB_WYSTAJE          # front zabudowy = 20 cm w glab pokoju
 
-    ax.set_xlim(-40, W + 60)
-    ax.set_ylim(-40, H + 80)
+    ax.set_xlim(-40, W + 70)
+    ax.set_ylim(-55, H + 95)
     ax.set_aspect("equal")
     ax.axis("off")
     ax.set_facecolor(BG)
 
-    # SCIANY (rysuj jako gruby kontur zamknięty z wycieciem na nisze)
-    walls = [
-        (0, 0), (W, 0),                       # poludniowa
-        (W, DRZWI_WEJ_X - W + 90 + H - 90),    # tu cos zmotalem, narysuje recznie
-    ]
-    # zewnetrzny obwod scian
-    ax.plot([0, W], [0, 0], color=WALL_COLOR, linewidth=WALL_LW)          # poludnie
-    ax.plot([0, 0], [0, H], color=WALL_COLOR, linewidth=WALL_LW)          # zachod
-    ax.plot([W, W], [0, H - DRZWI_WEJ_W - 10], color=WALL_COLOR, linewidth=WALL_LW)  # wschod dol
-    ax.plot([W, W], [H - 10, H], color=WALL_COLOR, linewidth=WALL_LW)               # wschod gora (po drzwiach)
-    # drzwi wejsciowe na scianie wschodniej (otwierane do srodka, luk)
-    ax.plot([W, W], [H - DRZWI_WEJ_W - 10, H - 10], color="#ccc", linewidth=1.2)
-    arc = patches.Arc((W, H - 10), 2 * DRZWI_WEJ_W, 2 * DRZWI_WEJ_W,
-                      angle=0, theta1=180, theta2=270, color="#999", linewidth=0.8)
-    ax.add_patch(arc)
-    ax.plot([W, W - DRZWI_WEJ_W], [H - 10, H - 10], color="#999", linewidth=0.8, linestyle=":")
-    ax.text(W - 35, H - DRZWI_WEJ_W / 2 - 10, "drzwi\nwejście", fontsize=5.5,
-            color="#666", ha="center", va="center", rotation=-90)
-    # polnocna sciana z wnęką zabudowy:
+    # ZEWNETRZNY OBWOD SCIAN (wejscie NIE jest oznaczone na rysunku — sciany zamkniete)
+    ax.plot([0, W], [0, 0], color=WALL_COLOR, linewidth=WALL_LW)   # poludniowa (S)
+    ax.plot([0, 0], [0, H], color=WALL_COLOR, linewidth=WALL_LW)   # zachodnia (W)
+    ax.plot([W, W], [0, H], color=WALL_COLOR, linewidth=WALL_LW)   # wschodnia (E)
+    # polnocna sciana z wnęką murowa:
     ax.plot([0, NISZA_X], [H, H], color=WALL_COLOR, linewidth=WALL_LW)
     ax.plot([NISZA_X + NISZA_W, W], [H, H], color=WALL_COLOR, linewidth=WALL_LW)
-    # wnęka (cofnięcie w ścianę 60 cm) - tu siedzi zabudowa:
-    ax.plot([NISZA_X, NISZA_X], [H, H + NISZA_D], color=WALL_COLOR, linewidth=WALL_LW)
-    ax.plot([NISZA_X + NISZA_W, NISZA_X + NISZA_W], [H, H + NISZA_D], color=WALL_COLOR, linewidth=WALL_LW)
-    ax.plot([NISZA_X, NISZA_X + NISZA_W], [H + NISZA_D, H + NISZA_D], color=WALL_COLOR, linewidth=WALL_LW)
+    # wneka murowa (cofniecie 40 cm w sciane):
+    ax.plot([NISZA_X, NISZA_X], [H, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
+    ax.plot([NISZA_X + NISZA_W, NISZA_X + NISZA_W], [H, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
+    ax.plot([NISZA_X, NISZA_X + NISZA_W], [H + NISZA_D_MUR, H + NISZA_D_MUR], color=WALL_COLOR, linewidth=WALL_LW)
 
-    # ZABUDOWA — front (rownolegle do polnocnej sciany, tutaj na poziomie H)
-    # podzial wewnetrzny: lewa polowa 133 cm, prawa polowa 133 cm
-    zab_x0, zab_y0 = NISZA_X, H
-    ax.add_patch(Rectangle((zab_x0, zab_y0), NISZA_W, NISZA_D,
+    # WEJSCIE — nieoznaczone na rysunku
+    ax.text(W / 2, -42, "WEJŚCIE — nie oznaczone na rysunku (do potwierdzenia)",
+            fontsize=6.5, ha="center", color="#b00020", fontweight="bold")
+
+    # ZABUDOWA — front wystaje 20 cm do pokoju (od ZAB_FRONT do H+NISZA_D_MUR)
+    zab_x0, zab_y0 = NISZA_X, ZAB_FRONT
+    ax.add_patch(Rectangle((zab_x0, zab_y0), NISZA_W, ZAB_GL,
                            facecolor="#c9a47a", edgecolor="#6b4a2b", linewidth=1.0, alpha=0.5))
-    ax.text(zab_x0 + NISZA_W / 2, zab_y0 + NISZA_D / 2,
+    ax.text(zab_x0 + NISZA_W / 2, zab_y0 + ZAB_GL / 2,
             "ZABUDOWA 266×60×250\norzech, drzwi przesuwne",
             ha="center", va="center", fontsize=6, color="#4a2f0f", fontweight="bold")
+    # linia pierwotnego lica sciany (zeby pokazac wystawanie)
+    ax.plot([NISZA_X, NISZA_X + NISZA_W], [H, H], color="#b00020",
+            linewidth=0.7, linestyle=(0, (2, 2)), zorder=3)
+    ax.annotate("zabudowa wystaje +20 cm\ndo pokoju (AGD 60 cm > wnęka 40)",
+                xy=(zab_x0 + NISZA_W / 2, ZAB_FRONT),
+                xytext=(zab_x0 + NISZA_W / 2 + 30, ZAB_FRONT - 42),
+                fontsize=5.2, ha="left", color="#b00020",
+                arrowprops=dict(arrowstyle="->", color="#b00020", lw=0.6))
     # podzial pol/pol pionowy
-    ax.plot([zab_x0 + NISZA_W / 2, zab_x0 + NISZA_W / 2], [zab_y0, zab_y0 + NISZA_D],
+    ax.plot([zab_x0 + NISZA_W / 2, zab_x0 + NISZA_W / 2], [zab_y0, zab_y0 + ZAB_GL],
             color="#6b4a2b", linewidth=0.8, linestyle=":")
     # symbole pralka/suszarka po prawej, bojler po lewej
-    ax.text(zab_x0 + 60, zab_y0 + NISZA_D - 8, "bojler\n+ półki", fontsize=5,
+    ax.text(zab_x0 + 60, zab_y0 + ZAB_GL - 9, "bojler\n+ półki", fontsize=5,
             ha="center", color="#4a2f0f")
-    ax.text(zab_x0 + NISZA_W - 100, zab_y0 + NISZA_D - 8, "pralka", fontsize=5,
+    ax.text(zab_x0 + NISZA_W - 100, zab_y0 + ZAB_GL - 9, "pralka", fontsize=5,
             ha="center", color="#4a2f0f")
-    ax.text(zab_x0 + NISZA_W - 30, zab_y0 + NISZA_D - 8, "suszarka", fontsize=5,
+    ax.text(zab_x0 + NISZA_W - 30, zab_y0 + ZAB_GL - 9, "suszarka", fontsize=5,
             ha="center", color="#4a2f0f")
     # strzalki przesuwu drzwi
     ax.annotate("", xy=(zab_x0 + 30, zab_y0 + 8), xytext=(zab_x0 + NISZA_W / 2 - 10, zab_y0 + 8),
@@ -180,12 +179,12 @@ def draw_rzut(ax):
     ax.annotate("", xy=(zab_x0 + NISZA_W / 2 + 10, zab_y0 + 8), xytext=(zab_x0 + NISZA_W - 30, zab_y0 + 8),
                 arrowprops=dict(arrowstyle="<->", color="#6b4a2b", lw=0.8))
 
-    # KONTAKTRONY w gornej prowadnicy zabudowy (oznaczam jako K1, K2)
-    contactor(ax, zab_x0 + NISZA_W / 4, zab_y0 + NISZA_D + 8, "K1→L6")
-    contactor(ax, zab_x0 + 3 * NISZA_W / 4, zab_y0 + NISZA_D + 8, "K2→L7")
+    # KONTAKTRONY w gornej prowadnicy drzwi (na froncie zabudowy)
+    contactor(ax, zab_x0 + NISZA_W / 4, zab_y0 - 7, "K1→L6")
+    contactor(ax, zab_x0 + 3 * NISZA_W / 4, zab_y0 - 7, "K2→L7")
 
     # MEBLE POMIESZCZENIA
-    # biurko - przy scianie polnocnej, lewa czesc
+    # biurko - przy scianie polnocnej (plaskie lico), lewa czesc
     bx0, by0, bw, bh = 15, H - 60, NISZA_X - 30, 50
     ax.add_patch(Rectangle((bx0, by0), bw, bh, facecolor="#e8dcc6", edgecolor="#8a6a3a", linewidth=0.8))
     ax.text(bx0 + bw / 2, by0 + bh / 2, "BIURKO 167×50", fontsize=6,
@@ -216,7 +215,7 @@ def draw_rzut(ax):
     # i częsc N na prawo od zabudowy (od x=NISZA_X+NISZA_W+15 do x=W-15)
     led_strip(ax, [25, 25], [30, H - 90], "L1", label="L1 wnęka 3000K (cove)")
     led_strip(ax, [25, W - 25], [30, 30], "L1")
-    led_strip(ax, [W - 25, W - 25], [30, H - DRZWI_WEJ_W - 25], "L1")
+    led_strip(ax, [W - 25, W - 25], [30, H - 25], "L1")
     led_strip(ax, [NISZA_X + NISZA_W + 15, W - 25], [H - 25, H - 25], "L1")
 
     # L2 - spoty salon (6 sztuk)
@@ -234,36 +233,40 @@ def draw_rzut(ax):
     # L3 - bias TV (krotki pasek za TV)
     led_strip(ax, [W - 27, W - 27], [165, 305], "L3", label="L3 bias", offset=(-15, 0), lw=2.4)
 
-    # L4 - pasek nad biurkiem (prostopadle do sciany)
-    led_strip(ax, [bx0 + bw / 2 - 60, bx0 + bw / 2 + 60], [by0 + bh + 35, by0 + bh + 35],
-              "L4", label="L4 pasek 4000K nad biurkiem", lw=3.4)
-    # oraz krotki spot pomocniczy?
-    # nie - tylko pasek (zgodnie z dokumentem)
+    # L4 - pasek nad biurkiem (prostopadle do sciany N, nad srodkiem biurka)
+    led_strip(ax, [bx0 + bw / 2, bx0 + bw / 2], [by0 + 8, by0 + bh - 4],
+              "L4", lw=3.4)
+    ax.annotate("L4 pasek 4000K nad biurkiem", (bx0 + bw / 2, by0 + bh / 2),
+                xytext=(0, -3), textcoords="offset points", fontsize=6,
+                ha="center", va="top", color=CIRCUITS["L4"][0], fontweight="bold")
 
-    # L5 - akcent zabudowy: nad belka (266 cm) + dwa piony (po bokach niszy)
-    led_strip(ax, [NISZA_X + 5, NISZA_X + NISZA_W - 5], [H + NISZA_D + 18, H + NISZA_D + 18],
+    # L5 - akcent zabudowy: belka nad zabudowa (w glebi wneki) + dwa piony po bokach frontu
+    led_strip(ax, [NISZA_X + 5, NISZA_X + NISZA_W - 5],
+              [H + NISZA_D_MUR + 16, H + NISZA_D_MUR + 16],
               "L5", label="L5 akcent: belka + piony 3000K", lw=2.8)
-    # piony (rysowane krotko zeby tylko zaznaczyc)
-    led_strip(ax, [NISZA_X + 3, NISZA_X + 3], [H + 5, H + NISZA_D - 5], "L5", lw=2.0)
-    led_strip(ax, [NISZA_X + NISZA_W - 3, NISZA_X + NISZA_W - 3], [H + 5, H + NISZA_D - 5], "L5", lw=2.0)
+    # piony - wzdluz bocznych krawedzi zabudowy (od frontu do tylu wneki)
+    led_strip(ax, [zab_x0 + 3, zab_x0 + 3], [ZAB_FRONT + 4, H + NISZA_D_MUR - 4], "L5", lw=2.0)
+    led_strip(ax, [zab_x0 + NISZA_W - 3, zab_x0 + NISZA_W - 3], [ZAB_FRONT + 4, H + NISZA_D_MUR - 4], "L5", lw=2.0)
 
-    # L6 i L7 - wnetrze zabudowy (tasmy w stropie + pod polkami) - rysuje schematycznie
-    led_strip(ax, [NISZA_X + 10, NISZA_X + NISZA_W / 2 - 10],
-              [H + NISZA_D - 5, H + NISZA_D - 5], "L6", lw=2.0)
-    led_strip(ax, [NISZA_X + NISZA_W / 2 + 10, NISZA_X + NISZA_W - 10],
-              [H + NISZA_D - 5, H + NISZA_D - 5], "L7", lw=2.0)
-    # oczko IP44 nad bojlerem (D1) - czesc L6
-    spot(ax, NISZA_X + 60, H + NISZA_D - 18, circuit="L6", size=4, label="IP44")
+    # L6 i L7 - wnetrze zabudowy (tasmy w stropie przy froncie wnetrza)
+    led_strip(ax, [zab_x0 + 10, zab_x0 + NISZA_W / 2 - 10],
+              [ZAB_FRONT + 10, ZAB_FRONT + 10], "L6", lw=2.0)
+    led_strip(ax, [zab_x0 + NISZA_W / 2 + 10, zab_x0 + NISZA_W - 10],
+              [ZAB_FRONT + 10, ZAB_FRONT + 10], "L7", lw=2.0)
+    # oczko IP44 nad bojlerem (D1) - czesc L6, w glebi przy tylnej scianie
+    spot(ax, NISZA_X + 60, H + NISZA_D_MUR - 13, circuit="L6", size=4, label="IP44")
 
     # WLACZNIKI
-    # P1 - przy drzwiach wejsciowych (sciana E, na lewo od drzwi, h=110)
-    switch(ax, W - 35, H - DRZWI_WEJ_W - 30, "P1", ["L1", "L2", "L5"], side="left")
+    # P1 - przy wejsciu (lokalizacja wejscia do potwierdzenia)
+    switch(ax, W - 35, 70, "P1", ["L1 L2 L5"], side="left")
+    ax.text(W - 35, 56, "(przy wejściu —\nlok. do potw.)", fontsize=4.3,
+            ha="center", va="top", color="#b00020")
     # P2 - przy kanapie
     switch(ax, kx0 + kw + 15, ky0 + 30, "P2", ["L1", "scena Film"], side="right")
     # P3 - biuro
     switch(ax, bx0 + bw - 10, by0 - 15, "P3", ["L4"], side="right")
-    # P4 - wnetrze zabudowy (manualny override)
-    switch(ax, NISZA_X + NISZA_W - 30, H + 10, "P4", ["L6 L7 manual"], side="left")
+    # P4 - wnetrze zabudowy (manualny override), na froncie prawej sekcji
+    switch(ax, zab_x0 + NISZA_W - 20, ZAB_FRONT + 18, "P4", ["L6 L7 manual"], side="left")
 
     # GNIAZDA 230V - zaznaczone w kluczowych miejscach
     socket(ax, W - 15, 220, "TV", n=4)
@@ -271,26 +274,41 @@ def draw_rzut(ax):
     socket(ax, 35, 130, "lampa", n=1)
     socket(ax, kx0 + kw + 10, ky0, "AC", n=6)  # za kanapa
     socket(ax, bx0 + 30, by0 + 5, "PC", n=4)  # biurko
-    socket(ax, NISZA_X + NISZA_W - 25, H + 30, "pralka", n=1)
-    socket(ax, NISZA_X + NISZA_W - 70, H + 30, "suszarka", n=1)
-    socket(ax, NISZA_X + 30, H + 30, "bojler IP44", n=1)
+    socket(ax, zab_x0 + NISZA_W - 25, zab_y0 + 26, "pralka", n=1)
+    socket(ax, zab_x0 + NISZA_W - 70, zab_y0 + 26, "suszarka", n=1)
+    socket(ax, zab_x0 + 30, zab_y0 + 26, "bojler IP44", n=1)
 
     # WYMIARY
-    dim_line(ax, 0, H + 80, W, H + 80, "493 cm", offset_perp=8)
-    dim_line(ax, -25, 0, -25, H, "478 cm", offset_perp=8, side="above")
-    dim_line(ax, NISZA_X, H + NISZA_D + 35, NISZA_X + NISZA_W, H + NISZA_D + 35,
-             "zabudowa 266 cm", offset_perp=6)
-    dim_line(ax, 0, H + 50, NISZA_X, H + 50, "biuro 197", offset_perp=6)
+    dim_line(ax, 0, H + 88, W, H + 88, "493 cm (ściana N)", offset_perp=8)
+    dim_line(ax, -28, 0, -28, H, "478 cm (gł. pokoju)", offset_perp=8, side="above")
+    dim_line(ax, NISZA_X, H + NISZA_D_MUR + 40, NISZA_X + NISZA_W, H + NISZA_D_MUR + 40,
+             "wnęka / zabudowa 266 cm", offset_perp=6)
+    dim_line(ax, 0, H + 58, NISZA_X, H + 58, "biuro 197", offset_perp=6)
+    # glebokosc wneki murowej 40 cm (pionowy wymiar przy lewej krawedzi wneki)
+    dim_line(ax, NISZA_X - 14, H, NISZA_X - 14, H + NISZA_D_MUR, "wnęka 40", offset_perp=5, side="below")
+
+    # ELEMENTY NIECZYTELNE Z RYSUNKU (do potwierdzenia) — zaznaczone na czerwono
+    # "OR" napisane na rysunku w obrebie wneki — mozliwe OKNO (kolizja z zabudowa!)
+    ax.text(NISZA_X + NISZA_W / 2, H + NISZA_D_MUR + 28, '„OR" z rysunku — okno?',
+            fontsize=5.5, ha="center", color="#b00020", fontweight="bold")
+    # kolko w prawym gornym rogu rysunku — mozliwy pion / odplyw / kratka
+    ax.add_patch(Circle((NISZA_X + NISZA_W + 15, H + 8), 6, facecolor="none",
+                        edgecolor="#b00020", linewidth=1.2, zorder=6))
+    ax.text(NISZA_X + NISZA_W + 15, H + 22, "symbol ◯ z rysunku\npion/odpływ?",
+            fontsize=4.8, ha="center", color="#b00020")
+    # wymiar "161" z rysunku — znaczenie do potwierdzenia
+    ax.text(W - 8, H - 90, "„161” z rysunku\n— wymiar do\npotwierdzenia",
+            fontsize=4.8, ha="right", va="top", color="#b00020")
 
     # ROZA KIERUNKOW + skala
-    ax.text(W + 30, H, "N", ha="center", va="center", fontsize=10, fontweight="bold")
-    ax.annotate("", xy=(W + 30, H - 25), xytext=(W + 30, H + 15),
+    ax.text(W + 38, H, "N", ha="center", va="center", fontsize=10, fontweight="bold")
+    ax.annotate("", xy=(W + 38, H - 25), xytext=(W + 38, H + 15),
                 arrowprops=dict(arrowstyle="->", color="#000", lw=1.0))
-    ax.text(W + 30, H - 40, "skala\n1:50", ha="center", va="top", fontsize=6.5, color="#444")
+    ax.text(W + 38, H - 40, "skala\n1:50", ha="center", va="top", fontsize=6.5, color="#444")
 
     # TYTUL
-    ax.text(0, -25, "KARTA 1 / 3   ·   RZUT POMIESZCZENIA Z OŚWIETLENIEM   ·   skala 1:50",
-            fontsize=10, fontweight="bold", color="#222")
+    ax.text(0, -25, "KARTA 1 / 3   ·   RZUT POMIESZCZENIA Z OŚWIETLENIEM (v2, skorygowany)   ·   1:50",
+            fontsize=9.5, fontweight="bold", color="#222")
 
 
 def draw_rzut_legenda(ax):
@@ -425,9 +443,12 @@ def draw_elewacja_front(ax):
 
     ax.text(ox + W / 2, oy + H + 50, "FRONT — drzwi zamknięte (LED w belce L5 + piony L5)",
             ha="center", fontsize=8, fontweight="bold", color="#3a1f08")
+    ax.text(ox + W / 2, oy + H + 38,
+            "głębokość zabudowy 60 cm = wnęka mur. 40 cm + wystaje 20 cm do pokoju (AGD 60 cm)",
+            ha="center", fontsize=5.8, color="#b00020")
 
     # nagłówek karty
-    ax.text(-40, 330, "KARTA 2 / 3   ·   ELEWACJA + PRZEKRÓJ ZABUDOWY 266×250 cm",
+    ax.text(-40, 330, "KARTA 2 / 3   ·   ELEWACJA + PRZEKRÓJ ZABUDOWY 266×250 cm (v2)",
             fontsize=10, fontweight="bold", color="#222")
 
 
