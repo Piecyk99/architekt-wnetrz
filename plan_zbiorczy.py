@@ -17,7 +17,11 @@ COVE="#2ca02c"; BIAS="#ff7f0e"; SZAF="#7f7f7f"; BIUR="#9467bd"; COKOL="#1f77b4"
 ax.add_patch(Rectangle((0,0),493,456, fill=False, lw=4, ec=WALL))
 ax.add_patch(Rectangle((0,0),62,264, fill=True, fc="#f4f1ea", ec=WALL, lw=2))
 ax.plot([62,62],[10,254], color="#8a7f6a", lw=2.5, ls=(0,(6,4)))
-ax.plot([0,62],[264,264], color=WALL, lw=2)
+# scianka dzialowa - wystaje od szafy w glab (oddziela wneke szafy/biura od salonu)
+ax.plot([0,190],[264,264], color=WALL, lw=5, solid_capstyle="round")
+ax.plot([190,190],[264,300], color=WALL, lw=5, solid_capstyle="round")  # krotki zwrot
+ax.text(120,278,"scianka dzialowa", ha="center", va="center", fontsize=7.5,
+        color="#555", style="italic")
 # meble
 ax.add_patch(Rectangle((290,2),110,9, fc="#222", ec="#222"))
 ax.text(345,26,"TV", ha="center", fontsize=12, fontweight="bold")
