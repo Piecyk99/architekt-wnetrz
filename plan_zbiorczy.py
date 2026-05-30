@@ -60,7 +60,7 @@ def oczko(x,y,c,s=320,marker="o"):
 SALON_X=[200,320,440]; SALON_Y=[140,290]
 for x in SALON_X:
     for y in SALON_Y: oczko(x,y,C1)
-for x in [285,345,405]: oczko(x,60,C4,270,">")     # akcenty TV
+for x in [285,345,405]: oczko(x,60,C4,270,"^")     # akcenty TV - strzalka w gore, na sciane TV
 for y in [300,360,420]: oczko(40,y,C5,270)         # biuro
 for x,y in [(120,210),(215,210)]: oczko(x,y,C6,270)# przejscie
 for x,y in [(31,80),(31,200)]: oczko(x,y,C7o,250)  # szafa oczka
