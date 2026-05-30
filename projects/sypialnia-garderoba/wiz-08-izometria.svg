@@ -1,0 +1,217 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1100" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <pattern id="oakI" patternUnits="userSpaceOnUse" width="40" height="14" patternTransform="skewX(-30)">
+      <rect width="40" height="14" fill="#e8d2a8"/>
+      <line x1="0" y1="7" x2="40" y2="7" stroke="#c2a371" stroke-width="0.6"/>
+      <line x1="20" y1="0" x2="20" y2="14" stroke="#d4b58a" stroke-width="0.3"/>
+    </pattern>
+    <pattern id="walnutIso" patternUnits="userSpaceOnUse" width="18" height="50" patternTransform="rotate(-30)">
+      <rect width="18" height="50" fill="#6b4530"/>
+      <path d="M0 0 L18 50 M9 0 L18 25" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
+    </pattern>
+    <pattern id="lameleIso" patternUnits="userSpaceOnUse" width="14" height="20" patternTransform="skewY(30)">
+      <rect width="14" height="20" fill="#5b3826"/>
+      <rect x="5" width="6" height="20" fill="#3d2419"/>
+    </pattern>
+    <pattern id="boucleIso" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#b8b4ab"/>
+      <circle cx="3" cy="3" r="1" fill="#9a9690" opacity="0.6"/>
+    </pattern>
+    <linearGradient id="wall1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#faf6ec"/>
+      <stop offset="1" stop-color="#e8e2d2"/>
+    </linearGradient>
+    <linearGradient id="wall2" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ece6d6"/>
+      <stop offset="1" stop-color="#d6cfbc"/>
+    </linearGradient>
+  </defs>
+
+  <text x="40" y="40" font-size="26" font-weight="800" fill="#0a0a0a">Widok izometryczny: SYPIALNIA + GARDEROBA (cały zespół)</text>
+  <text x="40" y="64" font-size="13" fill="#555">izometria 30°/30° · widok od kąta południowo-wschodniego · ściany przeźroczyste zdjęte dla czytelności wnętrza</text>
+
+  <!-- izometryczne osie:
+       X (głębokość pokoju 4000 mm) → w prawo-w dół 30° (sypialnia)
+       Y (szerokość 3650 mm) → w prawo-w górę 30°
+       Z (wysokość 2500 mm) → w górę
+       1 mm = 0.12 px
+  -->
+
+  <!-- ============== PODŁOGA SYPIALNI ============== -->
+  <!-- prostokąt 3650 x 4000 -> w izometrii to romboid -->
+  <!-- punkty: A(lewy bok-przód), B(prawy-przód), C(prawy-tył), D(lewy-tył) -->
+  <g transform="translate(200, 600)">
+
+    <!-- SYPIALNIA PODŁOGA -->
+    <!-- skala mm→px: 1 mm = 0.12 -->
+    <!-- ax: 4000 * 0.12 * cos30 = 416 -->
+    <!-- ay: 4000 * 0.12 * sin30 = 240 -->
+    <!-- bx: 3650 * 0.12 * cos30 = 379 -->
+    <!-- by: 3650 * 0.12 * sin30 = 219 -->
+    <polygon points="0,0 416,-240 795,-21 379,219" fill="url(#oakI)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="397" y="-10" font-size="14" fill="#0a0a0a" font-weight="800" text-anchor="middle" opacity="0.5">SYPIALNIA · Barlinek dąb Almond</text>
+
+    <!-- ŚCIANY SYPIALNI - tylko ściany TYLNE i jedna BOCZNA dla czytelności -->
+    <!-- ściana okienna (tylna w izometrii): od C do D, wysokość 2500 mm = 300 px -->
+    <!-- C = (795, -21), D = (416, -240). Idziemy w górę o 300 -->
+    <polygon points="416,-240 795,-21 795,-321 416,-540" fill="url(#wall1)" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- okno w tej ścianie -->
+    <polygon points="540,-355 700,-263 700,-180 540,-272" fill="#bfe1f3" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="620" y="-380" font-size="10" fill="#0a0a0a" font-weight="700" text-anchor="middle">OKNO 1500×1400</text>
+
+    <!-- LAMELE ORZECH ROYAL na ścianie okiennej (cała ściana 4000×2500) -->
+    <polygon points="416,-240 795,-21 795,-321 416,-540" fill="url(#walnutIso)" opacity="0.7" stroke="none"/>
+    <!-- pasy lameli pionowe -->
+    <g stroke="#3d2419" stroke-width="0.6" opacity="0.55">
+      <line x1="450" y1="-271" x2="450" y2="-571"/>
+      <line x1="490" y1="-248" x2="490" y2="-548"/>
+      <line x1="530" y1="-225" x2="530" y2="-525"/>
+      <line x1="570" y1="-202" x2="570" y2="-502"/>
+      <line x1="610" y1="-179" x2="610" y2="-479"/>
+      <line x1="650" y1="-156" x2="650" y2="-456"/>
+      <line x1="690" y1="-133" x2="690" y2="-433"/>
+      <line x1="730" y1="-110" x2="730" y2="-410"/>
+      <line x1="770" y1="-87" x2="770" y2="-387"/>
+    </g>
+    <text x="500" y="-450" font-size="11" fill="#fff" font-weight="800" transform="rotate(-30 500 -450)">LAMELE H3734 ORZECH ROYAL</text>
+
+    <!-- ściana lewa (boczna, krótka) - 3650 mm wide, 2500 wys -->
+    <!-- A = (0,0), B = (379, 219), AB widziane od strony - rysuję ścianę z wewnątrz, idącą w górę -->
+    <polygon points="0,0 379,219 379,-81 0,-300" fill="url(#wall2)" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- drzwi do sypialni 80x210 w środku tej ściany -->
+    <polygon points="120,69 290,167 290,-83 120,-181" fill="url(#oakI)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="205" y="0" font-size="10" fill="#0a0a0a" font-weight="700" text-anchor="middle" transform="rotate(30 205 0)">DRZWI SYPIALNI</text>
+    <text x="205" y="14" font-size="9" fill="#444" text-anchor="middle" transform="rotate(30 205 14)">80×210 H3734</text>
+    <!-- LUSTRO w czarnej ramie na tej ścianie -->
+    <polygon points="20,-50 110,2 110,-235 20,-287" fill="#3a4654" stroke="#0a0a0a" stroke-width="3"/>
+    <text x="65" y="-150" font-size="9" fill="#bcc8d8" font-weight="700" text-anchor="middle" transform="rotate(30 65 -150)">LUSTRO 60×180</text>
+    <!-- KINKIET dekoracyjny obok lustra -->
+    <circle cx="170" cy="-260" r="14" fill="#fff4d0" stroke="#000" stroke-width="2"/>
+    <text x="170" y="-256" font-size="10" font-weight="700" fill="#0a0a0a" text-anchor="middle">K</text>
+
+    <!-- ŁÓŻKO 160 × 200 (centrowane, dosunięte do ściany okiennej) -->
+    <!-- pozycja od ściany okiennej: noga łóżka 'wezgłowie' dotyka ściany, długość łóżka 200 cm idzie w stronę widza -->
+    <!-- skala: 160 wide = 19.2*0.12 = 23 (źle) - faktycznie 160 → 19.2 px, ale to za mało dla widoku -->
+    <!-- skala płaska 1 mm = 0.12, więc 1600 mm szer = 192 px, 2000 mm dług = 240 px -->
+    <!-- pozycja: środek łóżka 1825 od lewej ściany, 100 od ściany okiennej (wezgłowie pod ścianą) -->
+    <!-- przelicz na izometria: noga łóżka w pozycji (1825-800, 100) = (1025, 100) od narożnika A -->
+    <!-- w isometric: x'=1025*0.12*cos30 + 100*0.12*cos(-30) = 106 + 10 = 116? -->
+    <!-- uproszczam: lokalizuję łóżko manualnie -->
+
+    <!-- wezgłowie boucle (dosunięte do ściany okiennej) -->
+    <polygon points="350,-105 614,47 614,-19 350,-171" fill="url(#boucleIso)" stroke="#444" stroke-width="1"/>
+    <!-- rama łóżka -->
+    <polygon points="365,-95 595,38 595,72 365,-61" fill="url(#boucleIso)" stroke="#444" stroke-width="1"/>
+    <!-- materac -->
+    <polygon points="375,-89 585,32 585,57 375,-64" fill="#fffdf6" stroke="#0a0a0a" stroke-width="1.5"/>
+    <!-- poduszki -->
+    <polygon points="385,-86 470,-37 470,-20 385,-69" fill="#f0ebe0" stroke="#999"/>
+    <polygon points="475,-31 570,24 570,40 475,-15" fill="#f0ebe0" stroke="#999"/>
+    <text x="480" y="0" font-size="11" fill="#0a0a0a" font-weight="800" text-anchor="middle" transform="rotate(30 480 0)">ŁÓŻKO 160×200</text>
+
+    <!-- nocne stoliki wiszące orzech -->
+    <polygon points="335,-114 360,-99 360,-71 335,-86" fill="url(#walnutIso)" stroke="#000"/>
+    <polygon points="610,45 635,60 635,88 610,73" fill="url(#walnutIso)" stroke="#000"/>
+
+    <!-- kinkiety K1 K2 (małe punkty) -->
+    <circle cx="340" cy="-128" r="5" fill="#0a0a0a"/>
+    <circle cx="612" cy="32" r="5" fill="#0a0a0a"/>
+
+    <!-- LAMPA WISZĄCA centralna -->
+    <line x1="397" y1="-470" x2="397" y2="-200" stroke="#0a0a0a" stroke-width="1.5"/>
+    <circle cx="397" cy="-180" r="20" fill="#0a0a0a"/>
+    <text x="420" y="-200" font-size="9" fill="#0a0a0a">Muuto Fluid</text>
+
+    <!-- gzyms LED 2700K - pas po obwodzie sufitu (krótkie ściany) -->
+    <polygon points="416,-540 795,-321 795,-326 416,-545" fill="#fff4d0"/>
+    <polygon points="0,-300 379,-81 379,-86 0,-305" fill="#fff4d0"/>
+
+    <!-- ============== GARDEROBA — DOŁĄCZONA Z PRAWEJ STRONY ============== -->
+    <!-- garderoba 2360 × 2190 × 2490 -->
+    <!-- pozycja: za prawą ścianą sypialni (od B do C kierunek), wystaje 2190 mm na zewnątrz -->
+    <!-- prawa ściana sypialni: od B(379,219) do C(795,-21) - to ściana 4000 mm długa (= długa ściana) -->
+    <!-- garderoba przylega do CZĘŚCI tej ściany (2360 mm z 4000 mm) i wystaje na 2190 mm prostopadle -->
+
+    <!-- punkt początku garderoby na ścianie sypialni: powiedzmy że garderoba zaczyna się 820 mm od narożnika B -->
+    <!-- B + 820*0.12 (cos-30, sin-30) = (379 + 85, 219 - 49) = (464, 170) -->
+    <!-- B + (820 + 2360)*0.12 = (379 + 331, 219 - 191) = (710, 28) -->
+    <!-- wystaje na zewnątrz: prostopadle 2190 mm w kierunku (cos30, sin30) -->
+    <!-- E = (464 + 228, 170 + 132) = (692, 302), F = (710 + 228, 28 + 132) = (938, 160) -->
+
+    <polygon points="464,170 710,28 938,160 692,302" fill="url(#oakI)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="700" y="170" font-size="13" fill="#5b3826" font-weight="800" text-anchor="middle" transform="rotate(15 700 170)" opacity="0.5">GARDEROBA</text>
+
+    <!-- ŚCIANY GARDEROBY -->
+    <!-- ściana frontowa wspólna z sypialnią (od 464,170 do 710,28) - wystająca w górę 2490 mm = 299 px -->
+    <polygon points="464,170 710,28 710,-271 464,-129" fill="url(#wall1)" stroke="#0a0a0a" stroke-width="2" opacity="0.4"/>
+    <!-- drzwi przesuwne 900 mm w środku tej ściany -->
+    <polygon points="525,134 645,65 645,-186 525,-117" fill="url(#walnutIso)" stroke="#000" stroke-width="2"/>
+    <text x="585" y="-30" font-size="9" fill="#fff" font-weight="800" text-anchor="middle" transform="rotate(-30 585 -30)">DRZWI PRZES. 900×2100</text>
+    <text x="585" y="-15" font-size="8" fill="#fff" text-anchor="middle" transform="rotate(-30 585 -15)">H3734 · Sevroll Lounge</text>
+
+    <!-- ściana boczna ONA (lewa od wejścia, czyli od 464,170 do 692,302) -->
+    <polygon points="464,170 692,302 692,3 464,-129" fill="url(#walnutIso)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="580" y="170" font-size="10" fill="#fff" font-weight="800" text-anchor="middle" transform="rotate(30 580 170)">ONA · A1+A2+A3 · otwarte półki</text>
+    <!-- półki poziome -->
+    <g stroke="#fff" stroke-width="0.5" opacity="0.4">
+      <line x1="464" y1="100" x2="692" y2="232"/>
+      <line x1="464" y1="30" x2="692" y2="162"/>
+      <line x1="464" y1="-40" x2="692" y2="92"/>
+      <line x1="464" y1="-110" x2="692" y2="22"/>
+    </g>
+
+    <!-- ściana boczna ON (prawa, od 710,28 do 938,160) -->
+    <polygon points="710,28 938,160 938,-139 710,-271" fill="url(#walnutIso)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="825" y="40" font-size="10" fill="#fff" font-weight="800" text-anchor="middle" transform="rotate(30 825 40)">ON · B1+B2+B3 · otwarte półki</text>
+    <!-- półki poziome -->
+    <g stroke="#fff" stroke-width="0.5" opacity="0.4">
+      <line x1="710" y1="-42" x2="938" y2="90"/>
+      <line x1="710" y1="-112" x2="938" y2="20"/>
+      <line x1="710" y1="-182" x2="938" y2="-50"/>
+      <line x1="710" y1="-252" x2="938" y2="-120"/>
+    </g>
+
+    <!-- ściana tylna garderoby (= przeciwlegla do front wall) -->
+    <!-- od 692,302 do 938,160 - z headerem na górze i panelami przesuwnymi w dolnej części -->
+    <polygon points="692,302 938,160 938,-139 692,3" fill="url(#wall1)" stroke="#0a0a0a" stroke-width="2" opacity="0.4"/>
+    <!-- HEADER drewniany (góra 400 mm = 48 px) -->
+    <polygon points="692,3 938,-139 938,-187 692,-45" fill="url(#walnutIso)" stroke="#000" stroke-width="2"/>
+    <text x="815" y="-95" font-size="10" fill="#fff" font-weight="800" text-anchor="middle" transform="rotate(-30 815 -95)">HEADER 2360×400 H3734</text>
+    <!-- 2 panele przesuwne -->
+    <polygon points="692,302 815,231 815,-67 692,3" fill="url(#walnutIso)" stroke="#000" stroke-width="2"/>
+    <polygon points="815,231 938,160 938,-139 815,-67" fill="url(#walnutIso)" stroke="#000" stroke-width="2"/>
+    <!-- uchwyty pionowe Sevroll Lounge -->
+    <line x1="810" y1="220" x2="810" y2="-50" stroke="#000" stroke-width="3"/>
+    <line x1="820" y1="222" x2="820" y2="-48" stroke="#000" stroke-width="3"/>
+    <text x="755" y="120" font-size="9" fill="#fff" font-weight="700" text-anchor="middle" transform="rotate(-30 755 120)">PANEL 1</text>
+    <text x="880" y="50" font-size="9" fill="#fff" font-weight="700" text-anchor="middle" transform="rotate(-30 880 50)">PANEL 2</text>
+
+    <!-- chodnik w garderobie - jasna deska podłogi widoczna -->
+    <!-- spoty LED 3000K nad chodnikiem -->
+    <circle cx="700" cy="-205" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <circle cx="775" cy="-162" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <circle cx="850" cy="-119" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+
+  </g>
+
+  <!-- ============== ETYKIETY i WYMIARY GŁÓWNE ============== -->
+  <g transform="translate(60, 850)">
+    <text font-size="14" font-weight="800" fill="#0a0a0a">Oznaczenia w izometrii:</text>
+    <text y="22" font-size="11" fill="#222">• Sypialnia (lewa część, większa): podłoga Barlinek Almond + ściana okienna pokryta lamelami H3734 + łóżko centralne z wezgłowiem boucle + lampa wisząca</text>
+    <text y="40" font-size="11" fill="#222">• Garderoba (prawa część, mniejsza, U-shape): otwarte ściany ONA + ON w orzechu H3734 + tylna ściana z headerem + 2 panelami przesuwnymi + chodnik środkowy</text>
+    <text y="58" font-size="11" fill="#222">• Drzwi przesuwne kasetowe 900×2100 w ścianie wspólnej (front orzech H3734, uchwyt Sevroll Lounge czarny pełnowysokościowy)</text>
+    <text y="76" font-size="11" fill="#222">• Drzwi sypialni 80×210 (orzech H3734, klamka czarna mat) + lustro 60×180 + kinkiet dekoracyjny na ścianie wejściowej</text>
+    <text y="94" font-size="11" fill="#222">• Spoty LED 3000K nad chodnikiem garderoby + gzyms LED 2700K po obwodzie sufitu sypialni</text>
+    <text y="112" font-size="11" fill="#5b3826" font-weight="700">• Podłoga: deska Barlinek dąb Almond przechodzi z sypialni do garderoby BEZ progu (kontynuacja 1:1, jedna partia produkcyjna)</text>
+
+    <g transform="translate(820, 0)">
+      <text font-size="14" font-weight="800" fill="#0a0a0a">Wymiary główne:</text>
+      <text y="22" font-size="11" fill="#222">• Sypialnia: 3650 (szer) × 4000 (głęb) × 2500 (h) mm = 14,6 m²</text>
+      <text y="40" font-size="11" fill="#222">• Garderoba: 2360 (front) × 2190 (głęb) × 2490 (h) mm = 5,2 m²</text>
+      <text y="58" font-size="11" fill="#222">• Powierzchnia całkowita zespołu: 19,8 m²</text>
+      <text y="76" font-size="11" fill="#222">• Garderoba przylega do ściany dłuższej sypialni (4000 mm), centrowana</text>
+      <text y="94" font-size="11" fill="#222">• Łóżko centrowane wzdłuż ściany okiennej, 32+32 cm zapasu bocznego do ścian</text>
+      <text y="112" font-size="11" fill="#222">• Lampa wisząca w środku pokoju, spód 2150 mm od podłogi</text>
+    </g>
+  </g>
+</svg>

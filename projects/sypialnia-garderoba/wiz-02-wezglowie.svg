@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ledGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="lameleE" patternUnits="userSpaceOnUse" width="35" height="50">
+      <rect width="35" height="50" fill="#6b4530"/>
+      <rect x="0" width="25" height="50" fill="#7a4f37"/>
+      <rect x="25" width="10" height="50" fill="#3d2419"/>
+      <path d="M0 0 L25 50" stroke="#5b3826" stroke-width="0.4" opacity="0.7"/>
+    </pattern>
+    <pattern id="boucleE" patternUnits="userSpaceOnUse" width="8" height="8">
+      <rect width="8" height="8" fill="#b8b4ab"/>
+      <circle cx="4" cy="4" r="1.5" fill="#9a9690" opacity="0.65"/>
+    </pattern>
+    <pattern id="floorE" patternUnits="userSpaceOnUse" width="80" height="20">
+      <rect width="80" height="20" fill="#dec6a3"/>
+      <line x1="0" y1="10" x2="80" y2="10" stroke="#b89866" stroke-width="0.6"/>
+      <line x1="40" y1="0" x2="40" y2="20" stroke="#c4a47a" stroke-width="0.4"/>
+    </pattern>
+  </defs>
+
+  <text x="40" y="40" font-size="24" font-weight="700" fill="#111">Elewacja — ściana wezgłowiowa (okienna)</text>
+  <text x="40" y="62" font-size="12" fill="#555">2360 × 2500 mm · widok od strony łóżka · łóżko dosunięte do lewej ściany</text>
+
+  <g transform="translate(220, 100)">
+    <!-- sufit z gzymsem LED nad ścianą -->
+    <rect x="-20" y="-20" width="866" height="22" fill="#f0eee9" stroke="#111" stroke-width="2"/>
+    <rect x="0" y="0" width="826" height="14" fill="#fff4d0" opacity="0.95"/>
+    <rect x="-20" y="-20" width="866" height="200" fill="url(#ledGlow)" opacity="0.5" pointer-events="none"/>
+    <text x="413" y="-26" font-size="11" fill="#a47e00" font-weight="700" text-anchor="middle">▓ GZYMS LED 2700K wnęka 60×25 mm, ściemnialny</text>
+
+    <!-- lamele orzech H3734 — pełna szerokość 2360 mm, od podłogi do sufitu -->
+    <rect x="0" y="14" width="826" height="824" fill="url(#lameleE)"/>
+
+    <!-- OKNO 1200×1400 wycięte w lamelach, centralnie nad wezgłowiem (=środek łóżka 1600 dosuniętego do lewej → środek=280 px od lewej) -->
+    <g transform="translate(70, 88)">
+      <rect width="420" height="490" fill="#b8d8e8" stroke="#111" stroke-width="3"/>
+      <line x1="210" y1="0" x2="210" y2="490" stroke="#fff" stroke-width="3"/>
+      <line x1="0" y1="245" x2="420" y2="245" stroke="#fff" stroke-width="3"/>
+      <!-- parapet -->
+      <rect x="-10" y="490" width="440" height="14" fill="#e8e4dd" stroke="#111" stroke-width="2"/>
+      <text x="210" y="-10" font-size="11" fill="#111" text-anchor="middle" font-weight="700">OKNO 1200 × 1400 (parapet 850)</text>
+    </g>
+
+    <!-- WEZGŁOWIE boucle 1600 × 1100 mm = 560 × 385 px, dosunięte do LEWEJ ściany (przy 0 px) -->
+    <g transform="translate(0, 403)">
+      <rect width="560" height="385" fill="url(#boucleE)" stroke="#444" stroke-width="2" rx="6"/>
+      <!-- przeszycia pionowe co 200 mm (= 70 px) -->
+      <g stroke="#7a7770" stroke-width="1.2" opacity="0.8">
+        <line x1="70" y1="0" x2="70" y2="385"/>
+        <line x1="140" y1="0" x2="140" y2="385"/>
+        <line x1="210" y1="0" x2="210" y2="385"/>
+        <line x1="280" y1="0" x2="280" y2="385"/>
+        <line x1="350" y1="0" x2="350" y2="385"/>
+        <line x1="420" y1="0" x2="420" y2="385"/>
+        <line x1="490" y1="0" x2="490" y2="385"/>
+      </g>
+      <text x="280" y="195" font-size="14" fill="#3a3733" text-anchor="middle" font-weight="700">WEZGŁOWIE BOUCLE</text>
+      <text x="280" y="214" font-size="11" fill="#3a3733" text-anchor="middle">160 × 110 cm, montaż na Z-bar</text>
+      <text x="280" y="230" font-size="10" fill="#3a3733" text-anchor="middle" opacity="0.7">lewy bok wezgłowia styka się ze ścianą boczną</text>
+    </g>
+
+    <!-- KINKIETY K1, K2 wbudowane w lamele nad wezgłowiem -->
+    <g transform="translate(180, 460)">
+      <circle r="14" fill="#111" stroke="#fff" stroke-width="2"/>
+      <circle r="6" fill="#fff4d0"/>
+      <text y="34" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">K1</text>
+      <text y="48" font-size="9" fill="#fff" text-anchor="middle">Astro Enna 3000K</text>
+    </g>
+    <g transform="translate(420, 460)">
+      <circle r="14" fill="#111" stroke="#fff" stroke-width="2"/>
+      <circle r="6" fill="#fff4d0"/>
+      <text y="34" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">K2</text>
+      <text y="48" font-size="9" fill="#fff" text-anchor="middle">Astro Enna 3000K</text>
+    </g>
+
+    <!-- NOCNA prawa (jedna — po prawej stronie łóżka, dolna część za wezgłowiem) -->
+    <g transform="translate(580, 700)">
+      <rect width="160" height="60" fill="#5b3826" stroke="#222" stroke-width="2"/>
+      <line x1="80" y1="20" x2="80" y2="60" stroke="#111" stroke-width="0.5"/>
+      <rect x="68" y="32" width="24" height="4" fill="#111"/>
+      <text x="80" y="82" font-size="10" fill="#fff" text-anchor="middle" font-weight="700">NOC P</text>
+      <text x="80" y="94" font-size="9" fill="#ddd" text-anchor="middle">45×40, orzech H3734</text>
+    </g>
+
+    <!-- ŁÓŻKO rama (160 cm × 200 cm — widzimy tu długi bok 160 cm od strony szczytowej) -->
+    <g transform="translate(0, 760)">
+      <rect width="560" height="78" fill="#9d9286"/>
+      <rect y="62" width="560" height="16" fill="url(#boucleE)"/>
+      <text x="280" y="42" font-size="11" fill="#fff" text-anchor="middle" font-weight="700">ŁÓŻKO 160 × 200 cm, rama tapicerowana boucle, h 250 mm</text>
+      <text x="280" y="58" font-size="10" fill="#fff" text-anchor="middle" opacity="0.85">lewy bok ramy styka się ze ścianą boczną (bez nocnej z lewej)</text>
+    </g>
+
+    <!-- LED bursztyn pod łóżkiem z PIR -->
+    <rect x="0" y="826" width="560" height="3" fill="#ffaa55" opacity="0.85"/>
+    <text x="280" y="845" font-size="9" fill="#a35a00" font-weight="700" text-anchor="middle">▓ LED 1800K bursztyn + PIR (pod łóżkiem na podłodze)</text>
+
+    <!-- PODŁOGA -->
+    <rect x="-20" y="838" width="866" height="40" fill="url(#floorE)" stroke="#111" stroke-width="2"/>
+    <!-- listwa cokołowa czarna 100 mm = 35 px wys, ale na elewacji jest pokazana jako pas u dołu ściany -->
+    <rect x="-20" y="838" width="866" height="9" fill="#111"/>
+    <text x="413" y="900" font-size="10" fill="#444" text-anchor="middle">PODŁOGA: Barlinek dąb Almond olej · listwa aluminiowa czarna mat 100 mm</text>
+
+    <!-- wymiary -->
+    <line x1="0" y1="932" x2="826" y2="932" stroke="#111" stroke-width="1"/>
+    <line x1="0" y1="927" x2="0" y2="937" stroke="#111" stroke-width="1"/>
+    <line x1="826" y1="927" x2="826" y2="937" stroke="#111" stroke-width="1"/>
+    <text x="413" y="950" font-size="13" font-weight="700" fill="#111" text-anchor="middle">2360 mm (krótka ściana = szerokość pokoju)</text>
+
+    <line x1="856" y1="14" x2="856" y2="838" stroke="#111" stroke-width="1"/>
+    <line x1="851" y1="14" x2="861" y2="14" stroke="#111" stroke-width="1"/>
+    <line x1="851" y1="838" x2="861" y2="838" stroke="#111" stroke-width="1"/>
+    <text x="884" y="426" font-size="13" font-weight="700" fill="#111" transform="rotate(-90 884 426)" text-anchor="middle">2500 mm (wysokość)</text>
+
+    <!-- wymiary szczegółowe pozycji łóżka i wezgłowia -->
+    <line x1="0" y1="403" x2="0" y2="838" stroke="#c46b1f" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <line x1="560" y1="403" x2="560" y2="838" stroke="#c46b1f" stroke-width="0.5" stroke-dasharray="2 2"/>
+    <text x="280" y="985" font-size="10" fill="#c46b1f" text-anchor="middle" font-weight="700">łóżko + wezgłowie 1600 mm dosunięte do lewej ściany · 760 mm rezerwy po prawej (nocna 450 + przejście 310)</text>
+  </g>
+
+  <!-- spec -->
+  <g transform="translate(40, 1020)">
+    <text font-size="13" font-weight="700" fill="#111">Specyfikacja:</text>
+    <text x="0" y="20" font-size="11" fill="#333">Lamele MDF 95×20 mm fornir orzech Egger H3734 mat · fuga 5 mm · klej na płycie MDF 12 mm · stelaż GK ze wzmocnieniami listwą 50×30 na 4 poziomach</text>
+    <text x="0" y="36" font-size="11" fill="#333">Wezgłowie tapicerowane boucle szary jasny 160×110 cm, przeszycia co 200 mm · zawieszki Z-bar · ten sam materiał na ramie łóżka</text>
+    <text x="0" y="52" font-size="11" fill="#333">Kinkiety czytania wbudowane między lamele wys. 1300 mm, ściemnialne 3000K CRI&gt;90 · gzyms LED 2700K po obwodzie ściany krótkiej</text>
+  </g>
+</svg>
