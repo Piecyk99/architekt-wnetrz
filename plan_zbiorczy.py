@@ -43,8 +43,8 @@ def tag(x,y,t,color,fs=8):
 
 run([(80,55),(470,55),(470,430),(250,430)], COVE, 9)        # L1 cove
 tag(160,55,"L1 COVE ~10 m", COVE)
-run([(285,30),(285,8),(405,8),(405,30)], BIAS, 7)            # L2 bias
-tag(345,42,"L2 BIAS 3.5 m", BIAS)
+ax.add_patch(Rectangle((292,15),106,26, fill=False, ec=BIAS, lw=4, zorder=4))  # L2 bias - ramka za TV
+tag(345,52,"L2 BIAS za TV ~3.5 m", BIAS)
 run([(16,60),(16,240)], SZAF, 7)                             # L3 szafa
 tag(40,250,"L3 2.4 m", SZAF)
 run([(12,300),(12,420)], BIUR, 6)                            # L4 biurko
