@@ -61,25 +61,23 @@ for y in [300,360,420]: oczko(40,y,C5,270)         # biuro
 for x,y in [(120,210),(215,210)]: oczko(x,y,C6,270)# przejscie
 for x,y in [(31,80),(31,200)]: oczko(x,y,C7o,250)  # szafa oczka
 
-# ============ OTWOR (przejscie do kuchni/korytarza) + PANELE ============
-# otwarte przejscie w lewej scianie (bez drzwi) - ciag komunikacyjny
-ax.plot([0,0],[285,400], color="white", lw=8, zorder=3)          # "wyciety" otwor
-# osciezia otworu
-ax.plot([-6,6],[285,285], color=WALL, lw=3, zorder=3)
-ax.plot([-6,6],[400,400], color=WALL, lw=3, zorder=3)
-ax.annotate("", xy=(55,342), xytext=(-42,342),
+# ====== OTWOR (przejscie do kuchni) - centralnie OBOK TV + PANELE ======
+# otwarte przejscie w GORNEJ scianie, tuz obok TV (z lewej) - ciag komunikacyjny
+ax.plot([185,278],[0,0], color="white", lw=8, zorder=3)          # "wyciety" otwor
+ax.plot([185,185],[-8,8], color=WALL, lw=3, zorder=3)            # osciezia
+ax.plot([278,278],[-8,8], color=WALL, lw=3, zorder=3)
+ax.annotate("", xy=(231,50), xytext=(231,-16),
             arrowprops=dict(arrowstyle="->", color="#caa800", lw=2.4), zorder=9)
-ax.text(-30,300,"OTWOR\n-> KUCHNIA /\nKORYTARZ\n(drzwi wejsc.\ndo domu)",
-        rotation=0, ha="right", va="center",
-        fontsize=8.5, fontweight="bold", color="#caa800")
+ax.text(231,-40,"OTWOR  ->  KUCHNIA / KORYTARZ\n(obok TV; dalej drzwi wejsc. do domu)",
+        ha="center", va="center", fontsize=8.5, fontweight="bold", color="#caa800")
 
 def panel(x,y,t):
     ax.add_patch(FancyBboxPatch((x,y),66,30, boxstyle="round,pad=2",
                  fc="#fff7d6", ec="#caa800", lw=2, zorder=8))
     ax.text(x+33,y+15,t, ha="center", va="center", fontsize=8.5,
             fontweight="bold", color="#7a5c00", zorder=9)
-panel(100,305,"WP wejscie")     # panel glowny przy wejsciu (lewa strona)
-panel(100,235,"WB biurko")      # panel dodatkowy przy biurku
+panel(185,82,"WP wejscie")      # panel glowny przy otworze (obok TV)
+panel(95,300,"WB biurko")       # panel dodatkowy przy biurku
 
 # ============ LEGENDA ============
 ocz=[(C1,"Oczka SALON (ob.1) - 6 szt"),
@@ -111,7 +109,7 @@ ax.text(560,150,
  fontsize=9, va="top",
  bbox=dict(boxstyle="round,pad=0.6", fc="#f3f7ff", ec="#3a6ea5"))
 
-ax.set_xlim(-40,940); ax.set_ylim(-20,490)
+ax.set_xlim(-40,940); ax.set_ylim(-62,490)
 ax.invert_yaxis(); ax.set_aspect("equal"); ax.axis("off")
 ax.set_title("ZBIORCZY PLAN OSWIETLENIA - oczka + listwy LED",
              fontsize=15, fontweight="bold", pad=12)
