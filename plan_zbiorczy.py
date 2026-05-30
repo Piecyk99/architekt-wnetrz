@@ -61,15 +61,26 @@ for y in [300,360,420]: oczko(40,y,C5,270)         # biuro
 for x,y in [(120,210),(215,210)]: oczko(x,y,C6,270)# przejscie
 for x,y in [(31,80),(31,200)]: oczko(x,y,C7o,250)  # szafa oczka
 
-# ============ PANELE ============
+# ============ WEJSCIE (lewa sciana) + PANELE ============
+import numpy as np
+# otwor drzwiowy w lewej scianie (dolno-srodkowa czesc)
+ax.plot([0,0],[300,390], color="white", lw=7, zorder=3)          # "wyciety" otwor
+ax.plot([0,0],[300,390], color="#888", lw=1.4, ls=(0,(2,2)), zorder=3)
+th=np.linspace(0, np.pi/2, 30)                                    # luk drzwi
+ax.plot(85*np.sin(th), 390-85*np.cos(th), color="#999", lw=1.2, zorder=3)
+ax.plot([0,85],[390,390], color="#999", lw=1.4, zorder=3)
+ax.annotate("", xy=(48,345), xytext=(-30,345),
+            arrowprops=dict(arrowstyle="->", color="#caa800", lw=2.2), zorder=9)
+ax.text(-34,345,"WEJSCIE", rotation=90, ha="center", va="center",
+        fontsize=10, fontweight="bold", color="#caa800")
+
 def panel(x,y,t):
     ax.add_patch(FancyBboxPatch((x,y),66,30, boxstyle="round,pad=2",
                  fc="#fff7d6", ec="#caa800", lw=2, zorder=8))
     ax.text(x+33,y+15,t, ha="center", va="center", fontsize=8.5,
             fontweight="bold", color="#7a5c00", zorder=9)
-panel(415,22,"WP wejscie")
-ax.text(452,12,"WEJSCIE", fontsize=8.5, fontweight="bold", color="#caa800")
-panel(92,300,"WB biurko")
+panel(100,305,"WP wejscie")     # panel glowny przy wejsciu (lewa strona)
+panel(100,235,"WB biurko")      # panel dodatkowy przy biurku
 
 # ============ LEGENDA ============
 ocz=[(C1,"Oczka SALON (ob.1) - 6 szt"),
