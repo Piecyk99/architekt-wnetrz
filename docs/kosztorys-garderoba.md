@@ -161,6 +161,109 @@
 
 ---
 
+## 9.4 Wariant ekonomiczny "BUDŻET 13 500 zł" — konkretne zamienniki
+
+Poniżej kompletna lista konkretnych modeli zamienników z dostawcami i cenami. Każda pozycja niezależna — można zastosować wybiórczo.
+
+### 9.4.1 Drzwi przesuwne — 1 lustro zamiast 2
+
+| Co kupić | Model / Dostawca | Cena |
+|---|---|---:|
+| Lustro 4 mm na MDF 14 mm + folia anti-shatter (1180 × 2390) | Glas-Pol / Lustrosystem / lokalny szklarz | 480 zł (1 szt) |
+| Płyta MDF 18 mm + okleina H3734 ST9 obustronnie 1180 × 2390 | Korner (przy zamówieniu głównym) | ~250 zł |
+| Okleina ABS 2 mm H3734 klej PUR (4 strony panelu MDF, ~7,1 mb) | Korner | ~178 zł |
+| Rama aluminium czarny mat 20 mm (tylko lustro, 7,3 mb) | Sevroll / Komandor | 255 zł |
+| **Pozycja po zmianie** | | **1 163 zł** |
+| **Pozycja w wariancie 2 lustra** | | 1 471 zł |
+| **Oszczędność** | | **−308 zł** |
+
+### 9.4.2 Szuflady — Häfele Matrix Box P zamiast Blum Legrabox
+
+| Pozycja | Blum Legrabox (oryginał) | Häfele Matrix Box P (zamiennik) | Δ |
+|---|---:|---:|---:|
+| Legrabox K H134 + BLUMOTION 500 mm (A2/B2, 6 szt) | 1 740 zł (290 zł × 6) | 1 020 zł (170 zł × 6) | −720 zł |
+| Legrabox C H192 + BLUMOTION 350 mm (C1/C2/C3, 8 szt) | 1 920 zł (240 zł × 8) | 1 240 zł (155 zł × 8) | −680 zł |
+| **RAZEM szuflady** | **3 660 zł** | **2 260 zł** | **−1 400 zł** |
+
+**Dostawca:** Häfele.pl, sklepystolarskie.pl, lub Komandor (autoryzowany dystrybutor).  
+**Co się traci:** Front szuflady Häfele ma cieńszą ściankę (12 mm vs 13 mm Blum), wykończenie powierzchni mat antracyt zamiast Orion-grey, soft-close obecny ale o krótszym czasie tłumienia. **Pełna kompatybilność z systemem 32 wierceń** — żadna zmiana w korpusie.
+
+### 9.4.3 Oświetlenie LED — zamienniki tańsze
+
+| Pozycja | Premium (Paulmann / Mean Well) | Budżet (LedHurt / Tracon / Tope) | Δ |
+|---|---:|---:|---:|
+| Taśma LED 24V 14.4 W/m 3000K (6 mb) | 390 zł (Paulmann ECO, CRI ≥ 90) | 120 zł (LedHurt 24V 14.4W CRI 80) | −270 zł |
+| Profil aluminiowy nakładany 580 mm (18 szt) | 450 zł (Paulmann YourLED) | 270 zł (Tope Lighting LP-001) | −180 zł |
+| Zasilacz 100W 24V (2 szt) | 440 zł (Mean Well HLG-100H-24A) | 260 zł (Tracon TR-PD-100-24) | −180 zł |
+| Zasilacz 60W 24V (1 szt) | 175 zł (Mean Well HLG-60H-24A) | 95 zł (Tracon TR-PD-60-24) | −80 zł |
+| **RAZEM LED bazowe** | **1 455 zł** | **745 zł** | **−710 zł** |
+
+**Dostawca:** ledhurt.pl, topelighting.pl, sklep-onninen.pl, Allegro.  
+**Co się traci:** CRI 80 zamiast 90 (lekko gorsza wierność barw na ubraniach), gwarancja 2 lata zamiast 5, brak ściemniania PWM bez migotania (Mean Well ma dimmer-friendly konstrukcję). **W garderobie różnica niewidoczna gołym okiem** — Paulmann ma sens głównie pod lustrem łazienki, nie tutaj.
+
+### 9.4.4 Pantograf → klasyczny pólkochwyt
+
+| Pozycja | Pantograf Hettich (oryginał) | Pólkochwyt + drążek dolny | Δ |
+|---|---:|---:|---:|
+| A2 + B2 mechanizm wysuwny 6-ramienny | 580 zł (290 zł × 2) | 80 zł (drążek 40 zł × 2) | −500 zł |
+
+**Co się traci:** spodnie wiszą zamiast leżeć poziomo — zajmują wysokość 1200 mm (długość spodni) zamiast 200 mm. **W module A2/B2 (między antresolą h=2000 a wieńcem dolnym h=190) miejsca jest 1810 mm, więc wiszące spodnie się zmieszczą**, ale ograniczy to liczbę poziomych półek (zostanie tylko drążek + 1 półka pod nim).
+
+### 9.4.5 Profile uchwytów drzwi przesuwnych — generyk
+
+| Pozycja | Sevroll Lounge oryginalny | Profil generyczny czarny mat | Δ |
+|---|---:|---:|---:|
+| Profil pionowy 2390 mm (2 szt) | 190 zł (95 zł × 2) | 110 zł (55 zł × 2) | −80 zł |
+
+**Dostawca:** Allegro "profil uchwyt szafa przesuwna czarny", AluPro PL.  
+**Co się traci:** mniejsza tolerancja wykonania (±0,5 mm zamiast ±0,2 mm), gorsza farba proszkowa (może z czasem matowieć przy częstym dotykaniu). **Wizualnie 95 % zgodności.**
+
+### 9.4.6 Nogi cokołu i drobnica
+
+| Pozycja | Premium | Budżet | Δ |
+|---|---:|---:|---:|
+| Nogi regulowane 100 mm (24 szt) | 192 zł (Hettich, 8 zł × 24) | 96 zł (GTV, 4 zł × 24) | −96 zł |
+| Wkręty Konfirmat (2 op.) | 70 zł (Häfele) | 40 zł (no-name OBI/Castorama) | −30 zł |
+| **Razem drobnica** | **262 zł** | **136 zł** | **−126 zł** |
+
+### 9.4.7 Podsumowanie wariantu "BUDŻET 13 500"
+
+| Zmiana | Oszczędność |
+|---|---:|
+| 9.4.1 — 1 lustro zamiast 2 | −308 zł |
+| 9.4.2 — Häfele Matrix zamiast Blum Legrabox (wszystkie 14 szt) | −1 400 zł |
+| 9.4.3 — LED LedHurt + Tracon zamiast Paulmann + Mean Well | −710 zł |
+| 9.4.4 — pólkochwyt zamiast pantografu (A2 + B2) | −500 zł |
+| 9.4.5 — profil uchwytu generyk | −80 zł |
+| 9.4.6 — nogi GTV + wkręty no-name | −126 zł |
+| **RAZEM oszczędność** | **−3 124 zł** |
+
+| Pozycja | Wariant premium (2 lustra) | Wariant budżet | Oszczędność |
+|---|---:|---:|---:|
+| Korner cięcie + ABS | 1 425 zł | 1 425 zł | 0 |
+| Materiały płytowe | 4 105 zł | 4 105 zł | 0 |
+| Drzwi przesuwne | 2 410 zł | 2 022 zł | −388 zł (1 lustro + uchwyt generyk) |
+| Okucia | 5 360 zł | 3 960 zł | −1 400 zł (Häfele) |
+| Konstrukcja | 435 zł | 309 zł | −126 zł |
+| LED | 2 130 zł | 1 420 zł | −710 zł |
+| Elektryka | 300 zł | 300 zł | 0 |
+| Pantograf (w okuciach) → już uwzględnione | — | −500 zł vs okucia | — |
+| **RAZEM** | **~16 165 zł** | **~13 040 zł** | **−3 125 zł** |
+
+> ✅ **Cel 13 500 zł osiągnięty** z marginesem ~460 zł na nieprzewidziane.
+
+### 9.4.8 Czego NIE warto oszczędzać (nawet przy budżecie 13 500)
+
+| Pozycja | Dlaczego nie tańszy zamiennik |
+|---|---|
+| **Płyta Egger H3734 ST9 MAT** | Cała estetyka projektu opiera się na tym dekorze + powierzchni MAT. Tańszy dekor "orzech" z niższej półki (np. R5882) ma plastikową fakturę i traci po roku użytkowania. |
+| **Okleina ABS H3734 + klej PUR na headerze C.03** | Header jest widoczny od dołu jako fryz 70 mm — każda niedokładność spoiny na kleju EVA będzie widoczna. PUR jest tu obowiązkowy. |
+| **Sevroll Slim 25 system jezdny** | Najtańsze systemy "no-name" mają plastikowe wózki które po 2 latach klikają i zaczynają wypadać z prowadnicy. Sevroll ma BLUMOTION i 10-letnią gwarancję. |
+| **Lustro 4 mm z folią anti-shatter** | Lustro w garderobie jest dotykane codziennie — bez folii w razie rozbicia odłamki rozchodzą się po całej podłodze i mogą zranić. Folia kosztuje 30 zł/m² — żadnej oszczędności nie warto tu robić. |
+| **Czujnik PIR Steinel** | Tańsze PIR-y (40 zł chiński) załączają się od cienia kota i nie wyłączają, co skraca żywotność taśm LED 3× i marnuje energię. Steinel ma timer 5s-15min i histerezę temperaturową. |
+
+---
+
 ## 10. Harmonogram płatności (DIY)
 
 | Etap | Termin | Kwota | Komentarz |
