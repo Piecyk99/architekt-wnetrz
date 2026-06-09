@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 1080" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="740" height="1080" fill="#ffffff"/>
+
+  <!-- TYTUL -->
+  <text x="370" y="34" font-size="22" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Schemat oswietlenia sufitu — open space 493 x 478 cm</text>
+  <text x="370" y="54" font-size="13" text-anchor="middle" fill="#666">Sufit finalny 230 cm  •  oczka SLIM (~3 cm)  •  tasma COB 24V  •  sterowanie Shelly</text>
+
+  <!-- ===== RZUT ===== -->
+  <!-- skala 1cm = 1px, room offset (60,80) -->
+  <!-- sciany zewnetrzne -->
+  <g>
+    <!-- salon (gorna strefa) + caly obrys -->
+    <rect x="60" y="80" width="493" height="478" fill="#fafafa" stroke="#222" stroke-width="3"/>
+    <!-- dolny pas: linia podzialu -->
+    <line x1="60" y1="436" x2="553" y2="436" stroke="#222" stroke-width="2" stroke-dasharray="6 4"/>
+    <!-- scianka miedzy gosp a biuro -->
+    <line x1="324" y1="436" x2="324" y2="558" stroke="#222" stroke-width="3"/>
+    <line x1="360" y1="436" x2="360" y2="558" stroke="#222" stroke-width="3"/>
+  </g>
+
+  <!-- ETYKIETY STREF -->
+  <text x="300" y="250" font-size="26" font-weight="bold" fill="#bbb" text-anchor="middle">SALON</text>
+  <text x="192" y="505" font-size="15" font-weight="bold" fill="#bbb" text-anchor="middle">GOSPODARCZE</text>
+  <text x="456" y="505" font-size="15" font-weight="bold" fill="#bbb" text-anchor="middle">BIURO</text>
+
+  <!-- MEBLE -->
+  <text x="80" y="200" font-size="13" fill="#444" transform="rotate(-90 80 200)">TV</text>
+  <rect x="62" y="120" width="6" height="200" fill="#888"/>
+  <text x="548" y="200" font-size="13" fill="#444" transform="rotate(-90 548 200)">KANAPA</text>
+  <rect x="545" y="120" width="6" height="200" fill="#888"/>
+
+  <!-- ===== TASMY LED (kieszen 10 cm, wall-wash) ===== -->
+  <g stroke="#f5a623" stroke-width="7" stroke-linecap="round">
+    <!-- salon: lewa (TV) - gora - prawa (kanapa) -->
+    <line x1="72" y1="92" x2="72" y2="424"/>
+    <line x1="72" y1="92" x2="541" y2="92"/>
+    <line x1="541" y1="92" x2="541" y2="424"/>
+  </g>
+  <!-- biuro: cienka linia (trockenbau) -->
+  <line x1="372" y1="546" x2="541" y2="546" stroke="#e8770a" stroke-width="5" stroke-dasharray="3 3" stroke-linecap="round"/>
+
+  <!-- ===== OCZKA SLIM ===== -->
+  <!-- Salon strefa TV (lewe 2 kolumny) - niebieski -->
+  <g fill="#2e7dd1" stroke="#1a4d82" stroke-width="1.5">
+    <circle cx="140" cy="160" r="10"/><circle cx="140" cy="270" r="10"/><circle cx="140" cy="380" r="10"/>
+    <circle cx="251" cy="160" r="10"/><circle cx="251" cy="270" r="10"/><circle cx="251" cy="380" r="10"/>
+  </g>
+  <!-- Salon strefa KANAPA (prawe 2 kolumny) - zielony -->
+  <g fill="#3aab5a" stroke="#1f6e38" stroke-width="1.5">
+    <circle cx="362" cy="160" r="10"/><circle cx="362" cy="270" r="10"/><circle cx="362" cy="380" r="10"/>
+    <circle cx="473" cy="160" r="10"/><circle cx="473" cy="270" r="10"/><circle cx="473" cy="380" r="10"/>
+  </g>
+  <!-- Biuro - pomaranczowy -->
+  <g fill="#f5871f" stroke="#a8550a" stroke-width="1.5">
+    <circle cx="410" cy="470" r="10"/><circle cx="503" cy="470" r="10"/>
+    <circle cx="410" cy="522" r="10"/><circle cx="503" cy="522" r="10"/>
+  </g>
+  <!-- Gospodarcze - szary -->
+  <g fill="#9b9b9b" stroke="#5f5f5f" stroke-width="1.5">
+    <circle cx="150" cy="497" r="10"/><circle cx="240" cy="497" r="10"/>
+  </g>
+
+  <!-- ===== WYMIARY ===== -->
+  <g stroke="#c0392b" stroke-width="1" fill="#c0392b" font-size="12">
+    <!-- szerokosc 493 (gora) -->
+    <line x1="60" y1="68" x2="553" y2="68"/>
+    <line x1="60" y1="64" x2="60" y2="72"/><line x1="553" y1="64" x2="553" y2="72"/>
+    <text x="306" y="63" text-anchor="middle" fill="#c0392b">493 cm</text>
+    <!-- glebokosc 478 (lewo) -->
+    <line x1="48" y1="80" x2="48" y2="558"/>
+    <line x1="44" y1="80" x2="52" y2="80"/><line x1="44" y1="558" x2="52" y2="558"/>
+    <text x="42" y="320" text-anchor="middle" fill="#c0392b" transform="rotate(-90 42 320)">478 cm</text>
+    <!-- gospodarcze 264 -->
+    <line x1="60" y1="572" x2="324" y2="572"/>
+    <line x1="60" y1="568" x2="60" y2="576"/><line x1="324" y1="568" x2="324" y2="576"/>
+    <text x="192" y="586" text-anchor="middle" fill="#c0392b">264 cm</text>
+    <!-- biuro 193 -->
+    <line x1="360" y1="572" x2="553" y2="572"/>
+    <line x1="360" y1="568" x2="360" y2="576"/><line x1="553" y1="568" x2="553" y2="576"/>
+    <text x="456" y="586" text-anchor="middle" fill="#c0392b">193 cm</text>
+    <!-- pas dolny 122 (prawo) -->
+    <line x1="565" y1="436" x2="565" y2="558"/>
+    <line x1="561" y1="436" x2="569" y2="436"/><line x1="561" y1="558" x2="569" y2="558"/>
+    <text x="575" y="500" text-anchor="middle" fill="#c0392b" transform="rotate(-90 575 500)">122 cm</text>
+  </g>
+
+  <!-- przyklad osi oczka -->
+  <g stroke="#2e7dd1" stroke-width="0.8" stroke-dasharray="3 3">
+    <line x1="60" y1="160" x2="140" y2="160"/>
+  </g>
+  <text x="100" y="155" font-size="10" fill="#2e7dd1" text-anchor="middle">80</text>
+
+  <!-- ===== LEGENDA ===== -->
+  <g font-size="13" fill="#222">
+    <text x="605" y="100" font-size="14" font-weight="bold">LEGENDA</text>
+    <circle cx="615" cy="125" r="9" fill="#2e7dd1" stroke="#1a4d82"/>
+    <text x="632" y="129">Oczka salon — strefa TV</text>
+    <circle cx="615" cy="152" r="9" fill="#3aab5a" stroke="#1f6e38"/>
+    <text x="632" y="156">Oczka salon — strefa kanapa</text>
+    <circle cx="615" cy="179" r="9" fill="#f5871f" stroke="#a8550a"/>
+    <text x="632" y="183">Oczka biuro (4000K)</text>
+    <circle cx="615" cy="206" r="9" fill="#9b9b9b" stroke="#5f5f5f"/>
+    <text x="632" y="210">Oczka gospodarcze</text>
+    <line x1="606" y1="233" x2="624" y2="233" stroke="#f5a623" stroke-width="7" stroke-linecap="round"/>
+    <text x="632" y="237">Tasma LED — kieszen 10 cm</text>
+    <line x1="606" y1="260" x2="624" y2="260" stroke="#e8770a" stroke-width="5" stroke-dasharray="3 3"/>
+    <text x="632" y="264">Tasma LED — linia (biuro)</text>
+  </g>
+
+  <!-- podsumowanie ilosci -->
+  <g font-size="13" fill="#222">
+    <text x="595" y="300" font-weight="bold">ILOSC OCZEK</text>
+    <text x="595" y="322">Salon: 12 (4 x 3)</text>
+    <text x="595" y="342">Biuro: 4 (2 x 2)</text>
+    <text x="595" y="362">Gospod.: 2</text>
+    <text x="595" y="382" font-weight="bold">Razem: 18 szt.</text>
+  </g>
+
+  <!-- ===== PRZEKROJ KIESZENI ===== -->
+  <g transform="translate(60,640)">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#1a1a1a">PRZEKROJ — kieszen LED przyscienna (wall-wash, bez bruzdowania sciany)</text>
+
+    <!-- strop -->
+    <rect x="0" y="30" width="520" height="14" fill="#bdbdbd" stroke="#888"/>
+    <text x="530" y="42" font-size="11" fill="#666">strop +welna 15 cm</text>
+
+    <!-- sciana -->
+    <rect x="0" y="44" width="16" height="220" fill="#d8d8d8" stroke="#999"/>
+    <text x="8" y="260" font-size="11" fill="#666" transform="rotate(-90 8 175)">SCIANA</text>
+
+    <!-- profile CD (schematycznie) -->
+    <!-- plyta glowna sufitu (odsunieta 100 od sciany) -->
+    <rect x="116" y="120" width="404" height="12" fill="#f0e6c8" stroke="#caa84a"/>
+    <text x="320" y="114" font-size="11" fill="#7a5c10">plyta GK sufitu (kreona do CD)</text>
+
+    <!-- kieszen / szczelina 10 cm -->
+    <line x1="16" y1="150" x2="116" y2="150" stroke="#c0392b" stroke-width="1"/>
+    <line x1="16" y1="146" x2="16" y2="154" stroke="#c0392b"/>
+    <line x1="116" y1="146" x2="116" y2="154" stroke="#c0392b"/>
+    <text x="66" y="143" font-size="11" fill="#c0392b" text-anchor="middle">8–10 cm</text>
+
+    <!-- profil aluminiowy + tasma na spodzie plyty -->
+    <rect x="92" y="132" width="22" height="8" fill="#9aa0a6" stroke="#5f6368"/>
+    <text x="150" y="138" font-size="10" fill="#444">profil ALU + tasma (radiator!)</text>
+
+    <!-- promienie swiatla na sciane -->
+    <g stroke="#f5a623" stroke-width="1.5">
+      <line x1="100" y1="140" x2="40" y2="210"/>
+      <line x1="104" y1="140" x2="55" y2="220"/>
+      <line x1="108" y1="140" x2="70" y2="230"/>
+    </g>
+    <text x="30" y="200" font-size="10" fill="#d99100">swiatlo myje sciane</text>
+
+    <!-- blenda / fartuch GK w dol -->
+    <rect x="116" y="132" width="10" height="48" fill="#f0e6c8" stroke="#caa84a"/>
+    <text x="135" y="172" font-size="11" fill="#7a5c10">blenda GK 4–5 cm</text>
+    <text x="135" y="187" font-size="10" fill="#999">(zaslania tasme)</text>
+
+    <!-- sufit pomieszczenia -->
+    <text x="320" y="155" font-size="11" fill="#999">— przestrzen pomieszczenia —</text>
+  </g>
+
+  <!-- ===== SCHEMAT STEROWANIA SHELLY ===== -->
+  <g transform="translate(60,890)" font-size="12">
+    <text x="0" y="0" font-size="16" font-weight="bold" fill="#1a1a1a">STEROWANIE — Shelly (Pro na szynie DIN w rozdzielnicy)</text>
+
+    <!-- rozdzielnica -->
+    <rect x="0" y="20" width="150" height="150" fill="#eef4fb" stroke="#2e7dd1" stroke-width="2"/>
+    <text x="75" y="40" text-anchor="middle" font-weight="bold" fill="#1a4d82">ROZDZIELNICA</text>
+    <text x="75" y="58" text-anchor="middle" font-size="10" fill="#555">Shelly Pro (DIN)</text>
+    <text x="10" y="80" font-size="11">• Pro Dimmer — oczka salon TV</text>
+    <text x="10" y="98" font-size="11">• Pro Dimmer — oczka salon kanapa</text>
+    <text x="10" y="116" font-size="11">• RGBW PM — tasma salon + zasilacz</text>
+    <text x="10" y="134" font-size="11">• Dimmer — oczka biuro</text>
+    <text x="10" y="152" font-size="11">• RGBW/Dimmer — tasma biuro</text>
+    <text x="10" y="166" font-size="11">• Plus1 Mini — gospodarcze</text>
+
+    <!-- strzalki do odbiornikow -->
+    <g stroke="#2e7dd1" stroke-width="1.5" fill="none" marker-end="url(#arr)">
+      <path d="M150 60 H 250"/>
+      <path d="M150 100 H 250"/>
+      <path d="M150 140 H 250"/>
+    </g>
+    <text x="260" y="64" font-size="11">→ oczka (gwiazda, osobny kabel z grupy)</text>
+    <text x="260" y="104" font-size="11">→ tasmy LED (24V z zasilacza)</text>
+    <text x="260" y="144" font-size="11">→ przyciski monostabilne (sygnal)</text>
+
+    <text x="0" y="200" font-size="12" font-weight="bold" fill="#c0392b">WAZNE TERAZ: zero (N) do KAZDEJ puszki • zapas kabla 30–50 cm • zasilacze w rewizji, nie na glucho</text>
+
+    <defs>
+      <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+        <path d="M0 0 L8 4 L0 8 z" fill="#2e7dd1"/>
+      </marker>
+    </defs>
+  </g>
+</svg>
