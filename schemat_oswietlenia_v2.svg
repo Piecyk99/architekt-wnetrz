@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 640" font-family="Arial, sans-serif">
+  <rect x="0" y="0" width="740" height="640" fill="#ffffff"/>
+
+  <text x="370" y="30" font-size="20" font-weight="bold" text-anchor="middle" fill="#1a1a1a">Wariant oszczedny — 10 oczek (kieszen robi swiatlo glowne)</text>
+  <text x="370" y="49" font-size="12.5" text-anchor="middle" fill="#666">Salon 6 (akcent)  •  Biuro 3 (zadaniowe)  •  Gospodarcze 1  •  szczeliny LED = ambient</text>
+
+  <!-- room offset (60,70) 1px=1cm room 493x478 -> 60..553 / 70..548 -->
+  <rect x="60" y="70" width="493" height="478" fill="#fafafa" stroke="#222" stroke-width="3"/>
+  <line x1="60" y1="426" x2="553" y2="426" stroke="#222" stroke-width="2" stroke-dasharray="6 4"/>
+  <line x1="324" y1="426" x2="324" y2="548" stroke="#222" stroke-width="3"/>
+  <line x1="360" y1="426" x2="360" y2="548" stroke="#222" stroke-width="3"/>
+
+  <text x="300" y="250" font-size="24" font-weight="bold" fill="#cfcfcf" text-anchor="middle">SALON</text>
+  <text x="192" y="500" font-size="13" font-weight="bold" fill="#cfcfcf" text-anchor="middle">GOSPODARCZE</text>
+  <text x="456" y="500" font-size="13" font-weight="bold" fill="#cfcfcf" text-anchor="middle">BIURO</text>
+
+  <!-- meble -->
+  <rect x="62" y="120" width="6" height="200" fill="#888"/>
+  <text x="80" y="200" font-size="12" fill="#444" transform="rotate(-90 80 200)">TV</text>
+  <rect x="545" y="120" width="6" height="200" fill="#888"/>
+  <text x="548" y="200" font-size="12" fill="#444" transform="rotate(-90 548 200)">KANAPA</text>
+
+  <!-- tasmy LED kieszen -->
+  <g stroke="#f5a623" stroke-width="7" stroke-linecap="round">
+    <line x1="72" y1="82" x2="72" y2="414"/>
+    <line x1="72" y1="82" x2="541" y2="82"/>
+    <line x1="541" y1="82" x2="541" y2="414"/>
+  </g>
+  <line x1="372" y1="536" x2="541" y2="536" stroke="#e8770a" stroke-width="5" stroke-dasharray="3 3" stroke-linecap="round"/>
+
+  <!-- OCZKA salon 2x3 = 6 -->
+  <g fill="#2e7dd1" stroke="#1a4d82" stroke-width="1.5">
+    <circle cx="160" cy="180" r="11"/><circle cx="306" cy="180" r="11"/><circle cx="452" cy="180" r="11"/>
+    <circle cx="160" cy="340" r="11"/><circle cx="306" cy="340" r="11"/><circle cx="452" cy="340" r="11"/>
+  </g>
+  <!-- biuro 3 -->
+  <g fill="#f5871f" stroke="#a8550a" stroke-width="1.5">
+    <circle cx="402" cy="490" r="11"/><circle cx="456" cy="490" r="11"/><circle cx="510" cy="490" r="11"/>
+  </g>
+  <!-- gospodarcze 1 -->
+  <g fill="#9b9b9b" stroke="#5f5f5f" stroke-width="1.5">
+    <circle cx="192" cy="487" r="11"/>
+  </g>
+
+  <!-- wymiary -->
+  <g stroke="#c0392b" stroke-width="1" fill="#c0392b" font-size="12">
+    <line x1="60" y1="60" x2="553" y2="60"/>
+    <line x1="60" y1="56" x2="60" y2="64"/><line x1="553" y1="56" x2="553" y2="64"/>
+    <text x="306" y="55" text-anchor="middle">493 cm</text>
+    <line x1="48" y1="70" x2="48" y2="548"/>
+    <line x1="44" y1="70" x2="52" y2="70"/><line x1="44" y1="548" x2="52" y2="548"/>
+    <text x="42" y="310" text-anchor="middle" transform="rotate(-90 42 310)">478 cm</text>
+  </g>
+
+  <!-- legenda -->
+  <g font-size="13" fill="#222" transform="translate(595,90)">
+    <text x="0" y="0" font-size="14" font-weight="bold">LEGENDA</text>
+    <circle cx="10" cy="24" r="9" fill="#2e7dd1" stroke="#1a4d82"/><text x="26" y="28">Oczka salon (6)</text>
+    <circle cx="10" cy="50" r="9" fill="#f5871f" stroke="#a8550a"/><text x="26" y="54">Oczka biuro (3)</text>
+    <circle cx="10" cy="76" r="9" fill="#9b9b9b" stroke="#5f5f5f"/><text x="26" y="80">Oczko gosp. (1)</text>
+    <line x1="2" y1="102" x2="18" y2="102" stroke="#f5a623" stroke-width="7" stroke-linecap="round"/><text x="26" y="106">Tasma LED salon</text>
+    <line x1="2" y1="126" x2="18" y2="126" stroke="#e8770a" stroke-width="5" stroke-dasharray="3 3"/><text x="26" y="130">Tasma LED biuro</text>
+
+    <text x="0" y="170" font-weight="bold">RAZEM: 10 oczek</text>
+    <text x="0" y="192" font-size="11" fill="#555">(zamiast 18)</text>
+  </g>
+
+  <!-- uwagi -->
+  <g font-size="12" fill="#1a1a1a" transform="translate(60,575)">
+    <text x="0" y="0" font-size="13" font-weight="bold" fill="#c0392b">Zasada: kieszen = swiatlo glowne, oczka = akcent.</text>
+    <text x="0" y="20">Chcesz wiecej scen? Salon max 8 (2x4). NIE wracaj do 12 — bedzie przeswietlony „raster jak w biurze".</text>
+  </g>
+</svg>
