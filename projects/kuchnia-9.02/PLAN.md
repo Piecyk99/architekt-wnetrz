@@ -137,7 +137,24 @@ Wszystkie moduły przy ścianach: szerokości finalne po pomiarach (blendy docin
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 
-## 13. Prompt — realistyczna wizualizacja (EN, Gemini)
+## 13. Materiały i styl — wg inspiracji inwestora (2026-07-28)
+
+Inwestor dostarczył zdjęcie referencyjne (mała kuchnia otwarta na salon, półwysep z hokerami) — paleta zmapowana na układ v4 i katalog Korner:
+
+| Element | Materiał / dekor (Korner) | Uwagi |
+|---|---|---|
+| Fronty dolne A (D1–D4) + B (D5) + korpus wyspy | **beż/kaszmir mat, bezuchwytowe** (Egger U702 ST9 Kaszmir lub zbliżony beż mat) | uchwyt frezowany/gola; korpusy kremowe |
+| Górne G2 + słupek S1 (do sufitu) | **Egger H3734 ST9 Orzech Pacific mat** (house style — zgodny 1:1 z inspiracją) | słoje pionowe |
+| Zabudowa lodówki (panele wnęki + nadstawka) | **grafit/czarny mat** (Egger U999 ST2 lub grafit) | jak ciemna kolumna na zdjęciu |
+| Blat A/B + blat wyspy | **jasny kamień/trawertyn — laminat 38 mm** (Egger dekor jasny kamień beż) | ⚠ odstępstwo od house style (spiek czarny) na wyraźne życzenie inwestora — wg inspiracji |
+| Ściana nad blatem przy płycie (B) | panel ciemny kamień/grafit mat (laminat kompaktowy lub spiek) | tylko strefa płyty; reszta ścian farba beż jak salon |
+| Front wyspy od strony przejścia/salonu | **panel ryflowany (lamele) ciemny orzech/czarny** | jak na zdjęciu referencyjnym |
+| Armatura + zlew | bateria czarna mat, zlew granitowy czarny | zlew pod oknem |
+| Oświetlenie | LED 3000K pod G2 i pod nadwieszeniem wyspy; 2× czarny spot natynkowy na suficie (istniejące wypusty) | ciepłe światło jak na zdjęciu |
+| Hokery | 2× czarne metalowe, siedzisko ~65 cm | od strony salonu |
+| Cokoły | czarny mat (cofnięte optycznie) | kratka wentylacyjna lodówki w cokole |
+
+## 14. Prompt — realistyczna wizualizacja (EN, Gemini)
 
 ```
 Architectural interior photograph of a small custom kitchen in a Polish apartment,
@@ -150,16 +167,22 @@ hood above, then a tall fridge (60 cm, 202 cm) in a niche with a top cabinet.
 Left wall, below the chimney: a tall column with built-in microwave and oven at eye
 level. A small island (100 x 50 cm, worktop at 90 cm) near the open passage to the
 living room, its doors facing the living room, counter overhang with two bar stools.
-Fronts: matte Royal Walnut woodgrain laminate (Egger H3734), cream carcasses, black
-slim handles, matte black worktop, under-cabinet LED 3000K, warm daylight from the
-window. Camera at the open passage, eye level 160 cm, 24 mm lens. No people.
-Architectural Digest editorial aesthetic.
+Materials per the client's reference: handleless matte beige/cashmere lower fronts,
+upper cabinets and the tall oven column in dark matte walnut woodgrain reaching the
+ceiling, the fridge column in matte graphite/black, light travertine-look stone
+worktop on the runs and the island, dark stone backsplash panel behind the hob only,
+remaining walls warm beige paint. The island front facing the living room is a dark
+fluted (reeded) wood panel; light stone island top with an overhang and two black
+metal bar stools. Black matte faucet and black granite sink under the window,
+under-cabinet LED 3000K, two black surface-mounted ceiling spots, warm daylight
+from the window. Camera at the open passage, eye level 160 cm, 24 mm lens. No
+people. Architectural Digest editorial aesthetic.
 STRICT CONSTRAINTS: do not move or resize the window; do not remove the chimney
 pillar; do not enlarge the room; island exactly 100x50 at the passage — nothing
 larger; no cabinets above the window; nothing beyond the listed cabinets.
 ```
 
-## 14. Prompt — naniesienie projektu na zdjęcie pomieszczenia (EN, `gemini_edit_image`)
+## 15. Prompt — naniesienie projektu na zdjęcie pomieszczenia (EN, `gemini_edit_image`)
 
 Referencja: zdjęcie pomieszczenia z adnotacjami (kadr od przejścia w stronę okna).
 
@@ -172,15 +195,18 @@ and ceiling wiring points exactly as in the photo. Install: along the window wal
 pull-out, blind corner; along the right wall — induction hob with drawers and hood,
 tall fridge in the niche; along the left wall below the chimney — tall column with
 built-in oven and microwave; small island 100x50 near the passage in the foreground,
-doors facing the viewer, two bar stools. Matte Royal Walnut fronts, cream carcasses,
-black slim handles, matte black worktop, LED 3000K under the upper cabinet right of
-the window.
+doors facing the viewer, two black bar stools. Materials per the client's reference
+photo: handleless matte beige lower fronts, dark matte walnut upper cabinets and
+tall column, graphite fridge column, light travertine-look worktops, dark stone
+panel behind the hob, dark fluted wood panel on the island front facing the viewer,
+black faucet and black granite sink, LED 3000K under the upper cabinet right of the
+window.
 STRICT: overlay furniture only — do not alter walls, window, chimney or viewpoint;
 do not widen the room; island no larger than 100x50; nothing where there is no space
 in the photo.
 ```
 
-## 15. Wariant alternatywny (odrzucony, zachowany dla porównania)
+## 16. Wariant alternatywny (odrzucony, zachowany dla porównania)
 
 **v3 „L + barek":** bez słupka S1 i wyspy — piekarnik pod płytą (D5), przy przejściu tylko barek 700×400 (przejście ~1040). Wybierany, gdyby pomiar wykazał, że przejście 740 jest w praktyce za ciasne albo komin okaże się czynny/ciepły (S1 odpada). Historia wariantów: v1–v2 (błędna orientacja, odrzucone), v3 (barek), **v4 (finalny — wyspa + słupek)**.
 
