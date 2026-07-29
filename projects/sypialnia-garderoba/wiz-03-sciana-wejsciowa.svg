@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1050" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <linearGradient id="ledTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mirror" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3a4654"/>
+      <stop offset="0.5" stop-color="#56677a"/>
+      <stop offset="1" stop-color="#2a3340"/>
+    </linearGradient>
+    <pattern id="floorE2" patternUnits="userSpaceOnUse" width="80" height="20">
+      <rect width="80" height="20" fill="#dec6a3"/>
+      <line x1="0" y1="10" x2="80" y2="10" stroke="#b89866" stroke-width="0.6"/>
+      <line x1="40" y1="0" x2="40" y2="20" stroke="#c4a47a" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="woodDoor" patternUnits="userSpaceOnUse" width="20" height="80">
+      <rect width="20" height="80" fill="#5b3826"/>
+      <path d="M0 0 L20 80 M0 40 L20 80 M10 0 L20 40" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
+    </pattern>
+    <radialGradient id="kinkietGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <text x="40" y="40" font-size="24" font-weight="700" fill="#111">Elewacja — ściana prawa dłuższa (z drzwiami z korytarza)</text>
+  <text x="40" y="62" font-size="12" fill="#555">2520 × 2500 mm · widok od wnętrza pokoju · lewa = strona okienna, prawa = strona z TV/garderobą</text>
+
+  <g transform="translate(290, 100)">
+    <!-- ściana tło off-white -->
+    <rect x="0" y="0" width="806" height="800" fill="#f3f0e8" stroke="#111" stroke-width="3"/>
+
+    <!-- gzyms LED na samej górze (kontynuacja z ścian krótkich) -->
+    <rect x="0" y="0" width="806" height="14" fill="#fff4d0" opacity="0.95"/>
+    <rect x="0" y="14" width="806" height="120" fill="url(#ledTop)" opacity="0.55"/>
+    <text x="403" y="-8" font-size="11" fill="#a47e00" font-weight="700" text-anchor="middle">▓ GZYMS LED 2700K — kontynuacja z ściany wezgłowiowej</text>
+
+    <!-- LUSTRO pionowe 60×140 mm między nocną a drzwiami, na ścianie -->
+    <g transform="translate(224, 32)">
+      <!-- LED glow za lustrem (efekt lewitacji) -->
+      <rect x="-12" y="-12" width="216" height="464" fill="#fff4d0" opacity="0.55"/>
+      <rect x="-6" y="-6" width="204" height="452" fill="#fff4d0" opacity="0.35"/>
+      <!-- czarna rama -->
+      <rect x="0" y="0" width="192" height="440" fill="#111" stroke="#000" stroke-width="1"/>
+      <!-- szyba lustra -->
+      <rect x="10" y="10" width="172" height="420" fill="url(#mirror)"/>
+      <rect x="32" y="50" width="50" height="120" fill="#fff" opacity="0.08"/>
+      <rect x="110" y="180" width="32" height="150" fill="#fff" opacity="0.05"/>
+      <text x="96" y="225" font-size="13" fill="#bcc8d8" text-anchor="middle" font-weight="700" opacity="0.7">LUSTRO 60 × 140</text>
+      <text x="96" y="242" font-size="10" fill="#bcc8d8" text-anchor="middle" opacity="0.7">rama stalowa 20 mm czarna mat</text>
+      <text x="96" y="258" font-size="10" fill="#bcc8d8" text-anchor="middle" opacity="0.6">▓ LED 2700K za lustrem</text>
+    </g>
+
+    <!-- KINKIET dekoracyjny — między lustrem a sufitem? Nie, lepiej obok lustra od strony nocnej -->
+    <g transform="translate(112, 320)">
+      <circle r="50" fill="url(#kinkietGlow)"/>
+      <g stroke="#111" stroke-width="2" fill="none">
+        <circle r="26"/>
+        <circle r="15"/>
+        <line x1="-26" y1="0" x2="26" y2="0"/>
+        <line x1="0" y1="-26" x2="0" y2="26"/>
+        <line x1="-18" y1="-18" x2="18" y2="18"/>
+        <line x1="-18" y1="18" x2="18" y2="-18"/>
+      </g>
+      <circle r="5" fill="#fff4d0"/>
+      <text y="50" font-size="11" fill="#111" text-anchor="middle" font-weight="700">KINKIET DEKORACYJNY</text>
+      <text y="64" font-size="10" fill="#444" text-anchor="middle">Vibia Wireflow / Bolia Bow czarny mat</text>
+      <text y="78" font-size="10" fill="#444" text-anchor="middle">wys. 1500 mm od podłogi</text>
+    </g>
+
+    <!-- NOCNA PRAWA — sugerowana jako obiekt PRZED ścianą (zacieniona pozycja) -->
+    <g transform="translate(48, 660)">
+      <rect width="128" height="140" fill="#5b3826" stroke="#111" stroke-width="1.5" opacity="0.4"/>
+      <text x="64" y="76" font-size="10" fill="#111" text-anchor="middle" font-weight="700" opacity="0.7">NOC P</text>
+      <text x="64" y="90" font-size="9" fill="#444" text-anchor="middle" opacity="0.6">(stoi przed ścianą)</text>
+    </g>
+
+    <!-- DRZWI z korytarza 80×210 — pozycja 1500-2300 mm od strony okiennej -->
+    <g transform="translate(480, 128)">
+      <rect width="256" height="672" fill="url(#woodDoor)" stroke="#111" stroke-width="2"/>
+      <!-- klamka czarna -->
+      <circle cx="230" cy="360" r="6" fill="#111"/>
+      <rect x="220" y="358" width="30" height="5" fill="#111"/>
+      <text x="128" y="350" font-size="13" fill="#fff" text-anchor="middle" font-weight="700">DRZWI 80×210</text>
+      <text x="128" y="370" font-size="11" fill="#fff" text-anchor="middle">orzech Egger H3734</text>
+      <text x="128" y="386" font-size="11" fill="#fff" text-anchor="middle">klamka Tupai czarna mat</text>
+      <text x="128" y="402" font-size="10" fill="#fff" text-anchor="middle" opacity="0.85">ukryta futryna · zawias dolny</text>
+    </g>
+
+    <!-- WŁĄCZNIKI scen przy drzwiach (lewa strona drzwi, od wewnątrz) -->
+    <g transform="translate(450, 380)">
+      <rect width="20" height="44" fill="#222" stroke="#000" stroke-width="1"/>
+      <rect x="2" y="2" width="16" height="20" fill="#333"/>
+      <rect x="2" y="24" width="16" height="18" fill="#333"/>
+      <text x="-6" y="20" font-size="10" fill="#222" text-anchor="end" font-weight="700">Berker R.1</text>
+      <text x="-6" y="34" font-size="9" fill="#444" text-anchor="end">sceny/ściemniacze, h 1100</text>
+    </g>
+
+    <!-- TERMOSTAT -->
+    <g transform="translate(750, 380)">
+      <rect width="44" height="44" fill="#1a1a1a" stroke="#000" stroke-width="1" rx="4"/>
+      <circle cx="22" cy="22" r="14" fill="#222" stroke="#444" stroke-width="1"/>
+      <text x="22" y="26" font-size="9" fill="#ccc" text-anchor="middle" font-weight="700">21°</text>
+      <text x="22" y="62" font-size="9" fill="#444" text-anchor="middle">termostat</text>
+    </g>
+
+    <!-- PODŁOGA -->
+    <rect x="0" y="800" width="806" height="50" fill="url(#floorE2)" stroke="#111" stroke-width="2"/>
+    <rect x="0" y="800" width="806" height="9" fill="#111"/>
+    <text x="403" y="846" font-size="10" fill="#444" text-anchor="middle">deska Barlinek dąb Almond olej · listwa aluminiowa czarna mat 100 mm</text>
+
+    <!-- wymiary -->
+    <line x1="0" y1="870" x2="806" y2="870" stroke="#111" stroke-width="1"/>
+    <line x1="0" y1="865" x2="0" y2="875" stroke="#111" stroke-width="1"/>
+    <line x1="806" y1="865" x2="806" y2="875" stroke="#111" stroke-width="1"/>
+    <text x="403" y="888" font-size="13" font-weight="700" fill="#111" text-anchor="middle">2520 mm (długość pokoju)</text>
+
+    <line x1="836" y1="0" x2="836" y2="800" stroke="#111" stroke-width="1"/>
+    <line x1="831" y1="0" x2="841" y2="0" stroke="#111" stroke-width="1"/>
+    <line x1="831" y1="800" x2="841" y2="800" stroke="#111" stroke-width="1"/>
+    <text x="864" y="400" font-size="13" font-weight="700" fill="#111" transform="rotate(-90 864 400)" text-anchor="middle">2500 mm</text>
+
+    <!-- wymiary pozycji drzwi i lustra -->
+    <line x1="0" y1="920" x2="480" y2="920" stroke="#c46b1f" stroke-width="0.6"/>
+    <line x1="0" y1="915" x2="0" y2="925" stroke="#c46b1f" stroke-width="0.6"/>
+    <line x1="480" y1="915" x2="480" y2="925" stroke="#c46b1f" stroke-width="0.6"/>
+    <text x="240" y="938" font-size="10" fill="#c46b1f" text-anchor="middle" font-weight="700">1500 mm od okna do osi drzwi</text>
+  </g>
+
+  <g transform="translate(40, 970)">
+    <text font-size="13" font-weight="700" fill="#111">Specyfikacja:</text>
+    <text x="0" y="20" font-size="11" fill="#333">Ściana w farbie Tikkurila Y497 (off-white ciepły) lateks mat · gzyms LED 2700K po całej długości · trasy LED w GK</text>
+    <text x="0" y="36" font-size="11" fill="#333">Lustro 60×140 w stalowej ramie czarnej 20 mm · pasek LED 2700K za lustrem (efekt lewitacji) · wzmocnienie GK wkładką OSB</text>
+    <text x="0" y="52" font-size="11" fill="#333">Kinkiet dekoracyjny pojedynczy (Vibia/Bolia) · drzwi sypialni 80×210 orzech H3734 ukryta futryna, klamka Tupai czarna · 1500 mm od okna</text>
+  </g>
+</svg>
