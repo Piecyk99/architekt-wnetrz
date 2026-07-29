@@ -47,7 +47,7 @@ ox, oy = M + px(T), 100 + px(T)
 def X(mm): return ox + px(mm)
 def Y(mm): return oy + px(mm)
 
-e = [svg_open(W, H, "RZUT Z GÓRY v4 — kuchnia 9.02 (2450×1910) — słupek z piekarnikiem przy gzymsie + WYSPA 1000×500 po lewej")]
+e = [svg_open(W, H, "RZUT Z GÓRY v4 — kuchnia 9.02 (2450×1910) — słupek + WYSPA + S2 półki na kominie")]
 # walls
 e.append(rect(ox-px(T), oy-px(T), px(RW)+2*px(T), px(T), WALL))                  # top wall A (okno)
 e.append(rect(ox-px(T), oy-px(T), px(T), px(RD)+px(T), WALL))                    # left wall D
@@ -58,6 +58,10 @@ e.append(rect(X(0), Y(0), px(370), px(630), GZ, "#7a4a2d", 2))
 e.append(txt(X(185), Y(340), "GZYMS/", 10, fill="#fff", bold=True))
 e.append(txt(X(185), Y(450), "KOMIN", 10, fill="#fff", bold=True))
 e.append(txt(X(185), Y(560), "370×630 [P]", 9, fill="#fff"))
+# S2: płytka zabudowa na licu komina (nad blatem, 1490-2490) — przerywana bo powyżej blatu
+e.append(rect(X(370), Y(0), px(180), px(630), "#c9b28f", "#7a4a2d", 1.5, dash="5 3", opacity=0.85))
+e.append(txt(X(460), Y(315), "S2 180 gł.", 8, rot=-90))
+e.append(txt(X(370), Y(-30), "S2: półki na kominie nad blatem (1490→sufit), kotwy płytkie 40-50 + bok na blacie", 8, anchor="start", fill="#7a4a2d"))
 # window in top wall (600..1520 od lewej ściany)
 e.append(rect(X(600), oy-px(T), px(920), px(T), "#ffffff", "#1a56c4", 2))
 e.append(txt(X(1060), oy-px(T)+19, "OKNO ~920 [~]", 10, fill="#1a56c4", bold=True))
@@ -233,11 +237,18 @@ def XD(mm): return ox4 + px(mm)
 def YD(mm): return oy4 + px(EH4 - mm)
 
 # patrząc NA lewą ścianę: okno po PRAWEJ, przejście do salonu po LEWEJ
-e = [svg_open(W4, H4, "ELEWACJA D — ściana LEWA: gzyms + słupek z piekarnikiem + wyspa (1910×2490)")]
+e = [svg_open(W4, H4, "ELEWACJA D — ściana LEWA: gzyms z zabudową S2 + słupek S1 + wyspa (1910×2490)")]
 e.append(rect(ox4, oy4, px(EW4), px(EH4), "#f7f4ee", "#333", 2))
 # gzyms przy narożniku z oknem (prawa strona elewacji): 630 szer., pełna wysokość
 e.append(rect(XD(1280), YD(2490), px(630), px(2490), GZ, "#7a4a2d", 1.5))
 e.append(txt(XD(1595), YD(1300), "GZYMS/KOMIN 630 [P] — pełna wysokość [potwierdzić]", 9, fill="#fff", rot=-90))
+# S2: płytka zabudowa na licu komina
+e.append(rect(XD(1290), YD(2490), px(610), px(1000), CAB, "#333", 1.5))
+e.append(txt(XD(1595), YD(2060), "S2 630×180 gł.", 9.5, bold=True))
+e.append(txt(XD(1595), YD(1940), "półki/fronty H3734, do sufitu", 8))
+e.append(txt(XD(1595), YD(1820), "kotwy 40-50 bez udaru", 8, fill=WARN))
+e.append(rect(XD(1880), YD(1490), px(20), px(630), CAB2, "#333", 1))
+e.append(txt(XD(1930), YD(1150), "bok-podpora oparty na blacie D1 (przenosi ciężar)", 7.5, fill="#555", rot=-90))
 # S1 słupek 600 przy gzymsie, do sufitu
 e.append(rect(XD(680), YD(2490), px(600), px(2390), AGD, "#333", 1.5))
 e.append(txt(XD(980), YD(2380), "S1 SŁUPEK 600 do sufitu", 9.5, bold=True))
