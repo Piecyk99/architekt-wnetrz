@@ -62,7 +62,8 @@ Zlew pod oknem, przy podejściach wody. Kolejność: `technical/02-elewacja-A-ok
 **Ściana B (1910), od narożnika z A:** `martwe pole narożne 560 (dostęp z D4) | D5 płyta indukcyjna + szuflady 600 | blenda 150 (bok termoizolacyjny) | LODÓWKA we wnęce 850 (+nadstawka ~400 do sufitu)`
 `technical/03-elewacja-B-plyta-lodowka.png`.
 
-**Ściana D (lewa):** `GZYMS (od okna 630) | S1 słupek 600 do sufitu: szafka góra / MIKROFALA (otwór 400) / PIEKARNIK (otwór 600) / szuflady dół`
+**Ściana D (lewa):** `GZYMS (od okna 630, z zabudową S2) | S1 słupek 600 do sufitu: szafka góra / MIKROFALA (otwór 400) / PIEKARNIK (otwór 600) / szuflady dół`
+**S2 — zabudowa na kominie:** 630×180 gł., od 1490 do sufitu, na licu gzymsu (fronty H3734 jak S1 — jednolita ciemna wieża). **Mocowanie:** kotwy płytkie 40–50 mm bez udaru (ścianka przewodu min ~65–120 mm — brak ryzyka przebicia), kołki do cegły pełnej, w cegłę nie w spoinę + **bok-podpora oparty na blacie D1** przenoszący ciężar (kotwy tylko stabilizują). Lekkie obciążenie (przyprawy, słoiki). Komin: spalinowe nieużywane (całe ogrzewanie w budynku elektryczne — deklaracja inwestora), kanały wentylacyjne traktować jako czynne — stąd zakaz głębokiego wiercenia.
 **WYSPA 1000×500**, blat h ~900, luz od S1 ~120–180; szafki wyspy otwierane **od strony salonu**, nadwieszenie blatu na hokery od strony przejścia. `technical/04-elewacja-D-slupek-wyspa.png`.
 
 **Górne:** G2 890 (prawa strona okna, do sufitu) + półka otwarta ~180–200 między gzymsem a oknem; G4 — opcjonalnie nad D5 wg trasy okapu. LED 3000K pod górnymi.
@@ -71,7 +72,7 @@ Zlew pod oknem, przy podejściach wody. Kolejność: `technical/02-elewacja-A-ok
 
 - A (od lewej): D1 → D2 → D3 → D4
 - B (od góry): D4/narożnik → D5 → blenda → lodówka
-- D (od okna): gzyms → S1 → (luz) → wyspa
+- D (od okna): gzyms (S2 nad blatem) → S1 → (luz) → wyspa
 - Górne: półka → okno → G2
 
 ## 8. Orientacyjne szerokości modułów
@@ -84,6 +85,7 @@ Zlew pod oknem, przy podejściach wody. Kolejność: `technical/02-elewacja-A-ok
 | D4 | narożna ślepa | 560 (front ~450) | półki / carousel | blat w narożnik |
 | D5 | płyta | 600×720+100×580 | 2 szuflady pod płytą | indukcja 4-pol. (otwór 560×490) |
 | S1 | słupek AGD | 600×~2390×580 | mikrofala 400 + piekarnik 600 + szuflady | przy gzymsie, do sufitu |
+| S2 | zabudowa na kominie | 630×~1000×180 | płytkie półki | kotwy 40–50 bez udaru + bok na blacie D1 |
 | WYSPA | korpusy 2×500 | 1000×~860+blat×500 | półki/szuflady od salonu | blat ~900, nadwieszenie 200–250 |
 | G2 | górna | 890×~1000×320 | półki | do sufitu |
 | Nadstawka L | nad lodówką | ~590×~400×580 | otwarta/front | kratka wentylacyjna |
