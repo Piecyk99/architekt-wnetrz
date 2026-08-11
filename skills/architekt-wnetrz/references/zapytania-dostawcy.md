@@ -1,6 +1,26 @@
-# Listy zakupów i wiadomości do dostawców (Faza 8b-8e)
+# Szablony Fazy 8 — harmonogram, listy zakupów, wiadomości do dostawców
 
-Szablony wyjść zakupowych. Mapa dostawców: `dostawcy.md`. Lista zakupów Korner (formatki/fronty/okucia): format w `../../zabudowa-na-wymiar/references/formatki.md`.
+Szablony wyjść Fazy 8. Mapa dostawców: `dostawcy.md`. Lista zakupów Korner (formatki/fronty/okucia): format w `../../zabudowa-na-wymiar/references/formatki.md`.
+
+---
+
+## Harmonogram robót (8a — Gantt-style ASCII)
+
+```
+TYDZ.  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |11 |12 |
+─────────────────────────────────────────────────────────
+Demontaż / przygotowanie     ████
+Instalacje (woda/gaz/elektr.)     ████████
+Tynki / gładzie                            ████
+Posadzki (wylewki)                              ████
+Sufity GK + malowanie                                ████████
+Podłogi (deska/spiek)                                     ████
+Drzwi + listwy                                                 ████
+Łazienka (mikrocement + armatura)                              ████████
+Meble na wymiar (montaż)                                              ████
+Meble wolnostojące + dekoracje                                             ████
+Sprzątanie + oddanie                                                            ██
+```
 
 ---
 

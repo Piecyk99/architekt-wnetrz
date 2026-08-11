@@ -197,25 +197,7 @@ Całość logiki generacji — detekcja środowiska (4 ścieżki), 5-component f
 
 Cel: **operacyjny plan do oddania ekipie i listy zakupów do wysłania dostawcom**.
 
-**8a. Harmonogram (Gantt-style ASCII):**
-
-```
-TYDZ.  | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10 |11 |12 |
-─────────────────────────────────────────────────────────
-Demontaż / przygotowanie     ████
-Instalacje (woda/gaz/elektr.)     ████████
-Tynki / gładzie                            ████
-Posadzki (wylewki)                              ████
-Sufity GK + malowanie                                ████████
-Podłogi (deska/spiek)                                     ████
-Drzwi + listwy                                                 ████
-Łazienka (mikrocement + armatura)                              ████████
-Meble na wymiar (montaż)                                              ████
-Meble wolnostojące + dekoracje                                             ████
-Sprzątanie + oddanie                                                            ██
-```
-
-Harmonogram zamawiania (T-12…T-1): `references/dostawcy.md`.
+**8a. Harmonogram robót** — Gantt-style ASCII tygodniami, kolejność: demontaż → instalacje → tynki → posadzki → sufity/malowanie → podłogi → drzwi/listwy → łazienka → meble na wymiar → wolnostojące → oddanie. Szablon: `references/zapytania-dostawcy.md`. Harmonogram zamawiania (T-12…T-1): `references/dostawcy.md`.
 
 **8b-8e. Listy zakupów, koszt całości, wiadomości do dostawców** — struktury i szablony: **`references/zapytania-dostawcy.md`**. Lista zakupów Korner (formatki/fronty/okucia): format wg `formatki.md` (skill zabudowa-na-wymiar).
 
