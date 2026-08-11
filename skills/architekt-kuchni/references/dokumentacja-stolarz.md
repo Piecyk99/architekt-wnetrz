@@ -35,7 +35,7 @@ Dla każdej ściany: elewacja ASCII z numeracją szafek i wymiarami (wzór jak F
 │ G1   │ G2   │ okap │ G3       │ S1   │
 │ 600  │ 600  │ 600  │ 800      │ 600  │
 ├──────┴──────┴──────┴──────────┤lodów-│
-│      blat 38, spiek           │ka    │
+│      blat (gr. wg standardów) │ka    │
 ├──────┬──────┬──────┬──────────┤      │
 │ D1   │ D2 zl│ D3 zm│ D4 płyta │      │
 │ 600  │ 800  │ 600  │ 600      │      │
@@ -50,7 +50,7 @@ Lista: `D1 (600, cargo) → D2 (800, zlew) → …` — jedna linia na ścianę.
 Tabela: Nr | Typ | Szer × Wys × Głęb | Front | Wnętrze (półki/szuflady/cargo) | Uwagi. Szerokości ze statusem — moduły przy ścianach oznaczone „docięcie blendy na miejscu".
 
 ### 9. Rozmieszczenie AGD
-Tabela: urządzenie | szafka/pozycja | wymiar otworu (wg standardy-meble.md) | wymagania (prąd/woda/wentylacja) | uwagi o otwieraniu.
+Tabela: urządzenie | szafka/pozycja | szerokość korpusu | światło zabudowy/nisza (wg standardy-meble.md — **rozróżniaj korpus 600 od niszy 560, nigdy nie łącz w jedno "otwór"**) | wymagania (prąd/woda/wentylacja) | uwagi o otwieraniu.
 
 ### 10. Zalecenia instalacyjne
 Co przenieść/dodać PRZED montażem: gniazda, wypusty, podejścia, trasa okapu. Odwołanie do instalacje-elektryka.md.

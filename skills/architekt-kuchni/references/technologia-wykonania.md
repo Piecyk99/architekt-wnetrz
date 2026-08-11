@@ -9,14 +9,14 @@ Uzupełnienie `../../architekt-wnetrz/references/standardy-meble.md` (wymiary mo
 - Korpus: płyta 18 mm (16 mm tylko ekonomiczne), plecy HDF 3 mm, wieniec górny/dolny pełny.
 - Fronty: 19 mm (laminat HPL / MDF lakier / fornir — dobór wg katalogu Korner (płyty, korner.pl) i stylu projektu).
 - Obrzeża ABS: 2 mm krawędzie widoczne i fronty, 1 mm ukryte; krawędź przy ścianie bez oklejania.
-- Blat: laminowany 38 mm / spiek 12–20 mm na płycie / kamień — waga spieku i kamienia wymaga korpusów bez odchyłek poziomu.
+- Blat: grubości wg `../../architekt-wnetrz/references/standardy-meble.md` (laminowany 38-40; spiek 4/12/20 na podkonstrukcji) — waga spieku i kamienia wymaga korpusów bez odchyłek poziomu.
 
 ## 2. Pomieszczenie nie jest idealne — obowiązkowe założenia
 
 - **Nie zakładaj kątów prostych.** Ściany schodzą się w 88–92°; zabudowa narożna i blaty L wymagają pomiaru przekątnych.
 - **Nie zakładaj, że ściana ma tę samą długość na każdej wysokości** — mierz na poziomie blatu (860) i na poziomie górnej krawędzi zabudowy; do formatek przyjmuj **najmniejszy** wymiar.
 - **Krzywizny ścian**: odchyłka 5–15 mm na 2 m to norma w budownictwie — dlatego:
-  - **szczelina montażowa** przy każdej ścianie: 20–50 mm zamykana **blendą** dociętą na miejscu (blendy zamawiaj z zapasem szerokości),
+  - **szczelina montażowa** przy każdej ścianie: 20–50 mm zamykana **blendą** dociętą na miejscu (blendy zamawiaj z zapasem szerokości). **Blenda ≠ fuga:** to nie to samo co fuga 5–15 mm na silikon/listwę przy prostej ścianie ze standardy-meble.md — blenda jest elementem z płyty docinanym do krzywizny, fuga tylko zamknięciem szczeliny.
   - zabudowa „na styk" ściana–ściana: projektuj światło zabudowy = wymiar ściany − 40–60 mm łącznie na blendy,
   - do sufitu: fuga 10–30 mm + listwa/blenda maskująca (sufit też nie jest poziomy).
 - **Poziomowanie**: nóżki regulowane 100–150 mm; spadek podłogi sprawdzić na długości zabudowy — przy >15 mm cokół docinany na miejscu.

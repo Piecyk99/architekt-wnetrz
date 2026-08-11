@@ -29,7 +29,7 @@ Pipeline poniżej zakłada **pełen scope**. Dla węższych scope'ów — przesk
 ## Default style (house style — stosuj zawsze, chyba że user zmieni)
 
 User'a domyślny styl (z pamięci):
-- **Drewno**: Orzech Royal gładki mat (laminat drewnopodobny)
+- **Drewno**: Orzech Royal gładki mat (laminat drewnopodobny) — to intencja kolorystyczna, nie artykuł katalogowy; **kod dekoru dobrać z aktualnej kolekcji Korner (płyty, korner.pl) przed wyceną**
 - **Kontrasty**: kremowy / kość słoniowa (interior mebli)
 - **Akcenty**: czarne listwowe uchwyty 12mm, czarna armatura, czarne profile
 - **Oświetlenie**: ciepłe 3000K (mieszkalne), 4000K (łazienka/biuro)

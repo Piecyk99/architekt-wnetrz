@@ -11,11 +11,11 @@ Wszystkie wartości w **milimetrach** (mm).
 ### Szafki dolne (stojące)
 - **Wysokość korpusu:** 720 (bez cokołu i blatu)
 - **Cokół:** 100 (typowy) — całość 820 do góry korpusu
-- **Blat:** 38-40 grubość — całkowita wysokość roboczej 860-900
-- **Wysokość ergonomiczna blatu od podłogi:**
-  - osoba do 165cm → 850-870
-  - osoba 165-180cm → 880-900
-  - osoba 180+cm → 910-930
+- **Blat — grubości:** laminowany 38-40; **spiek 4 / 12 / 20 — montaż na podkonstrukcji** (nigdy "38-40" dla spieku)
+- **Wysokość blatu od podłogi — JEDYNA obowiązująca siatka (nie definiuj tych wartości w innych plikach — odsyłaj tutaj):**
+  - osoba do 165cm → **860**
+  - osoba 165-180cm → **880**
+  - osoba 180+cm → **910**
 - **Głębokość korpusu:** 580 (standard) lub 600 (głębokie)
 - **Głębokość blatu (z wystawką):** 600-630
 - **Szerokości typowe:** 150, 200, 300, 400, 450, 500, 600, 800, 900, 1000, 1200
@@ -31,14 +31,24 @@ Wszystkie wartości w **milimetrach** (mm).
 - **Głębokość:** 580 lub 600
 - **Szerokość typowa:** 600 (lodówka, piekarnik+mikrofala), 500 (lodówka wąska), 300 (kolumna spiżarniowa)
 
-### AGD do zabudowy — wymiary otworów
-- **Piekarnik standard:** 596w × 595h × 545d (otwór 600×600)
-- **Mikrofalówka zabudowana:** 595w × 388h (otwór 600×400)
-- **Zmywarka pełnowymiarowa:** 596w × 818h × 555d (otwór 600×820+)
-- **Zmywarka 45cm:** 446w × 818h
-- **Lodówka pełna do zabudowy:** 540w × 1772h × 545d (otwór 600 × 1780 z frontem)
-- **Płyta indukcyjna:** otwór wycięcia w blacie 560×490 (4-palnikowa), 750×490 (5-palnikowa)
-- **Okap zabudowywany:** 600 lub 900 szerokość, min 650mm od płyty gazowej, min 550mm od indukcji
+### AGD do zabudowy — wymiary
+
+**KRYTYCZNE ROZRÓŻNIENIE — nigdy nie łącz tych dwóch wymiarów w jednej liczbie:**
+- **szerokość korpusu** = zewnętrzny wymiar szafki (typowo 600)
+- **światło zabudowy / nisza** = wewnętrzny otwór, w który wchodzi urządzenie (typowo 560 przy korpusie 600 i bokach 18)
+Błąd w tej kolumnie = źle pocięta płyta.
+
+| Urządzenie | Wymiar urządzenia (w×h×d) | Szerokość korpusu | Światło zabudowy / nisza (w×h) |
+|---|---|---|---|
+| Piekarnik standard | 596 × 595 × 545 | 600 | **560 × 590–600** |
+| Mikrofalówka zabudowana | 595 × 388 | 600 | 560 × wys. wg modelu `[DO WERYFIKACJI]` |
+| Zmywarka pełnowymiarowa | 596 × 818 × 555 | — (wnęka między szafkami) | światło wnęki **600** × 820+ pod blatem |
+| Zmywarka 45cm | 446 × 818 | — (wnęka między szafkami) | światło wnęki **450** × 820+ pod blatem |
+| Lodówka pełna do zabudowy | 540 × 1772 × 545 | 600 | **560 × 1780** |
+| Płyta indukcyjna | — | — | wycięcie w blacie: 560×490 (4-paln.), 750×490 (5-paln.) |
+| Okap zabudowywany | szer. 600 lub 900 | 600/900 | wg modelu; min 650mm od płyty gazowej, min 550mm od indukcji |
+
+Zawsze weryfikuj niszę z kartą montażową konkretnego modelu przed cięciem.
 
 ### Zlewy
 - **Jednokomorowy szer.:** 450-600 wycięcie w blacie
@@ -64,7 +74,7 @@ Wszystkie wartości w **milimetrach** (mm).
 ### Garderoba (otwarta szafa w pokoju)
 - **Szerokość modułu otwartego:** 600-900
 - **Półki:** rozstaw 300-350 (na koszulki), 400-450 (na pudełka)
-- **Szuflady:** wysokość 192 (Legrabox H), 134 (M), 90 (N)
+- **Szuflady Blum Legrabox — wysokości boków (nomenklatura Blum):** N ≈ 66,5 / M ≈ 90,5 / K ≈ 128,5 / C ≈ 193 mm (oznaczenie "H" nie istnieje)
 
 ---
 
@@ -115,6 +125,8 @@ Wszystkie wartości w **milimetrach** (mm).
 | Drzwi przesuwne — luz w prowadnicy | 6-8 mm        |
 | Zabudowa do ściany — fuga na koniec| 5-15 mm na fugę silikonową/listwę |
 | Zabudowa do sufitu — fuga          | 10-30 mm + listwa maskująca |
+
+**Fuga ≠ blenda:** fuga 5-15 mm z tabeli to szczelina zamykana silikonem/listwą przy prostej ścianie. Czym innym jest **szczelina montażowa 20-50 mm zamykana blendą docinaną na miejscu** przy ścianach krzywych/niepewnych — definicja i zasady w `technologia-wykonania.md` §2. Nie mieszaj tych dwóch wartości.
 
 ---
 
