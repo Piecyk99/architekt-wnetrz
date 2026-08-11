@@ -18,7 +18,7 @@ Plik docelowy: `.github/workflows/build-skills.yml`
 
 ## Powiązania z sekcjami P1 (poprawki specu 2026-08-11)
 
-- **Po P1-6 (rozłączne triggery / przemianowanie `architekt-kuchni` → `zabudowa-na-wymiar`):** zaktualizować TEN plik, żeby spec operował nowymi nazwami skilli — workflow ma budować od razu docelowe nazwy.
+- **Przemianowanie wykonane w P1-2** (`architekt-kuchni` → `zabudowa-na-wymiar`): spec operuje docelowymi nazwami — budowane skille: `architekt-wnetrz`, `zabudowa-na-wymiar`. Rozłączne triggery = P1-7, workflow = P1-8.
 - **Przy P1-1 (likwidacja duplikatu):** przepisywanie ścieżek `../` na `references/` przy pakowaniu standalone to **WYMÓG, nie optymalizacja**. Zanotować w `skills/README.md`, żeby ktokolwiek pakujący skille ręcznie w przyszłości o tym wiedział — to jest dokładnie mechanizm, który wyprodukował rozjazd synced-vs-plugin złapany w audycie.
 
 ## Notatki kontekstowe

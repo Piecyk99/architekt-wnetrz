@@ -36,7 +36,7 @@ architekt-wnetrz/
 │   ├── architekt-wnetrz/
 │   │   ├── SKILL.md                           # główny prompt (9 faz)
 │   │   └── references/                        # 9 plików referencyjnych
-│   └── architekt-kuchni/
+│   └── zabudowa-na-wymiar/
 │       ├── SKILL.md                           # specjalista: kuchnie na wymiar (workflow 11 kroków)
 │       └── references/                        # 5 plików: analiza zdjęć, układy, technologia, dokumentacja, prompty
 ├── app/                                       # standalone PWA (Next.js)
@@ -138,17 +138,17 @@ Po `git push` użytkownicy dostają update przez `/plugin update architekt-wnetr
 | Skill                  | Zakres                              | Kiedy uruchamiać                            |
 |------------------------|-------------------------------------|----------------------------------------------|
 | **architekt-wnetrz**   | Pełen projekt wnętrza               | Wszystko o mieszkaniu / wnętrzu (pełne projekty, wykończenia, oświetlenie, listy zakupów) |
-| **architekt-kuchni**   | Specjalista: kuchnie na wymiar      | Projekt kuchni, zabudowa kuchenna, analiza zdjęć kuchni, rozpiska szafek, ergonomia/AGD, projekt dla stolarza, prompty do wizualizacji kuchni. NIE dla pełnych projektów mieszkań ani innych pomieszczeń |
+| **zabudowa-na-wymiar**   | Specjalista: kuchnie na wymiar      | Projekt kuchni, zabudowa kuchenna, analiza zdjęć kuchni, rozpiska szafek, ergonomia/AGD, projekt dla stolarza, prompty do wizualizacji kuchni. NIE dla pełnych projektów mieszkań ani innych pomieszczeń |
 | **banana-claude**      | Dowolny obraz, bez logiki projektowej| Szybkie koncepty, single image generations  |
 
-**architekt-kuchni** (robocza nazwa: kitchen-furniture-architect) współdzieli references z architekt-wnetrz przez ścieżki względne (`../architekt-wnetrz/references/…` — standardy-meble, korner-katalog, dostawcy, instalacje-elektryka, style-aesthetics). Instaluj cały plugin; przy instalacji drag&drop pojedynczego folderu skilla współdzielone pliki nie będą dostępne (skill ma na to fallback). Kontekst „Kornel" = workflow dostawcy **Korner (płyty, korner.pl)** — oddział Piekary Śląskie. Nie mylić z Korner (podłogi, korner.eu — Poli-Eco, Żary), to inna firma. Scenariusze testowe: `docs/testy-architekt-kuchni.md`.
+**zabudowa-na-wymiar** (dawniej: zabudowa-na-wymiar) współdzieli references z architekt-wnetrz przez ścieżki względne (`../architekt-wnetrz/references/…` — standardy-meble, korner-katalog, dostawcy, instalacje-elektryka, style-aesthetics). Instaluj cały plugin; przy instalacji drag&drop pojedynczego folderu skilla współdzielone pliki nie będą dostępne (skill ma na to fallback). Kontekst „Kornel" = workflow dostawcy **Korner (płyty, korner.pl)** — oddział Piekary Śląskie. Nie mylić z Korner (podłogi, korner.eu — Poli-Eco, Żary), to inna firma. Scenariusze testowe: `docs/testy-zabudowa-na-wymiar.md`.
 
-Przykładowy prompt uruchamiający architekt-kuchni:
+Przykładowy prompt uruchamiający zabudowa-na-wymiar:
 > *"Zaprojektuj mi kuchnię na wymiar — załączam 3 zdjęcia pomieszczenia, ściana z oknem ma 320 cm. Chcę L z wyspą, rozpisz szafki dla stolarza."*
 
 ## Aktualizacje
 
-- **v1.1** (2026-07-28) — nowy skill **architekt-kuchni**: specjalista mebli kuchennych na wymiar (analiza wielu zdjęć → model pomieszczenia → warianty układu → rozpiska szafek dla stolarza → prompty wizualizacyjne wierne geometrii); współdzieli references z architekt-wnetrz. Uwaga: aplikacja PWA (`app/`+`worker/`) bundluje nadal tylko architekt-wnetrz — integracja drugiego skilla to osobny krok.
+- **v1.1** (2026-07-28) — nowy skill **zabudowa-na-wymiar**: specjalista mebli kuchennych na wymiar (analiza wielu zdjęć → model pomieszczenia → warianty układu → rozpiska szafek dla stolarza → prompty wizualizacyjne wierne geometrii); współdzieli references z architekt-wnetrz. Uwaga: aplikacja PWA (`app/`+`worker/`) bundluje nadal tylko architekt-wnetrz — integracja drugiego skilla to osobny krok.
 - **v1.0** (2026-05-25) — start: 9 faz, 9 plików referencyjnych, integracja z Banana / Gemini Nano Banana 2 + Cloudflare Worker dla mobile
 
 ## Autor

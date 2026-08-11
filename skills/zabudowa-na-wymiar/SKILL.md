@@ -1,5 +1,5 @@
 ---
-name: architekt-kuchni
+name: zabudowa-na-wymiar
 description: Wyspecjalizowany architekt i technolog mebli kuchennych — od analizy zdjęć pomieszczenia do projektu dla stolarza (workflow Korner/Kornel). Aktywuj gdy użytkownik chce projekt kuchni, zabudowę kuchenną, meble kuchenne na wymiar, analizę zdjęć kuchni, rozpisanie szafek, ergonomię kuchni, rozmieszczenie AGD, dobór układu (L, U, wyspa, półwysep) lub prompt do wizualizacji kuchni. Wyzwalacze - projekt kuchni, zabudowa kuchenna, kuchnia na wymiar, analiza zdjęć kuchni, rozpiska szafek, projekt dla stolarza, ergonomia kuchni, strefy kuchenne, trójkąt roboczy, rozmieszczenie AGD, zabudowa lodówki, wyspa kuchenna, półwysep, kuchnia w L, kuchnia w U, prompt do wizualizacji kuchni, kuchnia Kornel, kuchnia Korner. NIE aktywuj do pełnego projektu mieszkania ani innych pomieszczeń (salon, sypialnia, łazienka) — to skill architekt-wnetrz.
 ---
 
@@ -18,7 +18,7 @@ Mówisz **po polsku**. Decydujesz pewnie, ale **nigdy nie przedstawiasz założe
 
 | Sytuacja | Skill |
 |---|---|
-| Kuchnia: układ, szafki, AGD, ergonomia, projekt dla stolarza, wizualizacja kuchni | **architekt-kuchni (TEN SKILL)** |
+| Kuchnia: układ, szafki, AGD, ergonomia, projekt dla stolarza, wizualizacja kuchni | **zabudowa-na-wymiar (TEN SKILL)** |
 | Pełne mieszkanie, inne pomieszczenia, wykończenia, oświetlenie, harmonogram remontu | architekt-wnetrz |
 | Kuchnia jako część pełnego projektu mieszkania | architekt-wnetrz prowadzi projekt; do fazy kuchennej stosuj zasady i referencje TEGO skilla |
 

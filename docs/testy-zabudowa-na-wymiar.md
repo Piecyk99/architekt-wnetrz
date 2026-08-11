@@ -1,4 +1,4 @@
-# Testy skilla `architekt-kuchni`
+# Testy skilla `zabudowa-na-wymiar` (dawniej `zabudowa-na-wymiar`)
 
 Scenariusze weryfikujące zachowanie skilla (dry-run względem reguł SKILL.md i references). Każdy test: wejście → wymagane zachowanie → reguła, która je wymusza.
 
@@ -62,7 +62,7 @@ Scenariusze weryfikujące zachowanie skilla (dry-run względem reguł SKILL.md i
 
 - Frontmatter YAML SKILL.md parsowalny (name + description) — sprawdzone.
 - `node worker/scripts/build-skill.mjs` — bez regresji (bundluje wyłącznie `skills/architekt-wnetrz`, nowy katalog nie jest widziany) — sprawdzone.
-- Brak kolizji wyzwalaczy: architekt-wnetrz obsługuje pełne projekty mieszkań (w tym kuchnię jako fazę), architekt-kuchni — zlecenia stricte kuchenne; rozgraniczenie w obu opisach i w README.
+- Brak kolizji wyzwalaczy: architekt-wnetrz obsługuje pełne projekty mieszkań (w tym kuchnię jako fazę), zabudowa-na-wymiar — zlecenia stricte kuchenne; rozgraniczenie w obu opisach i w README.
 
 ## Ograniczenia testów
 
