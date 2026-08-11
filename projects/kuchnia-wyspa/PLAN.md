@@ -1,10 +1,12 @@
-# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v1)
+# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: **zdjęcia pomieszczenia** (stan remontowy, wyspa wyklejona taśmą na wylewce, adnotacje „wyspa" / „indukcja" / „szafki") oraz **odręcznego rzutu z wymiarami** (adnotacje „wyspa" / „indukcja" / „zlew" / „okno", legenda `oo = woda`, `⊗ = odpływ`). Wykonanie: **samodzielne**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
 > **To NIE jest dokumentacja produkcyjna.** Koncepcja v1 na danych częściowych — wszystkie wartości `[~]` i `[?]` wymagają weryfikacji pomiarem. Szerokości modułów są orientacyjne, do przeliczenia po pomiarach z pkt 12.
 
-> **Relacja do `projects/kuchnia-9.02`:** geometria tego pomieszczenia (≈254,6 × ≈238,9+, okno na ścianie zlewu, brak gzymsu/komina w kadrze) **nie zgadza się** z kuchnią 9.02 (245 × 191, wysokie okno, gzyms 63×37). Traktuję to jako **inne pomieszczenie / nowy projekt**. Jeśli to ta sama kuchnia po zmianach ścian — patrz pytanie Q5; wtedy plan 9.02 v4 zostaje zarchiwizowany jako nieaktualny.
+> **Relacja do `projects/kuchnia-9.02`:** inwestor potwierdził (2026-08-11), że **to ta sama kuchnia po przebudowie ścian** — geometria z planu 9.02 (245×191, wysokie okno, gzyms) już nie istnieje. Plan 9.02 v4 **zarchiwizowany**; z tamtego projektu przenosi się paleta materiałów (pkt 10).
+>
+> **Koncepcja v2 (2026-08-11)** — po odpowiedziach inwestora: wyspa wymiarowana zasadą „przejście 60 cm", lodówka wolnostojąca 60×65 przy ściance 77 cm, „59x52" = wymiary płyty indukcyjnej.
 
 ---
 
@@ -13,7 +15,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: **zdjęcia pomieszcz
 ### Zdjęcie 1 — pomieszczenie (stan surowy)
 - **Pozycja kamery:** z góry (z podestu/drabiny), od strony przejścia/korytarza, w stronę ściany z indukcją i narożnika z niszą.
 - **Widoczne:** świeża wylewka; ściana z podtynkową puszką elektryczną (przyszła **indukcja** — prawdopodobnie wypust siłowy `[?]` do potwierdzenia); po prawej uskok ściany i nisza; wyklejony taśmą obrys **wyspy** na podłodze + poziomica wyznaczająca jej krawędź; przejście do pomieszczenia z ułożoną podłogą drewnianą (salon/korytarz) po lewej; stara kuchenka wolnostojąca (tymczasowa) po prawej; przewody elektryczne luzem przy podłodze.
-- **Adnotacje na zdjęciu:** „Szafki" (niebieskie, na ścianie indukcji — szafki górne na tej ścianie), „59x52" ołówkiem na ścianie `[?]` — znaczenie nieznane.
+- **Adnotacje na zdjęciu:** „Szafki" (niebieskie, na ścianie indukcji — szafki górne na tej ścianie), „59x52" ołówkiem na ścianie — **wymiary płyty indukcyjnej `[P]`** (potwierdzone przez inwestora).
 - **Na podłodze:** czerwony znacznik przy ścianie indukcji `[?]`; metalowy krążek/zaślepka przy niszy `[?]` (odpływ? gaz? do identyfikacji).
 - **Czego NIE widać:** ściana z oknem (za kadrem po prawej), ściana lodówki (za kamerą), sufit, kratka wentylacyjna.
 
@@ -37,21 +39,23 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 
 ```
               ściana A — indukcja + szafki górne
-    ┌─────┬──────────127──────────┬────67─────┐ ← uskok ~15,5 [~]
-    │WYSPA│  ciąg dolny + górne   │ (narożnik │
-    ├──┐  │  [indukcja + okap]    │  A/B)   ┌─┤
-    │  │  └───────195─────────────┴─────────┘ │
+    ┌─────┬───────────195──────────┬──────────┐ ← uskok ~15,5×67 [~]
+    │WYSPA│  ciąg dolny + górne    │ (narożnik│
+    ├──┐  │  [indukcja 59×52+okap] │  A/B)  ┌─┤
+    │  │  └────────────────────────┴────────┘ │
     │W │                                  │zmyw│
     │Y │        aleja robocza             │ 45 │
     │S │         ~135 [~]                 ├────┤
     │P │                                  │zlew│═ okno [?pozycja]
-    │A │ dł. ~127 [?]                     │    │   (zlew pod oknem)
+    │A │ dł. ~127 [~] (z zasady 60)       │    │   (zlew pod oknem)
     ├──┘                                  ├────┤ ściana B: 238,9 [P]
-    │    przejście/wejście ~127 [~]       │    │
-    │                                ┌────┴────┤
-    │  ← otwarte (korytarz)          │ LODÓWKA │ ● woda+odpływ [~]
-    └────────────────────────────────┴─────────┘
-         ściana C — lodówka z zabudową od góry (nadstawką)
+    │   PRZEJŚCIE 60 [P-decyzja]          │dost│
+    ├──┐  ┌─────────┐                     │    │
+    │ścianka│LODÓWKA│  ● woda+odpływ [~]  │    │
+    │ 77 │  │ 60×65 │                     │    │
+    └───┴──┴────────┴─────────────────────┴────┘
+     wejście→   ściana C — lodówka wolnostojąca przy ściance 77,
+    (korytarz)  zabudowa od góry (nadstawka); front ku ścianie A
 ```
 
 ### Wymiary — statusy
@@ -63,20 +67,24 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 | Ciąg ściany A: wyspa → ściana B | 195 cm | `[P]` | rzut odręczny |
 | — w tym odcinek do uskoku / przy uskoku | 127 + 67 cm | `[~]` | rzut; patrz S1 |
 | Uskok przy narożniku A/B | ~15,5 cm | `[~]` | rzut (potwierdzone różnicą 254,6−238,9) |
-| Wymiar „77" | 77 cm | `[?]` | rzut — **nie wiadomo, czego dotyczy** (Q3) |
+| Mała ścianka przy lodówce | 77 cm | `[P]` | inwestor 2026-08-11 (orientacja ścianki `[?]` — wzdłuż C czy w głąb pomieszczenia) |
+| Płyta indukcyjna | 59×52 cm | `[P]` | napis na ścianie = wymiary urządzenia (inwestor) |
+| Lodówka wolnostojąca | szer. 60 × gł. 65, wys. `[?]` | `[P]` | inwestor 2026-08-11 |
+| **Przejście koniec wyspy ↔ lodówka/ścianka** | **60 cm — reguła nadrzędna** | `[P]` | decyzja inwestora: wyspa ma być tak długa, żeby zostało 60 |
+| Wyspa: długość (wynikowa z reguły 60) | ~118–130 cm | `[~]` | 254,6 − 65 (lodówka) − 60 = **129,6**; jeśli ścianka 77 wystaje w głąb: 254,6 − 77 − 60 = **117,6**; taśma/szkic ~127 — spójne |
+| Wyspa: szerokość | ? | `[?]` | taśma na podłodze — do zmierzenia |
 | Ściana A łącznie (z wyspą) / ściana C | ? | `[?]` | brak — do pomiaru |
-| Wyspa: szerokość × długość | ? × ~127 | `[?]` | taśma na podłodze — do zmierzenia (S1/Q1) |
 | Wysokość pomieszczenia | ? | `[?]` | brak |
 | Okno na B: pozycja, szerokość, parapet | ? | `[?]` | brak — determinuje pozycję zlewu |
-| „59x52" (napis na ścianie) | ? | `[?]` | zdjęcie — znaczenie nieznane (Q4) |
 
 ### Sprzeczności / niejednoznaczności
 
-| # | Co | Wersja 1 | Wersja 2 | Przyjmuję | Potwierdzić |
-|---|---|---|---|---|---|
-| S1 | Znaczenie „127" | odcinek ciągu A między wyspą a uskokiem (127+67≈195 ✓) | długość wyspy w głąb pomieszczenia (proporcje szkicu też ~125) | **wersję 1** (kontrola sumy) — długość wyspy oznaczam osobno `[?]` | pomiar taśmy wyspy: szerokość i długość |
-| S2 | Pozycja lodówki na C | przy narożniku B/C (niebieski „hak" na szkicu; „zaczyna się, gdzie kończą się szafki przeciwnej strony" = koniec ciągu przy ścianie B) | wyrównana z wyspą (lewy koniec ciągu A) | **wersję 1** — bezpieczniejsza komunikacyjnie (nie zwęża wejścia) | Q2 |
-| S3 | Woda/odpływ | `xx` przy dolnym końcu ściany B (rejon narożnika B/C) | zlew ma być pod oknem (środek B?) | podejścia są nisko na B `[~]`, zlew pod oknem — **podejścia do przedłużenia w zabudowie** | pomiar pozycji podejść + okna |
+| # | Co | Rozstrzygnięcie |
+|---|---|---|
+| S1 | Znaczenie „127" | **ROZSTRZYGNIĘTE (2026-08-11):** wymiar związany z wyspą — jej długość wynika z reguły „przejście 60" i wychodzi ~127 (zbieżność 127+67≈195 była przypadkowa). Finalna długość wyspy = docięcie na miejscu wg reguły 60. |
+| S2 | Pozycja lodówki na C | **ROZSTRZYGNIĘTE (2026-08-11):** lodówka wolnostojąca przy **ściance 77** (rejon środkowo-lewy ściany C, w osi wyspy), NIE przy narożniku B/C. Niebieski „hak" na szkicu = koniec ciągu B / rejon podejść. |
+| S3 | Woda/odpływ | `xx` nisko na B przy narożniku z C `[~]`; zlew pod oknem — **podejścia do przedłużenia w zabudowie**; potwierdzić pomiarem. |
+| S4 | Orientacja ścianki 77 | wzdłuż ściany C czy prostopadle w głąb pomieszczenia? Wpływa na długość wyspy (117,6 vs 129,6) i osłonę lodówki. `[?]` do pomiaru/odpowiedzi. |
 
 ---
 
@@ -84,9 +92,12 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 
 1. **Szafki górne TYLKO na ścianie A** (ściana wyspy i indukcji) **oraz zabudowa nad lodówką na C**. Na ścianie B (okno/zlew) — **żadnych górnych**.
 2. **Zlew pod oknem** na ścianie B; **obok zlewu mała zmywarka** (przyjmuję 45 cm).
-3. **Lodówka na ścianie C** (naprzeciw indukcji), z tzw. **zabudową od góry** (słupek/nadstawka nad lodówką).
-4. **Wyspa** wg obrysu wyklejonego na podłodze — przy lewej krawędzi, prostopadle do ściany A (konstrukcyjnie: **półwysep**, jeśli dostawiona do ściany A — tak wygląda na szkicu i zdjęciu).
-5. **Pełna kuchnia** — na tej przestrzeni ma się zmieścić wszystko, co potrzebne (przyjmuję: indukcja, piekarnik, okap, zlew, zmywarka 45, lodówka, przechowywanie).
+3. **Lodówka wolnostojąca 60×65** na ścianie C, **przy ściance 77 cm**, z tzw. **zabudową od góry** (nadstawka nad lodówką).
+4. **Wyspa** przy lewej krawędzi, prostopadle do ściany A (konstrukcyjnie **półwysep**, jeśli dostawiona do ściany) — **długość wymiarowana regułą: między końcem wyspy a lodówką/ścianką ma zostać przejście 60 cm** (wynikowo ~118–130 cm długości).
+5. **Płyta indukcyjna 59×52** (wymiar zapisany na ścianie) — na ciągu ściany A, przy istniejącej puszce.
+6. **Pełna kuchnia** — na tej przestrzeni ma się zmieścić wszystko, co potrzebne (przyjmuję: indukcja, piekarnik, okap, zlew, zmywarka 45, lodówka, przechowywanie).
+
+> ⚠ **Ostrzeżenie ergonomiczne (zapisane, decyzja świadoma):** przejście 60 cm jest **poniżej minimum komunikacyjnego 90 cm** z `uklady-kuchni.md` — to światło jak drzwi „60": przechodzi jedna osoba, bez wyminięcia, ciasno z zakupami; otwarte drzwi lodówki chwilowo blokują przejście całkowicie. Rekomendacja: jeśli pomiar pozwoli, skrócić wyspę o 10–20 cm (przejście 70–80). Inwestor zaakceptował 60 — analogicznie do zaakceptowanego przejścia 70 w poprzedniej wersji kuchni (9.02 v4).
 
 ## 4. Układ i ergonomia (matematyka przejść)
 
@@ -95,13 +106,13 @@ Układ: **L (A+B) + półwysep przy A + słupek lodówki na C** — funkcjonalni
 | Przejście | Wartość | Próg | Ocena |
 |---|---|---|---|
 | Aleja robocza: wyspa ↔ front ciągu B | ~135 `[~]` (195 − 60 głęb. zabudowy) | ≥100 twardy / 110–120 optimum | ✓ |
-| Wyspa (koniec) ↔ ściana C / wejście | ~127 `[~]` (254,6 − ~127 dł. wyspy) | ≥90 komunikacyjne | ✓ |
+| **Wyspa (koniec) ↔ lodówka/ścianka 77** | **60 `[P]` — reguła inwestora** | ≥90 komunikacyjne | ✗ **świadomy kompromis** (ostrzeżenie w pkt 3) |
 | Przed otwartą zmywarką | ~135 `[~]` | ≥110 | ✓ |
-| Przed lodówką (front ku pomieszczeniu) | ~120+ `[~]` | ≥100 | ✓ |
+| Przed lodówką (front ku ścianie A) | ~125 `[~]` (do końca wyspy) | ≥100 | ✓ |
 
-**Trójkąt roboczy:** lodówka (C, przy narożniku B/C) → zlew (B, pod oknem) → indukcja (A) — boki szacunkowo 1,3–2,2 m, suma ~4,5–5,5 m `[~]` — w normie 3,6–7,0 m, ciąg wejściowy nie przecina trójkąta. Sekwencja stref od wejścia: zapasy (lodówka) → zmywanie (zlew+zmywarka) → przygotowanie (blat B/narożnik) → gotowanie (indukcja) — poprawna.
+**Trójkąt roboczy:** lodówka (C, przy ściance 77, w osi wyspy) → zlew (B, pod oknem) → indukcja (A) — boki szacunkowo 1,3–2,0 m, suma ~4,5–5,5 m `[~]` — w normie 3,6–7,0 m. Sekwencja od wejścia: zapasy (lodówka zaraz przy wejściu) → przez przejście 60 do alei roboczej → zmywanie (zlew+zmywarka na B) → przygotowanie (blat B/narożnik) → gotowanie (indukcja na A) — poprawna kolejność stref.
 
-**Uwaga krytyczna — bilans ściany B (238,9):** narożnik z A (~60 martwego pola) + zmywarka 45 + szafka zlewowa 80 + słupek lodówki na C (~65–70 głębokości wchodzące w światło B) = **~250–255 > 238,9**. Ciąg się **nie spina z zapasem** — do wyboru przy pomiarach: **(a)** szafka zlewowa **60** zamiast 80 (komora pojedyncza — rekomendacja przy małej kuchni), **(b)** zmywarka po drugiej stronie zlewu (bliżej narożnika nic poza martwym polem), **(c)** lodówka odsunięta od narożnika B/C (wariant S2/wersja 2). Decyzja po pomiarze ściany B i pozycji okna.
+**Bilans ściany B (238,9) — spięty** po przeniesieniu lodówki pod ściankę 77 (ciąg B może dojść do narożnika z C): martwe pole narożne ~60 + zmywarka 45 + zlew 80 + dostawka ~50 (docinana) = **235–239 ✓**. Kolejność zmywarka/zlew może się odwrócić zależnie od pomiaru pozycji okna (zlew MUSI trafić pod okno).
 
 ## 5. Rozpisanie zabudowy ściana po ścianie (koncepcja, mm)
 
@@ -111,26 +122,26 @@ Układ: **L (A+B) + półwysep przy A + słupek lodówki na C** — funkcjonalni
 **Górne na A (do sufitu `[?]` wys.):** `G1 450 | OKAP 600 (nad indukcją, w zabudowie) | G2 ~900` + LED 3000K pod spodem. Odstęp okap–indukcja ≥550.
 
 **Ściana B — 2389 `[P]`, od narożnika z A:**
-`martwe pole narożne ~600 (dostęp z D3) | D4 ZMYWARKA 450 | D5 ZLEW 600–800 (pod oknem, pozycja wg okna [?]) | dojście do słupka lodówki — patrz bilans wyżej`
-Bez szafek górnych (okno) — decyzja inwestora. Blat na całej długości do zabudowy lodówki.
+`martwe pole narożne ~600 (dostęp z D3) | D4 ZMYWARKA 450 | D5 ZLEW 800 (pod oknem, pozycja wg okna [?]) | D6 dostawka ~500 (docinana, do narożnika z C)`
+600+450+800+500 ≈ 2350–2390 ✓. Bez szafek górnych (okno) — decyzja inwestora. Kolejność D4/D5/D6 do przestawienia po pomiarze okna — zlew pod oknem jest nadrzędny.
 
-**Ściana C — od narożnika z B:**
-`S1 SŁUPEK LODÓWKI ~650–700 (lodówka + nadstawka nad nią do sufitu, kratka wentylacyjna w cokole i nadstawce)` — reszta ściany C w stronę wejścia **wolna** (komunikacja).
-Typ lodówki (do zabudowy 560×1780 nisza / wolnostojąca w obudowie) `[?]` — determinuje szerokość słupka i wentylację.
+**Ściana C — rejon ścianki 77 (środkowo-lewa część, w osi wyspy):**
+`ŚCIANKA 77 [P] | LODÓWKA wolnostojąca 600×650 (wys. [?]), front ku ścianie A | NADSTAWKA nad lodówką (do sufitu [?]), wentylacja: szczelina 50 z tyłu i nad lodówką + kratka w nadstawce`
+Lodówka wolnostojąca — nadstawka NIE ciasno na obudowie: zostawić luz serwisowy z boków ~20–30 mm; bok wykończeniowy od strony przejścia 60 (płyta jak fronty). Prawa część ściany C (między lodówką a narożnikiem z B) — **wolna** lub płytka półka/blat odstawczy `[?]` do decyzji po pomiarach.
 
-**WYSPA/półwysep — wymiar wg taśmy `[?]` (roboczo ~1270 × ~650):**
+**WYSPA/półwysep — szerokość wg taśmy `[?]` (roboczo ~650), długość WYNIKOWA z reguły „przejście 60" (roboczo ~1180–1300):**
 korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wysokości ciągu (880 `[~]` — wzrost użytkownika `[?]`); bez instalacji wodnych; ewentualne **gniazdo w wyspie wymaga doprowadzenia w podłodze — decyzja PRZED posadzką docelową**.
 
 ## 6. Rozmieszczenie AGD
 
 | Urządzenie | Pozycja | Nisza / wymagania |
 |---|---|---|
-| Płyta indukcyjna | D2 (ściana A) | wycięcie blatu 560×490 (4-pol.); wypust siłowy — puszka na ścianie A widoczna na zdjęciu `[?]` potwierdzić 32A |
-| Piekarnik | pod płytą w D2 | nisza 560×590–600; osobny obwód 16A; alternatywa: słupek na C obok lodówki — patrz Q2 |
+| Płyta indukcyjna **59×52 `[P]`** | D2 (ściana A) | wycięcie blatu wg karty modelu (typowo ~560×490 dla urządzenia 590×520); wypust siłowy — puszka na ścianie A `[?]` potwierdzić 32A |
+| Piekarnik | pod płytą w D2 | nisza 560×590–600; osobny obwód 16A |
 | Okap | nad D2, w G (zabudowany) | ≥550 od indukcji; **recyrkulacja do czasu potwierdzenia kratki wentylacyjnej `[?]`** |
 | Zmywarka 45 | D4, obok zlewu | światło wnęki 450×820+; woda+odpływ z D5 |
 | Zlew + bateria | D5, pod oknem | podejścia obecnie nisko na B `[~]` — przedłużyć w zabudowie; zlew nie nad zmywarką |
-| Lodówka | S1 na C, przy narożniku B/C | otwieranie ≥90° (zawiasy od strony ściany B → blenda dystansowa ≥50); wentylacja 50 tył+góra |
+| Lodówka **wolnostojąca 600×650 `[P]`** | ściana C, przy ściance 77, front ku A | wys. `[?]`; drzwi otwierane ≥90° — zawiasy od strony ścianki 77 kolidują z nią przy >90°, **rekomendacja: zawiasy od strony ciągu B**; wentylacja 50 tył+góra, kratka w nadstawce; otwarte drzwi chwilowo zamykają przejście 60 (zapisany kompromis) |
 
 ## 7. Zalecenia instalacyjne (PRZED montażem)
 
@@ -145,11 +156,12 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 
 | Ryzyko | Mitygacja |
 |---|---|
-| Bilans ściany B nie spina się (narożnik+45+80+lodówka > 238,9) | wybór wariantu (a)/(b)/(c) z pkt 4 po pomiarach; zlew 600 zamiast 800 |
-| Interpretacja „127" błędna (S1) | zmierzyć taśmę wyspy przed rozpisaniem finalnym |
-| Pozycja okna wymusi przesunięcie zlewu | pomiar okna przed rozstawem D4/D5 |
+| Przejście 60 w praktyce za ciasne (poniżej normy 90) | świadoma decyzja inwestora; wyspę można skrócić na etapie montażu (blat i korpusy docinane) — zalecane rozważenie 70–80 |
+| Otwarte drzwi lodówki blokują przejście 60 | zawiasy od strony ciągu B; zapisany kompromis |
+| Orientacja ścianki 77 (S4) zmienia długość wyspy o ~12 cm | pomiar przed zamówieniem korpusów wyspy; reguła 60 nadrzędna |
+| Pozycja okna wymusi przesunięcie zlewu/zmywarki | pomiar okna przed rozstawem D4/D5/D6 |
 | Uskok 15,5×67 inny niż na szkicu | pomiar w 3 wysokościach; blenda docinana |
-| Zawiasy lodówki przy ścianie B | blenda dystansowa 50–70 |
+| Nadstawka zbyt ciasna na lodówce wolnostojącej | luz 20–30 mm z boków, 50 mm góra/tył + kratka; pomiar lodówki z zawiasami |
 | Posadzka docelowa zmieni wysokości | wymiary pionowe po posadzce |
 
 ## 9. Lista pomiarów kontrolnych dla stolarza
@@ -157,19 +169,20 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 1. Ściana A łącznie (z odcinkiem wyspy) i ściana C — dołem i na wys. blatu.
 2. Ściana B: 238,9 — kontrola dołem/górą; przekątne narożnika A/B (kąt).
 3. Uskok przy A/B: głębokość i długość na 3 wysokościach.
-4. **Taśma wyspy: szerokość × długość + odległość od ściany A** (rozstrzyga S1).
-5. Okno na B: pozycja od narożników, szerokość, wysokość parapetu (blat pod oknem?).
-6. Wysokość podłoga–sufit w 4 punktach **po posadzce docelowej**.
-7. Podejścia wody/odpływu: pozycja, wysokości; identyfikacja zaślepki w podłodze.
-8. Kratka wentylacyjna: pozycja i wymiar.
-9. Puszka elektryczna na A: obwód (32A?); pozycje pozostałych punktów.
-10. Światło wejścia do kuchni od korytarza; wyjaśnić wymiar „77" i napis „59x52".
+4. **Ścianka 77: orientacja (wzdłuż C czy w głąb), grubość, pozycja od lewej krawędzi** (rozstrzyga S4 i finalną długość wyspy z reguły 60).
+5. **Taśma wyspy: szerokość + odległość ścianka/lodówka↔koniec wyspy** (kontrola reguły 60).
+6. Okno na B: pozycja od narożników, szerokość, wysokość parapetu (blat pod oknem?).
+7. Wysokość podłoga–sufit w 4 punktach **po posadzce docelowej**; wysokość lodówki z zawiasami (nadstawka).
+8. Podejścia wody/odpływu: pozycja, wysokości; identyfikacja zaślepki w podłodze.
+9. Kratka wentylacyjna: pozycja i wymiar.
+10. Puszka elektryczna na A: obwód (32A?); pozycje pozostałych punktów.
+11. Światło wejścia do kuchni od korytarza (między ścianką 77 a łazienką).
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 
 ## 10. Materiały i styl — propozycja (do akceptacji)
 
-Kontynuacja palety zaakceptowanej w projekcie kuchni 9.02 (jeśli to ten sam inwestor/mieszkanie): fronty dolne beż/kaszmir mat bezuchwytowe, górne + słupek lodówki ciemny orzech mat (intencja „Orzech Royal"), blat jasny trawertyn laminat 38 mm, front wyspy od strony wejścia panel ryflowany ciemny, bateria+zlew czarne, LED 3000K. **Kody dekorów do doboru z aktualnej oferty Korner (płyty, korner.pl) `[DO WERYFIKACJI]`** — bez kodów z pamięci. Alternatywnie: nowa paleta wg inspiracji inwestora.
+To ta sama kuchnia co projekt 9.02 — **obowiązuje paleta zaakceptowana 2026-07-28** (przeniesiona z 9.02 pkt 13): fronty dolne beż/kaszmir mat bezuchwytowe, górne + zabudowa lodówki ciemny orzech mat (intencja „Orzech Royal"), blat jasny trawertyn laminat 38 mm, front wyspy od strony wejścia panel ryflowany ciemny, bateria+zlew czarne, LED 3000K. **Kody dekorów do doboru z aktualnej oferty Korner (płyty, korner.pl) `[DO WERYFIKACJI]`** — bez kodów z pamięci.
 
 ## 11. Prompt — realistyczna wizualizacja (EN; zaktualizować po pomiarach)
 
@@ -177,11 +190,13 @@ Kontynuacja palety zaakceptowanej w projekcie kuchni 9.02 (jeśli to ten sam inw
 Architectural interior photograph of a compact open kitchen in a Polish apartment,
 roughly 2.6 x 2.5 m, open on the left to a corridor. Far wall: base cabinets with
 an induction hob and built-in oven below, upper cabinets with an integrated hood
-above, under-cabinet LED 3000K. A peninsula (~127 x 65 cm, worktop 88 cm) attached
+above, under-cabinet LED 3000K. A peninsula (~125 x 65 cm, worktop 88 cm) attached
 to the far wall at its left end, extending toward the viewer. Right wall: a window
-mid-wall with a single-bowl black granite sink below it and a slim 45 cm dishwasher
-beside it — NO upper cabinets on this wall. Near-right corner: a tall fridge column
-with cabinet above it reaching the ceiling. Handleless matte beige/cashmere lower
+mid-wall with a black granite sink below it and a slim 45 cm dishwasher beside it —
+NO upper cabinets on this wall. Near the viewer, opposite the far wall: a
+freestanding fridge (60 cm) standing beside a short partition wall, enclosed with
+a cabinet above it reaching the ceiling; a narrow 60 cm gap separates the peninsula
+end from the fridge. Handleless matte beige/cashmere lower
 fronts, dark matte walnut upper cabinets and fridge column, light travertine-look
 laminate worktop, dark fluted wood panel on the peninsula front facing the viewer,
 black matte faucet. Fresh renovation, warm daylight from the window. Camera at the
@@ -200,8 +215,9 @@ designed kitchen into this room, keeping the camera position, walls, wall recess
 floor and the doorway exactly as photographed. Along the far wall (labeled area):
 base cabinets with induction hob and oven, upper cabinets with integrated hood.
 Build the peninsula exactly on the taped outline on the floor. Right side: sink run
-under the window with a 45 cm dishwasher, no upper cabinets. Near-right: tall fridge
-column with top cabinet. Materials: handleless matte beige lower fronts, dark matte
+under the window with a 45 cm dishwasher, no upper cabinets. In the near foreground,
+beside the short partition wall: a freestanding fridge enclosed with a top cabinet,
+leaving a 60 cm gap to the peninsula end. Materials: handleless matte beige lower fronts, dark matte
 walnut uppers and fridge column, light travertine-look worktop, dark fluted panel
 on the peninsula front, black faucet, LED 3000K under uppers.
 STRICT: overlay furniture only — do not alter walls, openings or viewpoint; the
@@ -211,10 +227,14 @@ worktop.
 
 ---
 
-## Pytania krytyczne (Q1–Q5)
+## Pytania — status po odpowiedziach inwestora (2026-08-11)
 
-1. **Q1 — wyspa:** jaką ma mieć szerokość i długość (wymiar taśmy z podłogi)? Czy dostawiona do ściany A (półwysep), czy wolnostojąca ze szczeliną?
-2. **Q2 — lodówka:** przy narożniku B/C (jak przyjąłem), czy wyrównana z wyspą? Lodówka do zabudowy czy wolnostojąca w obudowie? Piekarnik pod indukcją (jak przyjąłem) czy w słupku obok lodówki?
-3. **Q3 — wymiar „77" na szkicu:** czego dotyczy (szerokość wejścia? odcinek zabudowy?)?
-4. **Q4 — „59x52" na ścianie:** co oznacza?
-5. **Q5 — czy to ta sama kuchnia co projekt 9.02** (po zmianach ścian), czy inne mieszkanie? Jeśli ta sama — archiwizuję plan 9.02 v4. Czy paleta materiałów z 9.02 (pkt 10) zostaje?
+Rozstrzygnięte: wyspa wymiarowana regułą „przejście 60" ✓ · lodówka wolnostojąca 60×65 przy ściance 77 ✓ · „77" = mała ścianka ✓ · „59x52" = wymiary indukcji ✓ · ta sama kuchnia co 9.02 (plan v4 zarchiwizowany) ✓.
+
+**Pozostają otwarte (do pomiaru / krótkiej odpowiedzi):**
+
+1. **Ścianka 77** — biegnie wzdłuż ściany C (lodówka za nią, plecami do C) czy wystaje w głąb pomieszczenia (lodówka bokiem przy niej)? Zmienia długość wyspy o ~12 cm (117,6 vs 129,6).
+2. **Szerokość wyspy** (wymiar taśmy) + czy dostawiona do ściany A (półwysep), czy ze szczeliną?
+3. **Okno na B:** pozycja od narożników + wysokość parapetu — ustawia zlew i zmywarkę.
+4. **Wysokość pomieszczenia** (po posadzce) + **wysokość lodówki** — pod nadstawkę; wzrost głównego użytkownika — pod wysokość blatu (roboczo 880).
+5. **Piekarnik pod indukcją** (tak przyjąłem) — potwierdź, czy tak zostaje.

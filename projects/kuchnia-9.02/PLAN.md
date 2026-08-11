@@ -1,4 +1,6 @@
-# Kuchnia 9.02 — projekt zabudowy na wymiar (wariant v4, korekta v4.1)
+# Kuchnia 9.02 — projekt zabudowy na wymiar (wariant v4, korekta v4.1) — ZARCHIWIZOWANY
+
+> **ARCHIWUM (2026-08-11):** pomieszczenie zostało przebudowane (zmiana ścian w trakcie remontu) — geometria z tego planu (245×191, wysokie okno, gzyms) już nie istnieje. Inwestor potwierdził, że to ta sama kuchnia co nowy projekt. **Aktualny projekt: `projects/kuchnia-wyspa/PLAN.md`.** Z tego dokumentu obowiązuje nadal wyłącznie paleta materiałów (pkt 13) — przeniesiona do nowego planu.
 
 > **Korekta 2026-08-11 (v4.1):** poprawiono dane dostawcy — formatki, płyty, blaty i okucia zamawiane u **Korner (płyty, korner.pl)**, oddział **Piekary Śląskie** / KornerGo (kornergo.pl, rozkrój online b2b.kornergo.pl). Wcześniejsze wskazanie „Korner (Żary)" dotyczyło innej, niepowiązanej firmy (Korner / Poli-Eco, korner.eu — podłogi, listwy, obrzeża i profile; rozdział podmiotów: `skills/architekt-wnetrz/references/dostawcy.md`). Usunięto też niezweryfikowane kody dekorów (Egger — **poza ofertą korner.pl**) — materiały opisane jako intencja kolorystyczna, kody do doboru z aktualnej kolekcji przed wyceną. **Układ v4 i wszystkie decyzje projektowe inwestora — bez zmian.**
 
