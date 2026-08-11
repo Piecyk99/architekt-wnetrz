@@ -16,6 +16,11 @@ Plik docelowy: `.github/workflows/build-skills.yml`
 7. **Publikacja:** ZIP-y jako artifacts **ORAZ** GitHub Release z tagiem datowym `skills-YYYY-MM-DD` — do pobrania z telefonu bez logowania do Actions.
 8. **Opis release'u:** lista skilli z rozmiarem + krótka nota co się zmieniło (z commit message).
 
+## Powiązania z sekcjami P1 (poprawki specu 2026-08-11)
+
+- **Po P1-6 (rozłączne triggery / przemianowanie `architekt-kuchni` → `zabudowa-na-wymiar`):** zaktualizować TEN plik, żeby spec operował nowymi nazwami skilli — workflow ma budować od razu docelowe nazwy.
+- **Przy P1-1 (likwidacja duplikatu):** przepisywanie ścieżek `../` na `references/` przy pakowaniu standalone to **WYMÓG, nie optymalizacja**. Zanotować w `skills/README.md`, żeby ktokolwiek pakujący skille ręcznie w przyszłości o tym wiedział — to jest dokładnie mechanizm, który wyprodukował rozjazd synced-vs-plugin złapany w audycie.
+
 ## Notatki kontekstowe
 
 - Rozwiązuje problem utrwalania `~/.claude/skills/synced/` — po każdym mergu do main gotowe ZIP-y do re-uploadu na konto claude.ai.
