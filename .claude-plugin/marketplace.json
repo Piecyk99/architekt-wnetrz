@@ -10,7 +10,7 @@
     {
       "name": "architekt-wnetrz",
       "source": "./",
-      "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie, pokój, łazienkę, kuchnię, lub potrzebuje koncept, layout, oświetlenie, wykończenia, meble (Korner — płyty, korner.pl + wolnostojące), plan elektryczny, wizualizacje fotorealistyczne, plan budowy lub listy zakupów. Zawiera też skill architekt-kuchni — specjalistę mebli kuchennych na wymiar (analiza zdjęć pomieszczenia, dobór układu, rozpiska szafek dla stolarza, prompty wizualizacyjne).",
+      "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie, pokój, łazienkę, kuchnię, lub potrzebuje koncept, layout, oświetlenie, wykończenia, meble (Korner — płyty, korner.pl + wolnostojące), plan elektryczny, wizualizacje fotorealistyczne, plan budowy lub listy zakupów. Zawiera też skill zabudowa-na-wymiar — specjalistę zabudowy meblowej na wymiar (analiza zdjęć pomieszczenia, dobór układu, rozpiska szafek dla stolarza, prompty wizualizacyjne).",
       "license": "MIT",
       "keywords": [
         "interior-design",
@@ -20,7 +20,7 @@
         "korner",
         "kitchen",
         "kitchen-furniture-architect",
-        "architekt-kuchni",
+        "zabudowa-na-wymiar",
         "lighting",
         "visualization",
         "gemini-nano-banana"
