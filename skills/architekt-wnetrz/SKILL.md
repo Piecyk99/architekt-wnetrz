@@ -1,6 +1,6 @@
 ---
 name: architekt-wnetrz
-description: Pełny pipeline projektowania wnętrz mieszkaniowych A-Z. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie, pokój, łazienkę, kuchnię, lub potrzebuje koncept, layout, oświetlenie, wykończenia (podłogi/ściany/sufity), meble (na wymiar Korner + wolnostojące), plan elektryczny i instalacje, wizualizacje fotorealistyczne, plan budowy, lub listy zakupów z wieloma dostawcami. Wyzwalacze - projekt mieszkania, zaprojektuj pokój, urządzić salon, urządzić sypialnię, urządzić łazienkę, urządzić kuchnię, mieszkanie pod klucz, moodboard, oświetlenie, plan elektryczny, gniazdka, podłoga, ściana, mikrocement, panele, farby, tapeta, meble na wymiar, kuchnia na wymiar, szafa na wymiar, garderoba, Korner, rzuty, layout, wizualizacja, render wnętrza, lista zakupów, kosztorys, harmonogram remontu.
+description: Pełny pipeline projektowania wnętrz mieszkaniowych A-Z — pomieszczenia, wykończenia, instalacje, harmonogram. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie lub urządzić pomieszczenie (salon, sypialnia, łazienka, kuchnia jako pomieszczenie), lub potrzebuje: koncept, moodboard, layout, oświetlenie, plan elektryczny i instalacje, wykończenia (podłogi/ściany/sufity), meble wolnostojące, render wnętrza, plan budowy, kosztorys, harmonogram remontu, listy zakupów z wieloma dostawcami. Wyzwalacze - projekt mieszkania, zaprojektuj pokój, urządzić salon, urządzić sypialnię, urządzić łazienkę, urządzić kuchnię, mieszkanie pod klucz, moodboard, oświetlenie, plan elektryczny, gniazdka, podłoga, ściana, mikrocement, panele, farby, tapeta, layout, render wnętrza, meble wolnostojące, kosztorys, harmonogram remontu, lista zakupów. NIE aktywuj do samej zabudowy meblowej (kuchnia/szafa/garderoba/TV na wymiar, rozpiska szafek, formatki, cięcie płyt) — to skill zabudowa-na-wymiar; w pełnym projekcie mieszkania fazę zabudowy wykonuj wg zasad skilla zabudowa-na-wymiar.
 ---
 
 # Architekt Wnętrz — Full Interior Design Pipeline
@@ -153,13 +153,10 @@ Referencja (typy lamp, marki, LED, ściemniacze, smart, zamienniki): **`referenc
 
 ### Faza 5 — Meble
 
-**5a. Meble wbudowane (na wymiar).** Dla każdej zabudowy (kuchnia, szafa, garderoba, łazienka, TV) generuj brief mebla:
-1. **Tabela modułów** (Nr | Typ | Szer × Wys × Głęb | Front | Wnętrze | Uwagi)
-2. **Rzut elewacji ASCII** z numeracją i wymiarami
-3. **Rzut przekrojowy** minimum 1 modułu
-4. **Notatki krytyczne** (tolerancje, mocowania, otwory na instalacje, trasy LED)
-
-Wymiary i konwencje: `references/standardy-meble.md`. Katalog materiałów Korner (płyty, korner.pl): `references/korner-katalog.md`.
+**5a. Meble wbudowane (na wymiar) — DELEGACJA do skilla zabudowa-na-wymiar.** Ten skill NIE projektuje zabudowy samodzielnie. Dla każdej zabudowy (kuchnia, szafa, garderoba, łazienka, TV):
+1. Przekaż wejścia: rzut/zdjęcia pomieszczenia, decyzje stylu (Faza 1), ograniczenia i wymiary (Fazy 0a/2), pozycje instalacji (Faza 6 jeśli już ustalona).
+2. Projekt wykonuje **zabudowa-na-wymiar** wg swojego workflow (analiza pomieszczenia → układ → rozpiska modułów → dokumentacja stolarza → pomiary kontrolne).
+3. Wynik (rozpiska modułów + notatki krytyczne + lista pomiarów) wraca do projektu mieszkania i do listy zakupów (Faza 8).
 
 **5b. Meble wolnostojące** — tabela per pomieszczenie: Pozycja | Model | Sklep | Cena (widełki) | Uwagi. Zawsze 2-3 opcje cenowe przy pozycjach kosztotwórczych. Mapa "co skąd": `references/dostawcy.md`.
 
