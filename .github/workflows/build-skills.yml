@@ -31,9 +31,9 @@ jobs:
             fi
 
             # --- walidacja: description <= 1024 znaków (limit uploadu claude.ai)
-            desc_len="$(awk '/^description:/{sub(/^description: /,""); print; exit}' "$dir/SKILL.md" | tr -d '\n' | wc -m)"
+            desc_len="$(awk '/^description:/{sub(/^description: /,""); print; exit}' "$dir/SKILL.md" | tr -d '\n' | wc -c)"
             if [ "$desc_len" -gt 1024 ]; then
-              echo "::error::description w $name/SKILL.md ma $desc_len znaków (limit claude.ai: 1024) — przerywam build"
+              echo "::error::description w $name/SKILL.md ma $desc_len znaków (limit claude.ai: 1024; liczone w bajtach UTF-8) — przerywam build"
               exit 1
             fi
 
