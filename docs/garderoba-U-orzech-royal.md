@@ -1,3 +1,5 @@
+> **Artefakt historyczny sprzed korekty 2026-08. Zawiera nieaktualne dane dostawcy (Korner Żary) i niezweryfikowane kody dekorów. Nie używać jako źródła.**
+
 # Garderoba U-shape — Orzech Royal
 
 Projekt zabudowy walk-in w sypialni. Wykonanie: **Korner Żary** (płyta meblowa Egger).

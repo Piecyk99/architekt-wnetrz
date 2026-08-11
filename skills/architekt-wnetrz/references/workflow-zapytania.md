@@ -44,7 +44,7 @@ Pytaj tylko o rzeczy:
 ### Zakładaj domyślnie
 - Drążek: 1100 od podłogi (krótkie), 1800 (kurtki długie)
 - Półki: rozstaw 300mm
-- Szuflady: w dolnej części, 3-5 szuflad Legrabox H
+- Szuflady: w dolnej części, 3-5 szuflad Legrabox (bok M/K/C wg zawartości — wysokości w standardy-meble.md)
 - Wnętrze: kremowy
 - Lustro w drzwiach: tak jeśli garderoba w sypialni, nie jeśli korytarz
 - Drążek pantograf: tak jeśli szafa wyższa niż 2400
@@ -109,7 +109,7 @@ Pytaj tylko o rzeczy:
 ### DOBRZE
 > "OK, widzę ścianę 3.2m × 2.7m wysokości, okno po lewej. Domyślnie projektuję w house style (Orzech Royal + kremowy + czarne uchwyty + spiek czarny). Dwa pytania krytyczne:
 > 1. **Jakie AGD do zabudowy** — w szczególności: piekarnik, mikrofala, zmywarka pełna czy 45cm, lodówka pełnowymiarowa czy do zabudowy?
-> 2. **Twój wzrost** — dobieram wysokość blatu (mam standardy 860/880/910).
+> 2. **Twój wzrost** — dobieram wysokość blatu (siatka 860/880/910 ze standardy-meble.md).
 >
 > Jak nie odpowiesz na #2 — założę 880 (uniwersalne). Lecę z briefem?"
 

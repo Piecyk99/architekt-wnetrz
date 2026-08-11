@@ -1,6 +1,10 @@
 # Dostawcy — mapa "co skąd"
 
-Pełna mapa zaopatrzenia projektu mieszkania. Korner = mebel na wymiar default. Reszta = dobierz wg poniższej tabeli.
+Pełna mapa zaopatrzenia projektu mieszkania. Korner (płyty, korner.pl) = dostawca formatek default. Reszta = dobierz wg poniższej tabeli.
+
+> **UWAGA — istnieją DWIE niepowiązane firmy o nazwie „Korner" i obie występują w projektach użytkownika.** Samo „Korner" bez doprecyzowania jest ZAKAZANE. Zawsze pisz „Korner (płyty, korner.pl)" albo „Korner (podłogi, korner.eu)". Przypisanie kategorii:
+> - docinanie formatek, płyty, blaty, fronty, akcesoria meblowe → **zawsze korner.pl** (oddział Piekary Śląskie / KornerGo)
+> - podłogi SPC, listwy przypodłogowe, obrzeża, profile blatowe, cokoły → **korner.eu**
 
 ---
 
@@ -10,10 +14,11 @@ Nie wszystko z jednego sklepu. Optymalizacja jakość/cena wymaga **multi-vendor
 
 | Kategoria              | Gdzie kupować                                          |
 |------------------------|--------------------------------------------------------|
-| Meble na wymiar        | **Korner** (default) → pracownie lokalne (alt)         |
-| Płyty / fronty / okucia| Korner                                                 |
+| Meble na wymiar        | **Korner (płyty, korner.pl)** (default) → pracownie lokalne (alt) |
+| Płyty / fronty / okucia| Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo |
+| Podłogi SPC, listwy przypodłogowe, obrzeża, profile blatowe, cokoły | **Korner (podłogi, korner.eu)** |
 | Wykończenia masowe (farba, listwy, klej) | **Leroy Merlin / Castorama**         |
-| Glazura, terakota, gres| **Tubądzin, Cersanit, Korner-glazura, Leroy**          |
+| Glazura, terakota, gres| **Tubądzin, Cersanit, Leroy**                          |
 | Mikrocement materiał   | **Festfloor / Topciment** (z wykonawcą)                |
 | AGD                    | **Media Markt / RTV Euro AGD / x-kom / Bosch.pl**      |
 | Armatura łazienkowa    | **Hansgrohe / Grohe / Geberit** (premium), **Deante / Roca** (średnia) |
@@ -34,18 +39,45 @@ Nie wszystko z jednego sklepu. Optymalizacja jakość/cena wymaga **multi-vendor
 
 ---
 
-## Korner (Żary) — szczegółowo
+## Korner (płyty, korner.pl) — dostawca formatek — szczegółowo
 
-Pełna referencja Korner: `korner-katalog.md`. Skrót:
+Pełna referencja: `korner-katalog.md`. Skrót:
 
-- **Płyty meblowe** (Egger, Kronopol, Pfleiderer, Swiss Krono)
-- **Fronty** (laminat, lakier, fornir, akryl)
-- **Okucia** (Blum, Hettich, GTV)
-- **Cięcie + okleinowanie ABS** (CNC ±0.5mm)
+- **Korner Sp. z o.o.** — centrala Strzałków (97-500 Radomsko), infolinia 801 080 550, sprzedaz@korner.pl
+- **Oddział domyślny: Piekary Śląskie** (~20 km od Zabrza); alternatywy: Zawiercie, Częstochowa; showroom Katowice
+- **Płyty u Korner (korner.pl):** Kronospan, Sonae Arauco, Pfleiderer (KornerGo), kolekcje własne Korner (+ blaty, MDF, HDF, sklejki)
+- **Poza ofertą Korner:** Egger, Kronopol, Swiss Krono — realni producenci płyt; jeśli dekor dostępny tylko u nich, wymaga innego dostawcy `[DO WERYFIKACJI]`
+- **Fronty** (Maxgloss, Velvet Velour Supermat)
+- **Okucia u Korner:** Blum, GTV, Nomet, Häfele, FGV, Peka, Rejs, Titus (pełna lista partnerów w `korner-katalog.md`)
+- **Hettich** (w tym Sensys jako tańszy ekwiwalent zawiasów Blum) — niepotwierdzony u Korner, sprawdzić dostępność lub zaopatrzyć się w innym kanale
+- **Usługi:** formatowanie, oklejanie krawędzi, CNC, transport
+- **Online:** KornerGo (kornergo.pl) + e-Rozkrój (b2b.kornergo.pl)
 - **Brak montażu u klienta** (potrzebny wykonawca lokalny)
 
-**Co Korner robi:** ostateczne formatki gotowe do skręcenia.
-**Co Korner nie robi:** instalacja u klienta. Potrzebujesz lokalnego stolarza-montażysty.
+**Co Korner (płyty) robi:** ostateczne formatki gotowe do skręcenia.
+**Co Korner (płyty) nie robi:** instalacja u klienta. Potrzebujesz lokalnego stolarza-montażysty.
+
+### Logistyka formatek — odbiór vs transport
+
+- **Odbiór osobisty (Piekary Śląskie, ~20 km od Zabrza):** opłaca się przy małych i średnich partiach (pojedyncza szafa, dokupienie blend/frontów, drobne korekty) oraz gdy zależy na czasie — bez czekania na okno transportowe. Wymaga auta mieszczącego najdłuższą formatkę; formatki pełnowymiarowe (do 2800 mm) zwykle odpadają.
+- **Transport Korner:** opłaca się przy pełnych zabudowach (kuchnia, garderoba) — duża liczba formatek, formatki dłuższe niż mieści auto, ryzyko uszkodzenia krawędzi przy samodzielnym przewozie. Koszt i terminy `[DO WERYFIKACJI]` w oddziale/KornerGo przy wycenie.
+- Zamówienie online przez KornerGo / e-Rozkrój z odbiorem w oddziale łączy oba warianty — rozkrój zdalnie, odbiór lokalnie.
+
+---
+
+## Korner (podłogi i profile, korner.eu) — wykończenia, NIE płyty
+
+**Poli-Eco Tworzywa Sztuczne sp. z o.o.**, marka Korner — korner.eu, ul. Zwycięzców 7, 68-200 Żary, tel. 68 478 44 00. **Firma niepowiązana z Korner Sp. z o.o. (korner.pl).**
+
+- **Podłogi SPC:** Solid Floor 5mm, Solid Floor Scandi 5mm, Luxury Floor jodełka 5mm, Natural Floor 4mm, Korner Floor
+- **Płytki SPC SPeCtra:** ścienne 4mm, podłogowe 5mm, BIG SIZE 260×122, Select (2026)
+- **Podkłady:** SPC Ultra 600+, Ultra Grip 1000, SPC 1200, Performa 3, LVT Protector/Premium, Alu Protect, Thermo/Energy Pro Comfort
+- **Listwy przypodłogowe:** Venezia, Evo (Clickfit), XPS Verona, Siena, Quadro, Perfecta, MDF Modena, Ultima/Idea, LP 55/52/50
+- **ISTOTNE DLA KUCHNI:** obrzeża meblowe ABS i PVC; profile blatowe LB 15 Mini/ALUmini, LB 23/LB 23 Lira, LB 37, LB 38, LB 32/33/34; uszczelka cokołu LU; system cokołów Alto; uszczelniacz Silikorner
+- **Dodatkowo:** panele akustyczne, ścianki działowe, profile aluminiowe do SPC
+- **Dystrybucja:** sieć sales outlets. **Brak własnych oddziałów na Śląsku. Brak usługi docinania płyt meblowych.**
+
+**Kontekst projektu użytkownika:** w mieszkaniu położona jest podłoga **Solid Floor 5mm (i4F Drop-Lock)** tej marki — przy doborze listew, progów i uzupełnień podłogi wychodź od tego produktu.
 
 ---
 
@@ -144,7 +176,7 @@ Czego NIE kupować tam:
 - Pościel (PUDEROST, BOMSKOTTE — bawełniana, dobra cena)
 - Drobne meble do sypialni (komody MALM zostawiamy, alternatywa: HEMNES jeśli premium look)
 - Akcesoria łazienkowe (ścierki, dozowniki)
-- Storage do garderoby (system PAX wewnątrz, ale fronty lepiej Korner)
+- Storage do garderoby (system PAX wewnątrz, ale fronty lepiej Korner (płyty, korner.pl))
 - Bazowe oświetlenie (jeśli budżet wymaga)
 
 **Nie używać:**
@@ -226,7 +258,7 @@ Warto wspierać polskich projektantów + producentów (często jakość jak Hay,
 
 | Sklep          | Rabat negocjowalny? | Ile zwykle             |
 |----------------|----------------------|------------------------|
-| **Korner**     | TAK                  | 5-15% przy większym zamówieniu |
+| **Korner (płyty, korner.pl)** | TAK   | `[DO WERYFIKACJI]` przy większym zamówieniu |
 | **Leroy / Castorama** | NIE             | nie (chyba że promocja czasowa) |
 | **IKEA**       | NIE                  | nie                              |
 | **Westwing**   | NIE bezpośrednio     | code zniżkowy w newsletterze     |
@@ -244,7 +276,7 @@ Warto wspierać polskich projektantów + producentów (często jakość jak Hay,
 | Tygodnie do oddania | Co zamawiać                                |
 |---------------------|--------------------------------------------|
 | **T-12 tygodni**    | Drzwi, podłogi, AGD do zabudowy            |
-| **T-10**            | Mebel Korner (główne zabudowy)             |
+| **T-10**            | Mebel na wymiar — Korner (płyty, korner.pl) |
 | **T-8**             | Armatura, ceramika, kabina prysznicowa    |
 | **T-6**             | Oświetlenie hero (długi termin importów)  |
 | **T-4**             | Wykończenia masowe (farby, listwy)         |

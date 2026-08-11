@@ -28,6 +28,13 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 | **Vinyl SPC**    | Kompozyt + warstwa drewnopodobna| 5-6mm | 100-250 | ★★★★     | Nie              |
 | **Korek**        | Korek prasowany              | 10-12mm | 150-300 | ★★★      | Nie              |
 
+### SPC vs deska warstwowa vs laminat — kiedy co
+
+- **SPC (vinyl na rdzeniu kompozytowym)** — źródło: Korner (podłogi, korner.eu), m.in. **Solid Floor 5mm (i4F Drop-Lock)** — ta podłoga leży w mieszkaniu użytkownika. Wybieraj do: stref mokrych i kuchni (100% wodoodporność), podłogówki, remontów na niskiej wysokości zabudowy (5 mm), gdy ma być cicho i ciepło pod stopą. Nie do renowacji — uszkodzenie = wymiana paneli.
+- **Deska warstwowa** — wybieraj do: salonu/sypialni, gdy priorytetem jest naturalne drewno i możliwość 1-2× cyklinowania; wrażliwsza na wodę, droższa.
+- **Laminat AC4-5** — wybieraj gdy budżet gra pierwsze skrzypce, do pokoi suchych i wynajmu; brak renowacji, gorsza akustyka.
+- Kontynuacja jednego materiału w wielu pomieszczeniach > mieszanie trzech typów na 60 m². Jeśli w projekcie użytkownika istnieje już SPC Solid Floor — domyślnie kontynuuj ten system, nie proponuj zmiany typu bez powodu.
+
 ### Producenci (Polska, dostępne)
 
 **Premium:**
@@ -41,7 +48,7 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 - **Egger** (laminat dobry)
 - **Krono Original**
 
-**Spiek (do mokrych stref + nowoczesny look):**
+**Spiek (do mokrych stref + nowoczesny look)** — kanał zakupu: kamieniarz/dystrybutor spieku, nie hurtownia płyt; nazwy kolekcji `[DO WERYFIKACJI]` u dystrybutora:
 - **Dekton** (Cosentino) — premium
 - **Neolith** — premium hiszpański
 - **Laminam** — Włochy
@@ -52,7 +59,7 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 | Element              | Wymiar / typ           | Cena/m | Producent              |
 |----------------------|-------------------------|--------|-------------------------|
 | Listwa przypodłogowa MDF 80mm | primer do malowania | 18 zł | własne / Leroy        |
-| Listwa MDF 100mm (premium)    | primer              | 25 zł  | Korner / pracownia    |
+| Listwa MDF 100mm (premium)    | primer              | 25 zł  | Korner (podłogi, korner.eu — MDF Modena) / pracownia |
 | Listwa aluminium L-bar 60mm   | czarna mat anodowana| 80 zł  | RAUM                  |
 | Próg T-bar między materiałami | aluminium 22mm czarny | 45 zł| RAUM / Leroy          |
 
@@ -114,8 +121,8 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 
 | Typ                          | Producent           | Cena/m² |
 |------------------------------|---------------------|---------|
-| Lamele dębowe pełne          | Korner / pracownia  | 350     |
-| Lamele MDF okleinowane (orzech)| Korner            | 280     |
+| Lamele dębowe pełne          | pracownia stolarska `[DO WERYFIKACJI]` | 350 |
+| Lamele MDF okleinowane (orzech)| Korner (płyty, korner.pl — docięte z MDF) `[DO WERYFIKACJI]` | 280 |
 | Lamele akustyczne (na filcu) | Brilliant / Voca    | 350-500 |
 | Lamele bambusowe             | sklep azjatycki     | 250     |
 
@@ -228,7 +235,7 @@ Cena z montażem: **3000-7000 zł / sztuka**. Wymaga:
 10. **Montaż drzwi (skrzydła)**
 11. **Listwy przypodłogowe**
 12. **Sanitarne (umywalka, WC, kabina)**
-13. **Meble Korner (zabudowy)**
+13. **Meble na wymiar — Korner (płyty, korner.pl) (zabudowy)**
 14. **Oświetlenie (montaż lamp)**
 15. **Włączniki, gniazdka (osprzęt)**
 16. **Meble wolnostojące**
