@@ -94,10 +94,6 @@ Jeśli współdzielony plik jest niedostępny (skill zainstalowany pojedynczo, p
 
 ## Generacja obrazów
 
-Identycznie jak architekt-wnetrz Faza 7a — autodetekcja 4 ścieżek:
-1. **MCP** — `mcp__nanobanana-mcp__gemini_generate_image` / `gemini_edit_image` (nanoszenie na zdjęcie referencyjne — preferuj `gemini_edit_image` z `imagePath` zdjęcia pomieszczenia)
-2. **Python skrypt** — `generate.py` z pluginu banana-claude
-3. **Cloudflare Worker** — POST `/generate` (mobile)
-4. **Manualny prompt** — gdy nic z powyższych nie działa, oddaj gotowy prompt użytkownikowi
+Całość logiki (4 ścieżki detekcji, 5-component formula, słowa zakazane, aspect-ratio routing, obsługa błędów, iteracja, kontrola zgodności): **`../architekt-wnetrz/references/generacja-obrazow.md`** — jedyne źródło, nie powielaj.
 
-Zakazane słowa w promptach: `8K`, `masterpiece`, `ultra-realistic`, `high resolution`, `best quality`. Używaj kotwic: „Architectural Digest editorial", „Dezeen feature photograph". Konstrukcja promptów: `references/prompty-wizualizacyjne.md`.
+Specyfika kuchenna: konstrukcja promptów wiernych geometrii pomieszczenia + blok zakazów + rozszerzona kontrola zgodności — `references/prompty-wizualizacyjne.md`. Przy nanoszeniu projektu na zdjęcie referencyjne **preferuj `gemini_edit_image` z `imagePath` zdjęcia pomieszczenia** zamiast generacji od zera.
