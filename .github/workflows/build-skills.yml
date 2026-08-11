@@ -30,6 +30,13 @@ jobs:
               exit 1
             fi
 
+            # --- walidacja: description <= 1024 znaków (limit uploadu claude.ai)
+            desc_len="$(awk '/^description:/{sub(/^description: /,""); print; exit}' "$dir/SKILL.md" | tr -d '\n' | wc -m)"
+            if [ "$desc_len" -gt 1024 ]; then
+              echo "::error::description w $name/SKILL.md ma $desc_len znaków (limit claude.ai: 1024) — przerywam build"
+              exit 1
+            fi
+
             # --- kopia robocza + wykluczenia (bez zależności od rsync)
             cp -a "$dir" "stage/$name"
             find "stage/$name" \( -name '.git' -o -name '_deprecated' -o -name 'node_modules' \) -type d -prune -exec rm -rf {} +
