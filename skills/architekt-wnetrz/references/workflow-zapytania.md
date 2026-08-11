@@ -48,6 +48,7 @@ Pytaj tylko o rzeczy:
 - Wnętrze: kremowy
 - Lustro w drzwiach: tak jeśli garderoba w sypialni, nie jeśli korytarz
 - Drążek pantograf: tak jeśli szafa wyższa niż 2400
+- Oświetlenie wnętrza: taśma LED na PIR w szafach głębokich/ciemnych (house style)
 
 ### Sygnały do dopytania
 - Szafa narożna → zapytaj o sposób dostępu do narożnika (cargo Le Mans, regał stały, drzwi po skosie)
