@@ -173,7 +173,7 @@ Zawsze weryfikuj niszę z kartą montażową konkretnego modelu przed cięciem.
 ### Szafki dolne
 - **Łączenie korpusów ze sobą:** śruba EuroScrew M4×35 + tulejka, 2 na połączenie
 - **Mocowanie do ściany (opcjonalne):** kątownik metalowy w górnej tylnej krawędzi
-- **Nóżki regulowane:** 4 na szafkę 60cm, 6 na 80cm+ (regulacja 100mm wysokość)
+- **Nóżki regulowane:** 4 na szafkę 60cm, 6 na 80cm+ (zakres regulacji 100-150 mm; przy cokole 100 mm nóżka pracuje w dolnej części zakresu)
 
 ### Szafki górne
 - **Wieszak meblowy:** 2 na szafkę 60cm, 3 na 90cm+ (system Camar lub odpowiednik)

@@ -1,3 +1,5 @@
+> **Artefakt historyczny sprzed korekty 2026-08. Zawiera nieaktualne dane dostawcy (Korner Żary) i niezweryfikowane kody dekorów. Nie używać jako źródła.**
+
 # Kuchnia 9.02 — projekt zabudowy na wymiar (wariant v4)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: rzutu mieszkania (fragment 9.01–9.03), zdjęcia pomieszczenia z adnotacjami wymiarowymi oraz decyzji inwestora. Wykonanie: **samodzielne**, materiały: **Korner (Żary)**.

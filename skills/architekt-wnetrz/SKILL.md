@@ -246,7 +246,7 @@ Legenda + wymiary w mm pod rzutem.
 - **Przed szafą**: min 70cm
 - **Wokół stołu**: min 75cm na przejście, 100cm jeśli krzesło tam zwykle stoi
 - **Wokół łóżka**: min 60cm po dwóch stronach (jeśli para)
-- **W kuchni**: min 100cm między blatem a wyspą/przeciwległą ścianą, optymalne 110-120cm
+- **W kuchni**: przejścia wg `uklady-kuchni.md` (skill architekt-kuchni) — min **1050 mm** przy jednym rzędzie roboczym, **1200 mm** przy ruchu za plecami pracującego, wokół wyspy twardy próg **≥1000 mm**; nie upraszczaj do jednej liczby
 - **Trójkąt roboczy kuchni**: zlew-płyta-lodówka max 7m suma boków
 
 **Kończysz:** "Layout pasuje? Jeśli OK, lecę z wykończeniami (podłogi/ściany/sufity)."

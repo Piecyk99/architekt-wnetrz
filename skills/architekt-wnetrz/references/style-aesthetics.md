@@ -14,7 +14,7 @@ Referencja stylów wykraczająca poza house style. Stosuj **TYLKO** gdy user wyr
 | Drewno        | Orzech, ciemny dąb chevron, naturalne wykończenie mat     |
 | Tekstylia     | Boucle szary, len natural, wełna kremowa                  |
 | Metale        | Czarny mat (uchwyty, armatura, listwy)                    |
-| Kamień        | Spiek czarny mat (Dekton Sirius, Neolith Basalt)          |
+| Kamień        | Spiek czarny mat (np. Dekton Sirius, Neolith Basalt — nazwy kolekcji `[DO WERYFIKACJI]`; kanał zakupu: kamieniarz/dystrybutor spieku, nie hurtownia płyt) |
 | Światło       | 3000K LED w wnęce, czarne lampy listwowe                  |
 | Atmosfera     | Spokojny, ciepły, dyskretny, bezkonkurencyjny dla relaksu |
 | Inspiracje    | Architectural Digest Polska, Dezeen Warsaw apartments      |

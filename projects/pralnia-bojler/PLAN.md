@@ -1,3 +1,5 @@
+> **Artefakt historyczny sprzed korekty 2026-08. Zawiera nieaktualne dane dostawcy (Korner Żary) i niezweryfikowane kody dekorów. Nie używać jako źródła.**
+
 # Plan: zabudowa przesuwna sekcji technicznej (pralnia + bojler)
 
 ## Kontekst

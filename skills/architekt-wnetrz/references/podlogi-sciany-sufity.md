@@ -28,6 +28,13 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 | **Vinyl SPC**    | Kompozyt + warstwa drewnopodobna| 5-6mm | 100-250 | ★★★★     | Nie              |
 | **Korek**        | Korek prasowany              | 10-12mm | 150-300 | ★★★      | Nie              |
 
+### SPC vs deska warstwowa vs laminat — kiedy co
+
+- **SPC (vinyl na rdzeniu kompozytowym)** — źródło: Korner (podłogi, korner.eu), m.in. **Solid Floor 5mm (i4F Drop-Lock)** — ta podłoga leży w mieszkaniu użytkownika. Wybieraj do: stref mokrych i kuchni (100% wodoodporność), podłogówki, remontów na niskiej wysokości zabudowy (5 mm), gdy ma być cicho i ciepło pod stopą. Nie do renowacji — uszkodzenie = wymiana paneli.
+- **Deska warstwowa** — wybieraj do: salonu/sypialni, gdy priorytetem jest naturalne drewno i możliwość 1-2× cyklinowania; wrażliwsza na wodę, droższa.
+- **Laminat AC4-5** — wybieraj gdy budżet gra pierwsze skrzypce, do pokoi suchych i wynajmu; brak renowacji, gorsza akustyka.
+- Kontynuacja jednego materiału w wielu pomieszczeniach > mieszanie trzech typów na 60 m². Jeśli w projekcie użytkownika istnieje już SPC Solid Floor — domyślnie kontynuuj ten system, nie proponuj zmiany typu bez powodu.
+
 ### Producenci (Polska, dostępne)
 
 **Premium:**
@@ -41,7 +48,7 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 - **Egger** (laminat dobry)
 - **Krono Original**
 
-**Spiek (do mokrych stref + nowoczesny look):**
+**Spiek (do mokrych stref + nowoczesny look)** — kanał zakupu: kamieniarz/dystrybutor spieku, nie hurtownia płyt; nazwy kolekcji `[DO WERYFIKACJI]` u dystrybutora:
 - **Dekton** (Cosentino) — premium
 - **Neolith** — premium hiszpański
 - **Laminam** — Włochy

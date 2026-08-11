@@ -12,7 +12,7 @@ Referencja do planu elektrycznego, wodno-kanalizacyjnego, gazowego, wentylacyjne
 |---------------------------------|---------------------|
 | Włącznik klasyczny              | 100-110 cm          |
 | Gniazdko ogólne                 | 30 cm               |
-| Gniazdko nad blatem kuchennym   | 110 cm (10cm nad blatem) |
+| Gniazdko nad blatem kuchennym   | **100-150 mm nad powierzchnią blatu** (przy blacie 860-910 → 960-1060 mm od podłogi) — definiuj relacyjnie do blatu, nie absolutnie |
 | Gniazdko za TV w ścianie       | 120-140 cm (wysokość TV) |
 | Gniazdko w łazience strefa 3   | 130 cm (wolne od umywalki) |
 | Termoregulator (CO, podłogowe)  | 130 cm              |

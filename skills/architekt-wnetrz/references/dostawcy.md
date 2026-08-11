@@ -45,9 +45,11 @@ Pełna referencja: `korner-katalog.md`. Skrót:
 
 - **Korner Sp. z o.o.** — centrala Strzałków (97-500 Radomsko), infolinia 801 080 550, sprzedaz@korner.pl
 - **Oddział domyślny: Piekary Śląskie** (~20 km od Zabrza); alternatywy: Zawiercie, Częstochowa; showroom Katowice
-- **Płyty meblowe** (partnerzy potwierdzeni: Kronospan, Sonae Arauco; główny partner płytowy KornerGo: Pfleiderer) + blaty, MDF, HDF, sklejki
+- **Płyty u Korner (korner.pl):** Kronospan, Sonae Arauco, Pfleiderer (KornerGo), kolekcje własne Korner (+ blaty, MDF, HDF, sklejki)
+- **Poza ofertą Korner:** Egger, Kronopol, Swiss Krono — realni producenci płyt; jeśli dekor dostępny tylko u nich, wymaga innego dostawcy `[DO WERYFIKACJI]`
 - **Fronty** (Maxgloss, Velvet Velour Supermat)
-- **Akcesoria i okucia** (m.in. GTV, Nomet, Sevroll, Blum, Häfele — pełna lista partnerów w `korner-katalog.md`)
+- **Okucia u Korner:** Blum, GTV, Nomet, Häfele, FGV, Peka, Rejs, Titus (pełna lista partnerów w `korner-katalog.md`)
+- **Hettich** (w tym Sensys jako tańszy ekwiwalent zawiasów Blum) — niepotwierdzony u Korner, sprawdzić dostępność lub zaopatrzyć się w innym kanale
 - **Usługi:** formatowanie, oklejanie krawędzi, CNC, transport
 - **Online:** KornerGo (kornergo.pl) + e-Rozkrój (b2b.kornergo.pl)
 - **Brak montażu u klienta** (potrzebny wykonawca lokalny)
