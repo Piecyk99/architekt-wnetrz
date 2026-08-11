@@ -1,8 +1,8 @@
-> **Artefakt historyczny sprzed korekty 2026-08. Zawiera nieaktualne dane dostawcy (Korner Żary) i niezweryfikowane kody dekorów. Nie używać jako źródła.**
+# Kuchnia 9.02 — projekt zabudowy na wymiar (wariant v4, korekta v4.1)
 
-# Kuchnia 9.02 — projekt zabudowy na wymiar (wariant v4)
+> **Korekta 2026-08-11 (v4.1):** poprawiono dane dostawcy — formatki, płyty, blaty i okucia zamawiane u **Korner (płyty, korner.pl)**, oddział **Piekary Śląskie** / KornerGo (kornergo.pl, rozkrój online b2b.kornergo.pl). Wcześniejsze wskazanie „Korner (Żary)" dotyczyło innej, niepowiązanej firmy (Korner / Poli-Eco, korner.eu — podłogi, listwy, obrzeża i profile; rozdział podmiotów: `skills/architekt-wnetrz/references/dostawcy.md`). Usunięto też niezweryfikowane kody dekorów (Egger — **poza ofertą korner.pl**) — materiały opisane jako intencja kolorystyczna, kody do doboru z aktualnej kolekcji przed wyceną. **Układ v4 i wszystkie decyzje projektowe inwestora — bez zmian.**
 
-Projekt wykonany skillem **architekt-kuchni** na podstawie: rzutu mieszkania (fragment 9.01–9.03), zdjęcia pomieszczenia z adnotacjami wymiarowymi oraz decyzji inwestora. Wykonanie: **samodzielne**, materiały: **Korner (Żary)**.
+Projekt wykonany skillem **architekt-kuchni** na podstawie: rzutu mieszkania (fragment 9.01–9.03), zdjęcia pomieszczenia z adnotacjami wymiarowymi oraz decyzji inwestora. Wykonanie: **samodzielne**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
 > **To NIE jest dokumentacja produkcyjna.** Lista formatek do cięcia powstanie dopiero po pomiarach kontrolnych z pkt 12. Wszystkie wartości `[~]` i `[?]` wymagają weryfikacji na miejscu.
 
@@ -141,22 +141,24 @@ Wszystkie moduły przy ścianach: szerokości finalne po pomiarach (blendy docin
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 
-## 13. Materiały i styl — wg inspiracji inwestora (2026-07-28)
+## 13. Materiały i styl — wg inspiracji inwestora (2026-07-28, korekta dekorów 2026-08-11)
 
-Inwestor dostarczył zdjęcie referencyjne (mała kuchnia otwarta na salon, półwysep z hokerami) — paleta zmapowana na układ v4 i katalog Korner:
+Inwestor dostarczył zdjęcie referencyjne (mała kuchnia otwarta na salon, półwysep z hokerami) — paleta zmapowana na układ v4. Dekory opisane jako **intencja kolorystyczna** — konkretne kody dobrać z aktualnej oferty **Korner (płyty, korner.pl)** w KornerGo lub oddziale Piekary Śląskie przed wyceną (płyty w ofercie: Kronospan, Sonae Arauco, Pfleiderer, kolekcje własne; **Egger poza ofertą** — gdyby inwestor upierał się przy konkretnym dekorze Egger, wymaga to innego dostawcy `[DO WERYFIKACJI]`):
 
-| Element | Materiał / dekor (Korner) | Uwagi |
+| Element | Materiał / intencja dekoru | Uwagi |
 |---|---|---|
-| Fronty dolne A (D1–D4) + B (D5) + korpus wyspy | **beż/kaszmir mat, bezuchwytowe** (Egger U702 ST9 Kaszmir lub zbliżony beż mat) | uchwyt frezowany/gola; korpusy kremowe |
-| Górne G2 + słupek S1 (do sufitu) | **Egger H3734 ST9 Orzech Pacific mat** (house style — zgodny 1:1 z inspiracją) | słoje pionowe |
-| Zabudowa lodówki (panele wnęki + nadstawka) | **grafit/czarny mat** (Egger U999 ST2 lub grafit) | jak ciemna kolumna na zdjęciu |
-| Blat A/B + blat wyspy | **jasny kamień/trawertyn — laminat 38 mm** (Egger dekor jasny kamień beż) | ⚠ odstępstwo od house style (spiek czarny) na wyraźne życzenie inwestora — wg inspiracji |
+| Fronty dolne A (D1–D4) + B (D5) + korpus wyspy | **beż/kaszmir mat, bezuchwytowe** — dekor z kolekcji Korner (płyty, korner.pl) `[DO WERYFIKACJI]` | uchwyt frezowany/gola; korpusy kremowe |
+| Górne G2 + słupek S1 (do sufitu) | **ciemny orzech mat, słoje pionowe** (intencja house style „Orzech Royal", zgodna z inspiracją) — kod dekoru `[DO WERYFIKACJI]` | np. kolekcje drewnopodobne Time of Oak / Woodstories — dobór po próbkach |
+| Zabudowa lodówki (panele wnęki + nadstawka) | **grafit/czarny mat** — dekor `[DO WERYFIKACJI]`; kandydat: kolekcja Deep Matt | jak ciemna kolumna na zdjęciu |
+| Blat A/B + blat wyspy | **jasny kamień/trawertyn — laminat 38 mm** — dekor z oferty blatów Korner (płyty, korner.pl) `[DO WERYFIKACJI]` | ⚠ odstępstwo od house style (spiek czarny) na wyraźne życzenie inwestora — wg inspiracji |
 | Ściana nad blatem przy płycie (B) | panel ciemny kamień/grafit mat (laminat kompaktowy lub spiek) | tylko strefa płyty; reszta ścian farba beż jak salon |
 | Front wyspy od strony przejścia/salonu | **panel ryflowany (lamele) ciemny orzech/czarny** | jak na zdjęciu referencyjnym |
 | Armatura + zlew | bateria czarna mat, zlew granitowy czarny | zlew pod oknem |
 | Oświetlenie | LED 3000K pod G2 i pod nadwieszeniem wyspy; 2× czarny spot natynkowy na suficie (istniejące wypusty) | ciepłe światło jak na zdjęciu |
 | Hokery | 2× czarne metalowe, siedzisko ~65 cm | od strony salonu |
 | Cokoły | czarny mat (cofnięte optycznie) | kratka wentylacyjna lodówki w cokole |
+
+**Zaopatrzenie:** formatki, oklejanie krawędzi, blaty, fronty i okucia (Blum/GTV/Häfele i in.) — **Korner (płyty, korner.pl)**, oddział Piekary Śląskie / KornerGo; przy pełnej kuchni preferuj transport Korner zamiast odbioru osobistego (długie formatki). Systemy cokołowe, profile blatowe (np. LB), uszczelki cokołu i luzem kupowane obrzeża — **Korner (podłogi i profile, korner.eu)**, zgodnie z podziałem w `dostawcy.md`. AGD, armatura i oświetlenie — poza Korner (mapa dostawców w `dostawcy.md`).
 
 ## 14. Prompt — realistyczna wizualizacja (EN, Gemini)
 
@@ -216,4 +218,4 @@ in the photo.
 
 ---
 
-*Historia decyzji inwestora: „Kornel/Korner" = dostawca Korner Żary; przejście min. 70 cm zaakceptowane; piekarnik po stronie gzymsu; wyspa po lewej przy wejściu do salonu; zabudowa lewej strony do sufitu (S1).*
+*Historia decyzji inwestora: „Kornel/Korner" = dostawca formatek **Korner (płyty, korner.pl)** — oddział Piekary Śląskie (błędne przypisanie „Żary" skorygowane 2026-08-11; Korner z Żar / korner.eu to inna firma — podłogi i profile); przejście min. 70 cm zaakceptowane; piekarnik po stronie gzymsu; wyspa po lewej przy wejściu do salonu; zabudowa lewej strony do sufitu (S1).*
