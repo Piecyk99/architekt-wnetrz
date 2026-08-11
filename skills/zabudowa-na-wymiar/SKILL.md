@@ -87,6 +87,7 @@ Własne:
 - `references/technologia-wykonania.md` — technologia, montaż, pomiary kontrolne
 - `references/dokumentacja-stolarz.md` — 15-punktowy szablon dokumentacji
 - `references/prompty-wizualizacyjne.md` — szablony promptów + zakazy
+- `references/formatki.md` — SZKIELET metody formatek (czeka na format e-Rozkroju) + format listy zakupów Korner (płyty, korner.pl)
 
 Współdzielone ze skillem architekt-wnetrz (ten sam plugin — nie kopiuj, czytaj stamtąd):
 - `../architekt-wnetrz/references/standardy-meble.md` — wymiary standardowe, tolerancje, strefy bezpieczeństwa
