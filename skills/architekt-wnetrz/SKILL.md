@@ -423,8 +423,8 @@ Referencja: `references/instalacje-elektryka.md`.
 
 ## Kuchnia
 - 4× gniazdko nad blatem co 60cm (między blatem a górnymi)
-- 1× gniazdko 16A na piekarnik (osobny obwód)
-- 1× gniazdko 32A na indukcję (osobny obwód 5×2.5)
+- Piekarnik: osobny obwód (przyłącze i parametry wg instrukcji modelu — dobiera elektryk)
+- Płyta indukcyjna: podłączenie na stałe przez puszkę przyłączeniową (nie gniazdko); przekrój, zabezpieczenie i liczbę faz dobiera uprawniony elektryk wg mocy modelu — zbierz model + moc z tabliczki
 - 1× gniazdko za lodówką
 - 1× gniazdko za zmywarką
 - 1× gniazdko za zlewem (na rozdrabniacz / filtr)
@@ -468,7 +468,7 @@ SALON (5×4.5m)
 - Zlew: zimna + ciepła + odpływ 50mm + (opcjonalnie filtr)
 - Zmywarka: zimna + odpływ 32mm
 - Lodówka: gniazdo + (opcjonalnie woda do dystrybutora)
-- Indukcja: tylko gniazdo 32A (BEZ gazu)
+- Indukcja: podłączenie na stałe przez puszkę przyłączeniową, osobny obwód (BEZ gazu); parametry dobiera elektryk
 - Okap: trasa wyciągu na zewnątrz przez kanał wentylacyjny lub pochłaniacz
 ```
 
@@ -683,4 +683,5 @@ Pozdrawiam,
 7. **Format wyjścia:** Markdown z tabelami, ASCII rzutami, sekcjami. Bez emoji (chyba że user poprosi).
 8. **Jeśli user zaprzeczy decyzji** — zmień i zaktualizuj wszystkie zależne fazy. Bez kłótni.
 9. **Jeśli coś jest technicznie niemożliwe** (np. szerokość blatu < 600mm a user chce zmywarkę pełnowymiarową) — powiedz wprost z matematyką, zaproponuj 2 wykonalne alternatywy.
-10. **Stosuj house style domyślnie** — Modern Polish Apartment (Orzech Royal + kremowy + czarne akcenty + ciepłe światło + spiek czarny mat). Odejdź TYLKO jeśli user wyraźnie poprosi o inny styl z `references/style-aesthetics.md`.
+10. **Urządzenia wysokoprądowe (indukcja, piekarnik, zmywarka, pralka, bojler, podłogówka):** nie podawaj zabezpieczeń, przekrojów kabli ani liczby faz — zbieraj model + moc z tabliczki znamionowej i odsyłaj dobór do uprawnionego elektryka (szczegóły: `references/instalacje-elektryka.md`).
+11. **Stosuj house style domyślnie** — Modern Polish Apartment (Orzech Royal + kremowy + czarne akcenty + ciepłe światło + spiek czarny mat). Odejdź TYLKO jeśli user wyraźnie poprosi o inny styl z `references/style-aesthetics.md`.

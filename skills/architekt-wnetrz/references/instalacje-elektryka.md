@@ -4,6 +4,8 @@ Referencja do planu elektrycznego, wodno-kanalizacyjnego, gazowego, wentylacyjne
 
 **Zasada nadrzędna:** instalacje robisz **raz na 20 lat**. Lepiej przedobrzyć teraz (więcej gniazdek, więcej RJ45, więcej rezerw) niż żałować potem.
 
+> **TWARDA ZASADA — urządzenia wysokoprądowe (płyta indukcyjna, piekarnik, zmywarka, pralka, bojler, ogrzewanie podłogowe, klimatyzacja):** nie podawaj zabezpieczeń, przekrojów kabli ani liczby faz. Skill nie ma danych do tej decyzji, a błąd to ryzyko pożaru. Zbieraj dane wejściowe (model + moc z tabliczki znamionowej), wskazuj, które obwody muszą być wydzielone, i odsyłaj dobór do uprawnionego elektryka.
+
 ---
 
 ## Wysokości — uniwersalne
@@ -65,11 +67,11 @@ Referencja do planu elektrycznego, wodno-kanalizacyjnego, gazowego, wentylacyjne
 - Najlepiej **wpuszczane w blat** lub w listwę przyblatową
 - Alternatywa: **rozetki narożne** wbudowane w listwę między blatem a górnymi
 
-### Gniazdka pod AGD
-- **1× 16A za lodówką** (osobny obwód!)
-- **1× 16A za zmywarką** (osobny obwód!)
-- **1× 16A za piekarnikiem** zabudowanym (osobny obwód!)
-- **1× 32A za płytą indukcyjną** (osobny obwód, 5×2.5mm² przewód!)
+### Przyłącza AGD
+- **Lodówka:** gniazdo na osobnym obwodzie (parametry dobiera elektryk)
+- **Zmywarka:** gniazdo na osobnym obwodzie (parametry dobiera elektryk)
+- **Piekarnik zabudowany:** osobny obwód; sposób przyłączenia i parametry wg instrukcji modelu — dobiera elektryk
+- **Płyta indukcyjna: podłączenie na stałe przez puszkę przyłączeniową (nie gniazdko).** Przekrój, zabezpieczenie i liczba faz zależą od mocy modelu (typowo 3,7-7,4 kW) i instalacji w lokalu — dobiera uprawniony elektryk. Skill NIE podaje wartości. Wymagane od użytkownika: model płyty + moc z tabliczki znamionowej.
 - **1× za okapem** (do wyciągu)
 - **1× za mikrofalówką do zabudowy**
 - **1× za zlewem** (na rozdrabniacz / filtr osmotyczny / boiler — rezerwa)
@@ -197,18 +199,22 @@ Referencja do planu elektrycznego, wodno-kanalizacyjnego, gazowego, wentylacyjne
 | Oświetlenie salon + jadalnia | C10A    | 3×1.5 YDY  |
 | Oświetlenie sypialnia    | C10A        | 3×1.5       |
 | Oświetlenie łazienka + hol | C10A      | 3×1.5       |
-| Gniazdka salon (sof + TV) | C16A + RCD 30mA | 3×2.5  |
-| Gniazdka kuchnia (nad blatem) | C16A + RCD | 3×2.5 |
-| **Lodówka osobno**       | C16A + RCD  | 3×2.5       |
-| **Zmywarka osobno**      | C16A + RCD  | 3×2.5       |
-| **Piekarnik osobno**     | C16A + RCD  | 3×2.5       |
-| **Indukcja osobno**      | **C25A + RCD** | **5×2.5** |
-| Gniazdka sypialnia + biuro| C16A + RCD | 3×2.5       |
-| Gniazdka łazienka        | C16A + RCD 30mA (specjalny) | 3×2.5 |
-| Pralka (jeśli) osobno    | C16A + RCD  | 3×2.5       |
-| Klima (jeśli) osobno     | C16A        | 3×2.5       |
-| Mata grzewcza łazienki   | C16A + RCD  | 3×2.5       |
-| Wideodomofon + dzwonek   | C6A         | osobny      |
+| Obwód | Wydzielony? | Uwagi |
+|-------|-------------|-------|
+| Gniazdka salon (sofa + TV) | wspólny obwód gniazdkowy | RCD wymagany |
+| Gniazdka kuchnia (nad blatem) | tak, najlepiej 2 (lewy/prawy blat) | RCD wymagany |
+| Lodówka | tak | |
+| Zmywarka | tak | |
+| Piekarnik | tak | |
+| Płyta indukcyjna | tak — na stałe przez puszkę (nie gniazdko) | patrz sekcja Przyłącza AGD |
+| Gniazdka sypialnia + biuro | wspólny obwód gniazdkowy | |
+| Gniazdka łazienka | tak | RCD wymagany |
+| Pralka (jeśli) | tak | |
+| Klimatyzacja (jeśli) | tak | |
+| Mata grzewcza łazienki | tak | RCD wymagany |
+| Wideodomofon + dzwonek | tak (niskoprądowy) | |
+
+**Zabezpieczenia, przekroje przewodów i liczbę faz dla wszystkich powyższych dobiera uprawniony elektryk** na podstawie mocy urządzeń (tabliczki znamionowe) i stanu instalacji w lokalu. Skill dostarcza listę obwodów do wydzielenia, nie parametry.
 
 **Razem typowo: 12-16 obwodów** dla średniego mieszkania.
 
