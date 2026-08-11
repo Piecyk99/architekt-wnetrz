@@ -1,6 +1,6 @@
 ---
 name: architekt-wnetrz
-description: Pełny pipeline projektowania wnętrz mieszkaniowych A-Z — pomieszczenia, wykończenia, instalacje, harmonogram. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie lub urządzić pomieszczenie (salon, sypialnia, łazienka, kuchnia jako pomieszczenie), lub potrzebuje: koncept, moodboard, layout, oświetlenie, plan elektryczny i instalacje, wykończenia (podłogi/ściany/sufity), meble wolnostojące, render wnętrza, plan budowy, kosztorys, harmonogram remontu, listy zakupów z wieloma dostawcami. Wyzwalacze - projekt mieszkania, zaprojektuj pokój, urządzić salon, urządzić sypialnię, urządzić łazienkę, urządzić kuchnię, mieszkanie pod klucz, moodboard, oświetlenie, plan elektryczny, gniazdka, podłoga, ściana, mikrocement, panele, farby, tapeta, layout, render wnętrza, meble wolnostojące, kosztorys, harmonogram remontu, lista zakupów. NIE aktywuj do samej zabudowy meblowej (kuchnia/szafa/garderoba/TV na wymiar, rozpiska szafek, formatki, cięcie płyt) — to skill zabudowa-na-wymiar; w pełnym projekcie mieszkania fazę zabudowy wykonuj wg zasad skilla zabudowa-na-wymiar.
+description: Pełny pipeline projektowania wnętrz mieszkaniowych A-Z — pomieszczenia, wykończenia, instalacje, harmonogram. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie lub urządzić pomieszczenie (salon, sypialnia, łazienka, kuchnia jako pomieszczenie), lub potrzebuje: koncept, moodboard, layout, oświetlenie, plan elektryczny i instalacje, wykończenia (podłogi/ściany/sufity), meble wolnostojące, render wnętrza, plan budowy, kosztorys, harmonogram remontu, listy zakupów z wieloma dostawcami. Wyzwalacze - projekt mieszkania, zaprojektuj pokój, urządzić salon, urządzić sypialnię, urządzić łazienkę, urządzić kuchnię, mieszkanie pod klucz, moodboard, oświetlenie, plan elektryczny, gniazdka, podłoga, ściana, mikrocement, panele, farby, tapeta, layout, render wnętrza, meble wolnostojące, kosztorys, harmonogram remontu, lista zakupów. NIE aktywuj do samej zabudowy meblowej (kuchnia/szafa/garderoba/TV na wymiar, rozpiska szafek, formatki, cięcie płyt) — to skill zabudowa-na-wymiar; w pełnym projekcie mieszkania fazę zabudowy wykonuj wg zasad skilla zabudowa-na-wymiar. Frazy mieszane pomieszczenie+zabudowa ("urządzić kuchnię z zabudową", "sypialnia z garderobą") → TEN skill prowadzi i deleguje zabudowę.
 ---
 
 # Architekt Wnętrz — Full Interior Design Pipeline
@@ -176,6 +176,8 @@ Wyjścia:
 - **Instalacje wod-kan/gaz/wentylacja** — podejścia, odpływy, trasy okapu wg reference
 
 Urządzenia wysokoprądowe (indukcja, piekarnik, zmywarka, pralka, bojler, podłogówka): patrz twarda zasada 10 — zbierasz model + moc, parametry dobiera elektryk.
+
+**Granica z zabudowa-na-wymiar:** planowanie instalacji mieszkania (normy, wysokości, obwody, wod-kan) = TEN skill. Wymagania punktowe pod zabudowę (gniazda za AGD, wypusty LED, podejścia, dostęp serwisowy) definiuje projekt zabudowy — zabudowa-na-wymiar dostarcza je w dokumentacji (pkt 10 szablonu), a TEN skill wpina je w plan instalacji. Nie projektuj tych punktów na zapas bez rozpiski zabudowy.
 
 **Kończysz:** "Plan instalacji OK? Lecę z wizualizacjami."
 

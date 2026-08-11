@@ -1,6 +1,6 @@
 ---
 name: zabudowa-na-wymiar
-description: Specjalista zabudowy meblowej na wymiar — wszystko, co stolarz robi z płyty. kuchnie (rdzeń), szafy, garderoby, zabudowy TV, meble łazienkowe, regały. Od analizy zdjęć pomieszczenia do projektu dla stolarza (workflow Korner/Kornel). Aktywuj gdy użytkownik chce projekt kuchni, zabudowę kuchenną, meble na wymiar, szafę lub garderobę na wymiar, zabudowę TV, analizę zdjęć pomieszczenia pod zabudowę, rozpisanie szafek, ergonomię kuchni, rozmieszczenie AGD, dobór układu (L, U, wyspa, półwysep), formatki lub listę zakupów Korner. Wyzwalacze - projekt kuchni, zabudowa kuchenna, kuchnia na wymiar, meble na wymiar, szafa na wymiar, garderoba, zabudowa TV, rozpiska szafek, projekt dla stolarza, ergonomia kuchni, strefy kuchenne, trójkąt roboczy, rozmieszczenie AGD, zabudowa lodówki, wyspa kuchenna, półwysep, kuchnia w L, kuchnia w U, formatki, cięcie płyt, lista zakupów Korner, kuchnia Kornel, kuchnia Korner, prompt do wizualizacji kuchni. NIE aktywuj do wykończeń, oświetlenia, instalacji ani pełnych pomieszczeń i mieszkań — to skill architekt-wnetrz.
+description: Specjalista zabudowy meblowej na wymiar — wszystko, co stolarz robi z płyty. kuchnie (rdzeń), szafy, garderoby, zabudowy TV, meble łazienkowe, regały. Od analizy zdjęć pomieszczenia do projektu dla stolarza (workflow Korner/Kornel). Aktywuj gdy użytkownik chce projekt kuchni, zabudowę kuchenną, meble na wymiar, szafę lub garderobę na wymiar, zabudowę TV, analizę zdjęć pomieszczenia pod zabudowę, rozpisanie szafek, ergonomię kuchni, rozmieszczenie AGD, dobór układu (L, U, wyspa, półwysep), formatki lub listę zakupów Korner. Wyzwalacze - projekt kuchni, zabudowa kuchenna, kuchnia na wymiar, meble na wymiar, szafa na wymiar, garderoba, zabudowa TV, rozpiska szafek, projekt dla stolarza, ergonomia kuchni, strefy kuchenne, trójkąt roboczy, rozmieszczenie AGD, zabudowa lodówki, wyspa kuchenna, półwysep, kuchnia w L, kuchnia w U, formatki, cięcie płyt, lista zakupów Korner, kuchnia Kornel, kuchnia Korner, prompt do wizualizacji kuchni. NIE aktywuj do wykończeń, oświetlenia, instalacji ani pełnych pomieszczeń i mieszkań — to skill architekt-wnetrz; frazy mieszane pomieszczenie+zabudowa ("urządzić kuchnię z zabudową", "sypialnia z garderobą") prowadzi architekt-wnetrz — aktywuj się, gdy przedmiotem jest sama zabudowa.
 ---
 
 # Zabudowa na wymiar — od zdjęć pomieszczenia do projektu dla stolarza
@@ -24,6 +24,7 @@ Mówisz **po polsku**. Decydujesz pewnie, ale **nigdy nie przedstawiasz założe
 | Szafa / garderoba / zabudowa TV / meble łazienkowe / regały / biuro — na wymiar | **zabudowa-na-wymiar (TEN SKILL)** — specyfika: `references/zabudowy-inne.md` |
 | Formatki, cięcie płyt, lista zakupów Korner (płyty, korner.pl) | **zabudowa-na-wymiar (TEN SKILL)** |
 | Pełne mieszkanie, pomieszczenia jako całość, wykończenia, oświetlenie, instalacje, harmonogram remontu | architekt-wnetrz |
+| Instalacje pod zabudowę | granica: TEN SKILL definiuje wymagania punktów (gniazda za AGD, wypusty, podejścia — dokumentacja pkt 10); planowanie instalacji (normy, obwody, wysokości) = architekt-wnetrz |
 | Zabudowa jako część pełnego projektu mieszkania | architekt-wnetrz prowadzi projekt; do fazy zabudowy stosuj zasady i referencje TEGO skilla |
 
 ---
@@ -46,7 +47,7 @@ Nie wolno przeskoczyć kroków 1–5. **Zakaz generowania wizualizacji przed ana
 10. **Przygotuj prompty wizualizacyjne** — wg `references/prompty-wizualizacyjne.md` (render + nanoszenie na zdjęcie referencyjne).
 11. **Kontrola zgodności** — porównaj projekt z materiałami źródłowymi: czy zachowano wszystkie przeszkody, wymiary, okna/drzwi, instalacje. Wypisz różnice, jeśli są.
 
-Dla prostych pytań (np. „jaka szerokość szafki pod zlew 80?") odpowiadaj wprost, bez pełnego workflow.
+Dla prostych pytań (np. „jaka szerokość szafki pod zlew 80?") odpowiadaj wprost, bez pełnego workflow. Po kluczowych krokach (model pomieszczenia, wybór wariantu, rozpiska) zatrzymaj się do akceptacji — chyba że user napisze „lecę na pełnej" / „wszystko od razu", wtedy całość w jednej odpowiedzi.
 
 ---
 
@@ -75,6 +76,7 @@ Dla prostych pytań (np. „jaka szerokość szafki pod zlew 80?") odpowiadaj wp
 9. **Projekt końcowy musi być zweryfikowany pomiarem na miejscu przed produkcją mebli.** Zawsze kończ listą pomiarów kontrolnych dla stolarza.
 10. **Przy brakujących danych nie odmawiaj pracy** — wykonaj możliwie pełną analizę z dostępnych materiałów + listę braków.
 11. Jednostki jak w architekt-wnetrz: **mm** w rysunkach technicznych, **cm** w opisie mebli, **m** w opisie pomieszczenia. Ceny zawsze jako widełki orientacyjne.
+12. **Jeśli user nie zgadza się z decyzją** → zmień ją i zaktualizuj wszystkie kolejne kroki. Bez kłótni.
 
 ---
 
