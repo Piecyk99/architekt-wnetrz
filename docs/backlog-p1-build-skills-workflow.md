@@ -12,6 +12,7 @@ Plik docelowy: `.github/workflows/build-skills.yml`
 4. **Walidacja nazwy:** nazwa katalogu musi się zgadzać z polem `name` we frontmatterze `SKILL.md` — sprawdzić i przerwać build przy rozjeździe.
 5. **Wykluczenia:** `.git`, `_deprecated/`, `node_modules`, pliki tymczasowe.
 6. **Współdzielone references** (`../architekt-wnetrz/references/...`): pliki muszą trafić do ZIP-a **fizycznie** (poza pluginem `../` nie działa). Workflow rozwiązuje ścieżki względne, kopiuje pliki do ZIP-a i **wypisuje w logu, które pliki zdublowano i do którego ZIP-a**.
+   - **Uwaga implementacyjna:** samo skopiowanie plików nie wystarczy — treść `SKILL.md` (i references, np. `technologia-wykonania.md`) odwołuje się do nich ścieżkami `../architekt-wnetrz/references/...`, które w ZIP-ie pozostaną martwe. Build musi **przepisać te ścieżki na lokalne `references/...`** w kopii trafiającej do ZIP-a (repo zostaje bez zmian). To dokładnie różnica między wariantem pluginowym a standalone wykryta w audycie (sekcja „Przejęte ze skillu…" vs „Współdzielone…").
 7. **Publikacja:** ZIP-y jako artifacts **ORAZ** GitHub Release z tagiem datowym `skills-YYYY-MM-DD` — do pobrania z telefonu bez logowania do Actions.
 8. **Opis release'u:** lista skilli z rozmiarem + krótka nota co się zmieniło (z commit message).
 
