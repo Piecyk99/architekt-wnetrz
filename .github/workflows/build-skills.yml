@@ -1,0 +1,124 @@
+name: build-skills
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build skill ZIPs
+        run: |
+          set -euo pipefail
+          mkdir -p stage out
+
+          for dir in skills/*/; do
+            name="$(basename "$dir")"
+            [ -f "$dir/SKILL.md" ] || { echo "skip $name (no SKILL.md)"; continue; }
+
+            # --- walidacja: nazwa katalogu == frontmatter name
+            fm_name="$(awk '/^name:/{print $2; exit}' "$dir/SKILL.md")"
+            if [ "$fm_name" != "$name" ]; then
+              echo "::error::Frontmatter name '$fm_name' != katalog '$name' — przerywam build"
+              exit 1
+            fi
+
+            # --- kopia robocza + wykluczenia (bez zależności od rsync)
+            cp -a "$dir" "stage/$name"
+            find "stage/$name" \( -name '.git' -o -name '_deprecated' -o -name 'node_modules' \) -type d -prune -exec rm -rf {} +
+            find "stage/$name" \( -name '*.tmp' -o -name '*~' -o -name '.DS_Store' \) -type f -delete
+
+            # --- współdzielone references: kopiuj fizycznie + przepisz ścieżki
+            # wzorzec: ../<inny-skill>/references/<plik>.md (i ../../ z wnętrza references/)
+            refs="$(grep -rhoE '(\.\./)+[a-z0-9-]+/references/[A-Za-z0-9._-]+\.md' "stage/$name" | sort -u || true)"
+            for ref in $refs; do
+              src_skill="$(echo "$ref" | sed -E 's#^(\.\./)+([a-z0-9-]+)/references/.*#\2#')"
+              src_file="$(basename "$ref")"
+              [ "$src_skill" = "$name" ] && continue
+              src_path="skills/$src_skill/references/$src_file"
+              if [ ! -f "$src_path" ]; then
+                echo "::error::$name odwołuje się do nieistniejącego $src_path — przerywam build"
+                exit 1
+              fi
+              mkdir -p "stage/$name/references"
+              cp "$src_path" "stage/$name/references/$src_file"
+              echo "DUPLICATED: $src_path -> $name.zip (references/$src_file)"
+            done
+
+            # --- przepisanie ścieżek: najpierw ../../ (z wnętrza references/), potem ../
+            find "stage/$name" -name '*.md' -print0 | while IFS= read -r -d '' f; do
+              case "$f" in
+                */references/*)
+                  sed -i -E 's#(\.\./)+[a-z0-9-]+/references/##g' "$f" ;;
+                *)
+                  sed -i -E 's#(\.\./)+[a-z0-9-]+/references/#references/#g' "$f" ;;
+              esac
+            done
+
+            # --- kontrola: żadnych martwych ../ w paczce
+            if grep -rn '\.\./' "stage/$name" --include='*.md'; then
+              echo "::error::Pozostały ścieżki ../ w paczce $name — przerywam build"
+              exit 1
+            fi
+
+            # --- zip: korzeń = katalog skilla
+            (cd stage && zip -qr "../out/$name.zip" "$name")
+
+            # --- weryfikacja struktury zip
+            first="$(unzip -Z1 "out/$name.zip" | head -1)"
+            case "$first" in
+              "$name"/*) : ;;
+              *) echo "::error::Pierwsza ścieżka w $name.zip to '$first', nie '$name/' — przerywam build"; exit 1 ;;
+            esac
+            bad="$(unzip -Z1 "out/$name.zip" | grep -v "^$name/" || true)"
+            if [ -n "$bad" ]; then
+              echo "::error::Ścieżki poza katalogiem skilla w $name.zip: $bad"
+              exit 1
+            fi
+
+            echo "OK: out/$name.zip ($(du -h "out/$name.zip" | cut -f1))"
+          done
+
+          ls -la out/
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: skills-zips
+          path: out/*.zip
+          if-no-files-found: error
+
+      - name: Publish release (skills-YYYY-MM-DD)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          tag="skills-$(date -u +%Y-%m-%d)"
+
+          notes_file="$(mktemp)"
+          {
+            echo "## Skille ($(date -u +%Y-%m-%d))"
+            echo
+            for z in out/*.zip; do
+              echo "- **$(basename "$z" .zip)** — $(du -h "$z" | cut -f1)"
+            done
+            echo
+            echo "### Zmiany"
+            echo
+            echo '```'
+            git log -1 --pretty='%s%n%n%b' | head -20
+            echo '```'
+          } > "$notes_file"
+
+          # głupio i przewidywalnie: ten sam dzień = zastąp release w całości
+          gh release delete "$tag" --yes --cleanup-tag 2>/dev/null || true
+          gh release create "$tag" out/*.zip \
+            --title "Skille $(date -u +%Y-%m-%d)" \
+            --notes-file "$notes_file"
