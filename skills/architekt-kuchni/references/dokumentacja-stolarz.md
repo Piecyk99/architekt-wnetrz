@@ -75,4 +75,4 @@ Drugi wariant z tabeli porównawczej: rzut ASCII + 3–5 zdań (czym się różn
 ## Czego ta dokumentacja NIE obiecuje
 
 - To **nie jest dokumentacja produkcyjna** (lista formatek do cięcia) — tę wykonuje się dopiero po pomiarach kontrolnych. Jeśli użytkownik poprosi o formatki przy danych `[~]`/`[?]` — odmów i wyjaśnij, czego brakuje.
-- Ceny wyłącznie jako widełki orientacyjne, do potwierdzenia u dostawcy (Korner-first, alternatywy wg dostawcy.md).
+- Ceny wyłącznie jako widełki orientacyjne, do potwierdzenia u dostawcy (Korner-first — płyty, korner.pl; alternatywy wg dostawcy.md).

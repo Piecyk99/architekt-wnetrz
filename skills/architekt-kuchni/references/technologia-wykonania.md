@@ -7,7 +7,7 @@ Uzupełnienie `../../architekt-wnetrz/references/standardy-meble.md` (wymiary mo
 ## 1. Płyty i korpusy (skrót — szczegóły w korner-katalog.md)
 
 - Korpus: płyta 18 mm (16 mm tylko ekonomiczne), plecy HDF 3 mm, wieniec górny/dolny pełny.
-- Fronty: 19 mm (laminat HPL / MDF lakier / fornir — dobór wg katalogu Korner i stylu projektu).
+- Fronty: 19 mm (laminat HPL / MDF lakier / fornir — dobór wg katalogu Korner (płyty, korner.pl) i stylu projektu).
 - Obrzeża ABS: 2 mm krawędzie widoczne i fronty, 1 mm ukryte; krawędź przy ścianie bez oklejania.
 - Blat: laminowany 38 mm / spiek 12–20 mm na płycie / kamień — waga spieku i kamienia wymaga korpusów bez odchyłek poziomu.
 

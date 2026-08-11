@@ -4,13 +4,13 @@
     "name": "dpsolutionsbusiness"
   },
   "metadata": {
-    "description": "Pełny pipeline projektowania wnętrz mieszkaniowych A-Z dla rynku polskiego z dostawcą Korner Żary"
+    "description": "Pełny pipeline projektowania wnętrz mieszkaniowych A-Z dla rynku polskiego z dostawcą Korner (płyty, korner.pl)"
   },
   "plugins": [
     {
       "name": "architekt-wnetrz",
       "source": "./",
-      "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie, pokój, łazienkę, kuchnię, lub potrzebuje koncept, layout, oświetlenie, wykończenia, meble (Korner + wolnostojące), plan elektryczny, wizualizacje fotorealistyczne, plan budowy lub listy zakupów. Zawiera też skill architekt-kuchni — specjalistę mebli kuchennych na wymiar (analiza zdjęć pomieszczenia, dobór układu, rozpiska szafek dla stolarza, prompty wizualizacyjne).",
+      "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Aktywuj gdy użytkownik chce zaprojektować całe mieszkanie, pokój, łazienkę, kuchnię, lub potrzebuje koncept, layout, oświetlenie, wykończenia, meble (Korner — płyty, korner.pl + wolnostojące), plan elektryczny, wizualizacje fotorealistyczne, plan budowy lub listy zakupów. Zawiera też skill architekt-kuchni — specjalistę mebli kuchennych na wymiar (analiza zdjęć pomieszczenia, dobór układu, rozpiska szafek dla stolarza, prompty wizualizacyjne).",
       "license": "MIT",
       "keywords": [
         "interior-design",

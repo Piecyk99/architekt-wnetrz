@@ -1,7 +1,7 @@
 {
   "name": "architekt-wnetrz",
   "version": "1.1.0",
-  "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Koncept, layout, wykończenia, oświetlenie, meble (Korner + wolnostojące), instalacje, wizualizacje fotorealistyczne przez Gemini Nano Banana, plan budowy i lista zakupów z wieloma dostawcami. Zawiera 2 skille: architekt-wnetrz (pełne projekty) i architekt-kuchni (specjalista mebli kuchennych na wymiar — analiza zdjęć, układy, rozpiska szafek dla stolarza).",
+  "description": "Pełen pipeline projektowania wnętrz mieszkaniowych A-Z. Koncept, layout, wykończenia, oświetlenie, meble (Korner — płyty, korner.pl + wolnostojące), instalacje, wizualizacje fotorealistyczne przez Gemini Nano Banana, plan budowy i lista zakupów z wieloma dostawcami. Zawiera 2 skille: architekt-wnetrz (pełne projekty) i architekt-kuchni (specjalista mebli kuchennych na wymiar — analiza zdjęć, układy, rozpiska szafek dla stolarza).",
   "author": {
     "name": "dpsolutionsbusiness@gmail.com"
   },

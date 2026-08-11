@@ -16,10 +16,10 @@ Wysyłasz zdjęcie pomieszczenia/szkic z wymiarami + opis → skill prowadzi ci�
 3. **Layout przestrzenny** — strefy funkcjonalne, rzut z góry z meblami i wymiarami
 4. **Wykończenia** — podłogi, ściany, sufity, drzwi, listwy (z dostawcami i kosztorysem)
 5. **Plan oświetlenia** — 3 warstwy świateł, lampy, LED, ściemniacze, smart, włączniki, gniazdka
-6. **Meble** — wbudowane (Korner) + wolnostojące (IKEA / Westwing / Bonami / designerskie) + tekstylia
+6. **Meble** — wbudowane (Korner — płyty, korner.pl) + wolnostojące (IKEA / Westwing / Bonami / designerskie) + tekstylia
 7. **Plan elektryczny + instalacje** — gniazdka, RJ45, włączniki, woda, kanalizacja, gaz, wentylacja
 8. **Wizualizacje** — **5-8 fotorealistycznych renderów** całego projektu przez Gemini Nano Banana 2
-9. **Plan budowy + harmonogram + lista zakupów** — gantt robót, lista per dostawca, gotowe wiadomości do Korner
+9. **Plan budowy + harmonogram + lista zakupów** — gantt robót, lista per dostawca, gotowe wiadomości do Korner (płyty, korner.pl)
 
 ## Domyślny styl
 
@@ -141,7 +141,7 @@ Po `git push` użytkownicy dostają update przez `/plugin update architekt-wnetr
 | **architekt-kuchni**   | Specjalista: kuchnie na wymiar      | Projekt kuchni, zabudowa kuchenna, analiza zdjęć kuchni, rozpiska szafek, ergonomia/AGD, projekt dla stolarza, prompty do wizualizacji kuchni. NIE dla pełnych projektów mieszkań ani innych pomieszczeń |
 | **banana-claude**      | Dowolny obraz, bez logiki projektowej| Szybkie koncepty, single image generations  |
 
-**architekt-kuchni** (robocza nazwa: kitchen-furniture-architect) współdzieli references z architekt-wnetrz przez ścieżki względne (`../architekt-wnetrz/references/…` — standardy-meble, korner-katalog, dostawcy, instalacje-elektryka, style-aesthetics). Instaluj cały plugin; przy instalacji drag&drop pojedynczego folderu skilla współdzielone pliki nie będą dostępne (skill ma na to fallback). Kontekst „Kornel" = workflow dostawcy **Korner** (Żary). Scenariusze testowe: `docs/testy-architekt-kuchni.md`.
+**architekt-kuchni** (robocza nazwa: kitchen-furniture-architect) współdzieli references z architekt-wnetrz przez ścieżki względne (`../architekt-wnetrz/references/…` — standardy-meble, korner-katalog, dostawcy, instalacje-elektryka, style-aesthetics). Instaluj cały plugin; przy instalacji drag&drop pojedynczego folderu skilla współdzielone pliki nie będą dostępne (skill ma na to fallback). Kontekst „Kornel" = workflow dostawcy **Korner (płyty, korner.pl)** — oddział Piekary Śląskie. Nie mylić z Korner (podłogi, korner.eu — Poli-Eco, Żary), to inna firma. Scenariusze testowe: `docs/testy-architekt-kuchni.md`.
 
 Przykładowy prompt uruchamiający architekt-kuchni:
 > *"Zaprojektuj mi kuchnię na wymiar — załączam 3 zdjęcia pomieszczenia, ściana z oknem ma 320 cm. Chcę L z wyspą, rozpisz szafki dla stolarza."*
@@ -154,7 +154,7 @@ Przykładowy prompt uruchamiający architekt-kuchni:
 ## Autor
 
 dpsolutionsbusiness@gmail.com
-Dostawca mebli na wymiar: **Korner** (korner.eu, Żary)
+Dostawca mebli na wymiar: **Korner (płyty, korner.pl)** — oddział Piekary Śląskie, online KornerGo. Nie mylić z Korner (podłogi i profile, korner.eu).
 
 ## Licencja
 

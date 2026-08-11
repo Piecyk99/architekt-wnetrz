@@ -52,7 +52,7 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 | Element              | Wymiar / typ           | Cena/m | Producent              |
 |----------------------|-------------------------|--------|-------------------------|
 | Listwa przypodłogowa MDF 80mm | primer do malowania | 18 zł | własne / Leroy        |
-| Listwa MDF 100mm (premium)    | primer              | 25 zł  | Korner / pracownia    |
+| Listwa MDF 100mm (premium)    | primer              | 25 zł  | Korner (podłogi, korner.eu — MDF Modena) / pracownia |
 | Listwa aluminium L-bar 60mm   | czarna mat anodowana| 80 zł  | RAUM                  |
 | Próg T-bar między materiałami | aluminium 22mm czarny | 45 zł| RAUM / Leroy          |
 
@@ -114,8 +114,8 @@ Referencja wszystkich powierzchni w mieszkaniu. Decyzja materiałowa wpływa na 
 
 | Typ                          | Producent           | Cena/m² |
 |------------------------------|---------------------|---------|
-| Lamele dębowe pełne          | Korner / pracownia  | 350     |
-| Lamele MDF okleinowane (orzech)| Korner            | 280     |
+| Lamele dębowe pełne          | pracownia stolarska `[DO WERYFIKACJI]` | 350 |
+| Lamele MDF okleinowane (orzech)| Korner (płyty, korner.pl — docięte z MDF) `[DO WERYFIKACJI]` | 280 |
 | Lamele akustyczne (na filcu) | Brilliant / Voca    | 350-500 |
 | Lamele bambusowe             | sklep azjatycki     | 250     |
 
@@ -228,7 +228,7 @@ Cena z montażem: **3000-7000 zł / sztuka**. Wymaga:
 10. **Montaż drzwi (skrzydła)**
 11. **Listwy przypodłogowe**
 12. **Sanitarne (umywalka, WC, kabina)**
-13. **Meble Korner (zabudowy)**
+13. **Meble na wymiar — Korner (płyty, korner.pl) (zabudowy)**
 14. **Oświetlenie (montaż lamp)**
 15. **Włączniki, gniazdka (osprzęt)**
 16. **Meble wolnostojące**
