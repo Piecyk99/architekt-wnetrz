@@ -1,4 +1,6 @@
-# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2)
+# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2.3)
+
+> **Korekta v2.3 (2026-08-12, po uwadze inwestora do schematu):** zabudowa lodówki **NIE stoi przy narożniku okiennym**. Wymiar **94,7 = odległość od wnęki okiennej DO zabudowy** — pas ściany C przy narożniku okiennym (~94,7) zostaje **WOLNY**; dalej stoi **zabudowa lodówki do sufitu (~66)**, a za nią **ścianka wystająca ~77 w głąb — w osi końca wyspy** (zgodnie ze szkicem: występ przy dolnej krawędzi pod wyspą). Konsekwencje: przejście 60 wypada dokładnie między końcem wyspy a ścianką (254,6 − 77 − 118 ≈ 60 ✓), **znika kolizja zabudowy z oknem**, ciąg B biegnie do narożnika z C — **zlew wraca do 80**.
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: **zdjęcia pomieszczenia** (stan remontowy, wyspa wyklejona taśmą na wylewce, adnotacje „wyspa" / „indukcja" / „szafki") oraz **odręcznego rzutu z wymiarami** (adnotacje „wyspa" / „indukcja" / „zlew" / „okno", legenda `oo = woda`, `⊗ = odpływ`). Wykonanie: **samodzielne**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -56,16 +58,15 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
     │Y │        aleja robocza           │ 45  │ │
     │S │         ~135 [~]               ├─────┤ │
     │P │                                │zlew │═│ okno: 59,7 od C,
-    │A │ dł. ~118 [~] (z reguły 60)     │ 60  │ │ wnęka 85,6×81,7
+    │A │ dł. ~118 [~] (z reguły 60)     │ 80  │ │ wnęka 85,6×81,7
     ├──┘                                ├─────┤ │ pod sam sufit,
-    │   PRZEJŚCIE 60 [P-decyzja]        │bok  │ │ parapet ~166
-    ├────ścianka (w głąb ~77)──┐┌───────┴─────┤ │ ściana B: 238,9 [P]
-    │                          ││ ZABUDOWA    │ │
-    │  ← wejście (korytarz)    ││ LODÓWKI 94,7│●│ woda+odpływ [~]
-    └──────────────────────────┴┴─────────────┴─┘
-      ściana C — zabudowa do sufitu przy narożniku okiennym:
-      lodówka wolnostojąca 60×65×190 + nadstawka; ścianka zamyka ją
-      od strony wejścia i wystaje w głąb w osi końca wyspy
+    │   PRZEJŚCIE 60 [P-decyzja]        │dost.│ │ parapet ~166
+    ├──ścianka─┬──────────┐             │ ~54 │ │ ściana B: 238,9 [P]
+    │ (w głąb  │ ZABUDOWA │  pas wolny  ├─────┤ │
+    │  ~77, oś │ LODÓWKI  │   ~94,7     │     │●│ woda+odpływ [~]
+    └──wyspy)──┴───~66────┴─────────────┴─────┴─┘
+     ← wejście    ściana C — od okna: pas wolny 94,7 | zabudowa lodówki
+      (korytarz)  60×65×190 + nadstawka do sufitu (~66) | ścianka
 ```
 
 ### Wymiary — statusy
@@ -88,7 +89,7 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 | **Okno na B: odległość od ściany C** | **59,7** | `[P]` | pomiar inwestora |
 | **Wnęka okienna: szer. × wys.** | **85,6 × 81,7, pod sam sufit** | `[P]` | pomiar inwestora („indukcja" w wiadomości — patrz S5); okno wysokie jak w 9.02 |
 | **Parapet (wyliczony)** | ~166,1 | `[~]` | 247,8 − 81,7; kontrola: stara kuchnia miała parapet 168 na wylewce ✓ |
-| **Odcinek: krawędź wnęki okiennej (strona lodówki) → zabudowa do sufitu** | **94,7** | `[P]` | inwestor, 3. tura — szerokość strefy zabudowy lodówki na C przy narożniku okiennym (S6 rozstrzygnięte) |
+| **Odcinek: krawędź wnęki okiennej (strona lodówki) → zabudowa do sufitu** | **94,7** | `[P]` | inwestor, 3. tura; **korekta v2.3: to odległość DO zabudowy — pas przy narożniku okiennym wolny, zabudowa dalej, przy ściance w osi wyspy** |
 | **Lodówka: wysokość** | **190** | `[P]` | inwestor, 3. tura → nadstawka ~192→247,8 (wys. ~55) |
 | **Płyta indukcyjna: model** | **Bosch PXE601DC1E** (57,2×51,2, wys. pod blat 5,6) | `[P]` | 3. tura; **wycięcie w blacie 560×490 `[P]`** (potwierdzone przez inwestora, 4. tura) |
 
@@ -101,7 +102,7 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 | S3 | Woda/odpływ | `xx` nisko na B przy narożniku z C `[~]`; zlew pod oknem — **podejścia do przedłużenia w zabudowie**; potwierdzić pomiarem. |
 | S4 | Orientacja ścianki 77 | **ROZSTRZYGNIĘTE (3. tura):** ścianka **idzie w głąb pomieszczenia, w osi wyspy** („widać na zdjęciu, jak idzie ścianka i jak ma stać wyspa"). Przyjmuję 77 = wymiar wystawania w głąb `[~]` (do kontroli pomiarem, czy to nie długość wzdłuż C). Długość wyspy wg reguły 60: **~118** (254,6 − 77 − 60 = 117,6). |
 | S5 | „Indukcja szerokości 85,6" vs „59×52" | **ROZSTRZYGNIĘTE (3. tura):** płyta = **Bosch PXE601DC1E** (podane 57,2×51,2×5,6). **85,6 = szerokość wnęki okiennej** (zbieżna ze starym oknem ~92×81 z 9.02). Napis „59x52" na ścianie ≈ obrys płyty `[~]`. |
-| S6 | Punkt odniesienia wymiaru 94,7 | **ROZSTRZYGNIĘTE (3. tura):** mierzone **od prawej (od strony lodówki) krawędzi wnęki okiennej** do zabudowy do sufitu → **strefa zabudowy lodówki leży na ścianie C przy narożniku okiennym (B/C), szerokość ~94,7, zamknięta ścianką od strony wejścia**. Konsekwencja: bok zabudowy lodówki stanowi zakończenie ciągu B od dołu → ciąg zlewowy krótszy → **zlew 60** (bilans pkt 4). |
+| S6 | Punkt odniesienia wymiaru 94,7 | **ROZSTRZYGNIĘTE OSTATECZNIE (v2.3, po uwadze inwestora do schematu):** 94,7 mierzone od krawędzi wnęki okiennej **DO zabudowy** — pas ściany C przy narożniku okiennym (~94,7) **wolny**; zabudowa lodówki (~66, do sufitu) stoi za nim, przylegając do ścianki w osi wyspy. Pierwotna interpretacja („zabudowa wypełnia 94,7 przy narożniku") była błędna — wykluczył ją szkic (występ ścianki pod wyspą). Ciąg B pełny → **zlew 80**. |
 
 ---
 
@@ -129,8 +130,8 @@ Układ: **L (A+B) + półwysep przy A + słupek lodówki na C** — funkcjonalni
 
 **Trójkąt roboczy:** lodówka (C, przy ściance 77, w osi wyspy) → zlew (B, pod oknem) → indukcja (A) — boki szacunkowo 1,3–2,0 m, suma ~4,5–5,5 m `[~]` — w normie 3,6–7,0 m. Sekwencja od wejścia: zapasy (lodówka zaraz przy wejściu) → przez przejście 60 do alei roboczej → zmywanie (zlew+zmywarka na B) → przygotowanie (blat B/narożnik) → gotowanie (indukcja na A) — poprawna kolejność stref.
 
-**Bilans ściany B (238,9) — FINALNY po rozstrzygnięciu S6 (lodówka przy narożniku okiennym):**
-zabudowa lodówki (gł. ~70 od ściany C, jej bok zamyka ciąg B od dołu) zostawia na ciąg roboczy **~169** (238,9 − 70). Od narożnika z A: **martwe pole narożne ~60 → zmywarka 45 → zlew 60 → bok zabudowy lodówki**. Kontrola pozycji zlewu: 60-tka wypada ~72→132 od C — **pod oknem (59,7→145,3) ✓**. Luzy ~2–4 cm — rozkład blend do dopięcia na pomiarach; ewentualny zapas do wyjęcia z martwego pola narożnego (mniejsza ślepa na A).
+**Bilans ściany B (238,9) — FINALNY (v2.3, zabudowa lodówki odsunięta od narożnika):**
+ciąg biegnie do narożnika z C. Od narożnika z A: **martwe pole narożne ~60 → zmywarka 45 → zlew 80 (62→142 od C — pod oknem 59,7→145,3 ✓) → dostawka ~54 (docinana, do narożnika z C)** = 238,9 ✓ — spięty wygodnie. Pas ściany C przy tym narożniku (~94,7) wolny — dobre miejsce na kosz/wózek lub niski blat odstawczy `[?]` do decyzji inwestora.
 
 ## 5. Rozpisanie zabudowy ściana po ścianie (koncepcja, mm)
 
@@ -139,13 +140,13 @@ zabudowa lodówki (gł. ~70 od ściany C, jej bok zamyka ciąg B od dołu) zosta
 450+600+900 = 1950 ✓. Uskok ~155×670 przy prawym końcu: blat wchodzi głębiej w kieszeń lub blenda wyrównująca — do pomiaru.
 **Górne na A (do sufitu `[?]` wys.):** `G1 450 | OKAP 600 (nad indukcją, w zabudowie) | G2 ~900` + LED 3000K pod spodem. Odstęp okap–indukcja ≥550.
 
-**Ściana B — 2389 `[P]`, od narożnika z A (finalnie wg S6):**
-`martwe pole narożne ~600 (dostęp z D3) | D4 ZMYWARKA 450 | D5 ZLEW 600 (≈720→1320 od C — pod oknem 597→1453 ✓) | BOK ZABUDOWY LODÓWKI (~700 od ściany C)`
-600+450+600 = 1650 ≈ 1689 dostępne — luzy/blendy ~40 do rozłożenia przy pomiarach. Bez szafek górnych — **okno sięga sufitu** (wnęka 856×817, parapet ~1661), więc górnych fizycznie nie da się tu zawiesić; parapet zostaje użytkowy (głęboki, nad blatem).
+**Ściana B — 2389 `[P]`, od narożnika z A (finalnie, v2.3):**
+`martwe pole narożne ~600 (dostęp z D3) | D4 ZMYWARKA 450 | D5 ZLEW 800 (620→1420 od C — pod oknem 597→1453 ✓) | D6 dostawka ~540 (docinana, do narożnika z C)`
+600+450+800+540 = 2390 ✓. Bez szafek górnych — **okno sięga sufitu** (wnęka 856×817, parapet ~1661), więc górnych fizycznie nie da się tu zawiesić; parapet zostaje użytkowy (głęboki, nad blatem).
 
-**Ściana C — strefa zabudowy lodówki przy narożniku okiennym (szer. ~947 `[P]`):**
-`(od narożnika z B): SŁUPEK dopełniający ~250–280 (cargo spiżarniane / wysoka spiżarka) | LODÓWKA wolnostojąca 600×650×1900 [P], front ku ścianie A | ŚCIANKA (zamyka zabudowę od strony wejścia, wystaje w głąb ~770 [~])`
-Nad lodówką **NADSTAWKA ~1920→2478 (wys. ~550)**, do sufitu, w linii słupka. Lodówka wolnostojąca: luz serwisowy boki ~20–30 mm, wentylacja 50 tył+góra, kratka w nadstawce i cokole; zawiasy i kierunek otwierania do ustalenia przy montażu (drzwi nie mogą kolidować ze ścianką). Alternatywnie słupek dopełniający = blenda + szersza lodówka w świetle — decyzja po pomiarze rzeczywistej szerokości strefy.
+**Ściana C — od narożnika z B (finalnie, v2.3):**
+`PAS WOLNY ~947 [P] (od wnęki okiennej do zabudowy) | ZABUDOWA LODÓWKI ~660 do sufitu: LODÓWKA wolnostojąca 600×650×1900 [P], front ku ścianie A | ŚCIANKA (przylega do zabudowy od strony wejścia, wystaje w głąb ~770 [~] — w osi końca wyspy)`
+Nad lodówką **NADSTAWKA ~1920→2478 (wys. ~550)**, do sufitu. Lodówka wolnostojąca: luz serwisowy boki ~20–30 mm, wentylacja 50 tył+góra, kratka w nadstawce i cokole; zawiasy tak, by drzwi nie kolidowały ze ścianką (rekomendacja: zawiasy od strony ścianki, otwieranie ku oknu — front otwiera się na wolny pas). Kontrola osi: 947 + 660 + ścianka ≈ 170 → koniec ścianki ~175–178 od B — zgodnie z osią wyspy `[~]` (do potwierdzenia pomiarem od strony wejścia).
 
 **WYSPA/półwysep — szerokość wg taśmy `[?]` (roboczo ~650), długość WYNIKOWA z reguły „przejście 60" (po pomiarach 2. tury roboczo ~1180–1250):**
 korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wysokości ciągu (880 `[~]` — wzrost użytkownika `[?]`); bez instalacji wodnych; ewentualne **gniazdo w wyspie wymaga doprowadzenia w podłodze — decyzja PRZED posadzką docelową**.
@@ -170,7 +171,7 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 | Okap | nad D2, w G (zabudowany) | ≥550 od indukcji; **recyrkulacja do czasu potwierdzenia kratki wentylacyjnej `[?]`** |
 | Zmywarka 45 | D4, obok zlewu | światło wnęki 450×820+; woda+odpływ z D5 |
 | Zlew 60 + bateria | D5, pod oknem (72→132 od C) | podejścia obecnie nisko na B `[~]` — przedłużyć w zabudowie; zlew nie nad zmywarką |
-| Lodówka **wolnostojąca 600×650×1900 `[P]`** | ściana C przy narożniku okiennym, w zabudowie 947, front ku A | nadstawka ~1920→2478; drzwi otwierane ≥90° — zawiasy tak, by front nie kolidował ze ścianką (rekomendacja: zawiasy od strony słupka/okna); wentylacja 50 tył+góra, kratka w nadstawce i cokole |
+| Lodówka **wolnostojąca 600×650×1900 `[P]`** | ściana C, zabudowa ~660 przy ściance (94,7 od wnęki okiennej), front ku A | nadstawka ~1920→2478; drzwi otwierane ≥90° — zawiasy od strony ścianki, otwieranie ku oknu (na wolny pas); wentylacja 50 tył+góra, kratka w nadstawce i cokole |
 
 ## 7. Zalecenia instalacyjne (PRZED montażem)
 
@@ -191,7 +192,7 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 | Pozycja okna wymusi przesunięcie zlewu/zmywarki | pomiar okna przed rozstawem D4/D5/D6 |
 | Uskok 15,5×67 inny niż na szkicu | pomiar w 3 wysokościach; blenda docinana |
 | Nadstawka zbyt ciasna na lodówce wolnostojącej | luz 20–30 mm z boków, 50 mm góra/tył + kratka; pomiar lodówki z zawiasami |
-| **Kolizja zabudowy lodówki z wnęką okienną:** zabudowa gł. ~70 (od C wzdłuż B) nachodzi ~10 cm na wnękę okienną (okno od 59,7 od C) powyżej parapetu ~166 | bok zabudowy od strony okna dociąć do linii wnęki (uskok w boku powyżej 166) albo ograniczyć głębokość zabudowy przy ścianie B do ~59 (drzwi lodówki mogą lekko wystawać); rozstrzygnąć przy pomiarach |
+| Suma odcinków ściany C (94,7 + 66 + ścianka + oś wyspy) nie zejdzie się z pomiarem całkowitym | pomiar łańcuchowy całej ściany C od narożnika z B przed zamówieniem; reguła 60 przy wyspie nadrzędna |
 | Posadzka docelowa zmieni wysokości | wymiary pionowe po posadzce |
 
 ## 9. Lista pomiarów kontrolnych — przed zamówieniem formatek (montaż samodzielny: inwestor)
