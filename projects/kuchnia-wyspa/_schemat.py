@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni z wyspą v2.5 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni z wyspą v2.6 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -23,7 +23,7 @@ DIMC = colors.HexColor("#a05252")
 GREY = colors.HexColor("#8a8a8a")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia z wyspą — schemat v2.5")
+c.setTitle("Kuchnia z wyspą — schemat v2.6")
 
 
 class V:
@@ -90,7 +90,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia z wyspą — schemat koncepcyjny v2.5 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia z wyspą — schemat koncepcyjny v2.6 · 2026-08-12 · wymiary w cm · "
                  "wartości robocze [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -98,7 +98,7 @@ def header(title, sub):
 
 
 # ================= STRONA 1: RZUT Z GÓRY =================
-header("RZUT Z GÓRY — układ v2.5", "skala ~1:15 · orientacja: patrzysz na ścianę A (indukcja); B = okno (prawa), C = lodówka (dół), lewa = korytarz")
+header("RZUT Z GÓRY — układ v2.6", "skala ~1:15 · orientacja: patrzysz na ścianę A (indukcja); B = okno (prawa), C = lodówka (dół), lewa = korytarz")
 s = (PH - 60 * mm) / 275.0
 v = V(52 * mm, PH - 30 * mm, s)
 
@@ -109,9 +109,7 @@ v.rect(-8, -8, AX + 16, 8, fill=WALL)                      # A (część lewa, t
 v.rect(JX, 0, AX - JX + 8, JY, fill=WALL)                  # uskok przy A/B
 v.rect(BX, -8, 8, CY + 16, fill=WALL)                      # B
 v.rect(-8, CY, AX + 16, 8, fill=WALL)                      # C
-v.rect(-8, -8, 8, 120, fill=WALL)                          # lewy filar przy A (fragment)
-v.text(-30, 60, "korytarz /", 6.5, col=GREY)
-v.text(-30, 68, "wejście →", 6.5, col=GREY)
+v.text(-30, 90, "korytarz", 6.5, col=GREY, angle=90)
 # okno na B (y od C: 59,7..145,3)
 oy1, oy2 = CY - 145.3, CY - 59.7
 v.rect(BX, oy1, 8, oy2 - oy1, fill=colors.white)
@@ -146,11 +144,13 @@ v.text(sc1 + 80, CY - 31, "~28", 4.8, center=True)
 v.line(sc1 + 66.0, CY - 70, sc1 + 66.0, CY, 0.5, GREY, dash=([2, 2], 0))
 v.rect(sc1 - 9, CY - 77, 9, 77, fill=WALL)                 # ścianka na wprost krawędzi wyspy
 v.text(sc1 - 14, CY - 80, "ścianka (w głąb ~77, na wprost krawędzi wyspy)", 5.0, angle=90)
-# wyspa
-v.rect(0, 0, 65, 118, fill=colors.HexColor("#e2d6c2"))
-v.text(32, 55, "WYSPA", 7, bold=True, center=True)
-v.text(32, 66, "~65 × ~118", 5.8, center=True)
-v.text(32, 75, "front ryflowany od wejścia", 4.8, center=True, col=GREY)
+# wyspa: wolnostojąca, w linii ścianki (y=60..177,6), przejście 60 przy ścianie A -> sypialnia
+v.rect(0, 60, 65, 117.6, fill=colors.HexColor("#e2d6c2"))
+v.text(32, 115, "WYSPA", 7, bold=True, center=True)
+v.text(32, 126, "~65 × ~118", 5.8, center=True)
+v.text(32, 135, "w linii ścianki (styk)", 4.8, center=True, col=GREY)
+v.text(32, 144, "front ryflowany od korytarza", 4.6, center=True, col=GREY)
+v.text(2, 40, "→ do SYPIALNI (drzwi przy końcu ściany A)", 5.2, col=GREY)
 # wymiary
 v.dimh(65, BX, 0, "195", off=-16)
 v.dimh(JX, BX, JY, "uskok 67 / gł. 15,5", off=-6, size=5)
@@ -161,9 +161,10 @@ v.dimv(CY - 59.7, CY, BX, "59,7", off=16)
 v.dimh(zx2, BX, CY, "94,7 (C1)", off=14, size=5.5)
 v.dimh(sc1, zx2, CY, "~94 (lodówka+słupek)", off=14, size=5.0)
 v.dimh(sc1, BX, CY, "188,5 [P]", off=24, size=5.5)
-v.dimv(118, CY - 77, 69.5, "PRZEJŚCIE 60 („drzwi\u201d)", off=0)
+v.dimv(0, 60, 32, "PRZEJŚCIE 60 → sypialnia", off=0, size=5.6)
 v.dimh(65, BX - 60, 130, "aleja ~135", off=0)
-v.dimh(0, 65, 118, "~65", off=8, size=5.5)
+v.dimh(0, 65, 177.6, "~65", off=8, size=5.5)
+v.dimv(60, 177.6, 0, "~118", off=-8, size=5.5)
 v.text(150, 100, "● woda+odpływ [~] nisko na B — przedłużyć w zabudowie", 5.2, col=GREY)
 c.showPage()
 
@@ -220,7 +221,7 @@ e.dimv(0, H - 166.1, wx1, "81,7", off=-10)
 e.dimh(0, W, H, "238,9", off=14)
 e.dimv(0, H, 0, "247,8", off=-14)
 e.text(60, H + 22, "zlew pod oknem ✓ (62–142 od C vs okno 59,7–145,3) · podejścia wody przedłużyć w zabudowie", 5.4, col=GREY)
-e.text(0, H + 32, "zabudowa lodówki odsunięta od tego narożnika o pas wolny ~94,7 (v2.5) — brak kolizji z oknem", 5.6, col=GREY)
+e.text(0, H + 32, "zabudowa lodówki odsunięta od tego narożnika o pas wolny ~94,7 (v2.6) — brak kolizji z oknem", 5.6, col=GREY)
 c.showPage()
 
 # ================= STRONA 4: ELEWACJA C + WYSPA =================
@@ -262,7 +263,7 @@ w2.rect(0, H - 10, IW, 10, fill=colors.HexColor("#2e2e2e"))
 w2.text(IW / 2, H - IH + 40, "WYSPA — widok z alei roboczej", 6, center=True, bold=True)
 w2.text(IW / 2, H - IH + 52, "korpusy otwierane od alei / od wejścia [?]", 5.2, center=True, col=GREY)
 w2.text(IW / 2, H - IH + 62, "od strony wejścia: panel ryflowany ciemny", 5.2, center=True, col=GREY)
-w2.dimh(0, IW, H, "~118 (reguła: przejście 60)", off=14)
+w2.dimh(0, IW, H, "~118 (od ścianki do przejścia 60 przy sypialni)", off=14, size=5.4)
 w2.dimv(H - IH - 4, H, IW, "88 [~]", off=12)
 w2.text(0, H + 30, "Kotwienie wyspy do posadzki (kątowniki w cokole) — przed posadzką docelową zdecydować o gnieździe.", 5.4, col=GREY)
 c.showPage()

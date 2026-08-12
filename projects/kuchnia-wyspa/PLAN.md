@@ -1,4 +1,6 @@
-# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2.5)
+# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2.6)
+
+> **Korekta v2.6 (2026-08-12, adnotacja inwestora na schemacie):** **wyspa zaczyna się w linii ścianki** — ścianka (od ściany C, ~77 w głąb) i wyspa tworzą **jedną ciągłą linię**; wyspa biegnie od ścianki w stronę ściany A, ale **NIE dochodzi do niej — od strony ściany A zostaje przejście 60**, bo za nim jest **wejście do sypialni** (drzwi przy zachodnim końcu ściany A — widoczne na zdjęciu 1 jako otwór z podłogą drewnianą; wcześniej błędnie opisany jako salon). Wyspa wolnostojąca: ~65 × ~118 (177,6 − 60), południowy koniec przy czubku ścianki, północny 60 od linii ściany A. Przejście 60 = dojście do sypialni i wejście do strefy roboczej. Zgadza się z taśmą na zdjęciu 1 (obrys nie dotykał ściany indukcji).
 
 > **Korekta v2.5 (2026-08-12, nowy szkic inwestora z legendą Z/zm/L/⊠):** ściana C rozczytana do końca. **Od narożnika z B (przy oknie) zabudowa NIE jest pusta — niebieski ciąg biegnie za narożnik**: **niskie szafki z blatem 0→94,7** (łączą się w L z ciągiem zlewowym), od **94,7 szafki do sufitu** (słupek ~28 + **LODÓWKA przy ściance**), **ścianka na 188,5 `[P]` od narożnika** (potwierdza łańcuch v2.4: 94,7+91≈186≈188,5 ✓; nadal na wprost linii szerokości wyspy). Pozycja indukcji z legendy ⊠ potwierdzona: środek ciągu A, przy szafce narożnej od strony okna. Kuchnia jest pełnym U + wyspa.
 
@@ -54,24 +56,24 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 Ściana **A** = z indukcją (góra rzutu) · ściana **B** = prawa, z oknem i zlewem · krawędź **C** = dolna (lodówka; częściowo otwarta — wejście) · lewa krawędź = otwarta na korytarz (za nią łazienka).
 
 ```
-              ściana A — indukcja + szafki górne (do sufitu 247,8)
-    ┌─────┬───────────195─────────────┬────────┐ ← uskok ~15,5×67 [~]
-    │WYSPA│  D1 | D2 INDUKCJA | D3 nar│(narożnik│
-    ├──┐  └───────────────────────────┴──────┐ │
-    │W │                                │zmyw │ │
-    │Y │        aleja robocza           │ 45  │ │
-    │S │         ~135 [~]               ├─────┤ │
-    │P │                                │zlew │═│ okno: 59,7 od C,
-    │A │ dł. ~118 [~] (z reguły 60)     │ 80  │ │ wnęka 85,6×81,7
-    ├──┘                                ├─────┤ │ pod sam sufit,
-    │   PRZEJŚCIE 60 [P-decyzja]        │narożn│ │ parapet ~166
-    ├──┐ („drzwi" wyspa↔ścianka)        │ z C  │ │ ściana B: 238,9 [P]
-    │śc│──────────┬───────┬────────────┬┴─────┤ │
-    │ia│ LODÓWKA  │słupek │ C1 niskie  │ blat │●│ woda+odpływ [~]
-    │nk│ przy śc. │ ~28   │ z blatem   │ w L →│ │
-    └──┴──────────┴───────┴────94,7────┴──────┴─┘
-     ↑ ścianka na 188,5 [P], NA WPROST krawędzi wyspy (w głąb ~77)
-     ← wejście (korytarz) za ścianką · od 94,7 zabudowa do sufitu
+   drzwi do        ściana A — indukcja + szafki górne (do sufitu)
+   SYPIALNI ↓ ┌──────────195──────────────┬────────┐ ← uskok ~15,5×67 [~]
+    ═══════   │  D1 | D2 INDUKCJA | D3 nar│(narożnik│
+              └───────────────────────────┴──────┐ │
+    PRZEJŚCIE 60 [P] (nad wyspą,               │zmyw │
+       dojście do sypialni i do kuchni)        │ 45  │
+    ┌──┐                                       ├─────┤
+    │W │        aleja robocza                  │zlew │═ okno: 59,7 od C,
+    │Y │         ~135 [~]                      │ 80  │  wnęka 85,6×81,7
+    │S │ dł. ~118 [~] (177,6−60)               ├─────┤  pod sam sufit,
+    │P │                                       │narożn│ parapet ~166
+    │A │ (w jednej linii ze ścianką)           │ z C  │ ściana B: 238,9 [P]
+    ├──┤──────────┬───────┬────────────┬──────┴─────┤
+    │śc│ LODÓWKA  │słupek │ C1 niskie  │ blat w L → │● woda+odpływ [~]
+    │ia│ przy śc. │ ~28   │ z blatem   │            │
+    └──┴──────────┴───────┴────94,7────┴────────────┘
+     ↑ ścianka na 188,5 [P], w linii wyspy (w głąb ~77); styk z wyspą
+     ← korytarz za ścianką · od 94,7 zabudowa do sufitu
 ```
 
 ### Wymiary — statusy
@@ -117,11 +119,11 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 1. **Szafki górne TYLKO na ścianie A** (ściana wyspy i indukcji) **oraz zabudowa nad lodówką na C**. Na ścianie B (okno/zlew) — **żadnych górnych**.
 2. **Zlew pod oknem** na ścianie B; **obok zlewu mała zmywarka** (przyjmuję 45 cm).
 3. **Lodówka wolnostojąca 60×65** na ścianie C, **przy ściance 77 cm**, z tzw. **zabudową od góry** (nadstawka nad lodówką).
-4. **Wyspa** przy lewej krawędzi, prostopadle do ściany A (konstrukcyjnie **półwysep**, jeśli dostawiona do ściany) — **długość wymiarowana regułą: między końcem wyspy a lodówką/ścianką ma zostać przejście 60 cm** (wynikowo ~118–130 cm długości).
+4. **Wyspa wolnostojąca** przy lewej krawędzi, prostopadle do ściany A, **w jednej linii ze ścianką** (południowy koniec przy czubku ścianki) — **od strony ściany A zostaje przejście 60 cm do wejścia do sypialni** (korekta v2.6; wynikowo długość ~118).
 5. **Płyta indukcyjna 59×52** (wymiar zapisany na ścianie) — na ciągu ściany A, przy istniejącej puszce.
 6. **Pełna kuchnia** — na tej przestrzeni ma się zmieścić wszystko, co potrzebne (przyjmuję: indukcja, piekarnik, okap, zlew, zmywarka 45, lodówka, przechowywanie).
 
-> ⚠ **Ostrzeżenie ergonomiczne (zapisane, decyzja świadoma):** przejście 60 cm jest **poniżej minimum komunikacyjnego 90 cm** z `uklady-kuchni.md` — to światło jak drzwi „60": przechodzi jedna osoba, bez wyminięcia, ciasno z zakupami; otwarte drzwi lodówki chwilowo blokują przejście całkowicie. Rekomendacja: jeśli pomiar pozwoli, skrócić wyspę o 10–20 cm (przejście 70–80). Inwestor zaakceptował 60 — analogicznie do zaakceptowanego przejścia 70 w poprzedniej wersji kuchni (9.02 v4).
+> ⚠ **Ostrzeżenie ergonomiczne (zapisane, decyzja świadoma):** przejście 60 cm (między wyspą a linią ściany A — jedyne dojście do sypialni i do strefy roboczej kuchni) jest **poniżej minimum komunikacyjnego 90 cm** z `uklady-kuchni.md` — to światło jak drzwi „60": przechodzi jedna osoba, bez wyminięcia, ciasno z zakupami lub tacą. Rekomendacja: jeśli pomiar pozwoli, skrócić wyspę o 10–20 cm (przejście 70–80). Inwestor zaakceptował 60 — analogicznie do zaakceptowanego przejścia 70 w poprzedniej wersji kuchni (9.02 v4).
 
 ## 4. Układ i ergonomia (matematyka przejść)
 
@@ -130,7 +132,7 @@ Układ: **L (A+B) + półwysep przy A + słupek lodówki na C** — funkcjonalni
 | Przejście | Wartość | Próg | Ocena |
 |---|---|---|---|
 | Aleja robocza: wyspa ↔ front ciągu B | ~135 `[~]` (195 − 60 głęb. zabudowy) | ≥100 twardy / 110–120 optimum | ✓ |
-| **Wyspa (koniec) ↔ lodówka/ścianka 77** | **60 `[P]` — reguła inwestora** | ≥90 komunikacyjne | ✗ **świadomy kompromis** (ostrzeżenie w pkt 3) |
+| **Wyspa (koniec od strony ściany A) ↔ linia ściany A / wejście do sypialni** | **60 `[P]` — reguła inwestora (v2.6)** | ≥90 komunikacyjne | ✗ **świadomy kompromis** (ostrzeżenie w pkt 3); wyspa↔ścianka: styk, jedna linia |
 | Przed otwartą zmywarką | ~135 `[~]` | ≥110 | ✓ |
 | Przed lodówką (front ku ścianie A) | ~125 `[~]` (do końca wyspy) | ≥100 | ✓ |
 
@@ -154,8 +156,8 @@ od narożnika z A: **martwe pole narożne ~60 → zmywarka 45 → zlew 80 (62→
 `C1 NISKIE SZAFKI Z BLATEM 0→947 [P] (narożnik łączony w L z ciągiem B — blat ciągły za rogiem; szuflady/półki) | od 947 ZABUDOWA DO SUFITU: C2 SŁUPEK ~280 (cargo/spiżarka) + LODÓWKA wolnostojąca 600×650×1900 [P] bezpośrednio PRZY ŚCIANCE | ŚCIANKA na 1885 [P], gr. ~90 [~], wystaje w głąb ~770 [~] — na wprost linii szerokości wyspy`
 Nad lodówką **NADSTAWKA ~1920→2478 (wys. ~550)**; nad niskim ciągiem C1 bez szafek wiszących (kontynuacja zasady „górne tylko na A") `[?]` do potwierdzenia. Lodówka: luz serwisowy boki ~20–30 mm, wentylacja 50 tył+góra, kratka w nadstawce i cokole; **zawiasy od strony ścianki, drzwi otwierają się ku oknu** (na słupek/niski ciąg). Kontrola łańcuchowa: 947 + ~910 + ~90 (ścianka) + wyspa ~650 ≈ 2600 ✓ (≈ ściana A = 650+1950). Wyspa + ścianka = przerwana linia z przejściem 60 („drzwi" między końcem wyspy a czubkiem ścianki).
 
-**WYSPA/półwysep — szerokość wg taśmy `[?]` (roboczo ~650), długość WYNIKOWA z reguły „przejście 60" (po pomiarach 2. tury roboczo ~1180–1250):**
-korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wysokości ciągu (880 `[~]` — wzrost użytkownika `[?]`); bez instalacji wodnych; ewentualne **gniazdo w wyspie wymaga doprowadzenia w podłodze — decyzja PRZED posadzką docelową**.
+**WYSPA — wolnostojąca, w jednej linii ze ścianką (v2.6); szerokość wg taśmy `[?]` (roboczo ~650), długość ~1180 (177,6 − przejście 60):**
+południowy koniec przy czubku ścianki (styk / minimalna szczelina), północny 60 od linii ściany A (dojście do sypialni). Korpusy otwierane od strony alei roboczej `[~]` (od zachodu korytarz), front od strony korytarza/sypialni: panel ryflowany. Blat na wysokości ciągu (880 `[~]` — wzrost użytkownika `[?]`); bez instalacji wodnych; **wolnostojąca bryła — kotwienie do posadzki obowiązkowe** (kątowniki w cokole); ewentualne **gniazdo w wyspie wymaga doprowadzenia w podłodze — decyzja PRZED posadzką docelową**.
 
 **Rozpisanie pionowe (sufit 2478 `[P]`, wartości od podłogi obecnej — kontrola po posadzce docelowej):**
 
