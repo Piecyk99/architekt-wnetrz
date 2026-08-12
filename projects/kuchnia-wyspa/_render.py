@@ -15,13 +15,16 @@ if not API_KEY:
 MODEL = "gemini-3.1-flash-image-preview"
 URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generateContent?key={API_KEY}"
 
-STYLE = """Materials per the accepted palette: handleless matte beige/cashmere lower
-fronts with milled grip, cream cabinet interiors, upper cabinets and the fridge
-tower in dark matte walnut woodgrain reaching the ceiling, light travertine-look
-laminate worktops (38 mm), dark stone-look backsplash panel behind the hob only,
-remaining walls warm beige paint. The island front facing the entry is a dark
-fluted (reeded) wood panel. Black matte faucet, black granite sink, warm
-under-cabinet LED 3000K, black surface-mounted ceiling spots. No people.
+STYLE = """Materials and finishes: walls painted warm light greige (NCS S 2002-Y);
+ONE accent wall and the short partition wall beside the fridge in anthracite
+(RAL 7016); light oak plank flooring. Handleless matte warm beige/cashmere lower
+fronts with milled grip, upper cabinets and the tall pantry column in dark matte
+walnut woodgrain to the ceiling; the fridge enclosure (freestanding fridge with
+cabinet above) in matte anthracite matching the RAL 7016 wall — reading as one
+dark tower. Light travertine-look laminate worktops (38 mm) at 91 cm height,
+dark stone-look backsplash panel behind the hob only. The peninsula back facing
+the corridor is a dark fluted (reeded) wood panel. Black matte faucet, black
+granite sink, warm under-cabinet LED 3000K, black ceiling spots. No people.
 Architectural Digest editorial aesthetic, warm evening-daylight mix."""
 
 GEOMETRY = """U-shaped kitchen nook in a Polish apartment, about 2.55 m wide and 1.95 m

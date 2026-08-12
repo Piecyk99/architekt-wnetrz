@@ -204,7 +204,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 ## 10. Materiały i styl (paleta zaakceptowana 2026-07-28, przeniesiona z 9.02)
 
-Fronty dolne + ramię: **beż/kaszmir mat, bezuchwytowe**; górne A + słupek C2 + nadstawka C4: **ciemny orzech mat** (intencja „Orzech Royal"); blat: **jasny trawertyn, laminat 38**; panel ryflowany ciemny na froncie ramienia od salonu; fartuch przy indukcji: panel ciemny kamień; bateria+zlew czarne; LED 3000K; cokoły czarne. **Kody dekorów z aktualnej oferty Korner (płyty, korner.pl) `[DO WERYFIKACJI]`** — dobór po próbkach w KornerGo / Piekary Śląskie; Egger poza ofertą korner.pl.
+Kontekst wykończeń (2026-08-12): ściany **NCS S 2002-Y** (jasny ciepły greige), ścianka przy lodówce **RAL 7016** (antracyt), podłoga **jasny dąb**. Fronty dolne + ramię: **beż/kaszmir CIEPŁY mat, bezuchwytowe** (dobór z próbką przy ścianie 2002-Y!); górne A + słupek C2: **ciemny orzech mat** (intencja „Orzech Royal"); **zabudowa lodówki (nadstawka C4 + bok przy ściance): antracyt mat zbliżony do RAL 7016 — jedna ciemna bryła ze ścianką (korekta 2026-08-12)**; blat: **jasny trawertyn, laminat 38**; panel ryflowany ciemny na froncie ramienia od salonu; fartuch przy indukcji: panel ciemny kamień; bateria+zlew czarne; LED 3000K; cokoły czarne. **Kody dekorów z aktualnej oferty Korner (płyty, korner.pl) `[DO WERYFIKACJI]`** — dobór po próbkach w KornerGo / Piekary Śląskie; Egger poza ofertą korner.pl.
 
 ## 11. Lista pomiarów kontrolnych — przed zamówieniem formatek (montaż samodzielny)
 
