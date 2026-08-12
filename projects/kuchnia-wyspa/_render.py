@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""One-shot Gemini render kuchni z wyspą (v2.2) — uruchom lokalnie z kluczem w env, zapisuje PNG.
+"""One-shot Gemini render kuchni w U z ramieniem L (v3.2) — uruchom lokalnie z kluczem w env, zapisuje PNG.
 
     export GEMINI_API_KEY=...   # z aistudio.google.com/apikey
     cd projects/kuchnia-wyspa
@@ -24,28 +24,31 @@ fluted (reeded) wood panel. Black matte faucet, black granite sink, warm
 under-cabinet LED 3000K, black surface-mounted ceiling spots. No people.
 Architectural Digest editorial aesthetic, warm evening-daylight mix."""
 
-GEOMETRY = """Compact open kitchen in a Polish apartment, about 2.55 x 2.40 m, ceiling
-2.48 m, open on one side to a corridor. WINDOW WALL: a high window (86 x 82 cm)
-reaching the ceiling, sill at 166 cm above the floor — the sill stays as a deep
-useful ledge; below the window a base run with a single-bowl black granite sink
-(60 cm) directly under the window and a slim 45 cm dishwasher beside it; NO
-upper cabinets on this wall. INDUCTION WALL (perpendicular, to the left when
-entering): a 195 cm base run with a flush induction hob and a built-in oven
-below it, upper cabinets to the ceiling with an integrated hood and LED under
-them. FRIDGE: on the wall opposite the induction wall, in the corner nearest the
-window — a dark walnut tall enclosure about 95 cm wide reaching the ceiling: a
-freestanding fridge (60 cm wide, 190 cm tall) with a cabinet above it and a
-narrow pantry unit beside it, closed off by a short partition wall on the entry
-side. ISLAND: a peninsula about 118 x 65 cm, worktop at 88 cm, perpendicular to
-the induction wall at its open end, leaving exactly a 60 cm gap between the
-island end and the fridge enclosure / partition wall — a deliberately narrow
-pass-through. Aisle between island and the sink run about 135 cm."""
+GEOMETRY = """U-shaped kitchen nook in a Polish apartment, about 2.55 m wide and 1.95 m
+deep, ceiling 2.48 m, open on one side to a corridor. WINDOW WALL: a high window
+(86 x 82 cm) reaching the ceiling, positioned closer to the induction side (60 cm
+from that corner), sill at 166 cm kept as a deep useful ledge; below along this
+wall from the left: a slim spice pull-out, a 45 cm dishwasher with cabinet front,
+a single-bowl black granite sink (80 cm cabinet) DIRECTLY under the window, a
+small drawer unit, then the corner; NO upper cabinets on this wall. INDUCTION
+WALL (perpendicular, left): a shallow wall pilaster at the window corner, then
+base cabinets with a flush induction hob and a built-in oven below, upper
+cabinets to the ceiling with an integrated hood and warm LED beneath. At the end
+of this run the worktop turns 90 degrees into an L-return peninsula (about 118 x
+65 cm, worktop 88 cm) reaching toward the fridge side, its back clad in dark
+fluted (reeded) wood facing the corridor and the bedroom doorway (127 cm opening
+in the wall right behind it). FRIDGE WALL (right): low cabinets with worktop
+continuing around the corner from the sink run with tall upper cabinets above
+reaching the ceiling, then a tall slim pantry pull-out, then a freestanding
+fridge (60 cm wide, 190 cm tall) enclosed with a cabinet above it to the
+ceiling, ending at a short partition wall; between the peninsula end and that
+partition wall there is exactly a 60 cm pass-through into the kitchen."""
 
-CONSTRAINTS = """STRICT CONSTRAINTS: do not move or resize the window (it reaches the
-ceiling, sill at 166 cm); NO upper cabinets on the window wall; do not enlarge
-the room; island about 118 x 65 with exactly a 60 cm gap to the fridge
-enclosure — nothing larger; fridge tower stays in the corner nearest the
-window; nothing beyond the listed cabinets and appliances."""
+CONSTRAINTS = """STRICT CONSTRAINTS: do not move or resize the window (to the ceiling, sill
+166 cm, near the induction corner); NO upper cabinets on the window wall; do
+not enlarge the room; the peninsula is an L-return of the worktop, about
+118 x 65, with exactly a 60 cm gap to the partition wall; the fridge stands by
+the partition wall on the right-hand run; nothing beyond the listed cabinets."""
 
 PROMPTS = {
     "01-hero-od-wejscia": {
