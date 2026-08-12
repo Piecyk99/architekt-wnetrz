@@ -19,13 +19,13 @@ MODULES = [
     ("DB1 zlewowa", 800, 720, 560, "zlew", FR_BEZ, "bez pleców pełnych (listwa serwisowa); 2 drzwi"),
     ("DB2 zmywarka 45", 450, 0, 0, "front-agd", FR_BEZ, "tylko front 446×~713 wg karty zmywarki"),
     ("DC1 narożna ślepa", 900, 720, 560, "narozna", FR_BEZ, "front 450; martwe pole przy B; docinana blendą 47"),
-    ("GA1 górna", 670, 998, 245, "drzwi2g", FR_ORZ, "wisi na LICU pilastra (155+245=400) — front równo z GA2/GA3; bez wycięcia"),
-    ("GA2 górna", 450, 998, 400, "drzwi1g", FR_ORZ, "wycięcie na gzyms 160x(Hg+5) w bokach; wieniec górny 240"),
-    ("GA3 okap", 600, 998, 400, "okap", FR_ORZ, "konstrukcja wg karty okapu [?]; front uchylny; wycięcie na gzyms; kanał recyrkulacji w paśmie 240"),
-    ("GC1 górna (ociekarka)", 470, 998, 400, "drzwi1g", FR_ORZ, "ociekarka w szafce; wycięcie na gzyms; półka stała na linii wycięcia"),
-    ("GC2 górna", 477, 998, 400, "drzwi1g", FR_ORZ, "wycięcie na gzyms 160x(Hg+5) w bokach; wieniec górny 240"),
-    ("C2 słupek cargo", 280, 2378, 580, "slupek", FR_ORZ, "cargo 250/300 [DO WERYFIKACJI] lub półki; front dzielony 1300+1074; wycięcie na gzyms u góry — najwyższy kosz obniżyć"),
-    ("C4 nadstawka lodówki", 660, 528, 580, "drzwi2n", FR_ORZ, "nad lodówką (od ~1950); wycięcie na gzyms; kratka went. PONIŻEJ gzymsu"),
+    ("GA1 górna", 670, 998, 245, "drzwi2g", FR_ORZ, "wisi na LICU pilastra (155+245=400) — front równo z GA2/GA3"),
+    ("GA2 okap", 600, 998, 400, "okap", FR_ORZ, "nad DA2; konstrukcja wg karty okapu [?]; front uchylny"),
+    ("GA3 górna", 680, 998, 400, "drzwi2g", FR_ORZ, "do linii ramienia; LED 3000K pod całością"),
+    ("GC1 górna (ociekarka)", 470, 998, 400, "drzwi1g", FR_ORZ, "ociekarka w szafce"),
+    ("GC2 górna", 477, 998, 400, "drzwi1g", FR_ORZ, ""),
+    ("C2 słupek cargo", 280, 2378, 580, "slupek", FR_ORZ, "cargo 250/300 [DO WERYFIKACJI] lub półki; front dzielony 1300+1074"),
+    ("C4 nadstawka lodówki", 660, 528, 580, "drzwi2n", FR_ORZ, "nad lodówką (od ~1950); kratka went."),
 ]
 
 PANELE = [
@@ -112,7 +112,7 @@ out += ["""
 | Prowadnice szuflad 500 z pełnym wysuwem i dociągiem (Blum Tandembox/GTV Modern Box) | **4 kpl** | DA1 ×3 + DA2 szuflada dolna ×1 |
 | Cargo 150 (Rejs/Peka) | 1 kpl | DB0 |
 | Cargo spiżarniane wysokie do słupka 280 | 1 kpl | **[DO WERYFIKACJI]** — szerokość niestandard.; alternatywa: półki + drzwi |
-| Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA3 — dobór po zakupie okapu |
+| Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA2 — dobór po zakupie okapu |
 | Nóżki meblowe 150 + klipsy cokołu | 32 + 16 szt | 8 szafek dolnych ×4 |
 | Zawieszki regulowane górnych + listwa montażowa | 10 szt + 3 mb | GA1-3, GC1-2 |
 | Konfirmaty 7×50 + kołki 8×35 + wkręty 4×30/4×16 | 1 opak. każde | montaż korpusów |
