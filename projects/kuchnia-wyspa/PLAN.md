@@ -219,14 +219,18 @@ Kontekst wykończeń (2026-08-12): ściany **NCS S 2002-Y** (jasny ciepły greig
 8. Puszka siłowa na A: obwód i dokładna pozycja (ustawia DA2).
 9. Obrys taśmy ramienia: długość od ściany (127?) i głębokość (65?) — kontrola reguły 60.
 10. ~~Wzrost~~ ✓ blat 910 `[P]` (wzrost 182) — pozycja rozstrzygnięta.
-11. **GZYMS/PODCIĄG pod sufitem `[?]` (foto 2026-08-12):** a) po których ścianach biegnie (A? C? B nad oknem?); b) ile **wystaje ze ściany** (cm); c) **wysokość dolnej krawędzi od podłogi** (albo ile schodzi od sufitu); d) czy w gzymsie/nad nim biegną piony lub kratka wentylacyjna.
+11. **GZYMS/PODCIĄG pod sufitem (foto 2026-08-12):** wystawanie **15,5 `[P]`** (inwestor: ta sama belka co pilaster). Do pomiaru zostało: a) po których ścianach biegnie (A? C? B nad oknem?); b) **wysokość dolnej krawędzi od podłogi** (albo ile schodzi od sufitu) `[?]`; c) czy w gzymsie/nad nim biegną piony lub kratka wentylacyjna `[?]`.
 
-### 11a. Górne szafki vs gzyms — warianty (decyzja po pomiarze 11.11)
+### 11a. Górne szafki vs gzyms 15,5 — kierunek: WARIANT C, korpus 400 `[~]` (propozycja inwestora 2026-08-12)
 
-Głębokość górnych wg planu: **korpus 320** (GA1 305 przy pilastrze) + front 19 ≈ **340 całkowitej**. Warianty zależnie od pomiaru:
-- **A) Wystawanie ≤ ~6 cm:** korpusy zostają 320, do sufitu. W tylnym górnym rogu **boków** wycięcie na gzyms (wystawanie+5 mm × wysokość gzymsu+5 mm, wyrzynarka); wieniec górny płycej (320 − wystawanie); plecy HDF kończone pod gzymsem. Fronty bez zmian — od frontu nic nie widać.
-- **B) Wystawanie duże / dolna krawędź nisko (≤ ~2300):** szafki kończone **POD gzymsem** — korpus górnych = dolna krawędź gzymsu − 1480 (np. gzyms od 2200 → korpus 720 jak w dolnych). Gzyms w kolorze ściany gra rolę gzymsu koronującego. Zero cięcia na budowie — najprościej przy montażu samodzielnym; wymaga przeliczenia formatek (wysokości górnych) i nadstawki C4/słupka C2.
-- **C) Front przed gzymsem do sufitu:** korpusy pogłębione o wystawanie (np. 320+120=440), boki z wycięciem jak w A, jedna płaszczyzna frontów do sufitu. Najładniejsze przy dużym gzymsie, ale najwięcej roboty i głębsza bryła nad blatem (głowa!).
+Gzyms wystaje **15,5 `[P]`**. Propozycja inwestora: **górne o głębokości korpusu 400** (zamiast 320) — front przechodzi PRZED gzymsem jedną płaszczyzną do sufitu:
+- boki 400 głęb., w tylnym górnym rogu **wycięcie 160 × (wysokość gzymsu + 5 mm)** wyrzynarką; w paśmie gzymsu zostaje **240 użytkowej głębokości** (górna półka — rzeczy sezonowe);
+- wieniec górny płycej: **240**; plecy HDF kończone na dolnej krawędzi gzymsu + trawers poziomy pod wycięciem;
+- **listwa montażowa POD gzymsem** (nie przy suficie), zawieszki w korpusie odpowiednio niżej;
+- całkowita głębokość z frontem ≈ **419**; cofnięcie względem lica blatu (600) = **181** (przy 320 było 261) — mniej miejsca na głowę nad blatem, decyzja świadoma; nad indukcją i tak okap;
+- GA2 (okap w zabudowie) i GC1/GC2 — ta sama głębokość 400 dla jednej linii frontów; GA1 przy pilastrze docinana jak dotąd.
+Warianty odrzucone: A) korpus 320 z wycięciem 160 — nad gzymsem zostałoby tylko 160 użytkowej; B) kończenie szafek pod gzymsem (korpus niższy, gzyms jako „korona") — odpada, jeśli inwestor chce zabudowę do sufitu.
+**Do domknięcia przed przeliczeniem formatek: wysokość dolnej krawędzi gzymsu + po których ścianach biegnie (pkt 11.11).**
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 
