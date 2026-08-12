@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni z wyspą v2.4 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni z wyspą v2.5 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -23,7 +23,7 @@ DIMC = colors.HexColor("#a05252")
 GREY = colors.HexColor("#8a8a8a")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia z wyspą — schemat v2.4")
+c.setTitle("Kuchnia z wyspą — schemat v2.5")
 
 
 class V:
@@ -90,7 +90,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia z wyspą — schemat koncepcyjny v2.4 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia z wyspą — schemat koncepcyjny v2.5 · 2026-08-12 · wymiary w cm · "
                  "wartości robocze [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -98,7 +98,7 @@ def header(title, sub):
 
 
 # ================= STRONA 1: RZUT Z GÓRY =================
-header("RZUT Z GÓRY — układ v2.4", "skala ~1:15 · orientacja: patrzysz na ścianę A (indukcja); B = okno (prawa), C = lodówka (dół), lewa = korytarz")
+header("RZUT Z GÓRY — układ v2.5", "skala ~1:15 · orientacja: patrzysz na ścianę A (indukcja); B = okno (prawa), C = lodówka (dół), lewa = korytarz")
 s = (PH - 60 * mm) / 275.0
 v = V(52 * mm, PH - 30 * mm, s)
 
@@ -125,25 +125,27 @@ for x0, w, lab in segsA:
     for i, ln in enumerate(lab.split("\n")):
         v.text(x0 + w / 2, 22 + i * 8, ln, 5.6, center=True)
 # ciąg B: od narożnika w dół: martwe pole 60 / zmywarka 45 / zlew 60
-segsB = [(JY, 60, "martwe pole\nnarożne"), (JY + 60, 45, "ZMYWARKA\n45"), (JY + 105, 80, "ZLEW 80\npod oknem"), (JY + 185, 54, "dostawka\n~54")]
+segsB = [(JY, 60, "martwe pole\nnarożne"), (JY + 60, 45, "ZMYWARKA\n45"), (JY + 105, 80, "ZLEW 80\npod oknem"), (JY + 185, 54, "narożnik z C\n~54 (L)")]
 for y0, h, lab in segsB:
     v.rect(BX - 60, y0, 60, h, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         v.text(BX - 30, y0 + h / 2 - 4 + i * 8, ln, 5.4, center=True)
-# ściana C od narożnika B/C: pas wolny 94,7 | zabudowa ~91 (słupek+lodówka) | ścianka NA LINII krawędzi wyspy
-zx2 = BX - 94.7            # koniec pasa wolnego = wschodnia krawędź zabudowy
-zx1 = 74.0                 # zachodnia krawędź zabudowy = wschodnia krawędź ścianki
-v.text(BX - 47, CY - 20, "pas wolny ~94,7", 5.6, center=True, col=GREY)
-v.text(BX - 47, CY - 11, "(kosz / blat odstawczy [?])", 4.8, center=True, col=GREY)
-v.rect(zx1, CY - 70, zx2 - zx1, 70, fill=FILL)             # zabudowa ~91
-v.text(zx1 + 33, CY - 44, "LODÓWKA 60×65", 5.6, center=True)
-v.text(zx1 + 33, CY - 34, "wys. 190 (przy ściance)", 4.8, center=True, col=GREY)
-v.text(zx1 + 33, CY - 25, "+ nadstawka do sufitu", 4.8, center=True, col=GREY)
-v.line(zx1 + 66, CY - 70, zx1 + 66, CY, 0.5, GREY, dash=([2, 2], 0))
-v.text(zx1 + 78, CY - 40, "słupek", 5.0, center=True)
-v.text(zx1 + 78, CY - 31, "~25", 5.0, center=True)
-v.rect(65.0, CY - 77, 9, 77, fill=WALL)                    # ścianka NA WPROST krawędzi wyspy
-v.text(60, CY - 80, "ścianka (w głąb ~77, na linii krawędzi wyspy)", 5.2, angle=90)
+# ściana C od narożnika B/C: C1 niskie z blatem 94,7 | słupek ~28 | lodówka przy ściance | ścianka na 188,5 [P]
+zx2 = BX - 94.7            # koniec C1 = początek zabudowy wysokiej
+sc1 = BX - 188.5           # wschodnia krawędź ścianki [P]
+v.rect(zx2, CY - 60, 94.7, 60, fill=FILL)                  # C1 niskie szafki z blatem
+v.text(BX - 47, CY - 38, "C1 niskie + blat", 5.4, center=True)
+v.text(BX - 47, CY - 29, "(L z ciągiem zlewu)", 4.8, center=True, col=GREY)
+v.rect(sc1, CY - 70, 66.0, 70, fill=FILL)                  # lodówka przy ściance
+v.rect(sc1 + 66.0, CY - 70, zx2 - sc1 - 66.0, 70, fill=FILL)   # słupek od strony C1
+v.text(sc1 + 33, CY - 44, "LODÓWKA 60×65", 5.4, center=True)
+v.text(sc1 + 33, CY - 34, "wys. 190, przy ściance", 4.6, center=True, col=GREY)
+v.text(sc1 + 33, CY - 25, "+ nadstawka do sufitu", 4.6, center=True, col=GREY)
+v.text(sc1 + 80, CY - 40, "słupek", 4.8, center=True)
+v.text(sc1 + 80, CY - 31, "~28", 4.8, center=True)
+v.line(sc1 + 66.0, CY - 70, sc1 + 66.0, CY, 0.5, GREY, dash=([2, 2], 0))
+v.rect(sc1 - 9, CY - 77, 9, 77, fill=WALL)                 # ścianka na wprost krawędzi wyspy
+v.text(sc1 - 14, CY - 80, "ścianka (w głąb ~77, na wprost krawędzi wyspy)", 5.0, angle=90)
 # wyspa
 v.rect(0, 0, 65, 118, fill=colors.HexColor("#e2d6c2"))
 v.text(32, 55, "WYSPA", 7, bold=True, center=True)
@@ -156,9 +158,9 @@ v.dimv(0, CY, 0, "254,6", off=-16)
 v.dimv(JY, CY, BX, "238,9", off=30)
 v.dimv(CY - 145.3, CY - 59.7, BX, "okno 85,6", off=16)
 v.dimv(CY - 59.7, CY, BX, "59,7", off=16)
-v.dimh(zx2, BX, CY, "94,7", off=14)
-v.dimh(74, zx2, CY, "~91", off=14, size=5.5)
-v.dimh(65, 74, CY, "śc.", off=22, size=4.6)
+v.dimh(zx2, BX, CY, "94,7 (C1)", off=14, size=5.5)
+v.dimh(sc1, zx2, CY, "~94 (lodówka+słupek)", off=14, size=5.0)
+v.dimh(sc1, BX, CY, "188,5 [P]", off=24, size=5.5)
 v.dimv(118, CY - 77, 69.5, "PRZEJŚCIE 60 („drzwi\u201d)", off=0)
 v.dimh(65, BX - 60, 130, "aleja ~135", off=0)
 v.dimh(0, 65, 118, "~65", off=8, size=5.5)
@@ -201,7 +203,7 @@ e = V(60 * mm, PH - 30 * mm, s2)
 W = 238.9
 e.rect(0, 0, W, H)
 e.rect(0, H - COK, W, COK, fill=colors.HexColor("#2e2e2e"))
-for x0, w, lab in [(0, 60, "narożnik\n(martwe pole)"), (60, 45, "ZMYWARKA 45\nfront meblowy"), (105, 80, "ZLEW 80"), (185, 53.9, "dostawka\n~54")]:
+for x0, w, lab in [(0, 60, "narożnik\n(martwe pole)"), (60, 45, "ZMYWARKA 45\nfront meblowy"), (105, 80, "ZLEW 80"), (185, 53.9, "narożnik z C\n~54 (L)")]:
     e.rect(x0, H - BL, w, BL - COK - 4, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.4, center=True)
@@ -218,34 +220,39 @@ e.dimv(0, H - 166.1, wx1, "81,7", off=-10)
 e.dimh(0, W, H, "238,9", off=14)
 e.dimv(0, H, 0, "247,8", off=-14)
 e.text(60, H + 22, "zlew pod oknem ✓ (62–142 od C vs okno 59,7–145,3) · podejścia wody przedłużyć w zabudowie", 5.4, col=GREY)
-e.text(0, H + 32, "zabudowa lodówki odsunięta od tego narożnika o pas wolny ~94,7 (v2.4) — brak kolizji z oknem", 5.6, col=GREY)
+e.text(0, H + 32, "zabudowa lodówki odsunięta od tego narożnika o pas wolny ~94,7 (v2.5) — brak kolizji z oknem", 5.6, col=GREY)
 c.showPage()
 
 # ================= STRONA 4: ELEWACJA C + WYSPA =================
 header("ELEWACJA C — zabudowa lodówki (do sufitu) · WYSPA od strony alei",
        "skala ~1:15 · lodówka wolnostojąca 60×65×190, luz serwisowy, wentylacja 50 tył+góra + kratki")
 e = V(30 * mm, PH - 30 * mm, s2)
-ZW = 94.7 + 91.3 + 9.0   # pas wolny + zabudowa (słupek+lodówka) + ścianka (widok: ściana B po LEWEJ)
+ZW = 188.5 + 9.0   # do ścianki [P] + ścianka (widok: ściana B po LEWEJ)
 e.rect(0, 0, ZW, H)
-e.text(47, H - 40, "pas wolny ~94,7", 5.8, center=True, col=GREY)
-e.text(47, H - 30, "(od wnęki okiennej do zabudowy)", 5, center=True, col=GREY)
-e.rect(94.7, 0, 25.3, H, fill=colors.HexColor("#b39473"))          # słupek do sufitu
-e.text(107.3, H / 2 - 10, "SŁUPEK", 5.2, center=True, col=colors.white)
-e.text(107.3, H / 2, "~25", 5.2, center=True, col=colors.white)
-e.rect(120, H - 190, 66, 190, fill=colors.HexColor("#f7f7f7"))     # lodówka przy ściance
-e.text(153, H - 100, "LODÓWKA", 6.4, center=True, bold=True)
-e.text(153, H - 90, "wolnostojąca 60 (wys. 190)", 5.2, center=True, col=GREY)
-e.line(126, H - 62, 180, H - 62, 0.6, GREY)
-e.rect(120, 0, 66, H - 192, fill=colors.HexColor("#b39473"))
-e.text(153, (H - 192) / 2, "NADSTAWKA + kratka", 5.4, center=True, col=colors.white)
-e.rect(186, 0, 9, H, fill=WALL)
-e.text(199, H - 40, "ścianka — NA WPROST krawędzi wyspy (wystaje ~77)", 5.2, angle=90, col=GREY)
+e.rect(0, H - COK, 94.7, COK, fill=colors.HexColor("#2e2e2e"))
+e.rect(0, H - BL, 94.7, BL - COK - 4, fill=FILL)                   # C1 niskie
+e.rect(0, H - BL - 4, 94.7, 4, fill=colors.HexColor("#d8cbb4"))    # blat C1
+e.text(47, H - 40, "C1 — niskie szafki z blatem", 5.6, center=True)
+e.text(47, H - 30, "(blat ciągły z ciągu zlewowego)", 5, center=True, col=GREY)
+e.text(47, H - 130, "bez wiszących [?]", 5, center=True, col=GREY)
+e.rect(94.7, 0, 27.8, H, fill=colors.HexColor("#b39473"))          # słupek do sufitu
+e.text(108.6, H / 2 - 10, "SŁUPEK", 5.2, center=True, col=colors.white)
+e.text(108.6, H / 2, "~28", 5.2, center=True, col=colors.white)
+e.rect(122.5, H - 190, 66, 190, fill=colors.HexColor("#f7f7f7"))   # lodówka przy ściance
+e.text(155.5, H - 100, "LODÓWKA", 6.4, center=True, bold=True)
+e.text(155.5, H - 90, "wolnostojąca 60 (wys. 190)", 5.2, center=True, col=GREY)
+e.line(128.5, H - 62, 182.5, H - 62, 0.6, GREY)
+e.rect(122.5, 0, 66, H - 192, fill=colors.HexColor("#b39473"))
+e.text(155.5, (H - 192) / 2, "NADSTAWKA + kratka", 5.4, center=True, col=colors.white)
+e.rect(188.5, 0, 9, H, fill=WALL)
+e.text(201.5, H - 40, "ścianka — na wprost krawędzi wyspy (wystaje ~77)", 5.2, angle=90, col=GREY)
 e.dimv(0, H, 0, "247,8", off=-14)
 e.dimv(H - 190, H, ZW, "190", off=12)
 e.dimv(0, H - 192, ZW, "~55", off=12)
-e.dimh(0, 94.7, H, "94,7", off=14)
-e.dimh(94.7, 186, H, "~91 (słupek ~25 + lodówka ~66)", off=14, size=5.4)
-e.text(0, H + 30, "zawiasy lodówki od strony ścianki — drzwi otwierają się ku oknu (na słupek/pas wolny)", 5.4, col=GREY)
+e.dimh(0, 94.7, H, "94,7 (C1)", off=14, size=5.5)
+e.dimh(94.7, 188.5, H, "~94 (słupek ~28 + lodówka ~66)", off=14, size=5.2)
+e.dimh(0, 188.5, H, "188,5 [P]", off=24, size=5.5)
+e.text(0, H + 34, "zawiasy lodówki od strony ścianki — drzwi otwierają się ku oknu (na słupek/C1)", 5.4, col=GREY)
 # wyspa obok
 w2 = V(150 * mm, PH - 30 * mm, s2)
 IW, IH = 118.0, 88.0
