@@ -193,7 +193,7 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 | Nadstawka zbyt ciasna na lodówce wolnostojącej | luz 20–30 mm z boków, 50 mm góra/tył + kratka; pomiar lodówki z zawiasami |
 | Posadzka docelowa zmieni wysokości | wymiary pionowe po posadzce |
 
-## 9. Lista pomiarów kontrolnych dla stolarza
+## 9. Lista pomiarów kontrolnych — przed zamówieniem formatek (montaż samodzielny: inwestor)
 
 1. Ściana A łącznie (z odcinkiem wyspy) i ściana C — dołem i na wys. blatu.
 2. Ściana B: 238,9 — kontrola dołem/górą; przekątne narożnika A/B (kąt).
@@ -208,6 +208,29 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 11. Światło wejścia do kuchni od korytarza (między ścianką 77 a łazienką).
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
+
+## 9a. Montaż samodzielny — podział pracy i kolejność
+
+**Co zlecić Korner (płyty, korner.pl) — KornerGo / e-Rozkrój (b2b.kornergo.pl), oddział Piekary Śląskie:**
+- cięcie wszystkich formatek na wymiar + **oklejanie krawędzi** (samodzielne oklejanie żelazkiem nie da jakości na frontach),
+- CNC: otwory pod zawiasy (puszki 35), nawierty na półki — warto, taniej niż błąd w drogim froncie,
+- przy pełnej kuchni **transport Korner zamiast odbioru** (formatki boków słupków ~2,4 m nie wejdą do osobówki).
+
+**Co robisz sam:** skręcenie korpusów (konfirmaty/złączki + kołki), zawieszenie górnych, blat (docięcie długości, wycięcia), cokoły i blendy docinane na miejscu, montaż AGD (poza podłączeniem siły — elektryk z uprawnieniami).
+
+**Wycięcia w blacie:** indukcja 560×490 i zlew — zrób ręcznie (wyrysować, otwory startowe, wyrzynarka z brzeszczotem do laminatu, cięcie od spodu lub po taśmie malarskiej), **krawędzie cięcia zabezpiecz silikonem/aluminiową taśmą przed wilgocią** — albo zleć wycięcia na CNC razem z rozkrojem (wtedy pomiar pozycji musi być finalny).
+
+**Kolejność montażu:**
+1. Instalacje (pkt 7) + posadzka docelowa → dopiero potem pomiar finalny i zamówienie rozkroju.
+2. Zabudowa lodówki na C (słupek + nadstawka + ścianka-bok) — najpierw, bo ustala linię ciągu B.
+3. Dolne ściany B od narożnika z A (narożna → zmywarka → zlew), poziomowanie na nóżkach od najwyższego punktu podłogi, skręcenie korpusów ze sobą.
+4. Dolne ściany A (od narożnika w stronę wyspy).
+5. Górne na A: listwa montażowa/zawieszki regulowane, poziom od linii sufitu (blenda docinana kryje krzywiznę).
+6. Blaty (najpierw B, potem A, połączenie w narożniku listwą lub frezem), wycięcia, silikon przy ścianie i oknie.
+7. Wyspa: korpusy skręcone na miejscu, **kotwienie do posadzki** (kątowniki w cokole), blat na końcu; front ryflowany jako ostatni.
+8. Fronty, regulacja zawiasów, cokoły z kratką wentylacyjną lodówki, listwy przyblatowe, AGD.
+
+**Pomiar → zamówienie:** po wykonaniu pomiarów z pkt 9 wracamy do planu i przeliczam rozpiskę na **listę formatek do e-Rozkroju** (korpusy, fronty, blendy, obrzeża per krawędź).
 
 ## 10. Materiały i styl — propozycja (do akceptacji)
 
