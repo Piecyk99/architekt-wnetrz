@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.2 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.3 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -25,7 +25,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.2")
+c.setTitle("Kuchnia U + ramię L — schemat v3.3")
 
 
 class V:
@@ -86,7 +86,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.2 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.3 · 2026-08-12 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -95,7 +95,7 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.2)",
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.3)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa) · głębokość kuchni ~195 od okna")
 s = (PH - 64 * mm) / 260.0
 v = V(62 * mm, PH - 27 * mm, s)
@@ -121,13 +121,17 @@ v.text(-14, (DOOR1 + DOOR2) / 2 + 30, "OTWÓR DO SYPIALNI 127 [P]", 5.4, angle=9
 v.rect(CX - 77, SCY1, 77, 9, fill=WALL)
 v.text(CX - 74, SCY1 - 4, "ścianka — wysięg ~77 [~], na 188,5 [P]", 4.8, col=GREY)
 # okno
-ox1, ox2 = 15.5 + 59.7, 15.5 + 59.7 + 85.6   # okno od strony pilastra [P] (korekta v3.2)
+ox1, ox2 = 15.5 + 59.7, 15.5 + 59.7 + 85.6   # okno od strony pilastra [P] (korekta v3.3)
 v.rect(ox1, -8, ox2 - ox1, 8, fill=colors.white)
 v.line(ox1, -4, ox2, -4, 0.8, INK)
 v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=True)
 
-# ciąg B (gł. 60)
-segsB = [(15.5, 15, "crg\n15"), (30.5, 45, "DB1\nZMYW. 45"), (75.5, 80, "DB2 ZLEW 80\npod oknem"), (155.5, 39.1, "DB3\n~39")]
+# ciąg B (gł. 60); narożnik zachodni (do x=60) = martwe pole bez frontu (kolizja z ciągiem A)
+v.rect(15.5, 0, 44.5, 60, fill=colors.HexColor("#e3ddd2"))
+v.line(15.5, 0, 60, 60, 0.4, GREY); v.line(15.5, 60, 60, 0, 0.4, GREY)
+v.text(38, 74, "martwe pole", 4.2, center=True, col=GREY)
+v.text(38, 80, "(bez frontu)", 4.2, center=True, col=GREY)
+segsB = [(60, 15, "crg\n15"), (75, 80, "DB1 ZLEW 80\npod oknem"), (155, 45, "DB2\nZMYW. 45")]
 for x0, w, lab in segsB:
     v.rect(x0, 0, w, 60, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
@@ -210,12 +214,12 @@ c.showPage()
 
 # ================= STRONA 3: ELEWACJA B =================
 header("ELEWACJA B — ściana okna (BEZ szafek górnych)",
-       "skala ~1:15 · okno pod sam sufit, parapet ~166 · OKNO OD STRONY PILASTRA: 59,7 | 85,6 | 94,7 [P] (v3.2) · od prawej: narożnik z C")
+       "skala ~1:15 · okno pod sam sufit, parapet ~166 · OKNO OD STRONY PILASTRA: 59,7 | 85,6 | 94,7 [P] (v3.3) · od prawej: narożnik z C")
 e = V(55 * mm, PH - 30 * mm, s2)
 W = 238.9
 e.rect(0, 0, W, H)
 e.rect(0, H - COK, W, COK, fill=colors.HexColor("#2e2e2e"))
-for x0, w, lab in [(0, 15, "crg\n15"), (15, 45, "DB1\nZMYWARKA 45"), (60, 80, "DB2 ZLEW 80"), (140, 39, "DB3\n~39"), (179, 60, "narożnik z C\n(front DC1 od C)")]:
+for x0, w, lab in [(0, 44.5, "martwe pole\n(za ciągiem A)"), (44.5, 15, "crg\n15"), (59.5, 80, "DB1 ZLEW 80"), (139.5, 45, "DB2\nZMYWARKA 45"), (184.5, 54.4, "narożnik z C\n(front DC1 od C)")]:
     e.rect(x0, H - BL, w, BL - COK - 4, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.0, center=True)
@@ -251,7 +255,7 @@ e.text(23.5, (H - 148) / 2, "GC1", 5.6, center=True, col=colors.white)
 e.text(23.5, (H - 148) / 2 + 10, "ociekarka/naczynia", 4.4, center=True, col=colors.white)
 e.text(71, (H - 148) / 2, "GC2", 5.6, center=True, col=colors.white)
 e.text(71, (H - 148) / 2 + 10, "kubki/szkło", 4.4, center=True, col=colors.white)
-e.text(47, H - 140, "górne do sufitu (dół 148) — decyzja inwestora v3.2", 4.4, center=True, col=GREY)
+e.text(47, H - 140, "górne do sufitu (dół 148) — decyzja inwestora v3.3", 4.4, center=True, col=GREY)
 e.rect(94.7, 0, 28, H, fill=TALL)
 e.text(108.7, H / 2 - 10, "C2", 5.4, center=True, col=colors.white)
 e.text(108.7, H / 2, "słupek ~28", 4.8, center=True, col=colors.white)

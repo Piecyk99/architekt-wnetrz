@@ -12,6 +12,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - v2.3–v2.6: iteracje pozycji lodówki/ścianki/wyspy — **zastąpione przez v3.0**.
 - **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do sypialni** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
 - **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do sypialni (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
+- **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek otwierania drzwi sypialni vs ramię `[?]`.
 - **v3.2 (2026-08-12, uwagi inwestora do schematu v3.1):** (1) **OKNO po stronie indukcji, nie lodówki** — rozkład ściany B od lewej (od pilastra): **59,7 + okno 85,6 + 94,7 do ściany C** (kontrola: suma 240 ≈ 238,9 ✓); zlew przesuwa się pod okno bliżej pilastra, zmywarka między pilastrem a zlewem. (2) **Górne szafki także nad niskim ciągiem na ścianie C** (GC1–GC2 do sufitu) — decyzja inwestora. (3) Narożnik A/B domknięty (przerwa na rzucie v3.1 była strefą pilastra — wypełniona blendą, moduły stykają się). (4) Dodany **plan funkcjonalny** (co w której szafce), w tym szafka na umyte naczynia przy zlewie.
 
 ---
@@ -108,15 +109,15 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 | — | panel ryflowany | ~1180×880 | — | rewers: od sypialni (południe) i od korytarza |
 | ⚠ | **wariant płytszy** | gł. 400–500 | — | do decyzji: poszerza strefę przy zlewie z ~70 do ~85–95 (pkt 4) |
 
-### Ściana B — okno/zlew (światło między pilastrem a narożnikiem ~1791 `[~]`; okno 597→1453 od pilastra `[P]`):
+### Ściana B — okno/zlew (okno 597→1453 od pilastra `[P]`; korekta v3.3 po weryfikacji):
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| DB0 | cargo przyprawnik | 150×820×560 | cargo | przy pilastrze (155→305 od ściany A) |
-| DB1 | **zmywarka 45** | 450 (światło wnęki 450×820+) | front meblowy | 305→755; obok zlewu ✓; przyłącza z DB2 |
-| DB2 | **zlew 80** | 800×820×560 | drzwi, kosz segregacji, chemia | **755→1555 — dokładnie pod oknem (752→1608) ✓**; zlew 1-komora z ociekaczem |
-| DB3 | dolna | ~390×820×560 | szuflady/półki | 1555→1946, docinana |
-| — | narożnik z C | martwe pole ~600×540 | dostęp z DC1 | róg B/C |
+| — | **narożnik zachodni (martwe pole)** | ~600 od ściany A | **BEZ FRONTU** | strefa za ciągiem A — każdy front/wysuw kolidowałby z ciągiem indukcji (błąd cargo z v3.2 usunięty); blat ciągły |
+| DB0 | cargo przyprawnik 15 | 150×820×560 | cargo | **600→750 od ściany A** — wysuwa się na wolną przestrzeń wnętrza U ✓ |
+| DB1 | **zlew 80** | 800×820×560 | drzwi, kosz segregacji, chemia | **750→1550 — pod oknem (752→1608) ✓**; zlew 1-komora z ociekaczem |
+| DB2 | **zmywarka 45** | 450 (światło wnęki 450×820+) | front meblowy | **1550→2000** (wschodnia strona zlewu — przed frontem ~125 wolnego ✓); wcina się ~54 w strefę narożnika z C (martwe pole DC1 maleje do ~546 — dopuszczalne) |
+| — | narożnik z C | martwe pole ~546×600 | dostęp z DC1 | róg B/C |
 | — | **bez górnych na B** | — | — | okno do sufitu; parapet ~166 użytkowy |
 
 ### Ściana C — od narożnika z B do ścianki (1885 `[P]`):
@@ -140,10 +141,10 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 |---|---|
 | **GC1 (górna nad DC1)** | **umyte naczynia — ociekarka w szafce** + talerze codzienne (1 krok od zmywarki DB1, za narożnikiem) |
 | GC2 (górna nad DC1) | szklanki, kubki, miski codzienne |
-| DB0 cargo 15 | przyprawy w butelkach, oleje, ocet (przy strefie gotowania przez blat) |
-| DB1 zmywarka 45 | — |
-| DB2 zlew 80 | kosze segregacji, chemia, akcesoria zlewu |
-| DB3 ~39 | ściereczki, worki, drobiazgi kuchenne (szuflady) |
+| DB0 cargo 15 (za linią ciągu A) | przyprawy w butelkach, oleje, ocet — wysuw na wolną przestrzeń ✓ |
+| DB1 zlew 80 | kosze segregacji, chemia, akcesoria zlewu |
+| DB2 zmywarka 45 | — |
+| narożnik zachodni B (martwe pole) | bez frontu — przestrzeń stracona konstrukcyjnie (ew. dostęp rewizyjny od DA1) |
 | DC1 narożna | garnki duże, rondle, rzadziej używane (karuzela/półki obrotowe `[?]`) |
 | C2 słupek cargo ~28 | spiżarnia pionowa: przetwory, butelki, suche zapasy |
 | C3/C4 lodówka + nadstawka | lodówka; nadstawka: zapasy sezonowe, rzadko używany sprzęt |
@@ -188,7 +189,9 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 | Ryzyko | Mitygacja |
 |---|---|
-| **Strefa między zlewem a ramieniem ~70** (otwarta zmywarka ją wypełnia) | wariant ramienia gł. 400–500 (→ 85–95) albo świadoma akceptacja; decyzja przed zamówieniem korpusów ramienia |
+| **Strefa między zlewem a ramieniem ~70** | wariant ramienia gł. 400–500 (→ 85–95) albo świadoma akceptacja; zmywarka po v3.3 jest poza tą strefą (przed jej frontem ~125 ✓) |
+| Drzwi lodówki >90° zahaczają o kant ścianki (wysięg 77 > lico zabudowy 70) | **blenda dystansowa ~50–70 mm między lodówką a ścianką** (zawiasy od strony ścianki) |
+| Drzwi sypialni otwierane do kuchni kolidowałyby z ramieniem | potwierdzić kierunek otwierania `[?]`; ew. drzwi przesuwne / otwierane do sypialni |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
