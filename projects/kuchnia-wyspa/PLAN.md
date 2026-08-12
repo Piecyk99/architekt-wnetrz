@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.7)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.7a)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -17,6 +17,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
 - **v3.4–v3.5 (2026-08-12):** blat **910** `[P]` (wzrost 182); okap **recyrkulacyjny z filtrem węglowym** `[P]` (zakup inwestora — kratka nie warunkuje okapu); **ramię gł. 50** `[P]` (strefa przy zlewie ~85; decyzja po analizie komfortu 65 vs 50).
 - **v3.6 (2026-08-12, foto pomalowanego pomieszczenia + odpowiedź inwestora):** **gzyms/belka 15,5 pod sufitem, po całym obwodzie `[P]`**. Górne szafki **400 gł.** (propozycja inwestora) z wycięciem 160×(Hg+5) w bokach — front przed gzymsem, jedna płaszczyzna do sufitu; wieniec 240, listwa montażowa pod gzymsem. Wycięcia obejmują też **słupek C2 i nadstawkę C4**. **Korekta GA1: 305 → 245** (pilaster wystaje 155, nie 15 — błąd w v3.2). Otwarte: **Hg** oraz **sprzeczność gzyms vs okno do sufitu (11b)**. Detal: `kuchnia-wyspa-detal-gzyms.pdf`.
+- **v3.7a (2026-08-12, kontrola zgodności rzut ↔ rozpiska):** poprawiona **numeracja i szerokości górnych na ścianie A** — okap to **GA3 (600, nad DA2 = 1120→1720)**, a nie GA2; GA2 = zwykła 450 nad DA1; dodana blenda górna 230 przy narożniku ramienia. (W v3.6 zapisałem okap zaraz za GA1, co przesuwałoby go nad szuflady zamiast nad indukcję — schemat v3.5 miał to od początku dobrze.)
 - **v3.7 (2026-08-12, korekta po uwadze inwestora „ten gzyms idzie pionowo"):** element 15,5 ze zdjęcia to **PIONOWY PILASTER na całą wysokość**, a nie belka/gzyms pod sufitem — mój błąd w odczycie zdjęcia. **Odwołane z v3.6:** wycięcia 160×(Hg+5) w bokach GA2/GA3/GC1/GC2/C2/C4, wieniec 240, listwa „pod gzymsem", pytanie o Hg oraz sprzeczność „gzyms vs okno do sufitu" (pkt 11b — usunięty; okno idzie do sufitu bez przeszkód). **W mocy zostaje:** górne 400 gł. (uzasadnienie: GA1 na licu pilastra = 245) oraz korekta GA1 305 → 245. Otwarte: **długość uskoku wzdłuż ściany** (pkt 11.11). Detal: `kuchnia-wyspa-detal-pilaster.pdf` (zastępuje odwołany `kuchnia-wyspa-detal-gzyms.pdf`).
 - **v3.2 (2026-08-12, uwagi inwestora do schematu v3.1):** (1) **OKNO po stronie indukcji, nie lodówki** — rozkład ściany B od lewej (od pilastra): **59,7 + okno 85,6 + 94,7 do ściany C** (kontrola: suma 240 ≈ 238,9 ✓); zlew przesuwa się pod okno bliżej pilastra, zmywarka między pilastrem a zlewem. (2) **Górne szafki także nad niskim ciągiem na ścianie C** (GC1–GC2 do sufitu) — decyzja inwestora. (3) Narożnik A/B domknięty (przerwa na rzucie v3.1 była strefą pilastra — wypełniona blendą, moduły stykają się). (4) Dodany **plan funkcjonalny** (co w której szafce), w tym szafka na umyte naczynia przy zlewie.
 
@@ -33,7 +34,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Ściana B (okno) | 238,9 | `[P]` | rzut inwestora |
 | Szerokość A↔C | 254,6 | `[P]` | rzut (kontrola: 238,9+15,5=254,4 ✓) |
 | **Ciąg A: OD ŚCIANY B do końca zabudowy (linia ścianki)** | **195** | `[P]` | rzut + adnotacja inwestora (v3.1); pilaster 67 wewnątrz wymiaru |
-| Pilaster przy A/B: dł. × gł. | 67 × ~15,5 | `[~]` | rzut; strefa modułowa ciągu A = 195−67 = ~128 |
+| Pilaster przy A/B: dł. × gł. | **67 × 15,5** | `[P]` | rzut + potwierdzenie inwestora na rzucie 2026-08-12; PIONOWY, na całą wysokość; strefa modułowa ciągu A = 195−67 = ~128 |
 | **Otwór do salonu (ściana A, za linią ramienia)** | **127** | `[P]` | rzut + opis inwestora; od ~195 do ~322 od B |
 | Kontrola linii południowej | 195 (koniec A) ≈ 188,5+9 (ścianka po C) | ✓ | ramię i ścianka naprzeciwko siebie, jedna linia |
 | Narożnik B/C → ścianka (wzdłuż C) | 188,5 | `[P]` | rzut |
@@ -101,8 +102,9 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | wycięcie 560×490 `[P]`; nisza piekarnika 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | blenda | ~230 | — | dopina ciąg do 1950 / narożnika ramienia; szerokości DA1/DA2/blendy do przestawienia wg pozycji puszki siłowej `[?]` |
 | GA1 | górna (nad strefą pilastra) | ~670×998×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
-| GA2 | **okap w zabudowie** | 600×998×**400** | front uchylny | nad DA2; ≥550 nad indukcją ✓; recyrkulacja — kratka do potwierdzenia `[?]` |
-| GA3 | górna | ~680×998×**400** | półki | LED 3000K pod całością; do linii ramienia |
+| GA2 | górna | ~450×998×**400** | półki | nad DA1 (670→1120); dół 1480, do sufitu |
+| GA3 | **okap w zabudowie** | 600×998×**400** | front uchylny | **nad DA2 = 1120→1720, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
+| — | blenda górna | ~230 | — | domyka ciąg do 1950 (narożnik ramienia); do zamiany na wąską szafkę 230, jeśli inwestor woli |
 
 ### Ramię L („wyspa" — skręt blatu na końcu ciągu A, **~1180×500 `[P gł.]`**, południowa krawędź w linii 1950):
 

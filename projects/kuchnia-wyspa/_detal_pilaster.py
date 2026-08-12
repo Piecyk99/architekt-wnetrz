@@ -37,8 +37,9 @@ PIL_GL = 155         # ile pilaster wystaje ze ściany A  [P]
 GL = 400             # głębokość korpusu górnych (decyzja inwestora)
 GA1_GL = GL - PIL_GL  # 245 — GA1 wisi na LICU pilastra
 FR = 19
-GA2_DL = 600         # okap nad DA2
-GA3_DL = A_DL - PIL_DL - GA2_DL   # 680
+GA2_DL = 450         # zwykła nad DA1
+GA3_DL = 600         # OKAP nad DA2 (indukcja)
+BLENDA_DL = A_DL - PIL_DL - GA2_DL - GA3_DL   # 230
 
 c = canvas.Canvas(OUT, pagesize=A4)
 c.setTitle("Detal — pilaster 15,5 i górne szafki")
@@ -171,7 +172,8 @@ c.setLineWidth(0.8)
 c.setFillColor(KORP)
 c.rect(X(0), Y(GL), PIL_DL * S * mm, GA1_GL * S * mm, stroke=1, fill=1)              # GA1
 c.rect(X(PIL_DL), Y(GL), GA2_DL * S * mm, GL * S * mm, stroke=1, fill=1)             # GA2
-c.rect(X(PIL_DL + GA2_DL), Y(GL), GA3_DL * S * mm, GL * S * mm, stroke=1, fill=1)    # GA3
+c.rect(X(PIL_DL + GA2_DL), Y(GL), GA3_DL * S * mm, GL * S * mm, stroke=1, fill=1)    # GA3 okap
+c.rect(X(PIL_DL + GA2_DL + GA3_DL), Y(GL), BLENDA_DL * S * mm, GL * S * mm, stroke=1, fill=1)  # blenda
 # fronty
 c.setFillColor(FRONT)
 c.rect(X(0), Y(GL + FR), A_DL * S * mm, FR * S * mm, stroke=1, fill=1)
@@ -183,11 +185,13 @@ c.setFont("DVS", 6.3)
 c.drawCentredString(X(PIL_DL / 2), Y(GL) + 1.4 * mm, "245 gł.")
 c.setFillColor(INK)
 c.setFont("DVS-B", 7)
-c.drawCentredString(X(PIL_DL + GA2_DL / 2), Y(GL) + 9 * mm, "GA2 — okap")
-c.drawCentredString(X(PIL_DL + GA2_DL + GA3_DL / 2), Y(GL) + 9 * mm, "GA3")
+c.drawCentredString(X(PIL_DL + GA2_DL / 2), Y(GL) + 9 * mm, "GA2")
+c.drawCentredString(X(PIL_DL + GA2_DL + GA3_DL / 2), Y(GL) + 9 * mm, "GA3 — OKAP")
+c.drawCentredString(X(PIL_DL + GA2_DL + GA3_DL + BLENDA_DL / 2), Y(GL) + 9 * mm, "blenda")
 c.setFont("DVS", 6.3)
 c.drawCentredString(X(PIL_DL + GA2_DL / 2), Y(GL) + 6.2 * mm, "400 gł.")
 c.drawCentredString(X(PIL_DL + GA2_DL + GA3_DL / 2), Y(GL) + 6.2 * mm, "400 gł.")
+c.drawCentredString(X(PIL_DL + GA2_DL + GA3_DL + BLENDA_DL / 2), Y(GL) + 6.2 * mm, "400")
 
 # linia frontów
 c.setStrokeColor(ZIEL)
@@ -207,8 +211,9 @@ dim_v(Y(PIL_GL), YW, X(-95), "155")
 dim_v(Y(GL), Y(PIL_GL), X(-95), "245")
 dim_v(Y(GL + FR), YW, X(-150), "419")
 dim_h(X(0), X(PIL_DL), Y(GL) - 8 * mm, "670 (GA1 = szerokość pilastra)", ponad=False)
-dim_h(X(PIL_DL), X(PIL_DL + GA2_DL), Y(GL) - 8 * mm, "600", ponad=False)
-dim_h(X(PIL_DL + GA2_DL), X(A_DL), Y(GL) - 8 * mm, "680", ponad=False)
+dim_h(X(PIL_DL), X(PIL_DL + GA2_DL), Y(GL) - 8 * mm, "450", ponad=False)
+dim_h(X(PIL_DL + GA2_DL), X(PIL_DL + GA2_DL + GA3_DL), Y(GL) - 8 * mm, "600 (okap nad indukcją)", ponad=False)
+dim_h(X(PIL_DL + GA2_DL + GA3_DL), X(A_DL), Y(GL) - 8 * mm, "230", ponad=False)
 dim_h(X(0), X(A_DL), Y(GL) - 16 * mm, "1950 = 195 cm ciągu A (od ściany B)", ponad=False)
 
 # ramka wyjaśniająca

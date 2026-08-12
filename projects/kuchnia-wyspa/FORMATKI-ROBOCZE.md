@@ -47,15 +47,15 @@
 | GA1 górna — plecy HDF | 666×994 | 1 | HDF biały | — |
 | GA1 górna — fronty | 332×996 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA1 górna — półki | 633×300 | 2 | kremowy (korpus) | 0,4 |
-| GA2 okap — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GA2 okap — dno/wieniec | 564×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GA2 okap — plecy HDF | 596×994 | 1 | HDF biały | — |
-| GA2 okap — front uchylny (wg okapu) | 596×400 | 1 | ciemny orzech mat (front/panel) | 1,0 [~] |
-| GA3 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GA3 górna — dno/wieniec | 644×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GA3 górna — plecy HDF | 676×994 | 1 | HDF biały | — |
-| GA3 górna — fronty | 337×996 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
-| GA3 górna — półki | 643×300 | 2 | kremowy (korpus) | 0,4 |
+| GA2 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA2 górna — dno/wieniec | 414×400 | 2 | kremowy (korpus) | 0,4 przód |
+| GA2 górna — plecy HDF | 446×994 | 1 | HDF biały | — |
+| GA2 górna — front | 446×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
+| GA2 górna — półki | 413×300 | 2 | kremowy (korpus) | 0,4 |
+| GA3 okap — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA3 okap — dno/wieniec | 564×400 | 2 | kremowy (korpus) | 0,4 przód |
+| GA3 okap — plecy HDF | 596×994 | 1 | HDF biały | — |
+| GA3 okap — front uchylny (wg okapu) | 596×400 | 1 | ciemny orzech mat (front/panel) | 1,0 [~] |
 | GC1 górna (ociekarka) — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GC1 górna (ociekarka) — dno/wieniec | 434×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GC1 górna (ociekarka) — plecy HDF | 466×994 | 1 | HDF biały | — |
@@ -87,9 +87,9 @@
 
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
-| kremowy (korpus) | 19.8 | 22.8 |
-| ciemny orzech mat (front/panel) | 6.5 | 7.5 |
-| HDF biały | 6.2 | 7.1 |
+| kremowy (korpus) | 19.5 | 22.4 |
+| ciemny orzech mat (front/panel) | 6.3 | 7.2 |
+| HDF biały | 6.0 | 6.9 |
 | beż/kaszmir mat (front) | 3.0 | 3.4 |
 | czarny mat | 0.8 | 0.9 |
 
@@ -113,7 +113,7 @@
 | Prowadnice szuflad 500 z pełnym wysuwem i dociągiem (Blum Tandembox/GTV Modern Box) | **4 kpl** | DA1 ×3 + DA2 szuflada dolna ×1 |
 | Cargo 150 (Rejs/Peka) | 1 kpl | DB0 |
 | Cargo spiżarniane wysokie do słupka 280 | 1 kpl | **[DO WERYFIKACJI]** — szerokość niestandard.; alternatywa: półki + drzwi |
-| Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA2 — dobór po zakupie okapu |
+| Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA3 — dobór po zakupie okapu |
 | Nóżki meblowe 150 + klipsy cokołu | 32 + 16 szt | 8 szafek dolnych ×4 |
 | Zawieszki regulowane górnych + listwa montażowa | 10 szt + 3 mb | GA1-3, GC1-2 |
 | Konfirmaty 7×50 + kołki 8×35 + wkręty 4×30/4×16 | 1 opak. każde | montaż korpusów |
