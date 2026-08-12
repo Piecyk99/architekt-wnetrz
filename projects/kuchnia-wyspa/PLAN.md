@@ -200,6 +200,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | Pozycja indukcji vs puszka siłowa | DA2 pozycjonowany do wypustu; kolejność DA1/DA2 może się zamienić |
 | Suma łańcucha C (947+280+660 ≈ 1887 vs 1885) | luzy w blendzie przy C1; pomiar łańcuchowy przed zamówieniem |
 | Kratka wentylacyjna w strefie zabudowy | pomiar; kratka rewizyjna w zabudowie |
+| **Gzyms/podciąg pod sufitem (foto 2026-08-12, pomalowane pomieszczenie)** — koliduje z pasmem górnych 1480–2478 | 3 pomiary (przebieg po ścianach, wystawanie, dolna krawędź od podłogi) → wybór wariantu: A) wycięcie w bokach (wystawanie ≤ ~6 cm), B) szafki kończone POD gzymsem (korpus niższy, gzyms jako „korona"), C) korpusy pogłębione o wystawanie — front przed gzymsem do sufitu; szczegóły w pkt 11a |
 | Posadzka zmieni wysokości | wszystkie pionowe po posadzce |
 
 ## 10. Materiały i styl (paleta zaakceptowana 2026-07-28, przeniesiona z 9.02)
@@ -218,6 +219,14 @@ Kontekst wykończeń (2026-08-12): ściany **NCS S 2002-Y** (jasny ciepły greig
 8. Puszka siłowa na A: obwód i dokładna pozycja (ustawia DA2).
 9. Obrys taśmy ramienia: długość od ściany (127?) i głębokość (65?) — kontrola reguły 60.
 10. ~~Wzrost~~ ✓ blat 910 `[P]` (wzrost 182) — pozycja rozstrzygnięta.
+11. **GZYMS/PODCIĄG pod sufitem `[?]` (foto 2026-08-12):** a) po których ścianach biegnie (A? C? B nad oknem?); b) ile **wystaje ze ściany** (cm); c) **wysokość dolnej krawędzi od podłogi** (albo ile schodzi od sufitu); d) czy w gzymsie/nad nim biegną piony lub kratka wentylacyjna.
+
+### 11a. Górne szafki vs gzyms — warianty (decyzja po pomiarze 11.11)
+
+Głębokość górnych wg planu: **korpus 320** (GA1 305 przy pilastrze) + front 19 ≈ **340 całkowitej**. Warianty zależnie od pomiaru:
+- **A) Wystawanie ≤ ~6 cm:** korpusy zostają 320, do sufitu. W tylnym górnym rogu **boków** wycięcie na gzyms (wystawanie+5 mm × wysokość gzymsu+5 mm, wyrzynarka); wieniec górny płycej (320 − wystawanie); plecy HDF kończone pod gzymsem. Fronty bez zmian — od frontu nic nie widać.
+- **B) Wystawanie duże / dolna krawędź nisko (≤ ~2300):** szafki kończone **POD gzymsem** — korpus górnych = dolna krawędź gzymsu − 1480 (np. gzyms od 2200 → korpus 720 jak w dolnych). Gzyms w kolorze ściany gra rolę gzymsu koronującego. Zero cięcia na budowie — najprościej przy montażu samodzielnym; wymaga przeliczenia formatek (wysokości górnych) i nadstawki C4/słupka C2.
+- **C) Front przed gzymsem do sufitu:** korpusy pogłębione o wystawanie (np. 320+120=440), boki z wycięciem jak w A, jedna płaszczyzna frontów do sufitu. Najładniejsze przy dużym gzymsie, ale najwięcej roboty i głębsza bryła nad blatem (głowa!).
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 
