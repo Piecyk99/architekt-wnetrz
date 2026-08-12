@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="Inter, Arial, sans-serif">
+  <defs>
+    <pattern id="lameleS" patternUnits="userSpaceOnUse" width="20" height="40">
+      <rect width="20" height="40" fill="#5b3826"/>
+      <rect x="6" width="8" height="40" fill="#3d2419"/>
+    </pattern>
+    <pattern id="walnutS" patternUnits="userSpaceOnUse" width="22" height="80">
+      <rect width="22" height="80" fill="#6b4530"/>
+      <path d="M0 0 L22 80 M11 0 L22 40" stroke="#3d2419" stroke-width="0.5" opacity="0.55"/>
+    </pattern>
+    <pattern id="floorS" patternUnits="userSpaceOnUse" width="60" height="14">
+      <rect width="60" height="14" fill="#e8d2a8"/>
+      <line x1="0" y1="7" x2="60" y2="7" stroke="#c2a371" stroke-width="0.5"/>
+      <line x1="30" y1="0" x2="30" y2="14" stroke="#d4b58a" stroke-width="0.3"/>
+    </pattern>
+    <pattern id="boucleS" patternUnits="userSpaceOnUse" width="6" height="6">
+      <rect width="6" height="6" fill="#b8b4ab"/>
+      <circle cx="3" cy="3" r="1" fill="#9a9690" opacity="0.6"/>
+    </pattern>
+    <pattern id="GK" patternUnits="userSpaceOnUse" width="14" height="14">
+      <rect width="14" height="14" fill="#e8e4dd"/>
+      <path d="M0 14 L14 0" stroke="#bbb6a8" stroke-width="0.4"/>
+    </pattern>
+    <pattern id="wall" patternUnits="userSpaceOnUse" width="10" height="10">
+      <rect width="10" height="10" fill="#dcd7c8"/>
+      <path d="M0 10 L10 0" stroke="#aea798" stroke-width="0.4"/>
+    </pattern>
+    <linearGradient id="glow27" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff4d0" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff4d0" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <text x="40" y="40" font-size="26" font-weight="800" fill="#0a0a0a">Przekrój pionowy A-A: SYPIALNIA → DRZWI PRZESUWNE → GARDEROBA</text>
+  <text x="40" y="64" font-size="13" fill="#555">skala wysokości 1:20 · widok od strony łóżka (przekrój przez oś drzwi do garderoby)</text>
+
+  <!-- skala: 1 mm = 0.20 px wysokość (2500 mm = 500 px), poziomo 1 mm = 0.12 px (4000 mm sypialnia = 480 px, garderoba 2190 = 263 px) -->
+
+  <!-- ============== STROP BUDYNKU (konstrukcyjny) ============== -->
+  <g transform="translate(80, 110)">
+    <!-- strop -->
+    <rect x="0" y="0" width="1430" height="40" fill="#cfc8b6" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="715" y="25" font-size="11" fill="#444" text-anchor="middle" font-weight="700">STROP BUDYNKU (h 2750 od podłogi sypialni)</text>
+
+    <!-- ============== SUFIT GK SYPIALNI 2500 mm ============== -->
+    <!-- sypialnia rozpiętość pozioma 4000 mm = 480 px -->
+    <rect x="0" y="50" width="850" height="14" fill="url(#GK)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="425" y="60" font-size="10" fill="#444" text-anchor="middle">SUFIT GK SYPIALNI (h 2500, tynk + farba sufitowa)</text>
+    <!-- gzyms LED 2700K wnęka po obu krótszych ścianach -->
+    <rect x="0" y="62" width="20" height="14" fill="#fff4d0"/>
+    <text x="-10" y="56" font-size="9" fill="#a47e00" font-weight="700" text-anchor="end">▓ wnęka LED 2700K</text>
+    <ellipse cx="10" cy="78" rx="80" ry="140" fill="url(#glow27)" opacity="0.7"/>
+
+    <!-- ============== SUFIT GK GARDEROBY 2490 mm ============== -->
+    <!-- garderoba rozpiętość 2190 mm = 263 px -->
+    <rect x="850" y="60" width="580" height="14" fill="url(#GK)" stroke="#0a0a0a" stroke-width="2"/>
+    <text x="1140" y="70" font-size="10" fill="#444" text-anchor="middle">SUFIT GK GARDEROBY (h 2490, płaski sufit)</text>
+    <!-- 3 spoty LED 3000K nad chodnikiem garderoby -->
+    <circle cx="950" cy="80" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <circle cx="1100" cy="80" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <circle cx="1250" cy="80" r="5" fill="#fff4d0" stroke="#aa9a55" stroke-width="1"/>
+    <ellipse cx="950" cy="105" rx="40" ry="20" fill="url(#glow27)" opacity="0.6"/>
+    <ellipse cx="1100" cy="105" rx="40" ry="20" fill="url(#glow27)" opacity="0.6"/>
+    <ellipse cx="1250" cy="105" rx="40" ry="20" fill="url(#glow27)" opacity="0.6"/>
+
+    <!-- przestrzeń techniczna między stropem a sufitem GK = trasa zasilaczy LED + rewizja -->
+    <rect x="0" y="40" width="1430" height="10" fill="none" stroke="none"/>
+    <text x="715" y="46" font-size="9" fill="#888" text-anchor="middle" font-style="italic">przestrzeń techniczna ~250 mm (zasilacze LED, rewizja)</text>
+
+    <!-- ============== SYPIALNIA — PRZESTRZEŃ WEWNĄTRZ ============== -->
+    <!-- wysokość 2500 mm = 500 px -->
+    <!-- ŚCIANA LEWA sypialni (ściana okienna - przekrój przez wezgłowie) -->
+    <rect x="-14" y="64" width="14" height="500" fill="url(#wall)" stroke="#0a0a0a" stroke-width="2"/>
+    <!-- okno - tu w przekroju nie pokazane bo przekrój idzie przez oś drzwi -->
+
+    <!-- lamele orzech royal na ścianie okiennej (lewa krawędź) - pokazane jako pas pionowy w przekroju przekrojowym? -->
+    <!-- w tym przekroju widok od boku, więc lamele tylko jako pasek z lewej -->
+    <rect x="0" y="64" width="12" height="500" fill="url(#lameleS)" stroke="#000" stroke-width="0.5"/>
+    <text x="-25" y="320" font-size="10" fill="#5b3826" font-weight="700" text-anchor="end" transform="rotate(-90 -25 320)">LAMELE H3734 (od podł. do sufitu)</text>
+
+    <!-- ŁÓŻKO 160×200 (przekrój wzdłużny przez łóżko) -->
+    <g transform="translate(12, 460)">
+      <!-- wezgłowie boucle h 1100 -->
+      <rect x="0" y="-220" width="20" height="220" fill="url(#boucleS)" stroke="#444" stroke-width="1"/>
+      <text x="-5" y="-100" font-size="9" fill="#444" transform="rotate(-90 -5 -100)" text-anchor="middle" font-weight="700">wezgłowie h 1100</text>
+      <!-- rama łóżka -->
+      <rect x="20" y="0" width="320" height="-50" fill="url(#boucleS)" stroke="#444" stroke-width="1"/>
+      <!-- materac -->
+      <rect x="25" y="-100" width="310" height="50" fill="#fffdf6" stroke="#0a0a0a" stroke-width="1"/>
+      <!-- poduszki -->
+      <rect x="40" y="-128" width="120" height="35" fill="#f0ebe0" stroke="#999" rx="4"/>
+      <rect x="180" y="-128" width="120" height="35" fill="#f0ebe0" stroke="#999" rx="4"/>
+      <text x="180" y="-30" font-size="11" fill="#0a0a0a" text-anchor="middle" font-weight="700">ŁÓŻKO 160×200, rama boucle h 250</text>
+    </g>
+
+    <!-- LAMPA WISZĄCA centralna nad łóżkiem strefa stojąca -->
+    <g transform="translate(550, 64)">
+      <line x1="0" y1="0" x2="0" y2="285" stroke="#0a0a0a" stroke-width="1"/>
+      <circle cx="0" cy="295" r="18" fill="#0a0a0a"/>
+      <text x="35" y="180" font-size="10" fill="#0a0a0a">Muuto Fluid Ø190</text>
+      <text x="35" y="194" font-size="9" fill="#444">spód 2150 od podł. (= 350 zwisu)</text>
+    </g>
+
+    <!-- PODŁOGA BARLINEK ALMOND -->
+    <rect x="0" y="560" width="850" height="14" fill="url(#floorS)" stroke="#0a0a0a" stroke-width="1.5"/>
+    <text x="425" y="570" font-size="10" fill="#444" text-anchor="middle" font-weight="700">Barlinek dąb Almond — KONTYNUACJA 1:1 do garderoby (bez progu)</text>
+    <!-- cokół czarny mat 100 mm = 20 px -->
+    <rect x="0" y="540" width="850" height="20" fill="#0a0a0a"/>
+    <text x="-12" y="552" font-size="9" fill="#0a0a0a" font-weight="700" text-anchor="end">cokół</text>
+
+    <!-- ============== DRZWI PRZESUWNE KASETOWE między sypialnią a garderobą ============== -->
+    <!-- pozycja x=850, wysokość 2100 mm = 420 px, czyli od y=140 do y=560 -->
+    <!-- BĘDĄ NARYSOWANE JAKO PRZECINAJĄCE ŚCIANĘ -->
+    <!-- ściana środkowa między sypialnią a garderobą - dwie warstwy GK + stelaż -->
+    <rect x="844" y="64" width="14" height="500" fill="url(#wall)" stroke="#0a0a0a" stroke-width="2"/>
+
+    <!-- KASETA DRZWI PRZESUWNYCH (Eclisse) - schowana w ścianie - drzwi otwarte, panel widoczny po lewej stronie kasety -->
+    <!-- drzwi zamknięte: front orzech w otworze -->
+    <rect x="847" y="140" width="8" height="420" fill="url(#walnutS)" stroke="#000" stroke-width="2"/>
+    <text x="836" y="320" font-size="10" fill="#5b3826" font-weight="700" text-anchor="end" transform="rotate(-90 836 320)">DRZWI PRZESUW. 900×2100 H3734</text>
+    <!-- uchwyt pionowy Sevroll Lounge -->
+    <rect x="846" y="160" width="2" height="380" fill="#000"/>
+
+    <!-- ============== GARDEROBA — PRZESTRZEŃ WEWNĄTRZ ============== -->
+    <!-- garderoba szerokość 2190 mm (głębokość) = 263 px na rzucie. ALE w przekroju widać HEADER + PANELE C -->
+    <!-- header 400 mm wys = 80 px, panele 2390 wys = 478 px -->
+
+    <!-- ŚCIANY garderoby -->
+    <rect x="1430" y="64" width="14" height="500" fill="url(#wall)" stroke="#0a0a0a" stroke-width="2"/>
+
+    <!-- HEADER DREWNIANY 2360 × 400 × 18 mm (perspektywa boczna) - tu pokazany jako pas górny -->
+    <rect x="850" y="76" width="580" height="80" fill="url(#walnutS)" stroke="#000" stroke-width="2"/>
+    <text x="1140" y="120" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">HEADER drewniany H3734</text>
+    <text x="1140" y="138" font-size="11" fill="#fff" text-anchor="middle">2360 × 400 × 18 · nośnik prowadnicy drzwi przesuwnych</text>
+
+    <!-- 2 PANELE PRZESUWNE C - wysokość 2390 mm = 478 px, ale tu w przekroju widać 1 panel (drugi z tyłu) -->
+    <rect x="850" y="156" width="580" height="384" fill="url(#walnutS)" stroke="#000" stroke-width="2"/>
+    <line x1="1140" y1="156" x2="1140" y2="540" stroke="#000" stroke-width="1" stroke-dasharray="3 2"/>
+    <!-- uchwyty pionowe na 2 panelach -->
+    <rect x="1136" y="170" width="3" height="350" fill="#000"/>
+    <rect x="1141" y="170" width="3" height="350" fill="#000"/>
+    <text x="1000" y="350" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">PANEL 1180×2390</text>
+    <text x="1280" y="350" font-size="13" fill="#fff" text-anchor="middle" font-weight="800">PANEL 1180×2390</text>
+    <text x="1140" y="380" font-size="11" fill="#fff" text-anchor="middle">Egger H3734 ST9</text>
+    <text x="1140" y="396" font-size="11" fill="#fff" text-anchor="middle">Sevroll Slim 25 (prowadnica mocowana do headera od dołu)</text>
+    <text x="1140" y="412" font-size="11" fill="#fff" text-anchor="middle">uchwyt Sevroll Lounge pełnowysok. czarny mat</text>
+
+    <!-- za panelami widoczne moduły C1/C2/C3 (przezroczyście) - tu skip dla czytelności -->
+
+    <!-- PODŁOGA GARDEROBY - kontynuacja Barlinek Almond -->
+    <rect x="850" y="560" width="594" height="14" fill="url(#floorS)" stroke="#0a0a0a" stroke-width="1.5"/>
+    <!-- cokół czarny mat 100 mm -->
+    <rect x="850" y="540" width="594" height="20" fill="#0a0a0a"/>
+
+    <!-- WSKAZANIE: BEZ PROGU - linia przejścia podłogi przez drzwi -->
+    <rect x="843" y="560" width="14" height="14" fill="url(#floorS)" stroke="none"/>
+    <line x1="843" y1="556" x2="857" y2="556" stroke="#c33" stroke-width="2"/>
+    <text x="850" y="595" font-size="10" fill="#c33" font-weight="700" text-anchor="middle">↑ BEZ PROGU ↑</text>
+
+    <!-- ============== WYMIARY WYSOKOŚCI ============== -->
+    <!-- po lewej -->
+    <g transform="translate(-60, 0)">
+      <!-- 0 podłoga -->
+      <line x1="0" y1="574" x2="10" y2="574" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="578" font-size="10" font-weight="700" fill="#0a0a0a" text-anchor="end">0 mm (podłoga)</text>
+      <!-- 100 cokół -->
+      <line x1="0" y1="540" x2="10" y2="540" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="544" font-size="9" fill="#0a0a0a" text-anchor="end">100 (cokół czarny mat)</text>
+      <!-- 250 wezgłowie dół -->
+      <line x1="0" y1="470" x2="10" y2="470" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="474" font-size="9" fill="#0a0a0a" text-anchor="end">250 (wezgłowie dół)</text>
+      <!-- 600 nocna góra -->
+      <line x1="0" y1="450" x2="10" y2="450" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="454" font-size="9" fill="#0a0a0a" text-anchor="end">600 (nocna góra)</text>
+      <!-- 700 gniazda nocne -->
+      <line x1="0" y1="430" x2="10" y2="430" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="434" font-size="9" fill="#0a0a0a" text-anchor="end">700 (gniazda nocne)</text>
+      <!-- 1100 wezgłowie góra, włączniki -->
+      <line x1="0" y1="350" x2="10" y2="350" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="354" font-size="9" fill="#0a0a0a" text-anchor="end">1100 (wezgł. góra + włączniki)</text>
+      <!-- 1300 kinkiety czytanie -->
+      <line x1="0" y1="310" x2="10" y2="310" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="314" font-size="9" fill="#0a0a0a" text-anchor="end">1300 (kinkiety czytanie)</text>
+      <!-- 1500 kinkiet dekoracyjny -->
+      <line x1="0" y1="270" x2="10" y2="270" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="274" font-size="9" fill="#0a0a0a" text-anchor="end">1500 (kinkiet dek.)</text>
+      <!-- 2100 drzwi -->
+      <line x1="0" y1="150" x2="10" y2="150" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="154" font-size="9" fill="#0a0a0a" text-anchor="end">2100 (drzwi)</text>
+      <!-- 2390 panele garderoby -->
+      <line x1="0" y1="92" x2="10" y2="92" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="96" font-size="9" fill="#0a0a0a" text-anchor="end">2390 (góra paneli C)</text>
+      <!-- 2490 sufit garderoby -->
+      <line x1="0" y1="72" x2="10" y2="72" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="76" font-size="9" fill="#0a0a0a" text-anchor="end">2490 (sufit gard.)</text>
+      <!-- 2500 sufit sypialni -->
+      <line x1="0" y1="64" x2="10" y2="64" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="68" font-size="9" fill="#0a0a0a" text-anchor="end">2500 (sufit syp.)</text>
+      <!-- 2750 strop -->
+      <line x1="0" y1="14" x2="10" y2="14" stroke="#0a0a0a" stroke-width="1"/>
+      <text x="-5" y="18" font-size="9" fill="#0a0a0a" text-anchor="end">2750 (strop)</text>
+    </g>
+
+    <!-- ============== ETYKIETY POMIESZCZEŃ ============== -->
+    <text x="425" y="610" font-size="20" fill="#0a0a0a" font-weight="800" text-anchor="middle" opacity="0.25">SYPIALNIA</text>
+    <text x="1140" y="610" font-size="20" fill="#0a0a0a" font-weight="800" text-anchor="middle" opacity="0.25">GARDEROBA</text>
+
+    <!-- ============== POZIOMA OŚ — wymiary poziome ============== -->
+    <line x1="0" y1="650" x2="850" y2="650" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="0" y1="645" x2="0" y2="655" stroke="#0a0a0a" stroke-width="1.5"/>
+    <line x1="850" y1="645" x2="850" y2="655" stroke="#0a0a0a" stroke-width="1.5"/>
+    <text x="425" y="668" font-size="13" font-weight="800" fill="#0a0a0a" text-anchor="middle">4000 mm (głębokość sypialni)</text>
+
+    <line x1="858" y1="650" x2="1430" y2="650" stroke="#5b3826" stroke-width="1.5"/>
+    <line x1="858" y1="645" x2="858" y2="655" stroke="#5b3826" stroke-width="1.5"/>
+    <line x1="1430" y1="645" x2="1430" y2="655" stroke="#5b3826" stroke-width="1.5"/>
+    <text x="1144" y="668" font-size="13" font-weight="800" fill="#5b3826" text-anchor="middle">2190 mm (głęb. garderoby)</text>
+
+    <!-- całość -->
+    <line x1="0" y1="690" x2="1430" y2="690" stroke="#444" stroke-width="1"/>
+    <line x1="0" y1="685" x2="0" y2="695" stroke="#444" stroke-width="1"/>
+    <line x1="1430" y1="685" x2="1430" y2="695" stroke="#444" stroke-width="1"/>
+    <text x="715" y="706" font-size="12" font-weight="700" fill="#444" text-anchor="middle">razem: 6190 mm (sypialnia + garderoba w osi A-A)</text>
+  </g>
+
+  <!-- LEGENDA / NOTY -->
+  <g transform="translate(40, 830)">
+    <text font-size="11" fill="#333"><tspan font-weight="700">Przekrój A-A:</tspan> linia cięcia w sypialni przez oś drzwi przesuwnych do garderoby (patrz wiz-06-rzut-kombinowany) i w garderobie przez chodnik środkowy między modułami ONA/ON aż do paneli C na tylnej ścianie.</text>
+    <text y="20" font-size="11" fill="#333"><tspan font-weight="700">Wysokości spójne:</tspan> obie pomieszczenia mają sufit GK na podobnej wysokości (sypialnia 2500, garderoba 2490 — różnica 10 mm pochłaniana w fryzie przejściowym lub ujednolicona do 2490 mm dla obu).</text>
+    <text y="40" font-size="11" fill="#333"><tspan font-weight="700">Bez progu:</tspan> Barlinek dąb Almond przechodzi pod kasetą drzwi przesuwnych nieprzerwanie — kluczowe dla wizualnej ciągłości.</text>
+  </g>
+</svg>
