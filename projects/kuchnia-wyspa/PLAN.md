@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.0)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.6)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -16,6 +16,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do salonu (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
 - **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
 - **v3.4–v3.5 (2026-08-12):** blat **910** `[P]` (wzrost 182); okap **recyrkulacyjny z filtrem węglowym** `[P]` (zakup inwestora — kratka nie warunkuje okapu); **ramię gł. 50** `[P]` (strefa przy zlewie ~85; decyzja po analizie komfortu 65 vs 50).
+- **v3.6 (2026-08-12, foto pomalowanego pomieszczenia + odpowiedź inwestora):** **gzyms/belka 15,5 pod sufitem, po całym obwodzie `[P]`**. Górne szafki **400 gł.** (propozycja inwestora) z wycięciem 160×(Hg+5) w bokach — front przed gzymsem, jedna płaszczyzna do sufitu; wieniec 240, listwa montażowa pod gzymsem. Wycięcia obejmują też **słupek C2 i nadstawkę C4**. **Korekta GA1: 305 → 245** (pilaster wystaje 155, nie 15 — błąd w v3.2). Otwarte: **Hg** oraz **sprzeczność gzyms vs okno do sufitu (11b)**. Detal: `kuchnia-wyspa-detal-gzyms.pdf`.
 - **v3.2 (2026-08-12, uwagi inwestora do schematu v3.1):** (1) **OKNO po stronie indukcji, nie lodówki** — rozkład ściany B od lewej (od pilastra): **59,7 + okno 85,6 + 94,7 do ściany C** (kontrola: suma 240 ≈ 238,9 ✓); zlew przesuwa się pod okno bliżej pilastra, zmywarka między pilastrem a zlewem. (2) **Górne szafki także nad niskim ciągiem na ścianie C** (GC1–GC2 do sufitu) — decyzja inwestora. (3) Narożnik A/B domknięty (przerwa na rzucie v3.1 była strefą pilastra — wypełniona blendą, moduły stykają się). (4) Dodany **plan funkcjonalny** (co w której szafce), w tym szafka na umyte naczynia przy zlewie.
 
 ---
@@ -98,9 +99,9 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | DA1 | dolna szuflady | 450×820×560 | 3 szuflady | od 670 |
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | wycięcie 560×490 `[P]`; nisza piekarnika 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | blenda | ~230 | — | dopina ciąg do 1950 / narożnika ramienia; szerokości DA1/DA2/blendy do przestawienia wg pozycji puszki siłowej `[?]` |
-| GA1 | górna (nad strefą pilastra) | ~670×998×305 | drzwi, półki | docinana do pilastra; dół 1480, do sufitu |
-| GA2 | **okap w zabudowie** | 600×998×320 | front uchylny | nad DA2; ≥550 nad indukcją ✓; recyrkulacja do potwierdzenia kratki `[?]` |
-| GA3 | górna | ~680×998×320 | półki | LED 3000K pod całością; do linii ramienia |
+| GA1 | górna (nad strefą pilastra) | ~670×998×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU pilastra (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). **Bez wycięcia** — pilaster i gzyms w jednej płaszczyźnie; dół 1480, do sufitu |
+| GA2 | **okap w zabudowie** | 600×998×**400** | front uchylny | nad DA2; ≥550 nad indukcją ✓; **wycięcie na gzyms 160×(Hg+5) w obu bokach**; kanał recyrkulacji musi zmieścić się w paśmie 240 — sprawdzić przy zakupie okapu `[?]` |
+| GA3 | górna | ~680×998×**400** | półki | LED 3000K pod całością; do linii ramienia; **wycięcie na gzyms 160×(Hg+5)** |
 
 ### Ramię L („wyspa" — skręt blatu na końcu ciągu A, **~1180×500 `[P gł.]`**, południowa krawędź w linii 1950):
 
@@ -128,11 +129,11 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 |---|---|---|---|---|
 | DC1 | narożna ślepa (niska, z blatem) | ~900 (front 450) ×820×560 | półki/karuzela `[?]` | martwe pole w rogu z B; blat w L ciągły z DB |
 | — | blenda | ~47 | — | dopełnienie C1 do 947 `[P]` |
-| **GC1** | **górna nad DC1** | ~470×998×320 | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
-| **GC2** | **górna nad DC1** | ~477×998×320 | naczynia codzienne | do sufitu; front w linii słupka C2 |
-| C2 | **słupek cargo/spiżarka** | ~280×2378×580 | cargo wysokie | od 947; do sufitu |
+| **GC1** | **górna nad DC1** | ~470×998×**400** | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2; **wycięcie na gzyms 160×(Hg+5)**; półka stała na linii wycięcia wypada pod ociekarkę ✓ |
+| **GC2** | **górna nad DC1** | ~477×998×**400** | naczynia codzienne | do sufitu; front w linii słupka C2; **wycięcie na gzyms 160×(Hg+5)** |
+| C2 | **słupek cargo/spiżarka** | ~280×2378×580 | cargo wysokie | od 947; do sufitu; **wycięcie na gzyms 160×(Hg+5) u góry obu boków — najwyższy kosz cargo obniżyć, nie może wjeżdżać w pasmo gzymsu** |
 | C3 | **zabudowa lodówki** | ~660 światło (lodówka 600+luzy) | — | lodówka wolnostojąca 60×65×190 `[P]` przy ściance; wentylacja 50 tył+góra |
-| C4 | nadstawka nad lodówką | ~660×~528×580 | drzwi | od ~1950 do 2478; kratka wentylacyjna |
+| C4 | nadstawka nad lodówką | ~660×~528×580 | drzwi | od ~1950 do 2478; **wycięcie na gzyms 160×(Hg+5)**; kratkę wentylacyjną przenieść PONIŻEJ gzymsu |
 | — | ŚCIANKA | na 1885 `[P]` | — | bok zabudowy dosunięty; zawiasy lodówki od strony ścianki, drzwi otwierane ku oknu |
 
 ## 5a. Plan funkcjonalny — co w której szafce
@@ -219,18 +220,32 @@ Kontekst wykończeń (2026-08-12): ściany **NCS S 2002-Y** (jasny ciepły greig
 8. Puszka siłowa na A: obwód i dokładna pozycja (ustawia DA2).
 9. Obrys taśmy ramienia: długość od ściany (127?) i głębokość (65?) — kontrola reguły 60.
 10. ~~Wzrost~~ ✓ blat 910 `[P]` (wzrost 182) — pozycja rozstrzygnięta.
-11. **GZYMS/PODCIĄG pod sufitem (foto 2026-08-12):** wystawanie **15,5 `[P]`** (inwestor: ta sama belka co pilaster). Do pomiaru zostało: a) po których ścianach biegnie (A? C? B nad oknem?); b) **wysokość dolnej krawędzi od podłogi** (albo ile schodzi od sufitu) `[?]`; c) czy w gzymsie/nad nim biegną piony lub kratka wentylacyjna `[?]`.
+11. **GZYMS/PODCIĄG pod sufitem:** wystawanie **15,5 `[P]`**, biegnie **po całym obwodzie `[P]`** (inwestor 2026-08-12). Zostało do pomiaru: a) **Hg = wysokość gzymsu** (od sufitu do jego dolnej krawędzi) w 3 miejscach: ściana A, ściana C, ściana B przy oknie — przyjmujemy NAJWIĘKSZĄ `[?]`; b) **czy gzyms przechodzi nad oknem, czy się na nim urywa** — patrz sprzeczność w 11b `[?]`; c) czy w gzymsie/nad nim biegną piony lub kratka wentylacyjna `[?]`.
 
-### 11a. Górne szafki vs gzyms 15,5 — kierunek: WARIANT C, korpus 400 `[~]` (propozycja inwestora 2026-08-12)
+### 11a. Górne szafki vs gzyms 15,5 — WARIANT C przyjęty (decyzja inwestora 2026-08-12)
 
-Gzyms wystaje **15,5 `[P]`**. Propozycja inwestora: **górne o głębokości korpusu 400** (zamiast 320) — front przechodzi PRZED gzymsem jedną płaszczyzną do sufitu:
-- boki 400 głęb., w tylnym górnym rogu **wycięcie 160 × (wysokość gzymsu + 5 mm)** wyrzynarką; w paśmie gzymsu zostaje **240 użytkowej głębokości** (górna półka — rzeczy sezonowe);
-- wieniec górny płycej: **240**; plecy HDF kończone na dolnej krawędzi gzymsu + trawers poziomy pod wycięciem;
-- **listwa montażowa POD gzymsem** (nie przy suficie), zawieszki w korpusie odpowiednio niżej;
-- całkowita głębokość z frontem ≈ **419**; cofnięcie względem lica blatu (600) = **181** (przy 320 było 261) — mniej miejsca na głowę nad blatem, decyzja świadoma; nad indukcją i tak okap;
-- GA2 (okap w zabudowie) i GC1/GC2 — ta sama głębokość 400 dla jednej linii frontów; GA1 przy pilastrze docinana jak dotąd.
-Warianty odrzucone: A) korpus 320 z wycięciem 160 — nad gzymsem zostałoby tylko 160 użytkowej; B) kończenie szafek pod gzymsem (korpus niższy, gzyms jako „korona") — odpada, jeśli inwestor chce zabudowę do sufitu.
-**Do domknięcia przed przeliczeniem formatek: wysokość dolnej krawędzi gzymsu + po których ścianach biegnie (pkt 11.11).**
+Gzyms wystaje **155** i biegnie **po całym obwodzie**. Przyjęty **korpus górnych 400** (propozycja inwestora), front przechodzi PRZED gzymsem jedną płaszczyzną do sufitu. Detal rysunkowy: **`kuchnia-wyspa-detal-gzyms.pdf`** (3 strony: przekrój, formatka boku, konsekwencje).
+
+Konstrukcja (dotyczy GA2, GA3, GC1, GC2, C2, C4):
+- boki 400 gł., w tylnym górnym rogu **wycięcie 160 × (Hg + 5)** — wyrzynarka, krawędź surowa (niewidoczna);
+- **wieniec górny 240** (zamawiany węższy), **półka stała na linii wycięcia** (usztywnia korpus + oparcie dla zawieszek);
+- plecy HDF od dna do linii wycięcia (wys. ≈ 975 − Hg);
+- **listwa montażowa POD gzymsem**, nie przy suficie;
+- całkowita głębokość z frontem **419**; cofnięcie od lica blatu **181** (przy 320 było 261) — świadomy koszt decyzji.
+
+Dlaczego 400, a nie 320: gzyms zabiera 160 mm w swoim paśmie — przy korpusie 320 zostałoby tam tylko 160 mm (półka bezużyteczna), przy 400 zostaje **240 mm** = realna półka.
+
+**Korekta GA1 (błąd wykryty przy tej okazji):** pilaster wystaje **155**, a nie 15 — GA1 musi wisieć na LICU pilastra i mieć **245 gł.** (155+245 = 400 → front równo z GA2/GA3). Wycięcia nie potrzebuje: pilaster i gzyms są w tej samej płaszczyźnie.
+
+Warianty odrzucone: A) korpus 320 z wycięciem — nad gzymsem zostaje tylko 160; B) szafki kończone pod gzymsem (gzyms jako „korona") — odpada, skoro zabudowa ma iść do sufitu.
+
+### 11b. Sprzeczność do rozstrzygnięcia — okno na ścianie B `[?]`
+
+Parapet 166 + wnęka okna 81,7 = 247,7 ≈ sufit 247,8 — czyli **okno sięga samego sufitu**. Ale gzyms biegnie „po całości", więc przechodziłby też nad oknem. Jedno z dwojga:
+- **A)** 247,8 mierzone do DOLNEJ KRAWĘDZI GZYMSU → prawdziwy sufit jest wyżej o Hg, a **wszystkie moduły „do sufitu" (górne 998, słupek C2 2378, nadstawka C4) są za krótkie o Hg** — trzeba je przeliczyć.
+- **B)** gzyms jest przerwany na odcinku okna (nadproże w licu ściany) → wysokości zostają bez zmian.
+
+Rozstrzyga jedno spojrzenie na ścianę B: czy gzyms przechodzi nad oknem, czy się na nim urywa.
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 

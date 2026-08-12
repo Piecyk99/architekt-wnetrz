@@ -42,27 +42,27 @@
 | DC1 narożna ślepa — plecy HDF | 896×716 | 1 | HDF biały | — |
 | DC1 narożna ślepa — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
 | DC1 narożna ślepa — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
-| GA1 górna — bok | 320×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GA1 górna — dno/wieniec | 634×320 | 2 | kremowy (korpus) | 0,4 przód |
+| GA1 górna — bok | 245×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA1 górna — dno/wieniec | 634×245 | 2 | kremowy (korpus) | 0,4 przód |
 | GA1 górna — plecy HDF | 666×994 | 1 | HDF biały | — |
 | GA1 górna — fronty | 332×996 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA1 górna — półki | 633×300 | 2 | kremowy (korpus) | 0,4 |
-| GA2 górna — bok | 320×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GA2 górna — dno/wieniec | 414×320 | 2 | kremowy (korpus) | 0,4 przód |
+| GA2 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA2 górna — dno/wieniec | 414×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GA2 górna — plecy HDF | 446×994 | 1 | HDF biały | — |
 | GA2 górna — front | 446×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA2 górna — półki | 413×300 | 2 | kremowy (korpus) | 0,4 |
-| GA3 okap — bok | 320×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GA3 okap — dno/wieniec | 564×320 | 2 | kremowy (korpus) | 0,4 przód |
+| GA3 okap — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA3 okap — dno/wieniec | 564×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GA3 okap — plecy HDF | 596×994 | 1 | HDF biały | — |
 | GA3 okap — front uchylny (wg okapu) | 596×400 | 1 | ciemny orzech mat (front/panel) | 1,0 [~] |
-| GC1 górna (ociekarka) — bok | 320×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GC1 górna (ociekarka) — dno/wieniec | 434×320 | 2 | kremowy (korpus) | 0,4 przód |
+| GC1 górna (ociekarka) — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GC1 górna (ociekarka) — dno/wieniec | 434×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GC1 górna (ociekarka) — plecy HDF | 466×994 | 1 | HDF biały | — |
 | GC1 górna (ociekarka) — front | 466×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GC1 górna (ociekarka) — półki | 433×300 | 2 | kremowy (korpus) | 0,4 |
-| GC2 górna — bok | 320×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GC2 górna — dno/wieniec | 441×320 | 2 | kremowy (korpus) | 0,4 przód |
+| GC2 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GC2 górna — dno/wieniec | 441×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GC2 górna — plecy HDF | 473×994 | 1 | HDF biały | — |
 | GC2 górna — front | 473×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GC2 górna — półki | 440×300 | 2 | kremowy (korpus) | 0,4 |
@@ -87,7 +87,7 @@
 
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
-| kremowy (korpus) | 18.8 | 21.6 |
+| kremowy (korpus) | 19.5 | 22.4 |
 | ciemny orzech mat (front/panel) | 6.3 | 7.2 |
 | HDF biały | 6.0 | 6.9 |
 | beż/kaszmir mat (front) | 3.0 | 3.4 |
