@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Instrukcja skręcania korpusów — kuchnia v3.5 (PDF, krok po kroku, wektor)."""
+"""Instrukcja skręcania dla początkującego — kuchnia v3.5. Wymiary wiercenia na rysunkach."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -18,165 +18,216 @@ PW, PH = landscape(A4)
 INK = colors.HexColor("#1a1a1a"); WOOD = colors.HexColor("#8a6a4a")
 FILL = colors.HexColor("#efe9df"); GREY = colors.HexColor("#8a8a8a")
 RED = colors.HexColor("#a05252"); BLU = colors.HexColor("#4a6a8a")
-c = canvas.Canvas(OUT, pagesize=(PW, PH)); c.setTitle("Montaż korpusów — kuchnia v3.5")
+c = canvas.Canvas(OUT, pagesize=(PW, PH)); c.setTitle("Montaż dla początkującego — kuchnia v3.5")
 
 
 def header(t, s):
-    c.setFillColor(WOOD); c.setFont("DVS-B", 12.5); c.drawString(14*mm, PH-13*mm, t)
-    c.setFillColor(GREY); c.setFont("DVS", 7.2); c.drawString(14*mm, PH-18*mm, s)
-    c.setFont("DVS", 6.4)
-    c.drawString(14*mm, 7*mm, "Kuchnia U + ramię L — instrukcja skręcania korpusów (do listy FORMATKI R1) · 2026-08-12 · montaż samodzielny")
-    c.drawRightString(PW-14*mm, 7*mm, f"str. {c.getPageNumber()}")
-    c.setStrokeColor(WOOD); c.setLineWidth(1); c.line(14*mm, PH-20*mm, PW-14*mm, PH-20*mm)
+    c.setFillColor(WOOD); c.setFont("DVS-B", 12); c.drawString(13*mm, PH-12*mm, t)
+    c.setFillColor(GREY); c.setFont("DVS", 7.0); c.drawString(13*mm, PH-17*mm, s)
+    c.setFont("DVS", 6.2)
+    c.drawString(13*mm, 6*mm, "Kuchnia U + ramię L · instrukcja montażu dla początkującego (wymiary wiercenia w mm) · wersja 2 · 2026-08-12")
+    c.drawRightString(PW-13*mm, 6*mm, f"str. {c.getPageNumber()}")
+    c.setStrokeColor(WOOD); c.setLineWidth(1); c.line(13*mm, PH-19*mm, PW-13*mm, PH-19*mm)
 
 
-def steps(x, y, items, w=88*mm, title=None):
+def steps(x, y, items, w, title=None, num=True):
     if title:
-        c.setFillColor(INK); c.setFont("DVS-B", 8.6); c.drawString(x, y, title); y -= 5.2*mm
+        c.setFillColor(INK); c.setFont("DVS-B", 8.4); c.drawString(x, y, title); y -= 5.4*mm
     for i, s in enumerate(items, 1):
-        c.setFillColor(RED); c.circle(x+2.2*mm, y+1.0*mm, 2.2*mm, stroke=0, fill=1)
-        c.setFillColor(colors.white); c.setFont("DVS-B", 6.4); c.drawCentredString(x+2.2*mm, y-0.6*mm, str(i))
+        if num:
+            c.setFillColor(RED); c.circle(x+2.2*mm, y+1.0*mm, 2.3*mm, stroke=0, fill=1)
+            c.setFillColor(colors.white); c.setFont("DVS-B", 6.6); c.drawCentredString(x+2.2*mm, y-0.7*mm, str(i))
+        else:
+            c.setFillColor(RED); c.setFont("DVS-B", 7.2); c.drawString(x, y, "•")
         c.setFillColor(INK); c.setFont("DVS", 7.0)
-        # zawijanie
         words, line, yy = s.split(), "", y
         for wd in words:
             if c.stringWidth(line+" "+wd, "DVS", 7.0) > w - 8*mm:
-                c.drawString(x+6.5*mm, yy, line.strip()); yy -= 3.4*mm; line = wd
+                c.drawString(x+6.5*mm, yy, line.strip()); yy -= 3.5*mm; line = wd
             else:
                 line += " " + wd
         c.drawString(x+6.5*mm, yy, line.strip())
-        y = yy - 5.4*mm
+        y = yy - 5.6*mm
     return y
 
 
-def dot(x, y, col=RED, r=1.5):
-    c.setFillColor(col); c.circle(x, y, r*mm, stroke=0, fill=1)
+def dimline(x1, y1, x2, y2, txt, off=0, vert=False):
+    c.setStrokeColor(RED); c.setLineWidth(0.5)
+    c.line(x1, y1, x2, y2)
+    for (px, py) in ((x1, y1), (x2, y2)):
+        if vert: c.line(px-1.4*mm, py, px+1.4*mm, py)
+        else: c.line(px, py-1.4*mm, px, py+1.4*mm)
+    c.setFillColor(RED); c.setFont("DVS-B", 6.4)
+    if vert:
+        c.saveState(); c.translate(x1-1.6*mm+off, (y1+y2)/2); c.rotate(90); c.drawCentredString(0, 0, txt); c.restoreState()
+    else:
+        c.drawCentredString((x1+x2)/2, y1+1.8*mm+off, txt)
 
 
-def box(x, y, w, h, fill=FILL, lw=0.9):
-    c.setStrokeColor(INK); c.setLineWidth(lw); c.setFillColor(fill)
-    c.rect(x, y, w, h, stroke=1, fill=1)
+def hole(x, y, r=1.7, col=RED, cross=True):
+    c.setStrokeColor(col); c.setLineWidth(0.9); c.setFillColor(colors.white)
+    c.circle(x, y, r*mm, stroke=1, fill=1)
+    if cross:
+        c.line(x-r*mm*1.4, y, x+r*mm*1.4, y); c.line(x, y-r*mm*1.4, x, y+r*mm*1.4)
 
 
-def label(x, y, t, col=INK, size=6.4, bold=False, center=False):
-    c.setFillColor(col); c.setFont("DVS-B" if bold else "DVS", size)
-    (c.drawCentredString if center else c.drawString)(x, y, t)
+# ============ STRONA 1: NARZĘDZIA + ZŁĄCZE KONFIRMATOWE ============
+header("1. ZANIM ZACZNIESZ — narzędzia i JEDNO złącze, które musisz zrozumieć",
+       "cała kuchnia trzyma się na konfirmatach 7×50 — naucz się tego jednego złącza, reszta to powtarzanie")
 
+steps(13*mm, PH-28*mm, [
+    "wkrętarka + zwykła wiertarka",
+    "wiertło do konfirmatów (tzw. stopniowe — wierci 4,5 i 7 na raz; kup 2 szt, ~15 zł/szt)",
+    "bit do konfirmatów (gniazdo Z2 płaskie szerokie lub imbus 4 — sprawdź łeb kupionych)",
+    "wiertło puszkowe 35 mm (tylko jeśli NIE zamówisz otworów pod zawiasy w CNC)",
+    "miara zwijana + kątownik stolarski + ołówek + szydło (do punktowania)",
+    "poziomica min. 60 cm (masz — leżała na wylewce!)",
+    "2 ściski stolarskie (sprężynowe wystarczą)",
+    "taśma malarska (ogranicznik głębokości na wiertle) + koc/karton na podłogę",
+], 88*mm, title="NARZĘDZIA (całość ~150–250 zł):", num=False)
 
-# ================= STRONA 1: KORPUS DOLNY =================
-header("1. KORPUS DOLNY (DA1, DA2, RL1, RL2, DB0, DB1, DC1) — kolejność skręcania",
-       "płyta 18 · konfirmaty 7×50 (otwór 4,5 przez bok + nakiełek 7) · plecy HDF nakładane, wkręty 4×16 co ~150 mm · nóżki 150")
+# przekrój złącza: bok (pion) + dno (poziom)
+X, Y = 118*mm, 60*mm
+box = lambda x, y, w, h, f=FILL: (c.setStrokeColor(INK), c.setLineWidth(1), c.setFillColor(f), c.rect(x, y, w, h, 1, 1))
+box(X, Y, 9*mm, 62*mm)                                  # bok (18 mm w skali)
+box(X+9*mm, Y+6*mm, 52*mm, 9*mm)                        # dno wchodzące w bok
+c.setFillColor(INK); c.setFont("DVS-B", 7.6)
+c.drawString(X-1*mm, Y+64*mm, "BOK (przekrój)"); c.drawString(X+30*mm, Y+17*mm, "DNO (przekrój)")
+# konfirmat
+c.setStrokeColor(RED); c.setLineWidth(2.2)
+c.line(X-6*mm, Y+10.5*mm, X+34*mm, Y+10.5*mm)
+c.setFillColor(RED); c.setFont("DVS-B", 7.0)
+c.drawString(X-6*mm, Y+13*mm, "KONFIRMAT 7×50")
+dimline(X+70*mm, Y+6*mm, X+70*mm, Y+15*mm, "18", vert=True)
+dimline(X+76*mm, Y+6*mm, X+76*mm, Y+10.5*mm, "9", vert=True)
+c.setFillColor(INK); c.setFont("DVS", 6.6)
+c.drawString(X+82*mm, Y+9*mm, "← oś otworu ZAWSZE w połowie grubości płyty: 9 mm od krawędzi")
 
-# rysunek: widok rozłożony od frontu
-X, Y = 22*mm, 52*mm
-box(X, Y, 8*mm, 62*mm); label(X+4*mm, Y+64*mm, "bok L", center=True)             # bok lewy
-box(X+64*mm, Y, 8*mm, 62*mm); label(X+68*mm, Y+64*mm, "bok P", center=True)      # bok prawy
-box(X+10*mm, Y+2*mm, 52*mm, 7*mm); label(X+36*mm, Y+4.2*mm, "DNO", center=True, bold=True)
-box(X+10*mm, Y+53*mm, 14*mm, 6*mm); label(X+17*mm, Y+60.5*mm, "trawers", size=5.6, center=True)
-box(X+48*mm, Y+53*mm, 14*mm, 6*mm); label(X+55*mm, Y+60.5*mm, "trawers", size=5.6, center=True)
-for yy in (Y+5.5*mm,):
-    for xx in (X+4*mm, X+68*mm): dot(xx, yy)
-for xx in (X+4*mm, X+68*mm):
-    dot(xx, Y+56*mm)
-label(X+36*mm, Y-6*mm, "konfirmaty: dno 3/stronę (przez bok), trawersy 2/stronę", size=6.0, col=RED, center=True)
-# plecy
-c.setStrokeColor(BLU); c.setDash(3, 3); c.rect(X-2*mm, Y-2*mm, 76*mm, 68*mm); c.setDash()
-label(X+36*mm, Y+70*mm, "PLECY HDF — nakładane na całość (niebieska linia)", size=6.0, col=BLU, center=True)
-# nóżki
-for xx in (X+6*mm, X+66*mm):
-    c.setFillColor(GREY); c.rect(xx-1.5*mm, Y-9*mm, 3*mm, 6*mm, stroke=0, fill=1)
-label(X+36*mm, Y-13*mm, "nóżki 150 — 4 szt, ~50 mm od krawędzi", size=6.0, col=GREY, center=True)
-
-steps(120*mm, PH-32*mm, [
-    "Rozłóż formatki na kocu/kartonie. Sprawdź komplet i obrzeża (fronty 1,0 na 4 krawędziach). Krawędzie PRZEDNIE boków i dna muszą być równo — to baza.",
-    "Bok lewy + DNO: 3 konfirmaty przez bok w czoło dna (otwór 4,5 przez bok, nakiełek 7 w czole — pomijasz, jeśli rozkrój był z CNC). Dno na wysokości dolnej krawędzi boku.",
-    "Bok prawy + dno — tak samo. Korpus stoi już w kształcie U.",
-    "Trawersy górne (przedni na płask, tylny na sztorc): po 2 konfirmaty na stronę. W szafce zlewowej DB1 zamiast pleców dajesz DRUGĄ listwę na dole z tyłu.",
-    "Zmierz PRZEKĄTNE korpusu — muszą być równe (±1 mm). Skoryguj lekkim dociśnięciem.",
-    "Plecy HDF nakładane: zacznij od jednego narożnika, wyrównaj krawędzie i przykręcaj 4×16 co ~150 mm dookoła — plecy USTAWIAJĄ kąt prosty na stałe.",
-    "Przykręć nóżki 150 (4 szt, ~50 mm od krawędzi; przednie z klipsami cokołu).",
-    "DC1 narożna: to samo + blenda ślepa przykręcona od wewnątrz do boku; DB0 cargo: korpus jw., prowadnice cargo wg instrukcji z opakowania.",
-], w=155*mm, title="KROK PO KROKU (każda dolna tak samo):")
+steps(118*mm, Y-8*mm, [
+    "Przyłóż dno do boku DOKŁADNIE tak, jak ma być w gotowej szafce (krawędzie przednie równo!). Ściśnij ściskami.",
+    "Nawierć wiertłem stopniowym PRZEZ bok w czoło dna — na wylot przez bok (4,5) i ~35 mm w głąb czoła (7). Wiertło stopniowe robi to jednym ruchem.",
+    "Wkręć konfirmat wkrętarką na wolnych obrotach; ostatnie pół obrotu ręcznie. Łeb ma się schować równo z płytą — NIE dokręcaj na siłę (pęknie płyta).",
+    "Bez nawiercenia konfirmat ROZSADZI płytę — nigdy „na pałę\".",
+], 158*mm, title="ZŁĄCZE KROK PO KROKU (ćwicz raz na ścince):")
 c.showPage()
 
-# ================= STRONA 2: SZUFLADY / PIEKARNIK / ZLEW =================
-header("2. WARIANTY DOLNYCH: szufladowa DA1 · piekarnikowa DA2 · zlewowa DB1",
-       "prowadnice 500 pełny wysuw z dociągiem (Blum/GTV) · nisza piekarnika wg karty (560×590–600) · zlew: silikon na każde cięcie")
+# ============ STRONA 2: SZABLON WIERCENIA BOKU + MONTAŻ DOLNEJ ============
+header("2. KORPUS DOLNY — szablon wiercenia BOKU (każda dolna szafka tak samo)",
+       "bok 720×560 (ramię RL: 720×460 — trzeci otwór dna na 410) · wymiary od krawędzi PRZEDNIEJ (lewa na rysunku) i DOLNEJ")
 
-X, Y = 20*mm, 40*mm
-box(X, Y, 8*mm, 62*mm); box(X+56*mm, Y, 8*mm, 62*mm)
-for i, yy in enumerate((Y+8*mm, Y+27*mm, Y+46*mm)):
-    c.setStrokeColor(RED); c.setLineWidth(1.4); c.line(X+9*mm, yy, X+55*mm, yy)
-    label(X+66*mm, yy-1*mm, f"prowadnica {i+1}", size=5.8, col=RED)
-label(X+32*mm, Y+66*mm, "DA1: 3 pary prowadnic — obie strony NA TEJ SAMEJ wysokości", size=6.0, center=True)
-label(X+32*mm, Y-5*mm, "wysokości od dna: wg systemu szuflad (rozstaw frontów 236)", size=5.6, col=GREY, center=True)
+# bok w skali: 560 szer × 720 wys -> skala 0.16 mm/mm
+sc = 0.155*mm
+X, Y = 24*mm, 30*mm
+W, H = 560*sc, 720*sc
+c.setStrokeColor(INK); c.setLineWidth(1.2); c.setFillColor(FILL); c.rect(X, Y, W, H, 1, 1)
+c.setFillColor(INK); c.setFont("DVS-B", 8); c.drawCentredString(X+W/2, Y+H+8*mm, "BOK — widok od WEWNĄTRZ szafki")
+c.setFont("DVS-B", 6.6); c.setFillColor(BLU)
+c.saveState(); c.translate(X-3*mm, Y+H/2); c.rotate(90); c.drawCentredString(0, 0, "KRAWĘDŹ PRZEDNIA (z obrzeżem)"); c.restoreState()
+c.setFillColor(GREY); c.drawCentredString(X+W/2, Y-4*mm, "KRAWĘDŹ DOLNA")
+# otwory dna: y = 9 od dołu, x = 50/280/510 od przodu
+for dx in (50, 280, 510):
+    hole(X+dx*sc, Y+9*sc)
+dimline(X, Y-8*mm, X+50*sc, Y-8*mm, "50")
+dimline(X, Y-13*mm, X+280*sc, Y-13*mm, "280")
+dimline(X, Y-18*mm, X+510*sc, Y-18*mm, "510")
+dimline(X+W+5*mm, Y, X+W+5*mm, Y+9*sc, "9", vert=True)
+c.setFillColor(RED); c.setFont("DVS", 6.2); c.drawString(X+W+9*mm, Y+1*mm, "← rząd DNA (3 otwory)")
+# trawersy: y=711 od dołu (9 od góry), x=50 i 510
+for dx in (50, 510):
+    hole(X+dx*sc, Y+711*sc)
+dimline(X+W+5*mm, Y+711*sc, X+W+5*mm, Y+H, "9", vert=True)
+c.setFillColor(RED); c.drawString(X+W+9*mm, Y+H-4*mm, "← trawersy (2 otwory: 50 od przodu i 50 od tyłu)")
+# prowadniki zawiasów: x=37, y=102 od góry i 102 od dołu
+for dy in (102, 618):
+    hole(X+37*sc, Y+dy*sc, col=BLU)
+dimline(X, Y+H+3*mm, X+37*sc, Y+H+3*mm, "37")
+dimline(X-8*mm, Y+618*sc, X-8*mm, Y+H, "102", vert=True)
+c.setFillColor(BLU); c.drawString(X+37*sc+3*mm, Y+610*sc, "prowadniki zawiasów (tylko szafki z drzwiami):")
+c.drawString(X+37*sc+3*mm, Y+585*sc, "oś 37 od przodu · 102 od góry i 102 od dołu")
 
-steps(105*mm, PH-30*mm, [
-    "DA1 SZUFLADOWA: korpus jak na str. 1. Prowadnice przykręć PRZED zawieszeniem frontów — odmierz wysokości od dna i użyj kątownika/szablonu; lewa i prawa muszą być idealnie równolegle, inaczej szuflada skrzypi i nie domyka.",
-    "Złóż szuflady systemowe (boki+dno+tył wg instrukcji systemu), wsuń na prowadnice, potem wepnij fronty na zaczepy i wyreguluj (regulacja we froncie systemu ±2 mm).",
-    "DA2 PIEKARNIKOWA: trawers nośny poziomo tak, by ŚWIATŁO NISZY = wysokość z karty piekarnika (typowo 590–600 od góry korpusu). Piekarnik opiera się na trawersie — 2 konfirmaty/stronę + kątowniki.",
-    "W plecach DA2 wytnij otwór na kabel i zostaw szczelinę wentylacyjną z tyłu; nad piekarnikiem NIC nie zabudowuj na styk — luz wg karty.",
-    "Szuflada dolna DA2 (front 110): płytsza — sprawdź kolizję z korpusem płyty (Bosch 5,6 pod blatem!): górna krawędź boków szuflady min. 70 mm od blatu.",
-    "DB1 ZLEWOWA: bez pleców (2 listwy usztywniające). Po wycięciu otworu w blacie POMALUJ silikonem każdą ciętą krawędź. Syfon i podejścia przechodzą przez tylną ścianę/dno — otwory otwornicą, też silikonowane.",
-    "Pod zlewem połóż matę ochronną na dno; kosze segregacji montuj po podłączeniu hydrauliki.",
-], w=140*mm, title="RÓŻNICE WZGLĘDEM KORPUSU BAZOWEGO:")
+steps(128*mm, PH-28*mm, [
+    "Połóż bok wewnętrzną stroną do góry. USTAL, który to lewy, a który prawy (obrzeże przednie!) — podpisz ołówkiem od zewnątrz.",
+    "Odmierz i napunktuj szydłem otwory wg rysunku: rząd dna (9 od dołu; 50/280/510 od przodu), trawersy (9 od góry; 50 od przodu i 50 od tyłu).",
+    "Szafki z drzwiami: zaznacz też osie prowadników zawiasów (37 od przodu, 102 od góry/dołu) — wkręcisz je PRZED skręceniem korpusu, na leżąco jest 10× łatwiej.",
+    "Wywierć rzędy dna i trawersów NA WYLOT wiertłem stopniowym (podłóż ścinkę pod spód — nie wyrwie płyty). Prowadniki zawiasów: tylko wkręty 4×16, bez wiercenia na wylot!",
+    "Skręć: bok L + dno (3 konfirmaty) → bok P + dno → trawers przedni na płask (lico z górą, 1 konfirmat/stronę) → trawers tylny na płask przy tylnej krawędzi.",
+    "Zmierz obie PRZEKĄTNE (muszą być równe ±1 mm) — skoryguj dociskiem ręką.",
+    "Połóż korpus na twarz (przodem do podłogi), przyłóż plecy HDF RÓWNO z krawędziami: wkręt w narożnik, wyrównaj drugi narożnik, wkręt — i dalej co ~150 mm dookoła. Plecy blokują kąt prosty na zawsze.",
+    "Postaw, przykręć 4 nóżki 150 (płytki ~50 od krawędzi, wkręty 4×16), klipsy cokołu na przednie nóżki.",
+], 150*mm, title="MONTAŻ (30–40 min/szafka na początku):")
 c.showPage()
 
-# ================= STRONA 3: GÓRNE / SŁUPEK / NADSTAWKA =================
-header("3. GÓRNE (GA1-3, GC1-2) · SŁUPEK C2 · NADSTAWKA C4",
-       "górne 998 do sufitu — zawieszki regulowane + listwa montażowa na 1480 · słupek 2378: przekątna 2448 < sufit 2478 ✓ da się obrócić do pionu")
+# ============ STRONA 3: WARIANTY ============
+header("3. WARIANTY: DA1 szuflady · DA2 piekarnik · DB1 zlew · DC1 narożna · górne GA/GC",
+       "górne: boki 998×320, wieniec górny i dolny PEŁNY (zamiast trawersów) — rzędy otworów 9 od góry I 9 od dołu, x = 50/160/270")
 
-X, Y = 20*mm, 46*mm
-box(X, Y, 8*mm, 56*mm); box(X+46*mm, Y, 8*mm, 56*mm)
-box(X+9*mm, Y+50*mm, 36*mm, 5*mm); box(X+9*mm, Y+1*mm, 36*mm, 5*mm)
-label(X+27*mm, Y+58*mm, "wieniec górny i DOLNY (pełne)", size=5.8, center=True)
-for xx in (X+6*mm, X+48*mm): dot(xx, Y+52*mm, BLU, 1.8)
-label(X+27*mm, Y-5*mm, "zawieszki regulowane w górnych narożnikach (niebieskie)", size=5.8, col=BLU, center=True)
-c.setStrokeColor(BLU); c.setLineWidth(2); c.line(X-6*mm, Y+62*mm, X+62*mm, Y+62*mm)
-label(X+27*mm, Y+65*mm, "listwa montażowa na ścianie — góra na 2478 (sufit), zawieszka łapie od środka", size=5.4, col=BLU, center=True)
-
-steps(105*mm, PH-30*mm, [
-    "GÓRNA: korpus jak dolny, ale zamiast trawersów PEŁNY wieniec górny i dolny (2 formatki „dno/wieniec\"). Zawieszki regulowane wkręć w górne narożniki OD WEWNĄTRZ, wytnij w plecach okienka na haki.",
-    "Listwę montażową przykręć do ściany poziomo (poziomica!) tak, by góra szafek licowała z sufitem 2478; kołki dobierz do ściany (cegła: kołek 8 + wkręt 6; przy pilastrze wierć bez udaru).",
-    "Zawieś szafki, zepnij korpusy ze sobą śrubami dwustronnymi, wyreguluj zawieszkami (docisk + wysokość), szczelinę przy suficie zamyka blenda docinana.",
-    "Półki na podpórki 5 mm — otwory co 32 mm (CNC) dają pełną regulację.",
-    "SŁUPEK C2: skręcaj NA PODŁODZE w salonie (jest miejsce), plecy przykręć przed postawieniem. Przekątna 2448 < 2478 — obrócisz go do pionu bez zahaczenia o sufit, ale prowadź przy ścianie.",
-    "Słupek poziomujesz nóżkami, kotwisz do ściany C 2 kątownikami u góry (kołki), potem cargo/półki.",
-    "NADSTAWKA C4: prosta skrzynka 660×528 — skręć, postaw na wysokości ~1950 na wspornikach/łatach przykręconych do ściany, zepnij z bokiem zabudowy i słupkiem. Wywierć kratkę wentylacyjną (szereg otworów 35 lub kratka) w dnie i w froncie górnym.",
-    "Bok wykończeniowy zabudowy lodówki (2478×680): pion sprawdź poziomicą, kotwy do ścianki + skręcenie z nadstawką; między bokiem a ścianką blenda dystansowa ~70 (drzwi lodówki >90°).",
-], w=140*mm, title="KROK PO KROKU:")
+steps(13*mm, PH-28*mm, [
+    "DA1 (3 szuflady): NIE wkręcaj prowadników zawiasów. Prowadnice szuflad przykręć na leżących bokach PRZED skręceniem: przednia krawędź prowadnicy równo z przednią krawędzią boku, wysokości OSI od dolnej krawędzi boku: 30 / 266 / 502 mm [~ dla frontów 236 — zweryfikuj z instrukcją kupionego systemu, każdy system ma szablon]. Obie strony IDENTYCZNIE — różnica 1 mm = krzywa szuflada.",
+    "DA2 (piekarnik): zamiast górnych trawersów — trawers NOŚNY na płask, jego GÓRNA płaszczyzna 600 mm od górnej krawędzi boku (= nisza 600; sprawdź kartę piekarnika, bywa 590). Otwory przez bok: 9 mm poniżej tej linii, 50 i 280 od przodu (2 konfirmaty/stronę). W plecach otwór 60 mm na kabel (otwornica), róg dolny.",
+    "DB1 (zlew): BEZ pleców i bez wiercenia rzędów tylnych. Zamiast pleców dwie listwy 100 na sztorc (góra-tył i dół-tył): otwory 9 od tylnej krawędzi, 30 i 80 od góry/dołu. Wycięcia na syfon i podejścia zrobisz na miejscu otwornicą — każde cięcie smarujesz silikonem.",
+    "DC1 (narożna ślepa): korpus 900 jak bazowy (rzędy jak na str. 2, gł. 560). Po skręceniu przykręć od środka blendę ślepą 430 do boku od strony martwego pola (wkręty 4×30 przez bok korpusu w blendę, 3 szt). Zawiasy 155° montujesz jak zwykłe — puszka 35 tak samo.",
+    "GÓRNE (GA1, GA2, GC1, GC2): jak dolna, ale zamiast trawersów PEŁNY wieniec u góry i u dołu — więc na boku wiercisz DWA pełne rzędy: 9 od dołu i 9 od góry, x = 50/160/270 (gł. 320). Zawieszki regulowane przykręć w górnych narożnikach od wewnątrz PRZED plecami; w plecach wytnij okienka wg instrukcji zawieszek.",
+    "Półki górnych: otwory pod podpórki 5 mm — dwa piony na bok: 37 i 283 od przodu, wysokości co 32 mm w środkowej strefie (albo zamów szereg w CNC — grosze).",
+    "GA3 (okap): korpus jak górna, ale bez wieńca dolnego (okap teleskopowy wchodzi od dołu) — konstrukcję dopasuj do karty okapu PO zakupie; front uchylny na podnośniku (montaż wg instrukcji podnośnika, 2 wkręty/strona).",
+    "C2 słupek: dwa rzędy jak dolna (dno 9 od dołu) + wieniec górny 9 od góry + PÓŁKA STAŁA w połowie (rząd na 1190 od dołu: 50/280/510) — usztywnia 2378 wysokości. Skręcaj na podłodze, plecy przed postawieniem. C4 nadstawka: jak mała górna (rzędy 9 od góry i od dołu, x=50/280/510 przy gł. 580).",
+], 268*mm, title="RÓŻNICE WZGLĘDEM KORPUSU BAZOWEGO (str. 2):")
 c.showPage()
 
-# ================= STRONA 4: ZAWIASY, FRONTY, REGULACJA, KOTWIENIE =================
-header("4. ZAWIASY I FRONTY · REGULACJA 3D · COKOŁY I KOTWIENIE RAMIENIA",
-       "puszka 35 mm: środek 22,5 od krawędzi frontu (K=5) · prowadnik na boku 37 mm od krawędzi przedniej · dolne 2 zawiasy/front, górne 996 → 3")
+# ============ STRONA 4: FRONT + ZAWIAS ============
+header("4. FRONT — wiercenie puszki 35 i zawieszenie (wymiary na rysunku)",
+       "front dolny 716: 2 zawiasy · front górny 996: 3 zawiasy · głębokość puszki 12,5 mm — taśma na wiertle!")
 
-X, Y = 20*mm, 44*mm
-box(X, Y, 34*mm, 60*mm, FILL)                       # front
-c.setFillColor(colors.white); c.circle(X+8*mm, Y+50*mm, 4.6*mm, stroke=1, fill=1)
-c.circle(X+8*mm, Y+30*mm, 4.6*mm, stroke=1, fill=1)
-c.circle(X+8*mm, Y+10*mm, 4.6*mm, stroke=1, fill=1)
-label(X+17*mm, Y+63*mm, "FRONT górny 996 — 3 puszki 35", size=6.0, center=True)
-label(X+8*mm, Y+2*mm, "22,5 od krawędzi", size=5.2, col=RED, center=True)
-box(X+52*mm, Y, 8*mm, 60*mm)
-for yy in (Y+50*mm, Y+30*mm, Y+10*mm):
-    dot(X+56*mm, yy, BLU, 1.6)
-label(X+56*mm, Y+63*mm, "prowadniki na boku (37 mm)", size=5.6, col=BLU, center=True)
-c.setStrokeColor(GREY); c.setDash(2, 2)
-for yy in (Y+50*mm, Y+30*mm, Y+10*mm):
-    c.line(X+12.6*mm, yy, X+52*mm, yy)
-c.setDash()
+sc = 0.155*mm
+X, Y = 30*mm, 30*mm
+W, H = 446*sc, 716*sc
+c.setStrokeColor(INK); c.setLineWidth(1.2); c.setFillColor(FILL); c.rect(X, Y, W, H, 1, 1)
+c.setFillColor(INK); c.setFont("DVS-B", 8); c.drawCentredString(X+W/2, Y+H+8*mm, "FRONT 446×716 — widok od TYŁU (strona zawiasów)")
+for dy in (100, 616):
+    hole(X+22.5*sc*2.2, Y+dy*sc, r=3.2)   # puszka 35 (przeskalowana wizualnie)
+dimline(X, Y-6*mm, X+22.5*sc*2.2, Y-6*mm, "22,5 (środek puszki od krawędzi)")
+dimline(X-8*mm, Y+616*sc, X-8*mm, Y+H, "100", vert=True)
+dimline(X-14*mm, Y, X-14*mm, Y+100*sc, "100", vert=True)
+c.setFillColor(RED); c.setFont("DVS", 6.4)
+c.drawString(X+W+4*mm, Y+H-8*mm, "puszka Ø35, głębokość 12,5")
+c.drawString(X+W+4*mm, Y+H-13*mm, "front górny 996: trzecia puszka")
+c.drawString(X+W+4*mm, Y+H-18*mm, "w środku wysokości (498)")
 
-steps(105*mm, PH-30*mm, [
-    "Zawiasy: wciśnij zawias w puszkę 35 we froncie (jeśli rozkrój z CNC — otwory gotowe; jeśli nie: wiertło puszkowe 35, środek 22,5 mm od krawędzi, głębokość 12,5 — użyj ogranicznika!). Prowadniki przykręć na boku w linii 37 mm od przedniej krawędzi.",
-    "Wepnij front (klik), zamknij i sprawdź szczeliny: równa 2–3 mm dookoła.",
-    "REGULACJA 3D każdego zawiasu: śruba przednia = lewo/prawo (równość szczelin pionowych), śruba tylna/mimośród = docisk do korpusu, prowadnik góra/dół = wysokość. Reguluj od góry frontu do dołu, po jednej śrubie.",
-    "Fronty bezuchwytowe: krawędź górna dolnych frontów — profil gola alu wpuszczony pod blat ALBO frez C w płycie (zlecony w CNC) — decyzja przed zamówieniem frontów!",
-    "COKÓŁ: listwa 150 czarna na klipsach do przednich nóżek; w cokole pod lodówką wytnij kratkę wentylacyjną. Uszczelka cokołu (Silikorner, korner.eu) od dołu.",
-    "KOTWIENIE RAMIENIA: korpusy RL1+RL2 skręcone ze sobą i z DA-ciągiem; w cokole 4 kątowniki do posadzki (wiercenie 8 w wylewkę PRZED ułożeniem posadzki docelowej albo przez posadzkę z tuleją) — ramię nie może „jeździć\".",
-    "BLATY na końcu: połóż na sucho, sprawdź przyleganie do ścian (krzywizny → docinka), łączenia w narożach na śruby łącznikowe + silikon, wycięcia posmaruj silikonem, dopiero potem przykręć od spodu przez trawersy (wkręty 4×30 — NIE dłuższe, blat 38!).",
-    "Na koniec: LED pod górnymi (taśma w profilu, zasilacz w GA1), panel ryflowany na rewers ramienia (klej montażowy + wkręty od wewnątrz), listwy przyblatowe.",
-], w=140*mm, title="KROK PO KROKU:")
+steps(128*mm, PH-28*mm, [
+    "Połóż front zewnętrzną stroną NA KOCU (rysy!). Zaznacz środki puszek: 22,5 mm od bocznej krawędzi (strona zawiasów!), 100 mm od górnej i 100 od dolnej krawędzi (front 996: dodatkowo w połowie).",
+    "Owiń wiertło puszkowe 35 taśmą na 12,5 mm od czubka — wierć do taśmy, NIE dalej (front ma 18; przewiercisz = front do kosza). Wierć na wolnych obrotach, wyciągaj wióry.",
+    "Włóż zawias w puszkę, dociśnij, ustaw ramię PROSTOPADLE do krawędzi frontu (kątownik), przykręć 2 wkręty puszki.",
+    "Zawieś front: ramię zawiasu wciskasz na prowadnik w korpusie aż kliknie (Blum ClipTop — bez narzędzi). Zamknij i obejrzyj szczeliny.",
+    "REGULACJA — na każdym zawiasie 3 śruby: PRZEDNIA = lewo/prawo (wyrównanie szczelin pionowych), TYLNA = docisk frontu do korpusu (skrzypienie/odstawanie), na PROWADNIKU = góra/dół. Kręć po ćwierć obrotu i patrz na szczelinę. Cel: równe 2–3 mm wszędzie.",
+    "Fronty bezuchwytowe: jeśli profil gola — listwa alu wchodzi POD blat nad frontami dolnych (kupujesz z płytami); jeśli frez — zamawiasz przy CNC. Zdecyduj przed zamówieniem frontów.",
+], 150*mm, title="KROK PO KROKU:")
+c.showPage()
+
+# ============ STRONA 5: PUŁAPKI + KOLEJNOŚĆ CAŁOŚCI ============
+header("5. 10 PUŁAPEK POCZĄTKUJĄCEGO + kolejność montażu całej kuchni",
+       "przeczytaj PRZED pierwszą szafką — każda z tych rzeczy kosztuje formatkę albo dzień pracy")
+
+steps(13*mm, PH-28*mm, [
+    "Boki L i P to LUSTRZANE odbicia — zawsze sprawdź, po której stronie ma być obrzeże przednie, ZANIM wywiercisz.",
+    "Konfirmat bez nawiercenia stopniowym = pęknięta płyta. Zawsze nawiercaj.",
+    "Wiercenie na wylot bez ścinki pod spodem = wyrwany tył otworu (widoczny!).",
+    "Za głęboka puszka 35 = dziura na wylot we froncie. Taśma na 12,5 mm.",
+    "Wkręty do blatu i frontów: MAX 4×30 (blat 38, front 18+puszka). Dłuższy = wystrzeli na wierzch.",
+    "Plecy przykręcone krzywo = krzywa cała szafka. Najpierw narożnik, wyrównanie, potem reszta.",
+    "Przekątne nie sprawdzone = drzwi nie zejdą się na środku podwójnej szafki.",
+    "Prowadnice szuflad różnią się o 2 mm wysokości = szuflada chodzi po skosie i wypada z dociągu.",
+    "Poziomowanie: zawsze od NAJWYŻSZEGO punktu podłogi (znajdź poziomicą wzdłuż ścian zanim zaczniesz).",
+    "Nie przykręcaj blatów, dopóki WSZYSTKIE korpusy nie stoją poziomo i skręcone ze sobą.",
+], 130*mm, title="PUŁAPKI:")
+
+steps(150*mm, PH-28*mm, [
+    "Skręć wszystkie korpusy „na sucho\" w salonie (str. 2–3). Ponumeruj je ołówkiem wg planu.",
+    "Ściana C: DC1 → słupek C2 → bok zabudowy lodówki + blenda dystansowa → nadstawka C4.",
+    "Ciąg B: DB1, wnęka zmywarki, DB0. Poziomowanie nóżkami, skręcanie korpusów ze sobą (2 ściski + 2 wkręty 4×30 przez boki, pod zawiasami — niewidoczne).",
+    "Ciąg A: DA1, DA2. Ramię: RL1+RL2, kotwienie 4 kątownikami do posadzki.",
+    "Górne: listwa montażowa (góra szafek = sufit 2478), zawieszenie, spięcie, blenda sufitowa.",
+    "Blaty: na sucho → docinka do ścian → łączenia naroży (śruby + silikon) → wycięcia (56×49 indukcja [P], zlew wg szablonu z kartonu zlewu) → przykręcenie od spodu.",
+    "AGD (elektryk do siły!), fronty + regulacja, cokoły z kratką, LED, panel ryflowany, listwy, silikon.",
+], 132*mm, title="KOLEJNOŚĆ CAŁOŚCI:")
 c.showPage()
 c.save()
 print("OK:", OUT)
