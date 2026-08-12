@@ -35,7 +35,7 @@ WALL (perpendicular, left): a shallow wall pilaster at the window corner, then
 base cabinets with a flush induction hob and a built-in oven below, upper
 cabinets to the ceiling with an integrated hood and warm LED beneath. At the end
 of this run the worktop turns 90 degrees into an L-return peninsula (about 118 x
-65 cm, worktop 88 cm) reaching toward the fridge side, its back clad in dark
+65 cm, worktop 91 cm) reaching toward the fridge side, its back clad in dark
 fluted (reeded) wood facing the corridor and the living-room doorway (127 cm opening
 in the wall right behind it). FRIDGE WALL (right): low cabinets with worktop
 continuing around the corner from the sink run with tall upper cabinets above

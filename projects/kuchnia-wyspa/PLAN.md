@@ -43,7 +43,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Indukcja Bosch PXE601DC1E | 57,2 × 51,2 × 5,6; **wycięcie 56 × 49** | `[P]` | inwestor |
 | **Przejście ramię ↔ ścianka** | **~60 (reguła nadrzędna)** | `[P]` | decyzja inwestora |
 | Ramię L: długość od ściany A | ~118 `[~]` (177,6 − 60); taśma ~127 → przejście ~50,6 | `[~]` | docięcie na montażu wg reguły 60 |
-| Wysokość blatu | 880 | `[~]` | wzrost użytkownika `[?]` (siatka 860/880/910) |
+| **Wysokość blatu** | **910** | `[P]` | wzrost inwestora 182 (siatka: 180+ → 910); korpus 720 + blat 38 + cokół ~150 |
 
 ## 3. Geometria — rzut
 
@@ -87,7 +87,7 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 
 ## 5. Rozpisanie zabudowy — moduły (mm)
 
-Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy ~998 **do sufitu 2478**; fronty bezuchwytowe (frez/gola).
+Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[P]` (laminat 38; wzrost 182); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy ~998 **do sufitu 2478**; fronty bezuchwytowe (frez/gola).
 
 ### Ściana A — ciąg z indukcją (1950 `[P]` OD ŚCIANY B; strefa modułowa ~1280 po odjęciu pilastra 670):
 
@@ -108,7 +108,7 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 | RL1 | dolna narożna L | ~650×820×560 | drzwi od wnętrza U | narożnik ciągu A i ramienia (wspólny blat) |
 | RL2 | dolna ramienia | ~530×820×560 | drzwi/szuflady od wnętrza U | podział korpusów do optymalizacji przy formatkach |
 | — | blat ramienia | ~1180×650×38 | — | w L z blatem DA (łączenie frezowane/listwa); wieniec na końcu od przejścia |
-| — | panel ryflowany | ~1180×880 | — | rewers: od salonu (południe) i od korytarza |
+| — | panel ryflowany | ~1180×910 | — | rewers: od salonu (południe) i od korytarza |
 | ⚠ | **wariant płytszy** | gł. 400–500 | — | do decyzji: poszerza strefę przy zlewie z ~70 do ~85–95 (pkt 4) |
 
 ### Ściana B — okno/zlew (okno 597→1453 od pilastra `[P]`; korekta v3.3 po weryfikacji):
@@ -161,10 +161,10 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 | Poziom | Wysokość | Uwagi |
 |---|---|---|
-| Cokół | 0–100 | kratka wentylacji lodówki w cokole |
-| Blat | 880 `[~]` | siatka 860/880/910 wg wzrostu `[?]` |
+| Cokół | 0–150 | nóżki 150; kratka wentylacji lodówki w cokole |
+| Blat | **910 `[P]`** | wzrost 182 → siatka 910 |
 | Dół górnych A / okapu | 1480 | odstęp 600 od blatu; okap–indukcja ≥550 ✓ |
-| Parapet okna | ~1661 | nad blatem ~780 wolnej ściany (fartuch) |
+| Parapet okna | ~1661 | nad blatem 910 → ~750 wolnej ściany (fartuch) |
 | Lodówka | do 1900 | nadstawka od ~1950 |
 | Góra zabudowy | 2478 | górne A, słupek C2, nadstawka C4 — wszystko do sufitu |
 
@@ -174,7 +174,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 |---|---|---|
 | Indukcja Bosch PXE601DC1E `[P]` | DA2 | wycięcie 560×490 `[P]`; obwód siłowy — puszka na A `[?]` potwierdzić 32A |
 | Piekarnik | DA2, pod płytą | nisza 560×590–600; osobny obwód 16A; przegroda od płyty wg karty |
-| Okap | GA2 | ≥550 od indukcji; recyrkulacja do czasu potwierdzenia kratki `[?]` |
+| Okap | GA2 | **recyrkulacyjny z filtrem węglowym `[P]` — zakup inwestora**; ≥550 od indukcji ✓; bez kanału — kratka wentylacyjna nie warunkuje okapu |
 | Zmywarka 45 | DB2 | światło 450×820+; przyłącza z DB3 |
 | Zlew + bateria | DB3 | podejścia nisko na B `[~]` — przedłużyć w zabudowie; nie nad zmywarką ✓ |
 | Lodówka 60×65×190 `[P]` | C3 | wolnostojąca; luzy 20–30 bok, 50 tył/góra; zawiasy od ścianki, otwieranie ku oknu |
@@ -182,7 +182,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 ## 8. Zalecenia instalacyjne (PRZED montażem)
 
 1. Obwód siłowy do DA2 (potwierdzić 32A) + 16A piekarnik + gniazda: zmywarka, lodówka, 2–3 nad blatem B/A (≥600 od zlewu), zasilanie LED (transformator w GA).
-2. Zlokalizować **kratkę wentylacyjną** `[?]` — decyduje o okapie (wyrzut vs recyrkulacja).
+2. Zlokalizować **kratkę wentylacyjną** `[?]` — już tylko dla wentylacji ogólnej (okap recyrkulacyjny `[P]`); kratki nie zabudowywać na głucho.
 3. Podejścia wody/odpływu: pozycja `[~]` nisko na B — przedłużenie do DB3 w cokole/za korpusami.
 4. Ewentualne gniazdo w ramieniu L — doprowadzenie w podłodze **przed posadzką docelową**.
 5. Wymiary pionowe finalnie **po posadzce docelowej**.
@@ -217,7 +217,7 @@ Fronty dolne + ramię: **beż/kaszmir mat, bezuchwytowe**; górne A + słupek C2
 7. Podejścia wody/odpływu (wysokość, rozstaw); zaślepka w podłodze przy niszy `[?]`.
 8. Puszka siłowa na A: obwód i dokładna pozycja (ustawia DA2).
 9. Obrys taśmy ramienia: długość od ściany (127?) i głębokość (65?) — kontrola reguły 60.
-10. Wzrost głównego użytkownika → blat 860/880/910.
+10. ~~Wzrost~~ ✓ blat 910 `[P]` (wzrost 182) — pozycja rozstrzygnięta.
 
 **Projekt musi zostać zweryfikowany pomiarem na miejscu przed produkcją/cięciem mebli.**
 
