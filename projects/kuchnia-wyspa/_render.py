@@ -35,7 +35,7 @@ WALL (perpendicular, left): a shallow wall pilaster at the window corner, then
 base cabinets with a flush induction hob and a built-in oven below, upper
 cabinets to the ceiling with an integrated hood and warm LED beneath. At the end
 of this run the worktop turns 90 degrees into an L-return peninsula (about 118 x
-65 cm, worktop 91 cm) reaching toward the fridge side, its back clad in dark
+50 cm, worktop 91 cm) reaching toward the fridge side, its back clad in dark
 fluted (reeded) wood facing the corridor and the living-room doorway (127 cm opening
 in the wall right behind it). FRIDGE WALL (right): low cabinets with worktop
 continuing around the corner from the sink run with tall upper cabinets above
@@ -47,7 +47,7 @@ partition wall there is exactly a 60 cm pass-through into the kitchen."""
 CONSTRAINTS = """STRICT CONSTRAINTS: do not move or resize the window (to the ceiling, sill
 166 cm, near the induction corner); NO upper cabinets on the window wall; do
 not enlarge the room; the peninsula is an L-return of the worktop, about
-118 x 65, with exactly a 60 cm gap to the partition wall; the fridge stands by
+118 x 50, with exactly a 60 cm gap to the partition wall; the fridge stands by
 the partition wall on the right-hand run; nothing beyond the listed cabinets."""
 
 PROMPTS = {

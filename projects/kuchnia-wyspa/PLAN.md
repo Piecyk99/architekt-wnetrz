@@ -15,6 +15,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do salonu** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
 - **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do salonu (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
 - **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
+- **v3.4–v3.5 (2026-08-12):** blat **910** `[P]` (wzrost 182); okap **recyrkulacyjny z filtrem węglowym** `[P]` (zakup inwestora — kratka nie warunkuje okapu); **ramię gł. 50** `[P]` (strefa przy zlewie ~85; decyzja po analizie komfortu 65 vs 50).
 - **v3.2 (2026-08-12, uwagi inwestora do schematu v3.1):** (1) **OKNO po stronie indukcji, nie lodówki** — rozkład ściany B od lewej (od pilastra): **59,7 + okno 85,6 + 94,7 do ściany C** (kontrola: suma 240 ≈ 238,9 ✓); zlew przesuwa się pod okno bliżej pilastra, zmywarka między pilastrem a zlewem. (2) **Górne szafki także nad niskim ciągiem na ścianie C** (GC1–GC2 do sufitu) — decyzja inwestora. (3) Narożnik A/B domknięty (przerwa na rzucie v3.1 była strefą pilastra — wypełniona blendą, moduły stykają się). (4) Dodany **plan funkcjonalny** (co w której szafce), w tym szafka na umyte naczynia przy zlewie.
 
 ---
@@ -42,7 +43,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Lodówka (wolnostojąca) | 60 × 65 × 190 | `[P]` | inwestor |
 | Indukcja Bosch PXE601DC1E | 57,2 × 51,2 × 5,6; **wycięcie 56 × 49** | `[P]` | inwestor |
 | **Przejście ramię ↔ ścianka** | **~60 (reguła nadrzędna)** | `[P]` | decyzja inwestora |
-| Ramię L: długość od ściany A | ~118 `[~]` (177,6 − 60); taśma ~127 → przejście ~50,6 | `[~]` | docięcie na montażu wg reguły 60 |
+| Ramię L: długość od ściany A / **głębokość** | ~118 `[~]` (177,6 − 60) / **500 `[P]`** | `[P]` gł. | głębokość 50 — decyzja inwestora 2026-08-12 (strefa przy zlewie ~85); długość: docięcie na montażu wg reguły 60 |
 | **Wysokość blatu** | **910** | `[P]` | wzrost inwestora 182 (siatka: 180+ → 910); korpus 720 + blat 38 + cokół ~150 |
 
 ## 3. Geometria — rzut
@@ -57,11 +58,11 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
    │(blenda)└───┴──────┴───────────┴───┤ niska +  │ ściana C
  1 │┌───────┐                          │ GÓRNE 947│ (188,5 do
  9 ││DA1 45 │      WNĘTRZE U           ├──────────┤  ścianki [P])
- 5 ││DA2 60 │   (przy zlewie ~70 ⚠,    │SŁUPEK ~28│
+ 5 ││DA2 60 │   (przy zlewie ~85,      │SŁUPEK ~28│
  [P]│⊠INDUK.│    przy lodówce ~125)    ├──────────┤
    │├───────┴──────────────┐           │ LODÓWKA  │
    ││ RAMIĘ L „wyspa" ~118 │ PRZEJŚCIE │  60×65   │
-   ││ (gł. ~65, blat w L)  │  ~60 [P]  │ +nadst.  │
+   ││ (gł. 50 [P], blat L) │  ~60 [P]  │ +nadst.  │
    │└──────────────────────┘    ┌──────┴──────────┤
    ═══ OTWÓR DO SALONU 127 [P]│ścianka ~77      │
    ═══ (zaraz za linią ramienia)└─────────────────┘
@@ -75,7 +76,7 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 | Przejście / strefa | Wartość | Próg | Ocena |
 |---|---|---|---|
 | **Ramię ↔ czubek ścianki (wejście do strefy)** | **~60 `[P]`** | ≥90 | ✗ świadoma decyzja inwestora (jak drzwi „60"; ostrzeżenie niżej) |
-| **Front ciągu B ↔ ramię (przy zlewie/zmywarce, dla x<118)** | **~70 `[~]`** (195−60−65) | ≥110 robocze | ⚠ **ciasno** — otwarta zmywarka wypełnia strefę; opcje: ramię płytsze (40–50 → 85–95) albo zaakceptować |
+| **Front ciągu B ↔ ramię (przy zlewie, dla x<118)** | **~85** (195−60−50) | ≥110 robocze | ~ akceptowalne dla jednej osoby (decyzja: ramię gł. 50 `[P]`); kucanie do szafki pod zlewem swobodne |
 | Front B ↔ przestrzeń przy przejściu (x>118) | ~129 | ≥110 | ✓ |
 | Front A ↔ front C1/lodówki | ~125–135 | ≥120 | ✓ |
 | Otwór do salonu | 127 `[P]` | ≥90 | ✓ (za linią ramienia) |
@@ -101,15 +102,14 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | GA2 | **okap w zabudowie** | 600×998×320 | front uchylny | nad DA2; ≥550 nad indukcją ✓; recyrkulacja do potwierdzenia kratki `[?]` |
 | GA3 | górna | ~680×998×320 | półki | LED 3000K pod całością; do linii ramienia |
 
-### Ramię L („wyspa" — skręt blatu na końcu ciągu A, ~1180×650 `[~]`, południowa krawędź w linii 1950):
+### Ramię L („wyspa" — skręt blatu na końcu ciągu A, **~1180×500 `[P gł.]`**, południowa krawędź w linii 1950):
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| RL1 | dolna narożna L | ~650×820×560 | drzwi od wnętrza U | narożnik ciągu A i ramienia (wspólny blat) |
-| RL2 | dolna ramienia | ~530×820×560 | drzwi/szuflady od wnętrza U | podział korpusów do optymalizacji przy formatkach |
-| — | blat ramienia | ~1180×650×38 | — | w L z blatem DA (łączenie frezowane/listwa); wieniec na końcu od przejścia |
+| RL1 | dolna narożna L | ~650×820×460 | drzwi od wnętrza U | narożnik ciągu A i ramienia (wspólny blat); korpus gł. 460 pod blat 500 |
+| RL2 | dolna ramienia | ~530×820×460 | drzwi/szuflady od wnętrza U | korpus gł. 460; podział do optymalizacji przy formatkach |
+| — | blat ramienia | ~1180×500×38 | — | w L z blatem DA (łączenie frezowane/listwa); wieniec na końcu od przejścia |
 | — | panel ryflowany | ~1180×910 | — | rewers: od salonu (południe) i od korytarza |
-| ⚠ | **wariant płytszy** | gł. 400–500 | — | do decyzji: poszerza strefę przy zlewie z ~70 do ~85–95 (pkt 4) |
 
 ### Ściana B — okno/zlew (okno 597→1453 od pilastra `[P]`; korekta v3.3 po weryfikacji):
 
@@ -155,7 +155,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | GA1 (nad pilastrem, docinana) | zapasy lekkie, rzadko używane |
 | GA2 45 | herbaty, kawa, cukier — strefa śniadaniowa nad blatem |
 | GA3 okap 60 | okap; nad nim antresola na rzeczy sezonowe |
-| RL1+RL2 (ramię) | garnki i patelnie codzienne (2 kroki od indukcji), miski, drobny AGD (blender, mikser); blat ramienia = strefa odstawcza/śniadaniowa |
+| RL1+RL2 (ramię, gł. 46) | garnki i patelnie codzienne (2 kroki od indukcji), miski, drobny AGD; blat ramienia (50) = strefa odstawcza/śniadaniowa |
 
 ## 6. Rozpisanie pionowe (sufit 2478 `[P]`)
 
@@ -191,7 +191,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 | Ryzyko | Mitygacja |
 |---|---|
-| **Strefa między zlewem a ramieniem ~70** | wariant ramienia gł. 400–500 (→ 85–95) albo świadoma akceptacja; zmywarka po v3.3 jest poza tą strefą (przed jej frontem ~125 ✓) |
+| Strefa między zlewem a ramieniem ~85 (po decyzji: ramię gł. 50) | akceptowalna dla jednej osoby; zmywarka poza strefą (przed frontem ~125 ✓) |
 | Drzwi lodówki >90° zahaczają o kant ścianki (wysięg 77 > lico zabudowy 70) | **blenda dystansowa ~50–70 mm między lodówką a ścianką** (zawiasy od strony ścianki) |
 | Jeśli w otworze do salonu (127) będą drzwi — skrzydło otwierane do kuchni kolidowałoby z ramieniem | wg szkicu przejście otwarte `[~]`; przy montażu drzwi: przesuwne albo otwierane do salonu |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
