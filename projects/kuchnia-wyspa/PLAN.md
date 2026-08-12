@@ -191,6 +191,7 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 | Pozycja okna wymusi przesunięcie zlewu/zmywarki | pomiar okna przed rozstawem D4/D5/D6 |
 | Uskok 15,5×67 inny niż na szkicu | pomiar w 3 wysokościach; blenda docinana |
 | Nadstawka zbyt ciasna na lodówce wolnostojącej | luz 20–30 mm z boków, 50 mm góra/tył + kratka; pomiar lodówki z zawiasami |
+| **Kolizja zabudowy lodówki z wnęką okienną:** zabudowa gł. ~70 (od C wzdłuż B) nachodzi ~10 cm na wnękę okienną (okno od 59,7 od C) powyżej parapetu ~166 | bok zabudowy od strony okna dociąć do linii wnęki (uskok w boku powyżej 166) albo ograniczyć głębokość zabudowy przy ścianie B do ~59 (drzwi lodówki mogą lekko wystawać); rozstrzygnąć przy pomiarach |
 | Posadzka docelowa zmieni wysokości | wymiary pionowe po posadzce |
 
 ## 9. Lista pomiarów kontrolnych — przed zamówieniem formatek (montaż samodzielny: inwestor)
