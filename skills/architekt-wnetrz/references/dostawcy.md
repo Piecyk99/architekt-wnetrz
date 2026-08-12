@@ -81,6 +81,19 @@ Pełna referencja: `korner-katalog.md`. Skrót:
 
 ---
 
+## Usługowy rozkrój / oklejanie / WIERCENIE — okolice Zabrza (research www 2026-08-12)
+
+Kontekst: Korner (płyty, korner.pl) tnie i okleja, ale wg inwestora NIE wierci otworów montażowych. Alternatywy lokalne (wszystko `[DO POTWIERDZENIA telefonicznie]` — zakres, ceny, obsługa detaliczna):
+
+| Firma | Adres | Odległość od Zabrza (~) | Usługi wg strony | Kontakt |
+|---|---|---|---|---|
+| **MEBsystem** | Gliwice, ul. Pszczyńska 206 | ~8 km | cięcie, oklejanie i **wiercenie płyt na maszynach CNC** | mebsystem.pl |
+| **Daedalus** | Ruda Śląska, ul. Magazynowa 50 | ~10 km | cięcie, oklejanie (obrzeża 1/2/42), frezowanie, zacinki blatów, ekspres; wiercenie `[?]` | 575 886 996 / 790 886 996, biuro@daedalus.com.pl, pn–pt 8–16 |
+| **Soma** | Chorzów, ul. Katowicka 160B (centrala Tychy, Podleska 2) | ~15 km | cięcie, oklejanie (też krzywoliniowe), **wiercenie otworów i frezowanie CNC** | 32 249 76 90, chorzow@soma.tychy.pl; dział CNC (Tychy): 664 011 119 |
+| **Komandor Śląsk** | Katowice, ul. Transportowców 35 | ~25 km | cięcie, oklejanie PUR/AirTec, **CNC Homag: otwory pod zawiasy i złącza meblowe**, dostawa 24 h na Śląsku | hkslask.komandor.pl |
+
+Scenariusze: (a) całość (płyty+cięcie+oklejanie+wiercenie) w jednej z powyższych zamiast Korner — porównać cenę płyty; (b) rozkrój w Korner (korner.pl) + samo wiercenie usługowo (dowóz formatek własny). OBI/Castorama: tylko proste cięcie i otwory w blatach — nie do korpusów.
+
 ## Leroy Merlin / Castorama — wykończenia masowe
 
 Co tam kupić:
