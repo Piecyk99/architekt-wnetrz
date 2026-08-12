@@ -259,3 +259,17 @@ Priorytety: P0 = blokujące, P1 = przed następnym realnym projektem, P2 = jako�
 12. **[P3/M] Podepnij `gen.py`/`_render.py`** jako `scripts/` skilla architekt-kuchni (rzuty/elewacje SVG generowane, ASCII tylko jako podgląd inline).
 13. **[P3/S] Plan montażu + mini-harmonogram kuchni** w architekt-kuchni (checklist kolejności + typowe czasy), przeniesione i rozszerzone z meble-architekt Faza 4.
 14. **[P3/S] Odśwież parametry generatora** (model `gemini-3.1-flash-image-preview`, limity RPM) w jednym miejscu po wykonaniu pkt 8.
+
+---
+
+## Aktualizacja 2026-08-12 — weryfikacja synced vs repo + usunięcie duplikatu
+
+Weryfikacja kopii skilli na koncie claude.ai (`~/.claude/skills/synced/`) względem `skills/` w repo:
+
+| Skill (konto) | Werdykt | Uzasadnienie |
+|---|---|---|
+| `architekt-kuchni` | **PRZESTARZAŁY → USUNIĘTY z konta przez użytkownika (2026-08-12)** | wersja sprzed korekty dostawcy: „Korner (Żary, korner.eu)" + kody dekorów z pamięci (Egger H3734/H3702); w repo skill nie istnieje (zastąpiony przez `zabudowa-na-wymiar`); w sesji 2026-08-11/12 zdążył się jeszcze wyzwolić na frazę „projektujemy kuchnię" (loteria triggerów z §1 pkt 4 audytu) — projekt uratowały referencje czytane z repo |
+| `zabudowa-na-wymiar` | AKTUALNY | treść = repo; różnice wyłącznie pakowaniowe (przepisane ścieżki `../architekt-wnetrz/references/` → `references/` + skopiowane pliki współdzielone — zgodnie z `skills/README.md`) |
+| `architekt-wnetrz` | AKTUALNY (drobny dryf) | SKILL.md identyczny; references: 2-liniowe różnice w `generacja-obrazow.md` i `zapytania-dostawcy.md`, nadmiarowe `formatki.md`/`prompty-wizualizacyjne.md` w paczce — do wyrównania przy najbliższym uploadzie ZIP-a z `build-skills.yml` |
+
+Wniosek: ryzyko nr 4 z audytu (dwa skille kuchenne aktywne naraz) — **zamknięte**.
