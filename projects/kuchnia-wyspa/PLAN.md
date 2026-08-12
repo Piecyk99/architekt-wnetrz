@@ -1,4 +1,6 @@
-# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2.3)
+# Kuchnia z wyspą — projekt zabudowy na wymiar (koncepcja v2.4)
+
+> **Korekta v2.4 (2026-08-12, druga uwaga inwestora do schematu):** **ścianka stoi NA WPROST linii, w której kończy się SZEROKOŚĆ wyspy** — czyli w osi wschodniej krawędzi wyspy (= linia początku ciągu 195 na ścianie A). Wyspa i ścianka tworzą przerwaną linię z „drzwiami" 60 cm między końcem wyspy a czubkiem ścianki. Konsekwencja: **zabudowa lodówki jest szersza — wypełnia cały odcinek od pasa wolnego 94,7 do ścianki (~91)**: lodówka przy ściance + dopełnienie ~25 (słupek cargo/blenda) od strony okna. Kontrola łańcuchowa ściany C: 94,7 + ~91 + ścianka ~9 + wyspa 65 ≈ 260 ✓ (= szacowana długość ściany A). To domyka też pierwszą wskazówkę inwestora: „lodówka zaczyna się tam, gdzie kończą się szafki po przeciwnej stronie" = strefa lodówki zaczyna się w linii, gdzie na ścianie A kończy się zabudowa (przy wyspie).
 
 > **Korekta v2.3 (2026-08-12, po uwadze inwestora do schematu):** zabudowa lodówki **NIE stoi przy narożniku okiennym**. Wymiar **94,7 = odległość od wnęki okiennej DO zabudowy** — pas ściany C przy narożniku okiennym (~94,7) zostaje **WOLNY**; dalej stoi **zabudowa lodówki do sufitu (~66)**, a za nią **ścianka wystająca ~77 w głąb — w osi końca wyspy** (zgodnie ze szkicem: występ przy dolnej krawędzi pod wyspą). Konsekwencje: przejście 60 wypada dokładnie między końcem wyspy a ścianką (254,6 − 77 − 118 ≈ 60 ✓), **znika kolizja zabudowy z oknem**, ciąg B biegnie do narożnika z C — **zlew wraca do 80**.
 
@@ -61,12 +63,13 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
     │A │ dł. ~118 [~] (z reguły 60)     │ 80  │ │ wnęka 85,6×81,7
     ├──┘                                ├─────┤ │ pod sam sufit,
     │   PRZEJŚCIE 60 [P-decyzja]        │dost.│ │ parapet ~166
-    ├──ścianka─┬──────────┐             │ ~54 │ │ ściana B: 238,9 [P]
-    │ (w głąb  │ ZABUDOWA │  pas wolny  ├─────┤ │
-    │  ~77, oś │ LODÓWKI  │   ~94,7     │     │●│ woda+odpływ [~]
-    └──wyspy)──┴───~66────┴─────────────┴─────┴─┘
-     ← wejście    ściana C — od okna: pas wolny 94,7 | zabudowa lodówki
-      (korytarz)  60×65×190 + nadstawka do sufitu (~66) | ścianka
+    ├──┐ („drzwi" wyspa↔ścianka)        │ ~54 │ │ ściana B: 238,9 [P]
+    │śc│──────────┬────────┐            ├─────┤ │
+    │ia│ LODÓWKA  │ słupek │ pas wolny  │     │●│ woda+odpływ [~]
+    │nk│ 60×65×190│  ~25   │   ~94,7    │     │ │
+    └──┴──────────┴────────┴────────────┴─────┴─┘
+     ↑ ścianka NA WPROST krawędzi wyspy (w głąb ~77)
+     ← wejście (korytarz) za ścianką · zabudowa C do sufitu ~91
 ```
 
 ### Wymiary — statusy
@@ -144,9 +147,9 @@ ciąg biegnie do narożnika z C. Od narożnika z A: **martwe pole narożne ~60 �
 `martwe pole narożne ~600 (dostęp z D3) | D4 ZMYWARKA 450 | D5 ZLEW 800 (620→1420 od C — pod oknem 597→1453 ✓) | D6 dostawka ~540 (docinana, do narożnika z C)`
 600+450+800+540 = 2390 ✓. Bez szafek górnych — **okno sięga sufitu** (wnęka 856×817, parapet ~1661), więc górnych fizycznie nie da się tu zawiesić; parapet zostaje użytkowy (głęboki, nad blatem).
 
-**Ściana C — od narożnika z B (finalnie, v2.3):**
-`PAS WOLNY ~947 [P] (od wnęki okiennej do zabudowy) | ZABUDOWA LODÓWKI ~660 do sufitu: LODÓWKA wolnostojąca 600×650×1900 [P], front ku ścianie A | ŚCIANKA (przylega do zabudowy od strony wejścia, wystaje w głąb ~770 [~] — w osi końca wyspy)`
-Nad lodówką **NADSTAWKA ~1920→2478 (wys. ~550)**, do sufitu. Lodówka wolnostojąca: luz serwisowy boki ~20–30 mm, wentylacja 50 tył+góra, kratka w nadstawce i cokole; zawiasy tak, by drzwi nie kolidowały ze ścianką (rekomendacja: zawiasy od strony ścianki, otwieranie ku oknu — front otwiera się na wolny pas). Kontrola osi: 947 + 660 + ścianka ≈ 170 → koniec ścianki ~175–178 od B — zgodnie z osią wyspy `[~]` (do potwierdzenia pomiarem od strony wejścia).
+**Ściana C — od narożnika z B (finalnie, v2.4):**
+`PAS WOLNY ~947 [P] (od wnęki okiennej do zabudowy) | ZABUDOWA DO SUFITU ~910: SŁUPEK dopełniający ~250 (cargo/spiżarka, od strony okna) + LODÓWKA wolnostojąca 600×650×1900 [P] przy ściance, front ku ścianie A | ŚCIANKA ~90 gr. [~] — NA WPROST wschodniej krawędzi wyspy (= linia początku ciągu A), wystaje w głąb ~770 [~]`
+Nad lodówką **NADSTAWKA ~1920→2478 (wys. ~550)**, nad słupkiem zabudowa do sufitu w jednej linii frontów. Lodówka wolnostojąca: luz serwisowy boki ~20–30 mm, wentylacja 50 tył+góra, kratka w nadstawce i cokole; **zawiasy od strony ścianki, drzwi otwierają się ku oknu** (na słupek/pas wolny — nie kolidują z niczym). Kontrola łańcuchowa: 947 + 910 + 90 + wyspa 650 ≈ 2600 ✓ (≈ ściana A). Wyspa + ścianka = przerwana linia z przejściem 60 („drzwi" między końcem wyspy a czubkiem ścianki).
 
 **WYSPA/półwysep — szerokość wg taśmy `[?]` (roboczo ~650), długość WYNIKOWA z reguły „przejście 60" (po pomiarach 2. tury roboczo ~1180–1250):**
 korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wysokości ciągu (880 `[~]` — wzrost użytkownika `[?]`); bez instalacji wodnych; ewentualne **gniazdo w wyspie wymaga doprowadzenia w podłodze — decyzja PRZED posadzką docelową**.
@@ -171,7 +174,7 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 | Okap | nad D2, w G (zabudowany) | ≥550 od indukcji; **recyrkulacja do czasu potwierdzenia kratki wentylacyjnej `[?]`** |
 | Zmywarka 45 | D4, obok zlewu | światło wnęki 450×820+; woda+odpływ z D5 |
 | Zlew 60 + bateria | D5, pod oknem (72→132 od C) | podejścia obecnie nisko na B `[~]` — przedłużyć w zabudowie; zlew nie nad zmywarką |
-| Lodówka **wolnostojąca 600×650×1900 `[P]`** | ściana C, zabudowa ~660 przy ściance (94,7 od wnęki okiennej), front ku A | nadstawka ~1920→2478; drzwi otwierane ≥90° — zawiasy od strony ścianki, otwieranie ku oknu (na wolny pas); wentylacja 50 tył+góra, kratka w nadstawce i cokole |
+| Lodówka **wolnostojąca 600×650×1900 `[P]`** | ściana C, w zabudowie ~910 (pas wolny 94,7 → ścianka), bezpośrednio przy ściance, front ku A | nadstawka ~1920→2478; obok (od strony okna) słupek dopełniający ~250; drzwi ≥90° — zawiasy od strony ścianki, otwieranie ku oknu; wentylacja 50 tył+góra, kratka w nadstawce i cokole |
 
 ## 7. Zalecenia instalacyjne (PRZED montażem)
 
