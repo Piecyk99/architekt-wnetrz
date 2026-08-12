@@ -36,7 +36,7 @@ base cabinets with a flush induction hob and a built-in oven below, upper
 cabinets to the ceiling with an integrated hood and warm LED beneath. At the end
 of this run the worktop turns 90 degrees into an L-return peninsula (about 118 x
 65 cm, worktop 88 cm) reaching toward the fridge side, its back clad in dark
-fluted (reeded) wood facing the corridor and the bedroom doorway (127 cm opening
+fluted (reeded) wood facing the corridor and the living-room doorway (127 cm opening
 in the wall right behind it). FRIDGE WALL (right): low cabinets with worktop
 continuing around the corner from the sink run with tall upper cabinets above
 reaching the ceiling, then a tall slim pantry pull-out, then a freestanding

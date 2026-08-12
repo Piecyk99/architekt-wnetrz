@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.3 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.3a — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -25,7 +25,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.3")
+c.setTitle("Kuchnia U + ramię L — schemat v3.3a")
 
 
 class V:
@@ -86,7 +86,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.3 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.3a · 2026-08-12 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -95,14 +95,14 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.3)",
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.3a)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa) · głębokość kuchni ~195 od okna")
 s = (PH - 64 * mm) / 260.0
 v = V(62 * mm, PH - 27 * mm, s)
 
 CX = 254.6          # x wewn. lica ściany C
 AEND = 195.0        # koniec ciągu A / linia południowa [P]
-DOOR1, DOOR2 = 195.0, 322.0   # otwór do sypialni (127) zaraz za linią
+DOOR1, DOOR2 = 195.0, 322.0   # otwór do salonu (127) zaraz za linią
 SCY1, SCY2 = 188.5, 197.5     # ścianka wzdłuż C
 ARM_L, ARM_D = 118.0, 65.0    # ramię L
 
@@ -113,15 +113,15 @@ v.rect(-8, 0, 8, DOOR1, fill=WALL)                          # A do otworu
 v.rect(-8, DOOR2, 8, 20, fill=WALL)                         # A za otworem (fragment)
 v.rect(0, 0, 15.5, 67, fill=WALL)                           # pilaster
 v.text(18, 8, "pilaster ~15,5×67 [~] (wewnątrz wymiaru 195)", 4.8, col=GREY)
-# otwór do sypialni
+# otwór do salonu
 v.line(-8, DOOR1, -8, DOOR2, 0.8, GREY, dash=([3, 3], 0))
 v.line(0, DOOR1, 0, DOOR2, 0.8, GREY, dash=([3, 3], 0))
-v.text(-14, (DOOR1 + DOOR2) / 2 + 30, "OTWÓR DO SYPIALNI 127 [P]", 5.4, angle=90, col=GREY)
+v.text(-14, (DOOR1 + DOOR2) / 2 + 30, "OTWÓR DO SALONU 127 [P]", 5.4, angle=90, col=GREY)
 # ścianka
 v.rect(CX - 77, SCY1, 77, 9, fill=WALL)
 v.text(CX - 74, SCY1 - 4, "ścianka — wysięg ~77 [~], na 188,5 [P]", 4.8, col=GREY)
 # okno
-ox1, ox2 = 15.5 + 59.7, 15.5 + 59.7 + 85.6   # okno od strony pilastra [P] (korekta v3.3)
+ox1, ox2 = 15.5 + 59.7, 15.5 + 59.7 + 85.6   # okno od strony pilastra [P] (korekta v3.3a)
 v.rect(ox1, -8, ox2 - ox1, 8, fill=colors.white)
 v.line(ox1, -4, ox2, -4, 0.8, INK)
 v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=True)
@@ -165,7 +165,7 @@ v.rect(0, AEND - ARM_D, ARM_L, ARM_D, fill=FILL)
 v.rect(0, AEND - ARM_D - 2, ARM_L + 2, 2, fill=BLAT)
 v.text(ARM_L / 2 + 14, AEND - 38, "RAMIĘ L („wyspa”)", 5.6, center=True, bold=True)
 v.text(ARM_L / 2 + 14, AEND - 28, "RL1+RL2 · blat w L · gł. ~65 [~]", 4.6, center=True, col=GREY)
-v.text(ARM_L / 2, AEND + 7, "rewers: panel ryflowany (sypialnia/korytarz)", 4.6, center=True, col=GREY)
+v.text(ARM_L / 2, AEND + 7, "rewers: panel ryflowany (salon/korytarz)", 4.6, center=True, col=GREY)
 
 # wymiary
 v.dimv(0, AEND, 0, "195 [P] (od ściany B)", off=-14, size=5.6)
@@ -209,12 +209,12 @@ e.dimv(0, H, 0, "247,8", off=-14)
 e.dimv(H - BL, H, 195, "88 [~]", off=12)
 e.dimv(H - GD, H - BL - 4, 195, "≥55 okap–indukcja", off=12, size=5)
 e.dimv(0, H - GD, 195, "górne ~100 do sufitu", off=22, size=5)
-e.text(0, H + 26, "na końcu ciągu blat skręca w ramię L (~118×65, wys. 88) — wspólny blat, wieniec na końcu; front ryflowany od sypialni", 5.4, col=GREY)
+e.text(0, H + 26, "na końcu ciągu blat skręca w ramię L (~118×65, wys. 88) — wspólny blat, wieniec na końcu; front ryflowany od salonu", 5.4, col=GREY)
 c.showPage()
 
 # ================= STRONA 3: ELEWACJA B =================
 header("ELEWACJA B — ściana okna (BEZ szafek górnych)",
-       "skala ~1:15 · okno pod sam sufit, parapet ~166 · OKNO OD STRONY PILASTRA: 59,7 | 85,6 | 94,7 [P] (v3.3) · od prawej: narożnik z C")
+       "skala ~1:15 · okno pod sam sufit, parapet ~166 · OKNO OD STRONY PILASTRA: 59,7 | 85,6 | 94,7 [P] (v3.3a) · od prawej: narożnik z C")
 e = V(55 * mm, PH - 30 * mm, s2)
 W = 238.9
 e.rect(0, 0, W, H)
@@ -255,7 +255,7 @@ e.text(23.5, (H - 148) / 2, "GC1", 5.6, center=True, col=colors.white)
 e.text(23.5, (H - 148) / 2 + 10, "ociekarka/naczynia", 4.4, center=True, col=colors.white)
 e.text(71, (H - 148) / 2, "GC2", 5.6, center=True, col=colors.white)
 e.text(71, (H - 148) / 2 + 10, "kubki/szkło", 4.4, center=True, col=colors.white)
-e.text(47, H - 140, "górne do sufitu (dół 148) — decyzja inwestora v3.3", 4.4, center=True, col=GREY)
+e.text(47, H - 140, "górne do sufitu (dół 148) — decyzja inwestora v3.3a", 4.4, center=True, col=GREY)
 e.rect(94.7, 0, 28, H, fill=TALL)
 e.text(108.7, H / 2 - 10, "C2", 5.4, center=True, col=colors.white)
 e.text(108.7, H / 2, "słupek ~28", 4.8, center=True, col=colors.white)
@@ -282,7 +282,7 @@ w2.rect(0, H - BL - 4, IW + 3, 4, fill=BLAT)
 w2.rect(0, H - COK, IW, COK, fill=colors.HexColor("#2e2e2e"))
 w2.text(IW / 2, H - BL + 34, "RAMIĘ L — widok z wnętrza U", 5.6, center=True, bold=True)
 w2.text(IW / 2, H - BL + 46, "RL1: drzwi/szuflady od tej strony", 5.0, center=True, col=GREY)
-w2.text(IW / 2, H - BL + 56, "rewers (od sypialni): panel ryflowany", 5.0, center=True, col=GREY)
+w2.text(IW / 2, H - BL + 56, "rewers (od salonu): panel ryflowany", 5.0, center=True, col=GREY)
 w2.dimh(0, IW, H, "~118 [~] (reguła: przejście 60 do ścianki)", off=14, size=5.0)
 w2.dimv(H - BL - 4, H, IW, "88 [~]", off=10)
 w2.text(0, H + 34, "blat ciągły z DA4; kotwienie w narożniku L", 5.2, col=GREY)

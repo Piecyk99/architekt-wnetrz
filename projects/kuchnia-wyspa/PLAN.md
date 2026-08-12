@@ -8,18 +8,20 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 
 ## Historia wersji (decyzje inwestora)
 
+- **v3.3a (2026-08-12):** korekta nazewnictwa — otwór 127 za ramieniem prowadzi do **SALONU** (zgodnie ze szkicem „salon"); „sypialnia" pojawiła się z wcześniejszej wiadomości inwestora i była błędna — sypialnia jest na końcu mieszkania, poza strefą kuchni.
+
 - v1–v2.2: model pomieszczenia, decyzje bazowe (górne tylko nad indukcją, zlew pod oknem + zmywarka 45, lodówka wolnostojąca 60×65×190 przy ściance 77, indukcja Bosch PXE601DC1E, wycięcie 56×49 `[P]`, sufit 247,8 `[P]`, okno pod sufit 85,6×81,7 `[P]`, przejście 60 `[P]`).
 - v2.3–v2.6: iteracje pozycji lodówki/ścianki/wyspy — **zastąpione przez v3.0**.
-- **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do sypialni** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
-- **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do sypialni (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
-- **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek otwierania drzwi sypialni vs ramię `[?]`.
+- **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do salonu** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
+- **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do salonu (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
+- **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
 - **v3.2 (2026-08-12, uwagi inwestora do schematu v3.1):** (1) **OKNO po stronie indukcji, nie lodówki** — rozkład ściany B od lewej (od pilastra): **59,7 + okno 85,6 + 94,7 do ściany C** (kontrola: suma 240 ≈ 238,9 ✓); zlew przesuwa się pod okno bliżej pilastra, zmywarka między pilastrem a zlewem. (2) **Górne szafki także nad niskim ciągiem na ścianie C** (GC1–GC2 do sufitu) — decyzja inwestora. (3) Narożnik A/B domknięty (przerwa na rzucie v3.1 była strefą pilastra — wypełniona blendą, moduły stykają się). (4) Dodany **plan funkcjonalny** (co w której szafce), w tym szafka na umyte naczynia przy zlewie.
 
 ---
 
 ## 1. Podsumowanie pomieszczenia
 
-Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa na korytarz. Ściana **A** (zachód) — ciąg z indukcją; przy narożniku z B **pilaster/uskok ~15,5 gł. × 67** `[~]`; za końcem ciągu **otwór do sypialni szer. 127** `[P]`. Ściana **B** (północ) — **okno pod sam sufit** (wnęka 85,6 × 81,7, parapet ~166,1 `[P]`), zlew pod oknem. Ściana **C** (wschód) — niski ciąg, słupek, lodówka; **ścianka gr. ~9 `[~]`, wysięg ~77 w głąb** na 188,5 `[P]` od narożnika z B; za ścianką korytarz i wyjście. Podejścia wody/odpływu nisko na B `[~]`. Stan: remont (wylewka; posadzka docelowa zmieni wymiary pionowe).
+Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa na korytarz. Ściana **A** (zachód) — ciąg z indukcją; przy narożniku z B **pilaster/uskok ~15,5 gł. × 67** `[~]`; za końcem ciągu **otwór do salonu szer. 127** `[P]`. Ściana **B** (północ) — **okno pod sam sufit** (wnęka 85,6 × 81,7, parapet ~166,1 `[P]`), zlew pod oknem. Ściana **C** (wschód) — niski ciąg, słupek, lodówka; **ścianka gr. ~9 `[~]`, wysięg ~77 w głąb** na 188,5 `[P]` od narożnika z B; za ścianką korytarz i wyjście. Podejścia wody/odpływu nisko na B `[~]`. Stan: remont (wylewka; posadzka docelowa zmieni wymiary pionowe).
 
 ## 2. Wymiary — statusy
 
@@ -29,7 +31,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Szerokość A↔C | 254,6 | `[P]` | rzut (kontrola: 238,9+15,5=254,4 ✓) |
 | **Ciąg A: OD ŚCIANY B do końca zabudowy (linia ścianki)** | **195** | `[P]` | rzut + adnotacja inwestora (v3.1); pilaster 67 wewnątrz wymiaru |
 | Pilaster przy A/B: dł. × gł. | 67 × ~15,5 | `[~]` | rzut; strefa modułowa ciągu A = 195−67 = ~128 |
-| **Otwór do sypialni (ściana A, za linią ramienia)** | **127** | `[P]` | rzut + opis inwestora; od ~195 do ~322 od B |
+| **Otwór do salonu (ściana A, za linią ramienia)** | **127** | `[P]` | rzut + opis inwestora; od ~195 do ~322 od B |
 | Kontrola linii południowej | 195 (koniec A) ≈ 188,5+9 (ścianka po C) | ✓ | ramię i ścianka naprzeciwko siebie, jedna linia |
 | Narożnik B/C → ścianka (wzdłuż C) | 188,5 | `[P]` | rzut |
 | Okno: **od pilastra / szerokość / od ściany C** | **59,7 / 85,6 / 94,7** (wys. 81,7, pod sufit) | `[P]` | pomiar inwestora + korekta strony v3.2 (59,7+85,6+94,7 = 240 ≈ 238,9 ✓) |
@@ -61,12 +63,12 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
    ││ RAMIĘ L „wyspa" ~118 │ PRZEJŚCIE │  60×65   │
    ││ (gł. ~65, blat w L)  │  ~60 [P]  │ +nadst.  │
    │└──────────────────────┘    ┌──────┴──────────┤
-   ═══ OTWÓR DO SYPIALNI 127 [P]│ścianka ~77      │
+   ═══ OTWÓR DO SALONU 127 [P]│ścianka ~77      │
    ═══ (zaraz za linią ramienia)└─────────────────┘
    │            ← KORYTARZ (otwarte) →    │wyjście
 ```
 
-**Linia południowa kuchni** (od zachodu): koniec ciągu A na 195 → ramię L (południowa krawędź w tej linii) → przejście ~60 → czubek ścianki → ścianka → ściana C. **Ramię kończy się naprzeciwko ścianki** `[P]`. Za linią: otwór do sypialni (127) i korytarz. Front/rewers ramienia od strony sypialni i korytarza: panel ryflowany.
+**Linia południowa kuchni** (od zachodu): koniec ciągu A na 195 → ramię L (południowa krawędź w tej linii) → przejście ~60 → czubek ścianki → ścianka → ściana C. **Ramię kończy się naprzeciwko ścianki** `[P]`. Za linią: otwór do salonu (127) i korytarz. Front/rewers ramienia od strony salonu i korytarza: panel ryflowany.
 
 ## 4. Ergonomia i przejścia
 
@@ -76,10 +78,10 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 | **Front ciągu B ↔ ramię (przy zlewie/zmywarce, dla x<118)** | **~70 `[~]`** (195−60−65) | ≥110 robocze | ⚠ **ciasno** — otwarta zmywarka wypełnia strefę; opcje: ramię płytsze (40–50 → 85–95) albo zaakceptować |
 | Front B ↔ przestrzeń przy przejściu (x>118) | ~129 | ≥110 | ✓ |
 | Front A ↔ front C1/lodówki | ~125–135 | ≥120 | ✓ |
-| Otwór do sypialni | 127 `[P]` | ≥90 | ✓ (za linią ramienia) |
+| Otwór do salonu | 127 `[P]` | ≥90 | ✓ (za linią ramienia) |
 | Przed lodówką | ~125 | ≥100 | ✓ |
 
-**Trójkąt roboczy:** lodówka (C) → zlew (B, pod oknem) → indukcja (A): boki ~1,3–1,8 m, suma ~4,5 m ✓ (norma 3,6–7,0); ciąg do sypialni nie przecina trójkąta (wchodzi się przez przejście 60 obok ramienia).
+**Trójkąt roboczy:** lodówka (C) → zlew (B, pod oknem) → indukcja (A): boki ~1,3–1,8 m, suma ~4,5 m ✓ (norma 3,6–7,0); ciąg do salonu nie przecina trójkąta (wchodzi się przez przejście 60 obok ramienia).
 
 > ⚠ **Ostrzeżenie (zapisane, decyzja świadoma):** przejście ~60 między ramieniem a ścianką jest poniżej minimum 90 — przechodzi jedna osoba. Reguła 60 jest nadrzędna nad długością ramienia: przy taśmie 127 przejście spada do ~50,6 — **rekomendacja: ramię ≤118**. Ostateczne docięcie blatu na montażu.
 
@@ -106,7 +108,7 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 | RL1 | dolna narożna L | ~650×820×560 | drzwi od wnętrza U | narożnik ciągu A i ramienia (wspólny blat) |
 | RL2 | dolna ramienia | ~530×820×560 | drzwi/szuflady od wnętrza U | podział korpusów do optymalizacji przy formatkach |
 | — | blat ramienia | ~1180×650×38 | — | w L z blatem DA (łączenie frezowane/listwa); wieniec na końcu od przejścia |
-| — | panel ryflowany | ~1180×880 | — | rewers: od sypialni (południe) i od korytarza |
+| — | panel ryflowany | ~1180×880 | — | rewers: od salonu (południe) i od korytarza |
 | ⚠ | **wariant płytszy** | gł. 400–500 | — | do decyzji: poszerza strefę przy zlewie z ~70 do ~85–95 (pkt 4) |
 
 ### Ściana B — okno/zlew (okno 597→1453 od pilastra `[P]`; korekta v3.3 po weryfikacji):
@@ -191,7 +193,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 |---|---|
 | **Strefa między zlewem a ramieniem ~70** | wariant ramienia gł. 400–500 (→ 85–95) albo świadoma akceptacja; zmywarka po v3.3 jest poza tą strefą (przed jej frontem ~125 ✓) |
 | Drzwi lodówki >90° zahaczają o kant ścianki (wysięg 77 > lico zabudowy 70) | **blenda dystansowa ~50–70 mm między lodówką a ścianką** (zawiasy od strony ścianki) |
-| Drzwi sypialni otwierane do kuchni kolidowałyby z ramieniem | potwierdzić kierunek otwierania `[?]`; ew. drzwi przesuwne / otwierane do sypialni |
+| Jeśli w otworze do salonu (127) będą drzwi — skrzydło otwierane do kuchni kolidowałoby z ramieniem | wg szkicu przejście otwarte `[~]`; przy montażu drzwi: przesuwne albo otwierane do salonu |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
@@ -202,7 +204,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 ## 10. Materiały i styl (paleta zaakceptowana 2026-07-28, przeniesiona z 9.02)
 
-Fronty dolne + ramię: **beż/kaszmir mat, bezuchwytowe**; górne A + słupek C2 + nadstawka C4: **ciemny orzech mat** (intencja „Orzech Royal"); blat: **jasny trawertyn, laminat 38**; panel ryflowany ciemny na froncie ramienia od sypialni; fartuch przy indukcji: panel ciemny kamień; bateria+zlew czarne; LED 3000K; cokoły czarne. **Kody dekorów z aktualnej oferty Korner (płyty, korner.pl) `[DO WERYFIKACJI]`** — dobór po próbkach w KornerGo / Piekary Śląskie; Egger poza ofertą korner.pl.
+Fronty dolne + ramię: **beż/kaszmir mat, bezuchwytowe**; górne A + słupek C2 + nadstawka C4: **ciemny orzech mat** (intencja „Orzech Royal"); blat: **jasny trawertyn, laminat 38**; panel ryflowany ciemny na froncie ramienia od salonu; fartuch przy indukcji: panel ciemny kamień; bateria+zlew czarne; LED 3000K; cokoły czarne. **Kody dekorów z aktualnej oferty Korner (płyty, korner.pl) `[DO WERYFIKACJI]`** — dobór po próbkach w KornerGo / Piekary Śląskie; Egger poza ofertą korner.pl.
 
 ## 11. Lista pomiarów kontrolnych — przed zamówieniem formatek (montaż samodzielny)
 
@@ -231,4 +233,4 @@ Fronty dolne + ramię: **beż/kaszmir mat, bezuchwytowe**; górne A + słupek C2
 Zaktualizowany opis geometrii do renderów: U-shaped kitchen ~2,55×2,6 m, ceiling 2,48; window wall with high window (86×82, sill 166) and sink run below; induction wall with uppers to ceiling and integrated hood; low corner run continuing to a tall pantry + freestanding fridge enclosure by a short partition wall; an L-shaped worktop return (~118×65) toward the fridge leaving a 60 cm pass; doorway to bedroom (127) behind the return, fluted dark panel on its back. Pełne prompty: `_render.py` (do aktualizacji po zamknięciu pomiarów).
 
 ---
-*Decyzje inwestora `[P]`: górne tylko nad indukcją i zabudowa nad lodówką; zlew pod oknem + zmywarka 45; lodówka wolnostojąca przy ściance; przejście 60 (reguła nadrzędna); blat w L (ramię w stronę lodówki); otwór do sypialni 127 za ramieniem; paleta wg pkt 10; wykonanie samodzielne; materiały Korner (płyty, korner.pl).*
+*Decyzje inwestora `[P]`: górne tylko nad indukcją i zabudowa nad lodówką; zlew pod oknem + zmywarka 45; lodówka wolnostojąca przy ściance; przejście 60 (reguła nadrzędna); blat w L (ramię w stronę lodówki); otwór do salonu 127 za ramieniem; paleta wg pkt 10; wykonanie samodzielne; materiały Korner (płyty, korner.pl).*
