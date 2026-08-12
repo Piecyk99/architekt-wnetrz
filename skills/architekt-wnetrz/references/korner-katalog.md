@@ -26,7 +26,7 @@
 
 - Formatowanie (docinanie formatek)
 - Oklejanie krawędzi
-- Obróbka CNC
+- Obróbka CNC — **UWAGA (inwestor, 2026-08-12): wiercenie otworów montażowych (konfirmaty, puszki 35) w praktyce zamówienia NIEDOSTĘPNE** — zakres CNC `[DO WERYFIKACJI]` w oddziale; plan wierceń realizować samodzielnie (szablony) albo usługowo w lokalnej stolarni
 - Transport
 
 ## Kanały online
