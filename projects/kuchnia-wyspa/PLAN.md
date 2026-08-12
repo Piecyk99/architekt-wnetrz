@@ -90,7 +90,7 @@ Orientacja w całym projekcie: **stoisz w wejściu od korytarza i patrzysz na ś
 | **Parapet (wyliczony)** | ~166,1 | `[~]` | 247,8 − 81,7; kontrola: stara kuchnia miała parapet 168 na wylewce ✓ |
 | **Odcinek: krawędź wnęki okiennej (strona lodówki) → zabudowa do sufitu** | **94,7** | `[P]` | inwestor, 3. tura — szerokość strefy zabudowy lodówki na C przy narożniku okiennym (S6 rozstrzygnięte) |
 | **Lodówka: wysokość** | **190** | `[P]` | inwestor, 3. tura → nadstawka ~192→247,8 (wys. ~55) |
-| **Płyta indukcyjna: model** | **Bosch PXE601DC1E** (57,2×51,2, wys. pod blat 5,6 — wg inwestora) | `[P]` | 3. tura; wycięcie w blacie wg karty montażowej modelu `[DO WERYFIKACJI]` (typowo ~560×490 dla płyt 60) |
+| **Płyta indukcyjna: model** | **Bosch PXE601DC1E** (57,2×51,2, wys. pod blat 5,6) | `[P]` | 3. tura; **wycięcie w blacie 560×490 `[P]`** (potwierdzone przez inwestora, 4. tura) |
 
 ### Sprzeczności / niejednoznaczności
 
@@ -165,7 +165,7 @@ korpusy dolne otwierane od strony alei roboczej lub wejścia `[?]`, blat na wyso
 
 | Urządzenie | Pozycja | Nisza / wymagania |
 |---|---|---|
-| Płyta indukcyjna **Bosch PXE601DC1E `[P]`** (57,2×51,2×5,6 wg inwestora) | D2 (ściana A) | wycięcie blatu **wg karty montażowej modelu** `[DO WERYFIKACJI]` (typowo ~560×490); płaska zabudowa 5,6 pod blat — uwaga na kolizję z górną szufladą D2; wypust siłowy — puszka na ścianie A `[?]` potwierdzić 32A |
+| Płyta indukcyjna **Bosch PXE601DC1E `[P]`** (57,2×51,2×5,6) | D2 (ściana A) | **wycięcie blatu 560×490 `[P]`** (potwierdzone); płaska zabudowa 5,6 pod blat — górna szuflada D2 płytsza lub cofnięta o ~60–70 (kolizja z korpusem płyty); wypust siłowy — puszka na ścianie A `[?]` potwierdzić 32A |
 | Piekarnik | pod płytą w D2 | nisza 560×590–600; osobny obwód 16A; przy płycie 5,6 pod blatem sprawdzić kartę — możliwy wymóg przegrody |
 | Okap | nad D2, w G (zabudowany) | ≥550 od indukcji; **recyrkulacja do czasu potwierdzenia kratki wentylacyjnej `[?]`** |
 | Zmywarka 45 | D4, obok zlewu | światło wnęki 450×820+; woda+odpływ z D5 |
