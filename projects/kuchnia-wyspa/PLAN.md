@@ -12,6 +12,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - v2.3–v2.6: iteracje pozycji lodówki/ścianki/wyspy — **zastąpione przez v3.0**.
 - **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do sypialni** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
 - **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do sypialni (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
+- **v3.2 (2026-08-12, uwagi inwestora do schematu v3.1):** (1) **OKNO po stronie indukcji, nie lodówki** — rozkład ściany B od lewej (od pilastra): **59,7 + okno 85,6 + 94,7 do ściany C** (kontrola: suma 240 ≈ 238,9 ✓); zlew przesuwa się pod okno bliżej pilastra, zmywarka między pilastrem a zlewem. (2) **Górne szafki także nad niskim ciągiem na ścianie C** (GC1–GC2 do sufitu) — decyzja inwestora. (3) Narożnik A/B domknięty (przerwa na rzucie v3.1 była strefą pilastra — wypełniona blendą, moduły stykają się). (4) Dodany **plan funkcjonalny** (co w której szafce), w tym szafka na umyte naczynia przy zlewie.
 
 ---
 
@@ -30,9 +31,9 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | **Otwór do sypialni (ściana A, za linią ramienia)** | **127** | `[P]` | rzut + opis inwestora; od ~195 do ~322 od B |
 | Kontrola linii południowej | 195 (koniec A) ≈ 188,5+9 (ścianka po C) | ✓ | ramię i ścianka naprzeciwko siebie, jedna linia |
 | Narożnik B/C → ścianka (wzdłuż C) | 188,5 | `[P]` | rzut |
-| Okno: od C / szerokość / wysokość | 59,7 / 85,6 / 81,7 (pod sufit) | `[P]` | pomiar inwestora |
+| Okno: **od pilastra / szerokość / od ściany C** | **59,7 / 85,6 / 94,7** (wys. 81,7, pod sufit) | `[P]` | pomiar inwestora + korekta strony v3.2 (59,7+85,6+94,7 = 240 ≈ 238,9 ✓) |
 | Parapet (wyliczony) | ~166,1 | `[~]` | 247,8 − 81,7 |
-| Wnęka okienna → szafki do sufitu na C | 94,7 | `[P]` | pomiar inwestora |
+| Wnęka okienna → ściana C (strona lodówki, „gdzie szafki do sufitu") | 94,7 | `[P]` | pomiar inwestora; = prawy odcinek ściany B |
 | Ścianka: wysięg w głąb / grubość | ~77 / ~9 | `[~]` | „77 = wymiar małej ścianki"; do pomiaru łańcuchowego |
 | Sufit | 247,8 | `[P]` | pomiar (kontrola po posadzce!) |
 | Lodówka (wolnostojąca) | 60 × 65 × 190 | `[P]` | inwestor |
@@ -47,21 +48,21 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 
 ```
             ściana B — OKNO pod sufit (238,9 [P])
-   ▓pilaster──────────════ okno 85,6 ════──────────┐
-   ▓15,5×67│ DB1 │ ZMYWARKA │  ZLEW 80  │bl│ DC1   │
-   │(martwe│ ~50 │    45    │ pod oknem │  │narożna│
- 1 │ pole) └─────┴──────────┴───────────┴──┤ (C1   │ ściana C
- 9 │┌───────┐                              │ 94,7) │ (188,5 do
- 5 ││DA1 45 │      WNĘTRZE U               ├───────┤  ścianki [P])
-   ││DA2 60 │   (przy zlewie ~70 ⚠,        │SŁUPEK │
- [P]│⊠INDUK.│    przy lodówce ~125)        │  ~28  │
-   │├───────┴──────────────┐               ├───────┤
-   ││ RAMIĘ L „wyspa" ~118 │  PRZEJŚCIE    │LODÓWKA│
-   ││ (gł. ~65, blat w L)  │   ~60 [P]     │60×65  │
-   │└──────────────────────┘        ┌──────┤+nadst.│
-   ═══ OTWÓR DO SYPIALNI 127 [P] ═══│ścianka ~77   │
-   ═══ (zaraz za linią ramienia)    └──────┴───────┘
-   │            ← KORYTARZ (otwarte) →     │wyjście
+            ←59,7→═══ okno 85,6 ═══←──94,7──→
+   ▓pilaster│crg│ ZMYW │  ZLEW 80  │DB3│ DC1+GC1-2│
+   ▓15,5×67 │15 │  45  │ pod oknem │~39│ narożna  │
+   │(blenda)└───┴──────┴───────────┴───┤ niska +  │ ściana C
+ 1 │┌───────┐                          │ GÓRNE 947│ (188,5 do
+ 9 ││DA1 45 │      WNĘTRZE U           ├──────────┤  ścianki [P])
+ 5 ││DA2 60 │   (przy zlewie ~70 ⚠,    │SŁUPEK ~28│
+ [P]│⊠INDUK.│    przy lodówce ~125)    ├──────────┤
+   │├───────┴──────────────┐           │ LODÓWKA  │
+   ││ RAMIĘ L „wyspa" ~118 │ PRZEJŚCIE │  60×65   │
+   ││ (gł. ~65, blat w L)  │  ~60 [P]  │ +nadst.  │
+   │└──────────────────────┘    ┌──────┴──────────┤
+   ═══ OTWÓR DO SYPIALNI 127 [P]│ścianka ~77      │
+   ═══ (zaraz za linią ramienia)└─────────────────┘
+   │            ← KORYTARZ (otwarte) →    │wyjście
 ```
 
 **Linia południowa kuchni** (od zachodu): koniec ciągu A na 195 → ramię L (południowa krawędź w tej linii) → przejście ~60 → czubek ścianki → ścianka → ściana C. **Ramię kończy się naprzeciwko ścianki** `[P]`. Za linią: otwór do sypialni (127) i korytarz. Front/rewers ramienia od strony sypialni i korytarza: panel ryflowany.
@@ -89,7 +90,7 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| — | strefa pilastra / narożnik z B | ~670 | martwe pole narożne | pilaster 155 gł. `[~]`; róg współdzielony z DB1; blenda |
+| — | strefa pilastra / narożnik z B | ~670 | martwe pole narożne + **blenda 70 do styku z ciągiem B** | pilaster 155 gł. `[~]`; róg współdzielony z DB0; **moduły stykają się — bez przerwy (odpowiedź na uwagę inwestora: „przerwa" na v3.1 to była ta strefa)** |
 | DA1 | dolna szuflady | 450×820×560 | 3 szuflady | od 670 |
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | wycięcie 560×490 `[P]`; nisza piekarnika 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | blenda | ~230 | — | dopina ciąg do 1950 / narożnika ramienia; szerokości DA1/DA2/blendy do przestawienia wg pozycji puszki siłowej `[?]` |
@@ -107,15 +108,16 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 | — | panel ryflowany | ~1180×880 | — | rewers: od sypialni (południe) i od korytarza |
 | ⚠ | **wariant płytszy** | gł. 400–500 | — | do decyzji: poszerza strefę przy zlewie z ~70 do ~85–95 (pkt 4) |
 
-### Ściana B — okno/zlew (światło między pilastrem a narożnikiem ~1790 `[~]`):
+### Ściana B — okno/zlew (światło między pilastrem a narożnikiem ~1791 `[~]`; okno 597→1453 od pilastra `[P]`):
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| DB1 | dolna | ~500×820×560 | szuflady | docinana blendą do pilastra |
-| DB2 | **zmywarka 45** | 450 (światło wnęki 450×820+) | front meblowy | obok zlewu ✓; woda+odpływ z DB3 |
-| DB3 | **zlew 80** | 800×820×560 | drzwi, kosz segregacji | **pod oknem** (okno 1093→1949 od pilastra; zlew ~1105→1905 ✓); zlew 1-komora z ociekaczem |
-| — | blenda | ~40 | — | przy narożniku z C |
-| — | **bez górnych** | — | — | okno do sufitu; parapet ~166 użytkowy |
+| DB0 | cargo przyprawnik | 150×820×560 | cargo | przy pilastrze (155→305 od ściany A) |
+| DB1 | **zmywarka 45** | 450 (światło wnęki 450×820+) | front meblowy | 305→755; obok zlewu ✓; przyłącza z DB2 |
+| DB2 | **zlew 80** | 800×820×560 | drzwi, kosz segregacji, chemia | **755→1555 — dokładnie pod oknem (752→1608) ✓**; zlew 1-komora z ociekaczem |
+| DB3 | dolna | ~390×820×560 | szuflady/półki | 1555→1946, docinana |
+| — | narożnik z C | martwe pole ~600×540 | dostęp z DC1 | róg B/C |
+| — | **bez górnych na B** | — | — | okno do sufitu; parapet ~166 użytkowy |
 
 ### Ściana C — od narożnika z B do ścianki (1885 `[P]`):
 
@@ -123,10 +125,34 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 |---|---|---|---|---|
 | DC1 | narożna ślepa (niska, z blatem) | ~900 (front 450) ×820×560 | półki/karuzela `[?]` | martwe pole w rogu z B; blat w L ciągły z DB |
 | — | blenda | ~47 | — | dopełnienie C1 do 947 `[P]` |
+| **GC1** | **górna nad DC1** | ~470×998×320 | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
+| **GC2** | **górna nad DC1** | ~477×998×320 | naczynia codzienne | do sufitu; front w linii słupka C2 |
 | C2 | **słupek cargo/spiżarka** | ~280×2378×580 | cargo wysokie | od 947; do sufitu |
 | C3 | **zabudowa lodówki** | ~660 światło (lodówka 600+luzy) | — | lodówka wolnostojąca 60×65×190 `[P]` przy ściance; wentylacja 50 tył+góra |
 | C4 | nadstawka nad lodówką | ~660×~528×580 | drzwi | od ~1950 do 2478; kratka wentylacyjna |
 | — | ŚCIANKA | na 1885 `[P]` | — | bok zabudowy dosunięty; zawiasy lodówki od strony ścianki, drzwi otwierane ku oknu |
+
+## 5a. Plan funkcjonalny — co w której szafce
+
+Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), strefa gotowania przy indukcji, zapasy przy lodówce, ciężkie nisko.
+
+| Szafka | Przeznaczenie |
+|---|---|
+| **GC1 (górna nad DC1)** | **umyte naczynia — ociekarka w szafce** + talerze codzienne (1 krok od zmywarki DB1, za narożnikiem) |
+| GC2 (górna nad DC1) | szklanki, kubki, miski codzienne |
+| DB0 cargo 15 | przyprawy w butelkach, oleje, ocet (przy strefie gotowania przez blat) |
+| DB1 zmywarka 45 | — |
+| DB2 zlew 80 | kosze segregacji, chemia, akcesoria zlewu |
+| DB3 ~39 | ściereczki, worki, drobiazgi kuchenne (szuflady) |
+| DC1 narożna | garnki duże, rondle, rzadziej używane (karuzela/półki obrotowe `[?]`) |
+| C2 słupek cargo ~28 | spiżarnia pionowa: przetwory, butelki, suche zapasy |
+| C3/C4 lodówka + nadstawka | lodówka; nadstawka: zapasy sezonowe, rzadko używany sprzęt |
+| DA1 45 | sztućce (górna szuflada), przybory, deski (środkowa), pojemniki (dolna) |
+| DA2 60 | piekarnik + szuflada na blachy/formy (dolna, płytsza — płyta 5,6 nad nią) |
+| GA1 (nad pilastrem, docinana) | zapasy lekkie, rzadko używane |
+| GA2 45 | herbaty, kawa, cukier — strefa śniadaniowa nad blatem |
+| GA3 okap 60 | okap; nad nim antresola na rzeczy sezonowe |
+| RL1+RL2 (ramię) | garnki i patelnie codzienne (2 kroki od indukcji), miski, drobny AGD (blender, mikser); blat ramienia = strefa odstawcza/śniadaniowa |
 
 ## 6. Rozpisanie pionowe (sufit 2478 `[P]`)
 
