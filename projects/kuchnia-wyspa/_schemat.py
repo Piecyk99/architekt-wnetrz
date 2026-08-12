@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.0 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.1 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -25,7 +25,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.0")
+c.setTitle("Kuchnia U + ramię L — schemat v3.1")
 
 
 class V:
@@ -86,7 +86,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.0 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.1 · 2026-08-12 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -95,83 +95,84 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.0)",
-       "skala ~1:16 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa)")
-s = (PH - 64 * mm) / 300.0
-v = V(60 * mm, PH - 27 * mm, s)
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.1)",
+       "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa) · głębokość kuchni ~195 od okna")
+s = (PH - 64 * mm) / 260.0
+v = V(62 * mm, PH - 27 * mm, s)
 
 CX = 254.6          # x wewn. lica ściany C
-AEND = 262.0        # koniec ciągu A (pilaster 67 + 195)
-DOOR1, DOOR2 = 262.0, 389.0   # otwór do sypialni w ścianie A (127)
-SCY1, SCY2 = 188.5, 197.5     # ścianka: y wzdłuż C
-ARM_L, ARM_D = 118.0, 65.0    # ramię L: długość od ściany A, głębokość
+AEND = 195.0        # koniec ciągu A / linia południowa [P]
+DOOR1, DOOR2 = 195.0, 322.0   # otwór do sypialni (127) zaraz za linią
+SCY1, SCY2 = 188.5, 197.5     # ścianka wzdłuż C
+ARM_L, ARM_D = 118.0, 65.0    # ramię L
 
 # ściany
-v.rect(-8, -8, CX + 16, 8, fill=WALL)                       # B (góra)
-v.rect(CX, -8, 8, 268, fill=WALL)                           # C (prawa) do ~260
-v.rect(-8, 0, 8, DOOR1, fill=WALL)                          # A: od B do otworu
-v.rect(-8, DOOR2, 8, 30, fill=WALL)                         # A: za otworem (fragment)
-v.rect(0, 0, 15.5, 67, fill=WALL)                           # pilaster 15,5x67 przy A/B
-v.text(18, 10, "pilaster ~15,5×67 [~]", 4.8, col=GREY)
+v.rect(-8, -8, CX + 16, 8, fill=WALL)                       # B
+v.rect(CX, -8, 8, 240, fill=WALL)                           # C
+v.rect(-8, 0, 8, DOOR1, fill=WALL)                          # A do otworu
+v.rect(-8, DOOR2, 8, 20, fill=WALL)                         # A za otworem (fragment)
+v.rect(0, 0, 15.5, 67, fill=WALL)                           # pilaster
+v.text(18, 8, "pilaster ~15,5×67 [~] (wewnątrz wymiaru 195)", 4.8, col=GREY)
 # otwór do sypialni
 v.line(-8, DOOR1, -8, DOOR2, 0.8, GREY, dash=([3, 3], 0))
 v.line(0, DOOR1, 0, DOOR2, 0.8, GREY, dash=([3, 3], 0))
-v.text(-14, (DOOR1 + DOOR2) / 2 + 24, "OTWÓR DO SYPIALNI 127 [P]", 5.6, angle=90, col=GREY)
-# ścianka przy C
+v.text(-14, (DOOR1 + DOOR2) / 2 + 30, "OTWÓR DO SYPIALNI 127 [P]", 5.4, angle=90, col=GREY)
+# ścianka
 v.rect(CX - 77, SCY1, 77, 9, fill=WALL)
-v.text(CX - 74, SCY1 - 4, "ścianka — wysięg ~77 [~], na 188,5 [P] od narożnika", 4.8, col=GREY)
-# okno na B (od C: 59,7..145,3)
+v.text(CX - 74, SCY1 - 4, "ścianka — wysięg ~77 [~], na 188,5 [P]", 4.8, col=GREY)
+# okno
 ox1, ox2 = CX - 145.3, CX - 59.7
 v.rect(ox1, -8, ox2 - ox1, 8, fill=colors.white)
 v.line(ox1, -4, ox2, -4, 0.8, INK)
 v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=True)
 
-# ciąg B (gł. 60, od pilastra do narożnika z C1)
+# ciąg B (gł. 60)
 segsB = [(15.5, 50, "DB1\n~50"), (65.5, 45, "DB2\nZMYW. 45"), (110.5, 80, "DB3 ZLEW 80\npod oknem"), (190.5, 4.1, "")]
 for x0, w, lab in segsB:
     v.rect(x0, 0, w, 60, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         v.text(x0 + w / 2, 26 + i * 9, ln, 5.2, center=True)
-# narożnik / C1 (gł. 60 od C): od narożnika z B w dół do 94,7
+# C1 + C wysokie
 v.rect(CX - 60, 0, 60, 94.7, fill=FILL)
 v.text(CX - 30, 40, "DC1", 5.4, center=True)
 v.text(CX - 30, 49, "narożna", 4.8, center=True)
 v.text(CX - 30, 58, "(niska, blat)", 4.8, center=True)
-# C wysokie: słupek + lodówka (gł. 70)
 v.rect(CX - 70, 94.7, 70, 28, fill=TALL)
 v.text(CX - 35, 111, "C2 słupek ~28", 4.8, center=True, col=colors.white)
 v.rect(CX - 70, 122.7, 70, 65.8, fill=FILL)
-v.text(CX - 35, 150, "C3 LODÓWKA", 5.2, center=True)
-v.text(CX - 35, 159, "60×65×190 [P]", 4.8, center=True, col=GREY)
-v.text(CX - 35, 168, "+ nadstawka", 4.8, center=True, col=GREY)
+v.text(CX - 35, 148, "C3 LODÓWKA", 5.2, center=True)
+v.text(CX - 35, 157, "60×65×190 [P]", 4.8, center=True, col=GREY)
+v.text(CX - 35, 166, "+ nadstawka", 4.8, center=True, col=GREY)
 
-# ciąg A (gł. 60): od pilastra (y=67) do ramienia
-segsA = [(67, 45, "DA1|45"), (112, 60, "DA2 ⊠|INDUKCJA 60|piek. pod"), (172, 45, "DA3|45"), (217, 45, "DA4|45")]
-for y0, h, lab in segsA:
-    v.rect(0, y0, 60, h, fill=FILL)
-    parts = lab.split("|")
-    for i, ln in enumerate(parts):
-        v.text(30, y0 + h / 2 - 3 * (len(parts) - 1) + i * 8, ln, 4.9, center=True)
-# ramię L: y = AEND-65 .. AEND, x = 0..118
+# ciąg A: strefa modułowa 67..195
+v.rect(0, 67, 60, 45, fill=FILL)
+v.text(30, 86, "DA1", 5.0, center=True); v.text(30, 95, "45", 5.0, center=True)
+v.rect(0, 112, 60, 60, fill=FILL)
+v.text(30, 134, "DA2 ⊠", 5.0, center=True); v.text(30, 143, "INDUKCJA 60", 4.8, center=True); v.text(30, 152, "piek. pod", 4.6, center=True)
+v.rect(0, 172, 60, 23, fill=FILL)
+v.text(30, 186, "blenda ~23", 4.4, center=True)
+# ramię L: y = 130..195, x = 0..118 (południowa krawędź w linii 195, naprzeciwko ścianki)
 v.rect(0, AEND - ARM_D, ARM_L, ARM_D, fill=FILL)
 v.rect(0, AEND - ARM_D - 2, ARM_L + 2, 2, fill=BLAT)
-v.text(ARM_L / 2, AEND - 38, "RAMIĘ L („wyspa”)", 5.6, center=True, bold=True)
-v.text(ARM_L / 2, AEND - 28, "blat ciągły z ciągiem A · gł. ~65", 4.8, center=True, col=GREY)
-v.text(ARM_L / 2, AEND + 7, "panel ryflowany od strony sypialni", 4.6, center=True, col=GREY)
+v.text(ARM_L / 2 + 14, AEND - 38, "RAMIĘ L („wyspa”)", 5.6, center=True, bold=True)
+v.text(ARM_L / 2 + 14, AEND - 28, "RL1+RL2 · blat w L · gł. ~65 [~]", 4.6, center=True, col=GREY)
+v.text(ARM_L / 2, AEND + 7, "rewers: panel ryflowany (sypialnia/korytarz)", 4.6, center=True, col=GREY)
 
 # wymiary
-v.dimv(0, 67, 0, "67", off=-14, size=5.2)
-v.dimv(67, AEND, 0, "195 [P]", off=-14)
+v.dimv(0, AEND, 0, "195 [P] (od ściany B)", off=-14, size=5.6)
+v.dimv(0, 67, 0, "67", off=-7, size=4.6)
 v.dimv(DOOR1, DOOR2, 0, "127 [P]", off=-14, size=5.4)
 v.dimh(0, CX, 0, "254,6 [P]", off=-22)
 v.dimh(15.5, CX, 0, "238,9 [P] (ściana B)", off=-15, size=5.2)
 v.dimv(0, SCY1, CX, "188,5 [P]", off=16)
 v.dimv(0, 94.7, CX, "94,7 (C1)", off=8, size=5.2)
 v.dimh(ARM_L, CX - 77, SCY1 + 4.5, "PRZEJŚCIE ~60 [P]", off=0, size=5.6)
-v.dimh(0, ARM_L, AEND, "ramię ~118 [~] (reguła 60; taśma 127 → przejście 50,6)", off=14, size=5.0)
-v.dimh(60, CX - 70, 140, "wnętrze U ~125–135", off=0, size=5.2)
-v.text(30, 300, "← KORYTARZ (otwarte)", 5.6, col=GREY)
-v.text(150, 100, "● woda+odpływ [~] nisko na B — przedłużyć w zabudowie", 5.0, col=GREY)
+v.dimh(0, ARM_L, AEND, "ramię ~118 [~]", off=14, size=5.2)
+v.dimv(60, AEND - ARM_D, 30, "~70 (!) strefa przy zlewie", off=0, size=4.8)
+v.dimh(60, CX - 70, 100, "wnętrze U ~125", off=0, size=5.2)
+v.text(30, 240, "← KORYTARZ (otwarte)", 5.6, col=GREY)
+v.text(150, 78, "● woda+odpływ [~] nisko na B", 5.0, col=GREY)
+v.text(ARM_L + 8, AEND - 50, "koniec ramienia NAPRZECIWKO ścianki [P]", 4.8, col=DIMC)
 c.showPage()
 
 # ================= STRONA 2: ELEWACJA A =================
@@ -182,24 +183,24 @@ e = V(60 * mm, PH - 30 * mm, s2)
 H, BL, COK, GD = 247.8, 88.0, 10.0, 148.0
 e.rect(0, 0, 195, H)
 e.rect(0, H - COK, 195, COK, fill=colors.HexColor("#2e2e2e"))
-for x0, w, lab in [(0, 45, "DA1\nszuflady"), (45, 60, "DA2 piekarnik\npod indukcją"), (105, 45, "DA3\nszuflady"), (150, 45, "DA4\n(ramię)")]:
+for x0, w, lab in [(0, 67, "strefa pilastra\n(martwe pole/blenda)"), (67, 45, "DA1\nszuflady"), (112, 60, "DA2 piekarnik\npod indukcją"), (172, 23, "bl.")]:
     e.rect(x0, H - BL, w, BL - COK - 4, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.2, center=True)
 e.rect(0, H - BL - 4, 195, 4, fill=BLAT)
-e.line(45, H - BL - 4, 105, H - BL - 4, 2.2, INK)
-e.text(75, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
-for x0, w, lab in [(0, 45, "GA1"), (45, 60, "GA2 OKAP\nw zabudowie"), (105, 45, "GA3"), (150, 45, "GA4")]:
+e.line(112, H - BL - 4, 172, H - BL - 4, 2.2, INK)
+e.text(142, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
+for x0, w, lab in [(0, 67, "GA1\n(docinana)"), (67, 45, "GA2"), (112, 60, "GA3 OKAP\nw zabudowie"), (172, 23, "")]:
     e.rect(x0, 0, w, H - GD, fill=TALL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, (H - GD) / 2 + i * 9, ln, 5.6, center=True, col=colors.white)
 e.text(97, H - GD + 8, "LED 3000K pod górnymi", 5, center=True, col=GREY)
-e.dimh(0, 195, H, "195 [P]", off=14)
+e.dimh(0, 195, H, "195 [P] (od ściany B, z pilastrem)", off=14, size=5.4)
 e.dimv(0, H, 0, "247,8", off=-14)
 e.dimv(H - BL, H, 195, "88 [~]", off=12)
 e.dimv(H - GD, H - BL - 4, 195, "≥55 okap–indukcja", off=12, size=5)
 e.dimv(0, H - GD, 195, "górne ~100 do sufitu", off=22, size=5)
-e.text(0, H + 26, "za DA4 blat skręca w ramię L (~118×65, wys. 88) — wspólny blat, wieniec na końcu; front ryflowany od sypialni", 5.4, col=GREY)
+e.text(0, H + 26, "na końcu ciągu blat skręca w ramię L (~118×65, wys. 88) — wspólny blat, wieniec na końcu; front ryflowany od sypialni", 5.4, col=GREY)
 c.showPage()
 
 # ================= STRONA 3: ELEWACJA B =================

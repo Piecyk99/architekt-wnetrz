@@ -10,7 +10,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 
 - v1–v2.2: model pomieszczenia, decyzje bazowe (górne tylko nad indukcją, zlew pod oknem + zmywarka 45, lodówka wolnostojąca 60×65×190 przy ściance 77, indukcja Bosch PXE601DC1E, wycięcie 56×49 `[P]`, sufit 247,8 `[P]`, okno pod sufit 85,6×81,7 `[P]`, przejście 60 `[P]`).
 - v2.3–v2.6: iteracje pozycji lodówki/ścianki/wyspy — **zastąpione przez v3.0**.
-- **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do sypialni** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Ścianka (wysięg 77 od ściany C) i ramię w jednej linii, między nimi **przejście ~60**. Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
+- **v3.0 (2026-08-12, rzut dzienny inwestora):** „wyspa" = **ramię blatu w L** (przedłużenie ciągu indukcji w stronę lodówki), nie osobna bryła. **127 = szerokość otworu do sypialni** w ścianie A za ramieniem (wcześniej błędnie wiązane z wyspą). Kuchnia = **U (A+B+C) + ramię L**, otwarta na korytarz.
+- **v3.1 (2026-08-12, adnotacja inwestora na rzucie v3.0):** **195 liczone OD ŚCIANY B** (pilaster 67 wewnątrz tego wymiaru, nie przed nim) i **ramię kończy się NAPRZECIWKO ścianki** — kontrola krzyżowa: koniec ciągu A na 195 od B ≈ ścianka na 188,5+9 od B po stronie C → **obie wyznaczają tę samą linię wschód–zachód = południową granicę kuchni**. Otwór do sypialni (127) zaczyna się zaraz za tą linią. Głębokość kuchni od okna ≈ 195, nie 262.
 
 ---
 
@@ -24,9 +25,10 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 |---|---|---|---|
 | Ściana B (okno) | 238,9 | `[P]` | rzut inwestora |
 | Szerokość A↔C | 254,6 | `[P]` | rzut (kontrola: 238,9+15,5=254,4 ✓) |
-| Ciąg A (od pilastra do ramienia) | 195 | `[P]` | rzut |
-| Pilaster przy A/B: dł. × gł. | 67 × ~15,5 | `[~]` | rzut |
-| **Otwór do sypialni (ściana A, za ramieniem)** | **127** | `[P]` | rzut + opis inwestora (v3.0) |
+| **Ciąg A: OD ŚCIANY B do końca zabudowy (linia ścianki)** | **195** | `[P]` | rzut + adnotacja inwestora (v3.1); pilaster 67 wewnątrz wymiaru |
+| Pilaster przy A/B: dł. × gł. | 67 × ~15,5 | `[~]` | rzut; strefa modułowa ciągu A = 195−67 = ~128 |
+| **Otwór do sypialni (ściana A, za linią ramienia)** | **127** | `[P]` | rzut + opis inwestora; od ~195 do ~322 od B |
+| Kontrola linii południowej | 195 (koniec A) ≈ 188,5+9 (ścianka po C) | ✓ | ramię i ścianka naprzeciwko siebie, jedna linia |
 | Narożnik B/C → ścianka (wzdłuż C) | 188,5 | `[P]` | rzut |
 | Okno: od C / szerokość / wysokość | 59,7 / 85,6 / 81,7 (pod sufit) | `[P]` | pomiar inwestora |
 | Parapet (wyliczony) | ~166,1 | `[~]` | 247,8 − 81,7 |
@@ -47,33 +49,32 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
             ściana B — OKNO pod sufit (238,9 [P])
    ▓pilaster──────────════ okno 85,6 ════──────────┐
    ▓15,5×67│ DB1 │ ZMYWARKA │  ZLEW 80  │bl│ DC1   │
-   │       │ ~50 │    45    │ pod oknem │  │narożna│
-   │┌──────┴─────┴──────────┴───────────┴──┤ (C1   │ ściana C
-  A││DA1 45                                │ 94,7) │ (188,5 do
-   ││DA2 60 ⊠INDUKCJA (piekarnik pod)      ├───────┤  ścianki [P])
-  1││DA3 45          WNĘTRZE U             │SŁUPEK │
-  9││DA4 45         (aleja ~135)           │  ~28  │
-  5││                                      ├───────┤
-   │└─────┬────────────────┐               │LODÓWKA│
-   │ RAMIĘ L „wyspa" ~118  │  PRZEJŚCIE    │60×65  │
-   │ (gł. 65, blat ciągły) │   ~60 [P]     │+nadst.│
-   ├───────────────────────┘        ┌──────┴───────┤
-   ═ OTWÓR DO SYPIALNI 127 [P]      │ścianka ~77   │
-   ═ (za ramieniem)                 └──────────────┘
+   │(martwe│ ~50 │    45    │ pod oknem │  │narożna│
+ 1 │ pole) └─────┴──────────┴───────────┴──┤ (C1   │ ściana C
+ 9 │┌───────┐                              │ 94,7) │ (188,5 do
+ 5 ││DA1 45 │      WNĘTRZE U               ├───────┤  ścianki [P])
+   ││DA2 60 │   (przy zlewie ~70 ⚠,        │SŁUPEK │
+ [P]│⊠INDUK.│    przy lodówce ~125)        │  ~28  │
+   │├───────┴──────────────┐               ├───────┤
+   ││ RAMIĘ L „wyspa" ~118 │  PRZEJŚCIE    │LODÓWKA│
+   ││ (gł. ~65, blat w L)  │   ~60 [P]     │60×65  │
+   │└──────────────────────┘        ┌──────┤+nadst.│
+   ═══ OTWÓR DO SYPIALNI 127 [P] ═══│ścianka ~77   │
+   ═══ (zaraz za linią ramienia)    └──────┴───────┘
    │            ← KORYTARZ (otwarte) →     │wyjście
 ```
 
-Ramię L i ścianka leżą **w jednej linii wschód–zachód**; przerwa między nimi (~60) to wejście do strefy roboczej. Za ramieniem, w ścianie A — otwór do sypialni (127). Front ramienia od strony sypialni/korytarza: panel ryflowany.
+**Linia południowa kuchni** (od zachodu): koniec ciągu A na 195 → ramię L (południowa krawędź w tej linii) → przejście ~60 → czubek ścianki → ścianka → ściana C. **Ramię kończy się naprzeciwko ścianki** `[P]`. Za linią: otwór do sypialni (127) i korytarz. Front/rewers ramienia od strony sypialni i korytarza: panel ryflowany.
 
 ## 4. Ergonomia i przejścia
 
 | Przejście / strefa | Wartość | Próg | Ocena |
 |---|---|---|---|
 | **Ramię ↔ czubek ścianki (wejście do strefy)** | **~60 `[P]`** | ≥90 | ✗ świadoma decyzja inwestora (jak drzwi „60"; ostrzeżenie niżej) |
-| Wnętrze U: front B ↔ ramię | ~137 | ≥120 | ✓ |
+| **Front ciągu B ↔ ramię (przy zlewie/zmywarce, dla x<118)** | **~70 `[~]`** (195−60−65) | ≥110 robocze | ⚠ **ciasno** — otwarta zmywarka wypełnia strefę; opcje: ramię płytsze (40–50 → 85–95) albo zaakceptować |
+| Front B ↔ przestrzeń przy przejściu (x>118) | ~129 | ≥110 | ✓ |
 | Front A ↔ front C1/lodówki | ~125–135 | ≥120 | ✓ |
-| Otwór do sypialni | 127 `[P]` | ≥90 | ✓ (ramię go nie zawęża — jest obok, nie naprzeciw) |
-| Przed zmywarką (front otwarty) | ~137 | ≥110 | ✓ |
+| Otwór do sypialni | 127 `[P]` | ≥90 | ✓ (za linią ramienia) |
 | Przed lodówką | ~125 | ≥100 | ✓ |
 
 **Trójkąt roboczy:** lodówka (C) → zlew (B, pod oknem) → indukcja (A): boki ~1,3–1,8 m, suma ~4,5 m ✓ (norma 3,6–7,0); ciąg do sypialni nie przecina trójkąta (wchodzi się przez przejście 60 obok ramienia).
@@ -84,25 +85,27 @@ Ramię L i ścianka leżą **w jednej linii wschód–zachód**; przerwa między
 
 Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy ~998 **do sufitu 2478**; fronty bezuchwytowe (frez/gola).
 
-### Ściana A — ciąg z indukcją (1950 `[P]`, od pilastra):
+### Ściana A — ciąg z indukcją (1950 `[P]` OD ŚCIANY B; strefa modułowa ~1280 po odjęciu pilastra 670):
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| DA1 | dolna szuflady | 450×820×560 | 3 szuflady | przy pilastrze; blenda styku `[~]` |
-| DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada dolna | wycięcie blatu 560×490 `[P]`; nisza piekarnika 560×590–600; górna szuflada płytsza (płyta 5,6 pod blatem) |
-| DA3 | dolna szuflady | 450×820×560 | 3 szuflady | |
-| DA4 | dolna narożna ramienia | 450×820×560 | drzwi | łączy się z ramieniem (wspólny blat, wieniec) |
-| GA1 | górna | 450×998×320 | drzwi, półki | dół 1480, do sufitu |
-| GA2 | **okap w zabudowie** | 600×998×320 | front uchylny | okap wg modelu `[?]`; ≥550 nad indukcją ✓; recyrkulacja do potwierdzenia kratki `[?]` |
-| GA3+GA4 | górne | 450+450×998×320 | półki | LED 3000K pod całością |
+| — | strefa pilastra / narożnik z B | ~670 | martwe pole narożne | pilaster 155 gł. `[~]`; róg współdzielony z DB1; blenda |
+| DA1 | dolna szuflady | 450×820×560 | 3 szuflady | od 670 |
+| DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | wycięcie 560×490 `[P]`; nisza piekarnika 560×590–600; górna szuflada płytsza (płyta 5,6) |
+| — | blenda | ~230 | — | dopina ciąg do 1950 / narożnika ramienia; szerokości DA1/DA2/blendy do przestawienia wg pozycji puszki siłowej `[?]` |
+| GA1 | górna (nad strefą pilastra) | ~670×998×305 | drzwi, półki | docinana do pilastra; dół 1480, do sufitu |
+| GA2 | **okap w zabudowie** | 600×998×320 | front uchylny | nad DA2; ≥550 nad indukcją ✓; recyrkulacja do potwierdzenia kratki `[?]` |
+| GA3 | górna | ~680×998×320 | półki | LED 3000K pod całością; do linii ramienia |
 
-### Ramię L („wyspa" — przedłużenie blatu, ~1180×650 `[~]`):
+### Ramię L („wyspa" — skręt blatu na końcu ciągu A, ~1180×650 `[~]`, południowa krawędź w linii 1950):
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| RL1 | dolna ramienia | ~530×820×560 | drzwi/szuflady od wnętrza U | podział korpusów do optymalizacji przy formatkach |
-| — | blat ramienia | ~1180×650×38 | — | ciągły z blatem DA (łączenie frezowane/listwa); wieniec boczny na końcu |
-| — | panel ryflowany | ~1180×880 | — | od strony sypialni/korytarza (południe) |
+| RL1 | dolna narożna L | ~650×820×560 | drzwi od wnętrza U | narożnik ciągu A i ramienia (wspólny blat) |
+| RL2 | dolna ramienia | ~530×820×560 | drzwi/szuflady od wnętrza U | podział korpusów do optymalizacji przy formatkach |
+| — | blat ramienia | ~1180×650×38 | — | w L z blatem DA (łączenie frezowane/listwa); wieniec na końcu od przejścia |
+| — | panel ryflowany | ~1180×880 | — | rewers: od sypialni (południe) i od korytarza |
+| ⚠ | **wariant płytszy** | gł. 400–500 | — | do decyzji: poszerza strefę przy zlewie z ~70 do ~85–95 (pkt 4) |
 
 ### Ściana B — okno/zlew (światło między pilastrem a narożnikiem ~1790 `[~]`):
 
@@ -159,6 +162,7 @@ Założenia: korpusy dolne 720 + cokół 100, **blat 880** `[~]` (laminat 38); g
 
 | Ryzyko | Mitygacja |
 |---|---|
+| **Strefa między zlewem a ramieniem ~70** (otwarta zmywarka ją wypełnia) | wariant ramienia gł. 400–500 (→ 85–95) albo świadoma akceptacja; decyzja przed zamówieniem korpusów ramienia |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
