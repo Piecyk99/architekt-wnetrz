@@ -13,8 +13,7 @@ FR_ORZ = "ciemny orzech mat (front/panel)"
 MODULES = [
     ("DA1 dolna szufladowa", 450, 720, 560, "szuflady3", FR_BEZ, "3 szuflady (prowadnice 500)"),
     ("DA2 piekarnik+indukcja", 600, 720, 560, "piekarnik", FR_BEZ, "nisza 560×590 wg karty; szuflada dolna wewn."),
-    ("RL1 ramię narożna", 650, 720, 460, "drzwi2", FR_BEZ, "część ślepa przy ścianie A ~150"),
-    ("RL2 ramię", 530, 720, 460, "drzwi1", FR_BEZ, ""),
+    ("RL1 ramię narożna ślepa", 1140, 720, 460, "narozna", FR_BEZ, "front 580 (otwierany od północy); martwe pole ~560 pod ramieniem przy ścianie A — bez boku zachodniego, dostęp bokiem"),
     ("DB0 cargo 15", 150, 720, 560, "cargo", FR_BEZ, "cargo 150 (Rejs/Peka)"),
     ("DB1 zlewowa", 800, 720, 560, "zlew", FR_BEZ, "bez pleców pełnych (listwa serwisowa); 2 drzwi"),
     ("DB2 zmywarka 45", 450, 0, 0, "front-agd", FR_BEZ, "tylko front 446×~713 wg karty zmywarki"),
@@ -38,7 +37,7 @@ PANELE = [
 
 BLATY = [
     ("Blat A (ciąg indukcji)", 1950, 635), ("Blat B (ciąg okna)", 2389, 635),
-    ("Blat C1 (niski ciąg)", 947, 635), ("Blat ramienia", 1180, 500),
+    ("Blat C1 (niski ciąg)", 947, 635), ("Blat ramienia (docinka na wschód od blatu A)", 545, 500),
 ]
 
 rows, m2 = [], {}

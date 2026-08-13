@@ -17,16 +17,12 @@
 | DA2 piekarnik+indukcja — plecy HDF | 596×716 | 1 | HDF biały | — |
 | DA2 piekarnik+indukcja — front szuflady dolnej | 596×110 | 1 | beż/kaszmir mat (front) | 1,0 |
 | DA2 piekarnik+indukcja — trawers nośny piekarnika | 564×560 | 1 | kremowy (korpus) | 0,4 |
-| RL1 ramię narożna — bok | 460×720 | 2 | kremowy (korpus) | 0,4 mm przód |
-| RL1 ramię narożna — dno | 614×460 | 1 | kremowy (korpus) | 0,4 przód |
-| RL1 ramię narożna — trawersy górne | 614×100 | 2 | kremowy (korpus) | 0,4 |
-| RL1 ramię narożna — plecy HDF | 646×716 | 1 | HDF biały | — |
-| RL1 ramię narożna — fronty | 322×716 | 2 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
-| RL2 ramię — bok | 460×720 | 2 | kremowy (korpus) | 0,4 mm przód |
-| RL2 ramię — dno | 494×460 | 1 | kremowy (korpus) | 0,4 przód |
-| RL2 ramię — trawersy górne | 494×100 | 2 | kremowy (korpus) | 0,4 |
-| RL2 ramię — plecy HDF | 526×716 | 1 | HDF biały | — |
-| RL2 ramię — front | 526×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
+| RL1 ramię narożna ślepa — bok | 460×720 | 2 | kremowy (korpus) | 0,4 mm przód |
+| RL1 ramię narożna ślepa — dno | 1104×460 | 1 | kremowy (korpus) | 0,4 przód |
+| RL1 ramię narożna ślepa — trawersy górne | 1104×100 | 2 | kremowy (korpus) | 0,4 |
+| RL1 ramię narożna ślepa — plecy HDF | 1136×716 | 1 | HDF biały | — |
+| RL1 ramię narożna ślepa — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
+| RL1 ramię narożna ślepa — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
 | DB0 cargo 15 — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
 | DB0 cargo 15 — dno | 114×560 | 1 | kremowy (korpus) | 0,4 przód |
 | DB0 cargo 15 — trawersy górne | 114×100 | 2 | kremowy (korpus) | 0,4 |
@@ -87,10 +83,10 @@
 
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
-| kremowy (korpus) | 19.5 | 22.4 |
+| kremowy (korpus) | 18.8 | 21.7 |
 | ciemny orzech mat (front/panel) | 6.3 | 7.2 |
-| HDF biały | 6.0 | 6.9 |
-| beż/kaszmir mat (front) | 3.0 | 3.4 |
+| HDF biały | 5.9 | 6.8 |
+| beż/kaszmir mat (front) | 2.7 | 3.2 |
 | czarny mat | 0.8 | 0.9 |
 
 ## 2. Blaty (laminat 38 mm, dekor jasny trawertyn [DO WERYFIKACJI w Korner])
@@ -100,7 +96,7 @@
 | Blat A (ciąg indukcji) | 1950×635 | docinany na miejscu |
 | Blat B (ciąg okna) | 2389×635 | docinany na miejscu |
 | Blat C1 (niski ciąg) | 947×635 | docinany na miejscu |
-| Blat ramienia | 1180×500 | docinany na miejscu |
+| Blat ramienia (docinka na wschód od blatu A) | 545×500 | docinany na miejscu |
 
 Łączenia blatów: 3 (narożnik A/B przy pilastrze, narożnik B/C1, A/ramię) — frez + śruby łącznikowe 3 kpl, silikon. Wycięcia: indukcja **560×490** [P] w blacie A, zlew wg szablonu w blacie B — samodzielnie wyrzynarką (krawędzie zabezpieczyć silikonem) albo CNC przy rozkroju.
 
