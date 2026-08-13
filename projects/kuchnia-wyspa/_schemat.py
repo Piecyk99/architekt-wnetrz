@@ -87,7 +87,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.9 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.9 · 2026-08-13 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -188,6 +188,19 @@ v.dimh(0, ARM_L, AEND, "ramię ~118 [~]", off=14, size=5.2)
 v.dimv(60, AEND - ARM_D, 30, "~85 strefa przy zlewie", off=0, size=4.8)
 v.dimh(60, CX - 70, 100, "wnętrze U ~125", off=0, size=5.2)
 v.text(30, 240, "← KORYTARZ (otwarte)", 5.6, col=GREY)
+# --- LEGENDA ---
+LX, LY = 118, 208
+v.text(LX, LY, "LEGENDA", 5.4, bold=True, col=WOOD)
+v.rect(LX, LY + 4, 14, 10, fill=colors.HexColor("#e8dcd6"))
+v.line(LX, LY + 4, LX + 14, LY + 14, 0.4, GREY); v.line(LX, LY + 14, LX + 14, LY + 4, 0.4, GREY)
+v.text(LX + 18, LY + 11, "przekreślone na X = MARTWE POLE: miejsce pod blatem BEZ FRONTU,", 4.6, col=GREY)
+v.text(LX + 18, LY + 17, "bo drzwi kolidowałyby z sąsiednim ciągiem. Blat idzie górą bez przerwy.", 4.6, col=GREY)
+v.rect(LX, LY + 22, 14, 10, fill=FILL)
+v.text(LX + 18, LY + 29, "zwykła szafka z frontem", 4.6, col=GREY)
+v.text(LX, LY + 42, "⊠", 6.5, col=INK)
+v.text(LX + 18, LY + 41, "płyta indukcyjna w blacie (Bosch PXE601DC1E)", 4.6, col=GREY)
+v.line(LX, LY + 48, LX + 14, LY + 48, 0.8, GREY, dash=([2, 2], 0))
+v.text(LX + 18, LY + 50, "linia przerywana = szerokość frontu szafki narożnej ślepej", 4.6, col=GREY)
 v.text(150, 78, "● woda+odpływ [~] nisko na B", 5.0, col=GREY)
 v.text(ARM_L + 8, AEND - 50, "koniec ramienia NAPRZECIWKO ścianki [P]", 4.8, col=DIMC)
 c.showPage()
