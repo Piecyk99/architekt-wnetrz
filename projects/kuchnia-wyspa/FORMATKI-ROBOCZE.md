@@ -19,9 +19,9 @@
 | DA2 piekarnik+indukcja — front szuflady dolnej | 596×110 | 1 | beż/kaszmir mat (front) | 1,0 |
 | DA2 piekarnik+indukcja — trawers nośny piekarnika | 564×560 | 1 | kremowy (korpus) | 0,4 |
 | RL1 ramię narożna ślepa — bok | 460×720 | 2 | kremowy (korpus) | 0,4 mm przód |
-| RL1 ramię narożna ślepa — dno | 1104×460 | 1 | kremowy (korpus) | 0,4 przód |
-| RL1 ramię narożna ślepa — trawersy górne | 1104×100 | 2 | kremowy (korpus) | 0,4 |
-| RL1 ramię narożna ślepa — plecy HDF | 1136×716 | 1 | HDF biały | — |
+| RL1 ramię narożna ślepa — dno | 1140×460 | 1 | kremowy (korpus) | 0,4 przód |
+| RL1 ramię narożna ślepa — trawersy górne | 1140×100 | 2 | kremowy (korpus) | 0,4 |
+| RL1 ramię narożna ślepa — plecy HDF | 1172×716 | 1 | HDF biały | — |
 | RL1 ramię narożna ślepa — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
 | RL1 ramię narożna ślepa — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
 | DB0 cargo 15 — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
@@ -80,7 +80,7 @@
 | C4 nadstawka lodówki — plecy HDF | 656×524 | 1 | HDF biały | — |
 | C4 nadstawka lodówki — fronty | 327×524 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową) | 2478×680 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
-| Panel ryflowany ramienia (lamele — dostawca zewn.) | 1180×910 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
+| Panel ryflowany ramienia (lamele — dostawca zewn.) | 1176×910 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
 | Blenda dolna A przy pilastrze (~610 do frontu DA1) | 610×756 | 1 | beż/kaszmir mat (front) | 1,0 widoczne |
 | Listwa cokołowa (czarny mat), łącznie ~5 mb | 5000×150 | 1 | czarny mat | 1,0 widoczne |
 
@@ -89,7 +89,7 @@
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
 | kremowy (korpus) | 19.9 | 22.9 |
-| HDF biały | 6.4 | 7.4 |
+| HDF biały | 6.5 | 7.4 |
 | ciemny orzech mat (front/panel) | 6.3 | 7.2 |
 | beż/kaszmir mat (front) | 3.3 | 3.8 |
 | czarny mat | 0.8 | 0.9 |
@@ -116,7 +116,7 @@
 | Cargo spiżarniane wysokie do słupka 280 | 1 kpl | **[DO WERYFIKACJI]** — szerokość niestandard.; alternatywa: półki + drzwi |
 | Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA3 — dobór po zakupie okapu |
 | Nóżki meblowe 150 + klipsy cokołu | 32 + 16 szt | 8 szafek dolnych ×4 |
-| **Cargo narożne (magic corner) do DC1** | 1 kpl | decyzja inwestora 2026-08-13; front 450 ✓ spełnia minimum okucia; ~500–900 zł |
+| **Szuflady wewnętrzne do DC1 (2 szt., szer. ~300)** | 2 szt | cargo narożne NIE mieści się: front DC1 ma 345 mm (zasłonięty korpusem zmywarki), a magic corner wymaga ≥450 — kontrola K8 |
 | Zawieszki regulowane górnych + listwa montażowa | 10 szt + 3 mb | GA1-3, GC1-2 |
 | Konfirmaty 7×50 + kołki 8×35 + wkręty 4×30/4×16 | 1 opak. każde | montaż korpusów |
 | Śruby łącznikowe blatu | 3 kpl | łączenia |
