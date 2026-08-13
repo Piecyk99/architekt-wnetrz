@@ -128,6 +128,7 @@ v.line(ox1, -4, ox2, -4, 0.8, INK)
 v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=True)
 
 # ciąg B (gł. 60); narożnik zachodni (do x=60) = martwe pole bez frontu (kolizja z ciągiem A)
+v.rect(0, 67, 15.5, 18, fill=colors.HexColor("#e3ddd2"))   # pustka za korpusem, poniżej pilastra
 v.rect(15.5, 0, 40.5, 85, fill=FILL)                       # DA1 narożna ślepa (korpus do ściany B)
 v.line(15.5, 0, 56, 61, 0.4, GREY); v.line(15.5, 61, 56, 0, 0.4, GREY)   # część ślepa
 v.line(56, 61, 56, 85, 1.0, GREY, dash=([2, 2], 0))        # szerokość frontu
