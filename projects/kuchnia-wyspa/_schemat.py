@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.9 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.10 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -26,7 +26,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.9")
+c.setTitle("Kuchnia U + ramię L — schemat v3.10")
 
 
 class V:
@@ -87,7 +87,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.9 · 2026-08-13 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.10 · 2026-08-13 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -96,7 +96,7 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.9)",
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.10)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa)")
 s = (PH - 64 * mm) / 260.0
 v = V(62 * mm, PH - 27 * mm, s)
@@ -128,10 +128,13 @@ v.line(ox1, -4, ox2, -4, 0.8, INK)
 v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=True)
 
 # ciąg B (gł. 60); narożnik zachodni (do x=60) = martwe pole bez frontu (kolizja z ciągiem A)
-v.rect(15.5, 0, 44.5, 60, fill=colors.HexColor("#e3ddd2"))
-v.line(15.5, 0, 60, 60, 0.4, GREY); v.line(15.5, 60, 60, 0, 0.4, GREY)
-v.text(38, 74, "martwe pole", 4.2, center=True, col=GREY)
-v.text(38, 80, "(bez frontu)", 4.2, center=True, col=GREY)
+v.rect(15.5, 0, 40.5, 85, fill=FILL)                       # DA1 narożna ślepa (korpus do ściany B)
+v.line(15.5, 0, 56, 61, 0.4, GREY); v.line(15.5, 61, 56, 0, 0.4, GREY)   # część ślepa
+v.line(56, 61, 56, 85, 1.0, GREY, dash=([2, 2], 0))        # szerokość frontu
+v.text(36, 30, "DA1", 5.0, center=True)
+v.text(36, 38, "narożna ślepa", 4.4, center=True)
+v.text(36, 45, "korpus 85×40,5", 4.2, center=True, col=GREY)
+v.text(36, 52, "front 24 (dół)", 4.2, center=True, col=GREY)
 segsB = [(60, 15, "crg\n15"), (75, 80, "DB1 ZLEW 80\npod oknem"), (155, 45, "DB2\nZMYW. 45")]
 for x0, w, lab in segsB:
     v.rect(x0, 0, w, 60, fill=FILL)
@@ -153,10 +156,8 @@ v.text(CX - 35, 157, "60×65×190 [P]", 4.8, center=True, col=GREY)
 v.text(CX - 35, 166, "+ nadstawka", 4.8, center=True, col=GREY)
 
 # ciąg A: strefa modułowa od styku z ciągiem B (narożnik domknięty)
-v.rect(0, 60, 60, 7, fill=FILL)
-v.text(66, 66, "blenda (strefa pilastra) — narożnik domknięty", 4.2, col=GREY)
-v.rect(0, 67, 60, 18, fill=FILL)
-v.text(30, 78, "DA1 18", 4.4, center=True)
+v.text(66, 58, "narożnik domknięty — jeden korpus obsługuje ciąg A i róg przy oknie", 4.2, col=GREY)
+
 v.rect(0, 85, 60, 60, fill=FILL)
 v.text(30, 107, "DA2 ⊠", 5.0, center=True); v.text(30, 116, "INDUKCJA 60", 4.8, center=True); v.text(30, 125, "piekarnik pod", 4.6, center=True)
 v.text(150, 128, "front piekarnika kończy się", 5.0, col=GREY)
@@ -213,7 +214,7 @@ e = V(60 * mm, PH - 30 * mm, s2)
 H, BL, COK, GD = 247.8, 91.0, 15.0, 148.0
 e.rect(0, 0, 195, H)
 e.rect(0, H - COK, 195, COK, fill=colors.HexColor("#2e2e2e"))
-for x0, w, lab in [(0, 67, "strefa pilastra\n(martwe pole/blenda)"), (67, 18, ""), (85, 60, "DA2 piekarnik\npod indukcją"), (145, 50, "ślepy narożnik\npod ramieniem")]:
+for x0, w, lab in [(0, 61, "blenda\n(pilaster)"), (61, 24, "DA1\ndrzwi"), (85, 60, "DA2 piekarnik\npod indukcją"), (145, 50, "ślepy narożnik\npod ramieniem")]:
     e.rect(x0, H - BL, w, BL - COK - 4, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.2, center=True)

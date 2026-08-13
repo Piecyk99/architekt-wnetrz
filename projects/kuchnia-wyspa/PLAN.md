@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.9)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.10)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -17,6 +17,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
 - **v3.4–v3.5 (2026-08-12):** blat **910** `[P]` (wzrost 182); okap **recyrkulacyjny z filtrem węglowym** `[P]` (zakup inwestora — kratka nie warunkuje okapu); **ramię gł. 50** `[P]` (strefa przy zlewie ~85; decyzja po analizie komfortu 65 vs 50).
 - **v3.6 (2026-08-12, foto pomalowanego pomieszczenia + odpowiedź inwestora):** **gzyms/belka 15,5 pod sufitem, po całym obwodzie `[P]`**. Górne szafki **400 gł.** (propozycja inwestora) z wycięciem 160×(Hg+5) w bokach — front przed gzymsem, jedna płaszczyzna do sufitu; wieniec 240, listwa montażowa pod gzymsem. Wycięcia obejmują też **słupek C2 i nadstawkę C4**. **Korekta GA1: 305 → 245** (pilaster wystaje 155, nie 15 — błąd w v3.2). Otwarte: **Hg** oraz **sprzeczność gzyms vs okno do sufitu (11b)**. Detal: `kuchnia-wyspa-detal-gzyms.pdf`.
+- **v3.10 (2026-08-13, odzysk martwych pól — pytanie inwestora „czy nie da się tego uzupełnić na garnki"):** **DA1 przebudowana na narożną ślepą**: korpus 850×405 sięga aż do ściany B i przejmuje róg, który był martwym polem ciągu okna → **248 l użytecznej przestrzeni tuż przy indukcji**. Sprawdzone: **cargo narożne tam NIE wejdzie** — maksymalny front to 240 mm (szersze drzwi uderzają w korpus ciągu okna, zapas 13 mm), a magic corner/Le Mans wymagają ≥450. **DC1 dostaje cargo narożne (magic corner)** `[P]` — front 450 spełnia minimum. Pod ramieniem bez zmian (dostęp bokiem przez RL1, ~202 l na garnki i blachy). Schemat: `kuchnia-wyspa-schemat-v3.10.pdf`.
 - **v3.9 (2026-08-13, decyzja inwestora — wariant A z pkt 9a):** strefa gotowania przesunięta na północ: **DA1 180 (670→850)**, **DA2 indukcja+piekarnik 600 (850→1450)** — front piekarnika kończy się na linii ramienia, otwiera się w pełni. Górne przeliczone: **GA1 670 | GA2 180 | GA3 okap 600 (850→1450) | GA4 500** = 1950. Strefa 1450→1950 pod blatem ramienia = **ślepy narożnik bez frontu**, dostęp bokiem przez RL1. Schemat: `kuchnia-wyspa-schemat-v3.9.pdf`.
 - **v3.8 (2026-08-12, weryfikacja rzutu po uwadze inwestora „ta wizualizacja jest jakby zła"):** wykryta **kolizja ramię ↔ ciąg A** — ramię zajmuje pas y 145–195, więc front ciągu A jest dostępny tylko na 85 cm zamiast zakładanych 135; **27 z 60 cm frontu piekarnika (DA2) zasłonięte**. Poprawione też **RL1+RL2 (118) → RL1 narożna ślepa 58 dostępne** (ramię zaczyna się za frontem ciągu A — wcześniej narożnik liczony dwa razy) i **blat ramienia 1180 → 545**. Warianty rozwiązania: pkt 9a. Schemat: `kuchnia-wyspa-schemat-v3.8.pdf`.
 - **v3.7a (2026-08-12, kontrola zgodności rzut ↔ rozpiska):** poprawiona **numeracja i szerokości górnych na ścianie A** — okap to **GA3 (600, nad DA2 = 1120→1720)**, a nie GA2; GA2 = zwykła 450 nad DA1; dodana blenda górna 230 przy narożniku ramienia. (W v3.6 zapisałem okap zaraz za GA1, co przesuwałoby go nad szuflady zamiast nad indukcję — schemat v3.5 miał to od początku dobrze.)
@@ -99,8 +100,8 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| — | strefa pilastra / narożnik z B | ~670 | martwe pole narożne + **blenda 70 do styku z ciągiem B** | pilaster 155 gł. `[~]`; róg współdzielony z DB0; **moduły stykają się — bez przerwy (odpowiedź na uwagę inwestora: „przerwa" na v3.1 to była ta strefa)** |
-| DA1 | dolna wąska (szuflady/cargo) | **180**×820×560 | 3 szuflady albo cargo 150 + blenda 30 | **670→850**; wariant A z pkt 9a |
+| — | blenda przy pilastrze | ~610 | — | zamyka lico ciągu na odcinku 0→610; za nią pracuje korpus DA1 |
+| DA1 | **narożna ŚLEPA — odzysk martwego pola (v3.10)** | korpus **850×820×405**, **front 240** (610→850) | drzwi + 1 półka | **korpus sięga aż do ściany B i przejmuje róg, który wcześniej był martwym polem ciągu B** → **248 l na garnki, tuż przy indukcji**. Front max 240: szersze drzwi uderzyłyby w korpus ciągu okna (zapas 13 mm) — dlatego **żadne cargo narożne tu nie wejdzie** (magic corner / Le Mans wymagają otwarcia ≥450). Zawias przy stronie południowej; sięg w ślepą część 600 |
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | **850→1450 — front kończy się dokładnie na linii ramienia, piekarnik otwiera się w pełni ✓**; wycięcie 560×490 `[P]`; nisza 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | **ślepy narożnik pod ramieniem** | 1450→1950 × 560 | **bez frontu** | przestrzeń pod blatem ramienia; dostęp bokiem przez RL1 (korpus bez boku zachodniego) |
 | GA1 | górna (nad strefą pilastra) | ~670×998×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
@@ -121,7 +122,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| — | **narożnik zachodni (martwe pole)** | ~600 od ściany A | **BEZ FRONTU** | strefa za ciągiem A — każdy front/wysuw kolidowałby z ciągiem indukcji (błąd cargo z v3.2 usunięty); blat ciągły |
+| — | narożnik zachodni | ~600 od ściany A | **BEZ FRONTU od strony okna** | strefa za ciągiem A — front/wysuw od tej strony kolidowałby z ciągiem indukcji (błąd cargo z v3.2). **Od v3.10 przestrzeń nie jest już martwa: przejmuje ją korpus DA1 (narożna ślepa, dostęp od ciągu A)**; blat ciągły |
 | DB0 | cargo przyprawnik 15 | 150×820×560 | cargo | **600→750 od ściany A** — wysuwa się na wolną przestrzeń wnętrza U ✓ |
 | DB1 | **zlew 80** | 800×820×560 | drzwi, kosz segregacji, chemia | **750→1550 — pod oknem (752→1608) ✓**; zlew 1-komora z ociekaczem |
 | DB2 | **zmywarka 45** | 450 (światło wnęki 450×820+) | front meblowy | **1550→2000** (wschodnia strona zlewu — przed frontem ~125 wolnego ✓); wcina się ~54 w strefę narożnika z C (martwe pole DC1 maleje do ~546 — dopuszczalne) |
@@ -132,7 +133,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| DC1 | narożna ślepa (niska, z blatem) | ~900 (front 450) ×820×560 | półki/karuzela `[?]` | martwe pole w rogu z B; blat w L ciągły z DB |
+| DC1 | narożna ślepa (niska, z blatem) | ~900 (front 450) ×820×560 | **CARGO NAROŻNE (magic corner)** `[P]` | decyzja inwestora 2026-08-13; front 450 spełnia minimum okucia ✓; całe 363 l dostępne bez klękania; ~500–900 zł |
 | — | blenda | ~47 | — | dopełnienie C1 do 947 `[P]` |
 | **GC1** | **górna nad DC1** | ~470×998×**400** | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
 | **GC2** | **górna nad DC1** | ~477×998×**400** | naczynia codzienne | do sufitu; front w linii słupka C2 |

@@ -11,10 +11,10 @@ FR_ORZ = "ciemny orzech mat (front/panel)"
 
 # (nazwa, szer, wys, gł, typ, front_kolor, uwagi)
 MODULES = [
-    ("DA1 dolna wąska", 180, 720, 560, "szuflady3", FR_BEZ, "670→850; 3 szuflady (prowadnice 500) albo cargo 150 + blenda 30"),
+    ("DA1 narożna ślepa", 850, 720, 405, "narozna", FR_BEZ, "korpus od ściany B do 850, gł. 405 (za pilastrem); FRONT 240 (610→850), zawias przy stronie południowej — szerszy uderzyłby w korpus ciągu okna; 1 półka; sięg w ślepą część 600"),
     ("DA2 piekarnik+indukcja", 600, 720, 560, "piekarnik", FR_BEZ, "850→1450 — front kończy się na linii ramienia; nisza 560×590 wg karty; szuflada dolna wewn."),
     ("RL1 ramię narożna ślepa", 1140, 720, 460, "narozna", FR_BEZ, "front 580 (otwierany od północy); martwe pole ~560 pod ramieniem przy ścianie A — bez boku zachodniego, dostęp bokiem"),
-    ("DB0 cargo 15", 150, 720, 560, "cargo", FR_BEZ, "cargo 150 (Rejs/Peka)"),
+    ("DB0 cargo 15", 150, 720, 560, "cargo", FR_BEZ, "cargo 150 (Rejs/Peka); róg na zachód od niego obsługuje już DA1"),
     ("DB1 zlewowa", 800, 720, 560, "zlew", FR_BEZ, "bez pleców pełnych (listwa serwisowa); 2 drzwi"),
     ("DB2 zmywarka 45", 450, 0, 0, "front-agd", FR_BEZ, "tylko front 446×~713 wg karty zmywarki"),
     ("DC1 narożna ślepa", 900, 720, 560, "narozna", FR_BEZ, "front 450; martwe pole przy B; docinana blendą 47"),
@@ -31,7 +31,7 @@ MODULES = [
 PANELE = [
     ("Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową)", 2478, 680, 1, FR_ORZ),
     ("Panel ryflowany ramienia (lamele — dostawca zewn.)", 1180, 910, 1, FR_ORZ),
-    ("Blenda dolna A przy pilastrze (~70)", 70, 756, 1, FR_BEZ),
+    ("Blenda dolna A przy pilastrze (~610 do frontu DA1)", 610, 756, 1, FR_BEZ),
     ("Listwa cokołowa (czarny mat), łącznie ~5 mb", 5000, 150, 1, "czarny mat"),
 ]
 
@@ -113,6 +113,7 @@ out += ["""
 | Cargo spiżarniane wysokie do słupka 280 | 1 kpl | **[DO WERYFIKACJI]** — szerokość niestandard.; alternatywa: półki + drzwi |
 | Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA3 — dobór po zakupie okapu |
 | Nóżki meblowe 150 + klipsy cokołu | 32 + 16 szt | 8 szafek dolnych ×4 |
+| **Cargo narożne (magic corner) do DC1** | 1 kpl | decyzja inwestora 2026-08-13; front 450 ✓ spełnia minimum okucia; ~500–900 zł |
 | Zawieszki regulowane górnych + listwa montażowa | 10 szt + 3 mb | GA1-3, GC1-2 |
 | Konfirmaty 7×50 + kołki 8×35 + wkręty 4×30/4×16 | 1 opak. każde | montaż korpusów |
 | Śruby łącznikowe blatu | 3 kpl | łączenia |

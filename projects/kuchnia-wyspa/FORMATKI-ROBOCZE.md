@@ -6,11 +6,12 @@
 
 | Element | Wymiar (mm) | szt | Płyta/kolor | Obrzeże ABS |
 |---|---|---|---|---|
-| DA1 dolna wąska — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
-| DA1 dolna wąska — dno | 144×560 | 1 | kremowy (korpus) | 0,4 przód |
-| DA1 dolna wąska — trawersy górne | 144×100 | 2 | kremowy (korpus) | 0,4 |
-| DA1 dolna wąska — plecy HDF | 176×716 | 1 | HDF biały | — |
-| DA1 dolna wąska — fronty szuflad | 176×236 | 3 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
+| DA1 narożna ślepa — bok | 405×720 | 2 | kremowy (korpus) | 0,4 mm przód |
+| DA1 narożna ślepa — dno | 814×405 | 1 | kremowy (korpus) | 0,4 przód |
+| DA1 narożna ślepa — trawersy górne | 814×100 | 2 | kremowy (korpus) | 0,4 |
+| DA1 narożna ślepa — plecy HDF | 846×716 | 1 | HDF biały | — |
+| DA1 narożna ślepa — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
+| DA1 narożna ślepa — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
 | DA2 piekarnik+indukcja — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
 | DA2 piekarnik+indukcja — dno | 564×560 | 1 | kremowy (korpus) | 0,4 przód |
 | DA2 piekarnik+indukcja — trawersy górne | 564×100 | 2 | kremowy (korpus) | 0,4 |
@@ -80,17 +81,17 @@
 | C4 nadstawka lodówki — fronty | 327×524 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową) | 2478×680 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
 | Panel ryflowany ramienia (lamele — dostawca zewn.) | 1180×910 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
-| Blenda dolna A przy pilastrze (~70) | 70×756 | 1 | beż/kaszmir mat (front) | 1,0 widoczne |
+| Blenda dolna A przy pilastrze (~610 do frontu DA1) | 610×756 | 1 | beż/kaszmir mat (front) | 1,0 widoczne |
 | Listwa cokołowa (czarny mat), łącznie ~5 mb | 5000×150 | 1 | czarny mat | 1,0 widoczne |
 
 **Szacunek płyt (z zapasem +15% na rozkrój):**
 
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
-| kremowy (korpus) | 19.7 | 22.7 |
+| kremowy (korpus) | 19.9 | 22.9 |
+| HDF biały | 6.4 | 7.4 |
 | ciemny orzech mat (front/panel) | 6.3 | 7.2 |
-| HDF biały | 6.0 | 6.9 |
-| beż/kaszmir mat (front) | 2.4 | 2.7 |
+| beż/kaszmir mat (front) | 3.3 | 3.8 |
 | czarny mat | 0.8 | 0.9 |
 
 ## 2. Blaty (laminat 38 mm, dekor jasny trawertyn [DO WERYFIKACJI w Korner])
@@ -115,6 +116,7 @@
 | Cargo spiżarniane wysokie do słupka 280 | 1 kpl | **[DO WERYFIKACJI]** — szerokość niestandard.; alternatywa: półki + drzwi |
 | Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA3 — dobór po zakupie okapu |
 | Nóżki meblowe 150 + klipsy cokołu | 32 + 16 szt | 8 szafek dolnych ×4 |
+| **Cargo narożne (magic corner) do DC1** | 1 kpl | decyzja inwestora 2026-08-13; front 450 ✓ spełnia minimum okucia; ~500–900 zł |
 | Zawieszki regulowane górnych + listwa montażowa | 10 szt + 3 mb | GA1-3, GC1-2 |
 | Konfirmaty 7×50 + kołki 8×35 + wkręty 4×30/4×16 | 1 opak. każde | montaż korpusów |
 | Śruby łącznikowe blatu | 3 kpl | łączenia |
