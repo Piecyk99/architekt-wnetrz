@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.8 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.9 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -26,7 +26,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.8")
+c.setTitle("Kuchnia U + ramię L — schemat v3.9")
 
 
 class V:
@@ -87,7 +87,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.8 · 2026-08-12 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.9 · 2026-08-12 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -96,7 +96,7 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.8)",
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.9)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa)")
 s = (PH - 64 * mm) / 260.0
 v = V(62 * mm, PH - 27 * mm, s)
@@ -155,25 +155,24 @@ v.text(CX - 35, 166, "+ nadstawka", 4.8, center=True, col=GREY)
 # ciąg A: strefa modułowa od styku z ciągiem B (narożnik domknięty)
 v.rect(0, 60, 60, 7, fill=FILL)
 v.text(66, 66, "blenda (strefa pilastra) — narożnik domknięty", 4.2, col=GREY)
-v.rect(0, 67, 60, 45, fill=FILL)
-v.text(30, 86, "DA1", 5.0, center=True); v.text(30, 95, "45", 5.0, center=True)
-v.rect(0, 112, 60, 60, fill=FILL)
-v.text(30, 134, "DA2 ⊠", 5.0, center=True); v.text(30, 143, "INDUKCJA 60", 4.8, center=True); v.text(30, 152, "piek. pod", 4.6, center=True)
-v.rect(0, 172, 60, 23, fill=colors.HexColor("#e8dcd6"))
-v.text(150, 128, "KOLIZJA: 27 z 60 cm frontu DA2", 5.0, col=RED, bold=True)
-v.text(150, 135, "(piekarnik) zasłonięte ramieniem", 5.0, col=RED)
+v.rect(0, 67, 60, 18, fill=FILL)
+v.text(30, 78, "DA1 18", 4.4, center=True)
+v.rect(0, 85, 60, 60, fill=FILL)
+v.text(30, 107, "DA2 ⊠", 5.0, center=True); v.text(30, 116, "INDUKCJA 60", 4.8, center=True); v.text(30, 125, "piekarnik pod", 4.6, center=True)
+v.text(150, 128, "front piekarnika kończy się", 5.0, col=GREY)
+v.text(150, 135, "dokładnie na linii ramienia ✓", 5.0, col=GREY)
 # ramię L: y = 130..195, x = 0..118 (południowa krawędź w linii 195, naprzeciwko ścianki)
 v.rect(0, AEND - ARM_D, 60, ARM_D, fill=colors.HexColor("#e8dcd6"))     # ślepy narożnik pod ramieniem
-v.line(0, AEND - ARM_D, 60, AEND, 0.5, RED); v.line(0, AEND, 60, AEND - ARM_D, 0.5, RED)
+v.line(0, AEND - ARM_D, 60, AEND, 0.4, GREY); v.line(0, AEND, 60, AEND - ARM_D, 0.4, GREY)
 v.rect(60, AEND - ARM_D, ARM_L - 60, ARM_D, fill=FILL)                   # korpus ramienia (dostępny od północy)
 v.rect(0, AEND - ARM_D - 2, ARM_L + 2, 2, fill=BLAT)
-v.text(30, AEND - 30, "ŚLEPY", 4.4, center=True, col=RED)
-v.text(30, AEND - 24, "NAROŻNIK", 4.4, center=True, col=RED)
+v.text(30, AEND - 30, "ślepy", 4.4, center=True, col=GREY)
+v.text(30, AEND - 24, "narożnik", 4.4, center=True, col=GREY)
 v.text((60 + ARM_L) / 2, AEND - 32, "RAMIĘ L", 5.4, center=True, bold=True)
 v.text((60 + ARM_L) / 2, AEND - 24, "korpus ~58 · gł. 46", 4.4, center=True, col=GREY)
 # linia końca dostępu do ciągu A
-v.line(0, AEND - ARM_D, 60, AEND - ARM_D, 1.1, RED, dash=([3, 2], 0))
-v.text(64, AEND - ARM_D - 2, "← tu KOŃCZY SIĘ dostęp do frontów ciągu A (y=145)", 4.6, col=RED)
+v.line(0, AEND - ARM_D, 60, AEND - ARM_D, 0.9, GREY, dash=([3, 2], 0))
+v.text(64, AEND - ARM_D - 2, "← koniec frontów ciągu A = początek ramienia (y=145)", 4.6, col=GREY)
 v.text(ARM_L / 2, AEND + 7, "rewers: panel ryflowany (salon/korytarz)", 4.6, center=True, col=GREY)
 
 # wymiary
@@ -201,14 +200,14 @@ e = V(60 * mm, PH - 30 * mm, s2)
 H, BL, COK, GD = 247.8, 91.0, 15.0, 148.0
 e.rect(0, 0, 195, H)
 e.rect(0, H - COK, 195, COK, fill=colors.HexColor("#2e2e2e"))
-for x0, w, lab in [(0, 67, "strefa pilastra\n(martwe pole/blenda)"), (67, 45, "DA1\nszuflady"), (112, 60, "DA2 piekarnik\npod indukcją"), (172, 23, "bl.")]:
+for x0, w, lab in [(0, 67, "strefa pilastra\n(martwe pole/blenda)"), (67, 18, ""), (85, 60, "DA2 piekarnik\npod indukcją"), (145, 50, "ślepy narożnik\npod ramieniem")]:
     e.rect(x0, H - BL, w, BL - COK - 4, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.2, center=True)
 e.rect(0, H - BL - 4, 195, 4, fill=BLAT)
-e.line(112, H - BL - 4, 172, H - BL - 4, 2.2, INK)
-e.text(142, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
-for x0, w, lab in [(0, 67, "GA1\n(docinana)"), (67, 45, "GA2"), (112, 60, "GA3 OKAP\nw zabudowie"), (172, 23, "")]:
+e.line(85, H - BL - 4, 145, H - BL - 4, 2.2, INK)
+e.text(115, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
+for x0, w, lab in [(0, 67, "GA1\n245 gł."), (67, 18, ""), (85, 60, "GA3 OKAP\nw zabudowie"), (145, 50, "GA4")]:
     e.rect(x0, 0, w, H - GD, fill=TALL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, (H - GD) / 2 + i * 9, ln, 5.6, center=True, col=colors.white)

@@ -11,16 +11,17 @@ FR_ORZ = "ciemny orzech mat (front/panel)"
 
 # (nazwa, szer, wys, gł, typ, front_kolor, uwagi)
 MODULES = [
-    ("DA1 dolna szufladowa", 450, 720, 560, "szuflady3", FR_BEZ, "3 szuflady (prowadnice 500)"),
-    ("DA2 piekarnik+indukcja", 600, 720, 560, "piekarnik", FR_BEZ, "nisza 560×590 wg karty; szuflada dolna wewn."),
+    ("DA1 dolna wąska", 180, 720, 560, "szuflady3", FR_BEZ, "670→850; 3 szuflady (prowadnice 500) albo cargo 150 + blenda 30"),
+    ("DA2 piekarnik+indukcja", 600, 720, 560, "piekarnik", FR_BEZ, "850→1450 — front kończy się na linii ramienia; nisza 560×590 wg karty; szuflada dolna wewn."),
     ("RL1 ramię narożna ślepa", 1140, 720, 460, "narozna", FR_BEZ, "front 580 (otwierany od północy); martwe pole ~560 pod ramieniem przy ścianie A — bez boku zachodniego, dostęp bokiem"),
     ("DB0 cargo 15", 150, 720, 560, "cargo", FR_BEZ, "cargo 150 (Rejs/Peka)"),
     ("DB1 zlewowa", 800, 720, 560, "zlew", FR_BEZ, "bez pleców pełnych (listwa serwisowa); 2 drzwi"),
     ("DB2 zmywarka 45", 450, 0, 0, "front-agd", FR_BEZ, "tylko front 446×~713 wg karty zmywarki"),
     ("DC1 narożna ślepa", 900, 720, 560, "narozna", FR_BEZ, "front 450; martwe pole przy B; docinana blendą 47"),
     ("GA1 górna", 670, 998, 245, "drzwi2g", FR_ORZ, "wisi na LICU pilastra (155+245=400) — front równo z GA2/GA3"),
-    ("GA2 górna", 450, 998, 400, "drzwi1g", FR_ORZ, "nad DA1 (670→1120)"),
-    ("GA3 okap", 600, 998, 400, "okap", FR_ORZ, "nad DA2 = 1120→1720, wyśrodkowany nad indukcją; konstrukcja wg karty okapu [?]"),
+    ("GA2 górna wąska", 180, 998, 400, "drzwi1g", FR_ORZ, "nad DA1 (670→850); przyprawy"),
+    ("GA3 okap", 600, 998, 400, "okap", FR_ORZ, "nad DA2 = 850→1450, wyśrodkowany nad indukcją; konstrukcja wg karty okapu [?]"),
+    ("GA4 górna", 500, 998, 400, "drzwi1g", FR_ORZ, "1450→1950, nad ramieniem"),
     ("GC1 górna (ociekarka)", 470, 998, 400, "drzwi1g", FR_ORZ, "ociekarka w szafce"),
     ("GC2 górna", 477, 998, 400, "drzwi1g", FR_ORZ, ""),
     ("C2 słupek cargo", 280, 2378, 580, "slupek", FR_ORZ, "cargo 250/300 [DO WERYFIKACJI] lub półki; front dzielony 1300+1074"),
@@ -30,8 +31,7 @@ MODULES = [
 PANELE = [
     ("Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową)", 2478, 680, 1, FR_ORZ),
     ("Panel ryflowany ramienia (lamele — dostawca zewn.)", 1180, 910, 1, FR_ORZ),
-    ("Blenda górna A (nad GA, docinana)", 230, 998, 1, FR_ORZ),
-    ("Blenda dolna A przy ramieniu (~230) + przy pilastrze (~70)", 300, 756, 1, FR_BEZ),
+    ("Blenda dolna A przy pilastrze (~70)", 70, 756, 1, FR_BEZ),
     ("Listwa cokołowa (czarny mat), łącznie ~5 mb", 5000, 150, 1, "czarny mat"),
 ]
 

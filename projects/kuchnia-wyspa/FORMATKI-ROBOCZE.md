@@ -6,11 +6,11 @@
 
 | Element | Wymiar (mm) | szt | Płyta/kolor | Obrzeże ABS |
 |---|---|---|---|---|
-| DA1 dolna szufladowa — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
-| DA1 dolna szufladowa — dno | 414×560 | 1 | kremowy (korpus) | 0,4 przód |
-| DA1 dolna szufladowa — trawersy górne | 414×100 | 2 | kremowy (korpus) | 0,4 |
-| DA1 dolna szufladowa — plecy HDF | 446×716 | 1 | HDF biały | — |
-| DA1 dolna szufladowa — fronty szuflad | 446×236 | 3 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
+| DA1 dolna wąska — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
+| DA1 dolna wąska — dno | 144×560 | 1 | kremowy (korpus) | 0,4 przód |
+| DA1 dolna wąska — trawersy górne | 144×100 | 2 | kremowy (korpus) | 0,4 |
+| DA1 dolna wąska — plecy HDF | 176×716 | 1 | HDF biały | — |
+| DA1 dolna wąska — fronty szuflad | 176×236 | 3 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
 | DA2 piekarnik+indukcja — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
 | DA2 piekarnik+indukcja — dno | 564×560 | 1 | kremowy (korpus) | 0,4 przód |
 | DA2 piekarnik+indukcja — trawersy górne | 564×100 | 2 | kremowy (korpus) | 0,4 |
@@ -43,15 +43,20 @@
 | GA1 górna — plecy HDF | 666×994 | 1 | HDF biały | — |
 | GA1 górna — fronty | 332×996 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA1 górna — półki | 633×300 | 2 | kremowy (korpus) | 0,4 |
-| GA2 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
-| GA2 górna — dno/wieniec | 414×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GA2 górna — plecy HDF | 446×994 | 1 | HDF biały | — |
-| GA2 górna — front | 446×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
-| GA2 górna — półki | 413×300 | 2 | kremowy (korpus) | 0,4 |
+| GA2 górna wąska — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA2 górna wąska — dno/wieniec | 144×400 | 2 | kremowy (korpus) | 0,4 przód |
+| GA2 górna wąska — plecy HDF | 176×994 | 1 | HDF biały | — |
+| GA2 górna wąska — front | 176×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
+| GA2 górna wąska — półki | 143×300 | 2 | kremowy (korpus) | 0,4 |
 | GA3 okap — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GA3 okap — dno/wieniec | 564×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GA3 okap — plecy HDF | 596×994 | 1 | HDF biały | — |
 | GA3 okap — front uchylny (wg okapu) | 596×400 | 1 | ciemny orzech mat (front/panel) | 1,0 [~] |
+| GA4 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA4 górna — dno/wieniec | 464×400 | 2 | kremowy (korpus) | 0,4 przód |
+| GA4 górna — plecy HDF | 496×994 | 1 | HDF biały | — |
+| GA4 górna — front | 496×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
+| GA4 górna — półki | 463×300 | 2 | kremowy (korpus) | 0,4 |
 | GC1 górna (ociekarka) — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GC1 górna (ociekarka) — dno/wieniec | 434×400 | 2 | kremowy (korpus) | 0,4 przód |
 | GC1 górna (ociekarka) — plecy HDF | 466×994 | 1 | HDF biały | — |
@@ -75,18 +80,17 @@
 | C4 nadstawka lodówki — fronty | 327×524 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową) | 2478×680 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
 | Panel ryflowany ramienia (lamele — dostawca zewn.) | 1180×910 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
-| Blenda górna A (nad GA, docinana) | 230×998 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
-| Blenda dolna A przy ramieniu (~230) + przy pilastrze (~70) | 300×756 | 1 | beż/kaszmir mat (front) | 1,0 widoczne |
+| Blenda dolna A przy pilastrze (~70) | 70×756 | 1 | beż/kaszmir mat (front) | 1,0 widoczne |
 | Listwa cokołowa (czarny mat), łącznie ~5 mb | 5000×150 | 1 | czarny mat | 1,0 widoczne |
 
 **Szacunek płyt (z zapasem +15% na rozkrój):**
 
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
-| kremowy (korpus) | 18.8 | 21.7 |
+| kremowy (korpus) | 19.7 | 22.7 |
 | ciemny orzech mat (front/panel) | 6.3 | 7.2 |
-| HDF biały | 5.9 | 6.8 |
-| beż/kaszmir mat (front) | 2.7 | 3.2 |
+| HDF biały | 6.0 | 6.9 |
+| beż/kaszmir mat (front) | 2.4 | 2.7 |
 | czarny mat | 0.8 | 0.9 |
 
 ## 2. Blaty (laminat 38 mm, dekor jasny trawertyn [DO WERYFIKACJI w Korner])

@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.8)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.9)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -17,6 +17,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
 - **v3.4–v3.5 (2026-08-12):** blat **910** `[P]` (wzrost 182); okap **recyrkulacyjny z filtrem węglowym** `[P]` (zakup inwestora — kratka nie warunkuje okapu); **ramię gł. 50** `[P]` (strefa przy zlewie ~85; decyzja po analizie komfortu 65 vs 50).
 - **v3.6 (2026-08-12, foto pomalowanego pomieszczenia + odpowiedź inwestora):** **gzyms/belka 15,5 pod sufitem, po całym obwodzie `[P]`**. Górne szafki **400 gł.** (propozycja inwestora) z wycięciem 160×(Hg+5) w bokach — front przed gzymsem, jedna płaszczyzna do sufitu; wieniec 240, listwa montażowa pod gzymsem. Wycięcia obejmują też **słupek C2 i nadstawkę C4**. **Korekta GA1: 305 → 245** (pilaster wystaje 155, nie 15 — błąd w v3.2). Otwarte: **Hg** oraz **sprzeczność gzyms vs okno do sufitu (11b)**. Detal: `kuchnia-wyspa-detal-gzyms.pdf`.
+- **v3.9 (2026-08-13, decyzja inwestora — wariant A z pkt 9a):** strefa gotowania przesunięta na północ: **DA1 180 (670→850)**, **DA2 indukcja+piekarnik 600 (850→1450)** — front piekarnika kończy się na linii ramienia, otwiera się w pełni. Górne przeliczone: **GA1 670 | GA2 180 | GA3 okap 600 (850→1450) | GA4 500** = 1950. Strefa 1450→1950 pod blatem ramienia = **ślepy narożnik bez frontu**, dostęp bokiem przez RL1. Schemat: `kuchnia-wyspa-schemat-v3.9.pdf`.
 - **v3.8 (2026-08-12, weryfikacja rzutu po uwadze inwestora „ta wizualizacja jest jakby zła"):** wykryta **kolizja ramię ↔ ciąg A** — ramię zajmuje pas y 145–195, więc front ciągu A jest dostępny tylko na 85 cm zamiast zakładanych 135; **27 z 60 cm frontu piekarnika (DA2) zasłonięte**. Poprawione też **RL1+RL2 (118) → RL1 narożna ślepa 58 dostępne** (ramię zaczyna się za frontem ciągu A — wcześniej narożnik liczony dwa razy) i **blat ramienia 1180 → 545**. Warianty rozwiązania: pkt 9a. Schemat: `kuchnia-wyspa-schemat-v3.8.pdf`.
 - **v3.7a (2026-08-12, kontrola zgodności rzut ↔ rozpiska):** poprawiona **numeracja i szerokości górnych na ścianie A** — okap to **GA3 (600, nad DA2 = 1120→1720)**, a nie GA2; GA2 = zwykła 450 nad DA1; dodana blenda górna 230 przy narożniku ramienia. (W v3.6 zapisałem okap zaraz za GA1, co przesuwałoby go nad szuflady zamiast nad indukcję — schemat v3.5 miał to od początku dobrze.)
 - **v3.7 (2026-08-12, korekta po uwadze inwestora „ten gzyms idzie pionowo"):** element 15,5 ze zdjęcia to **PIONOWY PILASTER na całą wysokość**, a nie belka/gzyms pod sufitem — mój błąd w odczycie zdjęcia. **Odwołane z v3.6:** wycięcia 160×(Hg+5) w bokach GA2/GA3/GC1/GC2/C2/C4, wieniec 240, listwa „pod gzymsem", pytanie o Hg oraz sprzeczność „gzyms vs okno do sufitu" (pkt 11b — usunięty; okno idzie do sufitu bez przeszkód). **W mocy zostaje:** górne 400 gł. (uzasadnienie: GA1 na licu pilastra = 245) oraz korekta GA1 305 → 245. Otwarte: **długość uskoku wzdłuż ściany** (pkt 11.11). Detal: `kuchnia-wyspa-detal-pilaster.pdf` (zastępuje odwołany `kuchnia-wyspa-detal-gzyms.pdf`).
@@ -94,18 +95,18 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 
 Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[P]` (laminat 38; wzrost 182); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy ~998 **do sufitu 2478**; fronty bezuchwytowe (frez/gola).
 
-### Ściana A — ciąg z indukcją (1950 `[P]` OD ŚCIANY B; strefa modułowa ~1280 po odjęciu pilastra 670):
+### Ściana A — ciąg z indukcją (1950 `[P]` OD ŚCIANY B; **fronty dolne dostępne tylko 670→1450 = 780**, dalej ślepy narożnik pod ramieniem):
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
 | — | strefa pilastra / narożnik z B | ~670 | martwe pole narożne + **blenda 70 do styku z ciągiem B** | pilaster 155 gł. `[~]`; róg współdzielony z DB0; **moduły stykają się — bez przerwy (odpowiedź na uwagę inwestora: „przerwa" na v3.1 to była ta strefa)** |
-| DA1 | dolna szuflady | 450×820×560 | 3 szuflady | od 670 |
-| DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | wycięcie 560×490 `[P]`; nisza piekarnika 560×590–600; górna szuflada płytsza (płyta 5,6) |
-| — | blenda | ~230 | — | dopina ciąg do 1950 / narożnika ramienia; szerokości DA1/DA2/blendy do przestawienia wg pozycji puszki siłowej `[?]` |
+| DA1 | dolna wąska (szuflady/cargo) | **180**×820×560 | 3 szuflady albo cargo 150 + blenda 30 | **670→850**; wariant A z pkt 9a |
+| DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | **850→1450 — front kończy się dokładnie na linii ramienia, piekarnik otwiera się w pełni ✓**; wycięcie 560×490 `[P]`; nisza 560×590–600; górna szuflada płytsza (płyta 5,6) |
+| — | **ślepy narożnik pod ramieniem** | 1450→1950 × 560 | **bez frontu** | przestrzeń pod blatem ramienia; dostęp bokiem przez RL1 (korpus bez boku zachodniego) |
 | GA1 | górna (nad strefą pilastra) | ~670×998×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
-| GA2 | górna | ~450×998×**400** | półki | nad DA1 (670→1120); dół 1480, do sufitu |
-| GA3 | **okap w zabudowie** | 600×998×**400** | front uchylny | **nad DA2 = 1120→1720, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
-| — | blenda górna | ~230 | — | domyka ciąg do 1950 (narożnik ramienia); do zamiany na wąską szafkę 230, jeśli inwestor woli |
+| GA2 | górna wąska | **180**×998×**400** | półki / przyprawy | nad DA1 (670→850) |
+| GA3 | **okap w zabudowie** | 600×998×**400** | front uchylny | **nad DA2 = 850→1450, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
+| GA4 | górna | **500**×998×**400** | półki | 1450→1950, nad ramieniem (górne są na 1480, więc ramienia nie dotykają) |
 
 ### Ramię L („wyspa" — skręt blatu na końcu ciągu A, **~1180×500 `[P gł.]`**, południowa krawędź w linii 1950):
 
@@ -192,14 +193,14 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 4. Ewentualne gniazdo w ramieniu L — doprowadzenie w podłodze **przed posadzką docelową**.
 5. Wymiary pionowe finalnie **po posadzce docelowej**.
 
-## 9a. KOLIZJA ramię ↔ ciąg A — do decyzji inwestora `[?]` (wykryta v3.8)
+## 9a. Kolizja ramię ↔ ciąg A — ROZWIĄZANA wariantem A `[P]` (inwestor, 2026-08-13)
 
 Ramię (gł. 50, południowa krawędź w linii 195) zajmuje pas y 145–195. Front ciągu A jest więc dostępny **tylko na 85 cm** (y 60→145; moduły od 67, bo do 67 sięga pilaster → **78 cm na moduły**). Plan zakładał 135 cm. Skutki: **piekarnik w DA2 (112–172) ma 27 cm frontu za ramieniem**, a blenda 172–195 jest w całości w ślepym narożniku.
 
 Warianty:
-- **A) Przesunąć strefę gotowania na północ** (rekomendacja): DA1 wąskie ~18 przy pilastrze (67–85) + **DA2 60 (85–145)**. Piekarnik w pełni dostępny, płyta przy wewnętrznym narożniku L, okap GA3 przesuwa się nad 85–145. Ramię i przejście 60 bez zmian.
-- **B) Piekarnik do słupka C2** (zabudowa wysoka, na wysokości oczu — wygodniejsze przy schylaniu): pod płytą tylko szuflady, ciąg A dostaje 78 cm szuflad. Koszt: słupek traci cargo/spiżarkę.
-- **C) Zmniejszyć głębokość ramienia 50 → 30:** ciąg A odzyskuje 20 cm (dostęp 105). Koszt: ramię przestaje być użytecznym blatem, robi się półka; strefa przy zlewie rośnie do ~105.
+- **A) Przesunąć strefę gotowania na północ — WYBRANE `[P]`:** DA1 wąskie **180** przy pilastrze (670–850) + **DA2 600 (850–1450)**. Front piekarnika kończy się dokładnie na linii ramienia → otwiera się w pełni ✓. Okap GA3 przesunięty nad 850–1450. Ramię, przejście 60 i reszta układu bez zmian.
+- ~~B) Piekarnik do słupka C2~~ (odrzucone) (zabudowa wysoka, na wysokości oczu — wygodniejsze przy schylaniu): pod płytą tylko szuflady, ciąg A dostaje 78 cm szuflad. Koszt: słupek traci cargo/spiżarkę.
+- ~~C) Zmniejszyć głębokość ramienia 50 → 30~~ (odrzucone) — ciąg A odzyskuje 20 cm (dostęp 105). Koszt: ramię przestaje być użytecznym blatem, robi się półka; strefa przy zlewie rośnie do ~105.
 
 ## 9. Ryzyka
 
