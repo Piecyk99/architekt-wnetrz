@@ -131,7 +131,12 @@ v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=
 v.rect(0, 67, 15.5, 18, fill=colors.HexColor("#e3ddd2"))   # pustka za korpusem, poniżej pilastra
 v.rect(15.5, 0, 40.5, 85, fill=FILL)                       # DA1 narożna ślepa (korpus do ściany B)
 v.line(15.5, 0, 56, 61, 0.4, GREY); v.line(15.5, 61, 56, 0, 0.4, GREY)   # część ślepa
-v.line(56, 61, 56, 85, 1.0, GREY, dash=([2, 2], 0))        # szerokość frontu
+v.rect(56, 0, 4, 61, fill=colors.HexColor("#d8cfc2"))      # BLENDA zamykająca lico części ślepej
+v.rect(56, 61, 4, 24, fill=BLAT)                           # DRZWI 240
+v.line(56, 61, 60, 61, 0.8, GREY)
+v.text(62, 88, "wyżej: blenda zamykająca lico", 4.0, col=GREY)
+v.text(62, 93, "ślepej części DA1", 4.0, col=GREY)
+v.text(62, 76, "← drzwi 24", 4.2, col=GREY)
 v.text(36, 30, "DA1", 5.0, center=True)
 v.text(36, 38, "narożna ślepa", 4.4, center=True)
 v.text(36, 45, "korpus 85×40,5", 4.2, center=True, col=GREY)
