@@ -111,7 +111,11 @@
 |---|---|---|
 | Zawiasy puszkowe 110° z prowadnikiem (Blum ClipTop / GTV) | **36 szt** | fronty dolne 2 szt/front, górne ~996 mm 3 szt/front; w tym zapas ~10% |
 | Zawiasy 155° (do narożnej DC1) | 2 szt | szeroki kąt przy ślepej |
-| Prowadnice szuflad 500 z pełnym wysuwem i dociągiem (Blum Tandembox/GTV Modern Box) | **4 kpl** | DA1 ×3 + DA2 szuflada dolna ×1 |
+| **System szuflad z metalowymi bokami, nom. 400** (GTV Modern Box / Rejs / Blum Tandembox) | **3 kpl** | RL1 ramię — korpus 300 szer., 460 gł.; górna niska (H≈86) pod wkład na sztućce, dwie M (≈135) |
+| **System szuflad z metalowymi bokami, nom. 500** | 1 kpl | DA2 — szuflada pod piekarnikiem, korpus 600 szer., 560 gł. |
+| **System szuflad z metalowymi bokami, nom. 450** | 2 kpl | DC1 — szuflady wewnętrzne za drzwiami, ~300 szer., 546 gł. |
+| **Wkład na sztućce 300** | 1 szt | do górnej szuflady RL1 |
+| — dlaczego metalowe boki, a nie kulkowe: | — | przy metalowych bokach **nie budujesz skrzynki z płyty** (odpadają 4 formatki i problem kątów prostych na szufladę) — dokupujesz tylko dno i front; cichy domyk w standardzie. Nominały prowadnic **[do potwierdzenia w karcie producenta]** — muszą być ≤ głębokości korpusu |
 | Cargo 150 (Rejs/Peka) | 1 kpl | DB0 |
 | Cargo spiżarniane wysokie do słupka 280 | 1 kpl | **[DO WERYFIKACJI]** — szerokość niestandard.; alternatywa: półki + drzwi |
 | Podnośnik frontu okapu (Aventos HK-S lub wg okapu) | 1 kpl | GA3 — dobór po zakupie okapu |
