@@ -67,14 +67,16 @@ Reguły:
   ile wystaje i jaki ma zasięg (długość/wysokość);
 - element ze zdjęcia bez potwierdzonych liczb ma status `[?]`, nie `[P]`.
 
-## 6. Zanim odpiszesz — pięć pytań
+## 6. Zanim odpiszesz — sześć pytań
 
 1. Czy każdy front ma się gdzie otworzyć?
-0. Czy po przebudowie modułu nie zniknęła funkcja, którą obiecywał plan funkcjonalny? (przebudowa szafki szufladowej na narożną ślepą kasuje miejsce na sztućce — sprawdź tabelę „co w której szafce", czy nie opisuje modułów, których już nie ma)
 2. Czy okap jest nad płytą, a zlew nie nad zmywarką?
 3. Czy sumy modułów zgadzają się z wymiarem ściany?
 4. Czy któraś przestrzeń jest liczona dwa razy?
-5. Czy obejrzałem wygenerowany rysunek?
+5. **Czy po przebudowie modułu nie zniknęła funkcja, którą obiecywał plan funkcjonalny?**
+   Przebudowa szafki szufladowej na narożną ślepą kasuje miejsce na sztućce. Sprawdź tabelę
+   „co w której szafce" — czy nie opisuje modułów, których już nie ma.
+6. Czy obejrzałem wygenerowany rysunek?
 
 ## 7. Gdy inwestor mówi „coś tu jest nie tak"
 
