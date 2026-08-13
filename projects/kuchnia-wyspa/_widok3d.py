@@ -1,0 +1,223 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""Widok aksonometryczny kuchni — „wizualizacja" rysunkowa w kolorach z palety.
+
+Dwa ujęcia (kuchnia w U — z jednego rogu zawsze coś zasłania):
+  str. 1 — od korytarza, od strony lodówki: ciąg z indukcją, okap, zlew
+  str. 2 — od korytarza, od strony indukcji: ściana z lodówką, słupek, ramię
+
+Rysowane z tych samych wymiarów co _kontrola.py.
+
+    python3 _widok3d.py kuchnia-wyspa-widok-3D.pdf
+"""
+import math
+import sys
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.units import mm
+from reportlab.lib import colors
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.pdfgen import canvas
+
+OUT = sys.argv[1] if len(sys.argv) > 1 else "kuchnia-wyspa-widok-3D.pdf"
+FD = "/usr/share/fonts/truetype/dejavu/"
+pdfmetrics.registerFont(TTFont("DVS", FD + "DejaVuSans.ttf"))
+pdfmetrics.registerFont(TTFont("DVS-B", FD + "DejaVuSans-Bold.ttf"))
+PW, PH = A4
+
+BEZ      = colors.HexColor("#d9cbb3")
+ORZECH   = colors.HexColor("#6b4f35")
+ANTRACYT = colors.HexColor("#3a3d40")
+BLAT     = colors.HexColor("#e8e0d4")
+COKOL    = colors.HexColor("#2a2a2a")
+PODLOGA  = colors.HexColor("#d9c3a2")
+SCIANA   = colors.HexColor("#e9e5dd")
+RYFLE    = colors.HexColor("#4a3a2c")
+SZKLO    = colors.HexColor("#eef3f6")
+INK      = colors.HexColor("#1a1a1a")
+GREY     = colors.HexColor("#8a8a8a")
+WOOD     = colors.HexColor("#8a6a4a")
+CIEMNY   = colors.HexColor("#2f3336")
+BRAZ     = colors.HexColor("#5a4028")
+
+CX, CY, H = 2546, 1950, 2478
+BLAT_H, COKOL_H, KORPUS_Z, GORNE_Z0 = 910, 150, 870, 1480
+
+c = canvas.Canvas(OUT, pagesize=A4)
+c.setTitle("Kuchnia U + ramię L — widok aksonometryczny")
+
+S = 0.042
+OX, OY = 86 * mm, 152 * mm
+COS30 = math.cos(math.radians(30))
+MIRROR = False
+
+
+def T(x):
+    return (CX - x) if MIRROR else x
+
+
+def PR(tx, y, z):
+    return (OX + (tx - y) * COS30 * S * mm, OY + (z - (tx + y) * 0.5) * S * mm)
+
+
+def P(x, y, z):
+    return PR(T(x), y, z)
+
+
+def mix(col, f):
+    r, g, b = col.red, col.green, col.blue
+    if f >= 0:
+        return colors.Color(r + (1 - r) * f, g + (1 - g) * f, b + (1 - b) * f)
+    return colors.Color(r * (1 + f), g * (1 + f), b * (1 + f))
+
+
+def wielokat(pts, kolor, obrys=True):
+    p = c.beginPath()
+    p.moveTo(*pts[0])
+    for q in pts[1:]:
+        p.lineTo(*q)
+    p.close()
+    c.setFillColor(kolor)
+    if obrys:
+        c.setStrokeColor(mix(kolor, -0.45))
+        c.setLineWidth(0.35)
+    c.drawPath(p, stroke=1 if obrys else 0, fill=1)
+
+
+def rysuj_bryle(x0, y0, z0, x1, y1, z1, kolor):
+    a0, a1 = sorted((T(x0), T(x1)))
+    wielokat([PR(a0, y0, z1), PR(a1, y0, z1), PR(a1, y1, z1), PR(a0, y1, z1)], mix(kolor, 0.20))
+    wielokat([PR(a1, y0, z0), PR(a1, y1, z0), PR(a1, y1, z1), PR(a1, y0, z1)], mix(kolor, -0.10))
+    wielokat([PR(a0, y1, z0), PR(a1, y1, z0), PR(a1, y1, z1), PR(a0, y1, z1)], mix(kolor, -0.24))
+
+
+def etykieta(x, y, z, txt, dx=0, dy=0, kolor=INK, bold=True, rozm=6.6):
+    px, py = P(x, y, z)
+    c.setFillColor(kolor)
+    c.setFont("DVS-B" if bold else "DVS", rozm)
+    c.drawString(px + dx * mm, py + dy * mm, txt)
+
+
+def zabudowa():
+    b = [("pilaster", 0, 0, 0, 155, 670, H, mix(SCIANA, -0.14))]
+    b += [("A", 0, 0, 0, 560, 1450, COKOL_H, COKOL),
+          ("A", 155, 0, COKOL_H, 560, 850, KORPUS_Z, BEZ),
+          ("A", 0, 850, COKOL_H, 560, 1450, KORPUS_Z, BEZ),
+          ("A", 0, 0, KORPUS_Z, 600, 1450, BLAT_H, BLAT)]
+    b += [("B", 155, 0, 0, 2000, 600, COKOL_H, COKOL),
+          ("B", 155, 0, COKOL_H, 2000, 600, KORPUS_Z, BEZ),
+          ("B", 1550, 585, COKOL_H, 2000, 600, KORPUS_Z, mix(BEZ, -0.07)),
+          ("B", 155, 0, KORPUS_Z, 2546, 635, BLAT_H, BLAT)]
+    b += [("C", 2000, 0, 0, 2546, 945, COKOL_H, COKOL),
+          ("C", 2000, 0, COKOL_H, 2546, 945, KORPUS_Z, BEZ),
+          ("wieza", 1946, 945, COKOL_H, 2546, 1225, 2378, ORZECH),
+          ("wieza", 1946, 1225, 0, 2546, 1885, 1900, ANTRACYT),
+          ("wieza", 1946, 1225, 1900, 2546, 1885, H, ANTRACYT),
+          ("wieza", 1776, 1885, 0, 2546, 1975, 300, mix(ANTRACYT, 0.06))]
+    b += [("R", 0, 1450, 0, 1176, 1950, COKOL_H, COKOL),
+          ("R", 0, 1450, COKOL_H, 1176, 1950, KORPUS_Z, BEZ),
+          ("R", 0, 1940, COKOL_H, 1176, 1950, KORPUS_Z, RYFLE),
+          ("R", 0, 1450, KORPUS_Z, 1176, 1950, BLAT_H, BLAT)]
+    b += [("GA", 155, 0, GORNE_Z0, 400, 670, H, ORZECH),
+          ("GA", 0, 670, GORNE_Z0, 400, 850, H, ORZECH),
+          ("GA", 0, 850, GORNE_Z0, 400, 1450, H, ORZECH),
+          ("GA", 0, 1450, GORNE_Z0, 400, 1950, H, ORZECH),
+          ("GC", 2146, 0, GORNE_Z0, 2546, 945, H, ORZECH)]
+    return b
+
+
+def strona(mirror, tytul, podtytul, opisy, pomin=()):
+    global MIRROR
+    MIRROR = mirror
+
+    c.setFillColor(WOOD)
+    c.setFont("DVS-B", 12.5)
+    c.drawString(15 * mm, PH - 18 * mm, tytul)
+    c.setFillColor(GREY)
+    c.setFont("DVS", 7.4)
+    c.drawString(15 * mm, PH - 23.5 * mm, podtytul)
+    c.setStrokeColor(WOOD)
+    c.setLineWidth(1.1)
+    c.line(15 * mm, PH - 26.5 * mm, PW - 15 * mm, PH - 26.5 * mm)
+
+    wielokat([P(0, 0, 0), P(CX, 0, 0), P(CX, CY, 0), P(0, CY, 0)], PODLOGA, obrys=False)
+    wielokat([P(0, 0, 0), P(CX, 0, 0), P(CX, 0, H), P(0, 0, H)], SCIANA)
+    wielokat([P(752, 0, 1661), P(1608, 0, 1661), P(1608, 0, H), P(752, 0, H)], SZKLO)
+    c.setStrokeColor(colors.HexColor("#9aa4ab"))
+    c.setLineWidth(0.6)
+    c.line(*P(1180, 0, 1661), *P(1180, 0, H))
+    bok = CX if mirror else 0
+    wielokat([P(bok, 0, 0), P(bok, CY, 0), P(bok, CY, H), P(bok, 0, H)], mix(SCIANA, -0.07))
+
+    widoczne = [b for b in zabudowa() if b[0] not in pomin]
+    for nm, x0, y0, z0, x1, y1, z1, kol in sorted(
+            widoczne, key=lambda b: (min(T(b[1]), T(b[4])) + b[2], b[3])):
+        rysuj_bryle(x0, y0, z0, x1, y1, z1, kol)
+
+    if "A" not in pomin:
+        wielokat([P(60, 864, BLAT_H + 2), P(620, 864, BLAT_H + 2),
+                  P(620, 1436, BLAT_H + 2), P(60, 1436, BLAT_H + 2)], colors.HexColor("#23262a"))
+    wielokat([P(820, 120, BLAT_H + 2), P(1480, 120, BLAT_H + 2),
+              P(1480, 520, BLAT_H + 2), P(820, 520, BLAT_H + 2)], colors.HexColor("#2b2b2b"))
+    c.setStrokeColor(mix(BEZ, -0.4))
+    c.setLineWidth(0.5)
+    for zz in (COKOL_H + 240, COKOL_H + 480):
+        c.line(*P(576, 1950, zz), *P(1176, 1950, zz))
+    c.line(*P(876, 1950, COKOL_H), *P(876, 1950, KORPUS_Z))
+
+    for x, y, z, txt, kw in opisy:
+        etykieta(x, y, z, txt, **kw)
+
+    LY = 44 * mm
+    c.setFillColor(WOOD)
+    c.setFont("DVS-B", 8.5)
+    c.drawString(15 * mm, LY + 6 * mm, "MATERIAŁY (paleta zaakceptowana — pkt 10 planu)")
+    for i, (kol, opis) in enumerate([
+            (BEZ, "fronty dolne — beż/kaszmir CIEPŁY mat, bezuchwytowe"),
+            (ORZECH, "górne + słupek — ciemny orzech mat, do sufitu"),
+            (ANTRACYT, "zabudowa lodówki + ścianka — antracyt ≈ RAL 7016"),
+            (BLAT, "blat — jasny trawertyn, laminat 38"),
+            (RYFLE, "rewers ramienia — panel ryflowany ciemny (od salonu)"),
+            (PODLOGA, "podłoga — jasny dąb · ściany NCS S 2002-Y")]):
+        yy = LY - i * 5.6 * mm
+        c.setFillColor(kol)
+        c.setStrokeColor(mix(kol, -0.4))
+        c.setLineWidth(0.4)
+        c.rect(15 * mm, yy - 1 * mm, 7 * mm, 4 * mm, stroke=1, fill=1)
+        c.setFillColor(INK)
+        c.setFont("DVS", 7.2)
+        c.drawString(25 * mm, yy, opis)
+
+    c.setFillColor(GREY)
+    c.setFont("DVS", 6.3)
+    c.drawString(15 * mm, 10 * mm,
+                 "Rysunek aksonometryczny (nie perspektywa) · ścianka przy lodówce ścięta do 30 cm, "
+                 "żeby nie zasłaniała wnętrza · wymiary z modelu sprawdzonego kontrolą · 2026-08-13")
+    c.showPage()
+
+
+strona(False,
+       "WIDOK PRZESTRZENNY 1/2 — strefa gotowania i zmywania",
+       "Patrzysz od korytarza, od strony lodówki. Widać fronty ciągu z indukcją i ciągu okna.",
+       [(0, 1150, H + 40, "GA3 — OKAP", dict(dx=-19, dy=1, kolor=BRAZ)),
+        (0, 300, H + 40, "GA1 / GA2 — górne do sufitu", dict(dx=-30, dy=6, kolor=BRAZ)),
+        (300, 1150, BLAT_H + 30, "INDUKCJA 60", dict(dx=-13, dy=0)),
+        (1150, 300, BLAT_H + 30, "ZLEW pod oknem", dict(dx=-14, dy=2)),
+        (1780, 600, BLAT_H + 30, "ZMYWARKA 45", dict(dx=-2, dy=-3)),
+        (1176, 1950, KORPUS_Z, "RAMIĘ L — szuflady na sztućce", dict(dx=2, dy=-2)),
+        (155, 300, BLAT_H, "DA1 — narożna ślepa (garnki)", dict(dx=-36, dy=-4, bold=False, kolor=GREY))],
+       pomin=("wieza",))
+
+strona(True,
+       "WIDOK PRZESTRZENNY 2/2 — ściana z lodówką",
+       "Ten sam pokój, obejście na drugą stronę. Widać fronty ściany z lodówką, słupek i ramię od korytarza.",
+       [(2546, 1885, H, "LODÓWKA W ANTRACYCIE", dict(dx=-2, dy=3, kolor=CIEMNY)),
+        (2546, 1225, 2378, "SŁUPEK / SPIŻARKA", dict(dx=-2, dy=3, kolor=BRAZ)),
+        (2546, 945, H, "GC1 / GC2 — górne do sufitu", dict(dx=-2, dy=6, kolor=BRAZ)),
+        (2000, 700, BLAT_H + 30, "DC1 — szuflady wewnętrzne", dict(dx=-6, dy=2)),
+        (1150, 300, BLAT_H + 30, "ZLEW pod oknem", dict(dx=-8, dy=2)),
+        (0, 1950, KORPUS_Z, "RAMIĘ — rewers ryflowany od salonu", dict(dx=-8, dy=-6))],
+       pomin=("GA",))
+
+c.save()
+print("OK:", OUT)
