@@ -32,8 +32,9 @@ FRONT_GR = 19
 
 
 class Modul:
-    def __init__(self, nazwa, x0, y0, x1, y1, lico=None, front=None, typ="dolna", okucie=None):
+    def __init__(self, nazwa, x0, y0, x1, y1, lico=None, front=None, typ="dolna", okucie=None, funkcje=()):
         self.nazwa, self.typ, self.okucie = nazwa, typ, okucie
+        self.funkcje = tuple(funkcje)
         self.x0, self.y0, self.x1, self.y1 = x0, y0, x1, y1
         self.lico = lico            # 'E','W','N','S' — z której strony jest front
         self.front = front          # (od, do) wzdłuż ściany; None = brak frontu (ślepe)
@@ -53,12 +54,13 @@ CIAG_A = [
 ]
 # --- ramię L (razem ze ślepym narożnikiem pod nim) -----------------------------
 RAMIE = [
-    Modul("RL1 ramię narożna ślepa", 0, 1450, 1176, 1950, lico="N", front=(576, 1176)),
+    Modul("RL1 ramię: drzwi 300 + szuflady 300", 0, 1450, 1176, 1950, lico="N",
+          front=(576, 1176), funkcje=("sztućce", "przybory")),
 ]
 # --- ciąg B (okno), głębokość 600, lico na y=600 -------------------------------
 CIAG_B = [
-    Modul("DB0 cargo 15", 600, 0, 750, 600, lico="S", front=(600, 750), typ="szuflady"),
-    Modul("DB1 zlew 80", 750, 0, 1550, 600, lico="S", front=(750, 1550)),
+    Modul("DB0 cargo 15", 600, 0, 750, 600, lico="S", front=(600, 750), typ="szuflady", funkcje=("przyprawy",)),
+    Modul("DB1 zlew 80", 750, 0, 1550, 600, lico="S", front=(750, 1550), funkcje=("kosz segregacji",)),
     Modul("DB2 zmywarka 45", 1550, 0, 2000, 600, lico="S", front=(1550, 2000), typ="AGD"),
 ]
 # --- ciąg C (lodówka), lico na x=2000 dla DC1 ----------------------------------
@@ -287,8 +289,27 @@ def k8_okucia():
                        f"a front ma {W} mm")
 
 
+FUNKCJE_OBOWIAZKOWE = {"sztućce": 250, "kosz segregacji": 450, "przyprawy": 100}
+
+
+def k9_funkcje():
+    """Przebudowa modułu nie może po cichu skasować funkcji kuchni (np. szuflady na sztućce)."""
+    dostepne = {}
+    for m in [x for g in (CIAG_A, RAMIE, CIAG_B, CIAG_C) for x in g]:
+        for f in m.funkcje:
+            dostepne.setdefault(f, []).append(m)
+    for f, minim in FUNKCJE_OBOWIAZKOWE.items():
+        kand = dostepne.get(f, [])
+        if not kand:
+            blad("K9", f"brak miejsca na \u201e{f}\u201d — żaden moduł nie ma tej funkcji")
+            continue
+        naj = max((m.front[1] - m.front[0]) for m in kand if m.front)
+        if naj < minim:
+            blad("K9", f"\u201e{f}\u201d: najszerszy front {naj} mm, potrzeba >= {minim} mm")
+
+
 KONTROLE = [k1_sumy, k2_nakladki, k3_otwieranie, k4_okap,
-            k5_lico_gornych, k6_przejscia, k7_lico_ciagu, k8_okucia]
+            k5_lico_gornych, k6_przejscia, k7_lico_ciagu, k8_okucia, k9_funkcje]
 
 
 def uruchom(naglowek="KONTROLA GEOMETRII — kuchnia U + ramię L"):

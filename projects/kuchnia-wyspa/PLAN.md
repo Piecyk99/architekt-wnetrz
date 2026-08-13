@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.11)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.12)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -17,6 +17,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 - **v3.3 (2026-08-12, weryfikacja całości po uwadze inwestora o cargo):** **cargo przy pilastrze usunięte — wysuw kolidował z ciągiem A** (strefa 0→600 od ściany A na ciągu okna = martwe pole narożne, bez frontów). Nowy układ B: martwe pole | cargo 15 (600→750) | **zlew 80 pod oknem (750→1550)** | **zmywarka 45 po wschodniej stronie zlewu (1550→2000)**. Dodane ryzyka: blenda dystansowa ~7 między lodówką a ścianką (wysięg 77 > lico zabudowy 70 — drzwi >90°); kierunek ew. drzwi w otworze do salonu vs ramię `[?]`.
 - **v3.4–v3.5 (2026-08-12):** blat **910** `[P]` (wzrost 182); okap **recyrkulacyjny z filtrem węglowym** `[P]` (zakup inwestora — kratka nie warunkuje okapu); **ramię gł. 50** `[P]` (strefa przy zlewie ~85; decyzja po analizie komfortu 65 vs 50).
 - **v3.6 (2026-08-12, foto pomalowanego pomieszczenia + odpowiedź inwestora):** **gzyms/belka 15,5 pod sufitem, po całym obwodzie `[P]`**. Górne szafki **400 gł.** (propozycja inwestora) z wycięciem 160×(Hg+5) w bokach — front przed gzymsem, jedna płaszczyzna do sufitu; wieniec 240, listwa montażowa pod gzymsem. Wycięcia obejmują też **słupek C2 i nadstawkę C4**. **Korekta GA1: 305 → 245** (pilaster wystaje 155, nie 15 — błąd w v3.2). Otwarte: **Hg** oraz **sprzeczność gzyms vs okno do sufitu (11b)**. Detal: `kuchnia-wyspa-detal-gzyms.pdf`.
+- **v3.12 (2026-08-13, pytanie inwestora „a miejsce na widelce?"):** **luka funkcjonalna wykryta i naprawiona** — po przebudowie DA1 na narożną ślepą (v3.10) w całej kuchni nie został ani jeden front szufladowy, a plan funkcjonalny wciąż przypisywał sztućce do nieistniejącej „DA1 45". **Front ramienia (600) podzielony: drzwi 300 (dostęp do martwego pola pod ramieniem) + 3 szuflady 300 z wkładem na sztućce.** Do kontroli dodany **K9 — funkcje obowiązkowe** (sztućce ≥250, kosz segregacji ≥450, przyprawy ≥100), żeby przebudowa modułu nie kasowała po cichu funkcji kuchni. Zaktualizowany plan funkcjonalny (pkt 5a) — usunięte wiersze opisujące moduły, których już nie ma.
 - **v3.11 (2026-08-13, uruchomienie automatycznej kontroli geometrii `_kontrola.py`):** dodany skrypt z 8 kontrolami; **regresja potwierdza wykrycie 5/5 błędów z historii projektu**. Kontrola wykryła **nowy błąd: front DC1 ma 345 mm, a nie 450** (pas 0→600 lica zasłonięty korpusem zmywarki) → **cargo narożne obiecane inwestorowi 2026-08-13 NIE mieści się** (magic corner wymaga ≥450); zamiast niego **2 szuflady wewnętrzne ~300**. Poprawiono też ramię 1180 → **1176**, żeby przejście miało pełne 600, a nie 596. Protokół weryfikacji trafił do skilla: `skills/zabudowa-na-wymiar/references/protokol-weryfikacji.md`.
 - **v3.10 (2026-08-13, odzysk martwych pól — pytanie inwestora „czy nie da się tego uzupełnić na garnki"):** **DA1 przebudowana na narożną ślepą**: korpus 850×405 sięga aż do ściany B i przejmuje róg, który był martwym polem ciągu okna → **248 l użytecznej przestrzeni tuż przy indukcji**. Sprawdzone: **cargo narożne tam NIE wejdzie** — maksymalny front to 240 mm (szersze drzwi uderzają w korpus ciągu okna, zapas 13 mm), a magic corner/Le Mans wymagają ≥450. **DC1 dostaje cargo narożne (magic corner)** `[P]` — front 450 spełnia minimum. Pod ramieniem bez zmian (dostęp bokiem przez RL1, ~202 l na garnki i blachy). Schemat: `kuchnia-wyspa-schemat-v3.10.pdf`.
 - **v3.9 (2026-08-13, decyzja inwestora — wariant A z pkt 9a):** strefa gotowania przesunięta na północ: **DA1 180 (670→850)**, **DA2 indukcja+piekarnik 600 (850→1450)** — front piekarnika kończy się na linii ramienia, otwiera się w pełni. Górne przeliczone: **GA1 670 | GA2 180 | GA3 okap 600 (850→1450) | GA4 500** = 1950. Strefa 1450→1950 pod blatem ramienia = **ślepy narożnik bez frontu**, dostęp bokiem przez RL1. Schemat: `kuchnia-wyspa-schemat-v3.9.pdf`.
@@ -114,7 +115,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 
 | Nr | Moduł | Szer.×Wys.×Gł. | Front / wnętrze | Uwagi |
 |---|---|---|---|---|
-| RL1 | **dolna narożna ŚLEPA** | ~1140×820×460 (front 580) | drzwi od północy (wnętrze U) | **korekta v3.8:** korpus ramienia zaczyna się dopiero za frontem ciągu A (x=60) → dostępna szerokość 118−60 = **58**; strefa 0–60 × 145–195 to **ślepy narożnik** pod ramieniem (bez boku zachodniego, dostęp bokiem). Poprzednio RL1+RL2 = 118 → liczyło ten narożnik drugi raz |
+| RL1 | **dolna narożna ŚLEPA + szuflady** | ~1176×820×460 (front 600: drzwi 300 + szuflady 300) | drzwi od północy (wnętrze U) | **korekta v3.8:** korpus ramienia zaczyna się dopiero za frontem ciągu A (x=60) → dostępna szerokość 118−60 = **58**; strefa 0–60 × 145–195 to **ślepy narożnik** pod ramieniem (bez boku zachodniego, dostęp bokiem). Poprzednio RL1+RL2 = 118 → liczyło ten narożnik drugi raz |
 | — | **KOLIZJA `[?]`** | — | — | **front ciągu A jest dostępny tylko na odcinku y 60→145 = 85 cm**, a moduły planu sumują się do 135 → **27 z 60 cm frontu DA2 (piekarnik) zasłonięte ramieniem**. Do rozstrzygnięcia przez inwestora — warianty w pkt 9a |
 | — | blat ramienia | ~1180×500×38 | — | w L z blatem DA (łączenie frezowane/listwa); wieniec na końcu od przejścia |
 | — | panel ryflowany | ~1180×910 | — | rewers: od salonu (południe) i od korytarza |
@@ -154,16 +155,16 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | DB0 cargo 15 (za linią ciągu A) | przyprawy w butelkach, oleje, ocet — wysuw na wolną przestrzeń ✓ |
 | DB1 zlew 80 | kosze segregacji, chemia, akcesoria zlewu |
 | DB2 zmywarka 45 | — |
-| narożnik zachodni B (martwe pole) | bez frontu — przestrzeń stracona konstrukcyjnie (ew. dostęp rewizyjny od DA1) |
-| DC1 narożna | garnki duże, rondle, rzadziej używane (karuzela/półki obrotowe `[?]`) |
+| narożnik zachodni B | **nie jest już stracony** — przejęty przez korpus DA1 (v3.10), dostęp od ciągu A |
+| DC1 narożna (front 345) | 2 szuflady wewnętrzne: sztućce zapasowe, sztućce serwisowe (1 krok od zmywarki); część ślepa północna ~236 l: rzadko używane |
 | C2 słupek cargo ~28 | spiżarnia pionowa: przetwory, butelki, suche zapasy |
 | C3/C4 lodówka + nadstawka | lodówka; nadstawka: zapasy sezonowe, rzadko używany sprzęt |
-| DA1 45 | sztućce (górna szuflada), przybory, deski (środkowa), pojemniki (dolna) |
+| DA1 narożna ślepa (front 240) | **garnki i duże naczynia — 248 l tuż przy indukcji** (v3.10); dostęp drzwiami + sięg w głąb |
 | DA2 60 | piekarnik + szuflada na blachy/formy (dolna, płytsza — płyta 5,6 nad nią) |
 | GA1 (nad pilastrem, docinana) | zapasy lekkie, rzadko używane |
-| GA2 45 | herbaty, kawa, cukier — strefa śniadaniowa nad blatem |
+| GA2 18 | herbaty, kawa, cukier — wąska, nad DA1 |
 | GA3 okap 60 | okap; nad nim antresola na rzeczy sezonowe |
-| RL1+RL2 (ramię, gł. 46) | garnki i patelnie codzienne (2 kroki od indukcji), miski, drobny AGD; blat ramienia (50) = strefa odstawcza/śniadaniowa |
+| **RL1 ramię — front dzielony (v3.12)** | **SZUFLADY 300: górna = sztućce (wkład), środkowa = przybory i noże, dolna = pojemniki**; DRZWI 300 obok: dostęp bokiem do martwego pola pod ramieniem (~202 l — patelnie, blachy, ciężki sprzęt). Blat ramienia (50) = strefa odstawcza/śniadaniowa |
 
 ## 6. Rozpisanie pionowe (sufit 2478 `[P]`)
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.11 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.12 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -26,7 +26,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.11")
+c.setTitle("Kuchnia U + ramię L — schemat v3.12")
 
 
 class V:
@@ -87,7 +87,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.11 · 2026-08-13 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.12 · 2026-08-13 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -96,7 +96,7 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.11)",
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.12)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa)")
 s = (PH - 64 * mm) / 260.0
 v = V(62 * mm, PH - 27 * mm, s)
@@ -176,7 +176,7 @@ v.rect(0, AEND - ARM_D - 2, ARM_L + 2, 2, fill=BLAT)
 v.text(30, AEND - 30, "ślepy", 4.4, center=True, col=GREY)
 v.text(30, AEND - 24, "narożnik", 4.4, center=True, col=GREY)
 v.text((60 + ARM_L) / 2, AEND - 32, "RAMIĘ L", 5.4, center=True, bold=True)
-v.text((60 + ARM_L) / 2, AEND - 24, "korpus ~58 · gł. 46", 4.4, center=True, col=GREY)
+v.text((60 + ARM_L) / 2, AEND - 24, "drzwi 30 + SZUFLADY 30 (sztućce) · gł. 46", 4.2, center=True, col=GREY)
 # linia końca dostępu do ciągu A
 v.line(0, AEND - ARM_D, 60, AEND - ARM_D, 0.9, GREY, dash=([3, 2], 0))
 v.text(64, AEND - ARM_D - 2, "← koniec frontów ciągu A = początek ramienia (y=145)", 4.6, col=GREY)

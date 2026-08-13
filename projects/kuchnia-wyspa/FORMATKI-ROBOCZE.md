@@ -18,12 +18,12 @@
 | DA2 piekarnik+indukcja — plecy HDF | 596×716 | 1 | HDF biały | — |
 | DA2 piekarnik+indukcja — front szuflady dolnej | 596×110 | 1 | beż/kaszmir mat (front) | 1,0 |
 | DA2 piekarnik+indukcja — trawers nośny piekarnika | 564×560 | 1 | kremowy (korpus) | 0,4 |
-| RL1 ramię narożna ślepa — bok | 460×720 | 2 | kremowy (korpus) | 0,4 mm przód |
-| RL1 ramię narożna ślepa — dno | 1140×460 | 1 | kremowy (korpus) | 0,4 przód |
-| RL1 ramię narożna ślepa — trawersy górne | 1140×100 | 2 | kremowy (korpus) | 0,4 |
-| RL1 ramię narożna ślepa — plecy HDF | 1172×716 | 1 | HDF biały | — |
-| RL1 ramię narożna ślepa — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
-| RL1 ramię narożna ślepa — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
+| RL1 ramię narożna ślepa + szuflady — bok | 460×720 | 2 | kremowy (korpus) | 0,4 mm przód |
+| RL1 ramię narożna ślepa + szuflady — dno | 1140×460 | 1 | kremowy (korpus) | 0,4 przód |
+| RL1 ramię narożna ślepa + szuflady — trawersy górne | 1140×100 | 2 | kremowy (korpus) | 0,4 |
+| RL1 ramię narożna ślepa + szuflady — plecy HDF | 1172×716 | 1 | HDF biały | — |
+| RL1 ramię narożna ślepa + szuflady — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
+| RL1 ramię narożna ślepa + szuflady — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
 | DB0 cargo 15 — bok | 560×720 | 2 | kremowy (korpus) | 0,4 mm przód |
 | DB0 cargo 15 — dno | 114×560 | 1 | kremowy (korpus) | 0,4 przód |
 | DB0 cargo 15 — trawersy górne | 114×100 | 2 | kremowy (korpus) | 0,4 |

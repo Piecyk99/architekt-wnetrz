@@ -33,6 +33,7 @@ Skopiuj do projektu i dopasuj model. Sprawdza:
 | K6 | przejścia ≥ próg zaakceptowany przez inwestora | ciche zejście z 60 na 59,6 |
 | K7 | lico ciągu domknięte frontem albo blendą | biała przerwa na rzucie = brakująca blenda |
 | K8 | okucia mieszczą się w otworze (cargo narożne ≥450, karuzela ≥450) | obiecane cargo, które fizycznie nie wejdzie |
+| K9 | funkcje obowiązkowe nadal mają swój moduł (sztućce ≥250, kosz segregacji ≥450, przyprawy ≥100) | przebudowa modułu, która po cichu kasuje szuflady na sztućce |
 
 `python3 _kontrola.py` → PASS/FAIL. `--regresja` odgrywa historyczne błędy i dowodzi,
 że testy je łapią. **FAIL = nie wysyłasz rysunku.**
@@ -69,6 +70,7 @@ Reguły:
 ## 6. Zanim odpiszesz — pięć pytań
 
 1. Czy każdy front ma się gdzie otworzyć?
+0. Czy po przebudowie modułu nie zniknęła funkcja, którą obiecywał plan funkcjonalny? (przebudowa szafki szufladowej na narożną ślepą kasuje miejsce na sztućce — sprawdź tabelę „co w której szafce", czy nie opisuje modułów, których już nie ma)
 2. Czy okap jest nad płytą, a zlew nie nad zmywarką?
 3. Czy sumy modułów zgadzają się z wymiarem ściany?
 4. Czy któraś przestrzeń jest liczona dwa razy?

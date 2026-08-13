@@ -13,7 +13,7 @@ FR_ORZ = "ciemny orzech mat (front/panel)"
 MODULES = [
     ("DA1 narożna ślepa", 850, 720, 405, "narozna", FR_BEZ, "korpus od ściany B do 850, gł. 405 (za pilastrem); FRONT 240 (610→850), zawias przy stronie południowej — szerszy uderzyłby w korpus ciągu okna; 1 półka; sięg w ślepą część 600"),
     ("DA2 piekarnik+indukcja", 600, 720, 560, "piekarnik", FR_BEZ, "850→1450 — front kończy się na linii ramienia; nisza 560×590 wg karty; szuflada dolna wewn."),
-    ("RL1 ramię narożna ślepa", 1176, 720, 460, "narozna", FR_BEZ, "front 600 (otwierany od północy); martwe pole ~560 pod ramieniem przy ścianie A — bez boku zachodniego, dostęp bokiem"),
+    ("RL1 ramię narożna ślepa + szuflady", 1176, 720, 460, "narozna", FR_BEZ, "front 600 DZIELONY: drzwi 300 (od zachodu — dostęp bokiem do martwego pola ~560 pod ramieniem) + 3 SZUFLADY 300 (od wschodu; górna z wkładem na sztućce)"),
     ("DB0 cargo 15", 150, 720, 560, "cargo", FR_BEZ, "cargo 150 (Rejs/Peka); róg na zachód od niego obsługuje już DA1"),
     ("DB1 zlewowa", 800, 720, 560, "zlew", FR_BEZ, "bez pleców pełnych (listwa serwisowa); 2 drzwi"),
     ("DB2 zmywarka 45", 450, 0, 0, "front-agd", FR_BEZ, "tylko front 446×~713 wg karty zmywarki"),
