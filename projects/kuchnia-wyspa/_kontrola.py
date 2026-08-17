@@ -10,6 +10,8 @@ Sprawdza klasy błędów, które realnie wystąpiły w tym projekcie:
   5. górne na jednej ścianie w różnych płaszczyznach frontu
   6. przejścia poniżej progu decyzji inwestora
   7. dziura w licu ciągu (nieopisany fragment = biała przerwa na rzucie)
+  8. okucie narożne szersze niż front, brak funkcji obowiązkowej
+  9. zawiasy: strona niewybrana albo dwa sąsiednie skrzydła na tej samej krawędzi
 
 Uruchomienie:  python3 _kontrola.py            → raport PASS/FAIL
                python3 _kontrola.py --regresja → dowód, że testy łapią dawne błędy
@@ -32,8 +34,11 @@ FRONT_GR = 19
 
 
 class Modul:
-    def __init__(self, nazwa, x0, y0, x1, y1, lico=None, front=None, typ="dolna", okucie=None, funkcje=()):
+    def __init__(self, nazwa, x0, y0, x1, y1, lico=None, front=None, typ="dolna", okucie=None,
+                 funkcje=(), zawias=None):
         self.nazwa, self.typ, self.okucie = nazwa, typ, okucie
+        self.zawias = zawias        # współrzędna osi obrotu wzdłuż ciągu, "para" = zawiasy
+                                    # na obu końcach frontu, None = NIE WYBRANO
         self.funkcje = tuple(funkcje)
         self.x0, self.y0, self.x1, self.y1 = x0, y0, x1, y1
         self.lico = lico            # 'E','W','N','S' — z której strony jest front
@@ -49,32 +54,37 @@ class Modul:
 
 # --- ciąg A (indukcja), głębokość 560, lico na x=560 ---------------------------
 CIAG_A = [
-    Modul("DA1 narożna ślepa", 155, 0, 560, 850, lico="E", front=(610, 850)),
+    Modul("DA1 narożna ślepa", 155, 0, 560, 850, lico="E", front=(610, 850), zawias=850),
     Modul("DA2 indukcja+piekarnik", 0, 850, 560, 1450, lico="E", front=(850, 1450), typ="uchylny"),   # piekarnik opada, szuflada się wysuwa
 ]
 # --- ramię L (razem ze ślepym narożnikiem pod nim) -----------------------------
 RAMIE = [
     Modul("RL1 ramię: drzwi 300 + szuflady 300", 0, 1450, 1176, 1950, lico="N",
-          front=(576, 1176), funkcje=("sztućce", "przybory")),
+          front=(576, 1176), funkcje=("sztućce", "przybory"), zawias=876),
 ]
 # --- ciąg B (okno), głębokość 600, lico na y=600 -------------------------------
 CIAG_B = [
     Modul("DB0 cargo 15", 600, 0, 750, 600, lico="S", front=(600, 750), typ="szuflady", funkcje=("przyprawy",)),
-    Modul("DB1 zlew 80", 750, 0, 1550, 600, lico="S", front=(750, 1550), funkcje=("kosz segregacji",)),
+    Modul("DB1 zlew 80", 750, 0, 1550, 600, lico="S", front=(750, 1550),
+          funkcje=("kosz segregacji",), zawias="para"),
     Modul("DB2 zmywarka 45", 1550, 0, 2000, 600, lico="S", front=(1550, 2000), typ="AGD"),
 ]
 # --- ciąg C (lodówka), lico na x=2000 dla DC1 ----------------------------------
 CIAG_C = [
-    Modul("DC1 narożna ślepa", 2000, 0, 2546, 945, lico="W", front=(600, 945), okucie="szuflady wewnętrzne"),
+    Modul("DC1 narożna ślepa", 2000, 0, 2546, 945, lico="W", front=(600, 945),
+          okucie="szuflady wewnętrzne", zawias=945),
     Modul("C2 słupek cargo", 1946, 945, 2546, 1225, lico="W", front=(945, 1225), typ="szuflady"),
-    Modul("C3 lodówka", 1946, 1225, 2546, 1885, lico="W", front=(1225, 1885), typ="AGD"),
+    Modul("C3 lodówka", 1946, 1225, 2546, 1885, lico="W", front=(1225, 1885), typ="AGD",
+          zawias=1225),   # wariant A [P] — zawiasy przełożone na stronę słupka
 ]
 # --- górne na ścianie A (dół 1480, do sufitu) ----------------------------------
 GORNE_A = [
-    Modul("GA1 (na licu pilastra)", 155, 0, 400, 670, lico="E", front=(0, 670), typ="górna"),
-    Modul("GA2", 0, 670, 400, 850, lico="E", front=(670, 850), typ="górna"),
-    Modul("GA3 okap", 0, 850, 400, 1450, lico="E", front=(850, 1450), typ="górna"),
-    Modul("GA4", 0, 1450, 400, 1950, lico="E", front=(1450, 1950), typ="górna"),
+    Modul("GA1 (na licu pilastra)", 155, 0, 400, 670, lico="E", front=(0, 670), typ="górna",
+          zawias="para"),
+    Modul("GA2 wąska 180", 0, 670, 400, 850, lico="E", front=(670, 850), typ="górna",
+          zawias=850),   # 670 zajęte przez prawe skrzydło GA1
+    Modul("GA3 okap", 0, 850, 400, 1450, lico="E", front=(850, 1450), typ="uchylny"),
+    Modul("GA4", 0, 1450, 400, 1950, lico="E", front=(1450, 1950), typ="górna", zawias=1950),
 ]
 
 # blendy zamykające lico tam, gdzie nie ma frontu (muszą domknąć każdy ciąg)
@@ -308,8 +318,45 @@ def k9_funkcje():
             blad("K9", f"\u201e{f}\u201d: najszerszy front {naj} mm, potrzeba >= {minim} mm")
 
 
+
+# Moduły, które NIE mają skrzydła na zawiasach bocznych (nie wymagają decyzji):
+BEZ_ZAWIASOW = ("szuflady", "AGD", "uchylny")
+
+
+def _osie_zawiasow(m):
+    """Zbiór współrzędnych osi obrotu wzdłuż ciągu."""
+    if m.zawias is None:
+        return set()
+    if m.zawias == "para":
+        return {m.front[0], m.front[1]}
+    return {m.zawias}
+
+
+def k10_zawiasy():
+    """Strona zawiasu musi być WYBRANA (Korner wierci puszki 35 wg strony)
+    i dwa sąsiadujące skrzydła nie mogą wisieć na tej samej krawędzi —
+    otwarte jednocześnie leżą w tej samej płaszczyźnie i zderzają się."""
+    wszystkie = [x for g in (CIAG_A, RAMIE, CIAG_B, CIAG_C, GORNE_A) for x in g]
+
+    for m in wszystkie:
+        if m.front and m.typ not in BEZ_ZAWIASOW and m.zawias is None:
+            ostrz(f"{m.nazwa}: NIE WYBRANO strony zawiasu — bez tego nie da się "
+                  f"zamówić nawiertów CNC (puszki 35)")
+
+    for nazwa, (mods, os, od, do) in CIAGI.items():
+        z_frontem = sorted([m for m in mods if m.front], key=lambda m: m.front[0])
+        for a, b in zip(z_frontem, z_frontem[1:]):
+            if abs(a.front[1] - b.front[0]) > 1:
+                continue                      # nie sąsiadują
+            krawedz = a.front[1]
+            if krawedz in _osie_zawiasow(a) and krawedz in _osie_zawiasow(b):
+                blad("K10", f"{nazwa}: {a.nazwa} i {b.nazwa} mają zawiasy na tej samej "
+                            f"krawędzi {krawedz} — otwarte skrzydła zderzą się")
+
+
 KONTROLE = [k1_sumy, k2_nakladki, k3_otwieranie, k4_okap,
-            k5_lico_gornych, k6_przejscia, k7_lico_ciagu, k8_okucia, k9_funkcje]
+            k5_lico_gornych, k6_przejscia, k7_lico_ciagu, k8_okucia, k9_funkcje,
+            k10_zawiasy]
 
 
 def uruchom(naglowek="KONTROLA GEOMETRII — kuchnia U + ramię L"):
@@ -375,6 +422,27 @@ def regresja():
     bledy.clear(); k7_lico_ciagu()
     wyniki.append(("v3.10 niedomknięte lico DA1", bool(bledy), "K7"))
     BLENDY["ciąg A"] = stare_bl
+
+    # (6) 2026-08-13: GA2 z zawiasem na krawędzi 670 — zderza się z prawym
+    #     skrzydłem GA1 (GA1 ma zawiasy "para", czyli także na 670)
+    stary = GORNE_A[1].zawias
+    GORNE_A[1].zawias = 670
+    bledy.clear(); k10_zawiasy()
+    wyniki.append(("v3.13 GA2 zawias na wspólnej krawędzi z GA1", bool(bledy), "K10"))
+    GORNE_A[1].zawias = stary
+
+    # (7) 2026-08-13: gdyby C2 dostał DRZWI zamiast cargo — nie ma dla nich strony:
+    #     945 zderza się z DC1, 1225 zderza się z drzwiami lodówki (wariant A)
+    c2 = CIAG_C[1]
+    st_typ, st_zaw = c2.typ, c2.zawias
+    c2.typ = "dolna"
+    obie = []
+    for proba in (945, 1225):
+        c2.zawias = proba
+        bledy.clear(); k10_zawiasy()
+        obie.append(bool(bledy))
+    c2.typ, c2.zawias = st_typ, st_zaw
+    wyniki.append(("v3.13 C2 na drzwiach — obie strony zajęte", all(obie), "K10"))
 
     zlapane = sum(1 for _, z, _ in wyniki if z)
     for opis, z, kod in wyniki:

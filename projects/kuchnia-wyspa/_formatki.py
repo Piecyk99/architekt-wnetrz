@@ -110,6 +110,29 @@ for (nm, w, h) in BLATY:
 out += ["""
 Łączenia blatów: 3 (narożnik A/B przy pilastrze, narożnik B/C1, A/ramię) — frez + śruby łącznikowe 3 kpl, silikon. Wycięcia: indukcja **560×490** [P] w blacie A, zlew wg szablonu w blacie B — samodzielnie wyrzynarką (krawędzie zabezpieczyć silikonem) albo CNC przy rozkroju.
 
+## 2a. STRONY ZAWIASÓW — do zamówienia nawiertów CNC (puszki 35)
+
+Korner wierci puszki **wg strony**, więc bez tej tabeli nie da się złożyć zamówienia CNC.
+Strony dobrane tak, żeby dwa sąsiadujące skrzydła nie wisiały na wspólnej krawędzi —
+otwarte leżą wtedy w jednej płaszczyźnie i zderzają się (kontrola **K10**).
+
+| Moduł | Front (mm) | Oś zawiasu | Dlaczego ta strona |
+|---|---|---|---|
+| DA1 narożna ślepa | 610–850 | **850** (południe) | szersze otwarcie w stronę ślepego rogu |
+| DA2 indukcja+piekarnik | 850–1450 | — | drzwi piekarnika opadają, szuflada się wysuwa |
+| RL1 ramię — drzwi 300 | 576–876 | **876** (wschód) | otwarte skrzydło odsłania dojście do martwego pola na zachód |
+| RL1 ramię — 3 szuflady | 876–1176 | — | szuflady |
+| DB0 cargo 15 | 600–750 | — | cargo wysuwane |
+| DB1 zlew 80 | 750–1550 | **750 i 1550** (para) | dwa skrzydła spotykają się w środku |
+| DB2 zmywarka 45 | 1550–2000 | — | drzwi AGD, zawias dolny |
+| DC1 narożna ślepa | 600–945 | **945** | otwarte skrzydło odsłania dojście do ślepej części przy ścianie B |
+| C2 słupek | 945–1225 | **BRAK — musi być cargo** | 945 zajmuje DC1, 1225 zajmują drzwi lodówki → na drzwi nie ma wolnej strony |
+| C3 lodówka | 1225–1885 | **1225** (strona słupka) | wariant A `[P]` — zawiasy przełożone; przy ściance skrzydło się nie otwiera |
+| GA1 górna | 0–670 | **0 i 670** (para) | dwa skrzydła |
+| GA2 wąska 180 | 670–850 | **850** (od okapu) | 670 zajmuje prawe skrzydło GA1 |
+| GA3 okap | 850–1450 | — | front uchylny do góry |
+| GA4 górna | 1450–1950 | **1950** (zewnętrzna krawędź ciągu) | otwiera się od strony korytarza, nie nad płytę |
+
 ## 3. Okucia — lista zakupowa (Korner korner.pl: Blum/GTV/Rejs w ofercie)
 
 | Pozycja | Ilość | Uwagi |

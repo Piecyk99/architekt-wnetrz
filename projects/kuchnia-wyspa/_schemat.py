@@ -229,16 +229,18 @@ for x0, w, lab in [(0, 61, "blenda\n(pilaster)"), (61, 24, "DA1\ndrzwi"), (85, 6
 e.rect(0, H - BL - 4, 195, 4, fill=BLAT)
 e.line(85, H - BL - 4, 145, H - BL - 4, 2.2, INK)
 e.text(115, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
-for x0, w, lab in [(0, 67, "GA1\n245 gł."), (67, 18, ""), (85, 60, "GA3 OKAP\nw zabudowie"), (145, 50, "GA4")]:
+for x0, w, lab, rozm in [(0, 67, "GA1\n245 gł.", 5.6), (67, 18, "GA2\n18\nbutelki", 4.0),
+                         (85, 60, "GA3 OKAP\nw zabudowie", 5.6), (145, 50, "GA4", 5.6)]:
     e.rect(x0, 0, w, H - GD, fill=TALL)
     for i, ln in enumerate(lab.split("\n")):
-        e.text(x0 + w / 2, (H - GD) / 2 + i * 9, ln, 5.6, center=True, col=colors.white)
+        e.text(x0 + w / 2, (H - GD) / 2 + i * 9, ln, rozm, center=True, col=colors.white)
 e.text(97, H - GD + 8, "LED 3000K pod górnymi", 5, center=True, col=GREY)
 e.dimh(0, 195, H, "195 [P] (od ściany B, z pilastrem)", off=14, size=5.4)
 e.dimv(0, H, 0, "248,1 [P]", off=-14)
 e.dimv(H - BL, H, 195, "91 [P]", off=12)
 e.dimv(H - GD, H - BL - 4, 195, "≥55 okap–indukcja", off=12, size=5)
 e.dimv(0, H - GD, 195, "górne 98,9 do 246,9", off=22, size=5)
+e.text(0, H + 34, "GA2 (18 szer.) to najwęższa szafka ciągu — zawias od strony okapu; jej bok siada dokładnie na końcu pilastra [pomiar!]", 5.4, col=GREY)
 e.text(0, H + 26, "na końcu ciągu blat skręca w ramię L (~118×50, wys. 91) — wspólny blat, wieniec na końcu; front ryflowany od salonu", 5.4, col=GREY)
 c.showPage()
 

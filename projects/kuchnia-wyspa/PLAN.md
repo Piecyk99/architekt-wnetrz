@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13a)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.13a (2026-08-13, pytanie inwestora „a ten mały pasek między GA1 a GA3?"):** pasek na elewacji A to **GA2 — szafka 180**, tylko **bez podpisu na rysunku** (mój błąd w rysunku, nie w geometrii). Podpisana. Przy okazji policzone i zapisane: światło wewnętrzne **144**, realny zasięg w głąb ~250 z 400 → zawartość zmieniona z „przypraw" na **butelki ustawiane rzędem** + listwa na przyprawy na drzwiach. Wykryte dwie rzeczy, których wcześniej w dokumencie nie było: **(a)** lewy bok GA2 siada dokładnie na czole pilastra — to najczulszy moduł na pomiar pilastra; **(b) w całym projekcie nie była wybrana ani jedna strona zawiasu**, a Korner wierci puszki 35 wg strony. Strony dobrane dla wszystkich skrzydeł i dodana kontrola **K10** (strona wybrana + brak dwóch zawiasów na wspólnej krawędzi). K10 od razu wykazała, że **C2 nie może mieć drzwi** — obie jego krawędzie są zajęte. Regresja: **7/7**.
 
 - **v3.13 (2026-08-13, pomiary inwestora + decyzja o zawiasach):** trzy rzeczy naraz.
   **(1) Sufit zmierzony po ułożeniu posadzki:** 2481 / 2483 / 2485 dalmierzem Bosch GLM 40 → **do zabudowy przyjęte 2481** (najmniejszy), fuga przysufitowa 12 → **góra zabudowy 2469**. *Moja wcześniejsza prognoza była błędna — zapowiadałem, że po podłodze sufit spadnie poniżej 2478; wyszedł wyższy o 3–7 mm.* Przeliczony cały pion (pkt 6): **górne 998 → 989**, **słupek C2 2378 → 2319** (to zamyka usterkę **P0-03** — 2378 + 150 nóżek = 2528 przebijało sufit), **nadstawka C4 519 → 419**. Trzy niezależne łańcuchy ściany C domykają się na 2469.
@@ -114,7 +116,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | **850→1450 — front kończy się dokładnie na linii ramienia, piekarnik otwiera się w pełni ✓**; wycięcie 560×490 `[P]`; nisza 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | **ślepy narożnik pod ramieniem** | 1450→1950 × 560 | **bez frontu** | przestrzeń pod blatem ramienia; dostęp bokiem przez RL1 (korpus bez boku zachodniego) |
 | GA1 | górna (nad strefą pilastra) | ~670×989×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
-| GA2 | górna wąska | **180**×989×**400** | półki / przyprawy | nad DA1 (670→850) |
+| GA2 | górna wąska | **180**×989×**400** | 3 półki + listwa na przyprawy na drzwiach | nad DA1 (670→850). **Światło wewnętrzne 144 szer.** Przy 400 gł. sięgasz realnie 250 w głąb → zawartość: **butelki (oliwa, ocet, sosy)** ustawiane rzędem jedna za drugą — rozpoznajesz je po kształcie i wyjmujesz przednią. **Zawias 850 (od strony okapu)** `[P]` — krawędź 670 zajmuje prawe skrzydło GA1, dwa zawiasy na jednej krawędzi = zderzenie (kontrola K10). **Jej lewy bok siada dokładnie na końcu pilastra** — patrz ryzyko poniżej |
 | GA3 | **okap w zabudowie** | 600×989×**400** | front uchylny | **nad DA2 = 850→1450, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
 | GA4 | górna | **500**×989×**400** | półki | 1450→1950, nad ramieniem (górne są na 1480, więc ramienia nie dotykają) |
 
@@ -146,7 +148,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | — | blenda | ~47 | — | dopełnienie C1 do 947 `[P]` |
 | **GC1** | **górna nad DC1** | ~470×989×**400** | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
 | **GC2** | **górna nad DC1** | ~477×989×**400** | naczynia codzienne | do sufitu; front w linii słupka C2 |
-| C2 | **słupek cargo/spiżarka** | ~280×2319×580 | cargo wysokie | od 947; do sufitu |
+| C2 | **słupek cargo/spiżarka** | ~280×2319×580 | **cargo wysokie — OBOWIĄZKOWO, nie półki z drzwiami** | od 947; góra 2469. **Drzwi tu nie wejdą**: krawędź 945 zajmuje skrzydło DC1, krawędź 1225 zajmują drzwi lodówki (wariant A) — nie ma wolnej strony na zawias (kontrola K10) |
 | C3 | **zabudowa lodówki** | ~660 światło (lodówka 600+luzy) | — | lodówka wolnostojąca **60×65×200** `[P]` przy ściance; wentylacja 50 tył+góra; **zawiasy przełożone na stronę słupka C2** `[P]` (wariant A, pkt 9) |
 | C4 | nadstawka nad lodówką | ~660×**419**×580 | drzwi | **od 2050 do 2469** (lodówka 2000 + luz 50); kratka wentylacyjna; **podparcie nadstawki `[?]`** — lodówka wolnostojąca nie jest zabudowana, więc C4 musi wisieć na bokach/ścianie, nie stać na lodówce |
 | — | ŚCIANKA | na 1885 `[P]` | — | bok zabudowy dosunięty; **zawiasy lodówki NIE przy ściance** — przełożone na stronę słupka C2 (wariant A `[P]`), skrzydło odchyla się od ścianki, zapas 60 mm |
@@ -233,6 +235,8 @@ Warianty:
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
+| **Lewy bok GA2 ląduje dokładnie na końcu pilastra (y = 670)** | GA1 jest 245 gł. (wisi na licu pilastra), GA2 jest 400 gł. (wisi na gołej ścianie). Tylne 155 mm boku GA2 dosuwa się do czoła pilastra. Jeśli pilaster ma **mniej niż 670** długości — zostaje szczelina za bokiem (kosmetyczna, niewidoczna). Jeśli **więcej niż 670** — bok GA2 nie wejdzie i trzeba go podciąć. **To najczulszy moduł na pomiar pilastra (pkt 11.11).** Zamawiać bok GA2 dopiero po pomiarze |
+| **Zawiasy: sąsiednie skrzydła na jednej krawędzi** | dodana kontrola **K10** — wykrywa, że dwa fronty wiszą na tej samej krawędzi (otwarte leżą w jednej płaszczyźnie i się zderzają). Skutek dla projektu: **GA2 zawias 850**, nie 670 (670 zajmuje prawe skrzydło GA1). **Dla C2 nie ma wolnej krawędzi wcale**: 945 zajmuje DC1, 1225 zajmują drzwi lodówki (wariant A) → **C2 MUSI być cargo/szuflady, wariant „lub półki z drzwiami" ODPADA** |
 | Pozycja indukcji vs puszka siłowa | DA2 pozycjonowany do wypustu; kolejność DA1/DA2 może się zamienić |
 | Suma łańcucha C (947+280+660 ≈ 1887 vs 1885) | luzy w blendzie przy C1; pomiar łańcuchowy przed zamówieniem |
 | Kratka wentylacyjna w strefie zabudowy | pomiar; kratka rewizyjna w zabudowie |
