@@ -220,7 +220,7 @@ Warianty:
 | Suma łańcucha C (947+280+660 ≈ 1887 vs 1885) | luzy w blendzie przy C1; pomiar łańcuchowy przed zamówieniem |
 | Kratka wentylacyjna w strefie zabudowy | pomiar; kratka rewizyjna w zabudowie |
 | **Gzyms/podciąg pod sufitem (foto 2026-08-12, pomalowane pomieszczenie)** — koliduje z pasmem górnych 1480–2478 | 3 pomiary (przebieg po ścianach, wystawanie, dolna krawędź od podłogi) → wybór wariantu: A) wycięcie w bokach (wystawanie ≤ ~6 cm), B) szafki kończone POD gzymsem (korpus niższy, gzyms jako „korona"), C) korpusy pogłębione o wystawanie — front przed gzymsem do sufitu; szczegóły w pkt 11a |
-| Posadzka zmieni wysokości | wszystkie pionowe po posadzce |
+| ~~Posadzka zmieni wysokości~~ | **ZAMKNIĘTE 2026-08-13 — podłoga położona.** Wszystkie pionowe do pomiaru TERAZ; sufit 2478 `[?]` był mierzony na wylewce i będzie niższy o grubość podłogi |
 
 ## 10. Materiały i styl (paleta zaakceptowana 2026-07-28, przeniesiona z 9.02)
 

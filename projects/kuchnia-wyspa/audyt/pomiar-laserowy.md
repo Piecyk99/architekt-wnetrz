@@ -6,8 +6,10 @@
 
 ## ZANIM WEJDZIESZ
 
-**Warunek nadrzędny — wszystkie wysokości mierzysz PO POSADZCE DOCELOWEJ.**
-Jeśli podłogi jeszcze nie ma: pomiary 1–5 i 9–14 możesz zrobić teraz, ale **blok 6 (wysokości) musisz powtórzyć po ułożeniu podłogi**. Bez tego cała ściana C i wszystkie górne pojadą na wymiar, który się zmieni.
+**✅ WARUNEK SPEŁNIONY (2026-08-13): podłoga jest już położona.**
+Możesz wykonać **całą listę za jednym razem** — łącznie z blokiem 6 (wysokości). Nie ma potrzeby wracać.
+
+**Spodziewaj się, że sufit wyjdzie NIŻSZY niż zapisane 247,8** — bo tamten pomiar był na wylewce, a podłoga zabrała 8–12 mm. To jest dokładnie powód, dla którego czekaliśmy: od tej liczby zależy wysokość słupka, wszystkich górnych i boków zabudowy lodówki. **Zapisz to, co pokaże dalmierz, nie to, co jest w dokumencie.**
 
 **Zabierz:**
 - [ ] dalmierz laserowy (do odcinków >1 m)
