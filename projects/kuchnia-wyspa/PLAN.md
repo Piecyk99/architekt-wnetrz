@@ -48,7 +48,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Parapet (wyliczony) | ~166,1 | `[~]` | 247,8 − 81,7 |
 | Wnęka okienna → ściana C (strona lodówki, „gdzie szafki do sufitu") | 94,7 | `[P]` | pomiar inwestora; = prawy odcinek ściany B |
 | Ścianka: wysięg w głąb / grubość | ~77 / ~9 | `[~]` | „77 = wymiar małej ścianki"; do pomiaru łańcuchowego |
-| Sufit | 247,8 | `[P]` | pomiar (kontrola po posadzce!) |
+| **Sufit — POMIAR PO PODŁODZE 2026-08-13** | **2481 / 2483 / 2485 → przyjęte 2481** | `[P]` | dalmierz Bosch GLM 40, 3 punkty, rozrzut 4 mm. **Do zabudowy bierzemy NAJMNIEJSZY.** Poprzednie 247,8 było zaniżone o 3–7 mm |
 | Lodówka (wolnostojąca) | 60 × 65 × 190 | `[P]` | inwestor |
 | Indukcja Bosch PXE601DC1E | 57,2 × 51,2 × 5,6; **wycięcie 56 × 49** | `[P]` | inwestor |
 | **Przejście ramię ↔ ścianka** | **~60 (reguła nadrzędna)** | `[P]` | decyzja inwestora |
