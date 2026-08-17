@@ -49,7 +49,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Wnęka okienna → ściana C (strona lodówki, „gdzie szafki do sufitu") | 94,7 | `[P]` | pomiar inwestora; = prawy odcinek ściany B |
 | Ścianka: wysięg w głąb / grubość | ~77 / ~9 | `[~]` | „77 = wymiar małej ścianki"; do pomiaru łańcuchowego |
 | **Sufit — POMIAR PO PODŁODZE 2026-08-13** | **2481 / 2483 / 2485 → przyjęte 2481** | `[P]` | dalmierz Bosch GLM 40, 3 punkty, rozrzut 4 mm. **Do zabudowy bierzemy NAJMNIEJSZY.** Poprzednie 247,8 było zaniżone o 3–7 mm |
-| Lodówka (wolnostojąca) | 60 × 65 × 190 | `[P]` | inwestor |
+| **Lodówka (wolnostojąca, Beko inox) — POMIAR 2026-08-13** | **60 szer. × 65 gł. × 200 wys.** | `[P]` | pomiar inwestora; **wysokość 200, nie 190** — nadstawka C4 spada z 519 na **419**; lodówka wystaje **70 mm** przed lico słupka |
 | Indukcja Bosch PXE601DC1E | 57,2 × 51,2 × 5,6; **wycięcie 56 × 49** | `[P]` | inwestor |
 | **Przejście ramię ↔ ścianka** | **~60 (reguła nadrzędna)** | `[P]` | decyzja inwestora |
 | Ramię L: długość od ściany A / **głębokość** | ~118 `[~]` (177,6 − 60) / **500 `[P]`** | `[P]` gł. | głębokość 50 — decyzja inwestora 2026-08-12 (strefa przy zlewie ~85); długość: docięcie na montażu wg reguły 60 |
@@ -211,7 +211,7 @@ Warianty:
 | Ryzyko | Mitygacja |
 |---|---|
 | Strefa między zlewem a ramieniem ~85 (po decyzji: ramię gł. 50) | akceptowalna dla jednej osoby; zmywarka poza strefą (przed frontem ~125 ✓) |
-| Drzwi lodówki >90° zahaczają o kant ścianki (wysięg 77 > lico zabudowy 70) | **blenda dystansowa ~50–70 mm między lodówką a ścianką** (zawiasy od strony ścianki) |
+| ~~Drzwi lodówki zahaczają o kant ścianki~~ | **ROZWIĄZANE 2026-08-13 przez ODWRÓCENIE ZAWIASÓW.** Ścianka wystaje 770, lico lodówki 650 → kant ścianki jest **120 mm PRZED** drzwiami: zawias od strony ścianki = kolizja natychmiastowa. **Zawiasy przełożyć na stronę słupka C2** — drzwi otwierają się w głąb kuchni, nic nie stoi na drodze. Blenda dystansowa **niepotrzebna** (odpada z łańcucha ściany C) |
 | Jeśli w otworze do salonu (127) będą drzwi — skrzydło otwierane do kuchni kolidowałoby z ramieniem | wg szkicu przejście otwarte `[~]`; przy montażu drzwi: przesuwne albo otwierane do salonu |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
