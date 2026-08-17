@@ -117,7 +117,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | DA1 | **narożna ŚLEPA — odzysk martwego pola (v3.10)** | korpus **850×820×405**, **front 240** (610→850) | drzwi + 1 półka | **korpus sięga aż do ściany B i przejmuje róg, który wcześniej był martwym polem ciągu B** → **248 l na garnki, tuż przy indukcji**. Front max 240: szersze drzwi uderzyłyby w korpus ciągu okna (zapas 13 mm) — dlatego **żadne cargo narożne tu nie wejdzie** (magic corner / Le Mans wymagają otwarcia ≥450). Zawias przy stronie południowej; sięg w ślepą część 600 |
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | **850→1450 — front kończy się dokładnie na linii ramienia, piekarnik otwiera się w pełni ✓**; wycięcie 560×490 `[P]`; nisza 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | **ślepy narożnik pod ramieniem** | 1450→1950 × 560 | **bez frontu** | przestrzeń pod blatem ramienia; dostęp bokiem przez RL1 (korpus bez boku zachodniego) |
-| GA1 | górna (nad strefą pilastra) | ~670×989×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
+| GA1 | górna (nad strefą pilastra) | ~670×989×**245** | drzwi (para, zawiasy 0 i 670), 2 półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
 | GA2 | górna wąska | **180**×989×**400** | 3 półki + listwa na przyprawy na drzwiach | nad DA1 (670→850). **Światło wewnętrzne 144 szer.** Przy 400 gł. sięgasz realnie 250 w głąb → zawartość: **butelki (oliwa, ocet, sosy)** ustawiane rzędem jedna za drugą — rozpoznajesz je po kształcie i wyjmujesz przednią. **Zawias 850 (od strony okapu)** `[P]` — krawędź 670 zajmuje prawe skrzydło GA1, dwa zawiasy na jednej krawędzi = zderzenie (kontrola K10). **Jej lewy bok siada dokładnie na końcu pilastra** — patrz ryzyko poniżej |
 | GA3 | **okap w zabudowie** | 600×989×**400** | front uchylny | **nad DA2 = 850→1450, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
 | GA4 | górna | **500**×989×**400** | półki | 1450→1950, nad ramieniem (górne są na 1480, więc ramienia nie dotykają) |
@@ -159,11 +159,15 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 
 Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), strefa gotowania przy indukcji, zapasy przy lodówce, ciężkie nisko.
 
+**Naczynia stołowe są na ścianie C (GC1 + GC2), nie na ścianie A** — decyzja z v3.2. Dwa powody:
+1. **Odległość od zmywarki.** Zmywarka DB2 jest na wschodnim końcu ciągu okna; GC1/GC2 są tuż za narożnikiem = jeden krok. GA1 jest na drugim końcu kuchni, ~2 m dalej.
+2. **Głębokość.** GC1/GC2 mają korpus 400 → światło **397 mm**, talerz Ø270 leży swobodnie. GA1 ma korpus **245** (wisi na licu pilastra) → światło **242 mm** — **talerz obiadowy tam po prostu nie wejdzie płasko**.
+
 | Szafka | Przeznaczenie |
 |---|---|
 | **GC1 (górna nad DC1)** | **umyte naczynia — ociekarka w szafce** + talerze codzienne (1 krok od zmywarki DB1, za narożnikiem) |
 | GC2 (górna nad DC1) | szklanki, kubki, miski codzienne |
-| DB0 cargo 15 (za linią ciągu A) | przyprawy w butelkach, oleje, ocet — wysuw na wolną przestrzeń ✓ |
+| DB0 cargo 15 (za linią ciągu A) | **zapas: oleje, ocet, sosy** — cargo wyciąga całą zawartość na raz, więc głębokość nie przeszkadza. Przyprawy w użyciu są w GA2, przy indukcji (DB0 leży za narożnikiem, ~1,5 m od płyty) |
 | DB1 zlew 80 | kosze segregacji, chemia, akcesoria zlewu |
 | DB2 zmywarka 45 | — |
 | narożnik zachodni B | **nie jest już stracony** — przejęty przez korpus DA1 (v3.10), dostęp od ciągu A |
@@ -172,8 +176,8 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | C3/C4 lodówka + nadstawka | lodówka; nadstawka: zapasy sezonowe, rzadko używany sprzęt |
 | DA1 narożna ślepa (front 240) | **garnki i duże naczynia — 248 l tuż przy indukcji** (v3.10); dostęp drzwiami + sięg w głąb |
 | DA2 60 | piekarnik + szuflada na blachy/formy (dolna, płytsza — płyta 5,6 nad nią) |
-| GA1 (nad pilastrem, docinana) | zapasy lekkie, rzadko używane |
-| GA2 18 | herbaty, kawa, cukier — wąska, nad DA1 |
+| GA1 (nad pilastrem, docinana) | **suche zapasy do gotowania: makarony, ryże, kasze, mąka, puszki** — blisko indukcji, a płytkość nie przeszkadza. **NIE naczynia stołowe:** korpus 245 → światło w głąb **242 mm**, a talerz obiadowy ma Ø 260–280 → **nie leży płasko**. Zmieści deserowe Ø200, kubki, miski, szklanki |
+| GA2 18 | **przyprawy do gotowania na listwie na wewnętrznej stronie drzwi** (jedyna szafka przy samej indukcji) + wysokie butelki w użyciu, ustawione rzędem. Światło **144 szer.**, realny zasięg ~250 z 400 — drugi rząd w głąb jest bezużyteczny, więc tylko rzeczy rozpoznawalne po sylwetce |
 | GA3 okap 60 | okap; nad nim antresola na rzeczy sezonowe |
 | **RL1 ramię — front dzielony (v3.12)** | **SZUFLADY 300: górna = sztućce (wkład), środkowa = przybory i noże, dolna = pojemniki**; DRZWI 300 obok: dostęp bokiem do martwego pola pod ramieniem (~202 l — patelnie, blachy, ciężki sprzęt). Blat ramienia (50) = strefa odstawcza/śniadaniowa |
 
@@ -237,6 +241,7 @@ Warianty:
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
+| **Z czego jest pilaster? GA1 na nim WISI** `[?]` | GA1 to najcięższa górna szafka (670 szer., suche zapasy) i jej korpus jest przykręcony **do lica pilastra**, nie do ściany nośnej. Jeśli pilaster okaże się **obudową G-K** wokół pionu wentylacyjnego albo rur, nie ma w czym trzymać kołków. **Do sprawdzenia przy pomiarze: zapukać.** Głucho = obudowa → GA1 musi zawisnąć na listwie montażowej zakotwionej w ścianie B i A po bokach, albo oprzeć się na boku GA2. Murowany = bez zmian |
 | **Lewy bok GA2 ląduje dokładnie na końcu pilastra (y = 670)** | GA1 jest 245 gł. (wisi na licu pilastra), GA2 jest 400 gł. (wisi na gołej ścianie). Tylne 155 mm boku GA2 dosuwa się do czoła pilastra. Jeśli pilaster ma **mniej niż 670** długości — zostaje szczelina za bokiem (kosmetyczna, niewidoczna). Jeśli **więcej niż 670** — bok GA2 nie wejdzie i trzeba go podciąć. **To najczulszy moduł na pomiar pilastra (pkt 11.11).** Zamawiać bok GA2 dopiero po pomiarze |
 | **Zawiasy: sąsiednie skrzydła na jednej krawędzi** | dodana kontrola **K10** — wykrywa, że dwa fronty wiszą na tej samej krawędzi (otwarte leżą w jednej płaszczyźnie i się zderzają). Skutek dla projektu: **GA2 zawias 850**, nie 670 (670 zajmuje prawe skrzydło GA1). **Dla C2 nie ma wolnej krawędzi wcale**: 945 zajmuje DC1, 1225 zajmują drzwi lodówki (wariant A) → **C2 MUSI być cargo/szuflady, wariant „lub półki z drzwiami" ODPADA** |
 | Pozycja indukcji vs puszka siłowa | DA2 pozycjonowany do wypustu; kolejność DA1/DA2 może się zamienić |
@@ -261,7 +266,8 @@ Kontekst wykończeń (2026-08-12): ściany **NCS S 2002-Y** (jasny ciepły greig
 8. Puszka siłowa na A: obwód i dokładna pozycja (ustawia DA2).
 9. Obrys taśmy ramienia: długość od ściany (127?) i głębokość (65?) — kontrola reguły 60.
 10. ~~Wzrost~~ ✓ blat 910 `[P]` (wzrost 182) — pozycja rozstrzygnięta.
-11. **PILASTER 15,5 — element PIONOWY `[P]`** (korekta v3.7 po uwadze inwestora; wcześniej błędnie odczytany ze zdjęcia jako belka pod sufitem). Do pomiaru: **ile centymetrów ma uskok WZDŁUŻ ściany** (67 wg szkicu, czy cała długość ściany?) i **przy której ścianie** — inwestor: „pomniejsza jakby całe pomieszczenie" `[?]`. Kontrola: 254,6 − 238,9 = 15,7 ≈ 15,5, ale ta różnica wychodzi tak samo dla słupa 67 i dla uskoku na całej ścianie — sam rzut tego nie rozstrzyga.
+11. **PILASTER — oprócz wymiarów sprawdź, Z CZEGO JEST:** zapukaj w trzech miejscach. Głuchy dźwięk = obudowa G-K (pion wentylacyjny/rury) → **GA1 nie ma na czym wisieć**, trzeba ją przewiesić na ściany boczne. Pełny = mur, montaż standardowy.
+12. **PILASTER 15,5 — element PIONOWY `[P]`** (korekta v3.7 po uwadze inwestora; wcześniej błędnie odczytany ze zdjęcia jako belka pod sufitem). Do pomiaru: **ile centymetrów ma uskok WZDŁUŻ ściany** (67 wg szkicu, czy cała długość ściany?) i **przy której ścianie** — inwestor: „pomniejsza jakby całe pomieszczenie" `[?]`. Kontrola: 254,6 − 238,9 = 15,7 ≈ 15,5, ale ta różnica wychodzi tak samo dla słupa 67 i dla uskoku na całej ścianie — sam rzut tego nie rozstrzyga.
 
 ### 11a. Górne szafki 400 i pilaster (v3.7)
 
