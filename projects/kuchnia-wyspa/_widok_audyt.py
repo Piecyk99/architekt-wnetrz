@@ -87,11 +87,13 @@ c.drawString(15 * mm, PH - 22.5 * mm,
              "To NIE jest projekt poprawiony. Czerwone bryły = usterki P0 blokujące zamówienie.")
 c.setFillColor(GREY)
 c.setFont("DVS", 7.2)
-c.drawString(15 * mm, PH - 27 * mm,
-             "Pełnej korekty nie da się narysować: 12 pozycji czeka na decyzje inwestora, 15 na pomiar laserowy.")
+c.drawString(15 * mm, PH - 26.5 * mm,
+             "Stan 2026-08-13 (v3.13): sufit zmierzony, lodówka zmierzona, zawiasy rozstrzygnięte — trzy usterki P0 zamknięte.")
+c.drawString(15 * mm, PH - 30 * mm,
+             "Zostaje 7 usterek P0, koszyk B (decyzje inwestora) oraz dwa pomiary: pilaster i ściana C łańcuchowo.")
 c.setStrokeColor(WOOD)
 c.setLineWidth(1.1)
-c.line(15 * mm, PH - 30 * mm, PW - 15 * mm, PH - 30 * mm)
+c.line(15 * mm, PH - 33 * mm, PW - 15 * mm, PH - 33 * mm)
 
 # ================================ scena ================================
 wielokat([P(0, 0, 0), P(M.CX, 0, 0), P(M.CX, M.CY, 0), P(0, M.CY, 0)], M.PODLOGA)
@@ -120,9 +122,7 @@ znacznik(280, 400, M.KORPUS_Z, "01")      # DA1
 znacznik(280, 1150, M.KORPUS_Z, "06")     # DA2
 znacznik(600, 1700, M.KORPUS_Z, "02")     # RL1
 znacznik(2270, 470, M.KORPUS_Z, "08")     # DC1
-znacznik(200, 1150, M.H, "12")            # GA3
-znacznik(200, 300, M.H, "05")             # górne A
-znacznik(2270, 1080, M.H - 100, "03")     # C2
+znacznik(200, 1150, M.GORA, "12")         # GA3
 
 # ================================ legenda usterek ================================
 LY = 103 * mm
@@ -168,9 +168,9 @@ c.setFont("DVS-B", 8.5)
 c.drawString(19 * mm, y, "CZEGO NIE MA NA RYSUNKU I DLACZEGO")
 c.setFillColor(INK)
 c.setFont("DVS", 6.9)
-for t in ["• wieża lodówki (C3/C4) — pominięta, bo zasłania wnętrze; jej usterki P0-04 i P0-13 opisane wyżej",
+for t in ["• lodówka i nadstawka C4 — pominięte na rysunku, bo zasłaniają wnętrze; usterka P0-13 opisana wyżej",
           "• skorygowane głębokości blatu, fronty gola/frez, zawartość DA2 — to koszyk B, czekają na Twoją decyzję",
-          "• wszystkie wysokości — koszyk A, do potwierdzenia pomiarem PO ułożeniu posadzki docelowej"]:
+          "• pilaster i ściana C — jedyne dwa pomiary, których jeszcze brakuje (reszta wysokości już policzona z 2481)"]:
     y -= 4.2 * mm
     c.drawString(19 * mm, y, t)
 

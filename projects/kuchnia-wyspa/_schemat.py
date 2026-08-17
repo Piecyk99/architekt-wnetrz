@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Schemat techniczny kuchni U + ramię L, v3.12 — rzut + elewacje (PDF, wektor)."""
+"""Schemat techniczny kuchni U + ramię L, v3.13 — rzut + elewacje (PDF, wektor)."""
 import sys
 from reportlab.lib.pagesizes import A4, landscape
 from reportlab.lib.units import mm
@@ -26,7 +26,7 @@ GREY = colors.HexColor("#8a8a8a")
 BLAT = colors.HexColor("#d8cbb4")
 
 c = canvas.Canvas(OUT, pagesize=(PW, PH))
-c.setTitle("Kuchnia U + ramię L — schemat v3.12")
+c.setTitle("Kuchnia U + ramię L — schemat v3.13")
 
 
 class V:
@@ -87,7 +87,7 @@ def header(title, sub):
     c.setFillColor(GREY); c.setFont("DVS", 7.5)
     c.drawString(15 * mm, PH - 19 * mm, sub)
     c.setFont("DVS", 6.5)
-    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.12 · 2026-08-13 · wymiary w cm · "
+    c.drawString(15 * mm, 8 * mm, "Kuchnia U + ramię L — schemat koncepcyjny v3.13 · 2026-08-13 · wymiary w cm · "
                  "wartości [~] do weryfikacji pomiarem — NIE do produkcji formatek")
     c.drawRightString(PW - 15 * mm, 8 * mm, f"str. {c.getPageNumber()}")
     c.setStrokeColor(WOOD); c.setLineWidth(1)
@@ -96,7 +96,7 @@ def header(title, sub):
 
 # ================= STRONA 1: RZUT Z GÓRY =================
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
-header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.12)",
+header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.13)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa)")
 s = (PH - 64 * mm) / 260.0
 v = V(62 * mm, PH - 27 * mm, s)
@@ -125,7 +125,7 @@ v.text(CX - 74, SCY1 - 4, "ścianka — wysięg ~77 [~], na 188,5 [P]", 4.8, col
 ox1, ox2 = 15.5 + 59.7, 15.5 + 59.7 + 85.6   # okno od strony pilastra [P] (korekta v3.5)
 v.rect(ox1, -8, ox2 - ox1, 8, fill=colors.white)
 v.line(ox1, -4, ox2, -4, 0.8, INK)
-v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166)", 5.4, center=True)
+v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166,4)", 5.4, center=True)
 
 # ciąg B (gł. 60); narożnik zachodni (do x=60) = martwe pole bez frontu (kolizja z ciągiem A)
 v.rect(0, 67, 15.5, 18, fill=colors.HexColor("#e3ddd2"))   # pustka za korpusem, poniżej pilastra
@@ -216,10 +216,10 @@ c.showPage()
 
 # ================= STRONA 2: ELEWACJA A =================
 header("ELEWACJA A — ciąg z indukcją (górne do sufitu) + ramię L",
-       "skala ~1:15 · widok z wnętrza U · sufit 247,8 [P] · blat 91 [P — wzrost 182] · od lewej: pilaster")
+       "skala ~1:15 · widok z wnętrza U · sufit 248,1 [P] · góra zabudowy 246,9 (fuga 1,2 pod blendą) · blat 91 [P — wzrost 182] · od lewej: pilaster")
 s2 = (PH - 62 * mm) / 250.0
 e = V(60 * mm, PH - 30 * mm, s2)
-H, BL, COK, GD = 247.8, 91.0, 15.0, 148.0
+H, BL, COK, GD = 248.1, 91.0, 15.0, 148.0   # sufit 248,1 [P] pomiar po posadzce; góra zabudowy 246,9 (fuga 1,2)
 e.rect(0, 0, 195, H)
 e.rect(0, H - COK, 195, COK, fill=colors.HexColor("#2e2e2e"))
 for x0, w, lab in [(0, 61, "blenda\n(pilaster)"), (61, 24, "DA1\ndrzwi"), (85, 60, "DA2 piekarnik\npod indukcją"), (145, 50, "ślepy narożnik\npod ramieniem")]:
@@ -235,16 +235,16 @@ for x0, w, lab in [(0, 67, "GA1\n245 gł."), (67, 18, ""), (85, 60, "GA3 OKAP\nw
         e.text(x0 + w / 2, (H - GD) / 2 + i * 9, ln, 5.6, center=True, col=colors.white)
 e.text(97, H - GD + 8, "LED 3000K pod górnymi", 5, center=True, col=GREY)
 e.dimh(0, 195, H, "195 [P] (od ściany B, z pilastrem)", off=14, size=5.4)
-e.dimv(0, H, 0, "247,8", off=-14)
+e.dimv(0, H, 0, "248,1 [P]", off=-14)
 e.dimv(H - BL, H, 195, "91 [P]", off=12)
 e.dimv(H - GD, H - BL - 4, 195, "≥55 okap–indukcja", off=12, size=5)
-e.dimv(0, H - GD, 195, "górne ~100 do sufitu", off=22, size=5)
+e.dimv(0, H - GD, 195, "górne 98,9 do 246,9", off=22, size=5)
 e.text(0, H + 26, "na końcu ciągu blat skręca w ramię L (~118×50, wys. 91) — wspólny blat, wieniec na końcu; front ryflowany od salonu", 5.4, col=GREY)
 c.showPage()
 
 # ================= STRONA 3: ELEWACJA B =================
 header("ELEWACJA B — ściana okna (BEZ szafek górnych)",
-       "skala ~1:15 · okno pod sam sufit, parapet ~166 · OKNO OD STRONY PILASTRA: 59,7 | 85,6 | 94,7 [P] (v3.5) · od prawej: narożnik z C")
+       "skala ~1:15 · okno pod sam sufit, parapet ~166,4 · OKNO OD STRONY PILASTRA: 59,7 | 85,6 | 94,7 [P] (v3.5) · od prawej: narożnik z C")
 e = V(55 * mm, PH - 30 * mm, s2)
 W = 238.9
 e.rect(0, 0, W, H)
@@ -255,16 +255,16 @@ for x0, w, lab in [(0, 44.5, "martwe pole\n(za ciągiem A)"), (44.5, 15, "crg\n1
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.0, center=True)
 e.rect(0, H - BL - 4, W, 4, fill=BLAT)
 wx1 = 59.7; wx2 = wx1 + 85.6   # okno od strony pilastra (lewej) [P]
-e.rect(wx1, 0, 85.6, H - 166.1, fill=colors.HexColor("#dcebf5"))
-e.line(wx1, (H - 166.1) / 2, wx2, (H - 166.1) / 2, 0.5, GREY)
-e.line(wx1 + 42.8, 0, wx1 + 42.8, H - 166.1, 0.5, GREY)
-e.text(wx1 + 42.8, H - 166.1 + 8, "parapet ~166 (głęboki, użytkowy)", 5, center=True, col=GREY)
+e.rect(wx1, 0, 85.6, H - 166.4, fill=colors.HexColor("#dcebf5"))
+e.line(wx1, (H - 166.4) / 2, wx2, (H - 166.4) / 2, 0.5, GREY)
+e.line(wx1 + 42.8, 0, wx1 + 42.8, H - 166.4, 0.5, GREY)
+e.text(wx1 + 42.8, H - 166.4 + 8, "parapet ~166,4 (głęboki, użytkowy)", 5, center=True, col=GREY)
 e.dimh(0, wx1, 0, "59,7", off=-8)
 e.dimh(wx1, wx2, 0, "85,6", off=-8)
 e.dimh(wx2, W, 0, "94,7", off=-8)
-e.dimv(0, H - 166.1, wx1, "81,7", off=-10)
+e.dimv(0, H - 166.4, wx1, "81,7", off=-10)
 e.dimh(0, W, H, "238,9 [P]", off=14)
-e.dimv(0, H, 0, "247,8", off=-14)
+e.dimv(0, H, 0, "248,1 [P]", off=-14)
 e.text(30, H + 26, "zlew pod oknem ✓ · podejścia wody nisko na tej ścianie [~] — przedłużyć w zabudowie · zero górnych (okno do sufitu)", 5.4, col=GREY)
 c.showPage()
 
@@ -297,7 +297,7 @@ e.rect(122.7, 0, 65.8, H - 192, fill=TALL)
 e.text(155.6, (H - 192) / 2, "C4 NADSTAWKA + kratka", 5.2, center=True, col=colors.white)
 e.rect(188.5, 0, 9, H, fill=WALL)
 e.text(201, H - 30, "ścianka [P] — za nią korytarz", 5.0, angle=90, col=GREY)
-e.dimv(0, H, 0, "247,8", off=-14)
+e.dimv(0, H, 0, "248,1 [P]", off=-14)
 e.dimv(H - 190, H, ZW, "190", off=10)
 e.dimv(0, H - 192, ZW, "~53", off=10)
 e.dimh(0, 94.7, H, "94,7 [P]", off=14, size=5.4)

@@ -18,18 +18,17 @@ MODULES = [
     ("DB1 zlewowa", 800, 720, 560, "zlew", FR_BEZ, "bez pleców pełnych (listwa serwisowa); 2 drzwi"),
     ("DB2 zmywarka 45", 450, 0, 0, "front-agd", FR_BEZ, "tylko front 446×~713 wg karty zmywarki"),
     ("DC1 narożna ślepa", 900, 720, 560, "narozna", FR_BEZ, "front 450; martwe pole przy B; docinana blendą 47"),
-    ("GA1 górna", 670, 998, 245, "drzwi2g", FR_ORZ, "wisi na LICU pilastra (155+245=400) — front równo z GA2/GA3"),
-    ("GA2 górna wąska", 180, 998, 400, "drzwi1g", FR_ORZ, "nad DA1 (670→850); przyprawy"),
-    ("GA3 okap", 600, 998, 400, "okap", FR_ORZ, "nad DA2 = 850→1450, wyśrodkowany nad indukcją; konstrukcja wg karty okapu [?]"),
-    ("GA4 górna", 500, 998, 400, "drzwi1g", FR_ORZ, "1450→1950, nad ramieniem"),
-    ("GC1 górna (ociekarka)", 470, 998, 400, "drzwi1g", FR_ORZ, "ociekarka w szafce"),
-    ("GC2 górna", 477, 998, 400, "drzwi1g", FR_ORZ, ""),
-    ("C2 słupek cargo", 280, 2378, 580, "slupek", FR_ORZ, "cargo 250/300 [DO WERYFIKACJI] lub półki; front dzielony 1300+1074"),
-    ("C4 nadstawka lodówki", 660, 528, 580, "drzwi2n", FR_ORZ, "nad lodówką (od ~1950); kratka went."),
+    ("GA1 górna", 670, 989, 245, "drzwi2g", FR_ORZ, "wisi na LICU pilastra (155+245=400) — front równo z GA2/GA3"),
+    ("GA2 górna wąska", 180, 989, 400, "drzwi1g", FR_ORZ, "nad DA1 (670→850); przyprawy"),
+    ("GA3 okap", 600, 989, 400, "okap", FR_ORZ, "nad DA2 = 850→1450, wyśrodkowany nad indukcją; konstrukcja wg karty okapu [?]"),
+    ("GA4 górna", 500, 989, 400, "drzwi1g", FR_ORZ, "1450→1950, nad ramieniem"),
+    ("GC1 górna (ociekarka)", 470, 989, 400, "drzwi1g", FR_ORZ, "ociekarka w szafce"),
+    ("GC2 górna", 477, 989, 400, "drzwi1g", FR_ORZ, ""),
+    ("C2 słupek cargo", 280, 2319, 580, "slupek", FR_ORZ, "cargo 250/300 [DO WERYFIKACJI] lub półki; front dzielony 1270+1045"),
+    ("C4 nadstawka lodówki", 660, 419, 580, "drzwi2n", FR_ORZ, "od 2050 (lodówka 2000 + luz 50) do 2469; kratka went.; PODPARCIE [?] — lodówka wolnostojąca nie jest obudową"),
 ]
 
 PANELE = [
-    ("Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową)", 2478, 680, 1, FR_ORZ),
     ("Panel ryflowany ramienia (lamele — dostawca zewn.)", 1176, 910, 1, FR_ORZ),
     ("Blenda dolna A przy pilastrze (~610 do frontu DA1)", 610, 756, 1, FR_BEZ),
     ("Listwa cokołowa (czarny mat), łącznie ~5 mb", 5000, 150, 1, "czarny mat"),
@@ -80,8 +79,17 @@ for (nm, S, H, G, typ, fk, uw) in MODULES:
 for (nm, w, h, q, k) in PANELE:
     add(nm, w, h, q, k, "1,0 widoczne")
 
-out = ["# Lista formatek i okuć — kuchnia v3.5 (WERSJA ROBOCZA R1)\n",
-       "> **NIE DO CIĘCIA.** Wersja do wyceny w KornerGo / oddział Piekary Śląskie. Wymiary finalne po pomiarach łańcuchowych (PLAN pkt 11) — wtedy poprawiamy stałe w `_formatki.py` i lista przeliczy się sama. Blendy i ostatnie moduły w ciągach zawsze docinane na miejscu. Płyta 18 mm; plecy HDF 3 mm nakładane; wysokości korpusów: dolne 720 (nóżki 150), górne 998, słupek 2378.\n",
+out = ["# Lista formatek i okuć — kuchnia (WERSJA ROBOCZA R1 — pion przeliczony 2026-08-13, FRONTY WCIĄŻ BŁĘDNE)\n",
+       "> ## ⛔ TA LISTA MA POTWIERDZONE BŁĘDY — NIE ZAMAWIAĆ\n"
+       "> Poprawione dziś (v3.13): **wysokości pionowe** — górne 989, słupek 2319, nadstawka 419, "
+       "wykreślony bok obudowy lodówki i blenda dystansowa (lodówka jest wolnostojąca).\n"
+       "> **NIE poprawione — usterki P0 z audytu:**\n"
+       "> - **P0-01:** generator wystawia dla każdej szafki narożnej sztywny **front 446**. Prawidłowe to "
+       "**DA1 = 240**, **DC1 = 345**, **RL1 = 600 dzielony (drzwi 300 + 3 fronty szuflad 300)**.\n"
+       "> - **P0-02:** RL1 nie ma tu **żadnego frontu szuflady ani dna** — szuflady na sztućce istnieją tylko w PLAN.md.\n"
+       "> - **P0-06 / P0-11 / P0-12:** cztery urządzenia AGD bez modelu — nisze i wycięcia policzone „na oko\".\n"
+       "> Dopóki te punkty nie zostaną naprawione, lista służy **wyłącznie do wyceny orientacyjnej**.\n",
+       "> **NIE DO CIĘCIA.** Wersja do wyceny w KornerGo / oddział Piekary Śląskie. Wymiary finalne po pomiarach łańcuchowych (PLAN pkt 11) — wtedy poprawiamy stałe w `_formatki.py` i lista przeliczy się sama. Blendy i ostatnie moduły w ciągach zawsze docinane na miejscu. Płyta 18 mm; plecy HDF 3 mm nakładane; wysokości korpusów: dolne 720 (nóżki 150), górne **989**, słupek **2319**, nadstawka C4 **419** — przeliczone z sufitu **2481** `[P]` minus fuga 12 (góra zabudowy 2469).\n",
        "## 1. Formatki\n",
        "| Element | Wymiar (mm) | szt | Płyta/kolor | Obrzeże ABS |", "|---|---|---|---|---|"]
 for r in rows:
@@ -124,7 +132,6 @@ out += ["""
 | Listwa gola / frez uchwytowy | ~5 mb | decyzja technologiczna: profil alu vs frez CNC w płycie |
 | Kątowniki montażowe (ramię do posadzki, ścianka) | 8 szt | kotwienie ramienia |
 | Taśma LED 3000K + profil + zasilacz 24V | ~3 mb + 1 szt | pod GA i GC |
-| Blenda dystansowa lodówka–ścianka | 1 szt (~70×2478) | drzwi lodówki >90° |
 | Silikon + Silikorner (uszczelka cokołu — Korner korner.eu) | 1+1 | |
 
 ## 4. Plan montażu — kolejność (montaż samodzielny)

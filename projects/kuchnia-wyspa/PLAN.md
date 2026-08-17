@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.12)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,12 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.13 (2026-08-13, pomiary inwestora + decyzja o zawiasach):** trzy rzeczy naraz.
+  **(1) Sufit zmierzony po ułożeniu posadzki:** 2481 / 2483 / 2485 dalmierzem Bosch GLM 40 → **do zabudowy przyjęte 2481** (najmniejszy), fuga przysufitowa 12 → **góra zabudowy 2469**. *Moja wcześniejsza prognoza była błędna — zapowiadałem, że po podłodze sufit spadnie poniżej 2478; wyszedł wyższy o 3–7 mm.* Przeliczony cały pion (pkt 6): **górne 998 → 989**, **słupek C2 2378 → 2319** (to zamyka usterkę **P0-03** — 2378 + 150 nóżek = 2528 przebijało sufit), **nadstawka C4 519 → 419**. Trzy niezależne łańcuchy ściany C domykają się na 2469.
+  **(2) Lodówka:** inwestor ma już własną, **wolnostojącą Beko inox 60 × 65 × 200** `[P]` — nie do zabudowy. Wysokość **200, nie 190** (stąd C4 419). Odpada obudowa lodówki → **P0-04 (bok o przekątnej 2569,6 nie do wniesienia) przestaje istnieć**, z rozkroju znika ~2,2 m² płyty. Nowe otwarte: **czym podeprzeć C4**, skoro nie ma korpusu zabudowy.
+  **(3) Zawiasy lodówki — WARIANT A `[P]`:** zawiasy są fabrycznie po stronie ścianki, a ścianka wystaje 770 przy licu lodówki 650 → kant wypada **w osi obrotu**, drzwi nie otwierają się wcale. Inwestor potwierdził, że **drzwi da się przełożyć** → zawiasy idą na stronę słupka C2. Kontrola: kant ścianki **√(120² + 660²) = 670,8 mm** od nowej osi, skrzydło **600** → **zapas 70,8 mm ✓** (warunek: lodówkę dosunąć do słupka, luz boczny 60 po stronie ścianki). Pozycje lodówki i słupka bez zmian, **blenda dystansowa definitywnie odpada** z łańcucha ściany C (P0-07 lżejsze o 70 mm). Warianty B (zamiana lodówki ze słupkiem) i C (odsunięcie o 120 mm) — odrzucone.
+  **Wykryty przy okazji błąd w pkt 6:** prześwit nad blatem to **570**, a nie zapisane wcześniej „600" (1480 − 910). Dla okapu 570 ≥ 550 ✓, ale do sprawdzenia w karcie wkładu — część recyrkulacyjnych wymaga 650.
 
 - **v3.3a (2026-08-12):** korekta nazewnictwa — otwór 127 za ramieniem prowadzi do **SALONU** (zgodnie ze szkicem „salon"); „sypialnia" pojawiła się z wcześniejszej wiadomości inwestora i była błędna — sypialnia jest na końcu mieszkania, poza strefą kuchni.
 
@@ -97,7 +103,7 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 
 ## 5. Rozpisanie zabudowy — moduły (mm)
 
-Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[P]` (laminat 38; wzrost 182); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy ~998 **do sufitu 2478**; fronty bezuchwytowe (frez/gola).
+Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[P]` (laminat 38; wzrost 182); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy **989** — **góra zabudowy 2469 = sufit 2481 `[P]` − fuga 12** (fugę zamyka blenda przysufitowa; pkt 6); fronty bezuchwytowe (frez/gola).
 
 ### Ściana A — ciąg z indukcją (1950 `[P]` OD ŚCIANY B; **fronty dolne dostępne tylko 670→1450 = 780**, dalej ślepy narożnik pod ramieniem):
 
@@ -107,10 +113,10 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | DA1 | **narożna ŚLEPA — odzysk martwego pola (v3.10)** | korpus **850×820×405**, **front 240** (610→850) | drzwi + 1 półka | **korpus sięga aż do ściany B i przejmuje róg, który wcześniej był martwym polem ciągu B** → **248 l na garnki, tuż przy indukcji**. Front max 240: szersze drzwi uderzyłyby w korpus ciągu okna (zapas 13 mm) — dlatego **żadne cargo narożne tu nie wejdzie** (magic corner / Le Mans wymagają otwarcia ≥450). Zawias przy stronie południowej; sięg w ślepą część 600 |
 | DA2 | **indukcja + piekarnik** | 600×820×560 | front piekarnika + szuflada | **850→1450 — front kończy się dokładnie na linii ramienia, piekarnik otwiera się w pełni ✓**; wycięcie 560×490 `[P]`; nisza 560×590–600; górna szuflada płytsza (płyta 5,6) |
 | — | **ślepy narożnik pod ramieniem** | 1450→1950 × 560 | **bez frontu** | przestrzeń pod blatem ramienia; dostęp bokiem przez RL1 (korpus bez boku zachodniego) |
-| GA1 | górna (nad strefą pilastra) | ~670×998×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
-| GA2 | górna wąska | **180**×998×**400** | półki / przyprawy | nad DA1 (670→850) |
-| GA3 | **okap w zabudowie** | 600×998×**400** | front uchylny | **nad DA2 = 850→1450, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
-| GA4 | górna | **500**×998×**400** | półki | 1450→1950, nad ramieniem (górne są na 1480, więc ramienia nie dotykają) |
+| GA1 | górna (nad strefą pilastra) | ~670×989×**245** | drzwi, półki | **korekta v3.6:** korpus wisi na LICU PILASTRA (155+245=400 → front równo z GA2/GA3). Poprzednie 305 było błędem (pilaster wystaje 155, nie 15). Dół 1480, do sufitu |
+| GA2 | górna wąska | **180**×989×**400** | półki / przyprawy | nad DA1 (670→850) |
+| GA3 | **okap w zabudowie** | 600×989×**400** | front uchylny | **nad DA2 = 850→1450, wyśrodkowany nad indukcją** `[P]`; ≥550 nad płytą ✓; recyrkulacja — kratka `[?]` |
+| GA4 | górna | **500**×989×**400** | półki | 1450→1950, nad ramieniem (górne są na 1480, więc ramienia nie dotykają) |
 
 ### Ramię L („wyspa" — skręt blatu na końcu ciągu A, **~1180×500 `[P gł.]`**, południowa krawędź w linii 1950):
 
@@ -138,12 +144,12 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 |---|---|---|---|---|
 | DC1 | narożna ślepa (niska, z blatem) | korpus ~945×820×546, **front 345** | **2 szuflady wewnętrzne ~300** | **korekta v3.11 (kontrola K8):** front ma tylko 345 mm — pas 0→600 lica jest zasłonięty korpusem zmywarki. **Cargo narożne (magic corner) NIE wejdzie** (wymaga ≥450). Szuflady wewnętrzne obsługują część dostępną; narożnik północny ~236 l zostaje na sięg ręką |
 | — | blenda | ~47 | — | dopełnienie C1 do 947 `[P]` |
-| **GC1** | **górna nad DC1** | ~470×998×**400** | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
-| **GC2** | **górna nad DC1** | ~477×998×**400** | naczynia codzienne | do sufitu; front w linii słupka C2 |
-| C2 | **słupek cargo/spiżarka** | ~280×2378×580 | cargo wysokie | od 947; do sufitu |
-| C3 | **zabudowa lodówki** | ~660 światło (lodówka 600+luzy) | — | lodówka wolnostojąca 60×65×190 `[P]` przy ściance; wentylacja 50 tył+góra |
-| C4 | nadstawka nad lodówką | ~660×~528×580 | drzwi | od ~1950 do 2478; kratka wentylacyjna |
-| — | ŚCIANKA | na 1885 `[P]` | — | bok zabudowy dosunięty; zawiasy lodówki od strony ścianki, drzwi otwierane ku oknu |
+| **GC1** | **górna nad DC1** | ~470×989×**400** | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
+| **GC2** | **górna nad DC1** | ~477×989×**400** | naczynia codzienne | do sufitu; front w linii słupka C2 |
+| C2 | **słupek cargo/spiżarka** | ~280×2319×580 | cargo wysokie | od 947; do sufitu |
+| C3 | **zabudowa lodówki** | ~660 światło (lodówka 600+luzy) | — | lodówka wolnostojąca **60×65×200** `[P]` przy ściance; wentylacja 50 tył+góra; **zawiasy przełożone na stronę słupka C2** `[P]` (wariant A, pkt 9) |
+| C4 | nadstawka nad lodówką | ~660×**419**×580 | drzwi | **od 2050 do 2469** (lodówka 2000 + luz 50); kratka wentylacyjna; **podparcie nadstawki `[?]`** — lodówka wolnostojąca nie jest zabudowana, więc C4 musi wisieć na bokach/ścianie, nie stać na lodówce |
+| — | ŚCIANKA | na 1885 `[P]` | — | bok zabudowy dosunięty; **zawiasy lodówki NIE przy ściance** — przełożone na stronę słupka C2 (wariant A `[P]`), skrzydło odchyla się od ścianki, zapas 60 mm |
 
 ## 5a. Plan funkcjonalny — co w której szafce
 
@@ -167,16 +173,27 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | GA3 okap 60 | okap; nad nim antresola na rzeczy sezonowe |
 | **RL1 ramię — front dzielony (v3.12)** | **SZUFLADY 300: górna = sztućce (wkład), środkowa = przybory i noże, dolna = pojemniki**; DRZWI 300 obok: dostęp bokiem do martwego pola pod ramieniem (~202 l — patelnie, blachy, ciężki sprzęt). Blat ramienia (50) = strefa odstawcza/śniadaniowa |
 
-## 6. Rozpisanie pionowe (sufit 2478 `[P]`)
+## 6. Rozpisanie pionowe (sufit **2481** `[P]`, pomiar po posadzce 2026-08-13)
 
-| Poziom | Wysokość | Uwagi |
+**Zasada:** do zabudowy bierzemy **najmniejszy** z trzech pomiarów (2481 / 2483 / 2485), a różnicę zbiera **fuga przysufitowa 12 mm** zamknięta **blendą przysufitową** (listwa 12×19 przykręcana do wieńca po wypoziomowaniu). Bez fugi szafka wyższa niż 2481 nie wejdzie pod strop w najniższym punkcie, a niższa zostawiłaby szczelinę bez czym jej zakryć.
+
+**Góra zabudowy = 2481 − 12 = 2469** — jedna linia dla górnych A/C, słupka C2 i nadstawki C4.
+
+| Poziom | Wysokość | Rachunek / uwagi |
 |---|---|---|
-| Cokół | 0–150 | nóżki 150; kratka wentylacji lodówki w cokole |
-| Blat | **910 `[P]`** | wzrost 182 → siatka 910 |
-| Dół górnych A / okapu | 1480 | odstęp 600 od blatu; okap–indukcja ≥550 ✓ |
-| Parapet okna | ~1661 | nad blatem 910 → ~750 wolnej ściany (fartuch) |
-| Lodówka | do 1900 | nadstawka od ~1950 |
-| Góra zabudowy | 2478 | górne A, słupek C2, nadstawka C4 — wszystko do sufitu |
+| Cokół | 0–150 | nóżki regulowane; kratka wentylacji lodówki w cokole |
+| Górna krawędź korpusu dolnego | 870 | 150 + 720 |
+| **Blat** | **910 `[P]`** | 870 + laminat 38 = **908** → nóżki podkręcić do **152**, żeby wyszło 910 `[ustawienie na montażu]` |
+| Dół górnych A / okapu | 1480 | **prześwit nad blatem = 1480 − 910 = 570** (nie 600 — poprzedni zapis był błędny). Okap–indukcja 570 ≥ 550 ✓, ale **sprawdzić w karcie wkładu** — część recyrkulacyjnych wymaga 650 `[?]` |
+| **Korpus górnych** | **989** | 2469 − 1480 = 989 (**było 998** — przeliczone po pomiarze sufitu) |
+| Parapet okna | ~1664 | 2481 − 817 (okno pod sufit) |
+| Lodówka | 0–**2000** `[P]` | wolnostojąca, stoi na podłodze — **nie na cokole** |
+| Luz wentylacyjny nad lodówką | 2000–2050 | 50 mm `[P]` wymóg producenta |
+| **Nadstawka C4** | **419** | 2469 − 2050 = 419 (**było 519** przy lodówce 1900) |
+| **Słupek C2 — korpus** | **2319** | 2469 − 150 nóżek = 2319 (**było 2378**; 2378 + 150 = 2528 > 2481 → przebijało sufit — usterka P0-03) |
+| Góra zabudowy | **2469** | górne A/C, słupek C2, nadstawka C4 — jedna linia; nad nią fuga 12 + blenda |
+
+**Kontrola pionu ściany C (od podłogi):** 150 + 2319 = 2469 ✓ · lodówka 2000 + 50 + 419 = 2469 ✓ · górne 1480 + 989 = 2469 ✓ — **trzy niezależne łańcuchy domykają się na tej samej rzędnej.**
 
 ## 7. AGD — zestawienie
 
@@ -187,7 +204,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | Okap | GA2 | **recyrkulacyjny z filtrem węglowym `[P]` — zakup inwestora**; ≥550 od indukcji ✓; bez kanału — kratka wentylacyjna nie warunkuje okapu |
 | Zmywarka 45 | DB2 | światło 450×820+; przyłącza z DB3 |
 | Zlew + bateria | DB3 | podejścia nisko na B `[~]` — przedłużyć w zabudowie; nie nad zmywarką ✓ |
-| Lodówka 60×65×190 `[P]` | C3 | wolnostojąca; luzy 20–30 bok, 50 tył/góra; zawiasy od ścianki, otwieranie ku oknu |
+| Lodówka 60×65×200 `[P]` | C3 | wolnostojąca; luzy 20–30 bok, 50 tył/góra; **zawiasy przełożone na stronę słupka C2** `[P]`, otwieranie w głąb kuchni (zapas do ścianki 60 mm) |
 
 ## 8. Zalecenia instalacyjne (PRZED montażem)
 
@@ -211,7 +228,7 @@ Warianty:
 | Ryzyko | Mitygacja |
 |---|---|
 | Strefa między zlewem a ramieniem ~85 (po decyzji: ramię gł. 50) | akceptowalna dla jednej osoby; zmywarka poza strefą (przed frontem ~125 ✓) |
-| ~~Drzwi lodówki zahaczają o kant ścianki~~ | **ROZWIĄZANE 2026-08-13 przez ODWRÓCENIE ZAWIASÓW.** Ścianka wystaje 770, lico lodówki 650 → kant ścianki jest **120 mm PRZED** drzwiami: zawias od strony ścianki = kolizja natychmiastowa. **OTWARTE `[?]` — zawiasy są fabrycznie PO STRONIE ŚCIANKI** (inwestor, 2026-08-13; moja wcześniejsza interpretacja „lewe = strona słupka" była błędna). Kant ścianki wypada w osi obrotu → drzwi blokują się natychmiast. **Warianty: A) przełożyć zawiasy na stronę słupka (zapas 60 mm) — wymaga, by drzwi z dozownikiem wody były odwracalne; B) zamienić miejscami lodówkę i słupek C2 — bez ruszania drzwi, ale lodówka przestaje stać przy ściance; C) odsunąć lodówkę 120 mm — ODPADA, DC1 zeszłaby do frontu 225.** Decyzja inwestora — drzwi otwierają się w głąb kuchni, nic nie stoi na drodze. Blenda dystansowa **niepotrzebna** (odpada z łańcucha ściany C) |
+| ~~Drzwi lodówki zahaczają o kant ścianki~~ | **ZAMKNIĘTE 2026-08-13 — WARIANT A `[P]`.** Stan wyjściowy: zawiasy fabrycznie **po stronie ścianki**; ścianka wystaje 770, lico lodówki 650 → kant ścianki jest **120 mm PRZED** płaszczyzną drzwi, czyli praktycznie w osi obrotu (odległość zawias→przeszkoda = 0) → drzwi blokują się natychmiast. **Decyzja inwestora („DA SIĘ PRZEŁOŻYĆ"): zawiasy przekładamy na stronę słupka C2 (y = 1225).** Kontrola rachunkiem: oś obrotu w licu lodówki (650 od ściany C) przy słupku (y = 1225); kant ścianki w punkcie (770 od ściany C; y = 1885) → **d = √(120² + 660²) = 670,8 mm** wobec skrzydła **600** → **zapas 70,8 mm ✓**. **Warunek montażowy: lodówkę dosunąć do słupka C2, cały luz boczny (60 mm) zostawić po stronie ścianki** — przesunięcie lodówki o 30 mm ku ściance zjada zapas do 41 mm (nadal działa, ale bez marginesu). Pozycje lodówki i słupka **bez zmian**. Drzwi otwierają się w głąb kuchni, nic nie stoi na drodze. Blenda dystansowa **niepotrzebna** (odpada z łańcucha ściany C → P0-07 lżejsze o 70 mm). ~~B) zamiana lodówki ze słupkiem~~, ~~C) odsunięcie lodówki 120 mm (DC1 spadłaby do frontu 225)~~ — odrzucone. **Robota montażowa: przełożyć zawiasy PRZED wstawieniem lodówki na miejsce** (przy ściance nie ma dostępu z boku) |
 | Jeśli w otworze do salonu (127) będą drzwi — skrzydło otwierane do kuchni kolidowałoby z ramieniem | wg szkicu przejście otwarte `[~]`; przy montażu drzwi: przesuwne albo otwierane do salonu |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
@@ -219,8 +236,8 @@ Warianty:
 | Pozycja indukcji vs puszka siłowa | DA2 pozycjonowany do wypustu; kolejność DA1/DA2 może się zamienić |
 | Suma łańcucha C (947+280+660 ≈ 1887 vs 1885) | luzy w blendzie przy C1; pomiar łańcuchowy przed zamówieniem |
 | Kratka wentylacyjna w strefie zabudowy | pomiar; kratka rewizyjna w zabudowie |
-| **Gzyms/podciąg pod sufitem (foto 2026-08-12, pomalowane pomieszczenie)** — koliduje z pasmem górnych 1480–2478 | 3 pomiary (przebieg po ścianach, wystawanie, dolna krawędź od podłogi) → wybór wariantu: A) wycięcie w bokach (wystawanie ≤ ~6 cm), B) szafki kończone POD gzymsem (korpus niższy, gzyms jako „korona"), C) korpusy pogłębione o wystawanie — front przed gzymsem do sufitu; szczegóły w pkt 11a |
-| ~~Posadzka zmieni wysokości~~ | **ZAMKNIĘTE 2026-08-13 — podłoga położona.** Wszystkie pionowe do pomiaru TERAZ; sufit 2478 `[?]` był mierzony na wylewce i będzie niższy o grubość podłogi |
+| **Gzyms/podciąg pod sufitem (foto 2026-08-12, pomalowane pomieszczenie)** — koliduje z pasmem górnych 1480–2469 | 3 pomiary (przebieg po ścianach, wystawanie, dolna krawędź od podłogi) → wybór wariantu: A) wycięcie w bokach (wystawanie ≤ ~6 cm), B) szafki kończone POD gzymsem (korpus niższy, gzyms jako „korona"), C) korpusy pogłębione o wystawanie — front przed gzymsem do sufitu; szczegóły w pkt 11a |
+| ~~Posadzka zmieni wysokości~~ | **ZAMKNIĘTE 2026-08-13 — podłoga położona i sufit zmierzony: 2481 `[P]`.** *Moja prognoza była błędna: zakładałem, że po posadzce sufit spadnie poniżej 2478, a wyszedł WYŻSZY o 3–7 mm.* Cały pion przeliczony (pkt 6), góra zabudowy **2469** |
 
 ## 10. Materiały i styl (paleta zaakceptowana 2026-07-28, przeniesiona z 9.02)
 
@@ -232,7 +249,7 @@ Kontekst wykończeń (2026-08-12): ściany **NCS S 2002-Y** (jasny ciepły greig
 2. Ściana B: 238,9 dołem/górą; przekątne narożników A/B i B/C.
 3. Ściana C łańcuchowo: 947 → słupek/lodówka → **ścianka: pozycja 1885, grubość, wysięg (77?)**.
 4. Okno: 59,7 / 85,6 / 81,7 + głębokość parapetu.
-5. Wysokość podłoga–sufit w 4 punktach **po posadzce docelowej**; wysokość lodówki z zawiasami.
+5. ~~Wysokość podłoga–sufit; wysokość lodówki~~ ✓ **ZROBIONE 2026-08-13:** sufit **2481** `[P]` (3 punkty dalmierzem, min z 2481/2483/2485), lodówka **60×65×200** `[P]`. Opcjonalnie: 4. punkt w narożniku przy lodówce, jeśli montaż wykaże skos.
 6. **Kratka wentylacyjna: pozycja i wymiar.**
 7. Podejścia wody/odpływu (wysokość, rozstaw); zaślepka w podłodze przy niszy `[?]`.
 8. Puszka siłowa na A: obwód i dokładna pozycja (ustawia DA2).

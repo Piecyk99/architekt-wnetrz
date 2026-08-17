@@ -274,7 +274,7 @@ c.setFont("DVS", 7.6)
 for t in [
     "• górne szafki 400 gł. — Twoja propozycja; uzasadnienie inne, niż napisałem, ale wniosek ten sam (str. 1)",
     "• GA1 = 245 gł. zamiast 305 — to była realna pomyłka w planie (pilaster wystaje 155, nie 15)",
-    "• wszystkie fronty w jednej płaszczyźnie, zabudowa do sufitu 2478",
+    "• wszystkie fronty w jednej płaszczyźnie, zabudowa do 2469 (sufit 2481 minus fuga 12)",
     "• pilaster 155 × 670 jest w rzucie od początku — to on odpowiada za różnicę 254,6 − 238,9 ≈ 15,5",
 ]:
     c.drawString(19 * mm, y, t)

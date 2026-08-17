@@ -1,6 +1,14 @@
-# Lista formatek i okuć — kuchnia v3.5 (WERSJA ROBOCZA R1)
+# Lista formatek i okuć — kuchnia (WERSJA ROBOCZA R1 — pion przeliczony 2026-08-13, FRONTY WCIĄŻ BŁĘDNE)
 
-> **NIE DO CIĘCIA.** Wersja do wyceny w KornerGo / oddział Piekary Śląskie. Wymiary finalne po pomiarach łańcuchowych (PLAN pkt 11) — wtedy poprawiamy stałe w `_formatki.py` i lista przeliczy się sama. Blendy i ostatnie moduły w ciągach zawsze docinane na miejscu. Płyta 18 mm; plecy HDF 3 mm nakładane; wysokości korpusów: dolne 720 (nóżki 150), górne 998, słupek 2378.
+> ## ⛔ TA LISTA MA POTWIERDZONE BŁĘDY — NIE ZAMAWIAĆ
+> Poprawione dziś (v3.13): **wysokości pionowe** — górne 989, słupek 2319, nadstawka 419, wykreślony bok obudowy lodówki i blenda dystansowa (lodówka jest wolnostojąca).
+> **NIE poprawione — usterki P0 z audytu:**
+> - **P0-01:** generator wystawia dla każdej szafki narożnej sztywny **front 446**. Prawidłowe to **DA1 = 240**, **DC1 = 345**, **RL1 = 600 dzielony (drzwi 300 + 3 fronty szuflad 300)**.
+> - **P0-02:** RL1 nie ma tu **żadnego frontu szuflady ani dna** — szuflady na sztućce istnieją tylko w PLAN.md.
+> - **P0-06 / P0-11 / P0-12:** cztery urządzenia AGD bez modelu — nisze i wycięcia policzone „na oko".
+> Dopóki te punkty nie zostaną naprawione, lista służy **wyłącznie do wyceny orientacyjnej**.
+
+> **NIE DO CIĘCIA.** Wersja do wyceny w KornerGo / oddział Piekary Śląskie. Wymiary finalne po pomiarach łańcuchowych (PLAN pkt 11) — wtedy poprawiamy stałe w `_formatki.py` i lista przeliczy się sama. Blendy i ostatnie moduły w ciągach zawsze docinane na miejscu. Płyta 18 mm; plecy HDF 3 mm nakładane; wysokości korpusów: dolne 720 (nóżki 150), górne **989**, słupek **2319**, nadstawka C4 **419** — przeliczone z sufitu **2481** `[P]` minus fuga 12 (góra zabudowy 2469).
 
 ## 1. Formatki
 
@@ -39,47 +47,46 @@
 | DC1 narożna ślepa — plecy HDF | 896×716 | 1 | HDF biały | — |
 | DC1 narożna ślepa — front | 446×716 | 1 | beż/kaszmir mat (front) | 1,0 — 4 krawędzie |
 | DC1 narożna ślepa — blenda ślepa | 430×716 | 1 | beż/kaszmir mat (front) | 1,0 przód |
-| GA1 górna — bok | 245×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA1 górna — bok | 245×989 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GA1 górna — dno/wieniec | 634×245 | 2 | kremowy (korpus) | 0,4 przód |
-| GA1 górna — plecy HDF | 666×994 | 1 | HDF biały | — |
+| GA1 górna — plecy HDF | 666×985 | 1 | HDF biały | — |
 | GA1 górna — fronty | 332×996 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA1 górna — półki | 633×300 | 2 | kremowy (korpus) | 0,4 |
-| GA2 górna wąska — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA2 górna wąska — bok | 400×989 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GA2 górna wąska — dno/wieniec | 144×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GA2 górna wąska — plecy HDF | 176×994 | 1 | HDF biały | — |
+| GA2 górna wąska — plecy HDF | 176×985 | 1 | HDF biały | — |
 | GA2 górna wąska — front | 176×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA2 górna wąska — półki | 143×300 | 2 | kremowy (korpus) | 0,4 |
-| GA3 okap — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA3 okap — bok | 400×989 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GA3 okap — dno/wieniec | 564×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GA3 okap — plecy HDF | 596×994 | 1 | HDF biały | — |
+| GA3 okap — plecy HDF | 596×985 | 1 | HDF biały | — |
 | GA3 okap — front uchylny (wg okapu) | 596×400 | 1 | ciemny orzech mat (front/panel) | 1,0 [~] |
-| GA4 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GA4 górna — bok | 400×989 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GA4 górna — dno/wieniec | 464×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GA4 górna — plecy HDF | 496×994 | 1 | HDF biały | — |
+| GA4 górna — plecy HDF | 496×985 | 1 | HDF biały | — |
 | GA4 górna — front | 496×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GA4 górna — półki | 463×300 | 2 | kremowy (korpus) | 0,4 |
-| GC1 górna (ociekarka) — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GC1 górna (ociekarka) — bok | 400×989 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GC1 górna (ociekarka) — dno/wieniec | 434×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GC1 górna (ociekarka) — plecy HDF | 466×994 | 1 | HDF biały | — |
+| GC1 górna (ociekarka) — plecy HDF | 466×985 | 1 | HDF biały | — |
 | GC1 górna (ociekarka) — front | 466×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GC1 górna (ociekarka) — półki | 433×300 | 2 | kremowy (korpus) | 0,4 |
-| GC2 górna — bok | 400×998 | 2 | kremowy (korpus) | 0,4 mm przód |
+| GC2 górna — bok | 400×989 | 2 | kremowy (korpus) | 0,4 mm przód |
 | GC2 górna — dno/wieniec | 441×400 | 2 | kremowy (korpus) | 0,4 przód |
-| GC2 górna — plecy HDF | 473×994 | 1 | HDF biały | — |
+| GC2 górna — plecy HDF | 473×985 | 1 | HDF biały | — |
 | GC2 górna — front | 473×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GC2 górna — półki | 440×300 | 2 | kremowy (korpus) | 0,4 |
-| C2 słupek cargo — bok | 580×2378 | 2 | kremowy (korpus) | 0,4 mm przód |
+| C2 słupek cargo — bok | 580×2319 | 2 | kremowy (korpus) | 0,4 mm przód |
 | C2 słupek cargo — dno/wieniec | 244×580 | 2 | kremowy (korpus) | 0,4 przód |
-| C2 słupek cargo — plecy HDF | 276×2374 | 1 | HDF biały | — |
+| C2 słupek cargo — plecy HDF | 276×2315 | 1 | HDF biały | — |
 | C2 słupek cargo — fronty | 276×1300 | 1 | ciemny orzech mat (front/panel) | 1,0 |
 | C2 słupek cargo — front górny | 276×1070 | 1 | ciemny orzech mat (front/panel) | 1,0 |
 | C2 słupek cargo — półki | 243×560 | 2 | kremowy (korpus) | 0,4 |
-| C4 nadstawka lodówki — bok | 580×528 | 2 | kremowy (korpus) | 0,4 mm przód |
+| C4 nadstawka lodówki — bok | 580×419 | 2 | kremowy (korpus) | 0,4 mm przód |
 | C4 nadstawka lodówki — dno | 624×580 | 1 | kremowy (korpus) | 0,4 przód |
 | C4 nadstawka lodówki — trawersy górne | 624×100 | 2 | kremowy (korpus) | 0,4 |
-| C4 nadstawka lodówki — plecy HDF | 656×524 | 1 | HDF biały | — |
-| C4 nadstawka lodówki — fronty | 327×524 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
-| Bok wykończeniowy zabudowy lodówki (przy ściance, z blendą dystansową) | 2478×680 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
+| C4 nadstawka lodówki — plecy HDF | 656×415 | 1 | HDF biały | — |
+| C4 nadstawka lodówki — fronty | 327×415 | 2 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | Panel ryflowany ramienia (lamele — dostawca zewn.) | 1176×910 | 1 | ciemny orzech mat (front/panel) | 1,0 widoczne |
 | Blenda dolna A przy pilastrze (~610 do frontu DA1) | 610×756 | 1 | beż/kaszmir mat (front) | 1,0 widoczne |
 | Listwa cokołowa (czarny mat), łącznie ~5 mb | 5000×150 | 1 | czarny mat | 1,0 widoczne |
@@ -88,9 +95,9 @@
 
 | Kolor | m² netto | m² z zapasem |
 |---|---|---|
-| kremowy (korpus) | 19.9 | 22.9 |
-| HDF biały | 6.5 | 7.4 |
-| ciemny orzech mat (front/panel) | 6.3 | 7.2 |
+| kremowy (korpus) | 19.7 | 22.6 |
+| HDF biały | 6.4 | 7.3 |
+| ciemny orzech mat (front/panel) | 4.5 | 5.2 |
 | beż/kaszmir mat (front) | 3.3 | 3.8 |
 | czarny mat | 0.8 | 0.9 |
 
@@ -127,7 +134,6 @@
 | Listwa gola / frez uchwytowy | ~5 mb | decyzja technologiczna: profil alu vs frez CNC w płycie |
 | Kątowniki montażowe (ramię do posadzki, ścianka) | 8 szt | kotwienie ramienia |
 | Taśma LED 3000K + profil + zasilacz 24V | ~3 mb + 1 szt | pod GA i GC |
-| Blenda dystansowa lodówka–ścianka | 1 szt (~70×2478) | drzwi lodówki >90° |
 | Silikon + Silikorner (uszczelka cokołu — Korner korner.eu) | 1+1 | |
 
 ## 4. Plan montażu — kolejność (montaż samodzielny)
