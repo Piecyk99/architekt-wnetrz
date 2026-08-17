@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13b)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13c)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.13c (2026-08-13, pytanie inwestora „jakiego pilastra?"):** **na rzucie pilastra praktycznie nie było widać** — rysowałem go jako prostokąt w kolorze ściany, a potem przykrywał go korpus DA1; jego podpis znikał pod szafką. Skoro inwestor pyta, czym jest element, na którym opiera się cała ściana A, to jest wada rysunku, nie pamięci. Pilaster jest teraz **czerwoną, zaszrafowaną bryłą z odnośnikiem i opisem**. Przy okazji naprawione: **rzut nie mieścił się na stronie** (zakres pionowy to −22…342 przez otwór do salonu, a skala liczyła się z 260 — dolny fragment ściany A uciekał poza kartkę), nachodzące podpisy okna i wymiaru 238,9, oraz **lodówka 60×65×190 → 200 wolnostojąca** na rzucie. **Nazewnictwo:** inwestor nazywa ten element „gzyms" (tak był na jego szkicu), ja od v3.7 „pilaster" — to ta sama rzecz i rysunek powinien mówić oboma słowami.
 
 - **v3.13b (2026-08-13, uwaga inwestora „to nie powinno być na odwrót?"):** **ELEWACJA A była odbita lustrzanie** — miała pilaster i okno po lewej, a powinny być po prawej. Reguła: stojąc we wnętrzu twarzą do ściany zachodniej patrzysz na zachód, więc **północ (okno) jest po Twojej PRAWEJ**, a korytarz i ramię po lewej. Rysunek przeczył własnemu podtytułowi („widok z wnętrza U"). **Sprawdzone rachunkiem wszystkie trzy elewacje: B i C były dobrze, tylko A odbita.** Poprawione; podtytuły elewacji nazywają teraz zwrot wprost („patrzysz na ZACHÓD → okno po PRAWEJ"), żeby rysunek sam się kontrolował. Przy okazji doczyszczona elewacja C, która wciąż pokazywała **lodówkę 190 w niszy 65,8**: teraz **200 wys., 60 szer., dosunięta do słupka, luz 5,8 przy ściance**, nadstawka **41,9**, słupek opisany jako **CARGO (nie drzwi)**, a podpis „zawiasy od strony ścianki" — który był już nieaktualny — zastąpiony wariantem A. Reguła zwrotu elewacji trafiła do skilla (`protokol-weryfikacji.md`, pkt 8).
 

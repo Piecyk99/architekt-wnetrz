@@ -98,8 +98,8 @@ def header(title, sub):
 # Układ współrzędnych: origin = wewn. narożnik A/B (przy pilastrze), x -> ściana C (wschód), y -> korytarz (południe)
 header("RZUT Z GÓRY — kuchnia w U z ramieniem L (v3.13)",
        "skala ~1:14 · patrzysz od korytarza na okno · A = indukcja (lewa), B = okno (góra), C = lodówka (prawa)")
-s = (PH - 64 * mm) / 260.0
-v = V(62 * mm, PH - 27 * mm, s)
+s = (PH - 40 * mm) / 370.0          # zakres rzutu w pionie: -22 .. 342 (otwór do salonu za kuchnią)
+v = V(62 * mm, PH - 35 * mm, s)
 
 CX = 254.6          # x wewn. lica ściany C
 AEND = 195.0        # koniec ciągu A / linia południowa [P]
@@ -125,7 +125,7 @@ v.text(CX - 74, SCY1 - 4, "ścianka — wysięg ~77 [~], na 188,5 [P]", 4.8, col
 ox1, ox2 = 15.5 + 59.7, 15.5 + 59.7 + 85.6   # okno od strony pilastra [P] (korekta v3.5)
 v.rect(ox1, -8, ox2 - ox1, 8, fill=colors.white)
 v.line(ox1, -4, ox2, -4, 0.8, INK)
-v.text((ox1 + ox2) / 2, -12, "OKNO 85,6 (pod sufit, parapet ~166,4)", 5.4, center=True)
+v.text((ox1 + ox2) / 2, 7, "OKNO 85,6 — pod sufit, parapet ~166,4", 4.8, center=True, col=GREY)
 
 # ciąg B (gł. 60); narożnik zachodni (do x=60) = martwe pole bez frontu (kolizja z ciągiem A)
 v.rect(0, 67, 15.5, 18, fill=colors.HexColor("#e3ddd2"))   # pustka za korpusem, poniżej pilastra
@@ -158,7 +158,7 @@ v.rect(CX - 70, 94.7, 70, 28, fill=TALL)
 v.text(CX - 35, 111, "C2 słupek ~28", 4.8, center=True, col=colors.white)
 v.rect(CX - 70, 122.7, 70, 65.8, fill=FILL)
 v.text(CX - 35, 148, "C3 LODÓWKA", 5.2, center=True)
-v.text(CX - 35, 157, "60×65×190 [P]", 4.8, center=True, col=GREY)
+v.text(CX - 35, 157, "60×65×200 [P] wolnostojąca", 4.8, center=True, col=GREY)
 v.text(CX - 35, 166, "+ nadstawka", 4.8, center=True, col=GREY)
 
 # ciąg A: strefa modułowa od styku z ciągiem B (narożnik domknięty)
@@ -182,6 +182,17 @@ v.text((60 + ARM_L) / 2, AEND - 24, "drzwi 30 + SZUFLADY 30 (sztućce) · gł. 4
 v.line(0, AEND - ARM_D, 60, AEND - ARM_D, 0.9, GREY, dash=([3, 2], 0))
 v.text(64, AEND - ARM_D - 2, "← koniec frontów ciągu A = początek ramienia (y=145)", 4.6, col=GREY)
 v.text(ARM_L / 2, AEND + 7, "rewers: panel ryflowany (salon/korytarz)", 4.6, center=True, col=GREY)
+
+# --- PILASTER: rysowany NA KOŃCU, żeby nie zniknął pod korpusem DA1 ---
+PILC = colors.HexColor("#c9b7a3")
+v.rect(0, 0, 15.5, 67, fill=PILC, stroke=RED, lw=1.5)
+for yy in range(4, 67, 5):                     # szrafura — pilaster to MUR, nie szafka
+    v.line(0, yy, 15.5, yy, 0.35, RED)
+v.line(8, 67, 13, 276, 0.7, RED)                # odnośnik w wolną strefę pod kuchnią
+v.text(10, 282, "PILASTER  15,5 × 67  [~ DO POMIARU]", 5.6, bold=True, col=RED)
+v.text(10, 289, "pionowy uskok muru na CAŁĄ wysokość, w narożniku ściany A ze ścianą B (przy oknie)", 4.6, col=RED)
+v.text(10, 295, "to on odbiera 15,5 cm głębokości ciągu A; na jego licu wisi GA1, a bok GA2 siada na jego czole", 4.6, col=RED)
+v.text(10, 302, "kontrola krzyżowa: 254,6 (ściana B z pilastrem) − 238,9 (bez) = 15,7 ≈ 15,5 ✓ — ale DŁUGOŚĆ 67 jest tylko ze szkicu, nigdy nie zmierzona", 4.6, col=GREY)
 
 # wymiary
 v.dimv(0, AEND, 0, "195 [P] (od ściany B)", off=-14, size=5.6)
