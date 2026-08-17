@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13a)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13b)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.13b (2026-08-13, uwaga inwestora „to nie powinno być na odwrót?"):** **ELEWACJA A była odbita lustrzanie** — miała pilaster i okno po lewej, a powinny być po prawej. Reguła: stojąc we wnętrzu twarzą do ściany zachodniej patrzysz na zachód, więc **północ (okno) jest po Twojej PRAWEJ**, a korytarz i ramię po lewej. Rysunek przeczył własnemu podtytułowi („widok z wnętrza U"). **Sprawdzone rachunkiem wszystkie trzy elewacje: B i C były dobrze, tylko A odbita.** Poprawione; podtytuły elewacji nazywają teraz zwrot wprost („patrzysz na ZACHÓD → okno po PRAWEJ"), żeby rysunek sam się kontrolował. Przy okazji doczyszczona elewacja C, która wciąż pokazywała **lodówkę 190 w niszy 65,8**: teraz **200 wys., 60 szer., dosunięta do słupka, luz 5,8 przy ściance**, nadstawka **41,9**, słupek opisany jako **CARGO (nie drzwi)**, a podpis „zawiasy od strony ścianki" — który był już nieaktualny — zastąpiony wariantem A. Reguła zwrotu elewacji trafiła do skilla (`protokol-weryfikacji.md`, pkt 8).
 
 - **v3.13a (2026-08-13, pytanie inwestora „a ten mały pasek między GA1 a GA3?"):** pasek na elewacji A to **GA2 — szafka 180**, tylko **bez podpisu na rysunku** (mój błąd w rysunku, nie w geometrii). Podpisana. Przy okazji policzone i zapisane: światło wewnętrzne **144**, realny zasięg w głąb ~250 z 400 → zawartość zmieniona z „przypraw" na **butelki ustawiane rzędem** + listwa na przyprawy na drzwiach. Wykryte dwie rzeczy, których wcześniej w dokumencie nie było: **(a)** lewy bok GA2 siada dokładnie na czole pilastra — to najczulszy moduł na pomiar pilastra; **(b) w całym projekcie nie była wybrana ani jedna strona zawiasu**, a Korner wierci puszki 35 wg strony. Strony dobrane dla wszystkich skrzydeł i dodana kontrola **K10** (strona wybrana + brak dwóch zawiasów na wspólnej krawędzi). K10 od razu wykazała, że **C2 nie może mieć drzwi** — obie jego krawędzie są zajęte. Regresja: **7/7**.
 

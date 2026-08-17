@@ -216,32 +216,40 @@ c.showPage()
 
 # ================= STRONA 2: ELEWACJA A =================
 header("ELEWACJA A — ciąg z indukcją (górne do sufitu) + ramię L",
-       "skala ~1:15 · widok z wnętrza U · sufit 248,1 [P] · góra zabudowy 246,9 (fuga 1,2 pod blendą) · blat 91 [P — wzrost 182] · od lewej: pilaster")
+       "skala ~1:15 · widok z wnętrza U, patrzysz na ZACHÓD → okno jest po PRAWEJ · sufit 248,1 [P] · góra zabudowy 246,9 (fuga 1,2 pod blendą) · blat 91 [P]")
 s2 = (PH - 62 * mm) / 250.0
 e = V(60 * mm, PH - 30 * mm, s2)
 H, BL, COK, GD = 248.1, 91.0, 15.0, 148.0   # sufit 248,1 [P] pomiar po posadzce; góra zabudowy 246,9 (fuga 1,2)
 e.rect(0, 0, 195, H)
 e.rect(0, H - COK, 195, COK, fill=colors.HexColor("#2e2e2e"))
-for x0, w, lab in [(0, 61, "blenda\n(pilaster)"), (61, 24, "DA1\ndrzwi"), (85, 60, "DA2 piekarnik\npod indukcją"), (145, 50, "ślepy narożnik\npod ramieniem")]:
+# UWAGA: rysunek jest LUSTRZANY względem osi y planu — patrząc na ścianę A stoisz
+# tyłem do ściany C i patrzysz na zachód, więc ściana B (okno, y=0) wypada PO PRAWEJ.
+# MX(a, b) przelicza odcinek [a,b] planu na odcinek rysunku.
+def MX(a, b):
+    return (195 - b, b - a)
+
+for x0, w, lab in [MX(0, 61) + ("blenda\n(pilaster)",), MX(61, 85) + ("DA1\ndrzwi",),
+                   MX(85, 145) + ("DA2 piekarnik\npod indukcją",),
+                   MX(145, 195) + ("ślepy narożnik\npod ramieniem",)]:
     e.rect(x0, H - BL, w, BL - COK - 4, fill=FILL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, H - BL + 30 + i * 9, ln, 5.2, center=True)
 e.rect(0, H - BL - 4, 195, 4, fill=BLAT)
-e.line(85, H - BL - 4, 145, H - BL - 4, 2.2, INK)
-e.text(115, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
-for x0, w, lab, rozm in [(0, 67, "GA1\n245 gł.", 5.6), (67, 18, "GA2\n18\nbutelki", 4.0),
-                         (85, 60, "GA3 OKAP\nw zabudowie", 5.6), (145, 50, "GA4", 5.6)]:
+e.line(50, H - BL - 4, 110, H - BL - 4, 2.2, INK)   # DA2 po lustrze: 195-145 .. 195-85
+e.text(80, H - BL - 8, "INDUKCJA Bosch PXE601DC1E — wycięcie 56×49 [P]", 4.8, center=True)
+for x0, w, lab, rozm in [MX(0, 67) + ("GA1\n245 gł.", 5.6), MX(67, 85) + ("GA2\n18\nbutelki", 4.0),
+                         MX(85, 145) + ("GA3 OKAP\nw zabudowie", 5.6), MX(145, 195) + ("GA4", 5.6)]:
     e.rect(x0, 0, w, H - GD, fill=TALL)
     for i, ln in enumerate(lab.split("\n")):
         e.text(x0 + w / 2, (H - GD) / 2 + i * 9, ln, rozm, center=True, col=colors.white)
-e.text(97, H - GD + 8, "LED 3000K pod górnymi", 5, center=True, col=GREY)
-e.dimh(0, 195, H, "195 [P] (od ściany B, z pilastrem)", off=14, size=5.4)
+e.text(98, H - GD + 8, "LED 3000K pod górnymi", 5, center=True, col=GREY)
+e.dimh(0, 195, H, "195 [P] — mierzone od ściany B, czyli od PRAWEJ krawędzi rysunku (pilaster w środku wymiaru)", off=14, size=5.4)
 e.dimv(0, H, 0, "248,1 [P]", off=-14)
 e.dimv(H - BL, H, 195, "91 [P]", off=12)
 e.dimv(H - GD, H - BL - 4, 195, "≥55 okap–indukcja", off=12, size=5)
 e.dimv(0, H - GD, 195, "górne 98,9 do 246,9", off=22, size=5)
 e.text(0, H + 34, "GA2 (18 szer.) to najwęższa szafka ciągu — zawias od strony okapu; jej bok siada dokładnie na końcu pilastra [pomiar!]", 5.4, col=GREY)
-e.text(0, H + 26, "na końcu ciągu blat skręca w ramię L (~118×50, wys. 91) — wspólny blat, wieniec na końcu; front ryflowany od salonu", 5.4, col=GREY)
+e.text(0, H + 26, "PO LEWEJ blat skręca w ramię L (~118×50, wys. 91) w stronę korytarza; PO PRAWEJ pilaster i narożnik z oknem", 5.4, col=GREY)
 c.showPage()
 
 # ================= STRONA 3: ELEWACJA B =================
@@ -272,14 +280,14 @@ c.showPage()
 
 # ================= STRONA 4: ELEWACJA C + RAMIĘ =================
 header("ELEWACJA C — niski ciąg, słupek, lodówka przy ściance · RAMIĘ L od wnętrza U",
-       "skala ~1:15 · C: od narożnika z B (lewa) do ścianki (prawa) · lodówka wolnostojąca 60×65×190 [P]")
+       "skala ~1:15 · patrzysz na WSCHÓD → narożnik z oknem po LEWEJ, ścianka po PRAWEJ · lodówka wolnostojąca 60×65×200 [P]")
 e = V(28 * mm, PH - 30 * mm, s2)
 ZW = 188.5 + 9.0
 e.rect(0, 0, ZW, H)
 e.rect(0, H - COK, 94.7, COK, fill=colors.HexColor("#2e2e2e"))
 e.rect(0, H - BL, 94.7, BL - COK - 4, fill=FILL)
 e.rect(0, H - BL - 4, 94.7, 4, fill=BLAT)
-e.text(47, H - 40, "DC1 narożna (front 45) + blenda", 5.2, center=True)
+e.text(47, H - 40, "DC1 narożna (front 34,5) + blenda", 5.2, center=True)
 e.text(47, H - 30, "blat w L z ciągu okna", 4.8, center=True, col=GREY)
 e.rect(0, 0, 47, H - 148, fill=TALL)
 e.rect(47, 0, 47.7, H - 148, fill=TALL)
@@ -287,25 +295,29 @@ e.text(23.5, (H - 148) / 2, "GC1", 5.6, center=True, col=colors.white)
 e.text(23.5, (H - 148) / 2 + 10, "ociekarka/naczynia", 4.4, center=True, col=colors.white)
 e.text(71, (H - 148) / 2, "GC2", 5.6, center=True, col=colors.white)
 e.text(71, (H - 148) / 2 + 10, "kubki/szkło", 4.4, center=True, col=colors.white)
-e.text(47, H - 140, "górne do sufitu (dół 148) — decyzja inwestora v3.5", 4.4, center=True, col=GREY)
+e.text(47, H - 140, "górne 98,9 (dół 148, góra 246,9) — decyzja inwestora v3.5", 4.4, center=True, col=GREY)
 e.rect(94.7, 0, 28, H, fill=TALL)
 e.text(108.7, H / 2 - 10, "C2", 5.4, center=True, col=colors.white)
-e.text(108.7, H / 2, "słupek ~28", 4.8, center=True, col=colors.white)
-e.rect(122.7, H - 190, 65.8, 190, fill=colors.HexColor("#f7f7f7"))
-e.text(155.6, H - 100, "C3 LODÓWKA", 6.2, center=True, bold=True)
-e.text(155.6, H - 90, "wolnostojąca 60 (wys. 190)", 5.0, center=True, col=GREY)
-e.line(128, H - 62, 183, H - 62, 0.6, GREY)
-e.rect(122.7, 0, 65.8, H - 192, fill=TALL)
-e.text(155.6, (H - 192) / 2, "C4 NADSTAWKA + kratka", 5.2, center=True, col=colors.white)
+e.text(108.7, H / 2, "~28", 4.8, center=True, col=colors.white)
+e.text(108.7, H / 2 + 8, "CARGO", 4.4, center=True, col=colors.white)
+e.text(108.7, H / 2 + 15, "(nie drzwi)", 3.8, center=True, col=colors.white)
+e.rect(122.7, H - 200, 60, 200, fill=colors.HexColor("#f7f7f7"))   # 60 szer. — DOSUNIĘTA DO SŁUPKA
+e.text(185.6, H - 130, "luz 5,8", 3.8, center=True, angle=90, col=GREY)
+e.text(152.7, H - 105, "C3 LODÓWKA", 6.2, center=True, bold=True)
+e.text(152.7, H - 95, "wolnostojąca 60×65, wys. 200 [P]", 5.0, center=True, col=GREY)
+e.line(127, H - 62, 178, H - 62, 0.6, GREY)
+e.rect(122.7, 0, 65.8, H - 205, fill=TALL)   # C4: od 205 (lodówka 200 + luz 5 cm) do 246,9
+e.text(155.6, (H - 205) / 2, "C4 NADSTAWKA 41,9", 5.2, center=True, col=colors.white)
+e.text(155.6, (H - 205) / 2 + 8, "+ kratka went.; podparcie [?]", 4.2, center=True, col=colors.white)
 e.rect(188.5, 0, 9, H, fill=WALL)
 e.text(201, H - 30, "ścianka [P] — za nią korytarz", 5.0, angle=90, col=GREY)
 e.dimv(0, H, 0, "248,1 [P]", off=-14)
-e.dimv(H - 190, H, ZW, "190", off=10)
-e.dimv(0, H - 192, ZW, "~53", off=10)
+e.dimv(H - 200, H, ZW, "200 [P]", off=10)
+e.dimv(0, H - 205, ZW, "41,9", off=10)
 e.dimh(0, 94.7, H, "94,7 [P]", off=14, size=5.4)
 e.dimh(94.7, 188.5, H, "~94 (28+66)", off=14, size=5.2)
 e.dimh(0, 188.5, H, "188,5 [P]", off=24, size=5.4)
-e.text(0, H + 34, "zawiasy lodówki od strony ścianki — drzwi otwierają się ku oknu", 5.2, col=GREY)
+e.text(0, H + 34, "ZAWIASY LODÓWKI PRZEŁOŻONE NA STRONĘ SŁUPKA (wariant A [P]) — przy ściance skrzydło nie otwiera się wcale; zapas do kantu ścianki 70,8 mm", 5.2, col=GREY)
 # ramię L obok
 w2 = V(178 * mm, PH - 30 * mm, s2)
 IW = 118.0

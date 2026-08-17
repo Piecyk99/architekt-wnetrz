@@ -83,3 +83,34 @@ Reguły:
 Nie poprawiaj grafiki od razu. **Najpierw sprawdź geometrię liczbowo** — w tym projekcie
 dwa razy z „wizualizacja jest jakby zła" wyszedł realny błąd konstrukcyjny, a nie
 kwestia rysunku. Uwaga inwestora to sygnał, że model może być zły, nie tylko obrazek.
+
+## 8. Zwrot elewacji — sprawdzaj rachunkiem, nie okiem
+
+Elewację wnętrzarską rysuje się **tak, jak ją widzi ktoś stojący w pomieszczeniu**.
+Zwrot łatwo odwrócić, bo w rzucie ściana wygląda „tak samo z obu stron", a błąd jest
+niewidoczny do momentu, w którym ktoś przyłoży rysunek do prawdziwej ściany.
+
+Reguła (układ: x → wschód, y → południe, rzut z północą do góry):
+
+| Patrzysz na ścianę | Kierunek patrzenia | Po LEWEJ | Po PRAWEJ |
+|---|---|---|---|
+| zachodnią | na zachód | **południe** | **północ** |
+| wschodnią | na wschód | **północ** | **południe** |
+| północną | na północ | **zachód** | **wschód** |
+| południową | na południe | **wschód** | **zachód** |
+
+Wynika to z jednej zasady: **stojąc twarzą do ściany, obracasz się względem północy
+i twoja prawa ręka jedzie razem z tobą.** Patrzę na północ → prawo = wschód. Obrót
+w lewo (na zachód) → prawo = północ. Obrót w prawo (na wschód) → prawo = południe.
+
+**Procedura, nie intuicja:** przed wysłaniem elewacji wypisz dla każdej z nich, co ma
+być po lewej, i porównaj z tym, co faktycznie rysuje kod. Trzy elewacje wymagają trzech
+sprawdzeń — w tym projekcie dwie były dobrze, a trzecia (ściana zachodnia) była
+odbita, mimo że jej własny podtytuł deklarował „widok z wnętrza".
+
+**Podtytuł elewacji musi nazywać zwrot wprost** — „patrzysz na ZACHÓD → okno po PRAWEJ",
+a nie samo „od lewej: pilaster". Wtedy rysunek sam się kontroluje: jeśli podtytuł kłóci
+się z obrazkiem, widać to natychmiast.
+
+Rzutu i aksonometrii to nie dotyczy — rzut ma sztywno północ do góry, a aksonometria
+ma własną flagę lustra.
