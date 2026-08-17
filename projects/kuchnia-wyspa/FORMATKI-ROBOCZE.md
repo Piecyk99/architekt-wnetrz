@@ -76,12 +76,12 @@
 | GC2 górna — plecy HDF | 473×985 | 1 | HDF biały | — |
 | GC2 górna — front | 473×996 | 1 | ciemny orzech mat (front/panel) | 1,0 — 4 krawędzie |
 | GC2 górna — półki | 440×300 | 2 | kremowy (korpus) | 0,4 |
-| C2 słupek cargo — bok | 580×2319 | 2 | kremowy (korpus) | 0,4 mm przód |
-| C2 słupek cargo — dno/wieniec | 244×580 | 2 | kremowy (korpus) | 0,4 przód |
-| C2 słupek cargo — plecy HDF | 276×2315 | 1 | HDF biały | — |
-| C2 słupek cargo — fronty | 276×1300 | 1 | ciemny orzech mat (front/panel) | 1,0 |
-| C2 słupek cargo — front górny | 276×1070 | 1 | ciemny orzech mat (front/panel) | 1,0 |
-| C2 słupek cargo — półki | 243×560 | 2 | kremowy (korpus) | 0,4 |
+| C2 słupek spiżarnia — bok | 580×2319 | 2 | kremowy (korpus) | 0,4 mm przód |
+| C2 słupek spiżarnia — dno/wieniec | 244×580 | 2 | kremowy (korpus) | 0,4 przód |
+| C2 słupek spiżarnia — plecy HDF | 276×2315 | 1 | HDF biały | — |
+| C2 słupek spiżarnia — front dolny (wysuw) | 276×717 | 1 | ciemny orzech mat (front/panel) | 1,0 |
+| C2 słupek spiżarnia — front górny (drzwi) | 276×1590 | 1 | ciemny orzech mat (front/panel) | 1,0 |
+| C2 słupek spiżarnia — półki | 243×560 | 2 | kremowy (korpus) | 0,4 |
 | C4 nadstawka lodówki — bok | 580×419 | 2 | kremowy (korpus) | 0,4 mm przód |
 | C4 nadstawka lodówki — dno | 624×580 | 1 | kremowy (korpus) | 0,4 przód |
 | C4 nadstawka lodówki — trawersy górne | 624×100 | 2 | kremowy (korpus) | 0,4 |
@@ -128,7 +128,8 @@ otwarte leżą wtedy w jednej płaszczyźnie i zderzają się (kontrola **K10**)
 | DB1 zlew 80 | 750–1550 | **750 i 1550** (para) | dwa skrzydła spotykają się w środku |
 | DB2 zmywarka 45 | 1550–2000 | — | drzwi AGD, zawias dolny |
 | DC1 narożna ślepa | 600–945 | **945** | otwarte skrzydło odsłania dojście do ślepej części przy ścianie B |
-| C2 słupek | 945–1225 | **BRAK — musi być cargo** | 945 zajmuje DC1, 1225 zajmują drzwi lodówki → na drzwi nie ma wolnej strony |
+| C2 słupek — front DOLNY (150–871) | 945–1225 | **BRAK — wysuw** | drzwi zderzyłyby się ze skrzydłem DC1 (oba w paśmie 155–871) |
+| C2 słupek — front GÓRNY (875–2469) | 945–1225 | **945** | powyżej 871 DC1 się kończy — krawędź jest wolna |
 | C3 lodówka | 1225–1885 | **1225** (strona słupka) | wariant A `[P]` — zawiasy przełożone; przy ściance skrzydło się nie otwiera |
 | GA1 górna | 0–670 | **0 i 670** (para) | dwa skrzydła |
 | GA2 wąska 180 | 670–850 | **850** (od okapu) | 670 zajmuje prawe skrzydło GA1 |

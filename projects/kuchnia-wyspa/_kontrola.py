@@ -30,15 +30,27 @@ LINIA_POLUDNIOWA = 1950    # koniec ciągu A / krawędź ramienia
 SCIANKA = (1776, 1885, 2546, 1975)   # x0, y0, x1, y1
 
 PROG_PRZEJSCIA = 600       # decyzja inwestora [P] — reguła nadrzędna
+GORA_ZABUDOWY = 2469       # sufit 2481 [P] − fuga 12
+# Zakres wysokości frontu wg typu modułu. BEZ TEGO kontrola zawiasów jest płaska
+# i wypisuje kolizje między frontami, które nigdy nie spotykają się w pionie.
+Z_DOMYSLNE = {
+    "dolna":    (150, 871),
+    "szuflady": (150, 871),
+    "uchylny":  (150, 871),
+    "AGD":      (150, 871),
+    "górna":    (1480, GORA_ZABUDOWY),
+}
 FRONT_GR = 19
 
 
 class Modul:
     def __init__(self, nazwa, x0, y0, x1, y1, lico=None, front=None, typ="dolna", okucie=None,
-                 funkcje=(), zawias=None):
+                 funkcje=(), zawias=None, z=None, segmenty=None):
         self.nazwa, self.typ, self.okucie = nazwa, typ, okucie
         self.zawias = zawias        # współrzędna osi obrotu wzdłuż ciągu, "para" = zawiasy
-                                    # na obu końcach frontu, None = NIE WYBRANO
+                                    # na obu końcach frontu, "wysuw" = brak skrzydła, None = NIE WYBRANO
+        self.z = z or Z_DOMYSLNE.get(typ, (150, 871))   # zakres wysokości frontu
+        self.segmenty = segmenty    # front dzielony: [(z0, z1, zawias), ...]
         self.funkcje = tuple(funkcje)
         self.x0, self.y0, self.x1, self.y1 = x0, y0, x1, y1
         self.lico = lico            # 'E','W','N','S' — z której strony jest front
@@ -73,9 +85,13 @@ CIAG_B = [
 CIAG_C = [
     Modul("DC1 narożna ślepa", 2000, 0, 2546, 945, lico="W", front=(600, 945),
           okucie="szuflady wewnętrzne", zawias=945),
-    Modul("C2 słupek cargo", 1946, 945, 2546, 1225, lico="W", front=(945, 1225), typ="szuflady"),
+    Modul("C2 słupek", 1946, 945, 2546, 1225, lico="W", front=(945, 1225), typ="szuflady",
+          z=(150, GORA_ZABUDOWY),
+          # DÓŁ: wysuw obowiązkowo — drzwi zderzyłyby się ze skrzydłem DC1 (obie w z 155–871).
+          # GÓRA: drzwi dozwolone, zawias 945 — powyżej 871 nie ma z czym kolidować.
+          segmenty=[(150, 871, "wysuw"), (875, GORA_ZABUDOWY, 945)]),
     Modul("C3 lodówka", 1946, 1225, 2546, 1885, lico="W", front=(1225, 1885), typ="AGD",
-          zawias=1225),   # wariant A [P] — zawiasy przełożone na stronę słupka
+          zawias=1225, z=(0, 2000)),   # wariant A [P] — zawiasy przełożone na stronę słupka
 ]
 # --- górne na ścianie A (dół 1480, do sufitu) ----------------------------------
 GORNE_A = [
@@ -323,13 +339,18 @@ def k9_funkcje():
 BEZ_ZAWIASOW = ("szuflady", "AGD", "uchylny")
 
 
-def _osie_zawiasow(m):
-    """Zbiór współrzędnych osi obrotu wzdłuż ciągu."""
-    if m.zawias is None:
+def _osie(m, os):
+    """Zbiór współrzędnych osi obrotu wzdłuż ciągu dla jednego segmentu frontu."""
+    if os is None or os == "wysuw":
         return set()
-    if m.zawias == "para":
+    if os == "para":
         return {m.front[0], m.front[1]}
-    return {m.zawias}
+    return {os}
+
+
+def _segmenty(m):
+    """[(z0, z1, zawias)] — front dzielony albo jeden segment na całą wysokość."""
+    return m.segmenty if m.segmenty else [(m.z[0], m.z[1], m.zawias)]
 
 
 def k10_zawiasy():
@@ -339,7 +360,7 @@ def k10_zawiasy():
     wszystkie = [x for g in (CIAG_A, RAMIE, CIAG_B, CIAG_C, GORNE_A) for x in g]
 
     for m in wszystkie:
-        if m.front and m.typ not in BEZ_ZAWIASOW and m.zawias is None:
+        if m.front and m.typ not in BEZ_ZAWIASOW and m.zawias is None and not m.segmenty:
             ostrz(f"{m.nazwa}: NIE WYBRANO strony zawiasu — bez tego nie da się "
                   f"zamówić nawiertów CNC (puszki 35)")
 
@@ -349,9 +370,16 @@ def k10_zawiasy():
             if abs(a.front[1] - b.front[0]) > 1:
                 continue                      # nie sąsiadują
             krawedz = a.front[1]
-            if krawedz in _osie_zawiasow(a) and krawedz in _osie_zawiasow(b):
-                blad("K10", f"{nazwa}: {a.nazwa} i {b.nazwa} mają zawiasy na tej samej "
-                            f"krawędzi {krawedz} — otwarte skrzydła zderzą się")
+            for za0, za1, oa in _segmenty(a):
+                for zb0, zb1, ob in _segmenty(b):
+                    if krawedz not in _osie(a, oa) or krawedz not in _osie(b, ob):
+                        continue
+                    wspolne = min(za1, zb1) - max(za0, zb0)
+                    if wspolne <= 0:
+                        continue              # mijają się w pionie — nie ma kolizji
+                    blad("K10", f"{nazwa}: {a.nazwa} i {b.nazwa} mają zawiasy na tej samej "
+                                f"krawędzi {krawedz} i zachodzą na siebie w pionie o "
+                                f"{wspolne} mm — otwarte skrzydła zderzą się")
 
 
 KONTROLE = [k1_sumy, k2_nakladki, k3_otwieranie, k4_okap,
@@ -434,15 +462,23 @@ def regresja():
     # (7) 2026-08-13: gdyby C2 dostał DRZWI zamiast cargo — nie ma dla nich strony:
     #     945 zderza się z DC1, 1225 zderza się z drzwiami lodówki (wariant A)
     c2 = CIAG_C[1]
-    st_typ, st_zaw = c2.typ, c2.zawias
-    c2.typ = "dolna"
+    st_seg = c2.segmenty
+    # DÓŁ C2 na drzwiach: obie krawędzie zajęte w tym samym paśmie wysokości
     obie = []
     for proba in (945, 1225):
-        c2.zawias = proba
+        c2.segmenty = [(150, 871, proba), (875, GORA_ZABUDOWY, 945)]
         bledy.clear(); k10_zawiasy()
         obie.append(bool(bledy))
-    c2.typ, c2.zawias = st_typ, st_zaw
-    wyniki.append(("v3.13 C2 na drzwiach — obie strony zajęte", all(obie), "K10"))
+    c2.segmenty = st_seg
+    wyniki.append(("v3.13 dolny front C2 na drzwiach — obie krawędzie zajęte", all(obie), "K10"))
+
+    # (8) 2026-08-13: kontrola płaska (bez osi Z) wypisywała kolizję GÓRNEGO frontu C2
+    #     z drzwiami DC1, choć DC1 kończy się na 871 — fronty nigdy się nie spotykają.
+    c2.segmenty = [(150, 871, "wysuw"), (875, GORA_ZABUDOWY, 945)]
+    bledy.clear(); k10_zawiasy()
+    fałszywy = bool(bledy)
+    c2.segmenty = st_seg
+    wyniki.append(("v3.13c górny front C2 NIE jest kolizją (oś Z)", not fałszywy, "K10"))
 
     zlapane = sum(1 for _, z, _ in wyniki if z)
     for opis, z, kod in wyniki:

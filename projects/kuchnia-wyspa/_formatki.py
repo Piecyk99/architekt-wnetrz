@@ -24,7 +24,7 @@ MODULES = [
     ("GA4 górna", 500, 989, 400, "drzwi1g", FR_ORZ, "1450→1950, nad ramieniem"),
     ("GC1 górna (ociekarka)", 470, 989, 400, "drzwi1g", FR_ORZ, "ociekarka w szafce"),
     ("GC2 górna", 477, 989, 400, "drzwi1g", FR_ORZ, ""),
-    ("C2 słupek cargo", 280, 2319, 580, "slupek", FR_ORZ, "cargo 250/300 [DO WERYFIKACJI] lub półki; front dzielony 1270+1045"),
+    ("C2 słupek spiżarnia", 280, 2319, 580, "slupek", FR_ORZ, "front dzielony NA 871: dolny 721 = WYSUW (cargo albo szuflady), górny 1594 = drzwi zawias 945; nie 1270+1045 — podział musi wypaść na 871, żeby górne skrzydło minęło drzwi DC1"),
     ("C4 nadstawka lodówki", 660, 419, 580, "drzwi2n", FR_ORZ, "od 2050 (lodówka 2000 + luz 50) do 2469; kratka went.; PODPARCIE [?] — lodówka wolnostojąca nie jest obudową"),
 ]
 
@@ -69,7 +69,7 @@ for (nm, S, H, G, typ, fk, uw) in MODULES:
         add(f"{nm} — front", 446, 716, 1, fk, "1,0 — 4 krawędzie")
         add(f"{nm} — blenda ślepa", 430, 716, 1, fk, "1,0 przód")
     if typ == "slupek":
-        add(f"{nm} — fronty", S - 4, 1300, 1, fk, "1,0"); add(f"{nm} — front górny", S - 4, 1070, 1, fk, "1,0")
+        add(f"{nm} — front dolny (wysuw)", S - 4, 717, 1, fk, "1,0"); add(f"{nm} — front górny (drzwi)", S - 4, 1590, 1, fk, "1,0")
         add(f"{nm} — półki", S - 2 * P - 1, G - 20, 2, KORPUS, "0,4")
     if typ in ("drzwi1g", "drzwi2g"):
         add(f"{nm} — półki", S - 2 * P - 1, 300, 2, KORPUS, "0,4")
@@ -126,7 +126,8 @@ otwarte leżą wtedy w jednej płaszczyźnie i zderzają się (kontrola **K10**)
 | DB1 zlew 80 | 750–1550 | **750 i 1550** (para) | dwa skrzydła spotykają się w środku |
 | DB2 zmywarka 45 | 1550–2000 | — | drzwi AGD, zawias dolny |
 | DC1 narożna ślepa | 600–945 | **945** | otwarte skrzydło odsłania dojście do ślepej części przy ścianie B |
-| C2 słupek | 945–1225 | **BRAK — musi być cargo** | 945 zajmuje DC1, 1225 zajmują drzwi lodówki → na drzwi nie ma wolnej strony |
+| C2 słupek — front DOLNY (150–871) | 945–1225 | **BRAK — wysuw** | drzwi zderzyłyby się ze skrzydłem DC1 (oba w paśmie 155–871) |
+| C2 słupek — front GÓRNY (875–2469) | 945–1225 | **945** | powyżej 871 DC1 się kończy — krawędź jest wolna |
 | C3 lodówka | 1225–1885 | **1225** (strona słupka) | wariant A `[P]` — zawiasy przełożone; przy ściance skrzydło się nie otwiera |
 | GA1 górna | 0–670 | **0 i 670** (para) | dwa skrzydła |
 | GA2 wąska 180 | 670–850 | **850** (od okapu) | 670 zajmuje prawe skrzydło GA1 |

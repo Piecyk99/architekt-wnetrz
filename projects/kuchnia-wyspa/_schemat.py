@@ -310,8 +310,10 @@ e.text(47, H - 140, "górne 98,9 (dół 148, góra 246,9) — decyzja inwestora 
 e.rect(94.7, 0, 28, H, fill=TALL)
 e.text(108.7, H / 2 - 10, "C2", 5.4, center=True, col=colors.white)
 e.text(108.7, H / 2, "~28", 4.8, center=True, col=colors.white)
-e.text(108.7, H / 2 + 8, "CARGO", 4.4, center=True, col=colors.white)
-e.text(108.7, H / 2 + 15, "(nie drzwi)", 3.8, center=True, col=colors.white)
+e.text(108.7, H / 2 + 8, "SPIŻARNIA", 4.4, center=True, col=colors.white)
+e.line(94.7, H - 87.1, 122.7, H - 87.1, 0.9, colors.white)   # podział frontu na 87,1
+e.text(108.7, H - 83, "WYSUW", 3.8, center=True, col=colors.white)
+e.text(108.7, H - 92, "drzwi", 3.8, center=True, col=colors.white)
 e.rect(122.7, H - 200, 60, 200, fill=colors.HexColor("#f7f7f7"))   # 60 szer. — DOSUNIĘTA DO SŁUPKA
 e.text(185.6, H - 130, "luz 5,8", 3.8, center=True, angle=90, col=GREY)
 e.text(152.7, H - 105, "C3 LODÓWKA", 6.2, center=True, bold=True)
@@ -327,8 +329,9 @@ e.dimv(H - 200, H, ZW, "200 [P]", off=10)
 e.dimv(0, H - 205, ZW, "41,9", off=10)
 e.dimh(0, 94.7, H, "94,7 [P]", off=14, size=5.4)
 e.dimh(94.7, 188.5, H, "~94 (28+66)", off=14, size=5.2)
-e.dimh(0, 188.5, H, "188,5 [P]", off=24, size=5.4)
-e.text(0, H + 34, "ZAWIASY LODÓWKI PRZEŁOŻONE NA STRONĘ SŁUPKA (wariant A [P]) — przy ściance skrzydło nie otwiera się wcale; zapas do kantu ścianki 70,8 mm", 5.2, col=GREY)
+e.dimh(0, 188.5, H, "188,5 [P]", off=22, size=5.4)
+e.text(0, H + 31, "ZAWIASY LODÓWKI PRZEŁOŻONE NA STRONĘ SŁUPKA (wariant A [P]) — przy ściance skrzydło nie otwiera się wcale; zapas do kantu ścianki 70,8 mm", 5.0, col=GREY)
+e.text(0, H + 38, "C2 — front DZIELONY na 87,1: dół WYSUW (drzwi zderzyłyby się ze skrzydłem DC1), góra drzwi na zawiasie od strony DC1", 5.0, col=GREY)
 # ramię L obok
 w2 = V(178 * mm, PH - 30 * mm, s2)
 IW = 118.0

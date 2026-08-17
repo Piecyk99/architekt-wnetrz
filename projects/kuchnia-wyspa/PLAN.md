@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13c)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13d)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.13d (2026-08-13, pytanie inwestora „a to cargo jest potrzebne?"):** **KOREKTA WŁASNEGO BŁĘDU.** Dzień wcześniej napisałem, że **C2 nie może mieć drzwi w ogóle**, bo obie jego krawędzie są zajęte. To było za mocne — wniosek pochodził z kontroli K10, która była **płaska i nie znała osi Z**, czyli dokładnie ta ślepota, którą wytknął audyt. Po policzeniu wysokości: skrzydło DC1 kończy się na **871**, więc front C2 **poniżej 871** faktycznie się z nim zderza (zachodzenie 716 mm), ale front **powyżej 875 nie ma z czym kolidować**. Nowy podział C2: **dół 150–871 = wysuw (cargo albo szuflady, obowiązkowo), góra 875–2469 = drzwi na zawiasie 945**. **K10 dostała oś Z** — moduły mają teraz zakres wysokości frontu, a fronty dzielone własne segmenty; kolizja liczy się tylko przy realnym zachodzeniu w pionie. Regresja rozszerzona do **8/8**, w tym nowy przypadek odwrotny: „górny front C2 NIE jest kolizją" — test pilnuje, żeby kontrola nie wróciła do fałszywego alarmu.
 
 - **v3.13c (2026-08-13, pytanie inwestora „jakiego pilastra?"):** **na rzucie pilastra praktycznie nie było widać** — rysowałem go jako prostokąt w kolorze ściany, a potem przykrywał go korpus DA1; jego podpis znikał pod szafką. Skoro inwestor pyta, czym jest element, na którym opiera się cała ściana A, to jest wada rysunku, nie pamięci. Pilaster jest teraz **czerwoną, zaszrafowaną bryłą z odnośnikiem i opisem**. Przy okazji naprawione: **rzut nie mieścił się na stronie** (zakres pionowy to −22…342 przez otwór do salonu, a skala liczyła się z 260 — dolny fragment ściany A uciekał poza kartkę), nachodzące podpisy okna i wymiaru 238,9, oraz **lodówka 60×65×190 → 200 wolnostojąca** na rzucie. **Nazewnictwo:** inwestor nazywa ten element „gzyms" (tak był na jego szkicu), ja od v3.7 „pilaster" — to ta sama rzecz i rysunek powinien mówić oboma słowami.
 
@@ -152,7 +154,7 @@ Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[
 | — | blenda | ~47 | — | dopełnienie C1 do 947 `[P]` |
 | **GC1** | **górna nad DC1** | ~470×989×**400** | półki + **ociekarka na umyte naczynia** | dół 1480, do sufitu; najbliżej zlewu/zmywarki — decyzja inwestora v3.2 |
 | **GC2** | **górna nad DC1** | ~477×989×**400** | naczynia codzienne | do sufitu; front w linii słupka C2 |
-| C2 | **słupek cargo/spiżarka** | ~280×2319×580 | **cargo wysokie — OBOWIĄZKOWO, nie półki z drzwiami** | od 947; góra 2469. **Drzwi tu nie wejdą**: krawędź 945 zajmuje skrzydło DC1, krawędź 1225 zajmują drzwi lodówki (wariant A) — nie ma wolnej strony na zawias (kontrola K10) |
+| C2 | **słupek — spiżarnia** | ~280×2319×580 | **front DZIELONY na 871: dół = wysuw (cargo albo szuflady), góra = drzwi z półkami, zawias 945** | od 947; góra 2469. **Dół MUSI być wysuwem**: drzwi na krawędzi 945 zderzyłyby się ze skrzydłem DC1 (oba w paśmie 155–871), a na krawędzi 1225 z drzwiami lodówki. **Góra jest wolna** — DC1 kończy się na 871, więc powyżej 875 drzwi na zawiasie 945 nie mają z czym kolidować (kontrola K10 z osią Z) |
 | C3 | **zabudowa lodówki** | ~660 światło (lodówka 600+luzy) | — | lodówka wolnostojąca **60×65×200** `[P]` przy ściance; wentylacja 50 tył+góra; **zawiasy przełożone na stronę słupka C2** `[P]` (wariant A, pkt 9) |
 | C4 | nadstawka nad lodówką | ~660×**419**×580 | drzwi | **od 2050 do 2469** (lodówka 2000 + luz 50); kratka wentylacyjna; **podparcie nadstawki `[?]`** — lodówka wolnostojąca nie jest zabudowana, więc C4 musi wisieć na bokach/ścianie, nie stać na lodówce |
 | — | ŚCIANKA | na 1885 `[P]` | — | bok zabudowy dosunięty; **zawiasy lodówki NIE przy ściance** — przełożone na stronę słupka C2 (wariant A `[P]`), skrzydło odchyla się od ścianki, zapas 60 mm |
@@ -174,7 +176,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 | DB2 zmywarka 45 | — |
 | narożnik zachodni B | **nie jest już stracony** — przejęty przez korpus DA1 (v3.10), dostęp od ciągu A |
 | DC1 narożna (front 345) | 2 szuflady wewnętrzne: sztućce zapasowe, sztućce serwisowe (1 krok od zmywarki); część ślepa północna ~236 l: rzadko używane |
-| C2 słupek cargo ~28 | spiżarnia pionowa: przetwory, butelki, suche zapasy |
+| C2 słupek ~28 (jedyna spiżarnia w tej kuchni) | **DÓŁ (150–871, wysuw):** ciężkie i codzienne — przetwory w słoikach, konserwy, butelki, worki mąki/cukru/ryżu. Wysuw, bo tu sięgasz najczęściej i tu stoi najcięższe. **GÓRA (875–2469, drzwi):** zapas kupowany hurtem i rzeczy rzadkie — makarony, kasze, herbaty, zapasowa chemia. Uwaga: półki mają 244 szer. i 559 gł., więc **realnie użyjesz tylko przedniego ~300 mm** — resztę traktuj jako magazyn na to, co wyjmujesz raz na kwartał |
 | C3/C4 lodówka + nadstawka | lodówka; nadstawka: zapasy sezonowe, rzadko używany sprzęt |
 | DA1 narożna ślepa (front 240) | **garnki i duże naczynia — 248 l tuż przy indukcji** (v3.10); dostęp drzwiami + sięg w głąb |
 | DA2 60 | piekarnik + szuflada na blachy/formy (dolna, płytsza — płyta 5,6 nad nią) |
@@ -245,7 +247,7 @@ Warianty:
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
 | **Z czego jest pilaster? GA1 na nim WISI** `[?]` | GA1 to najcięższa górna szafka (670 szer., suche zapasy) i jej korpus jest przykręcony **do lica pilastra**, nie do ściany nośnej. Jeśli pilaster okaże się **obudową G-K** wokół pionu wentylacyjnego albo rur, nie ma w czym trzymać kołków. **Do sprawdzenia przy pomiarze: zapukać.** Głucho = obudowa → GA1 musi zawisnąć na listwie montażowej zakotwionej w ścianie B i A po bokach, albo oprzeć się na boku GA2. Murowany = bez zmian |
 | **Lewy bok GA2 ląduje dokładnie na końcu pilastra (y = 670)** | GA1 jest 245 gł. (wisi na licu pilastra), GA2 jest 400 gł. (wisi na gołej ścianie). Tylne 155 mm boku GA2 dosuwa się do czoła pilastra. Jeśli pilaster ma **mniej niż 670** długości — zostaje szczelina za bokiem (kosmetyczna, niewidoczna). Jeśli **więcej niż 670** — bok GA2 nie wejdzie i trzeba go podciąć. **To najczulszy moduł na pomiar pilastra (pkt 11.11).** Zamawiać bok GA2 dopiero po pomiarze |
-| **Zawiasy: sąsiednie skrzydła na jednej krawędzi** | dodana kontrola **K10** — wykrywa, że dwa fronty wiszą na tej samej krawędzi (otwarte leżą w jednej płaszczyźnie i się zderzają). Skutek dla projektu: **GA2 zawias 850**, nie 670 (670 zajmuje prawe skrzydło GA1). **Dla C2 nie ma wolnej krawędzi wcale**: 945 zajmuje DC1, 1225 zajmują drzwi lodówki (wariant A) → **C2 MUSI być cargo/szuflady, wariant „lub półki z drzwiami" ODPADA** |
+| **Zawiasy: sąsiednie skrzydła na jednej krawędzi** | kontrola **K10** wykrywa, że dwa fronty wiszą na tej samej krawędzi **i zachodzą na siebie w pionie** (otwarte leżą w jednej płaszczyźnie i się zderzają). Skutek: **GA2 zawias 850**, nie 670 (670 zajmuje prawe skrzydło GA1). **C2: dół wysuw, góra drzwi na zawiasie 945** — patrz pkt 5. *Korekta z 2026-08-13: pierwsza wersja K10 była płaska i orzekła „C2 nie może mieć drzwi w ogóle". Po dodaniu osi Z okazało się, że dotyczy to tylko dolnego frontu.* |
 | Pozycja indukcji vs puszka siłowa | DA2 pozycjonowany do wypustu; kolejność DA1/DA2 może się zamienić |
 | Suma łańcucha C (947+280+660 ≈ 1887 vs 1885) | luzy w blendzie przy C1; pomiar łańcuchowy przed zamówieniem |
 | Kratka wentylacyjna w strefie zabudowy | pomiar; kratka rewizyjna w zabudowie |
