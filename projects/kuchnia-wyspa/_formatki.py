@@ -88,6 +88,7 @@ out = ["# Lista formatek i okuć — kuchnia (WERSJA ROBOCZA R1 — pion przelic
        "**DA1 = 240**, **DC1 = 345**, **RL1 = 600 dzielony (drzwi 300 + 3 fronty szuflad 300)**.\n"
        "> - **P0-02:** RL1 nie ma tu **żadnego frontu szuflady ani dna** — szuflady na sztućce istnieją tylko w PLAN.md.\n"
        "> - **P0-06 / P0-11 / P0-12:** cztery urządzenia AGD bez modelu — nisze i wycięcia policzone „na oko\".\n"
+       "> - **P0-09:** **Korner NIE wierci otworów.** Nawierty trzeba zlecić osobno albo zrobić samemu — patrz pkt 2a.\n"
        "> Dopóki te punkty nie zostaną naprawione, lista służy **wyłącznie do wyceny orientacyjnej**.\n",
        "> **NIE DO CIĘCIA.** Wersja do wyceny w KornerGo / oddział Piekary Śląskie. Wymiary finalne po pomiarach łańcuchowych (PLAN pkt 11) — wtedy poprawiamy stałe w `_formatki.py` i lista przeliczy się sama. Blendy i ostatnie moduły w ciągach zawsze docinane na miejscu. Płyta 18 mm; plecy HDF 3 mm nakładane; wysokości korpusów: dolne 720 (nóżki 150), górne **989**, słupek **2319**, nadstawka C4 **419** — przeliczone z sufitu **2481** `[P]` minus fuga 12 (góra zabudowy 2469).\n",
        "## 1. Formatki\n",
@@ -110,11 +111,26 @@ for (nm, w, h) in BLATY:
 out += ["""
 Łączenia blatów: 3 (narożnik A/B przy pilastrze, narożnik B/C1, A/ramię) — frez + śruby łącznikowe 3 kpl, silikon. Wycięcia: indukcja **560×490** [P] w blacie A, zlew wg szablonu w blacie B — samodzielnie wyrzynarką (krawędzie zabezpieczyć silikonem) albo CNC przy rozkroju.
 
-## 2a. STRONY ZAWIASÓW — do zamówienia nawiertów CNC (puszki 35)
+## 2a. STRONY ZAWIASÓW — do zlecenia nawiertów
 
-Korner wierci puszki **wg strony**, więc bez tej tabeli nie da się złożyć zamówienia CNC.
-Strony dobrane tak, żeby dwa sąsiadujące skrzydła nie wisiały na wspólnej krawędzi —
-otwarte leżą wtedy w jednej płaszczyźnie i zderzają się (kontrola **K10**).
+> **⚠ P0-09 — KORNER NIE WIERCI.** Korner tnie i okleja, ale **nie robi otworów montażowych**
+> (`skills/architekt-wnetrz/references/dostawcy.md` w. 86 — informacja od inwestora).
+> Nawierty trzeba zlecić **osobno**, u firmy z CNC, albo zrobić samodzielnie przyrządem
+> do puszek 35 z ogranicznikiem. **Rozstrzygnąć PRZED zamówieniem rozkroju** — decyzja
+> zmienia zawartość zamówienia, budżet i to, czy formatki jadą jeszcze w drugie miejsce.
+>
+> | droga | co to znaczy | koszt orientacyjny `[?]` |
+> |---|---|---|
+> | **A — usługa CNC** | wozisz formatki po rozkroju do firmy z wiertarką CNC | ~150–400 zł |
+> | **B — samodzielnie** | przyrząd do puszek 35 z ogranicznikiem + wiertło Forstnera | ~200 zł jednorazowo |
+>
+> Firmy z CNC w okolicy (`dostawcy.md`, wszystkie `[DO POTWIERDZENIA telefonicznie]`):
+> **MEBsystem** Gliwice ul. Pszczyńska 206 (~8 km) · **Soma** Chorzów ul. Katowicka 160B ·
+> **Komandor Śląsk** Katowice ul. Transportowców 35 · **Daedalus** Ruda Śląska (wiercenie `[?]`).
+
+Strony zawiasów dobrane tak, żeby dwa sąsiadujące skrzydła nie wisiały na wspólnej krawędzi —
+otwarte leżą wtedy w jednej płaszczyźnie i zderzają się (kontrola **K10**). Tę tabelę oddajesz
+wykonawcy nawiertów niezależnie od tego, którą drogę wybierzesz.
 
 | Moduł | Front (mm) | Oś zawiasu | Dlaczego ta strona |
 |---|---|---|---|
@@ -160,7 +176,7 @@ otwarte leżą wtedy w jednej płaszczyźnie i zderzają się (kontrola **K10**)
 
 ## 4. Plan montażu — kolejność (montaż samodzielny)
 
-1. **Instalacje + posadzka docelowa** → pomiary łańcuchowe (PLAN pkt 11) → korekta `_formatki.py` → zamówienie rozkroju z oklejaniem i CNC (puszki 35 pod zawiasy!) w KornerGo, transport Korner.
+1. **Instalacje + posadzka docelowa** → pomiary łańcuchowe (PLAN pkt 11) → korekta `_formatki.py` → **zamówienie rozkroju z oklejaniem w KornerGo** (transport Korner). **NAWIERTY OSOBNO — Korner ich nie robi**, patrz pkt 2a: usługa CNC albo przyrząd własny.
 2. **Skręcenie korpusów** (konfirmaty + kołki; plecy HDF na wkręty) — zacznij od najmniejszych (DB0, GA2) na rozgrzewkę.
 3. **Ściana C:** DC1 → słupek C2 → zabudowa lodówki (bok z blendą przy ściance) → nadstawka C4. Poziomowanie od najwyższego punktu podłogi.
 4. **Ciąg B:** od narożnika — DB1 (zlew), DB2 (wnęka zmywarki), DB0; skręcanie korpusów ze sobą śrubami.

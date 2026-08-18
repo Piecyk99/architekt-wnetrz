@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.14)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.14a)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -8,6 +8,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 
 ## Historia wersji (decyzje inwestora)
 
+- **v3.14a (2026-08-13, pytanie inwestora o firmę w Gliwicach):** **KOREKTA MOJEGO BŁĘDU — Korner NIE wierci otworów.** Inwestor powiedział mi to na początku projektu, jest to zapisane w `dostawcy.md` w. 86, audyt zgłosił to jako **P0-09** — a ja mimo to napisałem wczoraj w rozpisce „Korner wierci puszki wg strony" i powtórzyłem to w rozmowie. Poprawione w **PLAN pkt 12** i **FORMATKI pkt 2a i 4.1**: rozkrój i oklejanie w KornerGo, **nawierty osobnym zleceniem**. Wpisane obie drogi (usługa CNC ~150–400 zł albo przyrząd do puszek ~200 zł) i tabela firm z CNC w okolicy — **MEBsystem Gliwice, ul. Pszczyńska 206** (to ta z pytania), Soma Chorzów, Komandor Katowice, Daedalus Ruda Śląska. Tabela stron zawiasów z pkt 2a jest potrzebna niezależnie od wybranej drogi — to ona mówi wykonawcy, z której strony wiercić.
+
 - **v3.14 (2026-08-13, decyzja inwestora — LED w cokole dookoła):** dodany **pkt 10a** i detal `kuchnia-wyspa-detal-LED.pdf`. Rozwiązanie: profil alu 16×7 z kloszem **pod dnem korpusu**, cokół **cofnięty 80**. Policzone z modelu: **5471 mm taśmy = 5,47 m**, podzielone na **dwa obwody (3,73 + 1,75 m)**, żeby żaden nie przekroczył 5 m i nie było spadku napięcia; **24 V, zasilacz 100 W**. Trzy warunki: **gniazdo 230 V w ślepym polu pod ramieniem** (dopisane do pkt 8), **taśma IP65** (150 mm nad mytą podłogą) i **cokół na klipsach**. Przy okazji skasowany martwy zapis „kratka wentylacji lodówki w cokole" — lodówka jest wolnostojąca i nie ma przed sobą cokołu; z tego samego powodu linia LED kończy się na słupku C2.
 
 - **v3.13d (2026-08-13, pytanie inwestora „a to cargo jest potrzebne?"):** **KOREKTA WŁASNEGO BŁĘDU.** Dzień wcześniej napisałem, że **C2 nie może mieć drzwi w ogóle**, bo obie jego krawędzie są zajęte. To było za mocne — wniosek pochodził z kontroli K10, która była **płaska i nie znała osi Z**, czyli dokładnie ta ślepota, którą wytknął audyt. Po policzeniu wysokości: skrzydło DC1 kończy się na **871**, więc front C2 **poniżej 871** faktycznie się z nim zderza (zachodzenie 716 mm), ale front **powyżej 875 nie ma z czym kolidować**. Nowy podział C2: **dół 150–871 = wysuw (cargo albo szuflady, obowiązkowo), góra 875–2469 = drzwi na zawiasie 945**. **K10 dostała oś Z** — moduły mają teraz zakres wysokości frontu, a fronty dzielone własne segmenty; kolizja liczy się tylko przy realnym zachodzeniu w pionie. Regresja rozszerzona do **8/8**, w tym nowy przypadek odwrotny: „górny front C2 NIE jest kolizją" — test pilnuje, żeby kontrola nie wróciła do fałszywego alarmu.
@@ -16,7 +18,7 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 
 - **v3.13b (2026-08-13, uwaga inwestora „to nie powinno być na odwrót?"):** **ELEWACJA A była odbita lustrzanie** — miała pilaster i okno po lewej, a powinny być po prawej. Reguła: stojąc we wnętrzu twarzą do ściany zachodniej patrzysz na zachód, więc **północ (okno) jest po Twojej PRAWEJ**, a korytarz i ramię po lewej. Rysunek przeczył własnemu podtytułowi („widok z wnętrza U"). **Sprawdzone rachunkiem wszystkie trzy elewacje: B i C były dobrze, tylko A odbita.** Poprawione; podtytuły elewacji nazywają teraz zwrot wprost („patrzysz na ZACHÓD → okno po PRAWEJ"), żeby rysunek sam się kontrolował. Przy okazji doczyszczona elewacja C, która wciąż pokazywała **lodówkę 190 w niszy 65,8**: teraz **200 wys., 60 szer., dosunięta do słupka, luz 5,8 przy ściance**, nadstawka **41,9**, słupek opisany jako **CARGO (nie drzwi)**, a podpis „zawiasy od strony ścianki" — który był już nieaktualny — zastąpiony wariantem A. Reguła zwrotu elewacji trafiła do skilla (`protokol-weryfikacji.md`, pkt 8).
 
-- **v3.13a (2026-08-13, pytanie inwestora „a ten mały pasek między GA1 a GA3?"):** pasek na elewacji A to **GA2 — szafka 180**, tylko **bez podpisu na rysunku** (mój błąd w rysunku, nie w geometrii). Podpisana. Przy okazji policzone i zapisane: światło wewnętrzne **144**, realny zasięg w głąb ~250 z 400 → zawartość zmieniona z „przypraw" na **butelki ustawiane rzędem** + listwa na przyprawy na drzwiach. Wykryte dwie rzeczy, których wcześniej w dokumencie nie było: **(a)** lewy bok GA2 siada dokładnie na czole pilastra — to najczulszy moduł na pomiar pilastra; **(b) w całym projekcie nie była wybrana ani jedna strona zawiasu**, a Korner wierci puszki 35 wg strony. Strony dobrane dla wszystkich skrzydeł i dodana kontrola **K10** (strona wybrana + brak dwóch zawiasów na wspólnej krawędzi). K10 od razu wykazała, że **C2 nie może mieć drzwi** — obie jego krawędzie są zajęte. Regresja: **7/7**.
+- **v3.13a (2026-08-13, pytanie inwestora „a ten mały pasek między GA1 a GA3?"):** pasek na elewacji A to **GA2 — szafka 180**, tylko **bez podpisu na rysunku** (mój błąd w rysunku, nie w geometrii). Podpisana. Przy okazji policzone i zapisane: światło wewnętrzne **144**, realny zasięg w głąb ~250 z 400 → zawartość zmieniona z „przypraw" na **butelki ustawiane rzędem** + listwa na przyprawy na drzwiach. Wykryte dwie rzeczy, których wcześniej w dokumencie nie było: **(a)** lewy bok GA2 siada dokładnie na czole pilastra — to najczulszy moduł na pomiar pilastra; **(b) w całym projekcie nie była wybrana ani jedna strona zawiasu**, a nawierty i tak trzeba komuś zlecić. Strony dobrane dla wszystkich skrzydeł i dodana kontrola **K10** (strona wybrana + brak dwóch zawiasów na wspólnej krawędzi). K10 od razu wykazała, że **C2 nie może mieć drzwi** — obie jego krawędzie są zajęte. Regresja: **7/7**.
 
 - **v3.13 (2026-08-13, pomiary inwestora + decyzja o zawiasach):** trzy rzeczy naraz.
   **(1) Sufit zmierzony po ułożeniu posadzki:** 2481 / 2483 / 2485 dalmierzem Bosch GLM 40 → **do zabudowy przyjęte 2481** (najmniejszy), fuga przysufitowa 12 → **góra zabudowy 2469**. *Moja wcześniejsza prognoza była błędna — zapowiadałem, że po podłodze sufit spadnie poniżej 2478; wyszedł wyższy o 3–7 mm.* Przeliczony cały pion (pkt 6): **górne 998 → 989**, **słupek C2 2378 → 2319** (to zamyka usterkę **P0-03** — 2378 + 150 nóżek = 2528 przebijało sufit), **nadstawka C4 519 → 419**. Trzy niezależne łańcuchy ściany C domykają się na 2469.
@@ -320,7 +322,25 @@ Reszta modułów górnych (GA2, GA3, GC1, GC2) — pełne 400, montaż standardo
 
 ## 12. Montaż samodzielny — podział pracy i kolejność
 
-**Zlecić Korner (płyty, korner.pl)** — KornerGo / e-Rozkrój, oddział Piekary Śląskie: cięcie formatek + oklejanie krawędzi + CNC (puszki 35 pod zawiasy, nawierty); przy pełnej kuchni transport Korner (formatki 2,4 m).
+**Zlecić Korner (płyty, korner.pl)** — KornerGo / e-Rozkrój, oddział Piekary Śląskie: **cięcie formatek + oklejanie krawędzi**; przy pełnej kuchni transport Korner (formatki 2,4 m).
+
+> **⚠ NAWIERTY — OSOBNE ZLECENIE. Korner NIE wierci otworów montażowych** (`dostawcy.md` w. 86; usterka **P0-09** z audytu). Wcześniejszy zapis „+ CNC (puszki 35) w KornerGo" był **błędny** — poprawiony 2026-08-13. Dwie drogi, do rozstrzygnięcia **przed** zamówieniem rozkroju, bo zmieniają zawartość zamówienia i budżet:
+>
+> | droga | co robisz | koszt orientacyjny `[?]` |
+> |---|---|---|
+> | **A — usługa CNC** | po rozkroju wieziesz formatki do firmy z wiertarką CNC, oddajesz tabelę stron zawiasów z rozpiski (pkt 2a) | ~150–400 zł |
+> | **B — samodzielnie** | przyrząd do puszek 35 z ogranicznikiem + wiertło Forstnera; przy pierwszej kuchni realne, ale każdy błąd jest w widocznym froncie | ~200 zł jednorazowo |
+>
+> **Firmy z CNC w okolicy** (`skills/architekt-wnetrz/references/dostawcy.md`, wszystkie `[DO POTWIERDZENIA telefonicznie]`):
+>
+> | firma | adres | od Zabrza | co robi |
+> |---|---|---|---|
+> | **MEBsystem** | Gliwice, ul. Pszczyńska 206 | ~8 km | cięcie, oklejanie, **wiercenie CNC** · mebsystem.pl |
+> | **Daedalus** | Ruda Śląska, ul. Magazynowa 50 | ~10 km | cięcie, oklejanie, frezowanie; **wiercenie `[?]`** · 575 886 996 |
+> | **Soma** | Chorzów, ul. Katowicka 160B | ~15 km | cięcie, oklejanie, **wiercenie i frezowanie CNC** · 32 249 76 90; dział CNC 664 011 119 |
+> | **Komandor Śląsk** | Katowice, ul. Transportowców 35 | ~25 km | **CNC Homag: otwory pod zawiasy i złącza**, dostawa 24 h |
+>
+> Wariant trzeci: **całość (płyta + cięcie + oklejanie + wiercenie) w jednej z tych firm** zamiast Kornera — wtedy trzeba porównać cenę samej płyty.
 **Samodzielnie:** skręcenie korpusów, zawieszenie górnych (listwa montażowa), blaty (łączenie w L frezem/listwą, wycięcia 560×490 i zlew — wyrzynarka + zabezpieczenie krawędzi silikonem, albo CNC z rozkrojem), cokoły, blendy, AGD (siła — elektryk z uprawnieniami).
 **Kolejność:** 1) instalacje + posadzka → pomiar finalny → zamówienie; 2) zabudowa C (C1→C2→C3/C4 przy ściance); 3) ciąg B od narożnika; 4) ciąg A od pilastra; 5) ramię L + kotwienie narożnika; 6) górne A; 7) blaty (B→C1→A→ramię, łączenia, silikon); 8) fronty, regulacja, cokoły z kratką, listwy, AGD.
 **Po pomiarach z pkt 11 → przeliczam rozpiskę na listę formatek do e-Rozkroju.**
