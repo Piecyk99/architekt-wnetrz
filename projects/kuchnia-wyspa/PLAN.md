@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.13d)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.14)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.14 (2026-08-13, decyzja inwestora — LED w cokole dookoła):** dodany **pkt 10a** i detal `kuchnia-wyspa-detal-LED.pdf`. Rozwiązanie: profil alu 16×7 z kloszem **pod dnem korpusu**, cokół **cofnięty 80**. Policzone z modelu: **5471 mm taśmy = 5,47 m**, podzielone na **dwa obwody (3,73 + 1,75 m)**, żeby żaden nie przekroczył 5 m i nie było spadku napięcia; **24 V, zasilacz 100 W**. Trzy warunki: **gniazdo 230 V w ślepym polu pod ramieniem** (dopisane do pkt 8), **taśma IP65** (150 mm nad mytą podłogą) i **cokół na klipsach**. Przy okazji skasowany martwy zapis „kratka wentylacji lodówki w cokole" — lodówka jest wolnostojąca i nie ma przed sobą cokołu; z tego samego powodu linia LED kończy się na słupku C2.
 
 - **v3.13d (2026-08-13, pytanie inwestora „a to cargo jest potrzebne?"):** **KOREKTA WŁASNEGO BŁĘDU.** Dzień wcześniej napisałem, że **C2 nie może mieć drzwi w ogóle**, bo obie jego krawędzie są zajęte. To było za mocne — wniosek pochodził z kontroli K10, która była **płaska i nie znała osi Z**, czyli dokładnie ta ślepota, którą wytknął audyt. Po policzeniu wysokości: skrzydło DC1 kończy się na **871**, więc front C2 **poniżej 871** faktycznie się z nim zderza (zachodzenie 716 mm), ale front **powyżej 875 nie ma z czym kolidować**. Nowy podział C2: **dół 150–871 = wysuw (cargo albo szuflady, obowiązkowo), góra 875–2469 = drzwi na zawiasie 945**. **K10 dostała oś Z** — moduły mają teraz zakres wysokości frontu, a fronty dzielone własne segmenty; kolizja liczy się tylko przy realnym zachodzeniu w pionie. Regresja rozszerzona do **8/8**, w tym nowy przypadek odwrotny: „górny front C2 NIE jest kolizją" — test pilnuje, żeby kontrola nie wróciła do fałszywego alarmu.
 
@@ -193,7 +195,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 | Poziom | Wysokość | Rachunek / uwagi |
 |---|---|---|
-| Cokół | 0–150 | nóżki regulowane; kratka wentylacji lodówki w cokole |
+| Cokół | 0–150 | nóżki regulowane; **cofnięty 80 od lica frontów** `[P]` — miejsce na profil LED (pkt 10a). ~~kratka wentylacji lodówki~~ **nieaktualne**: lodówka jest wolnostojąca i stoi na podłodze, nie ma cokołu przed sobą |
 | Górna krawędź korpusu dolnego | 870 | 150 + 720 |
 | **Blat** | **910 `[P]`** | 870 + laminat 38 = **908** → nóżki podkręcić do **152**, żeby wyszło 910 `[ustawienie na montażu]` |
 | Dół górnych A / okapu | 1480 | **prześwit nad blatem = 1480 − 910 = 570** (nie 600 — poprzedni zapis był błędny). Okap–indukcja 570 ≥ 550 ✓, ale **sprawdzić w karcie wkładu** — część recyrkulacyjnych wymaga 650 `[?]` |
@@ -220,7 +222,7 @@ Zasada: rozładunek zmywarki jednym obrotem (naczynia ≤ 1 krok od zmywarki), s
 
 ## 8. Zalecenia instalacyjne (PRZED montażem)
 
-1. Obwód siłowy do DA2 (potwierdzić 32A) + 16A piekarnik + gniazda: zmywarka, lodówka, 2–3 nad blatem B/A (≥600 od zlewu), zasilanie LED (transformator w GA).
+1. Obwód siłowy do DA2 (potwierdzić 32A) + 16A piekarnik + gniazda: zmywarka, lodówka, 2–3 nad blatem B/A (≥600 od zlewu), zasilanie LED **pod górnymi** (transformator w GA) oraz **GNIAZDO 230 V W ŚLEPYM POLU POD RAMIENIEM** `[P]` — na zasilacz 24 V/100 W do LED w cokole (pkt 10a).
 2. Zlokalizować **kratkę wentylacyjną** `[?]` — już tylko dla wentylacji ogólnej (okap recyrkulacyjny `[P]`); kratki nie zabudowywać na głucho.
 3. Podejścia wody/odpływu: pozycja `[~]` nisko na B — przedłużenie do DB3 w cokole/za korpusami.
 4. Ewentualne gniazdo w ramieniu L — doprowadzenie w podłodze **przed posadzką docelową**.
@@ -253,6 +255,39 @@ Warianty:
 | Kratka wentylacyjna w strefie zabudowy | pomiar; kratka rewizyjna w zabudowie |
 | **Gzyms/podciąg pod sufitem (foto 2026-08-12, pomalowane pomieszczenie)** — koliduje z pasmem górnych 1480–2469 | 3 pomiary (przebieg po ścianach, wystawanie, dolna krawędź od podłogi) → wybór wariantu: A) wycięcie w bokach (wystawanie ≤ ~6 cm), B) szafki kończone POD gzymsem (korpus niższy, gzyms jako „korona"), C) korpusy pogłębione o wystawanie — front przed gzymsem do sufitu; szczegóły w pkt 11a |
 | ~~Posadzka zmieni wysokości~~ | **ZAMKNIĘTE 2026-08-13 — podłoga położona i sufit zmierzony: 2481 `[P]`.** *Moja prognoza była błędna: zakładałem, że po posadzce sufit spadnie poniżej 2478, a wyszedł WYŻSZY o 3–7 mm.* Cały pion przeliczony (pkt 6), góra zabudowy **2469** |
+
+## 10a. Oświetlenie LED w cokole — decyzja 2026-08-13 `[P]`
+
+Detal rysunkowy: **`kuchnia-wyspa-detal-LED.pdf`** (przekrój + rozwinięcie obwodów).
+
+**Rozwiązanie:** taśma w **profilu aluminiowym 16×7 z kloszem mlecznym, przykręconym do SPODU dna korpusu przy przedniej krawędzi**, świecąca w dół. Cokół **cofnięty 80 mm** od lica frontów (typowo robi się 50 — 80 daje miejsce na profil i głębszy cień).
+
+**Dlaczego nie na licu cokołu:** taśma pod dnem jest niewidoczna z pozycji stojącej — żeby zobaczyć diody, trzeba mieć oczy poniżej 150 mm nad podłogą. Naklejona na cokole byłaby jasną kreską świecącą w oczy siedzącemu.
+
+**Odcinki (z modelu sprawdzonego kontrolą):**
+
+| odcinek | mm | obwód |
+|---|---|---|
+| ciąg A — lico indukcji | 1450 | 1 |
+| ramię L — front od kuchni | 600 | 1 |
+| ramię L — czoło wschodnie | 500 | 1 |
+| ramię L — rewers od salonu | 1176 | 1 |
+| ciąg B — lico okna | 1400 | 2 |
+| ciąg C — lico niskiego ciągu | 345 | 2 |
+| **obwód 1** (ciąg A + ramię) | **3726 = 3,73 m** | |
+| **obwód 2** (ciąg B + C) | **1745 = 1,75 m** | |
+| **RAZEM** | **5471 = 5,47 m** | |
+
+**Rachunek mocy:** 9,6 W/m × 5,47 m = **53 W** → z zapasem 30% = 68 W → **zasilacz 24 V / 100 W**. **24 V, nie 12 V** — przy 12 V koniec obwodu 1 (3,73 m) byłby wyraźnie ciemniejszy. Oba obwody poniżej 5 m, więc zasilanie z jednego końca wystarcza.
+
+**Gdzie kończy się linia:** przy słupku C2. **Lodówka jest wolnostojąca i nie ma cokołu**, więc przed nią taśma się urywa — to narożnik przy ściance, poza polem widzenia z kuchni.
+
+**Trzy warunki, bez których to nie zadziała:**
+1. **Gniazdo 230 V w ślepym polu pod ramieniem** — na zasilacz. Dopisane do pkt 8. To jedyne w tej kuchni miejsce suche, wentylowane i dostępne (przez drzwi RL1), a przy tym mniej więcej pośrodku obu obwodów.
+2. **Taśma IP65** — leży 150 mm nad podłogą, którą będziesz myć na mokro. Zwykła IP20 tam nie ma czego szukać.
+3. **Cokół na klipsach, zdejmowalny** — zasilacz i złączki muszą być dostępne bez demontażu szafek.
+
+**Uczciwie:** światło muskające podłogę pokazuje każdy okruch i każdą nierówność posadzki. To efekt wieczorny, nie oświetlenie robocze — do pracy służy LED pod górnymi szafkami, który jest w projekcie od v3.5.
 
 ## 10. Materiały i styl (paleta zaakceptowana 2026-07-28, przeniesiona z 9.02)
 
