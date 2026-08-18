@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.14a)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.14b)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
