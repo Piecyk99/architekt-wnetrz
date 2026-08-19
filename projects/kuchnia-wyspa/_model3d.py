@@ -68,7 +68,7 @@ def bryly():
         ("cokol_B", "B", 155, 0, 0, 2000, 600, COKOL_H, COKOL),
         ("DB", "B", 155, 0, COKOL_H, 2000, 600, KORPUS_Z, BEZ),
         ("DB2", "B", 1550, 585, COKOL_H, 2000, 600, KORPUS_Z, mix(BEZ, -0.07)),
-        ("blat_B", "B", 155, 0, KORPUS_Z, 2546, 635, BLAT_H, BLAT),
+        ("blat_B", "B", 155, 0, KORPUS_Z, 2546, 600, BLAT_H, BLAT),   # blat 600 [P]
 
         ("cokol_C", "C", 2000, 0, 0, 2546, 945, COKOL_H, COKOL),
         ("DC1", "C", 2000, 0, COKOL_H, 2546, 945, KORPUS_Z, BEZ),

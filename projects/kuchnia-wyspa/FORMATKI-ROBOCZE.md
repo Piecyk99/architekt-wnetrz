@@ -102,14 +102,14 @@
 | beż/kaszmir mat (front) | 3.3 | 3.8 |
 | czarny mat | 0.8 | 0.9 |
 
-## 2. Blaty (laminat 38 mm, dekor jasny trawertyn [DO WERYFIKACJI w Korner])
+## 2. Blaty (laminat 38 mm, **szerokość 600** `[P]` — decyzja inwestora 2026-08-13, dekor jasny trawertyn [DO WERYFIKACJI])
 
 | Blat | Wymiar (mm) | Uwagi |
 |---|---|---|
-| Blat A (ciąg indukcji) | 1950×635 | docinany na miejscu |
-| Blat B (ciąg okna) | 2389×635 | docinany na miejscu |
-| Blat C1 (niski ciąg) | 947×635 | docinany na miejscu |
-| Blat ramienia (docinka na wschód od blatu A) | 545×500 | docinany na miejscu |
+| Blat A (ciąg indukcji) | 1950×600 | docinany na miejscu; wysięg nad licem frontu 21–35 mm |
+| Blat B (ciąg okna) | 2389×600 | docinany na miejscu; wysięg nad licem frontu 21–35 mm |
+| Blat C1 (niski ciąg) | 947×600 | docinany na miejscu; wysięg nad licem frontu 21–35 mm |
+| Blat ramienia (docinka na wschód od blatu A) | 545×500 | docinany na miejscu; wysięg nad licem frontu 21–35 mm |
 
 Łączenia blatów: 3 (narożnik A/B przy pilastrze, narożnik B/C1, A/ramię) — frez + śruby łącznikowe 3 kpl, silikon. Wycięcia: indukcja **560×490** [P] w blacie A, zlew wg szablonu w blacie B — samodzielnie wyrzynarką (krawędzie zabezpieczyć silikonem) albo CNC przy rozkroju.
 

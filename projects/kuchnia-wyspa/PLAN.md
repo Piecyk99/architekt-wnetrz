@@ -1,4 +1,4 @@
-# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.14b)
+# Kuchnia w U z ramieniem L (półwysep) — projekt zabudowy na wymiar (v3.15)
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczenia (stan remontowy, obrys blatu wyklejony taśmą), dwóch rzutów odręcznych inwestora z wymiarami i adnotacjami (Z=zlew, zm=zmywarka, L=lodówka, ⊠=indukcja) oraz czterech tur odpowiedzi inwestora. Wykonanie: **samodzielne (inwestor)**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
 
@@ -7,6 +7,8 @@ Projekt wykonany skillem **architekt-kuchni** na podstawie: zdjęć pomieszczeni
 > **Relacja do `projects/kuchnia-9.02`:** ta sama kuchnia po przebudowie ścian — plan 9.02 v4 zarchiwizowany; obowiązuje paleta materiałów zaakceptowana 2026-07-28 (pkt 10).
 
 ## Historia wersji (decyzje inwestora)
+
+- **v3.15 (2026-08-13, decyzja inwestora — blat 600):** **szerokość blatu 600** `[P]` zamiast 635. Poprawione w rozpisce (wszystkie trzy blaty proste) i w modelu 3D (`blat_B` 635 → 600). Rachunek wysięgu nad licem frontu: **ciąg A 21 · ciąg B 21 · DC1 35 · ramię 21 mm** — całość w normie 20–40. Poprzednie 635 dawało **56 mm na ciągu A i 70 nad DC1**, co audyt zgłosił w 05 §304 jako blat zbierający kapiącą wodę na fronty. **Decyzja odsłoniła blokera:** audytowy błąd **M18** (ciąg B — 560 czy 600) przestaje być kosmetyczny, bo **przy korpusie 600 blat 600 fizycznie nie działa** (front 19 mm przed blatem). Wpisane do ryzyk z policzonym skutkiem ubocznym: przy 560 drzwi DA1 mogą urosnąć **240 → ~280**.
 
 - **v3.14b (2026-08-13, pytanie inwestora „wszystko mi zrobił w Gliwicach?"):** dodane **`ZAPYTANIE-OFERTOWE.md`** — pełny zakres (płyta 4 dekory + HDF, ~80 formatek, oklejanie, nawierty, 4 blaty, panel ryflowany, transport), **osiem pytań do zadania przez telefon** i porównanie trzech wariantów (wszystko w jednym miejscu / Korner + nawierty usługowo / Korner + wiercę sam). **Nie wiem, czy MEBsystem zrobi całość** — wpis w `dostawcy.md` pochodzi z przeglądu stron www, nikt tam nie dzwonił; deklarowane są cięcie, oklejanie i wiercenie CNC, ale **czy sprzedają płytę, czy obsługują detal i czy mają blaty — nieznane**. Zapisana konsekwencja, o której łatwo zapomnieć: **paleta z pkt 10 jest dobrana pod ofertę Kornera**, więc zmiana dostawcy = ponowny dobór wszystkich czterech dekorów z próbek.
 
@@ -73,6 +75,7 @@ Aneks kuchenny ~254,6 × ~262+ cm (sufit **247,8** `[P]`), otwarty od południa 
 | Indukcja Bosch PXE601DC1E | 57,2 × 51,2 × 5,6; **wycięcie 56 × 49** | `[P]` | inwestor |
 | **Przejście ramię ↔ ścianka** | **~60 (reguła nadrzędna)** | `[P]` | decyzja inwestora |
 | Ramię L: długość od ściany A / **głębokość** | ~118 `[~]` (177,6 − 60) / **500 `[P]`** | `[P]` gł. | głębokość 50 — decyzja inwestora 2026-08-12 (strefa przy zlewie ~85); długość: docięcie na montażu wg reguły 60 |
+| **Szerokość blatu** | **600** | `[P]` | decyzja inwestora 2026-08-13. Wysięg nad licem frontu: ciąg A i B **21 mm**, DC1 **35 mm**, ramię **21 mm** — wszystko w normie 20–40. Poprzednie **635 dawało 56 mm na ciągu A i 70 mm nad DC1** — blat zbierałby kapiącą wodę na fronty (audyt 05 §304) |
 | **Wysokość blatu** | **910** | `[P]` | wzrost inwestora 182 (siatka: 180+ → 910); korpus 720 + blat 38 + cokół ~150 |
 
 ## 3. Geometria — rzut
@@ -117,7 +120,7 @@ Orientacja: **stoisz w korytarzu (południe) i patrzysz na okno (północ)**. A 
 
 ## 5. Rozpisanie zabudowy — moduły (mm)
 
-Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[P]` (laminat 38; wzrost 182); głębokość korpusów 560, blat 600 (ramię 650); górne: dół 1480, korpusy **989** — **góra zabudowy 2469 = sufit 2481 `[P]` − fuga 12** (fugę zamyka blenda przysufitowa; pkt 6); fronty bezuchwytowe (frez/gola).
+Założenia: korpusy dolne 720 + **cokół ~150 (nóżki 150)**, **blat 910** `[P]` (laminat 38; wzrost 182); głębokość korpusów **560**, **blat 600** `[P decyzja inwestora 2026-08-13]` (ramię: korpus 460 + blat 500); górne: dół 1480, korpusy **989** — **góra zabudowy 2469 = sufit 2481 `[P]` − fuga 12** (fugę zamyka blenda przysufitowa; pkt 6); fronty bezuchwytowe (frez/gola).
 
 ### Ściana A — ciąg z indukcją (1950 `[P]` OD ŚCIANY B; **fronty dolne dostępne tylko 670→1450 = 780**, dalej ślepy narożnik pod ramieniem):
 
@@ -250,6 +253,7 @@ Warianty:
 | Jeśli w otworze do salonu (127) będą drzwi — skrzydło otwierane do kuchni kolidowałoby z ramieniem | wg szkicu przejście otwarte `[~]`; przy montażu drzwi: przesuwne albo otwierane do salonu |
 | Przejście 60 w praktyce za ciasne | reguła 60 nadrzędna; ramię docinane (118 → można skrócić); decyzja świadoma inwestora |
 | Taśma 127 vs reguła 60 (przejście 50,6) | rozstrzygnąć na montażu; rekomendacja ramię ≤118 |
+| **Głębokość korpusów ciągu B: 560 czy 600?** `[?]` **BLOKUJE** | Audyt **M18 — BŁĄD**: PLAN §5 i rozpiska mówią **560**, a `_kontrola.py`, `_schemat.py` i PLAN §4 („195−60−50") liczą z **600**. Blat 600 rozstrzyga to za nas w jedną stronę: przy korpusie 600 lico wypada na **619**, czyli **front sterczałby 19 mm PRZED blatem** — tak się nie da. **Przy 560 wysięg wychodzi 21 mm ✓.** Skutek uboczny, jeśli potwierdzimy 560: róg korpusu ciągu B cofa się o 40 mm, więc **drzwi DA1 mogą urosnąć z 240 do ~280** (promień swobodny rośnie z 253 na 293 mm). Do potwierdzenia pomiarem/decyzją przed rozkrojem — zmienia front DA1, blendę przy pilastrze i długość odcinka LED na ciągu B |
 | Pilaster ≠ 15,5×67 na różnych wysokościach | pomiar w 3 punktach; blendy DA1/DB1 docinane |
 | **Z czego jest pilaster? GA1 na nim WISI** `[?]` | GA1 to najcięższa górna szafka (670 szer., suche zapasy) i jej korpus jest przykręcony **do lica pilastra**, nie do ściany nośnej. Jeśli pilaster okaże się **obudową G-K** wokół pionu wentylacyjnego albo rur, nie ma w czym trzymać kołków. **Do sprawdzenia przy pomiarze: zapukać.** Głucho = obudowa → GA1 musi zawisnąć na listwie montażowej zakotwionej w ścianie B i A po bokach, albo oprzeć się na boku GA2. Murowany = bez zmian |
 | **Lewy bok GA2 ląduje dokładnie na końcu pilastra (y = 670)** | GA1 jest 245 gł. (wisi na licu pilastra), GA2 jest 400 gł. (wisi na gołej ścianie). Tylne 155 mm boku GA2 dosuwa się do czoła pilastra. Jeśli pilaster ma **mniej niż 670** długości — zostaje szczelina za bokiem (kosmetyczna, niewidoczna). Jeśli **więcej niż 670** — bok GA2 nie wejdzie i trzeba go podciąć. **To najczulszy moduł na pomiar pilastra (pkt 11.11).** Zamawiać bok GA2 dopiero po pomiarze |

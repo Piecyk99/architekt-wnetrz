@@ -35,8 +35,8 @@ PANELE = [
 ]
 
 BLATY = [
-    ("Blat A (ciąg indukcji)", 1950, 635), ("Blat B (ciąg okna)", 2389, 635),
-    ("Blat C1 (niski ciąg)", 947, 635), ("Blat ramienia (docinka na wschód od blatu A)", 545, 500),
+    ("Blat A (ciąg indukcji)", 1950, 600), ("Blat B (ciąg okna)", 2389, 600),
+    ("Blat C1 (niski ciąg)", 947, 600), ("Blat ramienia (docinka na wschód od blatu A)", 545, 500),
 ]
 
 rows, m2 = [], {}
@@ -102,12 +102,12 @@ for k, v in sorted(m2.items(), key=lambda x: -x[1]):
     out.append(f"| {k} | {v:.1f} | {v*1.15:.1f} |")
 
 out += ["""
-## 2. Blaty (laminat 38 mm, dekor jasny trawertyn [DO WERYFIKACJI w Korner])
+## 2. Blaty (laminat 38 mm, **szerokość 600** `[P]` — decyzja inwestora 2026-08-13, dekor jasny trawertyn [DO WERYFIKACJI])
 
 | Blat | Wymiar (mm) | Uwagi |
 |---|---|---|""" ]
 for (nm, w, h) in BLATY:
-    out.append(f"| {nm} | {w}×{h} | docinany na miejscu |")
+    out.append(f"| {nm} | {w}×{h} | docinany na miejscu; wysięg nad licem frontu 21–35 mm |")
 out += ["""
 Łączenia blatów: 3 (narożnik A/B przy pilastrze, narożnik B/C1, A/ramię) — frez + śruby łącznikowe 3 kpl, silikon. Wycięcia: indukcja **560×490** [P] w blacie A, zlew wg szablonu w blacie B — samodzielnie wyrzynarką (krawędzie zabezpieczyć silikonem) albo CNC przy rozkroju.
 
