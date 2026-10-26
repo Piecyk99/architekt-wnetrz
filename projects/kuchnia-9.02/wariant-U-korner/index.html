@@ -1,0 +1,526 @@
+<title>Kuchnia U z płyt Korner</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=Source+Sans+3:wght@400;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Układ: arkusz warsztatowy — model 3D jako „rysunek główny", pod nim rozpiska jak tabelka rysunkowa stolarza. */
+:root {
+  --paper: #f2f3f0; --panel: #ffffff; --ink: #1d2023; --muted: #5d6368; --line: #d3d6d0;
+  --walnut: #7a4d2f; --sand: #cbbda3; --stone: #d9d7d2; --ok: #2c7a4c; --warn: #b2432c;
+  --stage: #e7e8e4;
+  --f-display: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
+  --f-body: "Source Sans 3", "Segoe UI", Helvetica, Arial, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 36px; --s7: 56px;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #141618; --panel: #1b1e21; --ink: #e8e6e1; --muted: #a2a7ab; --line: #2d3135;
+  --walnut: #c58e66; --sand: #a8987d; --stone: #8f8d88; --ok: #6cc08f; --warn: #e37b64; --stage: #202326; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #141618; --panel: #1b1e21; --ink: #e8e6e1; --muted: #a2a7ab; --line: #2d3135;
+  --walnut: #c58e66; --sand: #a8987d; --stone: #8f8d88; --ok: #6cc08f; --warn: #e37b64; --stage: #202326; color-scheme: dark }
+html { background: var(--paper); }
+body { background: var(--paper); color: var(--ink); font: 16px/1.55 var(--f-body);
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: var(--s5) var(--s7); }
+.wrap { max-width: 1180px; margin: 0 auto; display: grid; gap: var(--s7); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 700; letter-spacing: .01em; text-wrap: balance; margin: 0; line-height: 1.1; }
+h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+h2 { font-size: 1.65rem; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font: 500 .78rem/1 var(--f-mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.mono, td.num, .dim { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+header { display: grid; gap: var(--s3); }
+.lede { color: var(--muted); font-size: 1.08rem; }
+section { display: grid; gap: var(--s4); min-width: 0; }
+.sec-head { display: grid; gap: var(--s2); border-top: 2px solid var(--ink); padding-top: var(--s3); }
+
+/* viewer */
+.viewer { display: grid; gap: var(--s3); }
+#stage { position: relative; width: 100%; aspect-ratio: 16 / 10; max-height: 72vh; min-height: 320px; background: var(--stage);
+  border: 1px solid var(--line); overflow: hidden; touch-action: none; cursor: grab; }
+#stage canvas { display: block; width: 100% !important; height: 100% !important; }
+#stage .hint { position: absolute; left: var(--s3); bottom: var(--s3); font: 400 .75rem/1.3 var(--f-mono); color: var(--muted);
+  background: color-mix(in srgb, var(--panel) 80%, transparent); padding: var(--s1) var(--s2); pointer-events: none; }
+#stage .fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: var(--s5); text-align: center; color: var(--muted); }
+.toolbar { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); align-items: center; }
+.seg { display: flex; flex-wrap: wrap; border: 1px solid var(--line); background: var(--panel); }
+.seg button, .tog { font: 600 .9rem/1 var(--f-display); letter-spacing: .02em; color: var(--ink); background: transparent; border: 0;
+  padding: 10px 14px; cursor: pointer; }
+.seg button + button { border-left: 1px solid var(--line); }
+.seg button[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+.tog { border: 1px solid var(--line); background: var(--panel); display: inline-flex; gap: var(--s2); align-items: center; }
+.tog[aria-pressed="true"]::before { content: ""; width: 8px; height: 8px; background: var(--ok); }
+.tog[aria-pressed="false"]::before { content: ""; width: 8px; height: 8px; border: 1px solid var(--muted); }
+button:focus-visible { outline: 2px solid var(--walnut); outline-offset: 2px; }
+.swatches { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s4); font-size: .9rem; color: var(--muted); }
+.swatches span { display: inline-flex; gap: var(--s2); align-items: center; }
+.swatches i { width: 14px; height: 14px; display: inline-block; border: 1px solid var(--line); }
+
+/* findings */
+.fixes { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--s4); }
+.fix { background: var(--panel); border: 1px solid var(--line); padding: var(--s4); display: grid; gap: var(--s2); align-content: start; min-width: 0; }
+.fix .was { font: 500 .78rem/1.3 var(--f-mono); color: var(--warn); text-transform: uppercase; letter-spacing: .05em; }
+.fix .now { color: var(--ok); font-weight: 600; }
+
+/* tables */
+.tbl { overflow-x: auto; border: 1px solid var(--line); background: var(--panel); }
+table { border-collapse: collapse; width: 100%; font-size: .93rem; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font: 600 .8rem/1.2 var(--f-display); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); background: var(--paper); position: sticky; top: 0; }
+tr.wall td { background: var(--paper); font: 600 .85rem/1.2 var(--f-display); letter-spacing: .05em; text-transform: uppercase; }
+td.id { font-family: var(--f-mono); font-weight: 500; white-space: nowrap; }
+.chip { display: inline-block; font: 500 .72rem/1 var(--f-mono); padding: 3px 6px; border: 1px solid currentColor; white-space: nowrap; }
+.chip.p { color: var(--ok); } .chip.t { color: var(--warn); } .chip.q { color: var(--muted); }
+.note { font-size: .9rem; color: var(--muted); }
+
+/* drawings */
+.sheets { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: var(--s4); }
+.sheets.renders { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.sheets figure { margin: 0; background: var(--panel); border: 1px solid var(--line); display: grid; gap: var(--s2); padding: var(--s2); min-width: 0; }
+.sheets img { width: 100%; height: auto; display: block; background: #fff; }
+.sheets figcaption { font-size: .88rem; color: var(--muted); padding: 0 var(--s1) var(--s1); }
+.sheets a { color: inherit; }
+
+/* costs */
+.cost { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--s4); }
+.tier { background: var(--panel); border: 1px solid var(--line); padding: var(--s4); display: grid; gap: var(--s1); }
+.tier b { font: 700 1.6rem/1.1 var(--f-display); font-variant-numeric: tabular-nums; }
+.tier.ref { border-color: var(--ink); }
+.checklist { margin: 0; padding-left: 1.2em; display: grid; gap: var(--s2); max-width: 80ch; }
+footer { color: var(--muted); font-size: .88rem; border-top: 1px solid var(--line); padding-top: var(--s3); display: grid; gap: var(--s1); }
+@media (max-width: 560px) { h2 { font-size: 1.4rem; } .seg button { padding: 9px 10px; } }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Kuchnia 9.02 · 2,45 × 1,91 m · montaż samodzielny</div>
+  <h1>Kuchnia U z płyt Korner</h1>
+  <p class="lede">Układ i styl z teczki Castoramy (17.10.2026), przeliczone na wymiary z Twojego rzutu i rozpisane na szafki z płyt Korner (Piekary Śląskie / KornerGo). Fronty dolne piaskowe, matowe, bez uchwytów. Górne w orzechu, do sufitu. Blat i panel ścienny w jasnym kamieniu.</p>
+</header>
+
+<section class="viewer" aria-label="Model 3D">
+  <div id="stage"><div class="fallback" id="fallback">Ładuję model 3D…</div><div class="hint">przeciągnij: obrót · kółko / szczypanie: zoom · Shift + przeciągnij: przesuń</div></div>
+  <div class="toolbar">
+    <div class="seg" role="group" aria-label="Widok">
+      <button type="button" id="v-entry" data-view="entry" aria-pressed="true">Od wejścia</button>
+      <button type="button" id="v-right" data-view="right" aria-pressed="false">Od przejścia</button>
+      <button type="button" id="v-window" data-view="window" aria-pressed="false">Okno i zlew</button>
+      <button type="button" id="v-top" data-view="top" aria-pressed="false">Z góry</button>
+      <button type="button" id="v-iso" data-view="iso" aria-pressed="false">Makieta</button>
+    </div>
+    <button type="button" class="tog" id="t-fronts" aria-pressed="true">Fronty</button>
+    <button type="button" class="tog" id="t-labels" aria-pressed="false">Numery szafek</button>
+  </div>
+  <div class="swatches" aria-label="Materiały">
+    <span><i style="background:#cdbfa8"></i>fronty dolne: piaskowy mat</span>
+    <span><i style="background:#7b4e31"></i>górne i półki: orzech, słoje pionowe</span>
+    <span><i style="background:#dcdad5"></i>blat 38 mm i panel ścienny: jasny kamień</span>
+    <span><i style="background:#f1eee8"></i>korpusy: biała płyta 18 mm</span>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">Wizualizacje z modelu</div><h2>Te same kadry co w teczce</h2></div>
+  <div class="sheets renders">
+    <figure><a href="renders/01-widok-od-wejscia.png"><img src="renders/01-widok-od-wejscia.png" alt="Widok od wejścia na kuchnię U z oknem" loading="lazy"></a><figcaption>Od wejścia: płyta po lewej, zlew pod oknem, lodówka po prawej.</figcaption></figure>
+    <figure><a href="renders/02-widok-od-przejscia.png"><img src="renders/02-widok-od-przejscia.png" alt="Widok z przejścia na ścianę z płytą i oknem" loading="lazy"></a><figcaption>Od przejścia: płyta, piekarnik, szuflady D3 i półki na kominie.</figcaption></figure>
+    <figure><a href="renders/03-widok-z-gory.png"><img src="renders/03-widok-z-gory.png" alt="Widok kuchni z góry" loading="lazy"></a><figcaption>Z góry: okno u góry, przejście u dołu.</figcaption></figure>
+    <figure><a href="renders/04-korpusy-bez-frontow.png"><img src="renders/04-korpusy-bez-frontow.png" alt="Korpusy bez frontów, widoczne półki i zmywarka" loading="lazy"></a><figcaption>Bez frontów: korpusy, półki, zmywarka, szuflady.</figcaption></figure>
+    <figure><a href="renders/05-okno-i-zlew.png"><img src="renders/05-okno-i-zlew.png" alt="Zbliżenie na zlew pod oknem i narożnik z kominem" loading="lazy"></a><figcaption>Okno i zlew: komora z prawej, ociekacz w stronę narożnika.</figcaption></figure>
+    <figure><a href="renders/06-makieta-z-numerami.png"><img src="renders/06-makieta-z-numerami.png" alt="Makieta z góry z numerami szafek" loading="lazy"></a><figcaption>Makieta z numerami szafek z rozpiski.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">Teczka Castoramy kontra Twój rzut</div><h2>Co trzeba było zmienić</h2></div>
+  <p>Teczka nie zawiera ani jednego wymiaru (rysunki są poglądowe, pomiar podał klient). Zestaw szafek z listy zakupów nie pasuje do pomieszczenia 2,45 m, więc układ U zachowałem, a szafki ułożyłem od nowa pod wymiar.</p>
+  <div class="fixes">
+    <div class="fix"><div class="was">Ściana z oknem</div><p>Castorama: zlew 80 + zmywarka 45 + dwie listwy narożne między ciągami bocznymi. To wymaga ok. <span class="mono">2,57 m</span> ściany, a jest <span class="mono">2,45 m [P]</span>.</p><p class="now">Zlew 75 + zmywarka 45 + blendy 44 / 50 mieszczą się. Przejście 1294 mm.</p></div>
+    <div class="fix"><div class="was">Płyta przy kominie</div><p>Na wizualizacjach Castoramy płyta grzewcza stoi tuż przy kominie. Próg bezpieczeństwa to co najmniej 300 mm od ściany bocznej.</p><p class="now">Płyta przesunięta: 355 mm od komina, 323 mm od końca ciągu.</p></div>
+    <div class="fix"><div class="was">Komin do podłogi</div><p>Komin 37 × 63 cm sięga od podłogi do sufitu. Szafki dolne nie mogą wejść w lewy narożnik.</p><p class="now">Narożnik zamknięty blendami 72 + 44 mm. Na licu komina otwarte półki R1, mocowane głównie do ściany z oknem.</p></div>
+    <div class="fix"><div class="was">Szafki modułowe</div><p>Castorama ma tylko gotowe szerokości (15, 40, 60, 80, 100 cm).</p><p class="now">Z formatek Korner każda szafka ma swój wymiar: 300, 330, 750, 1050 mm.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">Ściana po ścianie, od lewej do prawej</div><h2>Rozpiska szafek</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Nr</th><th>Szafka</th><th>Szer. × wys. × gł. [mm]</th><th>Front</th><th>Wnętrze / okucia</th></tr></thead>
+    <tbody>
+      <tr class="wall"><td colspan="5">Ściana D (lewa, pod kominem), dół</td></tr>
+      <tr><td class="id">D1</td><td>cargo przy przejściu</td><td class="num">300 × 720 × 560</td><td>1 front pełny</td><td>cargo 300 (oleje, przyprawy obok płyty)</td></tr>
+      <tr><td class="id">D2</td><td>piekarnikowa + płyta</td><td class="num">600 × 720 × 560</td><td>szuflada niska ~120</td><td>piekarnik pod blatem, nisza 560 × 590–600; płyta indukcyjna 60</td></tr>
+      <tr><td class="id">D3</td><td>szufladowa</td><td class="num">330 × 720 × 560</td><td>3 szuflady</td><td>sztućce + 2 głębokie (prowadnice pełnego wysuwu)</td></tr>
+      <tr><td class="id">BL1</td><td>blenda narożna przy kominie</td><td class="num">72 × 720</td><td>piaskowa</td><td>docinana na miejscu, za nią martwe pole</td></tr>
+      <tr><td class="id">BW1</td><td>bok wykończeniowy (od przejścia)</td><td class="num">578 × 842</td><td>piaskowy</td><td>od podłogi do blatu</td></tr>
+      <tr class="wall"><td colspan="5">Ściana A (z oknem), dół</td></tr>
+      <tr><td class="id">BL2</td><td>blenda narożna</td><td class="num">44 × 720</td><td>piaskowa</td><td>docinana</td></tr>
+      <tr><td class="id">D4</td><td>zlewowa pod oknem</td><td class="num">750 × 720 × 560</td><td>2 drzwi 375</td><td>zlew 1-komorowy z ociekaczem (komora z prawej), kosz na segregację, plecy serwisowe</td></tr>
+      <tr><td class="id">ZM</td><td>zmywarka 45 do zabudowy</td><td class="num">nisza 450</td><td>front 450 na drzwiach zmywarki</td><td>woda i odpływ z D4; bok dystansowy BD 18 mm</td></tr>
+      <tr><td class="id">BL3</td><td>blenda przy narożniku</td><td class="num">50 × 720</td><td>piaskowa</td><td>luz dla frontu zmywarki</td></tr>
+      <tr class="wall"><td colspan="5">Ściana B (prawa), dół</td></tr>
+      <tr><td class="id">D5</td><td>narożna ślepa</td><td class="num">1050 × 720 × 560</td><td>zaślepka 600 + drzwi 450</td><td>półka; opcjonalnie półkosz narożny pod drzwi 450</td></tr>
+      <tr><td class="id">D6</td><td>cargo wąskie</td><td class="num">150 × 720 × 560</td><td>1 front pełny</td><td>cargo 150 (jak w teczce)</td></tr>
+      <tr><td class="id">BW2</td><td>bok wykończeniowy (przy lodówce)</td><td class="num">578 × 842</td><td>piaskowy</td><td>12 mm szczeliny do lodówki</td></tr>
+      <tr><td class="id">LOD</td><td>lodówka wolnostojąca</td><td class="num">600 × 2020 × 600</td><td>—</td><td>50 mm od ściany B, 80 mm od ściany C (strona zawiasu)</td></tr>
+      <tr class="wall"><td colspan="5">Góra: orzech, korpus 960 mm, dół na 1480, front 20 mm niżej (podchwyt zamiast uchwytu)</td></tr>
+      <tr><td class="id">G1</td><td>wisząca</td><td class="num">300 × 960 × 332</td><td>drzwi 980</td><td>2 półki, 3 zawiasy</td></tr>
+      <tr><td class="id">G2</td><td>okapowa nad płytą</td><td class="num">600 × 960 × 332</td><td>drzwi ~680 + front szuflady okapu</td><td>okap do zabudowy 60 (recyrkulacja, dopóki nie znajdziesz kratki)</td></tr>
+      <tr><td class="id">G3</td><td>wisząca przy kominie</td><td class="num">330 × 960 × 332</td><td>drzwi 980</td><td>2 półki</td></tr>
+      <tr><td class="id">R1</td><td>półki otwarte na licu komina</td><td class="num">630 × 960 × 220</td><td>—</td><td>2 boki + 5 półek z orzecha; wkręty do ściany A, w komin tylko kotwy płytkie 40–50 mm bez udaru</td></tr>
+      <tr><td class="id">G4</td><td>wisząca (ściana B)</td><td class="num">590 × 960 × 332</td><td>drzwi 980</td><td>2 półki</td></tr>
+      <tr><td class="id">G5</td><td>wisząca (ściana B)</td><td class="num">590 × 960 × 332</td><td>drzwi 980</td><td>2 półki</td></tr>
+    </tbody>
+  </table></div>
+  <p class="note">Wysokości: cokół 122 · korpus 720 · blat 38 → blat na 880 mm (dla osoby 165–180 cm; przy innym wzroście 860 lub 910, zmienia się tylko cokół). To wymiary modułów, a nie formatki do cięcia. Formatki liczy się w e-Rozkroju dopiero po pomiarach.</p>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">Rysunki techniczne</div><h2>Rzut i elewacje</h2></div>
+  <div class="sheets">
+    <figure><a href="technical/01-rzut-U.png"><img src="technical/01-rzut-U.png" alt="Rzut z góry kuchni U z wymiarami i polami otwierania AGD" loading="lazy"></a><figcaption>Rzut z góry: łańcuch wymiarowy ściany A, przejścia, pola otwierania zmywarki, piekarnika i lodówki.</figcaption></figure>
+    <figure><a href="technical/02-elewacja-D.png"><img src="technical/02-elewacja-D.png" alt="Elewacja ściany D z piekarnikiem, płytą i okapem" loading="lazy"></a><figcaption>Ściana D: D1 · D2 · D3 pod kominem, nad nimi G1 · G2 · G3.</figcaption></figure>
+    <figure><a href="technical/03-elewacja-A.png"><img src="technical/03-elewacja-A.png" alt="Elewacja ściany A z oknem, zlewem i zmywarką" loading="lazy"></a><figcaption>Ściana A: półki R1 na kominie, zlew pod oknem, zmywarka.</figcaption></figure>
+    <figure><a href="technical/04-elewacja-B.png"><img src="technical/04-elewacja-B.png" alt="Elewacja ściany B z narożnikiem, cargo i lodówką" loading="lazy"></a><figcaption>Ściana B: narożnik D5, cargo D6, lodówka, nad nimi G4 · G5.</figcaption></figure>
+  </div>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">Zakupy</div><h2>Co zamawiasz w Korner, a co gdzie indziej</h2></div>
+  <div class="tbl"><table>
+    <thead><tr><th>Pozycja</th><th>Ilość (szacunek)</th><th>Uwagi</th></tr></thead>
+    <tbody>
+      <tr class="wall"><td colspan="3">Korner (płyty, korner.pl): rozkrój, oklejanie, akcesoria</td></tr>
+      <tr><td>Płyta korpusowa 18 mm, biała lub kremowa</td><td class="num">~4 arkusze 2800×2070</td><td>netto ~14,8 m²; boki, wieńce, półki, bok dystansowy</td></tr>
+      <tr><td>Płyta frontowa: piaskowy mat</td><td class="num">1–2 arkusze</td><td>~3,7 m²: fronty dolne, blendy, boki BW1/BW2, cokół. Dekor dobierasz z próbek w oddziale <span class="chip t">do weryfikacji</span></td></tr>
+      <tr><td>Płyta frontowa: orzech, słoje pionowe</td><td class="num">~2 arkusze</td><td>~4,3 m²: drzwi górne, półki R1, boki, blendy do sufitu. Kolekcje drewnopodobne (Time of Oak / Woodstories) <span class="chip t">do weryfikacji</span></td></tr>
+      <tr><td>HDF 3 mm (plecy)</td><td class="num">1 arkusz</td><td>~4,6 m²</td></tr>
+      <tr><td>Oklejanie ABS</td><td class="num">~120 mb</td><td>2 mm na frontach i widocznych krawędziach, 1 mm na ukrytych, krawędzie przy ścianie bez oklejania</td></tr>
+      <tr><td>Blat laminowany 38 mm, jasny kamień</td><td class="num">4,0 m bieżące</td><td>3 kawałki: A 2080, D 1298 (z wcięciem 370 × 30 przy kominie), B 618 · 2 złącza narożne · obrzeża na 2 końcach</td></tr>
+      <tr><td>Zawiasy z cichym domykiem 110°</td><td class="num">20 szt.</td><td>Blum lub Titus (partnerzy Korner), dostępność serii <span class="chip t">do weryfikacji</span></td></tr>
+      <tr><td>Szuflady (komplety prowadnic)</td><td class="num">4</td><td>3 × D3 (korpus 330), 1 × D2 pod piekarnikiem</td></tr>
+      <tr><td>Cargo</td><td class="num">300 + 150</td><td>D1, D6</td></tr>
+      <tr><td>Profil uchwytowy na górną krawędź frontów dolnych</td><td class="num">~4 mb</td><td>daje efekt „bez uchwytów” jak w teczce; alternatywa: Tip-On (wciśnij i otwórz)</td></tr>
+      <tr><td>Nóżki + klipsy cokołu · zawieszki + szyna · złącza, kołki, zaślepki</td><td class="num">26 · 10 + 2,5 m · kpl</td><td></td></tr>
+      <tr class="wall"><td colspan="3">Poza Korner</td></tr>
+      <tr><td>Panel ścienny nad blatem (jasny kamień)</td><td class="num">2 szt. 600 × 3000</td><td>5,6 mb wystarczy na 2 panele, a Castorama liczyła 3. Jeśli Korner go nie ma, ten sam panel z Castoramy</td></tr>
+      <tr><td>AGD: płyta, piekarnik, zmywarka 45, okap do zabudowy 60</td><td class="num">—</td><td>teczka Castoramy też ich nie zawiera</td></tr>
+      <tr><td>Zlew, bateria, syfon, zawory · LED 3000K (ok. 3 m profilu + zasilacz)</td><td class="num">—</td><td></td></tr>
+    </tbody>
+  </table></div>
+  <div class="cost">
+    <div class="tier ref"><span class="eyebrow">Teczka Castoramy</span><b>10 632 zł</b><span class="note">meble + blat + panele, bez AGD i zlewu. Do 3.11 działa kupon 20% przy zakupie powyżej 10 tys. zł.</span></div>
+    <div class="tier"><span class="eyebrow">Korner, ekonomicznie</span><b>~5,5–7 tys. zł</b><span class="note">płyta laminowana, okucia budżetowe, panel z Castoramy</span></div>
+    <div class="tier"><span class="eyebrow">Korner, standard</span><b>~8–10 tys. zł</b><span class="note">Blum z domykiem, fronty supermat, lepsze cargo</span></div>
+  </div>
+  <p class="note">Kwoty dla Korner to mój szacunek z cen rynkowych (np. biała płyta 18 mm w Castoramie: 37,98 zł/m²). Cennika Korner nie mam. Realną kwotę daje dopiero wycena e-Rozkroju po pomiarach. Największy wpływ mają dekor frontów i klasa okuć.</p>
+</section>
+
+<section>
+  <div class="sec-head"><div class="eyebrow">Zanim zamówisz formatki</div><h2>Pomiary kontrolne</h2></div>
+  <ol class="checklist">
+    <li>Ściana A na wysokości 0 / 880 / 2200 mm, a do formatek bierzesz najmniejszy wymiar. Od tego zależą blendy 44 i 50.</li>
+    <li>Komin: 370 × 630 przy podłodze, na wysokości blatu i przy suficie. Sprawdź też, czy jest czynny lub ciepły (to ważne dla półek R1 i płyty obok).</li>
+    <li>Wysokość podłoga–sufit w 4 punktach <strong>po posadzce docelowej</strong> (decyduje o blendzie górnej i cokole).</li>
+    <li>Kąty narożników A/D i A/B (przekątne): blat L i narożnik D5.</li>
+    <li>Okno: krawędzie od komina, parapet po posadzce, kierunek otwierania skrzydła.</li>
+    <li>Podejścia wody i odpływu pod oknem, zawory (wycięcia w D4).</li>
+    <li>Kratka wentylacyjna: gdzie jest i jaki ma wymiar. Od tego zależy okap z wyciągiem albo recyrkulacja.</li>
+    <li>Gniazda i puszki: zasilanie płyty i piekarnika rozpisuje elektryk wg tabliczek AGD. Projekt wskazuje tylko miejsca.</li>
+    <li>Wymiary nisz z kart montażowych kupionych AGD: piekarnik, zmywarka 45, okap.</li>
+    <li>Materiał ścian D i B pod szafki wiszące (dobór kotew).</li>
+  </ol>
+  <p class="note">Projekt koncepcyjno-techniczny. Przed cięciem płyt trzeba go zweryfikować pomiarem na miejscu.</p>
+</section>
+
+<footer>
+  <span>Źródła: teczka Castorama nr 1556_DM_17_10_2026_2358451 (17.10.2026) · rzut i decyzje z projektu kuchni 9.02 (v4.1).</span>
+  <span>Statusy: <span class="chip p">[P]</span> potwierdzone z rzutu · <span class="chip q">[~]</span> orientacyjne · <span class="chip t">do weryfikacji</span> w oddziale Korner Piekary Śląskie.</span>
+</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(() => {
+const MODEL = {"room":{"W":2450,"D":1910,"H":2490,"pillar":[0,370,0,630],"window":[600,1520,1680,2490],"passage":[0,1740],"stub":[1740,2450],"sill_depth":200,"z_worktop":880,"z_up0":1480,"z_up1":2440},"elements":[{"id":"D1","type":"carcass","mat":"carcass","x0":0,"x1":560,"y0":1580,"y1":1880,"z0":122,"z1":842,"label":"cargo 300"},{"id":"D2","type":"carcass","mat":"carcass","x0":0,"x1":560,"y0":980,"y1":1580,"z0":122,"z1":842,"label":"piekarnik + płyta"},{"id":"D3","type":"carcass","mat":"carcass","x0":0,"x1":560,"y0":650,"y1":980,"z0":122,"z1":842,"label":"szuflady 3×"},{"id":"D1-F","type":"front","mat":"sand","x0":560,"x1":578,"y0":1582,"y1":1878,"z0":123,"z1":840,"label":"cargo"},{"id":"D2-OV","type":"appliance","mat":"oven","x0":560,"x1":580,"y0":982,"y1":1578,"z0":245,"z1":840,"label":"piekarnik"},{"id":"D2-F","type":"front","mat":"sand","x0":560,"x1":578,"y0":982,"y1":1578,"z0":123,"z1":242,"label":"szuflada niska"},{"id":"D3-F1","type":"front","mat":"sand","x0":560,"x1":578,"y0":652,"y1":978,"z0":663,"z1":840,"label":"szuflada"},{"id":"D3-F2","type":"front","mat":"sand","x0":560,"x1":578,"y0":652,"y1":978,"z0":393,"z1":660,"label":"szuflada"},{"id":"D3-F3","type":"front","mat":"sand","x0":560,"x1":578,"y0":652,"y1":978,"z0":123,"z1":390,"label":"szuflada"},{"id":"BL1","type":"filler","mat":"sand","x0":560,"x1":578,"y0":578,"y1":650,"z0":122,"z1":842,"label":"blenda 72"},{"id":"BW1","type":"endpanel","mat":"sand","x0":0,"x1":578,"y0":1880,"y1":1898,"z0":0,"z1":842,"label":"bok wykończeniowy"},{"id":"BLAT-D","type":"worktop","mat":"stone","x0":0,"x1":600,"y0":630,"y1":1898,"z0":842,"z1":880,"label":""},{"id":"BLAT-Dn","type":"worktop","mat":"stone","x0":370,"x1":600,"y0":600,"y1":630,"z0":842,"z1":880,"label":""},{"id":"HOB","type":"appliance","mat":"hob","x0":40,"x1":560,"y0":985,"y1":1575,"z0":880,"z1":886,"label":"płyta indukcyjna 60"},{"id":"BL2","type":"filler","mat":"sand","x0":578,"x1":622,"y0":560,"y1":578,"z0":122,"z1":842,"label":"blenda 44"},{"id":"D4","type":"carcass","mat":"carcass","x0":622,"x1":1372,"y0":0,"y1":560,"z0":122,"z1":842,"label":"zlew 750"},{"id":"D4-F1","type":"front","mat":"sand","x0":624,"x1":996,"y0":560,"y1":578,"z0":123,"z1":840,"label":"drzwi"},{"id":"D4-F2","type":"front","mat":"sand","x0":998,"x1":1370,"y0":560,"y1":578,"z0":123,"z1":840,"label":"drzwi"},{"id":"ZM","type":"appliance","mat":"dw","x0":1376,"x1":1818,"y0":20,"y1":558,"z0":122,"z1":822,"label":"zmywarka 45"},{"id":"ZM-F","type":"front","mat":"sand","x0":1374,"x1":1820,"y0":560,"y1":578,"z0":123,"z1":840,"label":"front zmywarki"},{"id":"BD","type":"carcass","mat":"carcass","x0":1822,"x1":1840,"y0":0,"y1":560,"z0":0,"z1":842,"label":"bok dystansowy"},{"id":"BL3","type":"filler","mat":"sand","x0":1822,"x1":1872,"y0":560,"y1":578,"z0":122,"z1":842,"label":"blenda 50"},{"id":"BLAT-A","type":"worktop","mat":"stone","x0":370,"x1":2450,"y0":0,"y1":600,"z0":842,"z1":880,"label":""},{"id":"SINK","type":"appliance","mat":"sink","x0":632,"x1":1362,"y0":40,"y1":520,"z0":880,"z1":884,"label":"zlewozmywak 1-kom. z ociekaczem"},{"id":"BOWL","type":"appliance","mat":"bowl","x0":930,"x1":1330,"y0":80,"y1":480,"z0":700,"z1":885,"label":""},{"id":"TAP","type":"appliance","mat":"tap","x0":1110,"x1":1150,"y0":25,"y1":65,"z0":880,"z1":1260,"label":"bateria"},{"id":"D5","type":"carcass","mat":"carcass","x0":1890,"x1":2450,"y0":0,"y1":1050,"z0":122,"z1":842,"label":"narożna ślepa 1050"},{"id":"D5-Z","type":"front","mat":"sand","x0":1872,"x1":1890,"y0":0,"y1":600,"z0":123,"z1":840,"label":"zaślepka"},{"id":"D5-F","type":"front","mat":"sand","x0":1872,"x1":1890,"y0":602,"y1":1048,"z0":123,"z1":840,"label":"drzwi 450"},{"id":"D6","type":"carcass","mat":"carcass","x0":1890,"x1":2450,"y0":1050,"y1":1200,"z0":122,"z1":842,"label":"cargo 150"},{"id":"D6-F","type":"front","mat":"sand","x0":1872,"x1":1890,"y0":1052,"y1":1198,"z0":123,"z1":840,"label":"cargo"},{"id":"BW2","type":"endpanel","mat":"sand","x0":1872,"x1":2450,"y0":1200,"y1":1218,"z0":0,"z1":842,"label":"bok wykończeniowy"},{"id":"BLAT-B","type":"worktop","mat":"stone","x0":1850,"x1":2450,"y0":600,"y1":1218,"z0":842,"z1":880,"label":""},{"id":"LOD","type":"appliance","mat":"fridge","x0":1800,"x1":2400,"y0":1230,"y1":1830,"z0":0,"z1":2020,"label":"lodówka 60×60×202"},{"id":"COK-D","type":"plinth","mat":"sand","x0":520,"x1":538,"y0":538,"y1":1880,"z0":0,"z1":122,"label":""},{"id":"COK-A","type":"plinth","mat":"sand","x0":538,"x1":1912,"y0":520,"y1":538,"z0":0,"z1":122,"label":""},{"id":"COK-B","type":"plinth","mat":"sand","x0":1912,"x1":1930,"y0":538,"y1":1200,"z0":0,"z1":122,"label":""},{"id":"G1","type":"carcass","mat":"carcass_up","x0":0,"x1":332,"y0":1580,"y1":1880,"z0":1480,"z1":2440,"label":"300"},{"id":"G2","type":"carcass","mat":"carcass_up","x0":0,"x1":332,"y0":980,"y1":1580,"z0":1480,"z1":2440,"label":"okapowa 600"},{"id":"G3","type":"carcass","mat":"carcass_up","x0":0,"x1":332,"y0":650,"y1":980,"z0":1480,"z1":2440,"label":"330"},{"id":"G1-F","type":"front","mat":"walnut","x0":332,"x1":350,"y0":1582,"y1":1878,"z0":1460,"z1":2440,"label":"drzwi"},{"id":"G3-F","type":"front","mat":"walnut","x0":332,"x1":350,"y0":652,"y1":978,"z0":1460,"z1":2440,"label":"drzwi"},{"id":"G2-F","type":"front","mat":"walnut","x0":332,"x1":350,"y0":982,"y1":1578,"z0":1760,"z1":2440,"label":"drzwi nad okapem"},{"id":"G2-OK","type":"front","mat":"walnut","x0":332,"x1":350,"y0":982,"y1":1578,"z0":1460,"z1":1757,"label":"front szuflady okapu"},{"id":"HOOD","type":"appliance","mat":"hood","x0":40,"x1":332,"y0":990,"y1":1570,"z0":1472,"z1":1480,"label":"okap do zabudowy 60"},{"id":"BLG1","type":"filler","mat":"walnut","x0":332,"x1":350,"y0":630,"y1":650,"z0":1460,"z1":2440,"label":"blenda 20"},{"id":"BWG1","type":"endpanel","mat":"walnut","x0":0,"x1":350,"y0":1880,"y1":1898,"z0":1460,"z1":2440,"label":"bok wykończeniowy"},{"id":"TOP-D","type":"filler","mat":"walnut","x0":332,"x1":350,"y0":630,"y1":1898,"z0":2440,"z1":2490,"label":"blenda do sufitu"},{"id":"R1-B1","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":0,"y1":18,"z0":1480,"z1":2440,"label":"regał na kominie"},{"id":"R1-B2","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":612,"y1":630,"z0":1480,"z1":2440,"label":""},{"id":"R1-P0","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":18,"y1":612,"z0":1480,"z1":1498,"label":""},{"id":"R1-P1","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":18,"y1":612,"z0":1720,"z1":1738,"label":""},{"id":"R1-P2","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":18,"y1":612,"z0":1960,"z1":1978,"label":""},{"id":"R1-P3","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":18,"y1":612,"z0":2200,"z1":2218,"label":""},{"id":"R1-P4","type":"shelf","mat":"walnut","x0":370,"x1":590,"y0":18,"y1":612,"z0":2422,"z1":2440,"label":""},{"id":"TOP-R","type":"filler","mat":"walnut","x0":572,"x1":590,"y0":0,"y1":630,"z0":2440,"z1":2490,"label":""},{"id":"G4","type":"carcass","mat":"carcass_up","x0":2118,"x1":2450,"y0":20,"y1":610,"z0":1480,"z1":2440,"label":"590"},{"id":"G4-F","type":"front","mat":"walnut","x0":2100,"x1":2118,"y0":22,"y1":608,"z0":1460,"z1":2440,"label":"drzwi"},{"id":"G5","type":"carcass","mat":"carcass_up","x0":2118,"x1":2450,"y0":610,"y1":1200,"z0":1480,"z1":2440,"label":"590"},{"id":"G5-F","type":"front","mat":"walnut","x0":2100,"x1":2118,"y0":612,"y1":1198,"z0":1460,"z1":2440,"label":"drzwi"},{"id":"BLG2","type":"filler","mat":"walnut","x0":2100,"x1":2118,"y0":0,"y1":20,"z0":1460,"z1":2440,"label":"blenda 20"},{"id":"BWG2","type":"endpanel","mat":"walnut","x0":2100,"x1":2450,"y0":1200,"y1":1218,"z0":1460,"z1":2440,"label":"bok wykończeniowy"},{"id":"TOP-B","type":"filler","mat":"walnut","x0":2100,"x1":2118,"y0":0,"y1":1218,"z0":2440,"z1":2490,"label":"blenda do sufitu"},{"id":"PAN-A","type":"splash","mat":"splash","x0":370,"x1":2450,"y0":0,"y1":8,"z0":880,"z1":1480,"label":""},{"id":"PAN-K","type":"splash","mat":"splash","x0":370,"x1":378,"y0":0,"y1":630,"z0":880,"z1":1480,"label":""},{"id":"PAN-Ks","type":"splash","mat":"splash","x0":0,"x1":370,"y0":630,"y1":638,"z0":880,"z1":1480,"label":""},{"id":"PAN-D","type":"splash","mat":"splash","x0":0,"x1":8,"y0":630,"y1":1898,"z0":880,"z1":1480,"label":""},{"id":"PAN-B","type":"splash","mat":"splash","x0":2442,"x1":2450,"y0":0,"y1":1218,"z0":880,"z1":1480,"label":""},{"id":"LED-D","type":"led","mat":"led","x0":260,"x1":300,"y0":650,"y1":1880,"z0":1476,"z1":1480,"label":""},{"id":"LED-B","type":"led","mat":"led","x0":2150,"x1":2190,"y0":20,"y1":1200,"z0":1476,"z1":1480,"label":""},{"id":"LED-R","type":"led","mat":"led","x0":520,"x1":550,"y0":18,"y1":612,"z0":1476,"z1":1480,"label":""}]};
+const stage = document.getElementById("stage");
+const fallback = document.getElementById("fallback");
+if (!window.THREE || !MODEL) { fallback.textContent = "Nie udało się wczytać modelu 3D. Rysunki i rozpiska poniżej są kompletne."; return; }
+const R = MODEL.room, mm = v => v / 1000;
+const capture = /capture=1/.test(location.search);
+
+// ---------- renderer ----------
+let renderer;
+try { renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true }); }
+catch (e) { fallback.textContent = "Ta przeglądarka nie obsługuje WebGL. Rysunki i rozpiska poniżej są kompletne."; return; }
+renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.98;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+stage.prepend(renderer.domElement);
+fallback.remove();
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(50, 1.6, 0.05, 60);
+
+// ---------- procedural textures ----------
+function canvasTex(w, h, draw, rot) {
+  const c = document.createElement("canvas"); c.width = w; c.height = h;
+  draw(c.getContext("2d"), w, h);
+  const t = new THREE.CanvasTexture(c); t.encoding = THREE.sRGBEncoding; t.anisotropy = 4;
+  if (rot) { t.center.set(.5, .5); t.rotation = Math.PI / 2; }
+  return t;
+}
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+function walnut(ctx, w, h) {
+  ctx.fillStyle = "#6e4429"; ctx.fillRect(0, 0, w, h);
+  for (let i = 0; i < 140; i++) {
+    const x0 = rnd() * w, amp = 2 + rnd() * 9, f = 1 + rnd() * 3, lw = .6 + rnd() * 2.6;
+    ctx.strokeStyle = rnd() > .5 ? `rgba(40,22,10,${.10 + rnd() * .22})` : `rgba(160,110,72,${.08 + rnd() * .16})`;
+    ctx.lineWidth = lw; ctx.beginPath();
+    for (let y = 0; y <= h; y += 8) { const x = x0 + Math.sin(y / h * Math.PI * f + i) * amp; y ? ctx.lineTo(x, y) : ctx.moveTo(x, y); }
+    ctx.stroke();
+  }
+}
+function speck(base, dots, alpha) {
+  return (ctx, w, h) => {
+    ctx.fillStyle = base; ctx.fillRect(0, 0, w, h);
+    for (let i = 0; i < dots; i++) { const g = 90 + rnd() * 120 | 0; ctx.fillStyle = `rgba(${g},${g},${g - 6},${alpha * rnd()})`; ctx.fillRect(rnd() * w, rnd() * h, 1 + rnd() * 2, 1 + rnd() * 2); }
+  };
+}
+function marble(ctx, w, h) {
+  speck("#e2e0dc", 2500, .25)(ctx, w, h);
+  for (let i = 0; i < 9; i++) {
+    ctx.strokeStyle = `rgba(150,145,138,${.12 + rnd() * .2})`; ctx.lineWidth = .6 + rnd() * 1.4; ctx.beginPath();
+    let x = rnd() * w, y = 0; ctx.moveTo(x, y);
+    while (y < h) { x += (rnd() - .5) * 40; y += 18 + rnd() * 30; ctx.lineTo(x, y); }
+    ctx.stroke();
+  }
+}
+function oak(ctx, w, h) {
+  const pw = w / 6;
+  for (let p = 0; p < 6; p++) {
+    const tone = 196 + (rnd() - .5) * 22;
+    ctx.fillStyle = `rgb(${tone},${tone * .82 | 0},${tone * .6 | 0})`; ctx.fillRect(p * pw, 0, pw, h);
+    for (let i = 0; i < 24; i++) { ctx.strokeStyle = `rgba(120,85,50,${.05 + rnd() * .1})`; ctx.lineWidth = .5 + rnd(); const x = p * pw + rnd() * pw; ctx.beginPath(); ctx.moveTo(x, 0); ctx.bezierCurveTo(x + 4, h * .3, x - 4, h * .7, x + 2, h); ctx.stroke(); }
+    ctx.fillStyle = "rgba(90,60,35,.35)"; ctx.fillRect(p * pw, 0, 1.5, h);
+    const cut = rnd() * h; ctx.fillRect(p * pw, cut, pw, 1.5);
+  }
+}
+function hobTex(ctx, w, h) {
+  ctx.fillStyle = "#151618"; ctx.fillRect(0, 0, w, h);
+  ctx.strokeStyle = "rgba(200,200,205,.35)"; ctx.lineWidth = 2;
+  [[.28, .3, .17], [.72, .3, .14], [.28, .74, .14], [.72, .74, .17]].forEach(([x, y, r]) => { ctx.beginPath(); ctx.arc(x * w, y * h, r * w, 0, 7); ctx.stroke(); });
+  ctx.fillStyle = "rgba(220,220,225,.5)"; ctx.fillRect(w * .4, h * .9, w * .2, 3);
+}
+const T = {
+  walnut: canvasTex(512, 1024, walnut), walnutH: canvasTex(512, 1024, walnut, true),
+  stone: canvasTex(512, 512, speck("#dbd9d4", 6000, .35)), splash: canvasTex(1024, 512, marble),
+  sand: canvasTex(256, 256, speck("#cdbfa8", 1800, .12)), oak: canvasTex(1024, 1024, oak), hob: canvasTex(512, 512, hobTex),
+};
+T.oak.wrapS = T.oak.wrapT = THREE.RepeatWrapping; T.oak.repeat.set(2.6, 2.6);
+// r128: kolory hex są liniowe — konwersja z sRGB, żeby barwy odpowiadały próbkom
+const std = (o) => { const m = new THREE.MeshStandardMaterial(o); m.color.convertSRGBToLinear(); if (o.emissive !== undefined) m.emissive.convertSRGBToLinear(); return m; };
+const MAT = {
+  sand: std({ map: T.sand, roughness: .82 }),
+  walnut: std({ map: T.walnut, roughness: .7 }), walnutH: std({ map: T.walnutH, roughness: .7 }),
+  carcass: std({ color: 0xf1eee8, roughness: .85 }), carcass_up: std({ color: 0xf1eee8, roughness: .85 }),
+  stone: std({ map: T.stone, roughness: .55 }), splash: std({ map: T.splash, roughness: .4 }),
+  oven: std({ color: 0x17181b, roughness: .18, metalness: .2 }), hob: std({ map: T.hob, roughness: .15, metalness: .1 }),
+  dw: std({ color: 0xb9bcc0, roughness: .35, metalness: .7 }), sink: std({ color: 0x3d4044, roughness: .7 }),
+  bowl: std({ color: 0x2a2c30, roughness: .75 }), tap: std({ color: 0x2b2c2e, roughness: .35, metalness: .6 }),
+  fridge: std({ color: 0x5b6067, roughness: .32, metalness: .45 }), hood: std({ color: 0x3a3b3e, roughness: .4, metalness: .6 }),
+  led: std({ color: 0xffe2b0, emissive: 0xffc982, emissiveIntensity: 1.6 }),
+  wall: std({ color: 0xeceae5, roughness: .95 }), floor: std({ map: T.oak, roughness: .6 }),
+  steel: std({ color: 0xa9adb2, roughness: .3, metalness: .8 }), drawer: std({ color: 0x3a3d41, roughness: .6 }),
+  profile: std({ color: 0x2a2b2d, roughness: .45, metalness: .5 }), frame: std({ color: 0xf7f7f5, roughness: .5 }),
+  glass: std({ color: 0xffffff, roughness: .02, metalness: 0, transparent: true, opacity: .14 }),
+  white: std({ color: 0xfafafa, roughness: .4, emissive: 0xffffff, emissiveIntensity: .05 }),
+};
+
+// ---------- builders (świat: X = x, Y = wysokość, Z = y; jednostki: m) ----------
+const groups = { fronts: new THREE.Group(), labels: new THREE.Group(), all: new THREE.Group() };
+scene.add(groups.all); groups.all.add(groups.fronts); scene.add(groups.labels);
+function box(x0, x1, y0, y1, z0, z1, mat, parent = groups.all, shadow = true) {
+  const m = new THREE.Mesh(new THREE.BoxGeometry(Math.max(mm(x1 - x0), 1e-4), Math.max(mm(z1 - z0), 1e-4), Math.max(mm(y1 - y0), 1e-4)), mat);
+  m.position.set(mm((x0 + x1) / 2), mm((z0 + z1) / 2), mm((y0 + y1) / 2));
+  m.castShadow = shadow; m.receiveShadow = true; parent.add(m); return m;
+}
+function plane(w, h, mat, pos, rot) {
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(mm(w), mm(h)), mat);
+  m.position.set(mm(pos[0]), mm(pos[2]), mm(pos[1])); m.rotation.set(rot[0], rot[1], rot[2]);
+  m.receiveShadow = true; groups.all.add(m); return m;
+}
+const woodMat = (e) => { if (e.type === "front" || e.type === "endpanel") return MAT.walnut; const dx = e.x1 - e.x0, dy = e.y1 - e.y0, dz = e.z1 - e.z0; return Math.max(dx, dy) > dz ? MAT.walnutH : MAT.walnut; };
+
+// korpus „pusty": boki, wieniec dolny i górny, plecy, półki — orientacja od ściany
+function carcass(e) {
+  const t = 18, b = 3, W = R.W;
+  const open = e.x0 <= 0 ? "+x" : e.x1 >= W ? "-x" : "+y";
+  const along = open === "+y" ? [e.x0, e.x1] : [e.y0, e.y1];
+  const depth = open === "+y" ? e.y1 - e.y0 : e.x1 - e.x0;
+  const put = (a0, a1, d0, d1, z0, z1, mat) => {
+    if (open === "+y") return box(a0, a1, e.y0 + d0, e.y0 + d1, z0, z1, mat);
+    if (open === "+x") return box(e.x0 + d0, e.x0 + d1, a0, a1, z0, z1, mat);
+    return box(e.x1 - d1, e.x1 - d0, a0, a1, z0, z1, mat);
+  };
+  const m = MAT[e.mat] || MAT.carcass, [a0, a1] = along;
+  put(a0, a0 + t, 0, depth, e.z0, e.z1, m); put(a1 - t, a1, 0, depth, e.z0, e.z1, m);
+  put(a0 + t, a1 - t, b, depth, e.z0, e.z0 + t, m); put(a0 + t, a1 - t, b, depth, e.z1 - t, e.z1, m);
+  if (e.id !== "D4") put(a0, a1, 0, b, e.z0, e.z1, m);
+  const up = e.mat === "carcass_up";
+  const shelves = up ? (e.id === "G2" ? [e.z0 + 560] : [e.z0 + 320, e.z0 + 640]) : (e.id === "D5" ? [e.z0 + 360] : e.id === "D2" ? [e.z0 + 115] : []);
+  shelves.forEach(z => put(a0 + t, a1 - t, b + 10, depth - 20, z, z + t, m));
+  if (e.id === "D3") [[e.z1 - 110, e.z1 - 30], [e.z0 + 300, e.z0 + 470], [e.z0 + 40, e.z0 + 210]].forEach(([z0, z1]) => put(a0 + t + 12, a1 - t - 12, 40, depth - 10, z0, z1, MAT.drawer));
+  if (e.id === "D1" || e.id === "D6") {
+    put((a0 + a1) / 2 - 4, (a0 + a1) / 2 + 4, 20, depth - 30, e.z0 + 20, e.z1 - 20, MAT.steel);
+    [e.z0 + 60, e.z0 + 230, e.z0 + 400, e.z0 + 570].forEach(z => put(a0 + t + 10, a1 - t - 10, 30, depth - 40, z, z + 3, MAT.steel));
+  }
+}
+
+const labelSpots = [];
+for (const e of MODEL.elements) {
+  if (e.type === "carcass" && e.id !== "BD") { carcass(e); continue; }
+  if (e.id === "BD") { box(e.x0, e.x1, e.y0, e.y1, e.z0, e.z1, MAT.carcass); continue; }
+  if (e.type === "led") { box(e.x0, e.x1, e.y0, e.y1, e.z0, e.z1, MAT.led, groups.all, false); continue; }
+  const isFront = e.type === "front";
+  const parent = isFront ? groups.fronts : groups.all;
+  let mat = MAT[e.mat] || MAT.carcass;
+  if (e.mat === "walnut") mat = woodMat(e);
+  if (e.id === "HOB") { const m = box(e.x0, e.x1, e.y0, e.y1, e.z0, e.z1, MAT.oven); const top = new THREE.Mesh(new THREE.PlaneGeometry(mm(e.x1 - e.x0), mm(e.y1 - e.y0)), MAT.hob); top.rotation.x = -Math.PI / 2; top.rotation.z = Math.PI / 2; top.position.set(mm((e.x0 + e.x1) / 2), mm(e.z1) + .0008, mm((e.y0 + e.y1) / 2)); groups.all.add(top); continue; }
+  if (e.id === "TAP") {
+    const g = new THREE.Group(), col = new THREE.Mesh(new THREE.CylinderGeometry(.016, .02, mm(330), 20), MAT.tap);
+    col.position.set(0, mm(165), 0); g.add(col);
+    const sp = new THREE.Mesh(new THREE.CylinderGeometry(.011, .011, .22, 16), MAT.tap); sp.rotation.x = Math.PI / 2; sp.position.set(0, mm(330), .11); g.add(sp);
+    const nz = new THREE.Mesh(new THREE.CylinderGeometry(.012, .012, .05, 16), MAT.tap); nz.position.set(0, mm(305), .215); g.add(nz);
+    g.position.set(mm((e.x0 + e.x1) / 2), mm(e.z0), mm((e.y0 + e.y1) / 2)); g.traverse(o => o.castShadow = true); groups.all.add(g); continue;
+  }
+  if (e.id === "LOD") {
+    box(e.x0, e.x1, e.y0, e.y1, e.z0 + 10, e.z1, MAT.fridge);
+    box(e.x0 - 1, e.x0 + 1, e.y0, e.y1, 715, 722, MAT.drawer);
+    box(e.x0 - 30, e.x0 - 12, e.y0 + 40, e.y0 + 58, 820, 1750, MAT.steel); box(e.x0 - 30, e.x0 - 12, e.y0 + 40, e.y0 + 58, 330, 660, MAT.steel);
+    continue;
+  }
+  if (e.id === "D2-OV") { box(e.x0, e.x1, e.y0, e.y1, e.z0, e.z1, MAT.oven); box(e.x1, e.x1 + 22, e.y0 + 60, e.y1 - 60, e.z1 - 70, e.z1 - 55, MAT.steel); box(e.x1 - 1, e.x1 + 1, e.y0 + 40, e.y1 - 40, e.z1 - 40, e.z1 - 10, MAT.drawer); continue; }
+  const m = box(e.x0, e.x1, e.y0, e.y1, e.z0, e.z1, mat, parent, e.type !== "splash");
+  // profil uchwytowy na górnej krawędzi frontów dolnych
+  if (isFront && e.mat === "sand" && e.z1 < 900) {
+    const facesX = (e.x1 - e.x0) < (e.y1 - e.y0);
+    if (facesX) { const out = e.x0 < 1000 ? e.x1 : e.x0; box(out - 2, out + 4, e.y0, e.y1, e.z1 - 9, e.z1, MAT.profile, groups.fronts); }
+    else box(e.x0, e.x1, e.y1 - 2, e.y1 + 4, e.z1 - 9, e.z1, MAT.profile, groups.fronts);
+  }
+}
+// sprites z numerami
+function label(text, x, y, z) {
+  const c = document.createElement("canvas"); c.width = 512; c.height = 128; const g = c.getContext("2d");
+  g.fillStyle = "rgba(29,32,35,.88)"; g.fillRect(0, 0, 512, 128);
+  g.fillStyle = "#fff"; g.font = "600 56px 'Barlow Semi Condensed', Arial, sans-serif"; g.textAlign = "center"; g.textBaseline = "middle"; g.fillText(text, 256, 66);
+  const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(c), depthTest: false, transparent: true }));
+  s.scale.set(.34, .085, 1); s.position.set(mm(x), mm(z), mm(y)); s.renderOrder = 10; groups.labels.add(s);
+}
+[["D1 cargo", 600, 1730, 500], ["D2 piekarnik", 600, 1280, 560], ["D3 szuflady", 600, 815, 500], ["D4 zlew", 997, 600, 500],
+ ["ZM zmywarka", 1597, 600, 500], ["D5 narożna", 1850, 825, 500], ["D6 cargo", 1850, 1125, 330], ["lodówka", 1780, 1530, 1300],
+ ["G1", 370, 1730, 1960], ["G2 okap", 370, 1280, 2050], ["G3", 370, 815, 1960], ["R1 półki", 600, 315, 2300], ["G4", 2080, 315, 1960], ["G5", 2080, 905, 1960]]
+ .forEach(a => label(...a));
+groups.labels.visible = false;
+
+// ---------- pomieszczenie ----------
+const H = R.H, W = R.W, D = R.D, [wx0, wx1, sill] = R.window;
+const P = Math.PI;
+plane(2850, 2900, MAT.floor, [W / 2, 1300, 0], [-P / 2, 0, 0]);
+plane(W, D, MAT.wall, [W / 2, D / 2, H], [P / 2, 0, 0]);                                // sufit
+plane(wx0, H, MAT.wall, [wx0 / 2, 0, H / 2], [0, 0, 0]);                                   // ściana A lewa część
+plane(W - wx1, H, MAT.wall, [(wx1 + W) / 2, 0, H / 2], [0, 0, 0]);                         // ściana A prawa
+plane(wx1 - wx0, sill, MAT.wall, [(wx0 + wx1) / 2, 0, sill / 2], [0, 0, 0]);               // pod oknem
+plane(D, H, MAT.wall, [0, D / 2, H / 2], [0, P / 2, 0]);                                   // ściana D
+plane(D, H, MAT.wall, [W, D / 2, H / 2], [0, -P / 2, 0]);                                  // ściana B
+plane(W - R.stub[0], H, MAT.wall, [(R.stub[0] + W) / 2, D, H / 2], [0, P, 0]);             // ściana C (wnęka)
+const stubBox = box(R.stub[0], W, D, D + 140, 0, H, MAT.wall);
+box(R.pillar[0], R.pillar[1], R.pillar[2], R.pillar[3], 0, H, MAT.wall);                   // komin
+// okno: ościeża, rama, szyba, parapet
+plane(250, H - sill, MAT.wall, [wx0, -125, (sill + H) / 2], [0, P / 2, 0]);
+plane(250, H - sill, MAT.wall, [wx1, -125, (sill + H) / 2], [0, -P / 2, 0]);
+box(wx0 - 10, wx1 + 10, -250, 25, sill - 22, sill, MAT.frame);
+box(wx0, wx1, -200, -130, sill, sill + 70, MAT.frame); box(wx0, wx1, -200, -130, H - 70, H, MAT.frame);
+box(wx0, wx0 + 70, -200, -130, sill, H, MAT.frame); box(wx1 - 70, wx1, -200, -130, sill, H, MAT.frame);
+box(wx0 + 70, wx1 - 70, -168, -162, sill + 70, H - 70, MAT.glass, groups.all, false);
+const sky = canvasTex(256, 512, (g, w, h) => { const gr = g.createLinearGradient(0, 0, 0, h); gr.addColorStop(0, "#9ec4e6"); gr.addColorStop(.62, "#dcebf6"); gr.addColorStop(.63, "#a9bf9f"); gr.addColorStop(1, "#7f9a7a"); g.fillStyle = gr; g.fillRect(0, 0, w, h); });
+const skyM = new THREE.Mesh(new THREE.PlaneGeometry(2.2, 1.6), new THREE.MeshBasicMaterial({ map: sky, toneMapped: false }));
+skyM.position.set(mm((wx0 + wx1) / 2), mm(sill) + .55, -1.2); groups.all.add(skyM);
+// czapy ścian (kontur w widoku z góry)
+const cap = std({ color: 0x55595e, roughness: .9 });
+const caps = [[-140, 0, -250, D + 140], [W, W + 140, -250, D + 140], [-140, W + 140, -250, 0], [R.stub[0], W, D, D + 140]].map(([a, b, c, d]) => box(a, b, c, d, H, H + 8, cap, groups.all, false));
+// oprawy sufitowe
+const spots = new THREE.Group(); groups.all.add(spots);
+[[1150, 700], [1150, 1450]].forEach(([x, y]) => { const s = new THREE.Mesh(new THREE.CylinderGeometry(.045, .045, .1, 28), MAT.white); s.position.set(mm(x), mm(H) - .05, mm(y)); spots.add(s); });
+
+// ---------- światło ----------
+scene.add(new THREE.HemisphereLight(0xfffaf2, 0xb8ab99, .75));
+scene.add(new THREE.AmbientLight(0xffffff, .1));
+const sun = new THREE.DirectionalLight(0xfff1df, .8);
+sun.position.set(1.5, 6.5, 2.9); sun.target.position.set(1.2, 0.6, 0.9); scene.add(sun, sun.target);
+sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0004; sun.shadow.normalBias = .02;
+Object.assign(sun.shadow.camera, { left: -2.2, right: 2.2, top: 2.4, bottom: -2.4, near: .5, far: 9 });
+const win = new THREE.DirectionalLight(0xe6f0ff, .35); win.position.set(1.06, 2.2, -2.5); win.target.position.set(1.1, 0.8, 1.2); scene.add(win, win.target);
+[[0.24, 1.38, 1.26], [2.21, 1.38, 0.61], [0.5, 1.38, 0.32]].forEach(([x, y, z]) => { const l = new THREE.PointLight(0xffc98a, .32, 1.6, 2); l.position.set(x, y, z); scene.add(l); });
+
+// ---------- kamera / sterowanie ----------
+const VIEWS = {
+  entry: { pos: [1.08, 1.56, 3.45], tgt: [1.15, 1.2, 0.3], fov: 48 },
+  right: { pos: [1.62, 1.62, 2.55], tgt: [0.35, 1.05, 0.55], fov: 54 },
+  window: { pos: [1.72, 1.62, 1.62], tgt: [0.85, 1.12, 0.05], fov: 62 },
+  top: { pos: [1.225, 7.2, 1.0], tgt: [1.225, 0, 0.955], fov: 26 },
+  iso: { pos: [1.1, 5.3, 4.2], tgt: [1.2, 0.55, 0.9], fov: 40 },
+};
+const target = new THREE.Vector3(); const sph = new THREE.Spherical();
+function setView(name) {
+  const v = VIEWS[name]; camera.fov = v.fov; camera.updateProjectionMatrix();
+  target.set(...v.tgt); const off = new THREE.Vector3(...v.pos).sub(target); sph.setFromVector3(off);
+  sph.phi = Math.max(.01, sph.phi); spots.visible = name !== "top" && name !== "iso"; stubBox.visible = caps[3].visible = name !== "iso"; apply();
+  document.querySelectorAll("[data-view]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.view === name)));
+}
+function apply() { camera.position.copy(target).add(new THREE.Vector3().setFromSpherical(sph)); camera.lookAt(target); dirty = true; }
+let dirty = true;
+const pointers = new Map(); let pinch0 = 0, r0 = 0;
+stage.addEventListener("pointerdown", e => { stage.setPointerCapture(e.pointerId); pointers.set(e.pointerId, [e.clientX, e.clientY]); if (pointers.size === 2) { const [a, b] = [...pointers.values()]; pinch0 = Math.hypot(a[0] - b[0], a[1] - b[1]); r0 = sph.radius; } stage.style.cursor = "grabbing"; });
+stage.addEventListener("pointermove", e => {
+  if (!pointers.has(e.pointerId)) return;
+  const [px, py] = pointers.get(e.pointerId), dx = e.clientX - px, dy = e.clientY - py; pointers.set(e.pointerId, [e.clientX, e.clientY]);
+  if (pointers.size === 2) { const [a, b] = [...pointers.values()]; const d = Math.hypot(a[0] - b[0], a[1] - b[1]); if (pinch0) { sph.radius = Math.min(14, Math.max(.4, r0 * pinch0 / d)); apply(); } return; }
+  if (e.shiftKey || e.buttons === 2 || e.buttons === 4) {
+    const k = sph.radius * .0016, right = new THREE.Vector3().setFromMatrixColumn(camera.matrix, 0), up = new THREE.Vector3().setFromMatrixColumn(camera.matrix, 1);
+    target.addScaledVector(right, -dx * k).addScaledVector(up, dy * k); apply(); return;
+  }
+  sph.theta -= dx * .006; sph.phi = Math.min(Math.PI - .05, Math.max(.01, sph.phi - dy * .006)); apply();
+});
+const up = e => { pointers.delete(e.pointerId); if (pointers.size < 2) pinch0 = 0; stage.style.cursor = "grab"; };
+stage.addEventListener("pointerup", up); stage.addEventListener("pointercancel", up);
+stage.addEventListener("contextmenu", e => e.preventDefault());
+stage.addEventListener("wheel", e => { e.preventDefault(); sph.radius = Math.min(14, Math.max(.4, sph.radius * Math.pow(1.0015, e.deltaY))); apply(); }, { passive: false });
+
+document.querySelectorAll("[data-view]").forEach(b => b.addEventListener("click", () => setView(b.dataset.view)));
+const tf = document.getElementById("t-fronts"), tl = document.getElementById("t-labels");
+function setFronts(on) { groups.fronts.visible = on; tf.setAttribute("aria-pressed", String(on)); dirty = true; }
+function setLabels(on) { groups.labels.visible = on; tl.setAttribute("aria-pressed", String(on)); dirty = true; }
+tf.addEventListener("click", () => setFronts(!groups.fronts.visible));
+tl.addEventListener("click", () => setLabels(!groups.labels.visible));
+
+function bg() { scene.background = new THREE.Color(getComputedStyle(document.documentElement).getPropertyValue("--stage").trim() || "#e7e8e4").convertSRGBToLinear(); dirty = true; }
+bg(); try { matchMedia("(prefers-color-scheme: dark)").addEventListener("change", bg); } catch (e) {}
+new MutationObserver(bg).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+
+function resize() { const w = stage.clientWidth, h = stage.clientHeight; renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix(); dirty = true; }
+new ResizeObserver(resize).observe(stage); resize();
+(function loop() { if (dirty) { renderer.render(scene, camera); dirty = false; } requestAnimationFrame(loop); })();
+setView("entry");
+
+window.__shot = (view, fronts, labels) => { setView(view); setFronts(fronts); setLabels(!!labels); renderer.render(scene, camera); dirty = false; };
+window.__ready = true;
+if (capture) document.querySelector(".hint").hidden = true;
+})();
+</script>

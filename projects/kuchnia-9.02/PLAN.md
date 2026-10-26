@@ -1,5 +1,7 @@
 # Kuchnia 9.02 — projekt zabudowy na wymiar (wariant v4, korekta v4.1)
 
+> **2026-10-26 — nowy wariant U „Korner DIY":** przeniesienie teczki Castoramy (układ U) na ten rzut, do samodzielnego wykonania z płyt Korner — `wariant-U-korner/PLAN.md` (rysunki, model 3D, lista zakupów). Przy tej analizie wykryto w v4 kolizję lewych drzwi D1 z bokiem słupka S1 (szczelina ~30 mm) — opis w `wariant-U-korner/PLAN.md` pkt 0.
+
 > **Korekta 2026-08-11 (v4.1):** poprawiono dane dostawcy — formatki, płyty, blaty i okucia zamawiane u **Korner (płyty, korner.pl)**, oddział **Piekary Śląskie** / KornerGo (kornergo.pl, rozkrój online b2b.kornergo.pl). Wcześniejsze wskazanie „Korner (Żary)" dotyczyło innej, niepowiązanej firmy (Korner / Poli-Eco, korner.eu — podłogi, listwy, obrzeża i profile; rozdział podmiotów: `skills/architekt-wnetrz/references/dostawcy.md`). Usunięto też niezweryfikowane kody dekorów (Egger — **poza ofertą korner.pl**) — materiały opisane jako intencja kolorystyczna, kody do doboru z aktualnej kolekcji przed wyceną. **Układ v4 i wszystkie decyzje projektowe inwestora — bez zmian.**
 
 Projekt wykonany skillem **architekt-kuchni** na podstawie: rzutu mieszkania (fragment 9.01–9.03), zdjęcia pomieszczenia z adnotacjami wymiarowymi oraz decyzji inwestora. Wykonanie: **samodzielne**, materiały: **Korner (płyty, korner.pl) — oddział Piekary Śląskie / KornerGo**.
